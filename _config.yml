@@ -1,0 +1,23 @@
+repositoryUrl: https://github.com/Dynamsoft/content-normalizer-docs/blob/main
+docFullPath: https://www.dynamsoft.com/content-normalizer/
+firstLevelUrl: /content-normalizer
+docHomePage: /content-normalizer/introduction/
+
+introduction: /content-normalizer/introduction/
+programming: /content-normalizer/programming/
+c: /content-normalizer/programming/c/
+cpp: /content-normalizer/programming/cpp/
+useVersionTree: true
+
+assets: /content-normalizer/assets/
+edit_icon: /content-normalizer/assets/img-icon/edit-icon.png
+smile_icon: /content-normalizer/assets/img-icon/icon-smile.png
+sad_icon: /content-normalizer/assets/img-icon/icon-sad.png
+dbr_icon: /content-normalizer/assets/img-icon/icon-dbr.svg
+dwt_icon: /content-normalizer/assets/img-icon/icon-dwt.svg
+dnt_icon: /content-normalizer/assets/img-icon/icon-dnt.svg
+
+baseurl: "/content-normalizer"
+
+plugins:
+  - jemoji
