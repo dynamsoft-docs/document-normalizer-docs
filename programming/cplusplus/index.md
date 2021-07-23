@@ -1,10 +1,12 @@
 ---
 layout: default-layout
 title: Dynamsoft Content Normalizer - C++
-keywords: c++, cplusplus, programming, dcn, documentation
+keywords: c++, cplusplus, dcn, documentation
 description: Dynamsoft Content Normalizer - C++
 ---
 
 # C++
 
-DCN C++.
+- [Primary Class - ContentNormalizer]()
+- [Structs]()
+- [Enumerations]()
