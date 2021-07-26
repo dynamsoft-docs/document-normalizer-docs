@@ -7,6 +7,6 @@ description: Dynamsoft Content Normalizer - API Reference for C
 
 # API Reference - C
 
-- [Primary Class - ContentNormalizer]()
-- [Structs]()
-- [Enumerations]()
+- [Primary APIs](primary-api/)
+- [Structs]({{ site.c_cpp_struct }}?src=c)
+- [Enumerations]({{ site.enumerations }}?src=c)

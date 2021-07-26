@@ -7,6 +7,10 @@ description: Dynamsoft Content Normalizer - C++
 
 # C++
 
+## User Guide
+- [Getting Started](user-guide/getting-started.md)
+
+## API Reference
 - [Primary Class - ContentNormalizer]()
 - [Structs]()
 - [Enumerations]()
