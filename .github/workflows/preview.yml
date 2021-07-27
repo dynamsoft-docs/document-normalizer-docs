@@ -57,6 +57,7 @@ jobs:
           passive on
           binary
           put $dir_or_file
+          passive off
           close
           bye
           !
