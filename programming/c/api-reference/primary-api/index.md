@@ -91,8 +91,9 @@ DCN_DestroyInstance(normalizer);
   | [`DCN_AppendSettingsFromFile`](#dcn_appendsettingsfromfile) | Appends a new template file to the current runtime settings of SDK. |
   | [`DCN_OutputSettingsToFile`](#dcn_outputsettingstofile) | Outputs SDK runtime settings and save them into a setting file (JSON file). |
   | [`DCN_ClearAppendedSettings`](#dcn_clearappendedsettings) | Clears all appended parameter settings. |
-  | [`DCN_GetModeArgument`](#dcn_getmodeargument) | Gets argument value for the specified mode parameter. |
   | [`DCN_SetModeArgument`](#dcn_setmodeargument) | Sets argument to give value for the specified mode parameter. |
+  | [`DCN_GetModeArgument`](#dcn_getmodeargument) | Gets argument value for the specified mode parameter. |
+
 
 &nbsp;
 
@@ -210,13 +211,8 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 ```c
 DCN_InitLicense("t0260NwAAAHV***************");
 void* normalizer = DCN_CreateInstance();
-DCN_RuntimeSettings settings;
-int errorCode = DCN_GetRuntimeSettings(normalizer, &settings);
-settings.interiorAngleRange[0] = 70;
-settings.interiorAngleRange[1] = 110;
 char errorMessage[256];
-DCN_UpdateRuntimeSettings(normalizer, &settings, errorMessage, 256);
-errorCode = DCN_ResetRuntimeSettings(normalizer);
+DCN_AppendSettingsFromString(normalizer, "{\"ContentNormalizerParameterArray\": [{\"Name\": \"CN_1\", \"Timeout\": 2000, \"MaxThreadCount\": 4, \"ScaleDownThreshold\": 2048, \"ExecutePhases\": [\"EP_ALL\"], \"NormalizationDefinitionName\": \"ND_1\", \"QuadrilateralDetectionModes\": [{\"Mode\":\"QDM_LINE_BASED_DETECTION\"}]}], \"NormalizationDefinitionArray\":[{\"Name\": \"ND_1\", \"ContentType\": \"CT_DOCUMENT\", \"ContentLocalization\":{\"SourceType\": \"CBLM_AUTO_DETECTION\"}, \"EnablePerspectiveCorrection\": 1, \"TargetContentPageSize\": [210, 297], \"EnableDeskewing\": 1}]}", errorMessage, 256);
 DCN_DestroyInstance(normalizer);
 ```
 
@@ -243,7 +239,11 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```c
-
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+char errorMessage[256];
+DCN_AppendSettingsFromFile(normalizer, "your file path", errorMessage, 256);
+DCN_DestroyInstance(normalizer);
 ```
 
 &nbsp;
@@ -268,7 +268,12 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```c
-
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+char errorMessage[256];
+DCN_AppendSettingsFromString(normalizer, "{\"ContentNormalizerParameterArray\": [{\"Name\": \"CN_1\", \"Timeout\": 2000, \"MaxThreadCount\": 4, \"ScaleDownThreshold\": 2048, \"ExecutePhases\": [\"EP_ALL\"], \"NormalizationDefinitionName\": \"ND_1\", \"QuadrilateralDetectionModes\": [{\"Mode\":\"QDM_LINE_BASED_DETECTION\"}]}], \"NormalizationDefinitionArray\":[{\"Name\": \"ND_1\", \"ContentType\": \"CT_DOCUMENT\", \"ContentLocalization\":{\"SourceType\": \"CBLM_AUTO_DETECTION\"}, \"EnablePerspectiveCorrection\": 1, \"TargetContentPageSize\": [210, 297], \"EnableDeskewing\": 1}]}", errorMessage, 256);
+DCN_OutputSettingsToFile(normalizer, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Templates\\CurrentRuntimeSettings.json", "currentRuntimeSettings");
+DCN_DestroyInstance(normalizer);
 ```
 
 &nbsp;
@@ -286,10 +291,48 @@ void DCN_ClearAppendedSettings (void* normalizer)
 
 **Code Snippet**   
 ```c
-
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+DCN_ClearAppendedSettings(normalizer);
+DCN_DestroyInstance(normalizer);
 ```
 
 &nbsp;
+
+### DCN_SetModeArgument
+Sets argument to give value for the specified mode parameter.
+
+```c
+int DCN_SetModeArgument (void* normalizer, const char* modesName, const int index, const char* argumentName, const char* argumentValue, char errorMsgBuffer[],  const int errorMsgBufferLen)
+```   
+
+**Parameters**   
+`[in] normalizer` Handle of the content normalizer instance.   
+`[in] modesName` The mode parameter name to get argument.   
+`[in] index` The array index of mode parameter to indicate a specific mode.   
+`[in] argumentName` The name of argument to set.   
+`[in] argumentValue` The value of the argument to set.   
+`[in, out] errorMsgBuffer` The buffer is allocated by caller, and the recommending length is 256. The error message will be copied to the buffer.   
+`[in] errorMsgBufferLen` The length of allocated buffer.
+
+
+**Return value**   
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
+
+
+**Code Snippet**   
+```c
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+DCN_RuntimeSettings settings;
+int errorCode = DCN_GetRuntimeSettings(normalizer, &settings);
+settings.binarizationModes[0] = BM_THRESHOLD;
+char errorMessage[256];
+errorCode = DCN_UpdateRuntimeSettings(normalizer, &settings, errorMessage, 256);
+errorCode = DCN_SetModeArgument(normalizer, "BinarizationModes", 0, "BinarizationThreshold", "130", errorMessage, 256);
+DCN_DestroyInstance(normalizer);
+```
+
 
 ### DCN_GetModeArgument
 Gets argument value for the specified mode parameter.
@@ -315,37 +358,20 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```c
-
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+DCN_RuntimeSettings settings;
+int errorCode = DCN_GetRuntimeSettings(normalizer, &settings);
+settings.binarizationModes[0] = BM_THRESHOLD;
+char errorMessage[256];
+errorCode = DCN_UpdateRuntimeSettings(normalizer, &settings, errorMessage, 256);
+errorCode = DCN_SetModeArgument(normalizer, "BinarizationModes", 0, "BinarizationThreshold", "130", errorMessage, 256);
+char argumentValue[256];
+errorCode = DCN_GetModeArgument(normalizer, "BinarizationModes", 0, "BinarizationThreshold", argumentValue, 256, errorMessage, 256);
+DCN_DestroyInstance(normalizer);
 ```
 
 &nbsp;
-
-
-### DCN_SetModeArgument
-Sets argument to give value for the specified mode parameter.
-
-```c
-int DCN_SetModeArgument (void* normalizer, const char* modesName, const int index, const char* argumentName, const char* argumentValue, char errorMsgBuffer[],  const int errorMsgBufferLen)
-```   
-
-**Parameters**   
-`[in] normalizer` Handle of the content normalizer instance.   
-`[in] modesName` The mode parameter name to get argument.   
-`[in] index` The array index of mode parameter to indicate a specific mode.   
-`[in] argumentName` The name of argument to set.   
-`[in] argumentValue` The value of the argument to set.   
-`[in, out] errorMsgBuffer` The buffer is allocated by caller, and the recommending length is 256. The error message will be copied to the buffer.   
-`[in] errorMsgBufferLen` The length of allocated buffer.
-
-
-**Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
-
-
-**Code Snippet**   
-```c
-
-```
 
 
 ## Normalizing
@@ -376,7 +402,10 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```c
-
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+int errorCode = DCN_NormalizeByFile(normalizer, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\SampleImage.png", "");
+DCN_DestroyInstance(normalizer);
 ```
 
 &nbsp;
@@ -401,7 +430,12 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```c
-
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+ImageData* imageData;
+//Generate imageData from somewhere else
+int errorCode = DCN_NormalizeByBuffer(normalizer, imageData, "");
+DCN_DestroyInstance(normalizer);
 ```
 
 ## Result
@@ -435,7 +469,13 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```c
-
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+int errorCode = DCN_NormalizeByFile(normalizer, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\SampleImage.png", "");
+DCN_Result* result = NULL;
+DCN_GetResult(normalizer, &result);
+DCN_FreeResult(&result);
+DCN_DestroyInstance(normalizer);
 ```
 
 &nbsp;
@@ -453,7 +493,13 @@ void DCN_FreeResults (DCN_Result** results)
 
 **Code Snippet**   
 ```c
-
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+int errorCode = DCN_NormalizeByFile(normalizer, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\SampleImage.png", "");
+DCN_Result* result = NULL;
+DCN_GetResult(normalizer, &result);
+DCN_FreeResult(&result);
+DCN_DestroyInstance(normalizer);
 ```
 
 &nbsp;
@@ -463,7 +509,7 @@ void DCN_FreeResults (DCN_Result** results)
 Outputs image buffer into an image file.
 
 ```c
-int DCN_ OutputImageBufferToFile (const char* filename, const ImageData* imageBuffer)
+int DCN_OutputImageBufferToFile (const char* filename, const ImageData* imageBuffer)
 ```   
 
 **Parameters**   
@@ -477,7 +523,21 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```c
-
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+int errorCode = DCN_NormalizeByFile(normalizer, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\SampleImage.png", "");
+DCN_Result* result = NULL;
+DCN_GetResult(normalizer, &result);
+if (result != NULL)
+{
+  ImageData* resultImage = result->normalizedImage;
+  if (resultImage != NULL)
+  {
+    DCN_OutputImageBufferToFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\result\\resultImage.png", resultImage);
+  }
+}
+DCN_FreeResult(&result);
+DCN_DestroyInstance(normalizer);
 ```
 
 &nbsp;
@@ -504,7 +564,23 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```c
-
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+int errorCode = DCN_NormalizeByFile(normalizer, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\SampleImage.png", "");
+DCN_Result* result = NULL;
+DCN_GetResult(normalizer, &result);
+if (result != NULL)
+{
+  ImageData* resultImage = result->normalizedImage;
+  if (resultImage != NULL)
+  {
+    ImageData adjustedImage;
+    DCN_GetAdjustedImageBuffer(resultImage, &adjustedImage, ICM_GRAYSCALE, 50, 50);
+    DCN_OutputImageBufferToFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\result\\adjustedImage.png", &adjustedImage);
+  }
+}
+DCN_FreeResult(&result);
+DCN_DestroyInstance(normalizer);
 ```
 
 &nbsp;
@@ -529,7 +605,21 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```c
-
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+int errorCode = DCN_NormalizeByFile(normalizer, "C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\SampleImage.png", "");
+DCN_Result* result = NULL;
+DCN_GetResult(normalizer, &result);
+if (result != NULL)
+{
+  if (candidateQuadrilateralCount > 0 && result->transformationMatrix != NULL)
+  {
+    Quadrilateral transformedQuad;
+    DCN_GetTransformedQuad(result->sourceImageCandidateQuadArray[0], result->transformationMatrix, &transformedQuad);
+  }
+}
+DCN_FreeResult(&result);
+DCN_DestroyInstance(normalizer);
 ```
 
 ## General
@@ -559,7 +649,8 @@ The corresponding error message.
 
 **Code Snippet**   
 ```c
-
+int errorCode = DCN_InitLicense("t0260NwAAAHV***************");
+const char* errorString = DCN_GetErrorString(errorCode);
 ```
 
 &nbsp;
@@ -578,5 +669,5 @@ The version info string.
 
 **Code Snippet**   
 ```c
-
+const char* versionInfo = DCN_GetVersion(errorCode);
 ```
