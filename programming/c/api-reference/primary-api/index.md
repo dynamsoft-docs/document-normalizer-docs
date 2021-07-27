@@ -366,8 +366,8 @@ settings.binarizationModes[0] = BM_THRESHOLD;
 char errorMessage[256];
 errorCode = DCN_UpdateRuntimeSettings(normalizer, &settings, errorMessage, 256);
 errorCode = DCN_SetModeArgument(normalizer, "BinarizationModes", 0, "BinarizationThreshold", "130", errorMessage, 256);
-char argumentValue[256];
-errorCode = DCN_GetModeArgument(normalizer, "BinarizationModes", 0, "BinarizationThreshold", argumentValue, 256, errorMessage, 256);
+char argumentValue[480];
+errorCode = DCN_GetModeArgument(normalizer, "BinarizationModes", 0, "BinarizationThreshold", argumentValue, 480, errorMessage, 256);
 DCN_DestroyInstance(normalizer);
 ```
 
