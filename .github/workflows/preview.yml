@@ -54,6 +54,7 @@ jobs:
                   else
           ftp -p -n $2 $3<<!
           user $4 $5
+          passive on
           binary
           put $dir_or_file
           close
