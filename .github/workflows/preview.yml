@@ -64,8 +64,8 @@ jobs:
               done
           }
           cd /home/ubuntu
-          mkdir -p tempftp/www.dynamsoft.com/content-normalizer/introduction
-          cp -rfp /home/ubuntu/DCNDocPreview/_site/introduction/* /home/ubuntu/tempftp/www.dynamsoft.com/content-normalizer/introduction/
+          mkdir -p tempftp/www.dynamsoft.com/content-normalizer/tmp
+          cp -rfp /home/ubuntu/DCNDocPreview/_site/introduction/* /home/ubuntu/tempftp/www.dynamsoft.com/content-normalizer/tmp/
           cd tempftp
           uploaddirectory ./ officecn.dynamsoft.com 7500 WebsiteContentManage $user2_pwd
           
