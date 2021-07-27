@@ -7,7 +7,7 @@ description: Dynamsoft Content Normalizer - Primary Class for C++
 
 # Class dynamsoft::dcn::ContentNormalizer - C++
 
-## License
+## Initialization
   
   | Method | Description |
   |--------|-------------|
