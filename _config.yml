@@ -9,7 +9,7 @@ programming: /content-normalizer/programming/
 parameters: /content-normalizer/parameters/
 
 c: /content-normalizer/programming/c/
-cpp: /content-normalizer/programming/cpp/
+cpp: /content-normalizer/programming/cplusplus/
 c_cpp: /content-normalizer/programming/c-cplusplus/
 c_cpp_struct: /content-normalizer/programming/c-cplusplus/api-reference/struct/
 
