@@ -7,3 +7,4 @@ description: Dynamsoft Content Normalizer - Primary Class for C++
 
 # ContentNormalizer Class - C++
 
+

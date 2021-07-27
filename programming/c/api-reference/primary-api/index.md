@@ -30,8 +30,8 @@ An instance of Dynamsoft Content Normalizer. If failed, returns a null pointer.
 
 **Code Snippet**   
 ```c
-void* normalizer = DCN_CreateInstance();
 DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
 DCN_DestroyInstance(normalizer);
 ```
 
@@ -50,8 +50,8 @@ void DCN_DestroyInstance (void* normalizer)
 
 **Code Snippet**   
 ```c
-void* normalizer = DCN_CreateInstance();
 DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
 DCN_DestroyInstance(normalizer);
 ```
 
@@ -69,13 +69,13 @@ int DCN_InitLicense (const char* pLicense)
 
 
 **Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call DCN_GetErrorString to get the detailed message. 
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
 
 
 **Code Snippet**   
 ```c
-void* normalizer = DCN_CreateInstance();
 DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
 DCN_DestroyInstance(normalizer);
 ```
 
@@ -109,12 +109,16 @@ int DCN_GetRuntimeSettings (void* normalizer, DCN_RuntimeSettings* settings)
 
 
 **Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call DCN_GetErrorString to get the detailed message. 
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
 
 
 **Code Snippet**   
 ```c
-
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+DCN_RuntimeSettings settings;
+int errorCode = DCN_GetRuntimeSettings(normalizer, &settings);
+DCN_DestroyInstance(normalizer);
 ```
 
 &nbsp;
@@ -134,12 +138,20 @@ int DCN_UpdateRuntimeSettings (void* normalizer, DCN_RuntimeSettings* settings, 
 
 
 **Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call DCN_GetErrorString to get the detailed message. 
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
 
 
 **Code Snippet**   
 ```c
-
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+DCN_RuntimeSettings settings;
+int errorCode = DCN_GetRuntimeSettings(normalizer, &settings);
+settings.interiorAngleRange[0] = 70;
+settings.interiorAngleRange[1] = 110;
+char errorMessage[256];
+errorCode = DCN_UpdateRuntimeSettings(normalizer, &settings, errorMessage, 256);
+DCN_DestroyInstance(normalizer);
 ```
 
 &nbsp;
@@ -156,12 +168,21 @@ int DCN_ResetRuntimeSettings (void* normalizer)
 
 
 **Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call DCN_GetErrorString to get the detailed message. 
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
 
 
 **Code Snippet**   
 ```c
-
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+DCN_RuntimeSettings settings;
+int errorCode = DCN_GetRuntimeSettings(normalizer, &settings);
+settings.interiorAngleRange[0] = 70;
+settings.interiorAngleRange[1] = 110;
+char errorMessage[256];
+DCN_UpdateRuntimeSettings(normalizer, &settings, errorMessage, 256);
+errorCode = DCN_ResetRuntimeSettings(normalizer);
+DCN_DestroyInstance(normalizer);
 ```
 
 &nbsp;
@@ -182,12 +203,21 @@ int DCN_AppendSettingsFromString (void* normalizer, const char* content, char er
 
 
 **Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call DCN_GetErrorString to get the detailed message. 
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
 
 
 **Code Snippet**   
 ```c
-
+DCN_InitLicense("t0260NwAAAHV***************");
+void* normalizer = DCN_CreateInstance();
+DCN_RuntimeSettings settings;
+int errorCode = DCN_GetRuntimeSettings(normalizer, &settings);
+settings.interiorAngleRange[0] = 70;
+settings.interiorAngleRange[1] = 110;
+char errorMessage[256];
+DCN_UpdateRuntimeSettings(normalizer, &settings, errorMessage, 256);
+errorCode = DCN_ResetRuntimeSettings(normalizer);
+DCN_DestroyInstance(normalizer);
 ```
 
 &nbsp;
@@ -208,7 +238,7 @@ int DCN_AppendSettingsFromFile (void* normalizer, const char* filePath, char err
 
 
 **Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call DCN_GetErrorString to get the detailed message. 
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
 
 
 **Code Snippet**   
@@ -233,7 +263,7 @@ int DCN_OutputSettingsToFile (void* normalizer, const char* filePath, const char
 
 
 **Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call DCN_GetErrorString to get the detailed message. 
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
 
 
 **Code Snippet**   
@@ -280,7 +310,7 @@ int DCN_GetModeArgument (void* normalizer, const char* modesName, const int inde
 
 
 **Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call DCN_GetErrorString to get the detailed message. 
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
 
 
 **Code Snippet**   
@@ -309,7 +339,7 @@ int DCN_SetModeArgument (void* normalizer, const char* modesName, const int inde
 
 
 **Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call DCN_GetErrorString to get the detailed message. 
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
 
 
 **Code Snippet**   
@@ -341,7 +371,7 @@ int DCN_NormalizeByFile (void* normalizer, const char* filePath, const char* tem
 
 
 **Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call DCN_GetErrorString to get the detailed message. 
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
 
 
 **Code Snippet**   
@@ -366,7 +396,7 @@ int DCN_NormalizeByBuffer (void* normalizer, const ImageData* imageData, const c
 
 
 **Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call DCN_GetErrorString to get the detailed message. 
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
 
 
 **Code Snippet**   
@@ -400,7 +430,7 @@ int DCN_GetResult (void* normalizer, DCN_Result** result)
 
 
 **Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call DCN_GetErrorString to get the detailed message. 
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
 
 
 **Code Snippet**   
@@ -442,7 +472,7 @@ int DCN_ OutputImageBufferToFile (const char* filename, const ImageData* imageBu
 
 
 **Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call DCN_GetErrorString to get the detailed message. 
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
 
 
 **Code Snippet**   
@@ -469,7 +499,7 @@ int DCN_GetAdjustedImageBuffer (const ImageData* originalImageBuffer, ImageData*
 
 
 **Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call DCN_GetErrorString to get the detailed message. 
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
 
 
 **Code Snippet**   
@@ -494,7 +524,7 @@ int DCN_GetTransformedQuad (const Quadrilateral* originalQuad, float transformat
 
 
 **Return value**   
-The error code. Returns 0 if the function is completed successfully, otherwise call DCN_GetErrorString to get the detailed message. 
+The error code. Returns 0 if the function is completed successfully, otherwise call [`DCN_GetErrorString`](#dcn_geterrorstring) to get the detailed message. 
 
 
 **Code Snippet**   
