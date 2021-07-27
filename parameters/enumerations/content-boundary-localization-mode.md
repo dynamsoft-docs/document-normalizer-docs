@@ -1,5 +1,4 @@
 ---
-layout: default-layout
 title: Dynamsoft Content Normalizer - ContentBoundaryLocalizationMode Enumeration
 keywords: contentboundarylocalizationmode, enumerations, enums, dcn, documentation
 description: Dynamsoft Content Normalizer - ContentBoundaryLocalizationMode Enumeration

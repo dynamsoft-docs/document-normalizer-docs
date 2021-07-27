@@ -1,5 +1,4 @@
 ---
-layout: default-layout
 title: Dynamsoft Content Normalizer - ImageColourMode Enumeration
 keywords: imagecolourmode, enumerations, enums, dcn, documentation
 description: Dynamsoft Content Normalizer - ImageColourMode Enumeration

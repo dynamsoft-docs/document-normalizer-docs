@@ -1,5 +1,4 @@
 ---
-layout: default-layout
 title: Dynamsoft Content Normalizer - ExecutePhase Enumeration
 keywords: executephase, enumerations, enums, dcn, documentation
 description: Dynamsoft Content Normalizer - ExecutePhase Enumeration

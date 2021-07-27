@@ -1,5 +1,4 @@
 ---
-layout: default-layout
 title: Dynamsoft Content Normalizer - Primary API for C
 keywords: primary api, c functions, api reference, c, c language, dcn, documentation
 description: Dynamsoft Content Normalizer - Primary API for C

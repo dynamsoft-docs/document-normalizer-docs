@@ -1,5 +1,4 @@
 ---
-layout: default-layout
 title: Dynamsoft Content Normalizer - C Language
 keywords: c, c language, dcn, documentation
 description: Dynamsoft Content Normalizer - C Language
@@ -11,6 +10,6 @@ description: Dynamsoft Content Normalizer - C Language
 - [Getting Started](user-guide/getting-started.md)
 
 ## API Reference
-- [Primary Class - ContentNormalizer]()
-- [Structs]()
-- [Enumerations]()
+- [Primary APIs](api-reference/primary-api/)
+- [Structs]({{ site.c_cpp_struct }}?src=c)
+- [Enumerations]({{ site.enumerations }}?src=c)

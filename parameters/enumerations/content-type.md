@@ -1,5 +1,4 @@
 ---
-layout: default-layout
 title: Dynamsoft Content Normalizer - ContentType Enumeration
 keywords: contenttype, enumerations, enums, dcn, documentation
 description: Dynamsoft Content Normalizer - ContentType Enumeration

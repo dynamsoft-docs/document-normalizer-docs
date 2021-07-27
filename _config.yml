@@ -29,3 +29,14 @@ baseurl: "/content-normalizer"
 
 plugins:
   - jemoji
+
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      layout: "default-layout"
+      noTitleIndex: true
+      needAutoGenerateSidebar: true
+      needGenerateH3Content: true
