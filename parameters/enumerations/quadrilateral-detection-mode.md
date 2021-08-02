@@ -17,6 +17,6 @@ description: Dynamsoft Content Normalizer - QuadrilateralDetectionMode Enumerati
 
 | Member | Value | Description |
 | ------ | ----- | ----------- |
-| `QDM_SKIP_DETECTION` | 0x00 | |
-| `QDM_LINE_BASED_DETECTION` | 0x01 | |
-| `QDM_MARGIN_BASED_DETECTION` | 0x02 | |
+| `QDM_SKIP_DETECTION` | 0x00 | Skips quadrilateral detection. |
+| `QDM_LINE_BASED_DETECTION` | 0x01 | Defines line-based quadrilateral detection. |
+| `QDM_MARGIN_BASED_DETECTION` | 0x02 | Defines margin-based quadrilateral detection. |

@@ -14,8 +14,8 @@ description: Dynamsoft Content Normalizer - ContentBoundaryLocalizationMode Enum
 
 ## Members
 
-| Member | Value | Description |
-| ------ | ----- | ----------- |
-| `CBLM_MANNUAL_SPECIFICATION` | 0x01 | |
-| `CBLM_AUTO_DETECTION` | 0x02 | |
-| `CBLM_WHOLE_IMAGE` | 0x04 | |
+| Member | Value | Description | Valid Arguments |
+| ------ | ----- | ----------- | --------------- |
+| `CBLM_MANNUAL_SPECIFICATION` | 0x01 | Define the content boundary using the manually specified location. | `FirstPoint`<br>`SecondPoint`<br>`ThirdPoint`<br>`FourthPoint` |
+| `CBLM_AUTO_DETECTION` | 0x02 | Define the content boundary using the result(s) of automatic detection. | `N/A` |
+| `CBLM_WHOLE_IMAGE` | 0x04 | Define the content boundary using the image boundary. | `N/A` |

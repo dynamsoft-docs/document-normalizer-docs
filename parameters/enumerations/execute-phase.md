@@ -16,6 +16,6 @@ description: Dynamsoft Content Normalizer - ExecutePhase Enumeration
 
 | Member | Value | Description |
 | ------ | ----- | ----------- |
-| `EP_QUAD_DETECTION` | 0x01 | |
-| `EP_BASIC_NORMALIZATION` | 0x02 | |
-| `EP_ALL` | 0x03 | |
+| `EP_QUAD_DETECTION` | 0x01 | Executes quadrilateral detection. |
+| `EP_BASIC_NORMALIZATION` | 0x02 | Executes basic content normalization. |
+| `EP_ALL` | 0x03 | Executes all supported phases. |

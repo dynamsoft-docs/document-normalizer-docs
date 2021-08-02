@@ -16,6 +16,6 @@ description: Dynamsoft Content Normalizer - ContentType Enumeration
 
 | Member | Value | Description |
 | ------ | ----- | ----------- |
-| `CT_DOCUMENT` | 0x01 | |
-| `CT_TABLE` | 0x02 | |
-| `CT_GENERAL` | 0x04 | |
+| `CT_DOCUMENT` | 0x01 | Defines documents as the target content.  |
+| `CT_TABLE` | 0x02 | Defines tables as the target content. |
+| `CT_GENERAL` | 0x04 | Defines general contents as the target content. |
