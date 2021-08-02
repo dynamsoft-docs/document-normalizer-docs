@@ -28,7 +28,7 @@ jobs:
     - name: Build the site in the jekyll/builder container
       run: |
         cd $GITHUB_WORKSPACE/../
-        [ ! -d Docs-Template-Repo ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/Docs-Template-Repo.git && cp -rfp ./Docs-Template-Repo/* $GITHUB_WORKSPACE
+        [ ! -d Docs-Template-Repo ] && git clone --depth 1 https://github.com/Dynamsoft/Docs-Template-Repo.git && cp -rfp ./Docs-Template-Repo/* $GITHUB_WORKSPACE
         docker run \
         -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
         jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future"
