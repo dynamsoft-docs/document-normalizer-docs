@@ -35,38 +35,38 @@ jobs:
       #    python3 /home/ubuntu/ftp.py /home/ubuntu/DCNDocPreview/_site/ ./www.dynamsoft.com/content-normalizer/ test
           
       # Runs a set of commands using the runners shell
-      #- name: Upload to website
-      #  run: |
-      #    function uploaddirectory(){
-      #        for element in `ls $1`
-      #        do  
-      #            dir_or_file=$1"/"$element
-      #            if [ -d $dir_or_file ]
-      #            then
-      #    ftp -p -n $2 $3<<!
-      #    user $4 $5
-      #    binary
-      #    mkdir $dir_or_file
-      #    close
-      #    bye
-      #    !
-      #                uploaddirectory $dir_or_file $2 $3 $4 $5
-      #            else
-      #    ftp -p -n $2 $3<<!
-      #    user $4 $5
-      #    binary
-      #    put $dir_or_file
-      #    close
-      #    bye
-      #    !
-      #            fi  
-      #        done
-      #    }
-      #    cd /home/ubuntu
-      #    mkdir -p tempftp/www.dynamsoft.com/content-normalizer/tmp
-      #    cp -rfp /home/ubuntu/DCNDocPreview/_site/introduction/* /home/ubuntu/tempftp/www.dynamsoft.com/content-normalizer/tmp/
-      #    cd tempftp
-      #    uploaddirectory ./ officecn.dynamsoft.com 7500 WebsiteContentManage $user2_pwd
+      - name: Upload to website
+        run: |
+          function uploaddirectory(){
+              for element in `ls $1`
+              do  
+                  dir_or_file=$1"/"$element
+                  if [ -d $dir_or_file ]
+                  then
+          ftp -p -n $2 $3<<!
+          user $4 $5
+          binary
+          mkdir $dir_or_file
+          close
+          bye
+          !
+                      uploaddirectory $dir_or_file $2 $3 $4 $5
+                  else
+          ftp -p -n $2 $3<<!
+          user $4 $5
+          binary
+          put $dir_or_file
+          close
+          bye
+          !
+                  fi  
+              done
+          }
+          cd /home/ubuntu
+          mkdir -p tempftp/www.dynamsoft.com/content-normalizer/tmp
+          cp -rfp /home/ubuntu/DCNDocPreview/_site/introduction/* /home/ubuntu/tempftp/www.dynamsoft.com/content-normalizer/tmp/
+          cd tempftp
+          uploaddirectory ./ officecn.dynamsoft.com 7500 WebsiteContentManage $user2_pwd
       
       
 #      - name: ftp-action
