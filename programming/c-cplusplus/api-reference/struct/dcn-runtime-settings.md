@@ -154,12 +154,10 @@ Sets the minimal horizontal side length of the quadrilateral to detect.
 int minHorizontalSideLength[2]
 ```
 - **Value range**   
-    Format: [minimalSideLength, ByPercentage]    
+    Format: [`minimalSideLength`, `ByPercentage`]    
     Allowed value range:   
-    1. For minimalSideLength:    
-	        ByPercentage=0: [1, 0x7fffffff]   
-	        ByPercentage=1: [1, 100]   
-    2. For ByPercentage: [0, 1]   
+        For `minimalSideLength`: `ByPercentage`=0: [1, 0x7fffffff], `ByPercentage`=1: [1, 100]   
+        For `ByPercentage`: [0, 1]   
      
       
 - **Default value**   
@@ -173,13 +171,10 @@ Sets the minimal vertical side length of the quadrilateral to detect.
 int minVerticalSideLength[2]
 ```
 - **Value range**   
-    Format: [minimalSideLength, ByPercentage]    
+    Setting Format: [`minimalSideLength`, `ByPercentage`]    
     Allowed value range:   
-    1. For minimalSideLength:    
-	        ByPercentage=0: [1, 0x7fffffff]   
-	        ByPercentage=1: [1, 100]   
-    2. For ByPercentage: [0, 1]     
-
+        For `minimalSideLength`: `ByPercentage`=0: [1, 0x7fffffff], `ByPercentage`=1: [1, 100]   
+        For `ByPercentage`: [0, 1]     
 
 - **Default value**   
     [15, 1]
@@ -192,9 +187,9 @@ The quadrilateral interior angle range.
 int interiorAngleRange[2]
 ```
 - **Value range**   
-    Format: [minInteriorAngleValue, maxInteriorAngleValue]    
+    Format: [`minInteriorAngleValue`, `maxInteriorAngleValue`]    
     Allowed value range:   
-    1. For minInteriorAngleValue / maxInteriorAngleValue: [0, 180]    
+        For `minInteriorAngleValue` / `maxInteriorAngleValue`: [0, 180]    
 
 - **Default value**   
     [70, 110]
