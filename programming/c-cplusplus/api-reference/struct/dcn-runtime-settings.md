@@ -156,11 +156,11 @@ int minHorizontalSideLength[2]
 - **Value range**   
     Format: [minimalSideLength, ByPercentage]    
     Allowed value range:   
-    + For minimalSideLength: 
+    1. For minimalSideLength:    
 	        ByPercentage=0: [1, 0x7fffffff]   
 	        ByPercentage=1: [1, 100]   
-    + For ByPercentage: [0, 1]   
-
+    2. For ByPercentage: [0, 1]   
+     
       
 - **Default value**   
     [15, 1]
@@ -175,12 +175,12 @@ int minVerticalSideLength[2]
 - **Value range**   
     Format: [minimalSideLength, ByPercentage]    
     Allowed value range:   
-    + For minimalSideLength: 
+    1. For minimalSideLength:    
 	        ByPercentage=0: [1, 0x7fffffff]   
 	        ByPercentage=1: [1, 100]   
-    + For ByPercentage: [0, 1]   
+    2. For ByPercentage: [0, 1]     
 
-      
+
 - **Default value**   
     [15, 1]
     
@@ -194,7 +194,7 @@ int interiorAngleRange[2]
 - **Value range**   
     Format: [minInteriorAngleValue, maxInteriorAngleValue]    
     Allowed value range:   
-    + For minInteriorAngleValue / maxInteriorAngleValue: [0, 180]    
+    1. For minInteriorAngleValue / maxInteriorAngleValue: [0, 180]    
 
 - **Default value**   
     [70, 110]
