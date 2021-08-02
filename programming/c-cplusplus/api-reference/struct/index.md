@@ -7,10 +7,10 @@ description: Dynamsoft Content Normalizer - Struct for C & C++
 # Struct - C & C++
 
 ## DCN Structs
-- [`DCN_FurtherModes`](execute-phase.md)
-- [`DCN_NormalizationSettings`](image-colour-mode.md)
-- [`DCN_Result`](content-boundary-localization-mode.md)
-- [`DCN_RuntimeSettings`](content-type.md)
+- [`DCN_FurtherModes`](dcn-further-modes.md)
+- [`DCN_NormalizationSettings`](dcn-normalization-settings.md)
+- [`DCN_Result`](dcn-result.md)
+- [`DCN_RuntimeSettings`](dcn-runtime-settings.md)
 
 
 ## Common Structs
