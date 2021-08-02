@@ -23,7 +23,7 @@ typedef struct tagDCNNormalizationSettings  DCN_NormalizationSettings
 |---------- | ---- |
 | [`contentType`](#contenttype) | [`ContentType`]({{ site.enumerations }}content-type.html) |
 | [`localizationMode`](#localizationmode) | [`ContentBoundaryLocalizationMode`]({{ site.enumerations }}content-boundary-localization-mode.html) |
-| [`contentBoundaryQuad`](#contentboundaryquad) | {{ site.c_cpp_common_struct}}quadrilateral.html |
+| [`contentBoundaryQuad`](#contentboundaryquad) | [`Quadrilateral`]({{ site.c_cpp_common_struct}}quadrilateral.html) |
 | [`targetContentPageSize`](#targetcontentpagesize) | *int\[2\]* |
 | [`enablePerspectiveCorrenction`](#enableperspectivecorrenction) | *int* |
 | [`enableDeskewing`](#enabledeskewing) | *int* |
