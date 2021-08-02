@@ -15,3 +15,9 @@ description: Dynamsoft Content Normalizer - Enumerations
 
 
 ## Common Enumerations
+- [`BinarizationMode`]()
+- [`ColourConversionMode`]()
+- [`GrayscaleEnhancementMode`]()
+- [`GrayscaleTransformationMode`]()
+- [`ImagePixelFormat`]()
+- [`TextureDetectionMode`]()
