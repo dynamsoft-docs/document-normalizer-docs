@@ -99,7 +99,7 @@ jobs:
           # ftp password
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           # Server port to connect to (read your web hosts docs)
-          #port: # optional
+          port: 7500
           # protocol to deploy with - ftp, ftps, or ftps-legacy
           #protocol: # optional
           # Folder to upload from, must end with trailing slash /
