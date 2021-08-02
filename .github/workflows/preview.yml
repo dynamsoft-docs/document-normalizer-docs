@@ -144,7 +144,7 @@ jobs:
         # FTP Password.
         password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
         # Local directory.
-        local_dir: $GITHUB_WORKSPACE/_site/introduction/
+        local_dir: ${{ github.workspace }}/_site/introduction/
         # Remote directory.
         remote_dir: /www.dynamsoft.com/content-normalizer/tmp/
         # Delete all the files inside of the remote directory.
