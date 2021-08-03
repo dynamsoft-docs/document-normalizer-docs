@@ -1,5 +1,5 @@
 ---
-layout: home-page
+layout: default
 title: Documentation Homepage
 keywords: homepage, documentation
 breadcrumbText: HomePage
