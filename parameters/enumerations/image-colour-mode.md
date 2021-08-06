@@ -17,5 +17,5 @@ description: Dynamsoft Content Normalizer - ImageColourMode Enumeration
 | Member | Value | Description |
 | ------ | ----- | ----------- |
 | `ICM_BINARY` | 0x01 | Defines a black-white image. |
-| `ICM_GARYSCALE` | 0x02 | Defines a grayscale image. |
+| `ICM_GRAYSCALE` | 0x02 | Defines a grayscale image. |
 | `ICM_COLOUR` | 0x04 | Defines a colour image. |

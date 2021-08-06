@@ -11,7 +11,7 @@ description: Dynamsoft Content Normalizer - Parameter Reference
 Sets the target brightness value of the final normalized image.
 
 ### Setting Methods
-#### As Josn Parameter
+#### As Json Parameter
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
