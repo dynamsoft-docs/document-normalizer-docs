@@ -1,11 +1,11 @@
 ---
-title: Dynamsoft Content Normalizer - Parameter Reference
+title: Dynamsoft Content Normalizer - NormalizationDefinition Object
 keywords: parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer - Parameter Reference
+description: Dynamsoft Content Normalizer - NormalizationDefinition Object
 ---
 
 
-# Parameter References
+# NormalizationDefinition Object
 
 ## Brightness
 Sets the target brightness value of the final normalized image.
