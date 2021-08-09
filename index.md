@@ -10,4 +10,4 @@ description: Documentation Homepage
 # Documentation HomePage
 
 - [Programming]({{ site.programming }})
-- [Parameters]({{ site.paramters }})
+- [Parameters]({{ site.parameters }})
