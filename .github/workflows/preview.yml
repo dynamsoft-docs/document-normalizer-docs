@@ -28,11 +28,13 @@ jobs:
       - name: Build the site
         run: |
           cd /home/ubuntu
-          [ ! -d content-normalizer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/content-normalizer-docs.git content-normalizer-docs-preview
-          [ ! -d DCNDocPreview ] && mkdir -p DCNDocPreview
+          #[ ! -d content-normalizer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/content-normalizer-docs.git content-normalizer-docs-preview
+          #[ ! -d DCNDocPreview ] && mkdir -p DCNDocPreview
+          [ -d DCNDocPreview ] && rm -rf DCNDocPreview
+          mkdir DCNDocPreview
           cd content-normalizer-docs-preview && git pull && cd .. && cp -rfp ./content-normalizer-docs-preview/* ./DCNDocPreview/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCNDocPreview/
-          cd DCNDocPreview && bundle exec jekyll build --incremental
+          cd DCNDocPreview && bundle exec jekyll build #--incremental
           #python3 /home/ubuntu/ftp.py /home/ubuntu/DCNDocPreview/_site/ ./www.dynamsoft.com/content-normalizer/ test
           
       - name: Sync files
