@@ -29,19 +29,19 @@ jobs:
         run: |
           cd /home/ubuntu
           #[ ! -d content-normalizer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/content-normalizer-docs.git content-normalizer-docs-preview
-          #[ ! -d DCNDocPreview ] && mkdir -p DCNDocPreview
-          [ -d DCNDocPreview ] && rm -rf DCNDocPreview
-          mkdir DCNDocPreview
+          [ ! -d DCNDocPreview ] && mkdir -p DCNDocPreview
           cd content-normalizer-docs-preview && git pull && cd .. && cp -rfp ./content-normalizer-docs-preview/* ./DCNDocPreview/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCNDocPreview/
-          cd DCNDocPreview && bundle exec jekyll build #--incremental
-          #python3 /home/ubuntu/ftp.py /home/ubuntu/DCNDocPreview/_site/ ./www.dynamsoft.com/content-normalizer/ test
+          sed -i -e "1,3s/blob\/master$/blob\/preview/" \
+          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DCNDocPreview/_config.yml
+          cd DCNDocPreview && bundle exec jekyll build --incremental
+
           
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           server: ${{ secrets.FTP_TEST_SITE_SERVER }}
-          username: WebsiteContentManage
+          username: ${{ secrets.FTP_TEST_SITE_USER }}
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
           local-dir: /home/ubuntu/DCNDocPreview/_site/
