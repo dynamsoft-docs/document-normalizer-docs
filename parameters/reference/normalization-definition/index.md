@@ -56,8 +56,132 @@ delete normalizer;
 ```
 
 ## ColourMode
+The target colour mode of the final normalized image.
+
+### Setting Methods
+#### As Json Parameter
+
+| Parent Json Object | Json Parameter Name | Value Type | 
+| ------------------ | ------------------- | ---------- |
+| NormalizationDefinition | ColourMode | *string* |
+
+**Value Range**  
+    Any one of the ImageColourMode items.
+
+**Default Value**  
+    "ICM_BINARY"
+
+**Example**  
+```json
+{
+    "ColourMode": "ICM_COLOUR",
+}
+```
+
+#### As Struct Member
+
+| Struct | Struct Member Name | Value Type | 
+| ------ | ------------------ | ---------- |
+| DCN_RuntimeSettings->normalizationSettings | colourMode | [`ImageColourMode`]({{ site.enumerations }}image-colour-mode.html) |
+
+**Value Range**  
+    Any one of the ImageColourMode items.
+
+**Default Value**  
+    `ICM_BINARY`
+
+**Code Snippet**  
+```cpp
+// This is a c++ sample code.
+ContentNormalizer::InitLicense("t0260NwAAAHV***************");
+ContentNormalizer* normalizer = new ContentNormalizer();
+DCN_RuntimeSettings settings;
+int errorCode = normalizer->GetRuntimeSettings(&settings);
+settings->normalizationSettings.colourMode = ICM_COLOUR;
+char errorMessage[256];
+errorCode = normalizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
+delete normalizer;
+```
 
 ## ContentLocalization
+The localization of content to be normalized.
+
+### Arguments
+- `Mode`
+- `FirstPoint`
+- `SecondPoint`
+- `ThirdPoint`
+- `FourthPoint`
+
+#### Mode
+| Argument Name | Value Type | 
+| ------------- | ---------- |
+| Mode | *string* |
+
+#### FirstPoint
+| Argument Name | Valid Modes | Value Type | 
+| ------------- | ----------- | ---------- |
+| FirstPoint | `CBLM_MANNUAL_SPECIFICATION` | *int array* |
+
+#### SecondPoint
+| Argument Name | Valid Modes | Value Type | 
+| ------------- | ----------- | ---------- |
+| SecondPoint | `CBLM_MANNUAL_SPECIFICATION` | *int array* |
+
+#### ThirdPoint
+| Argument Name | Valid Modes | Value Type | 
+| ------------- | ----------- | ---------- |
+| ThirdPoint | `CBLM_MANNUAL_SPECIFICATION` | *int array* |
+
+#### FourthPoint
+| Argument Name | Valid Modes | Value Type | 
+| ------------- | ----------- | ---------- |
+| FourthPoint | `CBLM_MANNUAL_SPECIFICATION` | *int array* |
+
+### Setting Methods
+#### As Json Parameter
+
+| Parent Json Object | Json Parameter Name | Value Type | 
+| ------------------ | ------------------- | ---------- |
+| NormalizationDefinition | ContentLocalization | *JSON Object* |
+
+**Value Range**  
+    Any one of the ImageColourMode items.
+
+**Default Value**  
+    "ICM_BINARY"
+
+**Example**  
+```json
+{
+    "ColourMode": "ICM_COLOUR",
+}
+```
+
+#### As Struct Member
+
+| Struct | Struct Member Name | Value Type | 
+| ------ | ------------------ | ---------- |
+| DCN_RuntimeSettings->normalizationSettings | colourMode | [`ImageColourMode`]({{ site.enumerations }}image-colour-mode.html) |
+
+**Value Range**  
+    Any one of the ImageColourMode items.
+
+**Default Value**  
+    `ICM_BINARY`
+
+**Code Snippet**  
+```cpp
+// This is a c++ sample code.
+ContentNormalizer::InitLicense("t0260NwAAAHV***************");
+ContentNormalizer* normalizer = new ContentNormalizer();
+DCN_RuntimeSettings settings;
+int errorCode = normalizer->GetRuntimeSettings(&settings);
+settings->normalizationSettings.colourMode = ICM_COLOUR;
+char errorMessage[256];
+errorCode = normalizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
+delete normalizer;
+```
 
 ## ContentType
 
