@@ -107,34 +107,39 @@ delete normalizer;
 The localization of content to be normalized.
 
 ### Arguments
-- `Mode`
-- `FirstPoint`
-- `SecondPoint`
-- `ThirdPoint`
-- `FourthPoint`
+- [`Mode`](#mode)
+- [`FirstPoint`](#firstpoint)
+- [`SecondPoint`](#secondpoint)
+- [`ThirdPoint`](#thirdpoint)
+- [`FourthPoint`](#fourthpoint)
 
 #### Mode
+
 | Argument Name | Value Type | 
 | ------------- | ---------- |
 | Mode | *string* |
 
 #### FirstPoint
-| Argument Name | Valid Modes | Value Type | 
+
+| Argument Name | Valid for Modes | Value Type | 
 | ------------- | ----------- | ---------- |
 | FirstPoint | `CBLM_MANNUAL_SPECIFICATION` | *int array* |
 
 #### SecondPoint
-| Argument Name | Valid Modes | Value Type | 
+
+| Argument Name | Valid for Modes | Value Type | 
 | ------------- | ----------- | ---------- |
 | SecondPoint | `CBLM_MANNUAL_SPECIFICATION` | *int array* |
 
 #### ThirdPoint
-| Argument Name | Valid Modes | Value Type | 
+
+| Argument Name | Valid for Modes | Value Type | 
 | ------------- | ----------- | ---------- |
 | ThirdPoint | `CBLM_MANNUAL_SPECIFICATION` | *int array* |
 
 #### FourthPoint
-| Argument Name | Valid Modes | Value Type | 
+
+| Argument Name | Valid for Modes | Value Type | 
 | ------------- | ----------- | ---------- |
 | FourthPoint | `CBLM_MANNUAL_SPECIFICATION` | *int array* |
 
