@@ -223,6 +223,144 @@ delete normalizer;
 ```
 
 ## ColourConversionModes
+Sets the mode array for converting a colour image to a grayscale image.
+
+### Arguments
+- [`Mode`](#mode)
+- [`BlueChannelWeight`](#bluechannelweight)
+- [`GreenChannelWeight`](#greenchannelweight)
+- [`RedChannelWeight`](#redchannelweight)
+- [`ReferChannel`](#referchannel)
+
+#### Mode
+
+| Argument Name | Value Type | 
+| ------------- | ---------- |
+| Mode | *string* |
+
+**Value Range**   
+    Any one of the [`ColourConversionMode`]({{ site.common_enumerations }}colour-conversion-mode.html) items.
+
+**Default Value**   
+    "CICM_GENERAL"
+
+#### BlueChannelWeight
+
+| Argument Name| Valid for Mode(s) | Value Type|
+| ------------ | ----------------- | --------- |
+| BlueChannelWeight | `CICM_GENERAL` | *int* |
+
+**Value Range**    
+    [-1, 1000]
+
+**Default Value**   
+    -1
+
+**Remarks**
+-1: The weight value will be set automatically by the SDK.
+
+#### GreenChannelWeight
+
+| Argument Name| Valid for Mode(s) | Value Type|
+| ------------ | ----------------- | --------- |
+| GreenChannelWeight | `CICM_GENERAL` | *int* |
+
+**Value Range**    
+    [-1, 1000]
+
+**Default Value**   
+    -1
+
+**Remarks**
+-1: The weight value will be set automatically by the SDK.
+
+#### RedChannelWeight
+
+| Argument Name| Valid for Mode(s) | Value Type|
+| ------------ | ----------------- | --------- |
+| RedChannelWeight | `CICM_GENERAL` | *int* |
+
+**Value Range**    
+    [-1, 1000]
+
+**Default Value**   
+    -1
+
+**Remarks**
+-1: The weight value will be set automatically by the SDK.
+
+#### ReferChannel
+
+| Argument Name| Valid for Mode(s) | Value Type|
+| ------------ | ----------------- | --------- |
+| ReferChannel | `CICM_HSV` | *string* |
+
+**Value Range**    
+    "H_CHANNEL"   
+    "S_CHANNEL"  
+    "V_CHANNEL"
+
+**Default Value**   
+    "H_CHANNEL" 
+
+### Setting Methods
+#### As Json Parameter
+
+| Parent Json Object | Json Parameter Name | Value Type | 
+| ------------------ | ------------------- | ---------- |
+| ContentNormalizerParameter | ColourConversionModes | *JSON object array* |
+
+**Default Setting**   
+```json
+{
+    "ColourConversionModes":[
+        {
+            "Mode": "CICM_GENERAL"
+        }
+    ],
+}
+```
+
+**Example**  
+```json
+{
+    "ColourConversionModes":[
+        {
+            "Mode": "CICM_GENERAL"
+        },
+        {
+            "Mode": "CICM_HSV",
+            "ReferChannel": "H_CHANNEL"
+        }
+    ],
+}
+```
+
+#### As Struct Member
+
+| Struct | Struct Member Name | Value Type | 
+| ------ | ------------------ | ---------- |
+| DCN_RuntimeSettings->furtherModes | colourConversionModes | [`ColourConversionMode`]({{ site.common_enumerations }}colour-conversion-mode.html) array |
+
+**Value Range**    
+    Each array item can be any one of the [`ColourConversionMode`]({{ site.common_enumerations }}colour-conversion-mode.html) Enumeration items.
+
+**Default Value**   
+    [CICM_GENERAL,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP]
+
+**Code Snippet**  
+```cpp
+// This is a c++ sample code.
+ContentNormalizer::InitLicense("t0260NwAAAHV***************");
+ContentNormalizer* normalizer = new ContentNormalizer();
+DCN_RuntimeSettings settings;
+int errorCode = normalizer->GetRuntimeSettings(&settings);
+settings->furtherModes.colourConversionModes[0] = CICM_GENERAL;
+settings->furtherModes.colourConversionModes[1] = CICM_HSV;
+char errorMessage[256];
+errorCode = normalizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
+delete normalizer;
+```
 
 ## ExecutePhases
 Sets the string array for specifying the phase(s) to be executed.
@@ -274,8 +412,227 @@ delete normalizer;
 
 
 ## GrayscaleEnhancementModes
+Sets the mode array for the enhancing grayscale image before content normalization. 
+
+### Arguments
+- [`Mode`](#mode)
+- [`Sensitivity`](#sensitivity)
+- [`SharpenBlockSizeX`](#sharpenblocksizex)
+- [`SharpenBlockSizeY`](#sharpenblocksizey)
+- [`SmoothBlockSizeX`](#smoothblocksizex)
+- [`SmoothBlockSizeY`](#smoothblocksizey)
+
+#### Mode
+
+| Argument Name | Value Type | 
+| ------------- | ---------- |
+| Mode | *string* |
+
+**Value Range**   
+    Any one of the [`GrayscaleEnhancementMode`]({{ site.common_enumerations }}grayscale-enhancement-mode.html) items.
+
+**Default Value**   
+    "GEM_GENERAL"
+
+
+#### Sensitivity
+
+| Argument Name| Valid for Mode(s) | Value Type|
+| ------------ | ----------------- | --------- |
+| Sensitivity | `GEM_GRAY_EQUALIZE` | *int* |
+
+**Value Range**    
+    [1, 9]
+
+**Default Value**   
+    5
+
+#### SharpenBlockSizeX
+
+| Argument Name| Valid for Mode(s) | Value Type|
+| ------------ | ----------------- | --------- |
+| SharpenBlockSizeX | `GEM_SHARPEN_SMOOTH` | *int* |
+
+**Value Range**    
+    [3, 1000]
+
+**Default Value**   
+    3
+
+#### SharpenBlockSizeY
+
+| Argument Name| Valid for Mode(s) | Value Type|
+| ------------ | ----------------- | --------- |
+| SharpenBlockSizeY | `GEM_SHARPEN_SMOOTH` | *int* |
+
+**Value Range**    
+    [3, 1000]
+
+**Default Value**   
+    3
+
+#### SmoothBlockSizeX
+
+| Argument Name| Valid for Mode(s) | Value Type|
+| ------------ | ----------------- | --------- |
+| SmoothBlockSizeX | `GEM_GARY_SMOOTM`<br>`GEM_SHARPEN_SMOOTH` | *int* |
+
+**Value Range**    
+    [3, 1000]
+
+**Default Value**   
+    3
+
+#### SmoothBlockSizeY
+
+| Argument Name| Valid for Mode(s) | Value Type|
+| ------------ | ----------------- | --------- |
+| SmoothBlockSizeY | `GEM_GARY_SMOOTM`<br>`GEM_SHARPEN_SMOOTH` | *int* |
+
+**Value Range**    
+    [3, 1000]
+
+**Default Value**   
+    3
+
+### Setting Methods
+#### As Json Parameter
+
+| Parent Json Object | Json Parameter Name | Value Type | 
+| ------------------ | ------------------- | ---------- |
+| ContentNormalizerParameter | GrayscaleEnhancementModes | *JSON object array* |
+
+**Default Setting**   
+```json
+{
+    "GrayscaleEnhancementModes":[
+        {
+            "Mode": "GEM_GENERAL"
+        }
+    ],
+}
+```
+
+**Example**  
+```json
+{
+    "GrayscaleEnhancementModes": [
+    {
+        "Mode": "GEM_GRAY_EQUALIZE",
+        "Sensitivity": 5
+    },
+    {
+        "Mode": "GEM_SHARPEN_SMOOTH",
+        "SmoothBlockSizeX": 5, 
+        "SmoothBlockSizeY": 5, 
+        "SharpenBlockSizeX": 5, 
+        "SharpenBlockSizeY": 5
+    }
+    ],
+}
+```
+
+#### As Struct Member
+
+| Struct | Struct Member Name | Value Type | 
+| ------ | ------------------ | ---------- |
+| DCN_RuntimeSettings->furtherModes | grayscaleEnhancementModes | [`GrayscaleEnhancementMode`]({{ site.common_enumerations }}grayscale-enhancement-mode.html) array |
+
+**Value Range**    
+    Each array item can be any one of the [`GrayscaleEnhancementMode`]({{ site.common_enumerations }}grayscale-enhancement-mode.html) Enumeration items.
+
+**Default Value**   
+    [GEM_GENERAL,GEM_SKIP,GEM_SKIP,GEM_SKIP,GEM_SKIP,GEM_SKIP,GEM_SKIP,GEM_SKIP]
+
+**Code Snippet**  
+```cpp
+// This is a c++ sample code.
+ContentNormalizer::InitLicense("t0260NwAAAHV***************");
+ContentNormalizer* normalizer = new ContentNormalizer();
+DCN_RuntimeSettings settings;
+int errorCode = normalizer->GetRuntimeSettings(&settings);
+settings->furtherModes.grayscaleEnhancementModes[0] = GEM_GRAY_EQUALIZE;
+settings->furtherModes.grayscaleEnhancementModes[1] = GEM_SHARPEN_SMOOTH;
+char errorMessage[256];
+errorCode = normalizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
+delete normalizer;
+```
 
 ## GrayscaleTransformationModes
+Sets the mode array for the grayscale image conversion.
+
+### Arguments
+- [`Mode`](#mode)
+
+#### Mode
+| Argument Name | Value Type | 
+| ------------- | ---------- |
+| Mode | *string* |
+
+**Value Range**   
+    Any one of the [`GrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html) items.
+
+**Default Value**   
+    "GTM_ORIGINAL"
+
+### Setting Methods
+#### As Json Parameter
+
+| Parent Json Object | Json Parameter Name | Value Type | 
+| ------------------ | ------------------- | ---------- |
+| ContentNormalizerParameter | GrayscaleTransformationModes | *JSON object array* |
+
+**Default Setting**   
+```json
+{
+    "GrayscaleTransformationModes":[
+        {
+            "Mode": "GTM_ORIGINAL"
+        }
+    ],
+}
+```
+
+**Example**  
+```json
+{
+    "QuadrilateralDetectionModes":[
+        {
+            "Mode": "GTM_INVERTED"
+        },
+        {
+            "Mode": "GTM_ORIGINAL"
+        }
+    ],
+}
+```
+
+#### As Struct Member
+
+| Struct | Struct Member Name | Value Type | 
+| ------ | ------------------ | ---------- |
+| DCN_RuntimeSettings->furtherModes | grayscaleTransformationModes | [`GrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html) array |
+
+**Value Range**    
+    Each array item can be any one of the [`GrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html) Enumeration items.
+
+**Default Value**   
+    [GTM_ORIGINAL,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP]
+
+**Code Snippet**  
+```cpp
+// This is a c++ sample code.
+ContentNormalizer::InitLicense("t0260NwAAAHV***************");
+ContentNormalizer* normalizer = new ContentNormalizer();
+DCN_RuntimeSettings settings;
+int errorCode = normalizer->GetRuntimeSettings(&settings);
+settings->furtherModes.grayscaleTransformationModes[0] = GTM_INVERTED;
+settings->furtherModes.grayscaleTransformationModes[1] = GTM_ORIGINAL;
+char errorMessage[256];
+errorCode = normalizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
+delete normalizer;
+```
+
 
 ## InteriorAngleRange
 Sets the quadrilateral interior angle range.
@@ -662,6 +1019,94 @@ delete normalizer;
 ```
 
 ## TextureDetectionModes
+Sets the mode array for texture detection. 
+
+### Arguments
+- [`Mode`](#mode)
+- [`Sensitivity`](#sensitivity)
+
+#### Mode
+
+| Argument Name | Value Type | 
+| ------------- | ---------- |
+| Mode | *string* |
+
+**Value Range**   
+    Any one of the [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) items.
+
+**Default Value**   
+    "TDM_GENERAL_WIDTH_CONCENTRATION"
+
+#### Sensitivity
+
+| Argument Name | Valid for Mode(s) | Value Type | 
+| ------------- | ----------------- | ---------- |
+| Sensitivity | `TDM_GENERAL_WIDTH_CONCENTRATION` | *int* |
+
+**Value Range**   
+    [1, 9]
+
+**Default Value**   
+    5
+
+**Remarks**  
+A larger value means the library will take more effort to detect texture.
+
+### Setting Methods
+#### As Json Parameter
+
+| Parent Json Object | Json Parameter Name | Value Type | 
+| ------------------ | ------------------- | ---------- |
+| ContentNormalizerParameter | TextureDetectionModes | *JSON object array* |
+
+**Default Setting**   
+```json
+{
+    "TextureDetectionModes":[
+        {
+            "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION",
+            "Sensitivity": 5
+        }
+    ],
+}
+```
+
+**Example**  
+```json
+{
+    "TextureDetectionModes":[
+        {
+            "Mode": "TDM_SKIP"
+        }
+    ],
+}
+```
+
+#### As Struct Member
+
+| Struct | Struct Member Name | Value Type | 
+| ------ | ------------------ | ---------- |
+| DCN_RuntimeSettings | textureDetectionModes | [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) array |
+
+**Value Range**    
+    Each array item can be any one of the [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) Enumeration items.
+
+**Default Value**   
+    [TDM_GENERAL_WIDTH_CONCENTRATION,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP]
+
+**Code Snippet**  
+```cpp
+// This is a c++ sample code.
+ContentNormalizer::InitLicense("t0260NwAAAHV***************");
+ContentNormalizer* normalizer = new ContentNormalizer();
+DCN_RuntimeSettings settings;
+int errorCode = normalizer->GetRuntimeSettings(&settings);
+settings->furtherModes.textureDetectionModes[0] = TDM_SKIP;
+char errorMessage[256];
+errorCode = normalizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
+delete normalizer;
+```
+
 
 ## Timeout
 Sets the maximum amount of time (in milliseconds) should be spent on normalizing the content per page. 
