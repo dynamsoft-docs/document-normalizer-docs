@@ -23,6 +23,7 @@ Sets the mode array for binarization.
 - [`ThresholdCompensation`](#thresholdcompensation)
 
 #### Mode
+
 | Argument Name | Value Type | 
 | ------------- | ---------- |
 | Mode | *string* |
@@ -35,6 +36,7 @@ Sets the mode array for binarization.
 
 
 #### BinarizationThreshold
+
 | Argument Name| Valid for Mode(s) | Value Type|
 | ------------ | ----------------- | --------- |
 | BinarizationThreshold | `BM_THRESHOLD` | *int* |
@@ -46,6 +48,7 @@ Sets the mode array for binarization.
     -1
 
 #### BlockSizeX
+
 | Argument Name| Valid for Mode(s) | Value Type|
 | ------------ | ----------------- | --------- |
 | BlockSizeX | `BM_LOCAL_BLOCK` | *int* |
@@ -57,6 +60,7 @@ Sets the mode array for binarization.
     0
 
 #### BlockSizeY
+
 | Argument Name| Valid for Mode(s) | Value Type|
 | ------------ | ----------------- | --------- |
 | BlockSizeY | `BM_LOCAL_BLOCK` | *int* |
@@ -68,6 +72,7 @@ Sets the mode array for binarization.
     0
 
 #### EnableFillBinaryVacancy
+
 | Argument Name| Valid for Mode(s) | Value Type|
 | ------------ | ----------------- | --------- |
 | EnableFillBinaryVacancy | `BM_LOCAL_BLOCK` | *int* |
@@ -79,6 +84,7 @@ Sets the mode array for binarization.
     1
 
 #### MorphOperation
+
 | Argument Name| Valid for Mode(s) | Value Type|
 | ------------ | ----------------- | --------- |
 | MorphOperation | `BM_LOCAL_BLOCK`<br>`BM_THRESHOLD` | *string* |
@@ -101,6 +107,7 @@ Sets the mode array for binarization.
 For more information, please check out [Image Processing in OpenCV - Morphological Transformations](https://docs.opencv.org/master/d9/d61/tutorial_py_morphological_ops.html) for reference.
 
 #### MorphOperation
+
 | Argument Name| Valid for Mode(s) | Value Type|
 | ------------ | ----------------- | --------- |
 | MorphOperation | `BM_LOCAL_BLOCK`<br>`BM_THRESHOLD` | *string* |
@@ -114,6 +121,7 @@ For more information, please check out [Image Processing in OpenCV - Morphologic
     "Rectangle"
 
 #### MorphOperationKernelSizeX
+
 | Argument Name| Valid for Mode(s) | Value Type|
 | ------------ | ----------------- | --------- |
 | MorphOperationKernelSizeX | `BM_LOCAL_BLOCK`<br>`BM_THRESHOLD` | *int* |
@@ -125,6 +133,7 @@ For more information, please check out [Image Processing in OpenCV - Morphologic
     -1
 
 #### MorphOperationKernelSizeY
+
 | Argument Name| Valid for Mode(s) | Value Type|
 | ------------ | ----------------- | --------- |
 | MorphOperationKernelSizeY | `BM_LOCAL_BLOCK`<br>`BM_THRESHOLD` | *int* |
@@ -136,6 +145,7 @@ For more information, please check out [Image Processing in OpenCV - Morphologic
     -1
 
 #### ThresholdCompensation
+
 | Argument Name| Valid for Mode(s) | Value Type|
 | ------------ | ----------------- | --------- |
 | ThresholdCompensation | `BM_LOCAL_BLOCK` | *int* |
