@@ -2,6 +2,7 @@
 title: Dynamsoft Content Normalizer - ContentNormalizerParameter Object
 keywords: parameters, reference, dcn, documentation
 description: Dynamsoft Content Normalizer - ContentNormalizerParameter Object
+needGenerateH3Content: false
 ---
 
 
