@@ -128,7 +128,7 @@ Sets the localization of content to be normalized.
 #### FirstPoint
 
 | Argument Name | Valid for SourceType(s) | Value Type | 
-| ------------- | ----------- | ---------- |
+| ------------- | ----------------------- | ---------- |
 | FirstPoint | `CBLM_MANNUAL_SPECIFICATION` | *int array* |
 
 **Value Range**    
@@ -142,7 +142,7 @@ Sets the localization of content to be normalized.
 #### SecondPoint
 
 | Argument Name | Valid for SourceType(s) | Value Type | 
-| ------------- | ----------- | ---------- |
+| ------------- | ----------------------- | ---------- |
 | SecondPoint | `CBLM_MANNUAL_SPECIFICATION` | *int array* |
 
 **Value Range**    
@@ -156,7 +156,7 @@ Sets the localization of content to be normalized.
 #### ThirdPoint
 
 | Argument Name | Valid for SourceType(s) | Value Type | 
-| ------------- | ----------- | ---------- |
+| ------------- | ----------------------- | ---------- |
 | ThirdPoint | `CBLM_MANNUAL_SPECIFICATION` | *int array* |
 
 **Value Range**    
@@ -170,7 +170,7 @@ Sets the localization of content to be normalized.
 #### FourthPoint
 
 | Argument Name | Valid for SourceType(s) | Value Type | 
-| ------------- | ----------- | ---------- |
+| ------------- | ----------------------- | ---------- |
 | FourthPoint | `CBLM_MANNUAL_SPECIFICATION` | *int array* |
 
 **Value Range**    
