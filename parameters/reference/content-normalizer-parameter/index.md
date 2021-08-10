@@ -565,6 +565,7 @@ Sets the mode array for the grayscale image conversion.
 - [`Mode`](#mode)
 
 #### Mode
+
 | Argument Name | Value Type | 
 | ------------- | ---------- |
 | Mode | *string* |
@@ -596,7 +597,7 @@ Sets the mode array for the grayscale image conversion.
 **Example**  
 ```json
 {
-    "QuadrilateralDetectionModes":[
+    "GrayscaleTransformationModes":[
         {
             "Mode": "GTM_INVERTED"
         },
@@ -899,6 +900,7 @@ Sets the mode array for quadrilateral detection.
 - [`Mode`](#mode)
 
 #### Mode
+
 | Argument Name | Value Type | 
 | ------------- | ---------- |
 | Mode | *string* |
