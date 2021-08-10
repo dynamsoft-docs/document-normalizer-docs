@@ -8,6 +8,7 @@ needGenerateH3Content: false
 
 # NormalizationDefinition Object
 
+
 ## Brightness
 Sets the target brightness value of the final normalized image.
 
