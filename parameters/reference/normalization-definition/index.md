@@ -3,6 +3,7 @@ title: Dynamsoft Content Normalizer - NormalizationDefinition Object
 keywords: parameters, reference, dcn, documentation
 description: Dynamsoft Content Normalizer - NormalizationDefinition Object
 needGenerateH3Content: false
+noTitleIndex: false
 ---
 
 
