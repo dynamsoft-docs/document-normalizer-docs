@@ -202,7 +202,7 @@ For more information, please check out [Image Processing in OpenCV - Morphologic
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | binarizationModes | [`QuadrilateralDetectionMode`]({{ site.enumerations }}quadrilateral-detection-mode.html) array |
+| DCN_RuntimeSettings | binarizationModes | [`BinarizationMode`]({{ site.common_enumerations }}binarization-mode.html) array |
 
 **Value Range**    
     Each array item can be any one of the [`BinarizationMode`]({{ site.common_enumerations }}binarization-mode.html) Enumeration items.
