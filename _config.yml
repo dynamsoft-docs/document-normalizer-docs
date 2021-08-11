@@ -15,7 +15,7 @@ c_cpp_struct: /content-normalizer/programming/c-cplusplus/api-reference/struct/
 c_cpp_common_struct: /content-normalizer/programming/c-cplusplus/api-reference/struct/
 
 enumerations: /content-normalizer/parameters/enumerations/
-common_enumerations: /content-normalizer/parameters/enumerations/
+common_enumerations: /content-normalizer/parameters/enumerations/common/
 parameter_reference: /content-normalizer/parameters/reference/
 useVersionTree: true
 
