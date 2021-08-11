@@ -4,7 +4,11 @@ keywords: primary api, c++ class, api reference, c++, cplusplus, dcn, documentat
 description: Dynamsoft Content Normalizer - Primary Class for C++
 ---
 
-# Class dynamsoft::dcn::ContentNormalizer - C++
+# ContentNormalizer Class - C++
+
+```cpp
+class dynamsoft::dcn::ContentNormalizer
+```
 
 ## Initialization
   

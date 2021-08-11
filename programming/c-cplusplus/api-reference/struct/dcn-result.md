@@ -8,13 +8,10 @@ description: Dynamsoft Content Normalizer - DCN_Result Struct
 # DCN_Result
 Defines a struct to store DCN result.
 
-## Typedefs
 ```cpp
 typedef struct tagDCNResult  DCN_Result
 ```  
-  
----
-  
+
 
 ## Attributes
   

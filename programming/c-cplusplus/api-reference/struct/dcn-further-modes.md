@@ -8,14 +8,9 @@ description: Dynamsoft Content Normalizer - DCN_FurtherModes Struct
 # DCN_FurtherModes
 Defines a struct to configure the further modes for controlling image processing stage in content normalization.
 
-## Typedefs
-
 ```cpp
 typedef struct tagDCNFurtherModes  DCN_FurtherModes
 ```  
-  
----
-  
 
 ## Attributes
   

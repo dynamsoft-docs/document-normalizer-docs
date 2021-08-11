@@ -8,14 +8,9 @@ description: Dynamsoft Content Normalizer - DCN_NormalizationSettings Struct
 # DCN_NormalizationSettings
 Defines a struct to configure the normalization settings.
 
-## Typedefs
-
 ```cpp
 typedef struct tagDCNNormalizationSettings  DCN_NormalizationSettings
 ```  
-  
----
-  
 
 ## Attributes
   

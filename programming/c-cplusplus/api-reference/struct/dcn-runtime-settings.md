@@ -8,14 +8,10 @@ description: Dynamsoft Content Normalizer - DCN_RuntimeSettings Struct
 # DCN_RuntimeSettings
 Defines a struct to configure the content normalizer runtime settings. These settings control the content normalization process.
 
-## Typedefs
-
 ```cpp
 typedef struct tagDCNRuntimeSettings  DCN_RuntimeSettings
 ```  
-  
----
-  
+
 
 ## Attributes
   
