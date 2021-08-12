@@ -11,17 +11,28 @@ Sets the mode array for binarization.
 
 ## Mode Properties
 
-### `BM_SKIP`
-
-
-### `BM_AUTO`
-
-
 ### `BM_LOCAL_BLOCK`
+Binarizes the image based on the local block.
 
+#### Valid Argument
+- `BlockSizeX`
+- `BlockSizeY`
+- `EnableFillBinaryVacancy`
+- `MorphOperation`
+- `MorphShape`
+- `MorphOperationKernelSizeX`
+- `MorphOperationKernelSizeY`
+- `ThresholdCompensation`
 
 ### `BM_THRESHOLD`
+Binarizes the image based on a given threshold.
 
+#### Valid Argument
+- `BinarizationThreshold`
+- `MorphOperation`
+- `MorphShape`
+- `MorphOperationKernelSizeX`
+- `MorphOperationKernelSizeY`
 
 ## Setting Methods
 ### As Json Parameter
