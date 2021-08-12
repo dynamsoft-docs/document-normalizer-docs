@@ -9,6 +9,20 @@ needGenerateH3Content: true
 # BinarizationModes
 Sets the mode array for binarization. 
 
+## Mode Properties
+
+### `BM_SKIP`
+
+
+### `BM_AUTO`
+
+
+### `BM_LOCAL_BLOCK`
+
+
+### `BM_THRESHOLD`
+
+
 ## Setting Methods
 ### As Json Parameter
 
