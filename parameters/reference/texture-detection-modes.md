@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - Contrast
-keywords: contrast, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - Contrast
+title: Dynamsoft Content Normalizer Parameter Reference - TextureDetectionModes
+keywords: texturedetectionmodes, parameters, reference, dcn, documentation
+description: Dynamsoft Content Normalizer Parameter Reference - TextureDetectionModes
 needGenerateH3Content: true
 ---
 
