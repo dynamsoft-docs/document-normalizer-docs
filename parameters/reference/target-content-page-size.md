@@ -5,11 +5,12 @@ description: Dynamsoft Content Normalizer Parameter Reference - TargetContentPag
 needGenerateH3Content: true
 ---
 
-## TargetContentPageSize
+
+# TargetContentPageSize
 Sets the target content page size (width x height in millimeters).
 
-### Setting Methods
-#### As Json Parameter
+## Setting Methods
+### As Json Parameter
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
@@ -30,7 +31,7 @@ Sets the target content page size (width x height in millimeters).
 }
 ```
 
-#### As Struct Member
+### As Struct Member
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
