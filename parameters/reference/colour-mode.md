@@ -9,6 +9,20 @@ needGenerateH3Content: true
 # ColourMode
 Sets the target colour mode of the final normalized image.
 
+## Mode Properties
+
+### `ICM_BINARY`
+Defines a black-white image.
+
+
+### `ICM_GRAYSCALE`
+Defines a grayscale image.
+
+
+### `ICM_COLOUR`
+Defines a colour image.
+
+
 ## Setting Methods
 ### As Json Parameter
 
