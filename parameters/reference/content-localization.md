@@ -6,7 +6,7 @@ needGenerateH3Content: true
 ---
 
 
-## ContentLocalization
+# ContentLocalization
 Sets the localization of content to be normalized.
 
 ## Setting Methods
