@@ -15,11 +15,11 @@ Sets the mode array for texture detection.
 Transforms to inverted grayscale. Recommended for light on dark images.
 
 #### Valid Argument
-- `Sensitivity`
+- [`Sensitivity`](#sensitivity)
 
 
-### Setting Methods
-#### As Json Parameter
+## Setting Methods
+### As Json Parameter
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
@@ -48,7 +48,7 @@ Transforms to inverted grayscale. Recommended for light on dark images.
 }
 ```
 
-#### As Struct Member
+### As Struct Member
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |

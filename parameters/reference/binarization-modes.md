@@ -15,24 +15,24 @@ Sets the mode array for binarization.
 Binarizes the image based on the local block.
 
 #### Valid Argument
-- `BlockSizeX`
-- `BlockSizeY`
-- `EnableFillBinaryVacancy`
-- `MorphOperation`
-- `MorphShape`
-- `MorphOperationKernelSizeX`
-- `MorphOperationKernelSizeY`
-- `ThresholdCompensation`
+- [`BlockSizeX`](#blocksizex)
+- [`BlockSizeY`](#blocksizey)
+- [`EnableFillBinaryVacancy`](#enablefillbinaryvacancy)
+- [`MorphOperation`](#morphoperation)
+- [`MorphShape`](#morphshape)
+- [`MorphOperationKernelSizeX`](#morphoperationkernelsizex)
+- [`MorphOperationKernelSizeY`](#morphoperationkernelsizey)
+- [`ThresholdCompensation`](#thresholdcompensation)
 
 ### `BM_THRESHOLD`
 Binarizes the image based on a given threshold.
 
 #### Valid Argument
-- `BinarizationThreshold`
-- `MorphOperation`
-- `MorphShape`
-- `MorphOperationKernelSizeX`
-- `MorphOperationKernelSizeY`
+- [`BinarizationThreshold`](#binarizationthreshold)
+- [`MorphOperation`](#morphoperation)
+- [`MorphShape`](#morphshape)
+- [`MorphOperationKernelSizeX`](#morphoperationkernelsizex)
+- [`MorphOperationKernelSizeY`](#morphoperationkernelsizey)
 
 ## Setting Methods
 ### As Json Parameter

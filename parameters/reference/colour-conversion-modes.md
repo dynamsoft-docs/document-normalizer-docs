@@ -15,16 +15,16 @@ Sets the mode array for converting a colour image to a grayscale image.
 Converts a colour image to a grayscale image using the general RGB converting algorithm.
 
 #### Valid Argument
-- `BlueChannelWeight`
-- `GreenChannelWeight`
-- `RedChannelWeight`
+- [`BlueChannelWeight`](#bluechannelweight)
+- [`GreenChannelWeight`](#greenchannelweight)
+- [`RedChannelWeight`](#redchannelweight)
 
 
 ### `CICM_HSV`
 Converts a colour image to a grayscale image using one of the HSV channels.
 
 #### Valid Argument
-- `ReferChannel`
+- [`ReferChannel`](#referchannel)
 
 ## Setting Methods
 ### As Json Parameter

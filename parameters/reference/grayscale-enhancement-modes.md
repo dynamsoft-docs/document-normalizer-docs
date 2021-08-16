@@ -19,25 +19,25 @@ Takes the un-preprocessed grayscale image for following operations.
 Preprocesses the grayscale image using the gray equalization algorithm.
 
 #### Valid Argument
-- `Sensitivity`
+- [`Sensitivity`](#sensitivity)
 
 
 ### `GEM_GARY_SMOOTM`
 Preprocesses the grayscale image using the gray smoothing algorithm.
 
 #### Valid Argument
-- `SmoothBlockSizeX`
-- `SmoothBlockSizeY`
+- [`SmoothBlockSizeX`](#smoothblocksizex)
+- [`SmoothBlockSizeY`](#smoothblocksizey)
 
 
 ### `GEM_SHARPEN_SMOOTH`
 Preprocesses the grayscale image using the sharpening and smoothing algorithm.
 
 #### Valid Argument
-- `SmoothBlockSizeX`
-- `SmoothBlockSizeY`
-- `SharpenBlockSizeX`
-- `SharpenBlockSizeY`
+- [`SharpenBlockSizeX`](#sharpenblocksizex)
+- [`SharpenBlockSizeY`](#sharpenblocksizey)
+- [`SmoothBlockSizeX`](#smoothblocksizex)
+- [`SmoothBlockSizeY`](#smoothblocksizey)
 
 
 ## Setting Methods
