@@ -6,3 +6,5 @@ description: Dynamsoft Content Normalizer - Parameters
 
 # Parameter
 
+- [Parameter Reference]({{ site.parameter_reference }})
+- [Enumerations]({{ site.enumerations }})
