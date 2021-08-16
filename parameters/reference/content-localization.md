@@ -9,6 +9,23 @@ needGenerateH3Content: true
 # ContentLocalization
 Sets the localization of content to be normalized.
 
+## SourceType Properties
+
+### `CBLM_MANNUAL_SPECIFICATION`
+Define the content boundary using the manually specified location.
+
+#### Valid Argument
+- [`FirstPoint`](#firstpoint)
+- [`SecondPoint`](#secondpoint)
+- [`ThirdPoint`](#thirdpoint)
+- [`FourthPoint`](#fourthpoint)
+
+### `CBLM_AUTO_DETECTION`
+Define the content boundary using the result(s) of automatic detection.
+
+### `CBLM_WHOLE_IMAGE`
+Define the content boundary using the image boundary.
+
 ## Setting Methods
 ### As Json Parameter
 
@@ -66,23 +83,11 @@ delete normalizer;
 
 
 ## Arguments Reference
-- [`SourceType`](#sourcetype)
 - [`FirstPoint`](#firstpoint)
 - [`SecondPoint`](#secondpoint)
 - [`ThirdPoint`](#thirdpoint)
 - [`FourthPoint`](#fourthpoint)
 
-### SourceType
-
-| Argument Name | Value Type | 
-| ------------- | ---------- |
-| SourceType | *string* |
-
-**Value Range**   
-    Any one of the [`ContentBoundaryLocalizationMode`]({{ site.enumerations }}content-boundary-localization-mode.html) items.
-
-**Default Value**   
-    "CBLM_AUTO_DETECTION"
 
 ### FirstPoint
 
