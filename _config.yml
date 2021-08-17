@@ -1,5 +1,5 @@
-repository: Dynamsoft/content-normalizer-docs
-repositoryUrl: https://github.com/Dynamsoft/content-normalizer-docs/blob/main
+repository: dynamsoft-docs/content-normalizer-docs
+repositoryUrl: https://github.com/dynamsoft-docs/content-normalizer-docs/blob/main
 docFullPath: https://www.dynamsoft.com/content-normalizer/
 firstLevelUrl: /content-normalizer
 docHomePage: /content-normalizer/introduction/

@@ -28,7 +28,7 @@ jobs:
       - name: Build the site
         run: |
           cd /home/ubuntu
-          #[ ! -d content-normalizer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/content-normalizer-docs.git content-normalizer-docs-preview
+          #[ ! -d content-normalizer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/content-normalizer-docs.git content-normalizer-docs-preview
           [ ! -d DCNDocPreview ] && mkdir -p DCNDocPreview
           cd content-normalizer-docs-preview && git pull && cd .. && cp -rfp ./content-normalizer-docs-preview/* ./DCNDocPreview/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCNDocPreview/
