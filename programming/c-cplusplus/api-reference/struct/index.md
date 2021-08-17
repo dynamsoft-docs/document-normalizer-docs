@@ -14,7 +14,7 @@ description: Dynamsoft Content Normalizer - Struct for C & C++
 
 
 ## Common Structs
-- [`DM_Point`]()
-- [`ImageData`]()
-- [`Quadrilateral`]()
+- [`DM_Point`](common/dm-point.md)
+- [`ImageData`](common/image-data.md)
+- [`Quadrilateral`](common/quadrilateral.md)
 
