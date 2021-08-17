@@ -34,7 +34,7 @@ jobs:
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCNDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DCNDocPreview/_config.yml
-          cd DCNDocPreview && bundle exec jekyll build --incremental
+          cd DCNDocPreview && bundle exec jekyll build #--incremental
 
           
       - name: Sync files
