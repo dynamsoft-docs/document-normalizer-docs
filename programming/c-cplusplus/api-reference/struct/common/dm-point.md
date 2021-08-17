@@ -18,8 +18,8 @@ typedef struct tagDM_Point*  PDM_Point
   
 | Attribute | Type |
 |---------- | ---- |
-| `x`(#x) | *int* |
-| `y`(#y) | *int* |
+| [`x`](#x) | *int* |
+| [`y`](#y) | *int* |
 
 
 &nbsp;

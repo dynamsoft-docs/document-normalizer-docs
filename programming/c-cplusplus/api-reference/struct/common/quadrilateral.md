@@ -15,7 +15,7 @@ typedef struct tagQuadrilateral  Quadrilateral
   
 | Attribute | Type |
 |---------- | ---- |
-| `points`(#points) | [`DM_Point`](dm-point.md)[4] |
+| [`points`](#points) | [`DM_Point`](dm-point.md)[4] |
 
 
 &nbsp;

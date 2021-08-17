@@ -16,12 +16,12 @@ typedef struct tagImageData  ImageData
   
 | Attribute | Type |
 |---------- | ---- |
-| `bytesLength`(#byteslength) | *int* |
-| `bytes`(#bytes) | *unsigned char\** |
-| `width`(#width) | *int* |
-| `height`(#height) | *int* |
-| `stride`(#stride) | *int* |
-| `format`(#format) | [`ImagePixelFormat`]({{ site.common_enumerations }}image-pixel-format.html) |
+| [`bytesLength`](#byteslength) | *int* |
+| [`bytes`](#bytes) | *unsigned char\** |
+| [`width`](#width) | *int* |
+| [`height`](#height) | *int* |
+| [`stride`](#stride) | *int* |
+| [`format`](#format) | [`ImagePixelFormat`]({{ site.common_enumerations }}image-pixel-format.html) |
 
 
 &nbsp;
