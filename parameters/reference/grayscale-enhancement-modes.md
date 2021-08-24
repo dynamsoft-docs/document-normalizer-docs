@@ -22,7 +22,7 @@ Preprocesses the grayscale image using the gray equalization algorithm.
 - [`Sensitivity`](#sensitivity)
 
 
-### `GEM_GARY_SMOOTM`
+### `GEM_GRAY_SMOOTH`
 Preprocesses the grayscale image using the gray smoothing algorithm.
 
 #### Valid Argument
@@ -152,7 +152,7 @@ delete normalizer;
 
 | Argument Name| Valid for Mode(s) | Value Type|
 | ------------ | ----------------- | --------- |
-| SmoothBlockSizeX | `GEM_GARY_SMOOTM`<br>`GEM_SHARPEN_SMOOTH` | *int* |
+| SmoothBlockSizeX | `GEM_GRAY_SMOOTH`<br>`GEM_SHARPEN_SMOOTH` | *int* |
 
 **Value Range**    
     [3, 1000]
@@ -164,7 +164,7 @@ delete normalizer;
 
 | Argument Name| Valid for Mode(s) | Value Type|
 | ------------ | ----------------- | --------- |
-| SmoothBlockSizeY | `GEM_GARY_SMOOTM`<br>`GEM_SHARPEN_SMOOTH` | *int* |
+| SmoothBlockSizeY | `GEM_GRAY_SMOOTH`<br>`GEM_SHARPEN_SMOOTH` | *int* |
 
 **Value Range**    
     [3, 1000]

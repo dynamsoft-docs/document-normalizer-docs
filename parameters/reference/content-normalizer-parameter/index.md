@@ -477,7 +477,7 @@ Sets the mode array for the enhancing grayscale image before content normalizati
 
 | Argument Name| Valid for Mode(s) | Value Type|
 | ------------ | ----------------- | --------- |
-| SmoothBlockSizeX | `GEM_GARY_SMOOTM`<br>`GEM_SHARPEN_SMOOTH` | *int* |
+| SmoothBlockSizeX | `GEM_GRAY_SMOOTH`<br>`GEM_SHARPEN_SMOOTH` | *int* |
 
 **Value Range**    
     [3, 1000]
@@ -489,7 +489,7 @@ Sets the mode array for the enhancing grayscale image before content normalizati
 
 | Argument Name| Valid for Mode(s) | Value Type|
 | ------------ | ----------------- | --------- |
-| SmoothBlockSizeY | `GEM_GARY_SMOOTM`<br>`GEM_SHARPEN_SMOOTH` | *int* |
+| SmoothBlockSizeY | `GEM_GRAY_SMOOTH`<br>`GEM_SHARPEN_SMOOTH` | *int* |
 
 **Value Range**    
     [3, 1000]
