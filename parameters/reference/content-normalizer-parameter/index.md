@@ -108,11 +108,11 @@ Sets the mode array for binarization.
 
 For more information, please check out [Image Processing in OpenCV - Morphological Transformations](https://docs.opencv.org/master/d9/d61/tutorial_py_morphological_ops.html) for reference.
 
-#### MorphOperation
+#### MorphShape
 
 | Argument Name| Valid for Mode(s) | Value Type|
 | ------------ | ----------------- | --------- |
-| MorphOperation | `BM_LOCAL_BLOCK`<br>`BM_THRESHOLD` | *string* |
+| MorphShape | `BM_LOCAL_BLOCK`<br>`BM_THRESHOLD` | *string* |
 
 **Value Range**   
     "Rectangle"  
