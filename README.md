@@ -1,2 +1,2 @@
-# content-normalizer-docs
-Dynamsoft Content Normalizer(DCN) documentation repo.
+# document-normalizer-docs
+Dynamsoft Document Normalizer(DDN) documentation repo.
