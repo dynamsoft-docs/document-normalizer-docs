@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - GrayscaleTransformationModes
-keywords: grayscaletransformationmodes, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - GrayscaleTransformationModes
+title: Dynamsoft Document Normalizer Parameter Reference - GrayscaleTransformationModes
+keywords: grayscaletransformationmodes, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - GrayscaleTransformationModes
 needGenerateH3Content: true
 ---
 
@@ -28,7 +28,7 @@ Let the library choose an algorithm automatically for grayscale transformation.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | GrayscaleTransformationModes | *JSON object array* |
+| DocumentNormalizerParameter | GrayscaleTransformationModes | *JSON object array* |
 
 **Default Setting**   
 ```json
@@ -59,7 +59,7 @@ Let the library choose an algorithm automatically for grayscale transformation.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->furtherModes | grayscaleTransformationModes | [`GrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html) array |
+| DDN_RuntimeSettings->furtherModes | grayscaleTransformationModes | [`GrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html) array |
 
 **Value Range**    
     Each array item can be any one of the [`GrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html) Enumeration items.
@@ -70,9 +70,9 @@ Let the library choose an algorithm automatically for grayscale transformation.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->furtherModes.grayscaleTransformationModes[0] = GTM_INVERTED;
 settings->furtherModes.grayscaleTransformationModes[1] = GTM_ORIGINAL;

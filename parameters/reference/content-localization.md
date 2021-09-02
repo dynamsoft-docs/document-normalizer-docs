@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - ContentLocalization
-keywords: contentlocalization, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - ContentLocalization
+title: Dynamsoft Document Normalizer Parameter Reference - ContentLocalization
+keywords: contentlocalization, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - ContentLocalization
 needGenerateH3Content: true
 ---
 
@@ -59,7 +59,7 @@ Define the content boundary using the image boundary.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->normalizationSettings | localizationMode | [`ContentBoundaryLocalizationMode`]({{ site.enumerations }}content-boundary-localization-mode.html) |
+| DDN_RuntimeSettings->normalizationSettings | localizationMode | [`ContentBoundaryLocalizationMode`]({{ site.enumerations }}content-boundary-localization-mode.html) |
 
 **Value Range**  
     Any one of the [`ContentBoundaryLocalizationMode`]({{ site.enumerations }}content-boundary-localization-mode.html) items.
@@ -70,9 +70,9 @@ Define the content boundary using the image boundary.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->normalizationSettings.localizationMode = CBLM_WHOLE_IMAGE;
 char errorMessage[256];

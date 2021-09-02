@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - EnableDeskewing
-keywords: enabledeskewing, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - EnableDeskewing
+title: Dynamsoft Document Normalizer Parameter Reference - EnableDeskewing
+keywords: enabledeskewing, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - EnableDeskewing
 needGenerateH3Content: true
 ---
 
@@ -32,7 +32,7 @@ Sets enable de-skewing during normalization or not.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->normalizationSettings | enableDeskewing | *int* |
+| DDN_RuntimeSettings->normalizationSettings | enableDeskewing | *int* |
 
 **Value Range**  
     [0, 1]
@@ -43,9 +43,9 @@ Sets enable de-skewing during normalization or not.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->normalizationSettings.enableDeskewing = 0;
 char errorMessage[256];

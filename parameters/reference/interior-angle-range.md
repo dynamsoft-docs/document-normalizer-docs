@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - InteriorAngleRange
-keywords: interioranglerange, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - InteriorAngleRange
+title: Dynamsoft Document Normalizer Parameter Reference - InteriorAngleRange
+keywords: interioranglerange, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - InteriorAngleRange
 needGenerateH3Content: true
 ---
 
@@ -14,7 +14,7 @@ Sets the quadrilateral interior angle range.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | InteriorAngleRange | *int array* |
+| DocumentNormalizerParameter | InteriorAngleRange | *int array* |
 
 **Value Range**    
     Format: [`minInteriorAngleValue`, `maxInteriorAngleValue`]    
@@ -35,7 +35,7 @@ Sets the quadrilateral interior angle range.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | interiorAngleRange | *int array* |
+| DDN_RuntimeSettings | interiorAngleRange | *int array* |
 
 **Value Range**    
     Format: [`minInteriorAngleValue`, `maxInteriorAngleValue`]    
@@ -48,9 +48,9 @@ Sets the quadrilateral interior angle range.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->interiorAngleRange[0] = 60;
 settings->interiorAngleRange[1] = 120;

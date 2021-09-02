@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - ContentType Enumeration
-keywords: contenttype, enumerations, enums, dcn, documentation
-description: Dynamsoft Content Normalizer - ContentType Enumeration
+title: Dynamsoft Document Normalizer - ContentType Enumeration
+keywords: contenttype, enumerations, enums, ddn, documentation
+description: Dynamsoft Document Normalizer - ContentType Enumeration
 ---
 
 # ContentType

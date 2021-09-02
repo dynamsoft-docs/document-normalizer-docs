@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - ExecutePhase Enumeration
-keywords: executephase, enumerations, enums, dcn, documentation
-description: Dynamsoft Content Normalizer - ExecutePhase Enumeration
+title: Dynamsoft Document Normalizer - ExecutePhase Enumeration
+keywords: executephase, enumerations, enums, ddn, documentation
+description: Dynamsoft Document Normalizer - ExecutePhase Enumeration
 ---
 
 # ExecutePhase

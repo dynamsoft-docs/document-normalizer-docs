@@ -28,13 +28,13 @@ jobs:
       - name: Build the site
         run: |
           cd /home/ubuntu
-          #[ ! -d content-normalizer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/content-normalizer-docs.git content-normalizer-docs-preview
-          [ ! -d DCNDocPreview ] && mkdir -p DCNDocPreview
-          cd content-normalizer-docs-preview && git pull && cd .. && cp -rfp ./content-normalizer-docs-preview/* ./DCNDocPreview/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DCNDocPreview/
+          #[ ! -d document-normalizer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/document-normalizer-docs.git document-normalizer-docs-preview
+          [ ! -d DDNDocPreview ] && mkdir -p DDNDocPreview
+          cd document-normalizer-docs-preview && git pull && cd .. && cp -rfp ./document-normalizer-docs-preview/* ./DDNDocPreview/
+          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DDNDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
-          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DCNDocPreview/_config.yml
-          cd DCNDocPreview && bundle exec jekyll build #--incremental
+          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DDNDocPreview/_config.yml
+          cd DDNDocPreview && bundle exec jekyll build #--incremental
 
           
       - name: Sync files
@@ -44,6 +44,6 @@ jobs:
           username: ${{ secrets.FTP_TEST_SITE_USER }}
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
-          local-dir: /home/ubuntu/DCNDocPreview/_site/
-          server-dir: /www.dynamsoft.com/content-normalizer/
+          local-dir: /home/ubuntu/DDNDocPreview/_site/
+          server-dir: /www.dynamsoft.com/document-normalizer/
 

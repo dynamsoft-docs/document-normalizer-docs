@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - Quadrilateral Struct
-keywords: quadrilateral, struct, api, api reference, c, c language, c++, cplusplus, dcn, documentation
-description: Dynamsoft Content Normalizer - quadrilateral Struct
+title: Dynamsoft Document Normalizer - Quadrilateral Struct
+keywords: quadrilateral, struct, api, api reference, c, c language, c++, cplusplus, ddn, documentation
+description: Dynamsoft Document Normalizer - quadrilateral Struct
 ---
 
 # Quadrilateral

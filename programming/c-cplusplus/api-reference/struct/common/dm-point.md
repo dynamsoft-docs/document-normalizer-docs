@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - DM_Point Struct
-keywords: dm_point, struct, api, api reference, c, c language, c++, cplusplus, dcn, documentation
-description: Dynamsoft Content Normalizer - DM_Point Struct
+title: Dynamsoft Document Normalizer - DM_Point Struct
+keywords: dm_point, struct, api, api reference, c, c language, c++, cplusplus, ddn, documentation
+description: Dynamsoft Document Normalizer - DM_Point Struct
 ---
 
 

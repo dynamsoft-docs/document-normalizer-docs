@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - C Language
-keywords: c, c language, dcn, documentation
-description: Dynamsoft Content Normalizer - C Language
+title: Dynamsoft Document Normalizer - C Language
+keywords: c, c language, ddn, documentation
+description: Dynamsoft Document Normalizer - C Language
 ---
 
 # C Language

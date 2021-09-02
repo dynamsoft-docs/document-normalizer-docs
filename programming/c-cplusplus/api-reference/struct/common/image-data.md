@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - ImageData Struct
-keywords: imagedata, struct, api, api reference, c, c language, c++, cplusplus, dcn, documentation
-description: Dynamsoft Content Normalizer - ImageData Struct
+title: Dynamsoft Document Normalizer - ImageData Struct
+keywords: imagedata, struct, api, api reference, c, c language, c++, cplusplus, ddn, documentation
+description: Dynamsoft Document Normalizer - ImageData Struct
 ---
 
 

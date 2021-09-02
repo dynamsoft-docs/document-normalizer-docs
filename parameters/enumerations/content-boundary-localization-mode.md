@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - ContentBoundaryLocalizationMode Enumeration
-keywords: contentboundarylocalizationmode, enumerations, enums, dcn, documentation
-description: Dynamsoft Content Normalizer - ContentBoundaryLocalizationMode Enumeration
+title: Dynamsoft Document Normalizer - ContentBoundaryLocalizationMode Enumeration
+keywords: contentboundarylocalizationmode, enumerations, enums, ddn, documentation
+description: Dynamsoft Document Normalizer - ContentBoundaryLocalizationMode Enumeration
 ---
 
 # ContentBoundaryLocalizationMode

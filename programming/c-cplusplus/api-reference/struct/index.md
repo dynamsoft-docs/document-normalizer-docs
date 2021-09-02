@@ -1,16 +1,16 @@
 ---
-title: Dynamsoft Content Normalizer - Struct for C & C++
-keywords: struct, api, api reference, c, c language, c++, cplusplus, dcn, documentation
-description: Dynamsoft Content Normalizer - Struct for C & C++
+title: Dynamsoft Document Normalizer - Struct for C & C++
+keywords: struct, api, api reference, c, c language, c++, cplusplus, ddn, documentation
+description: Dynamsoft Document Normalizer - Struct for C & C++
 ---
 
 # Struct - C & C++
 
-## DCN Structs
-- [`DCN_FurtherModes`](dcn-further-modes.md)
-- [`DCN_NormalizationSettings`](dcn-normalization-settings.md)
-- [`DCN_Result`](dcn-result.md)
-- [`DCN_RuntimeSettings`](dcn-runtime-settings.md)
+## DDN Structs
+- [`DDN_FurtherModes`](ddn-further-modes.md)
+- [`DDN_NormalizationSettings`](ddn-normalization-settings.md)
+- [`DDN_Result`](ddn-result.md)
+- [`DDN_RuntimeSettings`](ddn-runtime-settings.md)
 
 
 ## Common Structs

@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - ColourMode
-keywords: colourmode, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - ColourMode
+title: Dynamsoft Document Normalizer Parameter Reference - ColourMode
+keywords: colourmode, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - ColourMode
 needGenerateH3Content: true
 ---
 
@@ -47,7 +47,7 @@ Defines a colour image.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->normalizationSettings | colourMode | [`ImageColourMode`]({{ site.enumerations }}image-colour-mode.html) |
+| DDN_RuntimeSettings->normalizationSettings | colourMode | [`ImageColourMode`]({{ site.enumerations }}image-colour-mode.html) |
 
 **Value Range**  
     Any one of the [`ImageColourMode`]({{ site.enumerations }}image-colour-mode.html) items.
@@ -58,9 +58,9 @@ Defines a colour image.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->normalizationSettings.colourMode = ICM_COLOUR;
 char errorMessage[256];

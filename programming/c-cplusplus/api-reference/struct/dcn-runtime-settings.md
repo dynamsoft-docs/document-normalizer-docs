@@ -1,15 +1,15 @@
 ---
-title: Dynamsoft Content Normalizer - DCN_RuntimeSettings Struct
-keywords: dcn_runtimesettings, struct, api, api reference, c, c language, c++, cplusplus, dcn, documentation
-description: Dynamsoft Content Normalizer - DCN_RuntimeSettings Struct
+title: Dynamsoft Document Normalizer - DDN_RuntimeSettings Struct
+keywords: ddn_runtimesettings, struct, api, api reference, c, c language, c++, cplusplus, ddn, documentation
+description: Dynamsoft Document Normalizer - DDN_RuntimeSettings Struct
 ---
 
 
-# DCN_RuntimeSettings
-Defines a struct to configure the content normalizer runtime settings. These settings control the content normalization process.
+# DDN_RuntimeSettings
+Defines a struct to configure the document normalizer runtime settings. These settings control the content normalization process.
 
 ```cpp
-typedef struct tagDCNRuntimeSettings  DCN_RuntimeSettings
+typedef struct tagDDNRuntimeSettings  DDN_RuntimeSettings
 ```  
 
 
@@ -22,8 +22,8 @@ typedef struct tagDCNRuntimeSettings  DCN_RuntimeSettings
 | [`scaleDownThreshold`](#scaledownthreshold) | *int* |
 | [`executePhases`](#executephases) | *int* |
 | [`binarizationModes`](#binarizationmodes) | [`BinarizationMode`]({{ site.common_enumerations }}binarization-mode.html)[8] |
-| [`furtherModes`](#furthermodes) | [`DCN_FurtherModes`](dcn-further-modes.md) |
-| [`normalizationSettings`](#normalizationsettings) | [`DCN_NormalizationSettings`](dcn-normalization-settings.md) |
+| [`furtherModes`](#furthermodes) | [`DDN_FurtherModes`](ddn-further-modes.md) |
+| [`normalizationSettings`](#normalizationsettings) | [`DDN_NormalizationSettings`](ddn-normalization-settings.md) |
 | [`detectionModes`](#detectionmodes) | [`QuadrilateralDetectionMode`]({{ site.enumerations }}quadrilateral-detection-mode.html)[8] |
 | [`minHorizontalSideLength`](#minhorizontalsidelength) | *int\[2\]* |
 | [`minVerticalSideLength`](#minverticalsidelength) | *int\[2\]* |
@@ -112,17 +112,17 @@ BinarizationMode binarizationModes[8]
 &nbsp;
 
 ### furtherModes
-Sets further modes and stores them in a [`DCN_FurtherModes`](dcn-further-modes.md) struct.
+Sets further modes and stores them in a [`DDN_FurtherModes`](ddn-further-modes.md) struct.
 ```cpp
-DCN_FurtherModes furtherModes
+DDN_FurtherModes furtherModes
 ```
 
 &nbsp;
 
 ### normalizationSettings
-Sets the settings configuring the normalization and stores them in a [`DCN_NoramlizationSettings`](dcn-normalization-settings.md) struct.
+Sets the settings configuring the normalization and stores them in a [`DDN_NoramlizationSettings`](ddn-normalization-settings.md) struct.
 ```cpp
-DCN_NoramlizationSettings normalizationSettings
+DDN_NoramlizationSettings normalizationSettings
 ```
 
 &nbsp;

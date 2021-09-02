@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - Parameters
-keywords: parameters, dcn, documentation
-description: Dynamsoft Content Normalizer - Parameters
+title: Dynamsoft Document Normalizer - Parameters
+keywords: parameters, ddn, documentation
+description: Dynamsoft Document Normalizer - Parameters
 ---
 
 # Parameter

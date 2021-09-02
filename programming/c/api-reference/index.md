@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - API Reference for C
-keywords: api, api reference, c, c language, dcn, documentation
-description: Dynamsoft Content Normalizer - API Reference for C
+title: Dynamsoft Document Normalizer - API Reference for C
+keywords: api, api reference, c, c language, ddn, documentation
+description: Dynamsoft Document Normalizer - API Reference for C
 ---
 
 # API Reference - C

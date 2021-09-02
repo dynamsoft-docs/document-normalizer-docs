@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - EnablePerspectiveCorrection
-keywords: enableperspectivecorrection, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - EnablePerspectiveCorrection
+title: Dynamsoft Document Normalizer Parameter Reference - EnablePerspectiveCorrection
+keywords: enableperspectivecorrection, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - EnablePerspectiveCorrection
 needGenerateH3Content: true
 ---
 
@@ -32,7 +32,7 @@ Sets enable perspective correction during normalization or not.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->normalizationSettings | enablePerspectiveCorrection | *int* |
+| DDN_RuntimeSettings->normalizationSettings | enablePerspectiveCorrection | *int* |
 
 **Value Range**  
     [0, 1]
@@ -43,9 +43,9 @@ Sets enable perspective correction during normalization or not.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->normalizationSettings.enablePerspectiveCorrection = 0;
 char errorMessage[256];

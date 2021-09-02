@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - TextureDetectionModes
-keywords: texturedetectionmodes, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - TextureDetectionModes
+title: Dynamsoft Document Normalizer Parameter Reference - TextureDetectionModes
+keywords: texturedetectionmodes, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - TextureDetectionModes
 needGenerateH3Content: true
 ---
 
@@ -23,7 +23,7 @@ Transforms to inverted grayscale. Recommended for light on dark images.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | TextureDetectionModes | *JSON object array* |
+| DocumentNormalizerParameter | TextureDetectionModes | *JSON object array* |
 
 **Default Setting**   
 ```json
@@ -52,7 +52,7 @@ Transforms to inverted grayscale. Recommended for light on dark images.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | textureDetectionModes | [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) array |
+| DDN_RuntimeSettings | textureDetectionModes | [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) array |
 
 **Value Range**    
     Each array item can be any one of the [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) Enumeration items.
@@ -63,9 +63,9 @@ Transforms to inverted grayscale. Recommended for light on dark images.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->furtherModes.textureDetectionModes[0] = TDM_SKIP;
 char errorMessage[256];

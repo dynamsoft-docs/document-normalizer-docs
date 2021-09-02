@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - NormalizationDefinition Object
-keywords: parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer - NormalizationDefinition Object
+title: Dynamsoft Document Normalizer - NormalizationDefinition Object
+keywords: parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer - NormalizationDefinition Object
 needGenerateH3Content: true
 noTitleIndex: false
 ---
@@ -37,7 +37,7 @@ Sets the target brightness value of the final normalized image.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->normalizationSettings | brightness | *int* |
+| DDN_RuntimeSettings->normalizationSettings | brightness | *int* |
 
 **Value Range**  
     [-100, 100]
@@ -48,9 +48,9 @@ Sets the target brightness value of the final normalized image.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->normalizationSettings.brightness = 50;
 char errorMessage[256];
@@ -85,7 +85,7 @@ Sets the target colour mode of the final normalized image.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->normalizationSettings | colourMode | [`ImageColourMode`]({{ site.enumerations }}image-colour-mode.html) |
+| DDN_RuntimeSettings->normalizationSettings | colourMode | [`ImageColourMode`]({{ site.enumerations }}image-colour-mode.html) |
 
 **Value Range**  
     Any one of the [`ImageColourMode`]({{ site.enumerations }}image-colour-mode.html) items.
@@ -96,9 +96,9 @@ Sets the target colour mode of the final normalized image.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->normalizationSettings.colourMode = ICM_COLOUR;
 char errorMessage[256];
@@ -217,7 +217,7 @@ Sets the localization of content to be normalized.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->normalizationSettings | localizationMode | [`ContentBoundaryLocalizationMode`]({{ site.enumerations }}content-boundary-localization-mode.html) |
+| DDN_RuntimeSettings->normalizationSettings | localizationMode | [`ContentBoundaryLocalizationMode`]({{ site.enumerations }}content-boundary-localization-mode.html) |
 
 **Value Range**  
     Any one of the [`ContentBoundaryLocalizationMode`]({{ site.enumerations }}content-boundary-localization-mode.html) items.
@@ -228,9 +228,9 @@ Sets the localization of content to be normalized.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->normalizationSettings.localizationMode = CBLM_WHOLE_IMAGE;
 char errorMessage[256];
@@ -265,7 +265,7 @@ Sets the target content type to be normalized.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->normalizationSettings | contentType | [`ContentType`]({{ site.enumerations }}content-type.html) |
+| DDN_RuntimeSettings->normalizationSettings | contentType | [`ContentType`]({{ site.enumerations }}content-type.html) |
 
 **Value Range**  
     Any one of the [`ContentType`]({{ site.enumerations }}content-type.html) items.
@@ -276,9 +276,9 @@ Sets the target content type to be normalized.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->normalizationSettings.contentType = CT_TABLE;
 char errorMessage[256];
@@ -313,7 +313,7 @@ Sets the target contrast value of the final normalized image.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->normalizationSettings | contrast | *int* |
+| DDN_RuntimeSettings->normalizationSettings | contrast | *int* |
 
 **Value Range**  
     [-100, 100]
@@ -324,9 +324,9 @@ Sets the target contrast value of the final normalized image.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->normalizationSettings.contrast = 50;
 char errorMessage[256];
@@ -361,7 +361,7 @@ Sets enable de-skewing during normalization or not.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->normalizationSettings | enableDeskewing | *int* |
+| DDN_RuntimeSettings->normalizationSettings | enableDeskewing | *int* |
 
 **Value Range**  
     [0, 1]
@@ -372,9 +372,9 @@ Sets enable de-skewing during normalization or not.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->normalizationSettings.enableDeskewing = 0;
 char errorMessage[256];
@@ -409,7 +409,7 @@ Sets enable perspective correction during normalization or not.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->normalizationSettings | enablePerspectiveCorrection | *int* |
+| DDN_RuntimeSettings->normalizationSettings | enablePerspectiveCorrection | *int* |
 
 **Value Range**  
     [0, 1]
@@ -420,9 +420,9 @@ Sets enable perspective correction during normalization or not.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->normalizationSettings.enablePerspectiveCorrection = 0;
 char errorMessage[256];
@@ -482,7 +482,7 @@ Sets the target content page size (width x height in millimeters).
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->normalizationSettings | targetContentPageSize | *int array* |
+| DDN_RuntimeSettings->normalizationSettings | targetContentPageSize | *int array* |
 
 **Value Range**    
     Format: [`targetPageWidth`, `targetPageHeight`]    
@@ -495,9 +495,9 @@ Sets the target content page size (width x height in millimeters).
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->normalizationSettings.targetContentPageSize[0] = 210;
 settings->normalizationSettings.targetContentPageSize[1] = 297;

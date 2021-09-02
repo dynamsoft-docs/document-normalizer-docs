@@ -1,13 +1,13 @@
 ---
-title: Dynamsoft Content Normalizer - Primary Class for C++
-keywords: primary api, c++ class, api reference, c++, cplusplus, dcn, documentation
-description: Dynamsoft Content Normalizer - Primary Class for C++
+title: Dynamsoft Document Normalizer - Primary Class for C++
+keywords: primary api, c++ class, api reference, c++, cplusplus, ddn, documentation
+description: Dynamsoft Document Normalizer - Primary Class for C++
 ---
 
-# ContentNormalizer Class - C++
+# CDocumentNormalizer Class - C++
 
 ```cpp
-class dynamsoft::dcn::ContentNormalizer
+class dynamsoft::ddn::CDocumentNormalizer
 ```
 
 ## Initialization
@@ -36,7 +36,7 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
 ```
 
 
@@ -44,8 +44,8 @@ ContentNormalizer::InitLicense("t0260NwAAAHV***************");
   
   | Method | Description |
   |--------|-------------|
-  | [`GetRuntimeSettings`](#getruntimesettings) | Gets current settings and saves them into a DCN_RuntimeSettings struct. |
-  | [`UpdateRuntimeSettings`](#updateruntimesettings) | Updates runtime settings with given DCN_RuntimeSettings struct. |
+  | [`GetRuntimeSettings`](#getruntimesettings) | Gets current settings and saves them into a DDN_RuntimeSettings struct. |
+  | [`UpdateRuntimeSettings`](#updateruntimesettings) | Updates runtime settings with given DDN_RuntimeSettings struct. |
   | [`ResetRuntimeSettings`](#resetruntimesettings) | Resets all runtime settings to default values. |
   | [`AppendSettingsFromString`](#appendsettingsfromstring) | Appends a new template string to the current runtime settings of SDK. |
   | [`AppendSettingsFromFile`](#appendsettingsfromfile) | Appends a new template file to the current runtime settings of SDK. |
@@ -58,14 +58,14 @@ ContentNormalizer::InitLicense("t0260NwAAAHV***************");
 &nbsp;
 
 ### GetRuntimeSettings
-Gets current settings and saves them into a DCN_RuntimeSettings struct.
+Gets current settings and saves them into a DDN_RuntimeSettings struct.
 
 ```cpp
-int GetRuntimeSettings (DCN_RuntimeSettings* settings)
+int GetRuntimeSettings (DDN_RuntimeSettings* settings)
 ```   
 
 **Parameters**      
-`[in, out] settings` The struct of DCN_RuntimeSettings for storing runtime settings.
+`[in, out] settings` The struct of DDN_RuntimeSettings for storing runtime settings.
 
 
 **Return value**   
@@ -74,9 +74,9 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 delete normalizer;
 ```
@@ -84,14 +84,14 @@ delete normalizer;
 &nbsp;
 
 ### UpdateRuntimeSettings
-Updates runtime settings with given DCN_RuntimeSettings struct.
+Updates runtime settings with given DDN_RuntimeSettings struct.
 
 ```cpp
-int UpdateRuntimeSettings (DCN_RuntimeSettings* settings, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
+int UpdateRuntimeSettings (DDN_RuntimeSettings* settings, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```   
 
 **Parameters**    
-`[in] settings` The struct of DCN_RuntimeSettings with customized settings.   
+`[in] settings` The struct of DDN_RuntimeSettings with customized settings.   
 `[in, out] errorMsgBuffer` <sub>Optional</sub> The buffer is allocated by caller, and the recommending length is 256. The error message will be copied to the buffer.   
 `[in] errorMsgBufferLen` <sub>Optional</sub> The length of allocated buffer.
 
@@ -102,9 +102,9 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings.interiorAngleRange[0] = 70;
 settings.interiorAngleRange[1] = 110;
@@ -128,9 +128,9 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings.interiorAngleRange[0] = 70;
 settings.interiorAngleRange[1] = 110;
@@ -162,10 +162,10 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
 char errorMessage[256];
-normalizer->AppendSettingsFromString(normalizer, "{\"ContentNormalizerParameterArray\": [{\"Name\": \"CN_1\", \"Timeout\": 2000, \"MaxThreadCount\": 4, \"ScaleDownThreshold\": 2048, \"ExecutePhases\": [\"EP_ALL\"], \"NormalizationDefinitionName\": \"ND_1\", \"QuadrilateralDetectionModes\": [{\"Mode\":\"QDM_LINE_BASED_DETECTION\"}]}], \"NormalizationDefinitionArray\":[{\"Name\": \"ND_1\", \"ContentType\": \"CT_DOCUMENT\", \"ContentLocalization\":{\"SourceType\": \"CBLM_AUTO_DETECTION\"}, \"EnablePerspectiveCorrection\": 1, \"TargetContentPageSize\": [210, 297], \"EnableDeskewing\": 1}]}", errorMessage, 256);
+normalizer->AppendSettingsFromString(normalizer, "{\"DocumentNormalizerParameterArray\": [{\"Name\": \"CN_1\", \"Timeout\": 2000, \"MaxThreadCount\": 4, \"ScaleDownThreshold\": 2048, \"ExecutePhases\": [\"EP_ALL\"], \"NormalizationDefinitionName\": \"ND_1\", \"QuadrilateralDetectionModes\": [{\"Mode\":\"QDM_LINE_BASED_DETECTION\"}]}], \"NormalizationDefinitionArray\":[{\"Name\": \"ND_1\", \"ContentType\": \"CT_DOCUMENT\", \"ContentLocalization\":{\"SourceType\": \"CBLM_AUTO_DETECTION\"}, \"EnablePerspectiveCorrection\": 1, \"TargetContentPageSize\": [210, 297], \"EnableDeskewing\": 1}]}", errorMessage, 256);
 delete normalizer;
 ```
 
@@ -191,8 +191,8 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
 char errorMessage[256];
 normalizer->AppendSettingsFromFile("your file path", errorMessage, 256);
 delete normalizer;
@@ -219,10 +219,10 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
 char errorMessage[256];
-normalizer->AppendSettingsFromString(normalizer, "{\"ContentNormalizerParameterArray\": [{\"Name\": \"CN_1\", \"Timeout\": 2000, \"MaxThreadCount\": 4, \"ScaleDownThreshold\": 2048, \"ExecutePhases\": [\"EP_ALL\"], \"NormalizationDefinitionName\": \"ND_1\", \"QuadrilateralDetectionModes\": [{\"Mode\":\"QDM_LINE_BASED_DETECTION\"}]}], \"NormalizationDefinitionArray\":[{\"Name\": \"ND_1\", \"ContentType\": \"CT_DOCUMENT\", \"ContentLocalization\":{\"SourceType\": \"CBLM_AUTO_DETECTION\"}, \"EnablePerspectiveCorrection\": 1, \"TargetContentPageSize\": [210, 297], \"EnableDeskewing\": 1}]}", errorMessage, 256);
+normalizer->AppendSettingsFromString(normalizer, "{\"DocumentNormalizerParameterArray\": [{\"Name\": \"CN_1\", \"Timeout\": 2000, \"MaxThreadCount\": 4, \"ScaleDownThreshold\": 2048, \"ExecutePhases\": [\"EP_ALL\"], \"NormalizationDefinitionName\": \"ND_1\", \"QuadrilateralDetectionModes\": [{\"Mode\":\"QDM_LINE_BASED_DETECTION\"}]}], \"NormalizationDefinitionArray\":[{\"Name\": \"ND_1\", \"ContentType\": \"CT_DOCUMENT\", \"ContentLocalization\":{\"SourceType\": \"CBLM_AUTO_DETECTION\"}, \"EnablePerspectiveCorrection\": 1, \"TargetContentPageSize\": [210, 297], \"EnableDeskewing\": 1}]}", errorMessage, 256);
 normalizer->OutputSettingsToFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Templates\\CurrentRuntimeSettings.json", "currentRuntimeSettings");
 delete normalizer;
 ```
@@ -238,8 +238,8 @@ void ClearAppendedSettings ()
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
 normalizer->ClearAppendedSettings();
 delete normalizer;
 ```
@@ -268,9 +268,9 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings.binarizationModes[0] = BM_THRESHOLD;
 char errorMessage[256];
@@ -303,9 +303,9 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings.binarizationModes[0] = BM_THRESHOLD;
 char errorMessage[256];
@@ -337,7 +337,7 @@ int NormalizeByFile (const char* filePath, const char* templateName)
 
 **Parameters**    
 `[in] filePath` A string defining the source file path.   
-`[in] templateName` The template name. A template name is the value of key ContentNormalizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
+`[in] templateName` The template name. A template name is the value of key DocumentNormalizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 
 **Return value**   
@@ -346,8 +346,8 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
 int errorCode = normalizer->NormalizeByFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\SampleImage.png", "");
 delete normalizer;
 ```
@@ -364,7 +364,7 @@ int NormalizeByBuffer (const ImageData* imageData, const char* templateName)
 
 **Parameters**    
 `[in] imageData` A struct of ImageData that represents an image.   
-`[in] templateName` The template name. A template name is the value of key ContentNormalizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
+`[in] templateName` The template name. A template name is the value of key DocumentNormalizerParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
 
 **Return value**   
@@ -373,8 +373,8 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
 ImageData* imageData;
 //Generate imageData from somewhere else
 int errorCode = normalizer->NormalizeByBuffer(imageData, "");
@@ -398,7 +398,7 @@ delete normalizer;
 Gets content normalized result.
 
 ```cpp
-int GetResult (DCN_Result** result)
+int GetResult (DDN_Result** result)
 ```   
 
 **Parameters**    
@@ -411,12 +411,12 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
 int errorCode = normalizer->NormalizeByFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\SampleImage.png", "");
-DCN_Result* result = NULL;
+DDN_Result* result = NULL;
 normalizer->GetResult(normalizer, &result);
-ContentNormalizer::FreeResult(&result);
+CDocumentNormalizer::FreeResult(&result);
 delete normalizer;
 ```
 
@@ -426,7 +426,7 @@ delete normalizer;
 Free memory allocated for storing the result.
 
 ```cpp
-static void FreeResult (DCN_Result** result)
+static void FreeResult (DDN_Result** result)
 ```   
 
 **Parameters**   
@@ -435,12 +435,12 @@ static void FreeResult (DCN_Result** result)
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
 int errorCode = normalizer->NormalizeByFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\SampleImage.png", "");
-DCN_Result* result = NULL;
+DDN_Result* result = NULL;
 normalizer->GetResult(normalizer, &result);
-ContentNormalizer::FreeResult(&result);
+CDocumentNormalizer::FreeResult(&result);
 delete normalizer;
 ```
 
@@ -465,20 +465,20 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
 int errorCode = normalizer->NormalizeByFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\SampleImage.png", "");
-DCN_Result* result = NULL;
+DDN_Result* result = NULL;
 normalizer->GetResult(normalizer, &result);
 if (result != NULL)
 {
   ImageData* resultImage = result->normalizedImage;
   if (resultImage != NULL)
   {
-    ContentNormalizer::OutputImageBufferToFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\result\\resultImage.png", resultImage);
+    CDocumentNormalizer::OutputImageBufferToFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\result\\resultImage.png", resultImage);
   }
 }
-ContentNormalizer::FreeResult(&result);
+CDocumentNormalizer::FreeResult(&result);
 delete normalizer;
 ```
 
@@ -506,10 +506,10 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
 int errorCode = normalizer->NormalizeByFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\SampleImage.png", "");
-DCN_Result* result = NULL;
+DDN_Result* result = NULL;
 normalizer->GetResult(normalizer, &result);
 if (result != NULL)
 {
@@ -517,11 +517,11 @@ if (result != NULL)
   if (resultImage != NULL)
   {
     ImageData adjustedImage;
-    ContentNormalizer::GetAdjustedImageBuffer(resultImage, &adjustedImage, ICM_GRAYSCALE, 50, 50);
-    ContentNormalizer::OutputImageBufferToFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\result\\adjustedImage.png", &adjustedImage);
+    CDocumentNormalizer::GetAdjustedImageBuffer(resultImage, &adjustedImage, ICM_GRAYSCALE, 50, 50);
+    CDocumentNormalizer::OutputImageBufferToFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\result\\adjustedImage.png", &adjustedImage);
   }
 }
-ContentNormalizer::FreeResult(&result);
+CDocumentNormalizer::FreeResult(&result);
 delete normalizer;
 ```
 
@@ -532,7 +532,7 @@ delete normalizer;
 Gets transformed quadrilateral with the given transformation matrix.
 
 ```cpp
-static int dynamsoft::dcn::ContentNormalizer::GetTransformedQuad (const Quadrilateral* originalQuad, float transformationMatrix[], Quadrilateral* transformedQuad)
+static int dynamsoft::ddn::CDocumentNormalizer::GetTransformedQuad (const Quadrilateral* originalQuad, float transformationMatrix[], Quadrilateral* transformedQuad)
 ```   
 
 **Parameters**   
@@ -547,20 +547,20 @@ The error code. Returns 0 if the function is completed successfully, otherwise c
 
 **Code Snippet**   
 ```cpp
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
+CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+CDocumentNormalizer* normalizer = new CDocumentNormalizer();
 int errorCode = normalizer->NormalizeByFile("C:\\Program Files (x86)\\Dynamsoft\\{Version number}\\Images\\SampleImage.png", "");
-DCN_Result* result = NULL;
+DDN_Result* result = NULL;
 normalizer->GetResult(normalizer, &result);
 if (result != NULL)
 {
   if (candidateQuadrilateralCount > 0 && result->transformationMatrix != NULL)
   {
     Quadrilateral transformedQuad;
-    ContentNormalizer::GetTransformedQuad(result->sourceImageCandidateQuadArray[0], result->transformationMatrix, &transformedQuad);
+    CDocumentNormalizer::GetTransformedQuad(result->sourceImageCandidateQuadArray[0], result->transformationMatrix, &transformedQuad);
   }
 }
-ContentNormalizer::FreeResult(&result);
+CDocumentNormalizer::FreeResult(&result);
 delete normalizer;
 ```
 
@@ -591,8 +591,8 @@ The corresponding error message.
 
 **Code Snippet**   
 ```cpp
-int errorCode = ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-const char* errorString = ContentNormalizer::GetErrorString(errorCode);
+int errorCode = CDocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+const char* errorString = CDocumentNormalizer::GetErrorString(errorCode);
 ```
 
 &nbsp;
@@ -611,6 +611,6 @@ The version info string.
 
 **Code Snippet**   
 ```cpp
-const char* versionInfo = ContentNormalizer::GetVersion(errorCode);
+const char* versionInfo = CDocumentNormalizer::GetVersion(errorCode);
 ```
 

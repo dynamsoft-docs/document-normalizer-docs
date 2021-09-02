@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - TextureDetectionMode Enumeration
-keywords: texturedetectionmode, enumerations, enums, dcn, documentation
-description: Dynamsoft Content Normalizer - ImagePixelFormat Enumeration
+title: Dynamsoft Document Normalizer - TextureDetectionMode Enumeration
+keywords: texturedetectionmode, enumerations, enums, ddn, documentation
+description: Dynamsoft Document Normalizer - ImagePixelFormat Enumeration
 ---
 
 # TextureDetectionMode

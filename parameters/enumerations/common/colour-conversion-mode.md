@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - ColourConversionMode Enumeration
-keywords: colourconversionmode, enumerations, enums, dcn, documentation
-description: Dynamsoft Content Normalizer - ColourConversionMode Enumeration
+title: Dynamsoft Document Normalizer - ColourConversionMode Enumeration
+keywords: colourconversionmode, enumerations, enums, ddn, documentation
+description: Dynamsoft Document Normalizer - ColourConversionMode Enumeration
 ---
 
 # ColourConversionMode

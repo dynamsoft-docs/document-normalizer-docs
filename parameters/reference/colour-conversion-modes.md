@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - ColourConversionModes
-keywords: colourconversionmodes, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - ColourConversionModes
+title: Dynamsoft Document Normalizer Parameter Reference - ColourConversionModes
+keywords: colourconversionmodes, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - ColourConversionModes
 needGenerateH3Content: true
 ---
 
@@ -31,7 +31,7 @@ Converts a colour image to a grayscale image using one of the HSV channels.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | ColourConversionModes | *JSON object array* |
+| DocumentNormalizerParameter | ColourConversionModes | *JSON object array* |
 
 **Default Setting**   
 ```json
@@ -63,7 +63,7 @@ Converts a colour image to a grayscale image using one of the HSV channels.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->furtherModes | colourConversionModes | [`ColourConversionMode`]({{ site.common_enumerations }}colour-conversion-mode.html) array |
+| DDN_RuntimeSettings->furtherModes | colourConversionModes | [`ColourConversionMode`]({{ site.common_enumerations }}colour-conversion-mode.html) array |
 
 **Value Range**    
     Each array item can be any one of the [`ColourConversionMode`]({{ site.common_enumerations }}colour-conversion-mode.html) Enumeration items.
@@ -74,9 +74,9 @@ Converts a colour image to a grayscale image using one of the HSV channels.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->furtherModes.colourConversionModes[0] = CICM_GENERAL;
 settings->furtherModes.colourConversionModes[1] = CICM_HSV;

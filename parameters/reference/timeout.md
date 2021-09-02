@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - Timeout
-keywords: timeout, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - Timeout
+title: Dynamsoft Document Normalizer Parameter Reference - Timeout
+keywords: timeout, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - Timeout
 needGenerateH3Content: true
 ---
 
@@ -16,7 +16,7 @@ It does not include the time taken to load/decode an image (Tiff, PNG, etc.) fro
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | Timeout | *int* |
+| DocumentNormalizerParameter | Timeout | *int* |
 
 **Value Range**  
     [0, 0x7fffffff]
@@ -35,7 +35,7 @@ It does not include the time taken to load/decode an image (Tiff, PNG, etc.) fro
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | timeout | *int* |
+| DDN_RuntimeSettings | timeout | *int* |
 
 **Value Range**  
     [0, 0x7fffffff]
@@ -46,9 +46,9 @@ It does not include the time taken to load/decode an image (Tiff, PNG, etc.) fro
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->timeout = 20000;
 char errorMessage[256];

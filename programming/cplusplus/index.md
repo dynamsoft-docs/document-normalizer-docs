@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - C++
-keywords: c++, cplusplus, dcn, documentation
-description: Dynamsoft Content Normalizer - C++
+title: Dynamsoft Document Normalizer - C++
+keywords: c++, cplusplus, ddn, documentation
+description: Dynamsoft Document Normalizer - C++
 ---
 
 # C++
@@ -10,6 +10,6 @@ description: Dynamsoft Content Normalizer - C++
 - [Getting Started](user-guide/getting-started.md)
 
 ## API Reference
-- [Primary Class - ContentNormalizer](api-reference/primary-api/)
+- [Primary Class - DocumentNormalizer](api-reference/primary-api/)
 - [Structs]({{ site.c_cpp_struct }}?src=cpp)
 - [Enumerations]({{ site.enumerations }}?src=cpp)

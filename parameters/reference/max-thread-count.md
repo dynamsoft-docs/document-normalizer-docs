@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - MaxThreadCount
-keywords: maxthreadcount, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - MaxThreadCount
+title: Dynamsoft Document Normalizer Parameter Reference - MaxThreadCount
+keywords: maxthreadcount, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - MaxThreadCount
 needGenerateH3Content: true
 ---
 
@@ -14,7 +14,7 @@ Sets the maximum number of threads the algorithm will use to normalize content.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | MaxThreadCount | *int* |
+| DocumentNormalizerParameter | MaxThreadCount | *int* |
 
 **Value Range**  
     [1, 4]
@@ -33,7 +33,7 @@ Sets the maximum number of threads the algorithm will use to normalize content.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | maxThreadCout | *int* |
+| DDN_RuntimeSettings | maxThreadCout | *int* |
 
 **Value Range**  
     [1, 4]
@@ -44,9 +44,9 @@ Sets the maximum number of threads the algorithm will use to normalize content.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->maxThreadCout = 1;
 char errorMessage[256];

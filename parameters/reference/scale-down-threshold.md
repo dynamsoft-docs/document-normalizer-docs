@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - ScaleDownThreshold
-keywords: scaledownthreshold, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - ScaleDownThreshold
+title: Dynamsoft Document Normalizer Parameter Reference - ScaleDownThreshold
+keywords: scaledownthreshold, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - ScaleDownThreshold
 needGenerateH3Content: true
 ---
 
@@ -17,7 +17,7 @@ If the shorter edge size is larger than the given value, the library will calcul
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | ScaleDownThreshold | *int* |
+| DocumentNormalizerParameter | ScaleDownThreshold | *int* |
 
 **Value Range**  
     [512, 0x7fffffff]
@@ -36,7 +36,7 @@ If the shorter edge size is larger than the given value, the library will calcul
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | scaleDownThreshold | *int* |
+| DDN_RuntimeSettings | scaleDownThreshold | *int* |
 
 **Value Range**  
     [512, 0x7fffffff]
@@ -47,9 +47,9 @@ If the shorter edge size is larger than the given value, the library will calcul
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->scaleDownThreshold = 4096;
 char errorMessage[256];

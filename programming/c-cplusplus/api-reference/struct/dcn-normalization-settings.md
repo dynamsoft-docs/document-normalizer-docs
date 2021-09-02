@@ -1,15 +1,15 @@
 ---
-title: Dynamsoft Content Normalizer - DCN_NormalizationSettings Struct
-keywords: dcn_normalizationsettings, struct, api, api reference, c, c language, c++, cplusplus, dcn, documentation
-description: Dynamsoft Content Normalizer - DCN_NormalizationSettings Struct
+title: Dynamsoft Document Normalizer - DDN_NormalizationSettings Struct
+keywords: ddn_normalizationsettings, struct, api, api reference, c, c language, c++, cplusplus, ddn, documentation
+description: Dynamsoft Document Normalizer - DDN_NormalizationSettings Struct
 ---
 
 
-# DCN_NormalizationSettings
+# DDN_NormalizationSettings
 Defines a struct to configure the normalization settings.
 
 ```cpp
-typedef struct tagDCNNormalizationSettings  DCN_NormalizationSettings
+typedef struct tagDDNNormalizationSettings  DDN_NormalizationSettings
 ```  
 
 ## Attributes

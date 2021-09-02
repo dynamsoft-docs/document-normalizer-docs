@@ -1,15 +1,15 @@
 ---
-title: Dynamsoft Content Normalizer - DCN_FurtherModes Struct
-keywords: dcn_furthermodes, struct, api, api reference, c, c language, c++, cplusplus, dcn, documentation
-description: Dynamsoft Content Normalizer - DCN_FurtherModes Struct
+title: Dynamsoft Document Normalizer - DDN_FurtherModes Struct
+keywords: ddn_furthermodes, struct, api, api reference, c, c language, c++, cplusplus, ddn, documentation
+description: Dynamsoft Document Normalizer - DDN_FurtherModes Struct
 ---
 
 
-# DCN_FurtherModes
+# DDN_FurtherModes
 Defines a struct to configure the further modes for controlling image processing stage in content normalization.
 
 ```cpp
-typedef struct tagDCNFurtherModes  DCN_FurtherModes
+typedef struct tagDDNFurtherModes  DDN_FurtherModes
 ```  
 
 ## Attributes

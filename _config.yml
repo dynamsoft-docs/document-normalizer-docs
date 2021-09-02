@@ -1,36 +1,36 @@
-repository: dynamsoft-docs/content-normalizer-docs
-repositoryUrl: https://github.com/dynamsoft-docs/content-normalizer-docs/blob/main
-docFullPath: https://www.dynamsoft.com/content-normalizer/
-firstLevelUrl: /content-normalizer
-docHomePage: /content-normalizer/introduction/
+repository: dynamsoft-docs/document-normalizer-docs
+repositoryUrl: https://github.com/dynamsoft-docs/document-normalizer-docs/blob/main
+docFullPath: https://www.dynamsoft.com/document-normalizer/
+firstLevelUrl: /document-normalizer
+docHomePage: /document-normalizer/introduction/
 
-introduction: /content-normalizer/introduction/
-programming: /content-normalizer/programming/
-parameters: /content-normalizer/parameters/
+introduction: /document-normalizer/introduction/
+programming: /document-normalizer/programming/
+parameters: /document-normalizer/parameters/
 
-c: /content-normalizer/programming/c/
-cpp: /content-normalizer/programming/cplusplus/
-c_cpp: /content-normalizer/programming/c-cplusplus/
-c_cpp_struct: /content-normalizer/programming/c-cplusplus/api-reference/struct/
-c_cpp_common_struct: /content-normalizer/programming/c-cplusplus/api-reference/struct/common/
+c: /document-normalizer/programming/c/
+cpp: /document-normalizer/programming/cplusplus/
+c_cpp: /document-normalizer/programming/c-cplusplus/
+c_cpp_struct: /document-normalizer/programming/c-cplusplus/api-reference/struct/
+c_cpp_common_struct: /document-normalizer/programming/c-cplusplus/api-reference/struct/common/
 
-enumerations: /content-normalizer/parameters/enumerations/
-common_enumerations: /content-normalizer/parameters/enumerations/common/
-parameter_reference: /content-normalizer/parameters/reference/
-parameter_content_normalizer:  /content-normalizer/parameters/reference/content-normalizer-parameter/
-parameter_normalization_definition: /content-normalizer/parameters/reference/normalization-definition/
+enumerations: /document-normalizer/parameters/enumerations/
+common_enumerations: /document-normalizer/parameters/enumerations/common/
+parameter_reference: /document-normalizer/parameters/reference/
+parameter_content_normalizer:  /document-normalizer/parameters/reference/document-normalizer-parameter/
+parameter_normalization_definition: /document-normalizer/parameters/reference/normalization-definition/
 
 useVersionTree: true
 
-assets: /content-normalizer/assets/
-edit_icon: /content-normalizer/assets/img-icon/edit-icon.png
-smile_icon: /content-normalizer/assets/img-icon/icon-smile.png
-sad_icon: /content-normalizer/assets/img-icon/icon-sad.png
-dbr_icon: /content-normalizer/assets/img-icon/icon-dbr.svg
-dwt_icon: /content-normalizer/assets/img-icon/icon-dwt.svg
-dnt_icon: /content-normalizer/assets/img-icon/icon-dnt.svg
+assets: /document-normalizer/assets/
+edit_icon: /document-normalizer/assets/img-icon/edit-icon.png
+smile_icon: /document-normalizer/assets/img-icon/icon-smile.png
+sad_icon: /document-normalizer/assets/img-icon/icon-sad.png
+dbr_icon: /document-normalizer/assets/img-icon/icon-dbr.svg
+dwt_icon: /document-normalizer/assets/img-icon/icon-dwt.svg
+dnt_icon: /document-normalizer/assets/img-icon/icon-dnt.svg
 
-baseurl: "/content-normalizer"
+baseurl: "/document-normalizer"
 
 plugins:
   - jemoji

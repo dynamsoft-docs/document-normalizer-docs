@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - BinarizationMode Enumeration
-keywords: binarizationmode, enumerations, enums, dcn, documentation
-description: Dynamsoft Content Normalizer - BinarizationMode Enumeration
+title: Dynamsoft Document Normalizer - BinarizationMode Enumeration
+keywords: binarizationmode, enumerations, enums, ddn, documentation
+description: Dynamsoft Document Normalizer - BinarizationMode Enumeration
 ---
 
 # BinarizationMode

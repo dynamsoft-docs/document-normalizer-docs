@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - GrayscaleEnhancementModes
-keywords: grayscaleenhancementmodes, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - GrayscaleEnhancementModes
+title: Dynamsoft Document Normalizer Parameter Reference - GrayscaleEnhancementModes
+keywords: grayscaleenhancementmodes, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - GrayscaleEnhancementModes
 needGenerateH3Content: true
 ---
 
@@ -45,7 +45,7 @@ Preprocesses the grayscale image using the sharpening and smoothing algorithm.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | GrayscaleEnhancementModes | *JSON object array* |
+| DocumentNormalizerParameter | GrayscaleEnhancementModes | *JSON object array* |
 
 **Default Setting**   
 ```json
@@ -81,7 +81,7 @@ Preprocesses the grayscale image using the sharpening and smoothing algorithm.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->furtherModes | grayscaleEnhancementModes | [`GrayscaleEnhancementMode`]({{ site.common_enumerations }}grayscale-enhancement-mode.html) array |
+| DDN_RuntimeSettings->furtherModes | grayscaleEnhancementModes | [`GrayscaleEnhancementMode`]({{ site.common_enumerations }}grayscale-enhancement-mode.html) array |
 
 **Value Range**    
     Each array item can be any one of the [`GrayscaleEnhancementMode`]({{ site.common_enumerations }}grayscale-enhancement-mode.html) Enumeration items.
@@ -92,9 +92,9 @@ Preprocesses the grayscale image using the sharpening and smoothing algorithm.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->furtherModes.grayscaleEnhancementModes[0] = GEM_GRAY_EQUALIZE;
 settings->furtherModes.grayscaleEnhancementModes[1] = GEM_SHARPEN_SMOOTH;

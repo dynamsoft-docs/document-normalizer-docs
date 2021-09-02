@@ -1,9 +1,9 @@
 ---
-title: Dynamsoft Content Normalizer - Overview
-keywords: overview, dcn, documentation
-description: Dynamsoft Content Normalizer - Overview
+title: Dynamsoft Document Normalizer - Overview
+keywords: overview, ddn, documentation
+description: Dynamsoft Document Normalizer - Overview
 ---
 
 # Overview
 
-Dynamsoft Content Normalizer - Overview
+Dynamsoft Document Normalizer - Overview

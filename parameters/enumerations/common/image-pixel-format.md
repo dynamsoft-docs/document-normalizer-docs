@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - ImagePixelFormat Enumeration
-keywords: imagepixelformat, enumerations, enums, dcn, documentation
-description: Dynamsoft Content Normalizer - ImagePixelFormat Enumeration
+title: Dynamsoft Document Normalizer - ImagePixelFormat Enumeration
+keywords: imagepixelformat, enumerations, enums, ddn, documentation
+description: Dynamsoft Document Normalizer - ImagePixelFormat Enumeration
 ---
 
 # ImagePixelFormat

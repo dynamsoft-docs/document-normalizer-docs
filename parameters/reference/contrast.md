@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - Contrast
-keywords: contrast, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - Contrast
+title: Dynamsoft Document Normalizer Parameter Reference - Contrast
+keywords: contrast, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - Contrast
 needGenerateH3Content: true
 ---
 
@@ -33,7 +33,7 @@ Sets the target contrast value of the final normalized image.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->normalizationSettings | contrast | *int* |
+| DDN_RuntimeSettings->normalizationSettings | contrast | *int* |
 
 **Value Range**  
     [-100, 100]
@@ -44,9 +44,9 @@ Sets the target contrast value of the final normalized image.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->normalizationSettings.contrast = 50;
 char errorMessage[256];

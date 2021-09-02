@@ -1,15 +1,15 @@
 ---
-title: Dynamsoft Content Normalizer - DCN_Result Struct
-keywords: dcn_result, struct, api, api reference, c, c language, c++, cplusplus, dcn, documentation
-description: Dynamsoft Content Normalizer - DCN_Result Struct
+title: Dynamsoft Document Normalizer - DDN_Result Struct
+keywords: ddn_result, struct, api, api reference, c, c language, c++, cplusplus, ddn, documentation
+description: Dynamsoft Document Normalizer - DDN_Result Struct
 ---
 
 
-# DCN_Result
-Defines a struct to store DCN result.
+# DDN_Result
+Defines a struct to store DDN result.
 
 ```cpp
-typedef struct tagDCNResult  DCN_Result
+typedef struct tagDDNResult  DDN_Result
 ```  
 
 

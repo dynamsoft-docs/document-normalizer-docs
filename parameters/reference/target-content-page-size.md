@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - TargetContentPageSize
-keywords: targetcontentpagesize, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - TargetContentPageSize
+title: Dynamsoft Document Normalizer Parameter Reference - TargetContentPageSize
+keywords: targetcontentpagesize, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - TargetContentPageSize
 needGenerateH3Content: true
 ---
 
@@ -35,7 +35,7 @@ Sets the target content page size (width x height in millimeters).
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->normalizationSettings | targetContentPageSize | *int array* |
+| DDN_RuntimeSettings->normalizationSettings | targetContentPageSize | *int array* |
 
 **Value Range**    
     Format: [`targetPageWidth`, `targetPageHeight`]    
@@ -48,9 +48,9 @@ Sets the target content page size (width x height in millimeters).
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->normalizationSettings.targetContentPageSize[0] = 210;
 settings->normalizationSettings.targetContentPageSize[1] = 297;

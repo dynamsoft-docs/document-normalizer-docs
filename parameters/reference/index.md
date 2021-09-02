@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - Parameter Reference
-keywords: parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer - Parameter Reference
+title: Dynamsoft Document Normalizer - Parameter Reference
+keywords: parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer - Parameter Reference
 ---
 
 # Parameter Reference
@@ -30,25 +30,25 @@ description: Dynamsoft Content Normalizer - Parameter Reference
 
 
 ## JSON Object Reference
-### ContentNormalizerParameter Object
+### DocumentNormalizerParameter Object
 
 | Parameter Name | Description |
 | -------------- | ----------- |
-| [`ContentNormalizerParameter.Name`]({{ site.parameter_content_normalizer }}#name) | The unique name of the ContentNormalizerParameter object. |
-| [`ContentNormalizerParameter.Timeout`]({{ site.parameter_content_normalizer }}#timeout) | The maximum amount of time (in milliseconds) should be spent on normalizing the content per page. |
-| [`ContentNormalizerParameter.MaxThreadCount`]({{ site.parameter_content_normalizer }}#maxthreadcount) | The maximum number of threads the algorithm will use to normalize content. |
-| [`ContentNormalizerParameter.ScaleDownThreshold`]({{ site.parameter_content_normalizer }}#scaledownthreshold) | The threshold for the image shrinking. |
-| [`ContentNormalizerParameter.ColourConversionModes`]({{ site.parameter_content_normalizer }}#colourconversionmodes) | The mode array for converting a colour image to a grayscale image. |
-| [`ContentNormalizerParameter.GrayscaleTransformationModes`]({{ site.parameter_content_normalizer }}#grayscaletransformationmodes) | The mode array for the grayscale image conversion. |
-| [`ContentNormalizerParameter.GrayscaleEnhancementModes`]({{ site.parameter_content_normalizer }}#grayscaleenhancementmodes) | The mode array for the enhancing grayscale image before content normalization. |
-| [`ContentNormalizerParameter.BinarizationModes`]({{ site.parameter_content_normalizer }}#binarizationmodes) | The mode array for binarization. |
-| [`ContentNormalizerParameter.TextureDetectionModes`]({{ site.parameter_content_normalizer }}#texturedetectionmodes) | The mode array for texture detection. |
-| [`ContentNormalizerParameter.ExecutePhases`]({{ site.parameter_content_normalizer }}#executephases) | The string array for specifying the phase(s) to be executed. |
-| [`ContentNormalizerParameter.NormalizationDefinitionName`]({{ site.parameter_content_normalizer }}#normalizationdefinitionname) | The name of a NormalizationDefinition Object. |
-| [`ContentNormalizerParameter.QuadrilateralDetectionModes`]({{ site.parameter_content_normalizer }}#quadrilateraldetectionmodes) | The mode array for quadrilateral detection. |
-| [`ContentNormalizerParameter.MinimalHorizontalSideLength`]({{ site.parameter_content_normalizer }}#minimalhorizontalsidelength) | The minimal horizontal side length of the quadrilateral. |
-| [`ContentNormalizerParameter.MinimalVerticalSideLength`]({{ site.parameter_content_normalizer }}#minimalverticalsidelength) | The minimal vertical side length of the quadrilateral. |
-| [`ContentNormalizerParameter.InteriorAngleRange`]({{ site.parameter_content_normalizer }}#interioranglerange) | The quadrilateral interior angle range. |
+| [`DocumentNormalizerParameter.Name`]({{ site.parameter_content_normalizer }}#name) | The unique name of the DocumentNormalizerParameter object. |
+| [`DocumentNormalizerParameter.Timeout`]({{ site.parameter_content_normalizer }}#timeout) | The maximum amount of time (in milliseconds) should be spent on normalizing the content per page. |
+| [`DocumentNormalizerParameter.MaxThreadCount`]({{ site.parameter_content_normalizer }}#maxthreadcount) | The maximum number of threads the algorithm will use to normalize content. |
+| [`DocumentNormalizerParameter.ScaleDownThreshold`]({{ site.parameter_content_normalizer }}#scaledownthreshold) | The threshold for the image shrinking. |
+| [`DocumentNormalizerParameter.ColourConversionModes`]({{ site.parameter_content_normalizer }}#colourconversionmodes) | The mode array for converting a colour image to a grayscale image. |
+| [`DocumentNormalizerParameter.GrayscaleTransformationModes`]({{ site.parameter_content_normalizer }}#grayscaletransformationmodes) | The mode array for the grayscale image conversion. |
+| [`DocumentNormalizerParameter.GrayscaleEnhancementModes`]({{ site.parameter_content_normalizer }}#grayscaleenhancementmodes) | The mode array for the enhancing grayscale image before content normalization. |
+| [`DocumentNormalizerParameter.BinarizationModes`]({{ site.parameter_content_normalizer }}#binarizationmodes) | The mode array for binarization. |
+| [`DocumentNormalizerParameter.TextureDetectionModes`]({{ site.parameter_content_normalizer }}#texturedetectionmodes) | The mode array for texture detection. |
+| [`DocumentNormalizerParameter.ExecutePhases`]({{ site.parameter_content_normalizer }}#executephases) | The string array for specifying the phase(s) to be executed. |
+| [`DocumentNormalizerParameter.NormalizationDefinitionName`]({{ site.parameter_content_normalizer }}#normalizationdefinitionname) | The name of a NormalizationDefinition Object. |
+| [`DocumentNormalizerParameter.QuadrilateralDetectionModes`]({{ site.parameter_content_normalizer }}#quadrilateraldetectionmodes) | The mode array for quadrilateral detection. |
+| [`DocumentNormalizerParameter.MinimalHorizontalSideLength`]({{ site.parameter_content_normalizer }}#minimalhorizontalsidelength) | The minimal horizontal side length of the quadrilateral. |
+| [`DocumentNormalizerParameter.MinimalVerticalSideLength`]({{ site.parameter_content_normalizer }}#minimalverticalsidelength) | The minimal vertical side length of the quadrilateral. |
+| [`DocumentNormalizerParameter.InteriorAngleRange`]({{ site.parameter_content_normalizer }}#interioranglerange) | The quadrilateral interior angle range. |
 
 
 ### NormalizationDefinition Object

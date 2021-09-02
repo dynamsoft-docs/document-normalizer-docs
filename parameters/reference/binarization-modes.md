@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - BinarizationModes
-keywords: binarizationmodes, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - BinarizationModes
+title: Dynamsoft Document Normalizer Parameter Reference - BinarizationModes
+keywords: binarizationmodes, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - BinarizationModes
 needGenerateH3Content: true
 ---
 
@@ -39,7 +39,7 @@ Binarizes the image based on a given threshold.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | BinarizationModes | *JSON object array* |
+| DocumentNormalizerParameter | BinarizationModes | *JSON object array* |
 
 **Default Setting**   
 ```json
@@ -78,7 +78,7 @@ Binarizes the image based on a given threshold.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | binarizationModes | [`BinarizationMode`]({{ site.common_enumerations }}binarization-mode.html) array |
+| DDN_RuntimeSettings | binarizationModes | [`BinarizationMode`]({{ site.common_enumerations }}binarization-mode.html) array |
 
 **Value Range**    
     Each array item can be any one of the [`BinarizationMode`]({{ site.common_enumerations }}binarization-mode.html) Enumeration items.
@@ -89,9 +89,9 @@ Binarizes the image based on a given threshold.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->binarizationModes[0] = BM_LOCAL_BLOCK;
 settings->binarizationModes[1] = BM_THRESHOLD;

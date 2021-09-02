@@ -1,12 +1,12 @@
 ---
-title: Dynamsoft Content Normalizer - Enumerations
-keywords: enumerations, enums, dcn, documentation
-description: Dynamsoft Content Normalizer - Enumerations
+title: Dynamsoft Document Normalizer - Enumerations
+keywords: enumerations, enums, ddn, documentation
+description: Dynamsoft Document Normalizer - Enumerations
 ---
 
 # Enumerations
 
-## DCN Enumerations
+## DDN Enumerations
 - [`ContentBoundaryLocalizationMode`](content-boundary-localization-mode.md)
 - [`ContentType`](content-type.md)
 - [`ExecutePhase`](execute-phase.md)

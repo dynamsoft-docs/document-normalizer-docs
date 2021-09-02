@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - ExecutePhases
-keywords: executephases, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - ExecutePhases
+title: Dynamsoft Document Normalizer Parameter Reference - ExecutePhases
+keywords: executephases, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - ExecutePhases
 needGenerateH3Content: true
 ---
 
@@ -14,7 +14,7 @@ Sets the string array for specifying the phase(s) to be executed.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | ExecutePhases | *string array* |
+| DocumentNormalizerParameter | ExecutePhases | *string array* |
 
 **Value Range**    
     An array item can be any one of the [`ExecutePhase`]({{ site.enumerations }}execute-phase.html) Enumeration items.
@@ -33,7 +33,7 @@ Sets the string array for specifying the phase(s) to be executed.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | executePhases | *int* |
+| DDN_RuntimeSettings | executePhases | *int* |
 
 **Value Range**    
     A combined value of [`ExecutePhase`]({{ site.enumerations }}execute-phase.html) Enumeration items.
@@ -44,9 +44,9 @@ Sets the string array for specifying the phase(s) to be executed.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->executePhases = EP_QUAD_DETECTION | EP_BASIC_NORMALIZATION;
 char errorMessage[256];

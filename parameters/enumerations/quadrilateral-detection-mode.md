@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Content Normalizer - QuadrilateralDetectionMode Enumeration
-keywords: quadrilateraldetectionmode, enumerations, enums, dcn, documentation
-description: Dynamsoft Content Normalizer - QuadrilateralDetectionMode Enumeration
+title: Dynamsoft Document Normalizer - QuadrilateralDetectionMode Enumeration
+keywords: quadrilateraldetectionmode, enumerations, enums, ddn, documentation
+description: Dynamsoft Document Normalizer - QuadrilateralDetectionMode Enumeration
 ---
 
 # QuadrilateralDetectionMode

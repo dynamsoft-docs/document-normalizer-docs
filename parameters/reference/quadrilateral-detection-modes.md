@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - QuadrilateralDetectionModes
-keywords: quadrilateraldetectionmodes, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - QuadrilateralDetectionModes
+title: Dynamsoft Document Normalizer Parameter Reference - QuadrilateralDetectionModes
+keywords: quadrilateraldetectionmodes, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - QuadrilateralDetectionModes
 needGenerateH3Content: true
 ---
 
@@ -23,7 +23,7 @@ Defines margin-based quadrilateral detection.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | QuadrilateralDetectionModes | *JSON object array* |
+| DocumentNormalizerParameter | QuadrilateralDetectionModes | *JSON object array* |
 
 **Default Setting**   
 ```json
@@ -54,7 +54,7 @@ Defines margin-based quadrilateral detection.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | detectionModes | [`QuadrilateralDetectionMode`]({{ site.enumerations }}quadrilateral-detection-mode.html) array |
+| DDN_RuntimeSettings | detectionModes | [`QuadrilateralDetectionMode`]({{ site.enumerations }}quadrilateral-detection-mode.html) array |
 
 **Value Range**    
     Each array item can be any one of the [`QuadrilateralDetectionMode`]({{ site.enumerations }}quadrilateral-detection-mode.html) Enumeration items.
@@ -65,9 +65,9 @@ Defines margin-based quadrilateral detection.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->detectionModes[0] = QDM_MARGIN_BASED_DETECTION;
 settings->detectionModes[1] = QDM_LINE_BASED_DETECTION;

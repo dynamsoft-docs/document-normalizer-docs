@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - ContentType
-keywords: contenttype, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - ContentType
+title: Dynamsoft Document Normalizer Parameter Reference - ContentType
+keywords: contenttype, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - ContentType
 needGenerateH3Content: true
 ---
 
@@ -33,7 +33,7 @@ Sets the target content type to be normalized.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->normalizationSettings | contentType | [`ContentType`]({{ site.enumerations }}content-type.html) |
+| DDN_RuntimeSettings->normalizationSettings | contentType | [`ContentType`]({{ site.enumerations }}content-type.html) |
 
 **Value Range**  
     Any one of the [`ContentType`]({{ site.enumerations }}content-type.html) items.
@@ -44,9 +44,9 @@ Sets the target content type to be normalized.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->normalizationSettings.contentType = CT_TABLE;
 char errorMessage[256];

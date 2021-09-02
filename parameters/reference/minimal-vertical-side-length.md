@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer Parameter Reference - MinimalVerticalSideLength
-keywords: minimalverticalsidelength, parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer Parameter Reference - MinimalVerticalSideLength
+title: Dynamsoft Document Normalizer Parameter Reference - MinimalVerticalSideLength
+keywords: minimalverticalsidelength, parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer Parameter Reference - MinimalVerticalSideLength
 needGenerateH3Content: true
 ---
 
@@ -14,7 +14,7 @@ Sets the minimal vertical side length of the quadrilateral.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | MinimalVerticalSideLength | *int array* |
+| DocumentNormalizerParameter | MinimalVerticalSideLength | *int array* |
 
 **Value Range**    
     Format: [`minimalSideLength`, `ByPercentage`]    
@@ -36,7 +36,7 @@ Sets the minimal vertical side length of the quadrilateral.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | minimalVerticalSideLength | *int array* |
+| DDN_RuntimeSettings | minimalVerticalSideLength | *int array* |
 
 **Value Range**    
     Format: [`minimalSideLength`, `ByPercentage`]    
@@ -50,9 +50,9 @@ Sets the minimal vertical side length of the quadrilateral.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->minimalVerticalSideLength[0] = 200;
 settings->minimalVerticalSideLength[1] = 0;

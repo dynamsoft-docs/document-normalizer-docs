@@ -1,13 +1,13 @@
 ---
-title: Dynamsoft Content Normalizer - ContentNormalizerParameter Object
-keywords: parameters, reference, dcn, documentation
-description: Dynamsoft Content Normalizer - ContentNormalizerParameter Object
+title: Dynamsoft Document Normalizer - DocumentNormalizerParameter Object
+keywords: parameters, reference, ddn, documentation
+description: Dynamsoft Document Normalizer - DocumentNormalizerParameter Object
 needGenerateH3Content: true
 noTitleIndex: false
 ---
 
 
-# ContentNormalizerParameter Object
+# DocumentNormalizerParameter Object
 
 ## BinarizationModes
 Sets the mode array for binarization. 
@@ -163,7 +163,7 @@ For more information, please check out [Image Processing in OpenCV - Morphologic
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | BinarizationModes | *JSON object array* |
+| DocumentNormalizerParameter | BinarizationModes | *JSON object array* |
 
 **Default Setting**   
 ```json
@@ -202,7 +202,7 @@ For more information, please check out [Image Processing in OpenCV - Morphologic
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | binarizationModes | [`BinarizationMode`]({{ site.common_enumerations }}binarization-mode.html) array |
+| DDN_RuntimeSettings | binarizationModes | [`BinarizationMode`]({{ site.common_enumerations }}binarization-mode.html) array |
 
 **Value Range**    
     Each array item can be any one of the [`BinarizationMode`]({{ site.common_enumerations }}binarization-mode.html) Enumeration items.
@@ -213,9 +213,9 @@ For more information, please check out [Image Processing in OpenCV - Morphologic
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->binarizationModes[0] = BM_LOCAL_BLOCK;
 settings->binarizationModes[1] = BM_THRESHOLD;
@@ -310,7 +310,7 @@ Sets the mode array for converting a colour image to a grayscale image.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | ColourConversionModes | *JSON object array* |
+| DocumentNormalizerParameter | ColourConversionModes | *JSON object array* |
 
 **Default Setting**   
 ```json
@@ -342,7 +342,7 @@ Sets the mode array for converting a colour image to a grayscale image.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->furtherModes | colourConversionModes | [`ColourConversionMode`]({{ site.common_enumerations }}colour-conversion-mode.html) array |
+| DDN_RuntimeSettings->furtherModes | colourConversionModes | [`ColourConversionMode`]({{ site.common_enumerations }}colour-conversion-mode.html) array |
 
 **Value Range**    
     Each array item can be any one of the [`ColourConversionMode`]({{ site.common_enumerations }}colour-conversion-mode.html) Enumeration items.
@@ -353,9 +353,9 @@ Sets the mode array for converting a colour image to a grayscale image.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->furtherModes.colourConversionModes[0] = CICM_GENERAL;
 settings->furtherModes.colourConversionModes[1] = CICM_HSV;
@@ -372,7 +372,7 @@ Sets the string array for specifying the phase(s) to be executed.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | ExecutePhases | *string array* |
+| DocumentNormalizerParameter | ExecutePhases | *string array* |
 
 **Value Range**    
     An array item can be any one of the [`ExecutePhase`]({{ site.enumerations }}execute-phase.html) Enumeration items.
@@ -391,7 +391,7 @@ Sets the string array for specifying the phase(s) to be executed.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | executePhases | *int* |
+| DDN_RuntimeSettings | executePhases | *int* |
 
 **Value Range**    
     A combined value of [`ExecutePhase`]({{ site.enumerations }}execute-phase.html) Enumeration items.
@@ -402,9 +402,9 @@ Sets the string array for specifying the phase(s) to be executed.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->executePhases = EP_QUAD_DETECTION | EP_BASIC_NORMALIZATION;
 char errorMessage[256];
@@ -502,7 +502,7 @@ Sets the mode array for the enhancing grayscale image before content normalizati
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | GrayscaleEnhancementModes | *JSON object array* |
+| DocumentNormalizerParameter | GrayscaleEnhancementModes | *JSON object array* |
 
 **Default Setting**   
 ```json
@@ -538,7 +538,7 @@ Sets the mode array for the enhancing grayscale image before content normalizati
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->furtherModes | grayscaleEnhancementModes | [`GrayscaleEnhancementMode`]({{ site.common_enumerations }}grayscale-enhancement-mode.html) array |
+| DDN_RuntimeSettings->furtherModes | grayscaleEnhancementModes | [`GrayscaleEnhancementMode`]({{ site.common_enumerations }}grayscale-enhancement-mode.html) array |
 
 **Value Range**    
     Each array item can be any one of the [`GrayscaleEnhancementMode`]({{ site.common_enumerations }}grayscale-enhancement-mode.html) Enumeration items.
@@ -549,9 +549,9 @@ Sets the mode array for the enhancing grayscale image before content normalizati
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->furtherModes.grayscaleEnhancementModes[0] = GEM_GRAY_EQUALIZE;
 settings->furtherModes.grayscaleEnhancementModes[1] = GEM_SHARPEN_SMOOTH;
@@ -583,7 +583,7 @@ Sets the mode array for the grayscale image conversion.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | GrayscaleTransformationModes | *JSON object array* |
+| DocumentNormalizerParameter | GrayscaleTransformationModes | *JSON object array* |
 
 **Default Setting**   
 ```json
@@ -614,7 +614,7 @@ Sets the mode array for the grayscale image conversion.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings->furtherModes | grayscaleTransformationModes | [`GrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html) array |
+| DDN_RuntimeSettings->furtherModes | grayscaleTransformationModes | [`GrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html) array |
 
 **Value Range**    
     Each array item can be any one of the [`GrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html) Enumeration items.
@@ -625,9 +625,9 @@ Sets the mode array for the grayscale image conversion.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->furtherModes.grayscaleTransformationModes[0] = GTM_INVERTED;
 settings->furtherModes.grayscaleTransformationModes[1] = GTM_ORIGINAL;
@@ -645,7 +645,7 @@ Sets the quadrilateral interior angle range.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | InteriorAngleRange | *int array* |
+| DocumentNormalizerParameter | InteriorAngleRange | *int array* |
 
 **Value Range**    
     Format: [`minInteriorAngleValue`, `maxInteriorAngleValue`]    
@@ -666,7 +666,7 @@ Sets the quadrilateral interior angle range.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | interiorAngleRange | *int array* |
+| DDN_RuntimeSettings | interiorAngleRange | *int array* |
 
 **Value Range**    
     Format: [`minInteriorAngleValue`, `maxInteriorAngleValue`]    
@@ -679,9 +679,9 @@ Sets the quadrilateral interior angle range.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->interiorAngleRange[0] = 60;
 settings->interiorAngleRange[1] = 120;
@@ -699,7 +699,7 @@ Sets the maximum number of threads the algorithm will use to normalize content.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | MaxThreadCount | *int* |
+| DocumentNormalizerParameter | MaxThreadCount | *int* |
 
 **Value Range**  
     [1, 4]
@@ -718,7 +718,7 @@ Sets the maximum number of threads the algorithm will use to normalize content.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | maxThreadCout | *int* |
+| DDN_RuntimeSettings | maxThreadCout | *int* |
 
 **Value Range**  
     [1, 4]
@@ -729,9 +729,9 @@ Sets the maximum number of threads the algorithm will use to normalize content.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->maxThreadCout = 1;
 char errorMessage[256];
@@ -747,7 +747,7 @@ Sets the minimal horizontal side length of the quadrilateral.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | MinimalHorizontalSideLength | *int array* |
+| DocumentNormalizerParameter | MinimalHorizontalSideLength | *int array* |
 
 **Value Range**    
     Format: [`minimalSideLength`, `ByPercentage`]    
@@ -769,7 +769,7 @@ Sets the minimal horizontal side length of the quadrilateral.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | minimalHorizontalSideLength | *int array* |
+| DDN_RuntimeSettings | minimalHorizontalSideLength | *int array* |
 
 **Value Range**    
     Format: [`minimalSideLength`, `ByPercentage`]    
@@ -783,9 +783,9 @@ Sets the minimal horizontal side length of the quadrilateral.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->minimalHorizontalSideLength[0] = 200;
 settings->minimalHorizontalSideLength[1] = 0;
@@ -802,7 +802,7 @@ Sets the minimal vertical side length of the quadrilateral.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | MinimalVerticalSideLength | *int array* |
+| DocumentNormalizerParameter | MinimalVerticalSideLength | *int array* |
 
 **Value Range**    
     Format: [`minimalSideLength`, `ByPercentage`]    
@@ -824,7 +824,7 @@ Sets the minimal vertical side length of the quadrilateral.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | minimalVerticalSideLength | *int array* |
+| DDN_RuntimeSettings | minimalVerticalSideLength | *int array* |
 
 **Value Range**    
     Format: [`minimalSideLength`, `ByPercentage`]    
@@ -838,9 +838,9 @@ Sets the minimal vertical side length of the quadrilateral.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->minimalVerticalSideLength[0] = 200;
 settings->minimalVerticalSideLength[1] = 0;
@@ -850,14 +850,14 @@ delete normalizer;
 ```
 
 ## Name
-Sets the unique name of the ContentNormalizerParameter object.
+Sets the unique name of the DocumentNormalizerParameter object.
 
 ### Setting Methods
 #### As Json Parameter
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | Name | *string* |
+| DocumentNormalizerParameter | Name | *string* |
 
 **Value Range**  
     Any unique string.
@@ -880,7 +880,7 @@ Sets the name of a NormalizationDefinition Object.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | NormalizationDefinitionName | *string* |
+| DocumentNormalizerParameter | NormalizationDefinitionName | *string* |
 
 **Value Range**  
     Any defined NormalizationDefinition object name.
@@ -918,7 +918,7 @@ Sets the mode array for quadrilateral detection.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | QuadrilateralDetectionModes | *JSON object array* |
+| DocumentNormalizerParameter | QuadrilateralDetectionModes | *JSON object array* |
 
 **Default Setting**   
 ```json
@@ -949,7 +949,7 @@ Sets the mode array for quadrilateral detection.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | detectionModes | [`QuadrilateralDetectionMode`]({{ site.enumerations }}quadrilateral-detection-mode.html) array |
+| DDN_RuntimeSettings | detectionModes | [`QuadrilateralDetectionMode`]({{ site.enumerations }}quadrilateral-detection-mode.html) array |
 
 **Value Range**    
     Each array item can be any one of the [`QuadrilateralDetectionMode`]({{ site.enumerations }}quadrilateral-detection-mode.html) Enumeration items.
@@ -960,9 +960,9 @@ Sets the mode array for quadrilateral detection.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->detectionModes[0] = QDM_MARGIN_BASED_DETECTION;
 settings->detectionModes[1] = QDM_LINE_BASED_DETECTION;
@@ -982,7 +982,7 @@ If the shorter edge size is larger than the given value, the library will calcul
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | ScaleDownThreshold | *int* |
+| DocumentNormalizerParameter | ScaleDownThreshold | *int* |
 
 **Value Range**  
     [512, 0x7fffffff]
@@ -1001,7 +1001,7 @@ If the shorter edge size is larger than the given value, the library will calcul
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | scaleDownThreshold | *int* |
+| DDN_RuntimeSettings | scaleDownThreshold | *int* |
 
 **Value Range**  
     [512, 0x7fffffff]
@@ -1012,9 +1012,9 @@ If the shorter edge size is larger than the given value, the library will calcul
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->scaleDownThreshold = 4096;
 char errorMessage[256];
@@ -1061,7 +1061,7 @@ A larger value means the library will take more effort to detect texture.
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | TextureDetectionModes | *JSON object array* |
+| DocumentNormalizerParameter | TextureDetectionModes | *JSON object array* |
 
 **Default Setting**   
 ```json
@@ -1090,7 +1090,7 @@ A larger value means the library will take more effort to detect texture.
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | textureDetectionModes | [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) array |
+| DDN_RuntimeSettings | textureDetectionModes | [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) array |
 
 **Value Range**    
     Each array item can be any one of the [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) Enumeration items.
@@ -1101,9 +1101,9 @@ A larger value means the library will take more effort to detect texture.
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->furtherModes.textureDetectionModes[0] = TDM_SKIP;
 char errorMessage[256];
@@ -1123,7 +1123,7 @@ It does not include the time taken to load/decode an image (Tiff, PNG, etc.) fro
 
 | Parent Json Object | Json Parameter Name | Value Type | 
 | ------------------ | ------------------- | ---------- |
-| ContentNormalizerParameter | Timeout | *int* |
+| DocumentNormalizerParameter | Timeout | *int* |
 
 **Value Range**  
     [0, 0x7fffffff]
@@ -1142,7 +1142,7 @@ It does not include the time taken to load/decode an image (Tiff, PNG, etc.) fro
 
 | Struct | Struct Member Name | Value Type | 
 | ------ | ------------------ | ---------- |
-| DCN_RuntimeSettings | timeout | *int* |
+| DDN_RuntimeSettings | timeout | *int* |
 
 **Value Range**  
     [0, 0x7fffffff]
@@ -1153,9 +1153,9 @@ It does not include the time taken to load/decode an image (Tiff, PNG, etc.) fro
 **Code Snippet**  
 ```cpp
 // This is a c++ sample code.
-ContentNormalizer::InitLicense("t0260NwAAAHV***************");
-ContentNormalizer* normalizer = new ContentNormalizer();
-DCN_RuntimeSettings settings;
+DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
+DocumentNormalizer* normalizer = new DocumentNormalizer();
+DDN_RuntimeSettings settings;
 int errorCode = normalizer->GetRuntimeSettings(&settings);
 settings->timeout = 20000;
 char errorMessage[256];

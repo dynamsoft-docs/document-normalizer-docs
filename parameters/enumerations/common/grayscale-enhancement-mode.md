@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - GrayscaleEnhancementMode Enumeration
-keywords: grayscaleenhancementmode, enumerations, enums, dcn, documentation
-description: Dynamsoft Content Normalizer - GrayscaleEnhancementMode Enumeration
+title: Dynamsoft Document Normalizer - GrayscaleEnhancementMode Enumeration
+keywords: grayscaleenhancementmode, enumerations, enums, ddn, documentation
+description: Dynamsoft Document Normalizer - GrayscaleEnhancementMode Enumeration
 ---
 
 # ColourConversionMode

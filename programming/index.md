@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - Programming
-keywords: programming, dcn, documentation
-description: Dynamsoft Content Normalizer - Programming
+title: Dynamsoft Document Normalizer - Programming
+keywords: programming, ddn, documentation
+description: Dynamsoft Document Normalizer - Programming
 ---
 
 # Programming

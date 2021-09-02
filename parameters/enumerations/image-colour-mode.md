@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Content Normalizer - ImageColourMode Enumeration
-keywords: imagecolourmode, enumerations, enums, dcn, documentation
-description: Dynamsoft Content Normalizer - ImageColourMode Enumeration
+title: Dynamsoft Document Normalizer - ImageColourMode Enumeration
+keywords: imagecolourmode, enumerations, enums, ddn, documentation
+description: Dynamsoft Document Normalizer - ImageColourMode Enumeration
 ---
 
 # ImageColourMode
