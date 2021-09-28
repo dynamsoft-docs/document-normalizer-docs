@@ -34,14 +34,20 @@ baseurl: "/document-normalizer"
 
 plugins:
   - jemoji
+  - jekyll-sitemap
 
 
 defaults:
-  -
-    scope:
+  - scope:
       path: ""
     values:
       layout: "default-layout"
       noTitleIndex: true
       needAutoGenerateSidebar: true
       needGenerateH3Content: true
+  - scope:
+      path: "Hide_Tree_Page.html"
+    values:
+      sitemap: false
+
+url: "https://www.dynamsoft.com" # sitemap root
