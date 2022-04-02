@@ -19,7 +19,7 @@ This is the main class of Dynamsoft Document Normalizer(DDN) SDK. It supports qu
 @interface DynamsoftDocumentNormalizer
 ```
 
-## Initialize
+## Initialize Methods
 
 | Method               | Description |
 |----------------------|-------------|

@@ -34,8 +34,8 @@ static void initLicense(String license, LicenseVerificationListener listener)
 
 **Parameters**
 
-[in] `license`: The license key.
-[in] `listener`: The listener that handles callback when the license server returns.
+`[in] license`: The license key.
+`[in] listener`: The listener that handles callback when the license server returns.
 
 **Code Snippet**
 

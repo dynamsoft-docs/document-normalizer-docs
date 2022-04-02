@@ -36,7 +36,7 @@ Bind a `Dynamsoft Camera Enhancer` instance to the Document Normalizer. `Dynamso
 
 **Parameters**
 
-`cameraInstance`: An instance of `Dynamsoft Camera Enhancer`.
+`[in] cameraInstance`: An instance of `Dynamsoft Camera Enhancer`.
 
 **Code Snippet**
 
@@ -134,12 +134,12 @@ You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhanc
 Set the callback interface to process detection results generated during frame detecting.
 
 ```objc
--(void)setDetectResultListener:(DetectResultListener)detectResultListener;
+-(void)setDetectResultListener:(id<DetectResultListener>)detectResultListener;
 ```
 
 **Parameters**
 
-[in] `detectResultListener`: The Callback interface.
+`[in] detectResultListener`: The Callback interface.
 
 **Code Snippet**
 

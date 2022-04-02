@@ -28,7 +28,7 @@ void initRuntimeSettingsFromFile(String filePath) throws DocumentNormalizerExcep
 
 **Parameters**
 
-`filePath`: The path of the settings file.  
+`[in] filePath`: The path of the settings file.  
 
 **Exceptions**
 
@@ -51,7 +51,7 @@ void initRuntimeSettingsFromString(String content)throws DocumentNormalizerExcep
 
 **Parameters**
 
-`content`: A JSON string that represents the content of the settings.  
+`[in] content`: A JSON string that represents the content of the settings.  
 
 **Exceptions**
 
@@ -74,8 +74,8 @@ void outputRuntimeSettingsToFile(String filePath, String settingsName) throws Do
 
 **Parameters**
 
-[in] `filePath`: The output file path which stores runtime settings.  
-[in] `settingsName`: A unique name for declaring runtime settings.
+`[in] filePath`: The output file path which stores runtime settings.  
+`[in] settingsName`: A unique name for declaring runtime settings.
 
 **Exceptions**
 
@@ -98,7 +98,7 @@ String outputRuntimeSettings(String settingsName) throws DocumentNormalizerExcep
 
 **Parameters** 
 
-[in] `settingsName` A unique name for declaring runtime settings.  
+`[in] settingsName` A unique name for declaring runtime settings.  
 
 **Return Value**
 

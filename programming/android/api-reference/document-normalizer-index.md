@@ -17,7 +17,7 @@ This is the main class of Dynamsoft Document Normalizer(DDN) SDK. It supports qu
 class com.dynamsoft.ddn.DocumentNormalizer
 ```
 
-## Initialize
+## Initialize Methods
 
   | Method               | Description |
   |----------------------|-------------|
