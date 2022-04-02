@@ -1,5 +1,7 @@
 <li><a href="{{ site.programming }}" class="otherLinkColour">Programming</a>
     <ul>
+        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-android.html" -%}
+        {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-ios.html" -%}
         {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-c.html" -%}
         {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-programming/programming-cpp.html" -%}
     </ul>
