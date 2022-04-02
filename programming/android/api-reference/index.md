@@ -19,7 +19,7 @@ This is the main class of Dynamsoft Document Normalizer(DDN) SDK. It supports qu
 class com.dynamsoft.ddn.DocumentNormalizer
 ```
 
-### Initialize
+### Initialize Methods
 
   | Method               | Description |
   |----------------------|-------------|
@@ -30,8 +30,8 @@ class com.dynamsoft.ddn.DocumentNormalizer
   | Method               | Description |
   |----------------------|-------------|
   | [`setCameraEnhancer`](document-normalizer-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Document Normalizer.  |
-  | [`startScanning`](document-normalizer-video.md#startdetecting) | Start the document quad detection thread in the video streaming scenario. |
-  | [`stopScanning`](document-normalizer-video.md#stopdetecting) | Stop the document quad detection thread in the video streaming scenario.  |
+  | [`startDetecting`](document-normalizer-video.md#startdetecting) | Start the document quad detection thread in the video streaming scenario. |
+  | [`stopDetecting`](document-normalizer-video.md#stopdetecting) | Stop the document quad detection thread in the video streaming scenario.  |
   | [`setDetectResultListener`](document-normalizer-video.md#setdetectresultlistener) | Set callback interface to process detection results generated during frame detecting. |
 
 ### Detect and Normalize Methods
@@ -62,12 +62,11 @@ class com.dynamsoft.ddn.DocumentNormalizer
 
 ## Auxiliary Classes
 
-- [`Point`](point.md)
 - [`Quadrilateral`](quadrilateral.md)
 - [`ImageData`](image-data.md)
 - [`LicenseManager`](license-manager.md)
 - [`DetectedQuadResult`](detected-quad-result.md)
-- [`NormalizedImageResult`](quad-detection-result.md)
+- [`NormalizedImageResult`](normalized-image-result.md)
 - [`DocumentNormalizerException`](document-normalizer-exception.md)
 
 &nbsp;

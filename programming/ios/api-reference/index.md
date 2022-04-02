@@ -62,13 +62,11 @@ This is the main class of Dynamsoft Document Normalizer(DDN) SDK. It supports qu
 
 ## Auxiliary Classes
 
-- [`Point`](point.md)
-- [`Quadrilateral`](quadrilateral.md)
-- [`ImageData`](image-data.md)
-- [`LicenseManager`](license-manager.md)
-- [`DetectedQuadResult`](detected-quad-result.md)
-- [`NormalizedImageResult`](quad-detection-result.md)
-- [`DocumentNormalizerException`](document-normalizer-exception.md)
+- [`iQuadrilateral`](quadrilateral.md)
+- [`iImageData`](image-data.md)
+- [`DynamsoftLicenseManager`](license-manager.md)
+- [`iDetectedQuadResult`](detected-quad-result.md)
+- [`iNormalizedImageResult`](normalized-image-result.md)
 
 &nbsp;
 

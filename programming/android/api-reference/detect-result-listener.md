@@ -25,7 +25,7 @@ interface com.dynamsoft.ddn.DetectResultListener
 The callback method to handle the detection results returned by the library.
 
 ```java
-void detectResultCallback(int frameId, ImageData imageData, QuadDetectionResult[] detectResults);
+void detectResultCallback(int frameId, ImageData imageData, DetectedQuadResult[] detectResults);
 ```
 
 **Parameters**
@@ -39,7 +39,7 @@ void detectResultCallback(int frameId, ImageData imageData, QuadDetectionResult[
 ```java
 DetectResultListener detectResultListener = new DetectResultListener() {
     @Override
-    public void detectResultCallback(int frameId, ImageData imageData, QuadDetectionResult[] textResults) {
+    public void detectResultCallback(int frameId, ImageData imageData, DetectedQuadResult[] textResults) {
         // Add your code
     }
 };

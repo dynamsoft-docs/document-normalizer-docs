@@ -14,9 +14,9 @@ c_cpp: /document-normalizer/programming/c-cplusplus/
 c_cpp_struct: /document-normalizer/programming/c-cplusplus/api-reference/struct/
 c_cpp_common_struct: /document-normalizer/programming/c-cplusplus/api-reference/struct/common/
 
-ios: /document-normalizer/programming/objectivec-swift/
-ios_api: /document-normalizer/programming/objectivec-swift/api-reference/
-ios_release_notes: /document-normalizer/programming/objectivec-swift/release-notes/
+ios: /document-normalizer/programming/ios/
+ios_api: /document-normalizer/programming/ios/api-reference/
+ios_release_notes: /document-normalizer/programming/ios/release-notes/
 
 android: /document-normalizer/programming/android/
 android_api: /document-normalizer/programming/android/api-reference/
