@@ -1,93 +1,64 @@
 ---
-title: Dynamsoft Document Normalizer Parameter Reference - TextureDetectionModes
-keywords: texturedetectionmodes, parameters, reference, ddn, documentation
+layout: default-layout
+title: TextureDetectionModes
+keywords: TextureDetectionModes, parameters, reference, documentation
 description: Dynamsoft Document Normalizer Parameter Reference - TextureDetectionModes
-needGenerateH3Content: true
 ---
 
+# TextureDetectionModes
 
-## TextureDetectionModes
-Sets the mode array for texture detection. 
+`TextureDetectionModes` is a parameter to control how to detect texture on an image. It consisits of one or more modes, each mode represents a way to implement the detection.
 
-## Mode Properties
+## Candidate Mode List
 
-### `TDM_GENERAL_WIDTH_CONCENTRATION`
-Transforms to inverted grayscale. Recommended for light on dark images.
+- TDM_GENERAL_WIDTH_CONCENTRATION
 
-#### Valid Argument
-- [`Sensitivity`](#sensitivity)
+### TDM_GENERAL_WIDTH_CONCENTRATION
 
+Detects texture using the general algorithm. This mode has the following arguments for further customizing.
+
+- [Sensitivity](#sensitivity)
 
 ## Setting Methods
-### As Json Parameter
 
-| Parent Json Object | Json Parameter Name | Value Type | 
+### As JSON Parameter
+
+`TextureDetectionModes` as a JSON parameter is a JSON Object array defined as below.
+
+| Parent Json Object | Key Name | Key Value |
 | ------------------ | ------------------- | ---------- |
-| DocumentNormalizerParameter | TextureDetectionModes | *JSON object array* |
+| ImageParameter | TextureDetectionModes | A JSON Object array while each Object is defined as below |
 
-**Default Setting**   
+| Key Name | Key Value | Description |
+| -------- | --------- | ----------- |
+| Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for text filtering.  |
+| Sensitivity | A number from value range of Sensitivity | (Optional) Sets the Argument [Sensitivity](#sensitivity). |
+
+**JSON Parameter Example**
+
 ```json
 {
-    "TextureDetectionModes":[
-        {
-            "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION",
-            "Sensitivity": 5
-        }
-    ],
+    "TextureDetectionModes": [
+        {
+            "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION", 
+            "Sensitivity": 5
+        }
+    ]
 }
 ```
 
-**Example**  
-```json
-{
-    "TextureDetectionModes":[
-        {
-            "Mode": "TDM_SKIP"
-        }
-    ],
-}
-```
+## Candidate Argument List
 
-### As Struct Member
-
-| Struct | Struct Member Name | Value Type | 
-| ------ | ------------------ | ---------- |
-| DDN_RuntimeSettings | textureDetectionModes | [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) array |
-
-**Value Range**    
-    Each array item can be any one of the [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html) Enumeration items.
-
-**Default Value**   
-    [TDM_GENERAL_WIDTH_CONCENTRATION,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP,TDM_SKIP]
-
-**Code Snippet**  
-```cpp
-// This is a c++ sample code.
-DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
-DocumentNormalizer* normalizer = new DocumentNormalizer();
-DDN_RuntimeSettings settings;
-int errorCode = normalizer->GetRuntimeSettings(&settings);
-settings->furtherModes.textureDetectionModes[0] = TDM_SKIP;
-char errorMessage[256];
-errorCode = normalizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
-delete normalizer;
-```
-
-## Arguments Reference
-- [`Sensitivity`](#sensitivity)
+- [Sensitivity](#sensitivity)
 
 ### Sensitivity
 
-| Argument Name | Valid for Mode(s) | Value Type | 
-| ------------- | ----------------- | ---------- |
-| Sensitivity | `TDM_GENERAL_WIDTH_CONCENTRATION` | *int* |
+Sets the sensitivity used for texture detection.
 
-**Value Range**   
-    [1, 9]
+| Value Type | Value Range | Default Value | Valid For |
+| ---------- | ----------- | ------------- | --------- |
+| *int* | [1, 9] | 5 | TDM_GENERAL_WIDTH_CONCENTRATION |
 
-**Default Value**   
-    5
+**Remarks**
 
-**Remarks**  
 A larger value means the library will take more effort to detect texture.
-

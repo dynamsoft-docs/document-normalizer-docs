@@ -1,55 +1,28 @@
 ---
-title: Dynamsoft Document Normalizer Parameter Reference - Contrast
-keywords: contrast, parameters, reference, ddn, documentation
+layout: default-layout
+title: Contrast
+keywords: Contrast, parameters, reference, documentation
 description: Dynamsoft Document Normalizer Parameter Reference - Contrast
-needGenerateH3Content: true
 ---
 
-
 # Contrast
-Sets the target contrast value of the final normalized image.
+
+`Contrast` is a parameter to specify the contrast of the normalized image.
 
 ## Setting Methods
+
 ### As Json Parameter
 
-| Parent Json Object | Json Parameter Name | Value Type | 
-| ------------------ | ------------------- | ---------- |
-| NormalizationDefinition | Contrast | *int* |
+`Contrast` as a JSON parameter is a number value defined as below.
 
-**Value Range**  
-    [-100, 100]
+| Parent Json Object | Key Name | Key Value Type | Key Value Range | Key Default Value |
+| ------------------ | -------- | -------------- | ----------- | ------------- |
+| NormalizerParameter | Contrast | *int* | [-100, 100] | 0 |
 
-**Default Value**  
-    0
+**Example**
 
-**Example**  
 ```json
 {
     "Contrast": 50,
 }
-```
-
-### As Struct Member
-
-| Struct | Struct Member Name | Value Type | 
-| ------ | ------------------ | ---------- |
-| DDN_RuntimeSettings->normalizationSettings | contrast | *int* |
-
-**Value Range**  
-    [-100, 100]
-
-**Default Value**  
-    0
-
-**Code Snippet**  
-```cpp
-// This is a c++ sample code.
-DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
-DocumentNormalizer* normalizer = new DocumentNormalizer();
-DDN_RuntimeSettings settings;
-int errorCode = normalizer->GetRuntimeSettings(&settings);
-settings->normalizationSettings.contrast = 50;
-char errorMessage[256];
-errorCode = normalizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
-delete normalizer;
 ```

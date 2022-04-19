@@ -1,78 +1,44 @@
 ---
-title: Dynamsoft Document Normalizer Parameter Reference - QuadrilateralDetectionModes
-keywords: quadrilateraldetectionmodes, parameters, reference, ddn, documentation
+layout: default-layout
+title: QuadrilateralDetectionModes
+keywords: QuadrilateralDetectionModes, parameters, reference, documentation
 description: Dynamsoft Document Normalizer Parameter Reference - QuadrilateralDetectionModes
-needGenerateH3Content: true
 ---
 
 # QuadrilateralDetectionModes
-Sets the mode array for quadrilateral detection.
 
-## Mode Properties
+`QuadrilateralDetectionModes` is a parameter to control how to detect quadrilateral on an image. It consisits of one or more modes, each mode represents a way to implement the detection.
 
-### `QDM_LINE_BASED_DETECTION`
-Defines line-based quadrilateral detection.
+## Candidate Mode List
 
+- QDM_GENERAL
 
-### `QDM_MARGIN_BASED_DETECTION`
-Defines margin-based quadrilateral detection.
+### QDM_GENERAL
 
+Detects quadrilateral using the general algorithm.
 
 ## Setting Methods
-### As Json Parameter
 
-| Parent Json Object | Json Parameter Name | Value Type | 
+### As JSON Parameter
+
+`QuadrilateralDetectionModes` as a JSON parameter is a JSON Object array defined as below.
+
+| Parent Json Object | Key Name | Key Value |
 | ------------------ | ------------------- | ---------- |
-| DocumentNormalizerParameter | QuadrilateralDetectionModes | *JSON object array* |
+| NormalizerParameter | QuadrilateralDetectionModes | A JSON Object array while each Object is defined as below |
 
-**Default Setting**   
+| Key Name | Key Value | Description |
+| -------- | --------- | ----------- |
+| Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for quadrilateral detection.  |
+
+**JSON Parameter Example**
+
 ```json
 {
-    "QuadrilateralDetectionModes":[
-        {
-            "Mode": "QDM_LINE_BASED_DETECTION"
-        }
-    ],
+    "QuadrilateralDetectionModes": [
+        {
+            "Mode": "QDM_GENERAL", 
+        }
+    ]
 }
 ```
-
-**Example**  
-```json
-{
-    "QuadrilateralDetectionModes":[
-        {
-            "Mode": "QDM_MARGIN_BASED_DETECTION"
-        },
-        {
-            "Mode": "QDM_LINE_BASED_DETECTION"
-        }
-    ],
-}
-```
-
-### As Struct Member
-
-| Struct | Struct Member Name | Value Type | 
-| ------ | ------------------ | ---------- |
-| DDN_RuntimeSettings | detectionModes | [`QuadrilateralDetectionMode`]({{ site.enumerations }}quadrilateral-detection-mode.html) array |
-
-**Value Range**    
-    Each array item can be any one of the [`QuadrilateralDetectionMode`]({{ site.enumerations }}quadrilateral-detection-mode.html) Enumeration items.
-
-**Default Value**   
-    [QDM_LINE_BASED_DETECTION,QDM_SKIP_DETECTION,QDM_SKIP_DETECTION,QDM_SKIP_DETECTION,QDM_SKIP_DETECTION,QDM_SKIP_DETECTION,QDM_SKIP_DETECTION,QDM_SKIP_DETECTION]
-
-**Code Snippet**  
-```cpp
-// This is a c++ sample code.
-DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
-DocumentNormalizer* normalizer = new DocumentNormalizer();
-DDN_RuntimeSettings settings;
-int errorCode = normalizer->GetRuntimeSettings(&settings);
-settings->detectionModes[0] = QDM_MARGIN_BASED_DETECTION;
-settings->detectionModes[1] = QDM_LINE_BASED_DETECTION;
-char errorMessage[256];
-errorCode = normalizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
-delete normalizer;
-```
-

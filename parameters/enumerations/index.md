@@ -1,23 +1,22 @@
 ---
+layout: default-layout
 title: Dynamsoft Document Normalizer - Enumerations
-keywords: enumerations, enums, ddn, documentation
+keywords: enumerations, enums, documentation
 description: Dynamsoft Document Normalizer - Enumerations
 ---
 
-# Enumerations
+# Enumeration Reference
 
-## DDN Enumerations
-- [`ContentBoundaryLocalizationMode`](content-boundary-localization-mode.md)
+- [`BinarizationMode`](binarization-mode.md)
+- [`ColourConversionMode`](colour-conversion-mode.md)
 - [`ContentType`](content-type.md)
-- [`ExecutePhase`](execute-phase.md)
+- [`DeskewMode`](deskew-mode.md)
+- [`GrayscaleEnhancementMode`](grayscale-enhancement-mode.md)
+- [`GrayscaleTransformationMode`](grayscale-transformation-mode.md)
 - [`ImageColourMode`](image-colour-mode.md)
+- [`ImagePixelFormat`](image-pixel-format.md)
+- [`LineExtractionMode`](line-extraction-mode.md)
 - [`QuadrilateralDetectionMode`](quadrilateral-detection-mode.md)
-
-
-## Common Enumerations
-- [`BinarizationMode`]()
-- [`ColourConversionMode`]()
-- [`GrayscaleEnhancementMode`]()
-- [`GrayscaleTransformationMode`]()
-- [`ImagePixelFormat`]()
-- [`TextureDetectionMode`]()
+- [`RegionPredetectionMode`](region-predetection-mode.md)
+- [`TextFilterMode`](text-filter-mode.md)
+- [`TextureDetectionMode`](texture-detection-mode.md)

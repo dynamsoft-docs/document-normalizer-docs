@@ -1,6 +1,6 @@
 ---
 title: Dynamsoft Document Normalizer - Overview
-keywords: overview, ddn, documentation
+keywords: overview, documentation
 description: Dynamsoft Document Normalizer - Overview
 ---
 

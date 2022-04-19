@@ -1,59 +1,28 @@
 ---
-title: Dynamsoft Document Normalizer Parameter Reference - ScaleDownThreshold
-keywords: scaledownthreshold, parameters, reference, ddn, documentation
+layout: default-layout
+title: ScaleDownThreshold
+keywords: ScaleDownThreshold, parameters, reference, documentation
 description: Dynamsoft Document Normalizer Parameter Reference - ScaleDownThreshold
-needGenerateH3Content: true
 ---
 
-
 # ScaleDownThreshold
-Sets the threshold for the image shrinking.
 
-**Remarks**   
-If the shorter edge size is larger than the given value, the library will calculate the required height and width and shrink the image to that size before normalization. Otherwise, it will perform content normalization on the original image.
+`ScaleDownThreshold` is a parameter to specify the threshold for image shrinking. If the shorter edge size is larger than the given value, the library will calculate the required height and width of the image and shrink the image to that size.
 
 ## Setting Methods
-### As Json Parameter
 
-| Parent Json Object | Json Parameter Name | Value Type | 
-| ------------------ | ------------------- | ---------- |
-| DocumentNormalizerParameter | ScaleDownThreshold | *int* |
+### As JSON Parameter
 
-**Value Range**  
-    [512, 0x7fffffff]
+`ScaleDownThreshold` as a JSON parameter is a number value defined as below.
 
-**Default Value**  
-    2048
+| Parent Json Object | Key Name | Key Value Type | Key Value Range | Key Default Value |
+| ------------------ | -------- | -------------- | ----------- | ------------- |
+| ImageParameter | ScaleDownThreshold | *int* | [512, 0x7fffffff] | 2300 |
 
-**Example**  
+**Example**
+
 ```json
 {
-    "ScaleDownThreshold": 4096,
+    "ScaleDownThreshold": 2300
 }
 ```
-
-### As Struct Member
-
-| Struct | Struct Member Name | Value Type | 
-| ------ | ------------------ | ---------- |
-| DDN_RuntimeSettings | scaleDownThreshold | *int* |
-
-**Value Range**  
-    [512, 0x7fffffff]
-
-**Default Value**  
-    2048
-
-**Code Snippet**  
-```cpp
-// This is a c++ sample code.
-DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
-DocumentNormalizer* normalizer = new DocumentNormalizer();
-DDN_RuntimeSettings settings;
-int errorCode = normalizer->GetRuntimeSettings(&settings);
-settings->scaleDownThreshold = 4096;
-char errorMessage[256];
-errorCode = normalizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
-delete normalizer;
-```
-

@@ -1,83 +1,58 @@
 ---
-title: Dynamsoft Document Normalizer Parameter Reference - GrayscaleTransformationModes
-keywords: grayscaletransformationmodes, parameters, reference, ddn, documentation
+layout: default-layout
+title: GrayscaleTransformationModes
+keywords: GrayscaleTransformationModes, parameters, reference, documentation
 description: Dynamsoft Document Normalizer Parameter Reference - GrayscaleTransformationModes
-needGenerateH3Content: true
 ---
 
-
 # GrayscaleTransformationModes
-Sets the mode array for the grayscale image conversion.
 
-## Mode Properties
+This parameter helps control the colour mode of the grayscale image. By default, the library can only locate the dark barcodes that stand on a light background. Assume your image has different features to default, this parameter may help configure the appropriate settings for your case.  
 
-### `GTM_INVERTED`
-Transforms to inverted grayscale. Recommended for light on dark images.
+It consisits of one or more modes, each mode represents a way to transform the grayscale image.
 
+## Candidate Mode List
 
-### `GTM_ORIGINAL`
-Keeps the original grayscale. Recommended for dark on light images.
+- GTM_ORIGINAL
+- GTM_INVERTED
+- GTM_AUTO
 
+### GTM_ORIGINAL
 
-### `GTM_AUTO`
+Keeps the original grayscale.
+
+### GTM_INVERTED
+
+Transforms the image to inverted grayscale.
+
+### GTM_AUTO
+
 Let the library choose an algorithm automatically for grayscale transformation.
 
-
 ## Setting Methods
-### As Json Parameter
 
-| Parent Json Object | Json Parameter Name | Value Type | 
+### As JSON Parameter
+
+`BinarizationModes` as a JSON parameter is a JSON Object array defined as below.
+
+| Parent Json Object | Key Name | Key Value |
 | ------------------ | ------------------- | ---------- |
-| DocumentNormalizerParameter | GrayscaleTransformationModes | *JSON object array* |
+| ImageParameter | GrayscaleTransformationModes | A JSON Object array while each Object is defined as below |
 
-**Default Setting**   
-```json
+| Key Name | Key Value | Description |
+| -------- | --------- | ----------- |
+| Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for grayscale transformation.  |
+
+**JSON Parameter Example**   
+```
 {
-    "GrayscaleTransformationModes":[
-        {
-            "Mode": "GTM_ORIGINAL"
-        }
-    ],
+    "GrayscaleTransformationModes": [
+        {
+            "Mode": "GTM_ORIGINAL"
+        },
+        {
+            "Mode": "GTM_INVERTED" 
+        }
+    ]
 }
 ```
-
-**Example**  
-```json
-{
-    "GrayscaleTransformationModes":[
-        {
-            "Mode": "GTM_INVERTED"
-        },
-        {
-            "Mode": "GTM_ORIGINAL"
-        }
-    ],
-}
-```
-
-### As Struct Member
-
-| Struct | Struct Member Name | Value Type | 
-| ------ | ------------------ | ---------- |
-| DDN_RuntimeSettings->furtherModes | grayscaleTransformationModes | [`GrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html) array |
-
-**Value Range**    
-    Each array item can be any one of the [`GrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html) Enumeration items.
-
-**Default Value**   
-    [GTM_ORIGINAL,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP,GTM_SKIP]
-
-**Code Snippet**  
-```cpp
-// This is a c++ sample code.
-DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
-DocumentNormalizer* normalizer = new DocumentNormalizer();
-DDN_RuntimeSettings settings;
-int errorCode = normalizer->GetRuntimeSettings(&settings);
-settings->furtherModes.grayscaleTransformationModes[0] = GTM_INVERTED;
-settings->furtherModes.grayscaleTransformationModes[1] = GTM_ORIGINAL;
-char errorMessage[256];
-errorCode = normalizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
-delete normalizer;
-```
-

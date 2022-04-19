@@ -1,6 +1,6 @@
 ---
 title: Dynamsoft Document Normalizer - Programming
-keywords: programming, ddn, documentation
+keywords: programming, documentation
 description: Dynamsoft Document Normalizer - Programming
 ---
 

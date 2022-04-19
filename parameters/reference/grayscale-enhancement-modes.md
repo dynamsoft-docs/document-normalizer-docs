@@ -1,173 +1,130 @@
 ---
-title: Dynamsoft Document Normalizer Parameter Reference - GrayscaleEnhancementModes
-keywords: grayscaleenhancementmodes, parameters, reference, ddn, documentation
+layout: default-layout
+title: GrayscaleEnhancementModes
+keywords: GrayscaleEnhancementModes, parameters, reference, documentation
 description: Dynamsoft Document Normalizer Parameter Reference - GrayscaleEnhancementModes
-needGenerateH3Content: true
 ---
 
-
 # GrayscaleEnhancementModes
-Sets the mode array for the enhancing grayscale image before content normalization. 
 
-## Mode Properties
+This parameter provides some image processing methods to enhance the quality of the grayscale image. By default, the library does no preprocessing method. Assume your image has distorted features that can be solved by common image processing methods, this parameter may help set the processing mode(s) for getting a higher quality grayscale image.  
 
-### `GEM_GENERAL`
+It consisits of one or more modes, each mode is a way to implement the preprocessing algorithm.
+
+## Candidate Mode List
+
+- GEM_GENERAL
+- GEM_GRAY_EQUALIZE
+- GEM_GRAY_SMOOTH
+- GEM_SHARPEN_SMOOTH
+
+### GEM_GENERAL
+
 Takes the un-preprocessed grayscale image for following operations.
 
+### GEM_GRAY_EQUALIZE
 
-### `GEM_GRAY_EQUALIZE`
-Preprocesses the grayscale image using the gray equalization algorithm.
+Preprocesses the grayscale image using the gray equalization algorithm. This mode can be used for images with low contrast on barcode and background colour. This mode has the following arguments for further customizing.
 
-#### Valid Argument
-- [`Sensitivity`](#sensitivity)
+- [Sensitivity](#sensitivity)
 
+### GEM_GRAY_SMOOTH
 
-### `GEM_GRAY_SMOOTH`
-Preprocesses the grayscale image using the gray smoothing algorithm.
+Preprocesses the grayscale image using the gray smoothing algorithm. This mode can be used for for images with noise or texture. This mode has the following arguments for further customizing.
 
-#### Valid Argument
-- [`SmoothBlockSizeX`](#smoothblocksizex)
-- [`SmoothBlockSizeY`](#smoothblocksizey)
+- [SmoothBlockSizeX](#smoothblocksizex)
+- [SmoothBlockSizeY](#smoothblocksizey)
 
+### GEM_SHARPEN_SMOOTH
 
-### `GEM_SHARPEN_SMOOTH`
-Preprocesses the grayscale image using the sharpening and smoothing algorithm.
+Preprocesses the grayscale image using the sharpening and smoothing algorithm. This mode can be used for blur images. This mode has the following arguments for further customizing.
 
-#### Valid Argument
-- [`SharpenBlockSizeX`](#sharpenblocksizex)
-- [`SharpenBlockSizeY`](#sharpenblocksizey)
-- [`SmoothBlockSizeX`](#smoothblocksizex)
-- [`SmoothBlockSizeY`](#smoothblocksizey)
-
-
+- [SmoothBlockSizeX](#smoothblocksizex)
+- [SmoothBlockSizeY](#smoothblocksizey)
+- [SharpenBlockSizeX](#sharpenblocksizex)
+- [SharpenBlockSizeY](#sharpenblocksizey)
+    
 ## Setting Methods
-### As Json Parameter
 
-| Parent Json Object | Json Parameter Name | Value Type | 
+### As JSON Parameter
+
+`GrayscaleEnhancementModes` as a JSON parameter is a JSON Object array defined as below.
+
+| Parent Json Object | Key Name | Key Value |
 | ------------------ | ------------------- | ---------- |
-| DocumentNormalizerParameter | GrayscaleEnhancementModes | *JSON object array* |
+| ImageParameter | GrayscaleEnhancementModes | A JSON Object array while each Object is defined as below |
 
-**Default Setting**   
+| Key Name | Key Value | Description |
+| -------- | --------- | ----------- |
+| Mode | Any one in Candidate Mode List as string | (Required) Sets a preprocessing mode.  |
+| Sensitivity | A number from value range of Sensitivity | (Optional) Sets the Argument [Sensitivity](#sensitivity). |
+| SmoothBlockSizeX | A number from value range of SmoothBlockSizeX | (Optional) Sets the Argument [SmoothBlockSizeX](#smoothblocksizex). |
+| SmoothBlockSizeY | A number from value range of SmoothBlockSizeY | (Optional) Sets the Argument [SmoothBlockSizeY](#smoothblocksizey). |
+| SharpenBlockSizeX | A number from value range of SharpenBlockSizeX | (Optional) Sets the Argument [SmoothBlockSizeX](#sharpenblocksizex). |
+| SharpenBlockSizeY | A number from value range of SharpenBlockSizeY | (Optional) Sets the Argument [SmoothBlockSizeY](#sharpenblocksizey). |
+
+**JSON Parameter Example**
+
 ```json
 {
-    "GrayscaleEnhancementModes":[
-        {
-            "Mode": "GEM_GENERAL"
-        }
-    ],
+    "GrayscaleEnhancementModes": [
+        {
+            "Mode": "GEM_GRAY_SMOOTH", 
+            "SmoothBlockSizeX": 5,
+            "SmoothBlockSizeY": 5
+        },
+        {
+            "Mode": "GEM_GRAY_EQUALIZE", 
+            "Sensitivity": 1
+        }
+    ]
 }
 ```
 
-**Example**  
-```json
-{
-    "GrayscaleEnhancementModes": [
-    {
-        "Mode": "GEM_GRAY_EQUALIZE",
-        "Sensitivity": 5
-    },
-    {
-        "Mode": "GEM_SHARPEN_SMOOTH",
-        "SmoothBlockSizeX": 5, 
-        "SmoothBlockSizeY": 5, 
-        "SharpenBlockSizeX": 5, 
-        "SharpenBlockSizeY": 5
-    }
-    ],
-}
-```
+## Candidate Argument List
 
-### As Struct Member
-
-| Struct | Struct Member Name | Value Type | 
-| ------ | ------------------ | ---------- |
-| DDN_RuntimeSettings->furtherModes | grayscaleEnhancementModes | [`GrayscaleEnhancementMode`]({{ site.common_enumerations }}grayscale-enhancement-mode.html) array |
-
-**Value Range**    
-    Each array item can be any one of the [`GrayscaleEnhancementMode`]({{ site.common_enumerations }}grayscale-enhancement-mode.html) Enumeration items.
-
-**Default Value**   
-    [GEM_GENERAL,GEM_SKIP,GEM_SKIP,GEM_SKIP,GEM_SKIP,GEM_SKIP,GEM_SKIP,GEM_SKIP]
-
-**Code Snippet**  
-```cpp
-// This is a c++ sample code.
-DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
-DocumentNormalizer* normalizer = new DocumentNormalizer();
-DDN_RuntimeSettings settings;
-int errorCode = normalizer->GetRuntimeSettings(&settings);
-settings->furtherModes.grayscaleEnhancementModes[0] = GEM_GRAY_EQUALIZE;
-settings->furtherModes.grayscaleEnhancementModes[1] = GEM_SHARPEN_SMOOTH;
-char errorMessage[256];
-errorCode = normalizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
-delete normalizer;
-```
-
-
-## Arguments Reference
-- [`Sensitivity`](#sensitivity)
-- [`SharpenBlockSizeX`](#sharpenblocksizex)
-- [`SharpenBlockSizeY`](#sharpenblocksizey)
-- [`SmoothBlockSizeX`](#smoothblocksizex)
-- [`SmoothBlockSizeY`](#smoothblocksizey)
-
+- [Sensitivity](#sensitivity)
+- [SmoothBlockSizeX](#smoothblocksizex)
+- [SmoothBlockSizeY](#smoothblocksizey)
+- [SharpenBlockSizeX](#sharpenblocksizex)
+- [SharpenBlockSizeY](#sharpenblocksizey)
 
 ### Sensitivity
 
-| Argument Name| Valid for Mode(s) | Value Type|
-| ------------ | ----------------- | --------- |
-| Sensitivity | `GEM_GRAY_EQUALIZE` | *int* |
+Sets the sensitivity to perform the equalization process. A larger value means a higher possibility that gray equalization will be activated.
 
-**Value Range**    
-    [1, 9]
-
-**Default Value**   
-    5
-
-### SharpenBlockSizeX
-
-| Argument Name| Valid for Mode(s) | Value Type|
-| ------------ | ----------------- | --------- |
-| SharpenBlockSizeX | `GEM_SHARPEN_SMOOTH` | *int* |
-
-**Value Range**    
-    [3, 1000]
-
-**Default Value**   
-    3
-
-### SharpenBlockSizeY
-
-| Argument Name| Valid for Mode(s) | Value Type|
-| ------------ | ----------------- | --------- |
-| SharpenBlockSizeY | `GEM_SHARPEN_SMOOTH` | *int* |
-
-**Value Range**    
-    [3, 1000]
-
-**Default Value**   
-    3
+| Value Type | Value Range | Default Value | Valid For |
+| ---------- | ----------- | ------------- | --------- |
+| *int* | [1, 9] | 5 | GEM_GRAY_EQUALIZE |
 
 ### SmoothBlockSizeX
 
-| Argument Name| Valid for Mode(s) | Value Type|
-| ------------ | ----------------- | --------- |
-| SmoothBlockSizeX | `GEM_GRAY_SMOOTH`<br>`GEM_SHARPEN_SMOOTH` | *int* |
+Sets the horizontal block size(neighborhood pixel counts) for the smoothing process.
 
-**Value Range**    
-    [3, 1000]
-
-**Default Value**   
-    3
+| Value Type | Value Range | Default Value | Valid For |
+| ---------- | ----------- | ------------- | --------- |
+| *int* | [3, 1000] | 3 | GEM_GRAY_SMOOTH<br>GEM_SHARPEN_SMOOTH |
 
 ### SmoothBlockSizeY
 
-| Argument Name| Valid for Mode(s) | Value Type|
-| ------------ | ----------------- | --------- |
-| SmoothBlockSizeY | `GEM_GRAY_SMOOTH`<br>`GEM_SHARPEN_SMOOTH` | *int* |
+Sets the vertical block size(neighborhood pixel counts) for the smoothing process.
 
-**Value Range**    
-    [3, 1000]
+| Value Type | Value Range | Default Value | Valid For |
+| ---------- | ----------- | ------------- | --------- |
+| *int* | [3, 1000] | 3 | GEM_GRAY_SMOOTH<br>GEM_SHARPEN_SMOOT |
 
-**Default Value**   
-    3
+### SharpenBlockSizeX
+
+Sets the horizontal block size(neighborhood pixel counts) for the sharpening process.
+
+| Value Type | Value Range | Default Value |
+| ---------- | ----------- | ------------- |
+| *int* | [3, 1000] | 3 | GEM_SHARPEN_SMOOTH |
+
+### SharpenBlockSizeY
+
+Sets the vertical block size(neighborhood pixel counts) for the sharpening process.
+
+| Value Type | Value Range | Default Value | Valid For |
+| ---------- | ----------- | ------------- | --------- |
+| *int* | [3, 1000] | 3 | GEM_SHARPEN_SMOOTH |

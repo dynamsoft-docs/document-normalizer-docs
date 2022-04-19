@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Dynamsoft Document Normalizer - QuadrilateralDetectionMode Enumeration
-keywords: quadrilateraldetectionmode, enumerations, enums, ddn, documentation
+title: QuadrilateralDetectionMode Enumeration
+keywords: quadrilateraldetectionmode, enumerations, enums, documentation
 description: Dynamsoft Document Normalizer - QuadrilateralDetectionMode Enumeration
 ---
 
@@ -17,6 +17,5 @@ description: Dynamsoft Document Normalizer - QuadrilateralDetectionMode Enumerat
 
 | Member | Value | Description |
 | ------ | ----- | ----------- |
-| `QDM_SKIP_DETECTION` | 0x00 | Skips quadrilateral detection. |
-| `QDM_LINE_BASED_DETECTION` | 0x01 | Defines line-based quadrilateral detection. |
-| `QDM_MARGIN_BASED_DETECTION` | 0x02 | Defines margin-based quadrilateral detection. |
+| QDM_SKIP | 0x00 | Skips quadrilateral detection. |
+| QDM_GENERAL | 0x01 | Detects quadrilateral using the general algorithm. |

@@ -1,153 +1,124 @@
 ---
-title: Dynamsoft Document Normalizer Parameter Reference - ColourConversionModes
-keywords: colourconversionmodes, parameters, reference, ddn, documentation
+layout: default-layout
+title: ColourConversionModes
+keywords: ColourConversionModes, parameters, reference, documentation
 description: Dynamsoft Document Normalizer Parameter Reference - ColourConversionModes
-needGenerateH3Content: true
 ---
 
 # ColourConversionModes
-Sets the mode array for converting a colour image to a grayscale image.
 
+This parameter helps control the process of colour conversion, i.e., converting colour image to grayscale image. If you input a colour image, the library will convert it to the grayscale image first for further processes. By default, the conversion will base on the RGB channels with the default weights of three channels. This parameter allows you to specify the referred colour channel (RGB or HSV) and the weight of each channel during the colour conversion. Assume your image has a disgusting contrast of one colour channel between the barcode area and background, this parameter may help specify the appropriate settings for getting a higher quality grayscale image. 
 
-## Mode Properties
+It consisits of one or more modes, each mode represents a way to implement the convertion.
 
-### `CICM_GENERAL`
-Converts a colour image to a grayscale image using the general RGB converting algorithm.
+## Candidate Mode List
 
-#### Valid Argument
-- [`BlueChannelWeight`](#bluechannelweight)
-- [`GreenChannelWeight`](#greenchannelweight)
-- [`RedChannelWeight`](#redchannelweight)
+- CICM_GENERAL
+- CICM_HSV
 
+### CICM_GENERAL
 
-### `CICM_HSV`
-Converts a colour image to a grayscale image using one of the HSV channels.
+Converts a colour image to a grayscale image using the general RGB converting algorithm. This mode has the following arguments for further customizing.
 
-#### Valid Argument
-- [`ReferChannel`](#referchannel)
+- [BlueChannelWeight](#bluechannelweight)
+- [GreenChannelWeight](#greenchannelweight)
+- [RedChannelWeight](#redchannelweight)
+
+### CICM_HSV
+
+Converts a colour image to a grayscale image using one of the HSV channels. This mode has the following arguments for further customizing.
+
+- [ReferChannel](#referchannel)
 
 ## Setting Methods
-### As Json Parameter
 
-| Parent Json Object | Json Parameter Name | Value Type | 
+### As JSON Parameter
+
+`ColourConversionModes` as a JSON parameter is a JSON Object array defined as below.
+
+| Parent Json Object | Key Name | Key Value |
 | ------------------ | ------------------- | ---------- |
-| DocumentNormalizerParameter | ColourConversionModes | *JSON object array* |
+| ImageParameter | ColourConversionModes | A JSON Object array while each Object is defined as below |
 
-**Default Setting**   
+| Key Name | Key Value | Description |
+| -------- | --------- | ----------- |
+| Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for colour convertion.  |
+| BlueChannelWeight | A number from value range of BlueChannelWeight | (Optional) Sets the Argument [BlueChannelWeight](#bluechannelweight). |
+| GreenChannelWeight | A number from value range of GreenChannelWeight | (Optional) Sets the Argument [GreenChannelWeight](#greenchannelweight). |
+| RedChannelWeight | A number from value range of RedChannelWeight | (Optional) Sets the Argument [RedChannelWeight](#redchannelweight). |
+| ReferChannel | A string from value range of ReferChannel | (Optional) Sets the Argument [ReferChannel](#referchannel). |
+
+**JSON Parameter Example**
+
 ```json
 {
-    "ColourConversionModes":[
-        {
-            "Mode": "CICM_GENERAL"
-        }
-    ],
+    "ColourConversionModes": [
+        {
+            "Mode": "CICM_GENERAL", 
+            "BlueChannelWeight": 1000,
+            "GreenChannelWeight": 0,
+            "RedChannelWeight": 0
+        },
+        {
+            "Mode": "CICM_GENERAL", 
+            "BlueChannelWeight": 0,
+            "GreenChannelWeight": 500,
+            "RedChannelWeight": 500
+        }
+    ]
 }
 ```
 
-**Example**  
-```json
-{
-    "ColourConversionModes":[
-        {
-            "Mode": "CICM_GENERAL"
-        },
-        {
-            "Mode": "CICM_HSV",
-            "ReferChannel": "H_CHANNEL"
-        }
-    ],
-}
-```
+## Candidate Argument List
 
-### As Struct Member
-
-| Struct | Struct Member Name | Value Type | 
-| ------ | ------------------ | ---------- |
-| DDN_RuntimeSettings->furtherModes | colourConversionModes | [`ColourConversionMode`]({{ site.common_enumerations }}colour-conversion-mode.html) array |
-
-**Value Range**    
-    Each array item can be any one of the [`ColourConversionMode`]({{ site.common_enumerations }}colour-conversion-mode.html) Enumeration items.
-
-**Default Value**   
-    [CICM_GENERAL,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP,CICM_SKIP]
-
-**Code Snippet**  
-```cpp
-// This is a c++ sample code.
-DocumentNormalizer::InitLicense("t0260NwAAAHV***************");
-DocumentNormalizer* normalizer = new DocumentNormalizer();
-DDN_RuntimeSettings settings;
-int errorCode = normalizer->GetRuntimeSettings(&settings);
-settings->furtherModes.colourConversionModes[0] = CICM_GENERAL;
-settings->furtherModes.colourConversionModes[1] = CICM_HSV;
-char errorMessage[256];
-errorCode = normalizer->UpdateRuntimeSettings(&settings, errorMessage, 256);
-delete normalizer;
-```
-
-## Arguments Reference   
-- [`BlueChannelWeight`](#bluechannelweight)
-- [`GreenChannelWeight`](#greenchannelweight)
-- [`RedChannelWeight`](#redchannelweight)
-- [`ReferChannel`](#referchannel)
-
+- [BlueChannelWeight](#bluechannelweight)
+- [GreenChannelWeight](#greenchannelweight)
+- [RedChannelWeight](#redchannelweight)
+- [ReferChannel](#referchannel)
 
 ### BlueChannelWeight
 
-| Argument Name| Valid for Mode(s) | Value Type|
-| ------------ | ----------------- | --------- |
-| BlueChannelWeight | `CICM_GENERAL` | *int* |
+Sets the weight value of Blue Colour Channel used for converting a colour image to a grayscale image.
 
-**Value Range**    
-    [-1, 1000]
-
-**Default Value**   
-    -1
+| Value Type | Value Range | Default Value | Valid For |
+| ---------- | ----------- | ------------- | --------- |
+| *int* | [-1, 1000] | -1 | CICM_GENERAL |
 
 **Remarks**
--1: The weight value will be set automatically by the SDK.
+
+- -1: The weight value will be set automatically by the SDK.
+- -1 will be used if the sum of BlueChannelWeight, GreenChannelWeight and RedChannelWeight is not 1000.
 
 ### GreenChannelWeight
 
-| Argument Name| Valid for Mode(s) | Value Type|
-| ------------ | ----------------- | --------- |
-| GreenChannelWeight | `CICM_GENERAL` | *int* |
+Sets the weight value of Green Colour Channel used for converting a colour image to a grayscale image.
 
-**Value Range**    
-    [-1, 1000]
-
-**Default Value**   
-    -1
+| Value Type | Value Range | Default Value | Valid For |
+| ---------- | ----------- | ------------- | --------- |
+| *int* | [-1, 1000] | -1 | CICM_GENERAL |
 
 **Remarks**
--1: The weight value will be set automatically by the SDK.
+
+- -1: The weight value will be set automatically by the SDK.
+- -1 will be used if the sum of BlueChannelWeight, GreenChannelWeight and RedChannelWeight is not 1000.
 
 ### RedChannelWeight
 
-| Argument Name| Valid for Mode(s) | Value Type|
-| ------------ | ----------------- | --------- |
-| RedChannelWeight | `CICM_GENERAL` | *int* |
+Sets the weight value of Red Colour Channel used for converting a colour image to a grayscale image.
 
-**Value Range**    
-    [-1, 1000]
-
-**Default Value**   
-    -1
+| Value Type | Value Range | Default Value | Valid For |
+| ---------- | ----------- | ------------- | --------- |
+| *int* | [-1, 1000] | -1 | CICM_GENERAL |
 
 **Remarks**
--1: The weight value will be set automatically by the SDK.
+
+- -1: The weight value will be set automatically by the SDK.
+- -1 will be used if the sum of BlueChannelWeight, GreenChannelWeight and RedChannelWeight is not 1000.
 
 ### ReferChannel
 
-| Argument Name| Valid for Mode(s) | Value Type|
-| ------------ | ----------------- | --------- |
-| ReferChannel | `CICM_HSV` | *string* |
+Sets reference channel used for converting a colour image to a grayscale image by HSV algorithm.
 
-**Value Range**    
-    "H_CHANNEL"   
-    "S_CHANNEL"  
-    "V_CHANNEL"
-
-**Default Value**   
-    "H_CHANNEL" 
-
+| Value Type | Value Range | Default Value | Valid For |
+| ---------- | ----------- | ------------- | --------- |
+| *string* | "H_CHANNEL"<br>"S_CHANNEL"<br>"V_CHANNEL" | "H_CHANNEL" | CICM_HSV |

@@ -9,10 +9,12 @@ programming: /document-normalizer/programming/
 parameters: /document-normalizer/parameters/
 
 c: /document-normalizer/programming/c/
+c_api: /document-normalizer/programming/c/api-reference/
+c_release_notes: /document-normalizer/programming/c/release-notes/
+
 cpp: /document-normalizer/programming/cplusplus/
-c_cpp: /document-normalizer/programming/c-cplusplus/
-c_cpp_struct: /document-normalizer/programming/c-cplusplus/api-reference/struct/
-c_cpp_common_struct: /document-normalizer/programming/c-cplusplus/api-reference/struct/common/
+cpp_api: /document-normalizer/programming/cplusplus/api-reference/
+cpp_release_notes: /document-normalizer/programming/cplusplus/release-notes/
 
 ios: /document-normalizer/programming/ios/
 ios_api: /document-normalizer/programming/ios/api-reference/
@@ -23,7 +25,6 @@ android_api: /document-normalizer/programming/android/api-reference/
 android_release_notes: /document-normalizer/programming/android/release-notes/
 
 enumerations: /document-normalizer/parameters/enumerations/
-common_enumerations: /document-normalizer/parameters/enumerations/common/
 parameter_reference: /document-normalizer/parameters/reference/
 parameter_content_normalizer:  /document-normalizer/parameters/reference/document-normalizer-parameter/
 parameter_normalization_definition: /document-normalizer/parameters/reference/normalization-definition/
@@ -34,9 +35,6 @@ assets: /document-normalizer/assets/
 edit_icon: /document-normalizer/assets/img-icon/edit-icon.png
 smile_icon: /document-normalizer/assets/img-icon/icon-smile.png
 sad_icon: /document-normalizer/assets/img-icon/icon-sad.png
-dbr_icon: /document-normalizer/assets/img-icon/icon-dbr.svg
-dwt_icon: /document-normalizer/assets/img-icon/icon-dwt.svg
-dnt_icon: /document-normalizer/assets/img-icon/icon-dnt.svg
 
 baseurl: "/document-normalizer"
 
