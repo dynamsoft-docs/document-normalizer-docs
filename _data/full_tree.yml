@@ -1,6 +1,5 @@
 tree_file_list:
     - sidelist-full-tree.html
-    - sidelist-introduction.html
     - sidelist-parameters.html
     - sidelist-programming.html
     - sidelist-programming/programming-android.html

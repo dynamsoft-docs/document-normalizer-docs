@@ -2,7 +2,7 @@ repository: dynamsoft-docs/document-normalizer-docs
 repositoryUrl: https://github.com/dynamsoft-docs/document-normalizer-docs/blob/main
 docFullPath: https://www.dynamsoft.com/document-normalizer/
 firstLevelUrl: /document-normalizer
-docHomePage: /document-normalizer/introduction/
+docHomePage: /document-normalizer/programming/
 
 introduction: /document-normalizer/introduction/
 programming: /document-normalizer/programming/
