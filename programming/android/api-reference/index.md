@@ -40,7 +40,7 @@ class com.dynamsoft.ddn.DocumentNormalizer
   |----------------------|-------------|
   | [`detectQuad(buffer)`](document-normalizer-normalizing.md#detectquad(buffer)) | Detect quad from the memory buffer containing image pixels in defined format. |
   | [`detectQuad(file)`](document-normalizer-normalizing#detectquad(file)) | Detect quad from an image file. |
-  | [`detectQuad(bitmap)`](document-normalizer-normalizing#detectquad(bitmap)) | Detect quad from a bufferd image(bitmap). |
+  | [`detectQuad(bitmap)`](document-normalizer-normalizing#detectquad(bitmap)) | Detect quad from a buffered image(bitmap). |
   | [`normalize(buffer)`](document-normalizer-normalizing#normalize(buffer)) | Normalize image from the memory buffer containing image pixels in defined format. |
   | [`normalize(file)`](document-normalizer-normalizing#normalize(file)) | Normalize an image file. |
   | [`normalize(bitmap)`](document-normalizer-normalizing#normalize(bitmap)) | Normalize a buffered image(bitmap). |
