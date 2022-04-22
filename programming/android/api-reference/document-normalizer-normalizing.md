@@ -15,7 +15,7 @@ needGenerateH3Content: false
 |----------------------|-------------|
 | [`detectQuad(buffer)`](#detectquad(buffer)) | Detect quad from the memory buffer containing image pixels in defined format. |
 | [`detectQuad(file)`](#detectquad(file)) | Detect quad from an image file. |
-| [`detectQuad(bitmap)`](#detectquad(bitmap)) | Detect quad from a bufferd image(bitmap). |
+| [`detectQuad(bitmap)`](#detectquad(bitmap)) | Detect quad from a buffered image(bitmap). |
 | [`normalize(buffer)`](#normalize(buffer)) | Normalize image from the memory buffer containing image pixels in defined format. |
 | [`normalize(file)`](#normalize(file)) | Normalize an image file. |
 | [`normalize(bitmap)`](#normalize(bitmap)) | Normalize a buffered image(bitmap). |
@@ -139,7 +139,7 @@ try {
 
 ## detectQuad(bitmap)
 
-Decodes barcode from a buffered image (bitmap).
+Detect quad from a buffered image (bitmap).
 
 ```java
 DetectedQuadResult[] detectQuad(Bitmap bitmap) throws DocumentNormalizerException
@@ -183,11 +183,11 @@ NormalizedImageResult normalize(ImageData buffer, Quadrilateral quad) throws Doc
 **Parameters**
 
 `[in] buffer`: The memory buffer containing image pixels in defined format.
-`[in] quad`: The detected quad for nomalizing.
+`[in] quad`: The detected quad for normalizing.
 
 **Return Value**
 
-The normlized image result. Refer [`NormalizedImageResult`](normalized-image-result.md)
+The normalized image result. Refer [`NormalizedImageResult`](normalized-image-result.md)
 
 **Exceptions**
 
@@ -227,11 +227,11 @@ NormalizedImageResult normalize(String fileFullePath, Quadrilateral quad) throws
 **Parameters**
 
 `[in] fileFullPath`: A string defining the file path. It supports BMP, TIFF, JPG, PNG files.  
-`[in] quad`: The detected quad for nomalizing.
+`[in] quad`: The detected quad for normalizing.
 
 **Return Value**
 
-The normlized image result. Refer [`NormalizedImageResult`](normalized-image-result.md)
+The normalized image result. Refer [`NormalizedImageResult`](normalized-image-result.md)
 
 **Exceptions**
 
@@ -265,11 +265,11 @@ NormalizedImageResult normalize(Bitmap bitmap, Quadrilateral quad) throws Docume
 **Parameters**
 
 `[in] bitmap`: The android bitmap to be normalized.
-`[in] quad`: The detected quad for nomalizing.
+`[in] quad`: The detected quad for normalizing.
 
 **Return Value**
 
-The normlized image result. Refer [`NormalizedImageResult`](normalized-image-result.md)
+The normalized image result. Refer [`NormalizedImageResult`](normalized-image-result.md)
 
 **Exceptions**
 
