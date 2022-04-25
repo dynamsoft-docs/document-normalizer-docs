@@ -15,7 +15,7 @@ needGenerateH3Content: false
 |----------------------|-------------|
 | [`detectQuadFromBuffer`](#detectquadfrombuffer) | Detect quad from the memory buffer containing image pixels in defined format. |
 | [`detectQuadFromFile`](#detectquadfromfile) | Detect quad from an image file. |
-| [`detectQuadFromImage`](#detectquadfromimage) | Detect quad from a bufferd image(uiimage). |
+| [`detectQuadFromImage`](#detectquadfromimage) | Detect quad from a buffered image(uiimage). |
 | [`normalizeBuffer`](#normalizebuffer) | Normalize image from the memory buffer containing image pixels in defined format. |
 | [`normalizeFile`](#normalizefile) | Normalize an image file. |
 | [`normalizeImage`](#normalizeimage) | Normalize a buffered image(uiimage). |
@@ -170,7 +170,7 @@ let detectedResults = try? normalizer.detectQuadFromFile("your image file path")
 
 ## detectQuadFromImage
 
-Decodes barcode from a buffered image (UIImage).
+Detect quad from a buffered image (UIImage).
 
 ```objc
 -(NSArray<iDetectedQuadResult*>*) detectQuadFromImage(UIImage*)uiimage error:(NSError**)error;
@@ -216,12 +216,12 @@ Normalize image from the memory buffer containing image pixels in defined format
 **Parameters**
 
 `[in] buffer`: The memory buffer containing image pixels in defined format.
-`[in] quad`: The detected quad for nomalizing.
+`[in] quad`: The detected quad for normalizing.
 `[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
 
-The normlized image result. Refer [`iNormalizedImageResult`](normalized-image-result.md)
+The normalized image result. Refer [`iNormalizedImageResult`](normalized-image-result.md)
 
 There are several approaches for you to get a buffered image.
 
@@ -267,12 +267,12 @@ Normalize an image file.
 **Parameters**
 
 `[in] fileFullPath`: A string defining the file path. It supports BMP, TIFF, JPG, PNG files.  
-`[in] quad`: The detected quad for nomalizing.
+`[in] quad`: The detected quad for normalizing.
 `[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
 
-The normlized image result. Refer [`iNormalizedImageResult`](normalized-image-result.md)
+The normalized image result. Refer [`iNormalizedImageResult`](normalized-image-result.md)
 
 **Code Snippet**
 
@@ -309,12 +309,12 @@ Normalize a buffered image (UIImage).
 **Parameters**
 
 `[in] uiimage`: The ios UIImage to be normalized.
-`[in] quad`: The detected quad for nomalizing.
+`[in] quad`: The detected quad for normalizing.
 `[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
 
-The normlized image result. Refer [`iNormalizedImageResult`](normalized-image-result.md)
+The normalized image result. Refer [`iNormalizedImageResult`](normalized-image-result.md)
 
 **Code Snippet**
 

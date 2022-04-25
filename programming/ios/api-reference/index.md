@@ -40,7 +40,7 @@ This is the main class of Dynamsoft Document Normalizer(DDN) SDK. It supports qu
 |----------------------|-------------|
 | [`detectQuadFromBuffer`](document-normalizer-normalizing.md#detectquadfrombuffer) | Detect quad from the memory buffer containing image pixels in defined format. |
 | [`detectQuadFromFile`](document-normalizer-normalizing.md#detectquadfromfile) | Detect quad from an image file. |
-| [`detectQuadFromImage`](document-normalizer-normalizing.md#detectquadfromimage) | Detect quad from a bufferd image(uiimage). |
+| [`detectQuadFromImage`](document-normalizer-normalizing.md#detectquadfromimage) | Detect quad from a buffered image(uiimage). |
 | [`normalizeBuffer`](document-normalizer-normalizing.md#normalizebuffer) | Normalize image from the memory buffer containing image pixels in defined format. |
 | [`normalizeFile`](document-normalizer-normalizing.md#normalizefile) | Normalize an image file. |
 | [`normalizeImage`](document-normalizer-normalizing.md#normalizeimage) | Normalize a buffered image(uiimage). |
