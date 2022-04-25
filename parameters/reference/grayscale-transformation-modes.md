@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - GrayscaleTransf
 
 # GrayscaleTransformationModes
 
-This parameter helps control the colour mode of the grayscale image. By default, the library can only locate the dark barcodes that stand on a light background. Assume your image has different features to default, this parameter may help configure the appropriate settings for your case.  
+This parameter helps control the colour mode of the grayscale image.
 
 It consisits of one or more modes, each mode represents a way to transform the grayscale image.
 
@@ -33,7 +33,7 @@ Let the library choose an algorithm automatically for grayscale transformation.
 
 ### As JSON Parameter
 
-`BinarizationModes` as a JSON parameter is a JSON Object array defined as below.
+`GrayscaleTransformationModes` as a JSON parameter is a JSON Object array defined as below.
 
 | Parent Json Object | Key Name | Key Value |
 | ------------------ | ------------------- | ---------- |
@@ -43,8 +43,21 @@ Let the library choose an algorithm automatically for grayscale transformation.
 | -------- | --------- | ----------- |
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for grayscale transformation.  |
 
-**JSON Parameter Example**   
+**Default Value**
+
+```json
+{
+    "GrayscaleTransformationModes":[
+        {
+            "Mode": "GTM_ORIGINAL"
+        }
+    ]
+}
 ```
+
+**JSON Parameter Example**
+
+```json
 {
     "GrayscaleTransformationModes": [
         {

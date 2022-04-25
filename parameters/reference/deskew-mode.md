@@ -40,7 +40,7 @@ Deskew the document by applying perspective correction process. This mode has th
 {
     "DeskewMode": {
         "Mode": "DM_PERSPECTIVE_CORRECTION", 
-        "ContentDirection": 5
+        "ContentDirection": 0
     }
 }
 ```

@@ -38,6 +38,21 @@ Filters text using the general algorithm based on contour. This mode has the fol
 | MinImageDimension | A number from value range of MinImageDimension | (Optional) Sets the Argument [MinImageDimension](#minimagedimension). |
 | Sensitivity | A number from value range of Sensitivity | (Optional) Sets the Argument [Sensitivity](#sensitivity). |
 
+**Default Value**
+
+```json
+{
+    "TextFilterModes": [
+        {
+            "Mode": "TFM_GENERAL_CONTOUR", 
+            "IfEraseTextZone": 0,
+            "MinImageDimension": 65536,
+            "Sensitivity": 0
+        }
+    ]
+}
+```
+
 **JSON Parameter Example**
 
 ```json

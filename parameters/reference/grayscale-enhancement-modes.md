@@ -24,7 +24,7 @@ Takes the un-preprocessed grayscale image for following operations.
 
 ### GEM_GRAY_EQUALIZE
 
-Preprocesses the grayscale image using the gray equalization algorithm. This mode can be used for images with low contrast on barcode and background colour. This mode has the following arguments for further customizing.
+Preprocesses the grayscale image using the gray equalization algorithm. This mode can be used for images with low contrast on content and background colour. This mode has the following arguments for further customizing.
 
 - [Sensitivity](#sensitivity)
 
@@ -62,6 +62,18 @@ Preprocesses the grayscale image using the sharpening and smoothing algorithm. T
 | SmoothBlockSizeY | A number from value range of SmoothBlockSizeY | (Optional) Sets the Argument [SmoothBlockSizeY](#smoothblocksizey). |
 | SharpenBlockSizeX | A number from value range of SharpenBlockSizeX | (Optional) Sets the Argument [SmoothBlockSizeX](#sharpenblocksizex). |
 | SharpenBlockSizeY | A number from value range of SharpenBlockSizeY | (Optional) Sets the Argument [SmoothBlockSizeY](#sharpenblocksizey). |
+
+**Default Value**
+
+```json
+{
+    "GrayscaleEnhancementModes": [
+        {
+            "Mode": "GEM_GENERAL" 
+        }
+    ]
+}
+```
 
 **JSON Parameter Example**
 

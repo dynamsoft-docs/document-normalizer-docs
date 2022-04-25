@@ -34,6 +34,19 @@ Detects texture using the general algorithm. This mode has the following argumen
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for text filtering.  |
 | Sensitivity | A number from value range of Sensitivity | (Optional) Sets the Argument [Sensitivity](#sensitivity). |
 
+**Default Value**
+
+```json
+{
+    "TextureDetectionModes":[
+        {
+            "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION",
+            "Sensitivity": 5
+        }
+    ]
+}
+```
+
 **JSON Parameter Example**
 
 ```json
@@ -41,7 +54,11 @@ Detects texture using the general algorithm. This mode has the following argumen
     "TextureDetectionModes": [
         {
             "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION", 
-            "Sensitivity": 5
+            "Sensitivity": 1
+        },
+        {
+            "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION", 
+            "Sensitivity": 9
         }
     ]
 }

@@ -38,6 +38,18 @@ Extracts lines based on margin.
 | -------- | --------- | ----------- |
 | Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for line extraction.  |
 
+**Default Value**
+
+```json
+{
+    "LineExtractionModes": [
+        {
+            "Mode": "LEM_GENERAL" 
+        }
+    ]
+}
+```
+
 **JSON Parameter Example**
 
 ```json

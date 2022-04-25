@@ -37,7 +37,7 @@ Detects quadrilateral using the general algorithm.
 {
     "QuadrilateralDetectionModes": [
         {
-            "Mode": "QDM_GENERAL", 
+            "Mode": "QDM_GENERAL"
         }
     ]
 }

@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - ColourConversio
 
 # ColourConversionModes
 
-This parameter helps control the process of colour conversion, i.e., converting colour image to grayscale image. If you input a colour image, the library will convert it to the grayscale image first for further processes. By default, the conversion will base on the RGB channels with the default weights of three channels. This parameter allows you to specify the referred colour channel (RGB or HSV) and the weight of each channel during the colour conversion. Assume your image has a disgusting contrast of one colour channel between the barcode area and background, this parameter may help specify the appropriate settings for getting a higher quality grayscale image. 
+This parameter helps control the process of colour conversion, i.e., converting colour image to grayscale image. If you input a colour image, the library will convert it to the grayscale image first for further processes. By default, the conversion will base on the RGB channels with the default weights of three channels. This parameter allows you to specify the referred colour channel (RGB or HSV) and the weight of each channel during the colour conversion. Assume your image has a disgusting contrast of one colour channel between the content area and background, this parameter may help specify the appropriate settings for getting a higher quality grayscale image.
 
 It consisits of one or more modes, each mode represents a way to implement the convertion.
 
@@ -47,6 +47,21 @@ Converts a colour image to a grayscale image using one of the HSV channels. This
 | GreenChannelWeight | A number from value range of GreenChannelWeight | (Optional) Sets the Argument [GreenChannelWeight](#greenchannelweight). |
 | RedChannelWeight | A number from value range of RedChannelWeight | (Optional) Sets the Argument [RedChannelWeight](#redchannelweight). |
 | ReferChannel | A string from value range of ReferChannel | (Optional) Sets the Argument [ReferChannel](#referchannel). |
+
+**Default Value**
+
+```json
+{
+    "ColourConversionModes":[
+        {
+            "Mode": "CICM_GENERAL",
+            "BlueChannelWeight": -1,
+            "GreenChannelWeight": -1,
+            "RedChannelWeight": -1
+        }
+    ]
+}
+```
 
 **JSON Parameter Example**
 

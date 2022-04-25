@@ -19,6 +19,10 @@ description: Dynamsoft Document Normalizer Parameter Reference - Timeout
 | ------------------ | -------- | -------------- | ----------- | ------------- |
 | ImageParameter | Timeout | *int* | [0, 0x7fffffff] | 10000 |
 
+**Remarks**
+
+- 0: no limitation on the time cost.
+
 **Example**
 
 ```json

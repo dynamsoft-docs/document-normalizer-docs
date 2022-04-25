@@ -23,6 +23,7 @@ description: Dynamsoft Document Normalizer - Parameter Reference
 | [`MaxThreadCount`](max-thread-count.md)
 | [`PageSize`](page-size.md)
 | [`QuadrilateralDetectionModes`](quadrilateral-detection-modes.md)
+| [`RegionPredetectionModes`](region-predetection-modes.md)
 | [`ScaleDownThreshold`](scale-down-threshold.md)
 | [`TextFilterModes`](text-filter-modes.md)
 | [`TextureDetectionModes`](texture-detection-modes.md)
