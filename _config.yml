@@ -1,42 +1,40 @@
 repository: dynamsoft-docs/document-normalizer-docs
 repositoryUrl: https://github.com/dynamsoft-docs/document-normalizer-docs/blob/main
-docFullPath: https://www.dynamsoft.com/document-normalizer/
-firstLevelUrl: /document-normalizer
-docHomePage: /document-normalizer/programming/
+docFullPath: https://www.dynamsoft.com/document-normalizer/docs
+firstLevelUrl: /document-normalizer/docs
+docHomePage: /document-normalizer/docs/programming/
 
-introduction: /document-normalizer/introduction/
-programming: /document-normalizer/programming/
-parameters: /document-normalizer/parameters/
+introduction: /document-normalizer/docs/introduction/
+programming: /document-normalizer/docs/programming/
+parameters: /document-normalizer/docs/parameters/
 
-c: /document-normalizer/programming/c/
-c_api: /document-normalizer/programming/c/api-reference/
-c_release_notes: /document-normalizer/programming/c/release-notes/
+c: /document-normalizer/docs/programming/c/
+c_api: /document-normalizer/docs/programming/c/api-reference/
+c_release_notes: /document-normalizer/docs/programming/c/release-notes/
 
-cpp: /document-normalizer/programming/cplusplus/
-cpp_api: /document-normalizer/programming/cplusplus/api-reference/
-cpp_release_notes: /document-normalizer/programming/cplusplus/release-notes/
+cpp: /document-normalizer/docs/programming/cplusplus/
+cpp_api: /document-normalizer/docs/programming/cplusplus/api-reference/
+cpp_release_notes: /document-normalizer/docs/programming/cplusplus/release-notes/
 
-ios: /document-normalizer/programming/ios/
-ios_api: /document-normalizer/programming/ios/api-reference/
-ios_release_notes: /document-normalizer/programming/ios/release-notes/
+ios: /document-normalizer/docs/programming/ios/
+ios_api: /document-normalizer/docs/programming/ios/api-reference/
+ios_release_notes: /document-normalizer/docs/programming/ios/release-notes/
 
-android: /document-normalizer/programming/android/
-android_api: /document-normalizer/programming/android/api-reference/
-android_release_notes: /document-normalizer/programming/android/release-notes/
+android: /document-normalizer/docs/programming/android/
+android_api: /document-normalizer/docs/programming/android/api-reference/
+android_release_notes: /document-normalizer/docs/programming/android/release-notes/
 
-enumerations: /document-normalizer/parameters/enumerations/
-parameter_reference: /document-normalizer/parameters/reference/
-parameter_content_normalizer:  /document-normalizer/parameters/reference/document-normalizer-parameter/
-parameter_normalization_definition: /document-normalizer/parameters/reference/normalization-definition/
+enumerations: /document-normalizer/docs/parameters/enumerations/
+parameter_reference: /document-normalizer/docs/parameters/reference/
 
 useVersionTree: true
 
-assets: /document-normalizer/assets/
-edit_icon: /document-normalizer/assets/img-icon/edit-icon.png
-smile_icon: /document-normalizer/assets/img-icon/icon-smile.png
-sad_icon: /document-normalizer/assets/img-icon/icon-sad.png
+assets: /document-normalizer/docs/assets/
+edit_icon: /document-normalizer/docs/assets/img-icon/edit-icon.png
+smile_icon: /document-normalizer/docs/assets/img-icon/icon-smile.png
+sad_icon: /document-normalizer/docs/assets/img-icon/icon-sad.png
 
-baseurl: "/document-normalizer"
+baseurl: "/document-normalizer/docs"
 
 plugins:
   - jemoji

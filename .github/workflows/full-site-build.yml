@@ -47,5 +47,5 @@ jobs:
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
           local-dir: /home/ubuntu/DDNDocPreview/_site/
-          server-dir: /www.dynamsoft.com/document-normalizer/
+          server-dir: /www.dynamsoft.com/document-normalizer/docs/
 

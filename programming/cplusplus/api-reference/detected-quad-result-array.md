@@ -44,4 +44,4 @@ int GetDetectedQuadResult(int index, CDetectedQuadResult** result)
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
-*You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
+*You can call [`GetErrorString`](document-normalizer-general.md#geterrorstring) to get detailed error message.*

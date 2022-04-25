@@ -16,8 +16,8 @@ class dynamsoft::ddn::CDocumentNormalizer
 | [`CDocumentNormalizer`](document-normalizer-init.md#cdocumentnormalizer) | Constructor of `CDocumentNormalizer` class.|
 | [`~CDocumentNormalizer`](document-normalizer-init.md#cdocumentnormalizer-1) | Destructor of `CDocumentNormalizer` class.|
 | [`DetectQuad`](document-normalizer-normalizing.md#detectquad) | Detects quad from source image. |
-| [`FreeNormalizedImageResult`](document-normalizer-result.md#freenormalizedimageresult) | Releases memory allocated for CNormalizedImageResult. |
 | [`FreeDetectedQuadResultArray`](document-normalizer-result.md#freedetectedquadresultarray) | Releases memory allocated for CDetectedQuadResultArray. |
+| [`FreeNormalizedImageResult`](document-normalizer-result.md#freenormalizedimageresult) | Releases memory allocated for CNormalizedImageResult. |
 | [`FreeString`](document-normalizer-result.md#freestring) | Releases memory allocated for a string. |
 | [`GetErrorString`](document-normalizer-general.md#geterrorstring) | Returns the corresponding error message of the input error code. |
 | [`GetVersion`](document-normalizer-general.md#getversion) | Returns the version info string of the SDK. |

@@ -23,15 +23,15 @@ keywords: CDocumentNormalizer, api reference, C++
 
 ## Enumerations
 
-- [`BinarizationMode`]({{ site.enumerations }}parameter-mode-enums.html#binarizationmode)
-- [`ColourConversionMode`]({{ site.enumerations }}parameter-mode-enums.html#colourconversionmode)
-- [`GrayscaleEnhancementMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaleenhancementmode)
-- [`GrayscaleTransformationMode`]({{ site.enumerations }}parameter-mode-enums.html#grayscaletransformationmode)
-- [`ImagePixelFormat`]({{ site.enumerations }}other-enums.html#imagepixelformat)
-- [`LineExtractionMode`]({{ site.enumerations }}parameter-mode-enums.html#lineextractionmode)
-- [`RegionPredetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#regionpredetectionmode)
-- [`TextFilterMode`]({{ site.enumerations }}parameter-mode-enums.html#textfiltermode)
-- [`TextureDetectionMode`]({{ site.enumerations }}parameter-mode-enums.html#texturedetectionmode)
+- [`BinarizationMode`]({{ site.enumerations }}binarization-mode.html)
+- [`ColourConversionMode`]({{ site.enumerations }}colour-conversion-mode.html)
+- [`GrayscaleEnhancementMode`]({{ site.enumerations }}grayscale-enhancement-mode.html)
+- [`GrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html)
+- [`ImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html)
+- [`LineExtractionMode`]({{ site.enumerations }}line-extraction-mode.html)
+- [`RegionPredetectionMode`]({{ site.enumerations }}region-predetection-mode.html)
+- [`TextFilterMode`]({{ site.enumerations }}text-filter-mode.html)
+- [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html)
 
 ## Others
 

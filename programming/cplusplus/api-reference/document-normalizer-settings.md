@@ -19,7 +19,7 @@ keywords: InitRuntimeSettingsFromFile, InitRuntimeSettingsFromString, OutputRunt
 Initializes runtime settings with the settings in a given JSON file.
 
 ```cpp
-int dynamsoft::ddn::CDocumentNormalizer::InitRuntimeSettingsWithFile(const char* pFilePath, char errorMsgBuffer[] = NULL, int errorMsgBufferLen = 0)
+int dynamsoft::ddn::CDocumentNormalizer::InitRuntimeSettingsFromFile(const char* pFilePath, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```
 
 **Parameters**  
@@ -37,7 +37,7 @@ Returns error code (returns 0 if the function operates successfully).
 Initializes runtime settings with the settings in a given JSON string.
 
 ```cpp
-int dynamsoft::ddn::CDocumentNormalizer::InitRuntimeSettingsWithString(const char* content, char errorMsgBuffer[] = NULL, int errorMsgBufferLen = 0)
+int dynamsoft::ddn::CDocumentNormalizer::InitRuntimeSettingsFromString(const char* content, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```
 
 **Parameters**  
@@ -65,7 +65,7 @@ int dynamsoft::ddn::CDocumentNormalizer::OutputRuntimeSettingsToFile(const char*
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
-*You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
+*You can call [`GetErrorString`](document-normalizer-general.md#geterrorstring) to get detailed error message.*
 
 ## OutputRuntimeSettingsToString
 
@@ -82,4 +82,4 @@ int dynamsoft::ddn::CDocumentNormalizer::OutputRuntimeSettingsToString(const cha
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
-*You can call [`GetErrorString`](status-retrieval.md#geterrorstring) to get detailed error message.*
+*You can call [`GetErrorString`](document-normalizer-general.md#geterrorstring) to get detailed error message.*

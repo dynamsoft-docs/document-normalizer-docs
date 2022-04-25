@@ -1,7 +1,7 @@
 ---
-title: Dynamsoft Document Normalizer - C++
+title: Dynamsoft Document Normalizer Documentation - C++
 keywords: c++, cplusplus, documentation
-description: Dynamsoft Document Normalizer - C++
+description: Dynamsoft Document Normalizer - C++ Documentation
 needAutoGenerateSidebar: false
 ---
 
