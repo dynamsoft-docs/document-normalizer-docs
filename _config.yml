@@ -25,7 +25,7 @@ android_api: /document-normalizer/docs/programming/android/api-reference/
 android_release_notes: /document-normalizer/docs/programming/android/release-notes/
 
 enumerations: /document-normalizer/docs/parameters/enumerations/
-parameter_reference: /document-normalizer/docs/parameters/reference/
+parameters_reference: /document-normalizer/docs/parameters/reference/
 
 useVersionTree: true
 
