@@ -12,9 +12,11 @@ description: Dynamsoft Document Normalizer - TextureDetectionMode Enumeration
 | Language | Declaration |
 | -------- | ----------- |
 | C/C++ | `enum TextureDetectionMode` |
+| Android | `class com.dynamsoft.core.EnumTextureDetectionMode` |
+| ObjC / Swift | `enum EnumTextureDetectionMode` |
 
 ## Members
 
-| Member | Value | Description | Valid Arguments |
-| ------ | ----- | ----------- | --------------- |
-| TDM_GENERAL_WIDTH_CONCENTRATION | 0x02 | Detects texture using the general algorithm. | [`Sensitivity`]({{ site.parameters_reference }}texture-detection-modes.html#sensitivity) |
+| Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
+| -------------------------- | ------------------- | ----- | ----------- | ----------------- |
+| TDM_GENERAL_WIDTH_CONCENTRATION  | EnumTextureDetectionModeGeneralWidthConcentration | 0x02 | Detects texture using the general algorithm. | [`Sensitivity`]({{ site.parameters_reference }}texture-detection-modes.html#sensitivity) |
