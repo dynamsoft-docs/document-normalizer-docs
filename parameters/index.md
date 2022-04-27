@@ -13,5 +13,5 @@ description: Dynamsoft Document Normalizer - Parameters
 
 ## Reference
 
-- [Reference of Parameters]({{ site.parameter_reference }})
+- [Reference of Parameters]({{ site.parameters_reference }})
 - [Reference of Enumerations]({{ site.enumerations }})

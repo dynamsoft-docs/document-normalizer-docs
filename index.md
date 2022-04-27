@@ -10,8 +10,12 @@ description: Documentation Homepage
 # Documentation HomePage
 
 - [Programming]({{ site.programming }})
-    - [C]({{ site.c }})
-    - [C++]({{ site.cpp }})
-    
+  - [Android]({{ site.android }})
+  - [iOS]({{ site.ios }})
+  - [C]({{ site.c }})
+  - [C++]({{ site.cpp }})
+
 - [Parameters]({{ site.parameters }})
-    - [Reference]({{ site.parameter_reference }})
+  - [Parameter Organization Structure]({{ site.parameters }}parameter-organization-structure.html)
+  - [Reference of Parameters]({{ site.parameters_reference }})
+  - [Reference of Enumerations]({{ site.enumerations }})
