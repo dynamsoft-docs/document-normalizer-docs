@@ -17,7 +17,6 @@ description: Dynamsoft Document Normalizer - RegionPredetectionMode Enumeration
 
 | Member | Value | Description | Valid Arguments |
 | ------ | ----- | ----------- | --------------- |
-| RPM_SKIP | 0x00 | Skips region detection. | `N/A` |
 | RPM_AUTO | 0x01 | Lets the library choose an algorithm automatically to detect region. | `N/A` |
 | RPM_GENERAL | 0x02 | Takes the whole image as a region. | `N/A` |
 | RPM_GENERAL_RGB_CONTRAST | 0x04 | Detects region using the general algorithm based on RGB colour contrast. | [`ImageParameterName`]({{ site.parameters_reference }}region-predetection-modes.html#imageparametername)<br>[`MinImageDimension`]({{ site.parameters_reference }}region-predetection-modes.html#minimagedimension)<br>[`Sensitivity`]({{ site.parameters_reference }}region-predetection-modes.html#sensitivity)<br>[`RelativeRegions`]({{ site.parameters_reference }}region-predetection-modes.html#relativeregions)<br>[`SpatialIndexBlockSize`]({{ site.parameters_reference }}region-predetection-modes.html#spatialindexblocksize) |

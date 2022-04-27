@@ -29,8 +29,10 @@ keywords: error code, enumeration
   | `DMERR_JSON_NAME_VALUE_DUPLICATED`     | -10035 | The value of the key "Name" is duplicated. |
   | `DMERR_TEMPLATE_NAME_INVALID`          | -10036 | The template name is invalid. |
   | `DMERR_PARAMETER_VALUE_INVALID`        | -10038 | The parameter value is invalid or out of range. |
-  | `DMERR_FILE_SAVE_FAILED`               | -10059 | Failed to request the license file. |
-  | `DMERR_STAGE_TYPE_INVALID`             | -10060 | Failed to request the license file. |
+  | `DDN_CONTENT_NOT_FOUND`                | -10056 | No content has been detected. |
+  | `DDN_QUADRILATERAL_INVALID`            | -10057 | The quadrilateral is invalid. |
+  | `DMERR_FILE_SAVE_FAILED`               | -10059 | Failed to save the file. |
+  | `DMERR_STAGE_TYPE_INVALID`             | -10060 | The stage type is invalid. |
   | `DMERR_NO_LICENSE`                     | -20000 | No license specified. |
   | `DMERR_HANDSHAKE_CODE_INVALID`         | -20001 | The handshake code is invalid. |
   | `DMERR_LICENSE_BUFFER_FAILED`          | -20002 | Failed to read or write license buffer. |

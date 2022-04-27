@@ -17,8 +17,6 @@ description: Dynamsoft Document Normalizer - GrayscaleEnhancementMode Enumeratio
 
 | Member | Value | Description | Valid Arguments |
 | ------ | ----- | ----------- | --------------- |
-| GEM_SKIP | 0x00 | Skips grayscale image enhancement. | `N/A` |
-| GEM_AUTO | 0x01 | **Not supported yet.** | `N/A` |
 | GEM_GENERAL | 0x02 | Takes the un-preprocessed grayscale image for following operations. | `N/A` |
 | GEM_GRAY_EQUALIZE | 0x04 | Preprocesses the grayscale image using the gray equalization algorithm. | [`Sensitivity`]({{ site.parameters_reference }}grayscale-enhancement-modes.html#sensitivity) |
 | GEM_GRAY_SMOOTH | 0x08 | Preprocesses the grayscale image using the gray smoothing algorithm. | [`SmoothBlockSizeX`]({{ site.parameters_reference }}grayscale-enhancement-modes.html#smoothblocksizex)<br>[`SmoothBlockSizeY`]({{ site.parameters_reference }}grayscale-enhancement-modes.html#smoothblocksizey) |
