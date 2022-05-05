@@ -9,7 +9,9 @@ keywords: CDocumentNormalizer, api reference, C++
 
 ## Global Functions
 
+- [`DC_GetQuadrilateralArea`](document-normalizer-general.md#dc_getquadrilateralarea)
 - [`DC_InitLicense`](document-normalizer-init.md#dc_initlicense)
+- [`DC_IsPointInQuadrilateral`](document-normalizer-general.md#dc_ispointinquadrilateral)
 - [`DDN_CreateInstance`](document-normalizer-init.md#ddn_createinstance)
 - [`DDN_DestroyInstance`](document-normalizer-init.md#ddn_destroyinstance)
 - [`DDN_DetectQuadFromFile`](document-normalizer-normalizing.md#ddn_detectquadfromfile)
@@ -31,9 +33,9 @@ keywords: CDocumentNormalizer, api reference, C++
 
 - [`DetectedQuadResult`](detected-quad-result.md)
 - [`DetectedQuadResultArray`](detected-quad-result-array.md)
+- [`DM_Point`](point.md)
 - [`ImageData`](image-data.md)
 - [`NormalizedImageResult`](normalized-image-result.md)
-- [`DM_Point`](point.md)
 - [`Quadrilateral`](quadrilateral.md)
 
 ## Enumerations

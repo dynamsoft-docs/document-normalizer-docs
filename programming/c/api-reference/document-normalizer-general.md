@@ -9,8 +9,50 @@ keywords: DDN_GetErrorString, DDN_GetVersion, CDocumentNormalizer, api reference
 
 | Method               | Description |
 |----------------------|-------------|
+| [`DC_GetQuadrilateralArea`](#dc_getquadrilateralarea) | Returns the area of the quadrilateral. |
+| [`DC_IsPointInQuadrilateral`](#dc_ispointinquadrilateral) | Returns whether the point is in the quadrilateral. |
 | [`DDN_GetErrorString`](#ddn_geterrorstring) | Returns the corresponding error message of the input error code. |
 | [`DDN_GetVersion`](#ddn_getversion) | Returns the version info string of the Dynamsoft Document Normalizer SDK. |
+
+## DC_GetQuadrilateralArea
+
+Returns the area of the quadrilateral.
+
+```c
+int DC_GetQuadrilateralArea(const Quadrilateral* quad)
+```
+
+**Parameters**
+`[in] quad` The quadrilateral to get area.
+
+**Return Value**
+The area of the quadrilateral.
+
+**See Also**
+[`Quadrilateral`](quadrilateral.md)
+
+## DC_IsPointInQuadrilateral
+
+Returns whether the point is in the quadrilateral.
+
+```c
+int DC_IsPointInQuadrilateral(const DM_Point* point, const Quadrilateral* quad)
+```
+
+**Parameters**
+`[in] point` The point.
+
+`[in] quad` The quadrilateral.
+
+**Return Value**
+
+- 0: the point is not in the quadrilateral.
+- 1: the point is in the quadrilateral.
+
+**See Also**
+[`DM_Point`](point.md)
+
+[`Quadrilateral`](quadrilateral.md)
 
 ## DDN_GetErrorString
 

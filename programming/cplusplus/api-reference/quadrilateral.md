@@ -18,6 +18,11 @@ class dynamsoft::core::CQuadrilateral
 |---------- | ---- |
 | [`points`](#points) | *CPoint[4]* |
 
+| Method | Description |
+|--------|-------------|
+| [`GetArea`](#getarea) | Returns the area of the quadrilateral. |
+| [`IsPointInQuadrilateral`](#ispointinquadrilateral) | Returns whether the point is in the quadrilateral. |
+
 ## points
 
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex.
@@ -25,3 +30,31 @@ Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents th
 ```c++
 CPoint points[4]
 ```
+
+## GetArea
+
+Returns the area of the quadrilateral.
+
+```c++
+int GetArea()
+```
+
+**Return Value**
+The area of the quadrilateral.
+
+## IsPointInQuadrilateral
+
+Returns whether the point is in the quadrilateral.
+
+```c
+bool IsPointInQuadrilateral(const CPoint* point)
+```
+
+**Parameters**
+`[in] point` The point.
+
+**Return Value**
+A boolean value representing whether the point is in the quadrilateral.
+
+**See Also**
+[`CPoint`](point.md)

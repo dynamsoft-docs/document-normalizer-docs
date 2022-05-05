@@ -30,7 +30,7 @@ int dynamsoft::ddn::CDocumentNormalizer::DetectQuad(const CImageData* sourceImag
 
 `[in] templateName` The template name. A template name is the value of key ImageParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
-`[out] result` An array of all detected quad results. It is allocated by the SDK and should be freed by calling function [FreeDetectedQuadResultArray](document-normalizer-result.md#freedetectedquadresultarray).
+`[out] result` An array of all detected quad results. It is allocated by the SDK and should be freed by calling function [`FreeDetectedQuadResultArray`](document-normalizer-result.md#freedetectedquadresultarray).
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
@@ -56,7 +56,7 @@ int dynamsoft::ddn::CDocumentNormalizer::Normalize( const CImageData* sourceImag
 
 `[in] quad` The quadrilateral representing the boundary of the content to be normalized.
 
-`[out] result` The normalized image result. It is allocated by the SDK and should be freed by calling function [FreeNormalizedImageResult](document-normalizer-result.md#freenormalizedimageresult).
+`[out] result` The normalized image result. It is allocated by the SDK and should be freed by calling function [`FreeNormalizedImageResult`](document-normalizer-result.md#freenormalizedimageresult).
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
