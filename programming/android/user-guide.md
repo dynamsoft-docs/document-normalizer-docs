@@ -74,11 +74,7 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
 
-<div class="fold-panel-prefix"></div>
-
-#### Remote Binary Dependency <i class="fa fa-caret-down"></i>
-
-<div class="fold-panel-start"></div>
+#### Remote Binary Dependency
 
 1. Open the file `HelloWorld\app\build.gradle` and add the remote repository:
 
@@ -103,8 +99,6 @@ There are two ways to include the SDK into your project - local binary dependenc
    ```
 
 3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
-
-<div class="fold-panel-end"></div>
 
 ### MainActivity for Realtime Detection of Quads
 
