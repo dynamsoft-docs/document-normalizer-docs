@@ -22,18 +22,35 @@ Detects quad from source image specified by the raw buffer.
 int DDN_DetectQuadFromBuffer(void* normalizer, const ImageData* sourceImage, const char* templateName, DetectedQuadResultArray** result)
 ```
 
-**Parameters**  
+**Parameters**
 `[in] normalizer` Handle of the Dynamsoft Document Normalizer instance.
 
 `[in] sourceImage` The source image buffer.
 
 `[in] templateName` The template name. A template name is the value of key ImageParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
-`[out] result` An array of all detected quad results. It is allocated by the SDK and should be freed by calling function [DDN_FreeDetectedQuadResultArray](document-normalizer-result.md#ddn_freedetectedquadresultarray).
+`[out] result` An array of all detected quad results. It is allocated by the SDK and should be freed by calling function [`DDN_FreeDetectedQuadResultArray`](document-normalizer-result.md#ddn_freedetectedquadresultarray).
 
-**Return Value**  
+**Return Value**
 Returns error code (returns 0 if the function operates successfully).
 *You can call [`DDN_GetErrorString`](document-normalizer-general.md#ddn_geterrorstring) to get detailed error message.*
+
+**Code Snippet**
+
+```c
+void* ddn = NULL;
+int errorCode = 0;
+char szErrorMsg[256];
+DetectedQuadResultArray* detectedQuadResultArray = NULL;
+errorCode = DC_InitLicense("DLS2eyJ****", szErrorMsg, 256);
+//...handle the errorCode
+ddn = DDN_CreateInstance();
+//generate imageData from somewhere else
+errorCode = DDN_DetectQuadFromBuffer(ddn, imageData, "", &detectedQuadResultArray);
+//do something with the detectedQuadResultArray
+DDN_FreeDetectedQuadResultArray(&detectedQuadResultArray);
+DDN_DestroyInstance(ddn);
+```
 
 ## DDN_DetectQuadFromFile
 
@@ -50,11 +67,27 @@ int DDN_DetectQuadFromFile(void* normalizer, const char* sourceFilePath, const c
 
 `[in] templateName` The template name. A template name is the value of key ImageParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
-`[out] result` An array of all detected quad results. It is allocated by the SDK and should be freed by calling function [DDN_FreeDetectedQuadResultArray](document-normalizer-result.md#ddn_freedetectedquadresultarray).
+`[out] result` An array of all detected quad results. It is allocated by the SDK and should be freed by calling function [`DDN_FreeDetectedQuadResultArray`](document-normalizer-result.md#ddn_freedetectedquadresultarray).
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
 *You can call [`DDN_GetErrorString`](document-normalizer-general.md#ddn_geterrorstring) to get detailed error message.*
+
+**Code Snippet**
+
+```c
+void* ddn = NULL;
+int errorCode = 0;
+char szErrorMsg[256];
+DetectedQuadResultArray* detectedQuadResultArray = NULL;
+errorCode = DC_InitLicense("DLS2eyJ****", szErrorMsg, 256);
+//...handle the errorCode
+ddn = DDN_CreateInstance();
+errorCode = DDN_DetectQuadFromFile(ddn, "YOUR-SOURCE-FILE-PATH", "", &detectedQuadResultArray);
+//do something with the detectedQuadResultArray
+DDN_FreeDetectedQuadResultArray(&detectedQuadResultArray);
+DDN_DestroyInstance(ddn);
+```
 
 ## DDN_NormalizeBuffer
 
@@ -73,11 +106,28 @@ int DDN_NormalizeBuffer(void* normalizer, const ImageData* sourceImage, const ch
 
 `[in] quad` The quadrilateral representing the boundary of the content to be normalized.
 
-`[out] result` The normalized image result. It is allocated by the SDK and should be freed by calling function [DDN_FreeNormalizedImageResult](document-normalizer-result.md#ddn_freenormalizedimageresult).
+`[out] result` The normalized image result. It is allocated by the SDK and should be freed by calling function [`DDN_FreeNormalizedImageResult`](document-normalizer-result.md#ddn_freenormalizedimageresult).
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
 *You can call [`DDN_GetErrorString`](document-normalizer-general.md#ddn_geterrorstring) to get detailed error message.*
+
+**Code Snippet**
+
+```c
+void* ddn = NULL;
+int errorCode = 0;
+char szErrorMsg[256];
+NormalizedImageResult* normalizedResult = NULL;
+errorCode = DC_InitLicense("DLS2eyJ****", szErrorMsg, 256);
+//...handle the errorCode
+ddn = DDN_CreateInstance();
+//generate imageData from somewhere else
+errorCode = DDN_NormalizeBuffer(ddn, imageData, "", &normalizedResult);
+//do something with the normalizedResult
+DDN_FreeNormalizedImageResult(&normalizedResult);
+DDN_DestroyInstance(ddn);
+```
 
 ## DDN_NormalizeFile
 
@@ -96,8 +146,24 @@ int DDN_NormalizeFile(void* normalizer, const char* sourceFilePath, const char* 
 
 `[in] quad` The quadrilateral representing the boundary of the content to be normalized.
 
-`[out] result` The normalized image result. It is allocated by the SDK and should be freed by calling function [DDN_FreeNormalizedImageResult](document-normalizer-result.md#ddn_freenormalizedimageresult).
+`[out] result` The normalized image result. It is allocated by the SDK and should be freed by calling function [`DDN_FreeNormalizedImageResult`](document-normalizer-result.md#ddn_freenormalizedimageresult).
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
 *You can call [`DDN_GetErrorString`](document-normalizer-general.md#ddn_geterrorstring) to get detailed error message.*
+
+**Code Snippet**
+
+```c
+void* ddn = NULL;
+int errorCode = 0;
+char szErrorMsg[256];
+NormalizedImageResult* normalizedResult = NULL;
+errorCode = DC_InitLicense("DLS2eyJ****", szErrorMsg, 256);
+//...handle the errorCode
+ddn = DDN_CreateInstance();
+errorCode = DDN_NormalizeFile(ddn, "YOUR-SOURCE-FILE-PATH", "", &normalizedResult);
+//...do something with the normalizedResult and errorCode
+DDN_FreeNormalizedImageResult(&normalizedResult);
+DDN_DestroyInstance(ddn);
+```
