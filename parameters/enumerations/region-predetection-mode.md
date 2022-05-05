@@ -19,7 +19,6 @@ description: Dynamsoft Document Normalizer - RegionPredetectionMode Enumeration
 
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description | Valid Argument(s) |
 | -------------------------- | ------------------- | ----- | ----------- | ----------------- |
-| RPM_SKIP | EnumRegionPredetectionModeSkip| 0x00 | Skips region detection. | `N/A` |
 | RPM_AUTO | EnumRegionPredetectionModeAuto| 0x01 | Lets the library choose an algorithm automatically to detect region. | `N/A` |
 | RPM_GENERAL | EnumRegionPredetectionModeGeneral| 0x02 | Takes the whole image as a region. | `N/A` |
 | RPM_GENERAL_RGB_CONTRAST | EnumRegionPredetectionModeGeneralRGBContrast| 0x04 | Detects region using the general algorithm based on RGB colour contrast. | [`ImageParameterName`]({{ site.parameters_reference }}region-predetection-modes.html#imageparametername)<br>[`MinImageDimension`]({{ site.parameters_reference }}region-predetection-modes.html#minimagedimension)<br>[`Sensitivity`]({{ site.parameters_reference }}region-predetection-modes.html#sensitivity)<br>[`RelativeRegions`]({{ site.parameters_reference }}region-predetection-modes.html#relativeregions)<br>[`SpatialIndexBlockSize`]({{ site.parameters_reference }}region-predetection-modes.html#spatialindexblocksize) |

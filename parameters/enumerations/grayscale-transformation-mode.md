@@ -19,7 +19,6 @@ description: Dynamsoft Document Normalizer - GrayscaleTransformationMode Enumera
 
 | Member (except ObjC/Swift) | Member (ObjC/Swift) | Value | Description |
 | ------ | ------ | ----- | ----------- |
-| GTM_SKIP | EnumGrayscaleTransformationModeSkip| 0x00 | Skips grayscale transformation. |
 | GTM_INVERTED | EnumGrayscaleTransformationModeInverted| 0x01 | Transforms to inverted grayscale. Recommended for light on dark images. |
 | GTM_ORIGINAL | EnumGrayscaleTransformationModeOriginal| 0x02 | Keeps the original grayscale. Recommended for dark on light images. |
 | GTM_AUTO | EnumGrayscaleTransformationModeAuto| 0x04 | Let the library choose an algorithm automatically for grayscale transformation. |

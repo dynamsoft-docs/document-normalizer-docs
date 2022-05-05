@@ -17,5 +17,4 @@ description: Dynamsoft Document Normalizer - QuadrilateralDetectionMode Enumerat
 
 | Member | Value | Description |
 | ------ | ----- | ----------- |
-| QDM_SKIP | 0x00 | Skips quadrilateral detection. |
 | QDM_GENERAL | 0x01 | Detects quadrilateral using the general algorithm. |

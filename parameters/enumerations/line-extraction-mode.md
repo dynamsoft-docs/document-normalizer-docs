@@ -17,6 +17,5 @@ description: Dynamsoft Document Normalizer - LineExtractionMode Enumeration
 
 | Member | Value | Description |
 | ------ | ----- | ----------- |
-| LEM_SKIP | 0x00 | Skips. |
 | LEM_GENERAL | 0x01 | Extracts lines using the general algorithm. |
 | LEM_MARGIN_BASED | 0x02 | Extracts lines based on margin. |
