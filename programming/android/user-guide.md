@@ -20,17 +20,17 @@ noTitleIndex: true
 
 ## Installation
 
-You can download the Dynamsoft Document Normalizer (DDN) SDK from the <a href="https://www.dynamsoft.com/barcode-reader/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> if you don't have the SDK installed yet.
+You can download the Dynamsoft Document Normalizer (DDN) SDK from the <a href="https://www.dynamsoft.com/document-normalizer/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> if you don't have the SDK installed yet.
 
-After unzipping, the root directory of the DDN installation package is **DynamsoftDocumentNormalizer** (the `[INSTALLATION FOLDER]`). You can find the following two **aar** files under the **[INSTALLATION FOLDER]\Lib** directory:
+After unzipping, the root directory of the DDN installation package is **DynamsoftDocumentNormalizer** (the `[INSTALLATION FOLDER]`). You can find the following **aar** files under the **[INSTALLATION FOLDER]\Lib** directory:
 
 | File | Description |
 |---------|-------------|
-| `DynamsoftCameraEnhancer.aar` | The Dynamsoft Camera Enhancer SDK, including camera control and frame preprocessing APIs.  |
 | `DynamsoftDocumentNormalizer.aar` | The Dynamsoft Document Normalizer SDK, including document normalizer related APIs. |
 | `DynamsoftCore.aar` | The core library of Dynamsoft's data capture SDKs, including common basic structure and license related APIs. |
 | `DynamsoftIntermediateResult.aar` | The common intermediate result library of Dynamsoft's data capture SDKs, including all intermediate results produced in the process of decoding a barcode, recognizing a label or normalizing a document. |
 | `DynamsoftImageProcessing.aar` | The image processing library of Dynamsoft's data capture SDKs, including image processing algorithms and APIs. |
+| `DynamsoftCameraEnhancer.aar` | The Dynamsoft Camera Enhancer SDK, including camera control and frame preprocessing APIs.  |
 
 ## Build Your First Application
 
@@ -106,7 +106,7 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 <div class="fold-panel-end"></div>
 
-### Part 1. MainActivity for Realtime Detecting Quads
+### MainActivity for Realtime Detection of Quads
 
 #### Initialize License
 
@@ -159,6 +159,7 @@ There are two ways to include the SDK into your project - local binary dependenc
 
    ```java
    ...
+   
    import com.dynamsoft.dce.DCECameraView;
    import com.dynamsoft.dce.CameraEnhancer;
    import com.dynamsoft.dce.CameraEnhancerException;
@@ -184,15 +185,20 @@ There are two ways to include the SDK into your project - local binary dependenc
 1. Import and initialize the dynamsoft document normalizer, bind to the created Camera Enhancer instance.
 
    ```java
+   ...
+
    import com.dynamsoft.ddn.DocumentNormalizer;
    import com.dynamsoft.ddn.DocumentNormalizerException;
 
    public class MainActivity extends AppCompatActivity {
+      
+      ...
+
       public static DocumentNormalizer mNormalizer;
 
       @Override
       protected void onCreate(Bundle savedInstanceState) { 
-
+         
          ...
 
          try {
@@ -282,24 +288,26 @@ There are two ways to include the SDK into your project - local binary dependenc
 1. In the Project window, open **app > res > layout > `activity_main.xml`**, create a button under the root node to capture the quads detected on the image.
 
    ```xml
-    <Button
-        android:id="@+id/btn_capture"
-        android:layout_width="130dp"
-        android:layout_height="50dp"
-        android:layout_marginBottom="8dp"
-        android:onClick="onCaptureBtnClick"
-        android:text="Capture"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent" />
+   ...
+
+   <Button
+      android:id="@+id/btn_capture"
+      android:layout_width="130dp"
+      android:layout_height="50dp"
+      android:layout_marginBottom="8dp"
+      android:onClick="onCaptureBtnClick"
+      android:text="Capture"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.5"
+      app:layout_constraintStart_toStartOf="parent" />
    ```
 
 2. Set the flag to start quad edit activity. If the flag is set to true, the activity will be launched in the `detectResultCallback` function.
 
    ```java
-
    public class MainActivity extends AppCompatActivity {
+      
       ...
 
       private boolean ifNeedToQuadEdit;
@@ -312,11 +320,13 @@ There are two ways to include the SDK into your project - local binary dependenc
    }
    ```
 
-### Part 2. QuadEditActivity for Interactive Editing of Quads
+### QuadEditActivity for Interactive Editing of Quads
 
 #### Initialize the Image Editor View
 
-1. In the Project window, open **app > res > layout > `activity_quad_edit.xml`** and create a DCE image editor view section under the root node.
+1. Create a new empty activity named `QuadEditActivity`.
+
+2. In the Project window, open **app > res > layout > `activity_quad_edit.xml`** and create a DCE image editor view section under the root node.
 
     ```xml
     <com.dynamsoft.dce.DCEImageEditorView
@@ -331,7 +341,7 @@ There are two ways to include the SDK into your project - local binary dependenc
 
     ```
 
-2. Import and initialize the dynamsoft image editor view in the file `QuadEditActivity.java`.
+3. Import and initialize the dynamsoft image editor view in the file `QuadEditActivity.java`.
 
    ```java
    import java.util.ArrayList;
@@ -363,11 +373,15 @@ There are two ways to include the SDK into your project - local binary dependenc
    }
    ```
 
+4. Now you are free to edit your selected quad on the UI.
+
 #### Normalize With the Selected Quad
 
 1. In the Project window, open **app > res > layout > `activity_quad_edit.xml`**, create a button under the root node to normalize the image with the selected quad.
 
    ```xml
+   ...
+
     <Button
         android:id="@+id/btn_normalize"
         android:layout_width="130dp"
@@ -412,11 +426,13 @@ There are two ways to include the SDK into your project - local binary dependenc
    }
    ```
 
-### Part 3. ResultActivity for Displaying the Normalized Image
+### ResultActivity for Displaying the Normalized Image
 
 #### Diplay the Normalized Image
 
-1. In the Project window, open **app > res > layout > `activity_result.xml`**, create a image view under the root node to display the result image.
+1. Create a new empty activity named `ResultActivity`.
+
+2. In the Project window, open **app > res > layout > `activity_result.xml`**, create a image view under the root node to display the result image.
 
    ```xml
    <ImageView
@@ -425,7 +441,7 @@ There are two ways to include the SDK into your project - local binary dependenc
       android:layout_height="match_parent"/>
    ```
 
-2. Display the normalized image.
+3. Display the normalized image.
 
    ```java
    import com.dynamsoft.core.CoreException;
