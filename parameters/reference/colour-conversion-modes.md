@@ -55,9 +55,9 @@ Converts a colour image to a grayscale image using one of the HSV channels. This
     "ColourConversionModes":[
         {
             "Mode": "CICM_GENERAL",
-            "BlueChannelWeight": -1,
-            "GreenChannelWeight": -1,
-            "RedChannelWeight": -1
+            "BlueChannelWeight": -1,
+            "GreenChannelWeight": -1,
+            "RedChannelWeight": -1
         }
     ]
 }
@@ -67,20 +67,20 @@ Converts a colour image to a grayscale image using one of the HSV channels. This
 
 ```json
 {
-    "ColourConversionModes": [
-        {
-            "Mode": "CICM_GENERAL", 
-            "BlueChannelWeight": 1000,
-            "GreenChannelWeight": 0,
-            "RedChannelWeight": 0
-        },
-        {
-            "Mode": "CICM_GENERAL", 
-            "BlueChannelWeight": 0,
-            "GreenChannelWeight": 500,
-            "RedChannelWeight": 500
-        }
-    ]
+    "ColourConversionModes": [
+        {
+            "Mode": "CICM_GENERAL", 
+            "BlueChannelWeight": 1000,
+            "GreenChannelWeight": 0,
+            "RedChannelWeight": 0
+        },
+        {
+            "Mode": "CICM_GENERAL", 
+            "BlueChannelWeight": 0,
+            "GreenChannelWeight": 500,
+            "RedChannelWeight": 500
+        }
+    ]
 }
 ```
 

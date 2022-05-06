@@ -67,11 +67,11 @@ Preprocesses the grayscale image using the sharpening and smoothing algorithm. T
 
 ```json
 {
-    "GrayscaleEnhancementModes": [
-        {
-            "Mode": "GEM_GENERAL" 
-        }
-    ]
+    "GrayscaleEnhancementModes": [
+        {
+            "Mode": "GEM_GENERAL" 
+        }
+    ]
 }
 ```
 
@@ -79,17 +79,17 @@ Preprocesses the grayscale image using the sharpening and smoothing algorithm. T
 
 ```json
 {
-    "GrayscaleEnhancementModes": [
-        {
-            "Mode": "GEM_GRAY_SMOOTH", 
-            "SmoothBlockSizeX": 5,
-            "SmoothBlockSizeY": 5
-        },
-        {
-            "Mode": "GEM_GRAY_EQUALIZE", 
-            "Sensitivity": 1
-        }
-    ]
+    "GrayscaleEnhancementModes": [
+        {
+            "Mode": "GEM_GRAY_SMOOTH", 
+            "SmoothBlockSizeX": 5,
+            "SmoothBlockSizeY": 5
+        },
+        {
+            "Mode": "GEM_GRAY_EQUALIZE", 
+            "Sensitivity": 1
+        }
+    ]
 }
 ```
 

@@ -59,13 +59,13 @@ Let the library choose an algorithm automatically for grayscale transformation.
 
 ```json
 {
-    "GrayscaleTransformationModes": [
-        {
-            "Mode": "GTM_ORIGINAL"
-        },
-        {
-            "Mode": "GTM_INVERTED" 
-        }
-    ]
+    "GrayscaleTransformationModes": [
+        {
+            "Mode": "GTM_ORIGINAL"
+        },
+        {
+            "Mode": "GTM_INVERTED" 
+        }
+    ]
 }
 ```
