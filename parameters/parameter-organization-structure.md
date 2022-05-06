@@ -26,7 +26,7 @@ A GlobalParameter object contains following keys:
 | Key Name | Key Value | Description |
 | -------- | --------- | ----------- |
 | Name | (Required) A string value which specifies the name of current GlobalParameter object. |
-| MaxTotalImageDimension | | (Optional) Sets the parameter [MaxTotalImageDimension](reference/max-total-image-dimension.md). |
+| MaxTotalImageDimension | (Optional) Sets the parameter [MaxTotalImageDimension](reference/max-total-image-dimension.md). |
 
 ### ImageParameter Object
 
