@@ -387,9 +387,8 @@ In the section, we will add code to get the user selected quadrilateral and norm
 
 ### Build and Run the Project
 
-1. Select device
-
-2. Run
+1. Select the device that you want to run your app on.
+2. Run the project, then your app will be installed on your device.
 
 > Note:
 >
