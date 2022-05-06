@@ -77,6 +77,8 @@ You can add your downloaded frameworks into your project through the following s
 
 ### Main ViewController for Realtime Detection of Quads
 
+In the main view controller, your app will scan documents via video streaming and display the detect quadrilateral area on the screen.
+
 #### Initialize License
 
 1. Initialize the license first. It is suggested to initialize the license in `AppDelegate` file.
