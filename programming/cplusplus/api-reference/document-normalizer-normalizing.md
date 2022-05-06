@@ -34,7 +34,23 @@ int dynamsoft::ddn::CDocumentNormalizer::DetectQuad(const CImageData* sourceImag
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
-*You can call [`GetErrorString`](document-normalizer-general.md#geterrorstring) to get detailed error message.*
+*You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
+
+**Code Snippet**
+
+```cpp
+int errorCode = 0;
+char szErrorMsg[256];
+errorCode = CLicenseManager::InitLicense("YOUR-LICENSE-KEY", szErrorMsg, 256);
+//...handle the errorCode
+CDocumentNormalizer ddn;
+CDetectedQuadResultArray* detectedQuadResultArray = NULL;
+errorCode = ddn.DetectQuad("YOUR-SOURCE-FILE-PATH", "", &detectedQuadResultArray);
+//generate imageData from somewhere else
+//errorCode = ddn.DetectQuad(imageData, "", &detectedQuadResultArray);
+//...do something with the detectedQuadResultArray and errorCode
+CDocumentNormalizer::FreeDetectedQuadResultArray(&detectedQuadResultArray);
+```
 
 ## Normalize
 
@@ -60,4 +76,20 @@ int dynamsoft::ddn::CDocumentNormalizer::Normalize( const CImageData* sourceImag
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
-*You can call [`GetErrorString`](document-normalizer-general.md#geterrorstring) to get detailed error message.*
+*You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
+
+**Code Snippet**
+
+```cpp
+int errorCode = 0;
+char szErrorMsg[256];
+errorCode = CLicenseManager::InitLicense("YOUR-LICENSE-KEY", szErrorMsg, 256);
+//...handle the errorCode
+CDocumentNormalizer ddn;
+CNormalizedImageResult* normalizedResult = NULL;
+errorCode = ddn.Normalize("YOUR-SOURCE-FILE-PATH", "", NULL, &normalizedResult);
+//generate imageData from somewhere else
+//errorCode = ddn.Normalize(imageData, "", NULL, &normalizedResult);
+//...do something with the normalizedResult and errorCode
+CDocumentNormalizer::FreeNormalizedImageResult(&normalizedResult);
+```

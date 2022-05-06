@@ -2,16 +2,16 @@
 layout: default-layout
 title: General Methods
 description: This page shows General Methods of Dynamsoft Document Normalizer SDK C Edition.
-keywords: DDN_GetErrorString, DDN_GetVersion, CDocumentNormalizer, api reference, c
+keywords: DC_GetErrorString, DDN_GetVersion, CDocumentNormalizer, api reference, c
 ---
 
 # General Methods
 
 | Method               | Description |
 |----------------------|-------------|
+| [`DC_GetErrorString`](#dc_geterrorstring) | Returns the corresponding error message of the input error code. |
 | [`DC_GetQuadrilateralArea`](#dc_getquadrilateralarea) | Returns the area of the quadrilateral. |
 | [`DC_IsPointInQuadrilateral`](#dc_ispointinquadrilateral) | Returns whether the point is in the quadrilateral. |
-| [`DDN_GetErrorString`](#ddn_geterrorstring) | Returns the corresponding error message of the input error code. |
 | [`DDN_GetVersion`](#ddn_getversion) | Returns the version info string of the Dynamsoft Document Normalizer SDK. |
 
 ## DC_GetQuadrilateralArea
@@ -54,12 +54,12 @@ int DC_IsPointInQuadrilateral(const DM_Point* point, const Quadrilateral* quad)
 
 [`Quadrilateral`](quadrilateral.md)
 
-## DDN_GetErrorString
+## DC_GetErrorString
 
 Returns the corresponding error message of the input error code.
 
 ```c
-const char* DDN_GetErrorString(const int errorCode)
+const char* DC_GetErrorString(const int errorCode)
 ```
 
 **Parameters**  
@@ -67,6 +67,19 @@ const char* DDN_GetErrorString(const int errorCode)
 
 **Return Value**  
 The error message.
+
+**Code Snippet**
+
+```c
+int errorCode = 0;
+void* ddn = NULL;
+NormalizedImageResult* normalizedResult = NULL;
+ddn = DDN_CreateInstance();
+errorCode = DDN_NormalizeFile(ddn, "YOUR-SOURCE-FILE-PATH", "", NULL, &normalizedResult);
+if (errorCode != DM_OK)
+    const char* errorString = DC_GetErrorString(errorCode);
+    //...do something with the errorString
+```
 
 ## DDN_GetVersion
 
@@ -78,3 +91,9 @@ const char* DDN_GetVersion()
 
 **Return Value**  
 The version information string.
+
+**Code Snippet**
+
+```c
+const char* versionInfo = DDN_GetVersion();
+```

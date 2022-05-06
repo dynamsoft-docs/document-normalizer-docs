@@ -25,6 +25,18 @@ void DDN_FreeDetectedQuadResultArray(DetectedQuadResultArray** results)
 **Parameters**  
 `[in] results` An array of all detected quad results that needs to be released.
 
+**Code Snippet**
+
+```c
+DetectedQuadResultArray* detectedQuadResultArray = NULL;
+void* ddn = DDN_CreateInstance();
+DDN_DetectQuadFromFile(ddn, "YOUR-SOURCE-FILE-PATH", "", &detectedQuadResultArray);
+//...do something with the detectedQuadResultArray
+if (detectedQuadResultArray != NULL)
+    DDN_FreeDetectedQuadResultArray(&detectedQuadResultArray);
+DDN_DestroyInstance(ddn);
+```
+
 ## DDN_FreeNormalizedImageResult
 
 Releases memory allocated for NormalizedImageResult.
@@ -36,6 +48,18 @@ void DDN_FreeNormalizedImageResult(NormalizedImageResult** result)
 **Parameters**  
 `[in] result` The normalized image result that needs to be released.
 
+**Code Snippet**
+
+```c
+NormalizedImageResult* normalizedResult = NULL;
+void* ddn = DDN_CreateInstance();
+DDN_NormalizeFile(ddn, "YOUR-SOURCE-FILE-PATH", "", NULL, &normalizedResult);
+//...do something with the normalizedResult
+if (normalizedResult != NULL)
+    DDN_FreeNormalizedImageResult(&normalizedResult);
+DDN_DestroyInstance(ddn);
+```
+
 ## DDN_FreeString
 
 Releases memory allocated for a string.
@@ -46,6 +70,18 @@ void DDN_FreeString(char** content)
 
 **Parameters**  
 `[in] content` The string that needs to be released.
+
+**Code Snippet**
+
+```c
+void* ddn = DDN_CreateInstance();
+char* content = NULL;
+DDN_OutputRuntimeSettingsToString(ddn, "", &content);
+//...do something with the content
+if (content != NULL)
+    DDN_FreeString(&content);
+DDN_DestroyInstance(ddn);
+```
 
 ## DDN_SaveImageDataToFile
 
@@ -59,3 +95,15 @@ int DDN_SaveImageDataToFile(const ImageData* imageData, const char* filePath)
 `[in] imageData` The image data that needs to be saved.
 
 `[in] filePath` The path of the output image with the extension specified image format.
+
+```c
+NormalizedImageResult* normalizedResult = NULL;
+void* ddn = DDN_CreateInstance();
+DDN_NormalizeFile(ddn, "YOUR-SOURCE-FILE-PATH", "", NULL, &normalizedResult);
+if (normalizedResult != NULL)
+{
+    DDN_SaveImageDataToFile(normalizedResult->image, "YOUR-TARGET-FILE-PATH");
+    DDN_FreeNormalizedImageResult(&normalizedResult);
+}
+DDN_DestroyInstance(ddn);
+```

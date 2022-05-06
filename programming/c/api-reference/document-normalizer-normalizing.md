@@ -33,7 +33,7 @@ int DDN_DetectQuadFromBuffer(void* normalizer, const ImageData* sourceImage, con
 
 **Return Value**
 Returns error code (returns 0 if the function operates successfully).
-*You can call [`DDN_GetErrorString`](document-normalizer-general.md#ddn_geterrorstring) to get detailed error message.*
+*You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
 
 **Code Snippet**
 
@@ -42,12 +42,12 @@ void* ddn = NULL;
 int errorCode = 0;
 char szErrorMsg[256];
 DetectedQuadResultArray* detectedQuadResultArray = NULL;
-errorCode = DC_InitLicense("DLS2eyJ****", szErrorMsg, 256);
+errorCode = DC_InitLicense("YOUR-LICENSE-KEY", szErrorMsg, 256);
 //...handle the errorCode
 ddn = DDN_CreateInstance();
-//generate imageData from somewhere else
+//...generate imageData from somewhere else
 errorCode = DDN_DetectQuadFromBuffer(ddn, imageData, "", &detectedQuadResultArray);
-//do something with the detectedQuadResultArray
+//...do something with the detectedQuadResultArray
 DDN_FreeDetectedQuadResultArray(&detectedQuadResultArray);
 DDN_DestroyInstance(ddn);
 ```
@@ -71,7 +71,7 @@ int DDN_DetectQuadFromFile(void* normalizer, const char* sourceFilePath, const c
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
-*You can call [`DDN_GetErrorString`](document-normalizer-general.md#ddn_geterrorstring) to get detailed error message.*
+*You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
 
 **Code Snippet**
 
@@ -80,11 +80,11 @@ void* ddn = NULL;
 int errorCode = 0;
 char szErrorMsg[256];
 DetectedQuadResultArray* detectedQuadResultArray = NULL;
-errorCode = DC_InitLicense("DLS2eyJ****", szErrorMsg, 256);
+errorCode = DC_InitLicense("YOUR-LICENSE-KEY", szErrorMsg, 256);
 //...handle the errorCode
 ddn = DDN_CreateInstance();
 errorCode = DDN_DetectQuadFromFile(ddn, "YOUR-SOURCE-FILE-PATH", "", &detectedQuadResultArray);
-//do something with the detectedQuadResultArray
+//...do something with the detectedQuadResultArray
 DDN_FreeDetectedQuadResultArray(&detectedQuadResultArray);
 DDN_DestroyInstance(ddn);
 ```
@@ -110,7 +110,7 @@ int DDN_NormalizeBuffer(void* normalizer, const ImageData* sourceImage, const ch
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
-*You can call [`DDN_GetErrorString`](document-normalizer-general.md#ddn_geterrorstring) to get detailed error message.*
+*You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
 
 **Code Snippet**
 
@@ -119,12 +119,12 @@ void* ddn = NULL;
 int errorCode = 0;
 char szErrorMsg[256];
 NormalizedImageResult* normalizedResult = NULL;
-errorCode = DC_InitLicense("DLS2eyJ****", szErrorMsg, 256);
+errorCode = DC_InitLicense("YOUR-LICENSE-KEY", szErrorMsg, 256);
 //...handle the errorCode
 ddn = DDN_CreateInstance();
-//generate imageData from somewhere else
-errorCode = DDN_NormalizeBuffer(ddn, imageData, "", &normalizedResult);
-//do something with the normalizedResult
+//...generate imageData from somewhere else
+errorCode = DDN_NormalizeBuffer(ddn, imageData, "", NULL, &normalizedResult);
+//...do something with the normalizedResult
 DDN_FreeNormalizedImageResult(&normalizedResult);
 DDN_DestroyInstance(ddn);
 ```
@@ -150,7 +150,7 @@ int DDN_NormalizeFile(void* normalizer, const char* sourceFilePath, const char* 
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
-*You can call [`DDN_GetErrorString`](document-normalizer-general.md#ddn_geterrorstring) to get detailed error message.*
+*You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
 
 **Code Snippet**
 
@@ -159,10 +159,10 @@ void* ddn = NULL;
 int errorCode = 0;
 char szErrorMsg[256];
 NormalizedImageResult* normalizedResult = NULL;
-errorCode = DC_InitLicense("DLS2eyJ****", szErrorMsg, 256);
+errorCode = DC_InitLicense("YOUR-LICENSE-KEY", szErrorMsg, 256);
 //...handle the errorCode
 ddn = DDN_CreateInstance();
-errorCode = DDN_NormalizeFile(ddn, "YOUR-SOURCE-FILE-PATH", "", &normalizedResult);
+errorCode = DDN_NormalizeFile(ddn, "YOUR-SOURCE-FILE-PATH", "", NULL, &normalizedResult);
 //...do something with the normalizedResult and errorCode
 DDN_FreeNormalizedImageResult(&normalizedResult);
 DDN_DestroyInstance(ddn);

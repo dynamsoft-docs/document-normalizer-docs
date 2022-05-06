@@ -10,7 +10,7 @@ keywords: CQuadrilateral, api reference
 
 Stores the quadrilateral.  
 
-```c++
+```cpp
 class dynamsoft::core::CQuadrilateral
 ```
   
@@ -27,7 +27,7 @@ class dynamsoft::core::CQuadrilateral
 
 Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex.
 
-```c++
+```cpp
 CPoint points[4]
 ```
 
@@ -35,7 +35,7 @@ CPoint points[4]
 
 Returns the area of the quadrilateral.
 
-```c++
+```cpp
 int GetArea()
 ```
 

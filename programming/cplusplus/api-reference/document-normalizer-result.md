@@ -25,6 +25,17 @@ static void dynamsoft::ddn::CDocumentNormalizer::FreeDetectedQuadResultArray(CDe
 **Parameters**  
 `[in] results` An array of all detected quad results that needs to be released.
 
+**Code Snippet**
+
+```cpp
+CDocumentNormalizer ddn;
+CDetectedQuadResultArray* detectedQuadResultArray = NULL;
+ddn.DetectQuad("YOUR-SOURCE-FILE-PATH", "", &detectedQuadResultArray);
+//...do something with the detectedQuadResultArray
+if (detectedQuadResultArray != NULL)
+    CDocumentNormalizer::FreeDetectedQuadResultArray(&detectedQuadResultArray);
+```
+
 ## FreeNormalizedImageResult
 
 Releases memory allocated for CNormalizedImageResult.
@@ -36,6 +47,17 @@ static void dynamsoft::ddn::CDocumentNormalizer::FreeNormalizedImageResult(CNorm
 **Parameters**  
 `[in] result` The normalized image result that needs to be released.
 
+**Code Snippet**
+
+```cpp
+CDocumentNormalizer ddn;
+CNormalizedImageResult* normalizedResult = NULL;
+ddn.Normalize("YOUR-SOURCE-FILE-PATH", "", NULL, &normalizedResult);
+//...do something with the normalizedResult
+if (normalizedResult != NULL)
+    CDocumentNormalizer::FreeNormalizedImageResult(&normalizedResult);
+```
+
 ## FreeString
 
 Releases memory allocated for a string.
@@ -46,6 +68,17 @@ static void dynamsoft::ddn::CDocumentNormalizer::FreeString(char** content)
 
 **Parameters**  
 `[in] content` The string that needs to be released.
+
+**Code Snippet**
+
+```cpp
+CDocumentNormalizer ddn;
+char* content = NULL;
+ddn.OutputRuntimeSettingsToString("", &content);
+//...do something with the content
+if (content != NULL)
+    CDocumentNormalizer::FreeString(&content);
+```
 
 ## SaveImageDataToFile
 
@@ -59,3 +92,16 @@ static int dynamsoft::ddn::CDocumentNormalizer::SaveImageDataToFile(const CImage
 `[in] imageData` The image data that needs to be saved.
 
 `[in] filePath` The path of the output image with the extension specified image format.
+
+**Code Snippet**
+
+```cpp
+CDocumentNormalizer ddn;
+CNormalizedImageResult* normalizedResult = NULL;
+ddn.Normalize("YOUR-SOURCE-FILE-PATH", "", NULL, &normalizedResult);
+if (normalizedResult != NULL)
+{   
+    CDocumentNormalizer::SaveImageDataToFile(normalizedResult->GetImageData(), "YOUR-TARGET-FILE-PATH");
+    CDocumentNormalizer::FreeNormalizedImageResult(&normalizedResult);
+}
+```

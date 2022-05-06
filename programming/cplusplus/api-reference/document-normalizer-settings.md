@@ -32,6 +32,14 @@ int dynamsoft::ddn::CDocumentNormalizer::InitRuntimeSettingsFromFile(const char*
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
 
+**Code Snippet**
+
+```cpp
+CDocumentNormalizer ddn;
+char szErrorMsg[256];
+ddn.InitRuntimeSettingsFromFile("YOUR-SOURCE-FILE-PATH", szErrorMsg, 256);
+```
+
 ## InitRuntimeSettingsFromString
 
 Initializes runtime settings with the settings in a given JSON string.
@@ -50,6 +58,14 @@ int dynamsoft::ddn::CDocumentNormalizer::InitRuntimeSettingsFromString(const cha
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
 
+**Code Snippet**
+
+```cpp
+CDocumentNormalizer ddn;
+char szErrorMsg[256];
+ddn.InitRuntimeSettingsFromString("YOUR-SETTINGS-STRING", szErrorMsg, 256);
+```
+
 ## OutputRuntimeSettingsToFile
 
 Output runtime settings to a settings file (JSON file).
@@ -65,7 +81,14 @@ int dynamsoft::ddn::CDocumentNormalizer::OutputRuntimeSettingsToFile(const char*
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
-*You can call [`GetErrorString`](document-normalizer-general.md#geterrorstring) to get detailed error message.*
+*You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
+
+**Code Snippet**
+
+```cpp
+CDocumentNormalizer ddn;
+ddn.OutputRuntimeSettingsToFile("", "YOUR-TARGET-FILE-PATH");
+```
 
 ## OutputRuntimeSettingsToString
 
@@ -82,4 +105,15 @@ int dynamsoft::ddn::CDocumentNormalizer::OutputRuntimeSettingsToString(const cha
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
-*You can call [`GetErrorString`](document-normalizer-general.md#geterrorstring) to get detailed error message.*
+*You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
+
+**Code Snippet**
+
+```cpp
+CDocumentNormalizer ddn;
+char* content = NULL;
+ddn.OutputRuntimeSettingsToString("", &content);
+//...do something with the content
+if (content != NULL)
+    CDocumentNormalizer::FreeString(&content);
+```
