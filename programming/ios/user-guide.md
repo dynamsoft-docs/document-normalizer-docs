@@ -47,7 +47,7 @@ In this section, let's see how to create a HelloWorld app for normalizing docume
 
 1. Open Xcode and select create a new project.
 
-2. Select **iOS > App** for your application.
+2. Select **iOS -> App** for your application.
 
 3. Input your product name (Helloworld), interface (StoryBoard) and language (Objective-C/Swift). We currently do not support SwiftUI, so we apologize if this causes any inconvenience.
 
