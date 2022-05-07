@@ -96,7 +96,7 @@ In the main view controller, your app will scan documents via video streaming an
 
 #### Initialize License
 
-1. Initialize the license first. It is suggested to initialize the license in `AppDelegate` file.
+Initialize the license first. It is suggested to initialize the license in `AppDelegate` file.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -111,21 +111,15 @@ In the main view controller, your app will scan documents via video streaming an
    DynamsoftCore.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", self)
    ```
 
-   >Note:  
-   >  
-   >- Network connection is required for the license to work.
-   >- The license string here will grant you a time-limited trial license.
-   >- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request for an extension.
+>Note:  
+>  
+>- Network connection is required for the license to work.
+>- The license string here will grant you a time-limited trial license.
+>- If the license has expired, you can go to the <a href="https://www.dynamsoft.com/customer/license/trialLicense?utm_source=docs" target="_blank">customer portal</a> to request for an extension.
 
 #### Get Prepared with the Camera Module
 
-1. Be sure that you have included `DynamsoftCameraEnhancer.h` in your project before you start to work with `DynamsoftCameraEnhancer`.
-
-   ```objc
-   #import <DynamsoftCameraEnhancer/DynamsoftCameraEnhancer.h>
-   ```
-
-2. Create the instances of `CameraEnhancer` and `CameraView`.
+Create the instances of `CameraEnhancer` and `CameraView`.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
