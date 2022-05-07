@@ -25,12 +25,12 @@ You can download the Dynamsoft Document Normalizer (DDN) SDK from the <a href="h
 After unzipping, the root directory of the DDN installation package is **DynamsoftDocumentNormalizer** (the `[INSTALLATION FOLDER]`). You can find the following **Frameworks** under the **[INSTALLATION FOLDER]\Frameworks** directory:
 
 | File | Description |
-|---------|-------------|
+| ---- | ----------- |
 | `DynamsoftDocumentNormalizer.framework` <br /> `DynamsoftDocumentNormalizer.xcframework` | The Dynamsoft Document Normalizer SDK, including document normalizer related APIs. |
 | `DynamsoftCore.framework` <br /> `DynamsoftCore.xcframework` | The core library of Dynamsoft's data capture SDKs, including common basic structure and license related APIs. |
 | `DynamsoftIntermediateResult.framework` <br /> `DynamsoftIntermediateResult.xcframework` | The common intermediate result library of Dynamsoft's data capture SDKs, including all intermediate results produced in the process of decoding a barcode, recognizing a label or normalizing a document. |
 | `DynamsoftImageProcessing.framework` <br /> `DynamsoftImageProcessing.xcframework` | The image processing library of Dynamsoft's data capture SDKs, including image processing algorithms and APIs. |
-| `DynamsoftCameraEnhancer.framework` <br /> `DynamsoftCameraEnhancer.xcframework` | The Dynamsoft Camera Enhancer SDK, including camera control and frame preprocessing APIs.  |
+| `DynamsoftCameraEnhancer.framework` <br /> `DynamsoftCameraEnhancer.xcframework` | The Dynamsoft Camera Enhancer SDK, including camera control and frame preprocessing APIs. |
 
 ## Build Your First Application
 
@@ -42,6 +42,8 @@ In this section, let's see how to create a HelloWorld app for normalizing docume
 > - You can get the source code of the HelloWord app from the following link
 >   - [Objective-C](https://github.com/Dynamsoft/document-normalizer-mobile-samples/tree/main/ios/Objective-C/HelloWorld).
 >   - [Swift](https://github.com/Dynamsoft/document-normalizer-mobile-samples/tree/main/ios/Swift/HelloWorld).
+
+&nbsp;
 
 ### Create a New Project
 
@@ -55,19 +57,23 @@ In this section, let's see how to create a HelloWorld app for normalizing docume
 
 5. Click on the **Create** button to finish.
 
+&nbsp;
+
 ### Include the Frameworks
 
 You can add your downloaded frameworks into your project through the following steps:
 
 1. Drag and drop the following frameworks into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project’s folder.
 
-   - DynamsoftDocumentNormalizer.framework
-   - DynamsoftCore.framework
-   - DynamsoftIntermediateResult.framework
-   - DynamsoftImageProcessing.framework
-   - DynamsoftCameraEnhancer.framework
+   - **DynamsoftDocumentNormalizer.framework**
+   - **DynamsoftCore.framework**
+   - **DynamsoftIntermediateResult.framework**
+   - **DynamsoftImageProcessing.framework**
+   - **DynamsoftCameraEnhancer.framework**
 
 2. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for DynamsoftDocumentNormalizer and DynamsoftCameraEnhancer.
+
+&nbsp;
 
 ### Main ViewController for Realtime Detection of Quads
 
@@ -279,12 +285,12 @@ When the detected quadrilateral results are satisfied, we can move on to mannual
    ```objc
    - (void)detectResultCallback:(NSInteger)frameId imageData:(nonnull iImageData *)imageData results:(nonnull NSArray<iDetectedQuadResult *> *)results {
       if (isview && results) {
-         isview = false;
-         [StaticClass instance].quadArr = results;
-         [StaticClass instance].imageData = imageData;
-         dispatch_async(dispatch_get_main_queue(), ^{
-               [self performSegueWithIdentifier:@"pushQuadEditView" sender:nil];
-         });
+             isview = false;
+             [StaticClass instance].quadArr = results;
+             [StaticClass instance].imageData = imageData;
+             dispatch_async(dispatch_get_main_queue(), ^{
+                [self performSegueWithIdentifier:@"pushQuadEditView" sender:nil];
+             });
       }
    }
    ```
@@ -292,12 +298,12 @@ When the detected quadrilateral results are satisfied, we can move on to mannual
    ```swift
    func detectResultCallback(_ frameId: Int, imageData: iImageData, results: [iDetectedQuadResult]) {
       if startEditing && !results.isEmpty {
-         startEditing = false
-         StaticClass.instance.quadArr = results
-         StaticClass.instance.imageData = imageData
-         DispatchQueue.main.async(execute: { [self] in
-            performSegue(withIdentifier: "pushQuadEditView", sender: nil)
-         })
+             startEditing = false
+             StaticClass.instance.quadArr = results
+             StaticClass.instance.imageData = imageData
+             DispatchQueue.main.async(execute: { [self] in
+                performSegue(withIdentifier: "pushQuadEditView", sender: nil)
+             })
       }
    }
    ```
@@ -325,7 +331,7 @@ When the detected quadrilateral results are satisfied, we can move on to mannual
       [photoButton setBackgroundColor:[UIColor greenColor]];
       [photoButton addTarget:self action:@selector(takePictures) forControlEvents:UIControlEventTouchUpInside];
       dispatch_async(dispatch_get_main_queue(), ^{
-         [self.view addSubview:self->photoButton];
+             [self.view addSubview:self->photoButton];
       });
    }
    ```
@@ -346,10 +352,12 @@ When the detected quadrilateral results are satisfied, we can move on to mannual
       photoButton.backgroundColor = UIColor.green
       photoButton.addTarget(self, action: #selector(takePictures), for: .touchUpInside)
       DispatchQueue.main.async(execute: { [self] in
-         view.addSubview(photoButton)
+             view.addSubview(photoButton)
       })
    }
    ```
+
+&nbsp;
 
 ### QuadEditViewController for Interactive Editing of Quads
 
@@ -425,9 +433,9 @@ In this section, we are going to create a view that displays the original image 
       // Create an array of DrawingItems and assign it to the drawingItems property.
       NSMutableArray<DrawingItem *> *array = [NSMutableArray array];
       for (iDetectedQuadResult *detectedQuadResult in [StaticClass instance].quadArr) {
-         iQuadrilateral *quad = detectedQuadResult.location;
-         QuadDrawingItem *quadItem = [[QuadDrawingItem alloc] initWithQuad:quad];
-         [array addObject:quadItem];
+             iQuadrilateral *quad = detectedQuadResult.location;
+             QuadDrawingItem *quadItem = [[QuadDrawingItem alloc] initWithQuad:quad];
+             [array addObject:quadItem];
       }
       layer.drawingItems = array;
       [self.view addSubview:editorView];
@@ -444,9 +452,9 @@ In this section, we are going to create a view that displays the original image 
       // Create an array of DrawingItems and assign it to the drawingItems property.
       var array: [DrawingItem]? = []
       for detectedQuadResult in StaticClass.instance.quadArr {
-         let quad = detectedQuadResult.location
-         let quadItem = QuadDrawingItem(quad: quad)
-         array?.append(quadItem)
+             let quad = detectedQuadResult.location
+             let quadItem = QuadDrawingItem(quad: quad)
+             array?.append(quadItem)
       }
       layer.drawingItems = array
       view.addSubview(editorView)
@@ -469,7 +477,7 @@ In the section, we will add code to get the user selected quadrilateral and norm
       // Get the selected QuadDrawingItem
       QuadDrawingItem *item = (QuadDrawingItem *)[editorView getSelectedDrawingItem];
       if(nil == item) {
-         item = (QuadDrawingItem *)layer.drawingItems[0];
+             item = (QuadDrawingItem *)layer.drawingItems[0];
       }
       NSError *error;
       // Normalize the image based on the selected quad.
@@ -477,7 +485,7 @@ In the section, we will add code to get the user selected quadrilateral and norm
       // Get the image data of the normalized image.
       [StaticClass instance].resultImage = imageData.image.toUIImage;
       dispatch_async(dispatch_get_main_queue(), ^{
-         [self performSegueWithIdentifier:@"pushResultView" sender:nil];
+             [self performSegueWithIdentifier:@"pushResultView" sender:nil];
       });
    }
    ```
@@ -487,14 +495,14 @@ In the section, we will add code to get the user selected quadrilateral and norm
       // Get the selected QuadDrawingItem
       var item = editorView.getSelectedDrawingItem() as? QuadDrawingItem
       if nil == item {
-         item = layer.drawingItems?[0] as? QuadDrawingItem
+             item = layer.drawingItems?[0] as? QuadDrawingItem
       }
       // Normalize the image based on the selected quad.
       let imageData = try? StaticClass.instance.ddn.normalizeBuffer(StaticClass.instance.imageData, quad: item!.quad)
       // Get the image data of the normalized image.
       StaticClass.instance.resultImage = imageData?.image.toUIImage()
       DispatchQueue.main.async(execute: { [self] in
-         performSegue(withIdentifier: "pushResultView", sender: nil)
+             performSegue(withIdentifier: "pushResultView", sender: nil)
       })
    }
    ```
@@ -555,6 +563,8 @@ In the section, we will add code to get the user selected quadrilateral and norm
    }
    ```
 
+&nbsp;
+
 ### ResultViewController for Displaying the Normalized Image
 
 #### Diplay the Normalized Image
@@ -593,8 +603,8 @@ In the section, we will add code to get the user selected quadrilateral and norm
    class ResultViewController : UIViewController {
       private var imageView: UIImageView!
       override func viewDidLoad() {
-         super.viewDidLoad()
-         configResultView()
+             super.viewDidLoad()
+             configResultView()
       }
       func configResultView() {
          view.backgroundColor = UIColor.black
@@ -608,6 +618,8 @@ In the section, we will add code to get the user selected quadrilateral and norm
       }
    }
    ```
+
+&nbsp;
 
 ### Build and Run the Project
 
