@@ -31,6 +31,19 @@ int DC_InitLicense(const char *license, char errorMsgBuffer[], const int errorMs
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
 
+**Code Snippet**
+
+```c
+void* ddn = NULL;
+int errorCode = 0;
+char szErrorMsg[256];
+errorCode = DC_InitLicense("YOUR-LICENSE-KEY", szErrorMsg, 256);
+//...handle the errorCode
+ddn = DDN_CreateInstance();
+//...do something else
+DDN_DestroyInstance(ddn);
+```
+
 ## DDN_CreateInstance
 
 Creates an instance of Dynamsoft Document Normalizer.
@@ -43,6 +56,19 @@ void* DDN_CreateInstance()
 
 Returns an instance of Dynamsoft Document Normalizer. If failed, returns `NULL`.
 
+**Code Snippet**
+
+```c
+void* ddn = NULL;
+int errorCode = 0;
+char szErrorMsg[256];
+errorCode = DC_InitLicense("YOUR-LICENSE-KEY", szErrorMsg, 256);
+//...handle the errorCode
+ddn = DDN_CreateInstance();
+//...do something else
+DDN_DestroyInstance(ddn);
+```
+
 ## DDN_DestroyInstance
 
 Destroys an instance of Dynamsoft Document Normalizer.
@@ -54,3 +80,16 @@ void DDN_DestroyInstance(void* normalizer)
 **Parameters**
 
 `[in] normalizer` Handle of the Dynamsoft Document Normalizer instance.
+
+**Code Snippet**
+
+```c
+void* ddn = NULL;
+int errorCode = 0;
+char szErrorMsg[256];
+errorCode = DC_InitLicense("YOUR-LICENSE-KEY", szErrorMsg, 256);
+//...handle the errorCode
+ddn = DDN_CreateInstance();
+//...do something else
+DDN_DestroyInstance(ddn);
+```

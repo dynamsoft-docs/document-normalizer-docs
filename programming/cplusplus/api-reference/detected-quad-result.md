@@ -9,7 +9,7 @@ keywords: GetLocation, GetConfidenceAsDocumentBoundary, CDetectedQuadResult, api
 
 Stores the detected quad result.
 
-```c++
+```cpp
 class dynamsoft::ddn::CDetectedQuadResult
 ```
 
@@ -22,7 +22,7 @@ class dynamsoft::ddn::CDetectedQuadResult
 
 Gets the location of the detected quad result.
 
-```c++
+```cpp
 const CQuadrilateral* GetLocation() 
 ```
 
@@ -33,7 +33,7 @@ The location of the detected quad result.
 
 Gets the confidence as document boundary of the detected quad result.
 
-```c++
+```cpp
 int GetConfidenceAsDocumentBoundary() 
 ```
 

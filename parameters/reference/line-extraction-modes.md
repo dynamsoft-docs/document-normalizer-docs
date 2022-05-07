@@ -42,11 +42,11 @@ Extracts lines based on margin.
 
 ```json
 {
-    "LineExtractionModes": [
-        {
-            "Mode": "LEM_GENERAL" 
-        }
-    ]
+    "LineExtractionModes": [
+        {
+            "Mode": "LEM_GENERAL" 
+        }
+    ]
 }
 ```
 
@@ -54,13 +54,13 @@ Extracts lines based on margin.
 
 ```json
 {
-    "LineExtractionModes": [
-        {
-            "Mode": "LEM_GENERAL"
-        },
-        {
-            "Mode": "LEM_MARGIN_BASED" 
-        }
-    ]
+    "LineExtractionModes": [
+        {
+            "Mode": "LEM_GENERAL"
+        },
+        {
+            "Mode": "LEM_MARGIN_BASED" 
+        }
+    ]
 }
 ```

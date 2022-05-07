@@ -9,7 +9,7 @@ keywords: GetImageData, CNormalizedImageResult, api reference
 
 Stores the normalized image result.
 
-```c++
+```cpp
 class dynamsoft::ddn::CNormalizedImageResult
 ```
 
@@ -21,7 +21,7 @@ class dynamsoft::ddn::CNormalizedImageResult
 
 Gets the image data of the NormalizedImageResult.
 
-```c++
+```cpp
 const CImageData* GetImageData() 
 ```
 

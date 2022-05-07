@@ -7,7 +7,7 @@ keywords: InitLicense, CLicenseManager, api reference
 
 # CLicenseManager Class
 
-```c++
+```cpp
 class dynamsoft::core::CLicenseManager 
 ```
 
@@ -19,7 +19,7 @@ class dynamsoft::core::CLicenseManager
 
 Sets the license key and activates the SDK.
 
-```c++
+```cpp
 static int dynamsoft::core::CLicenseManager::InitLicense(const char *license, char errorMsgBuffer[], const int errorMsgBufferLen) 
 ```
 
@@ -32,3 +32,12 @@ static int dynamsoft::core::CLicenseManager::InitLicense(const char *license, ch
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
+
+**Code Snippet**
+
+```cpp
+int errorCode = 0;
+char szErrorMsg[256];
+errorCode = CLicenseManager::InitLicense("YOUR-LICENSE-KEY", szErrorMsg, 256);
+if (errorCode != DM_OK)
+    cout << szErrorMsg << endl;

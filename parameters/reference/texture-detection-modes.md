@@ -41,7 +41,7 @@ Detects texture using the general algorithm. This mode has the following argumen
     "TextureDetectionModes":[
         {
             "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION",
-            "Sensitivity": 5
+            "Sensitivity": 5
         }
     ]
 }
@@ -51,16 +51,16 @@ Detects texture using the general algorithm. This mode has the following argumen
 
 ```json
 {
-    "TextureDetectionModes": [
-        {
-            "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION", 
-            "Sensitivity": 1
-        },
-        {
-            "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION", 
-            "Sensitivity": 9
-        }
-    ]
+    "TextureDetectionModes": [
+        {
+            "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION", 
+            "Sensitivity": 1
+        },
+        {
+            "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION", 
+            "Sensitivity": 9
+        }
+    ]
 }
 ```
 

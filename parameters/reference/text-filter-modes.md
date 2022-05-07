@@ -42,14 +42,14 @@ Filters text using the general algorithm based on contour. This mode has the fol
 
 ```json
 {
-    "TextFilterModes": [
-        {
-            "Mode": "TFM_GENERAL_CONTOUR", 
-            "IfEraseTextZone": 0,
-            "MinImageDimension": 65536,
-            "Sensitivity": 0
-        }
-    ]
+    "TextFilterModes": [
+        {
+            "Mode": "TFM_GENERAL_CONTOUR", 
+            "IfEraseTextZone": 0,
+            "MinImageDimension": 65536,
+            "Sensitivity": 0
+        }
+    ]
 }
 ```
 
@@ -57,12 +57,12 @@ Filters text using the general algorithm based on contour. This mode has the fol
 
 ```json
 {
-    "TextFilterModes": [
-        {
-            "Mode": "TFM_GENERAL_CONTOUR", 
-            "Sensitivity": 5
-        }
-    ]
+    "TextFilterModes": [
+        {
+            "Mode": "TFM_GENERAL_CONTOUR", 
+            "Sensitivity": 5
+        }
+    ]
 }
 ```
 

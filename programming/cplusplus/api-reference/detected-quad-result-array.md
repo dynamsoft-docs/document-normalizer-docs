@@ -9,7 +9,7 @@ keywords: GetCount, GetDetectedQuadResult, CDetectedQuadResultArray, api referen
 
 An array storing detected quad results.
 
-```c++
+```cpp
 class dynamsoft::ddn::CDetectedQuadResultArray
 ```
 
@@ -22,7 +22,7 @@ class dynamsoft::ddn::CDetectedQuadResultArray
 
 Gets the count of detected quad results in the array.
 
-```c++
+```cpp
 const CQuadrilateral* GetCount() 
 ```
 
@@ -33,7 +33,7 @@ The count of detected quad results in the array.
 
 Gets a detected quad result by specifying the index in the array.
 
-```c++
+```cpp
 int GetDetectedQuadResult(int index, CDetectedQuadResult** result) 
 ```
 
@@ -44,4 +44,4 @@ int GetDetectedQuadResult(int index, CDetectedQuadResult** result)
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
-*You can call [`GetErrorString`](document-normalizer-general.md#geterrorstring) to get detailed error message.*
+*You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*

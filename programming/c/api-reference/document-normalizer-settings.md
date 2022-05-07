@@ -34,6 +34,16 @@ int DDN_InitRuntimeSettingsFromFile(void* normalizer, const char* filePath, char
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
 
+**Code Snippet**
+
+```c
+char szErrorMsg[256];
+void* ddn = DDN_CreateInstance();
+DDN_InitRuntimeSettingsFromFile(ddn, "YOUR-SOURCE-FILE-PATH", szErrorMsg, 256);
+//...do something else
+DDN_DestroyInstance(ddn);
+```
+
 ## DDN_InitRuntimeSettingsFromString
 
 Initializes runtime settings with the settings in a given JSON string.
@@ -54,6 +64,16 @@ int DDN_InitRuntimeSettingsFromString(void* normalizer, const char* content, cha
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
 
+**Code Snippet**
+
+```c
+char szErrorMsg[256];
+void* ddn = DDN_CreateInstance();
+DDN_InitRuntimeSettingsFromString(ddn, "YOUR-SETTINGS-STRING", szErrorMsg, 256);
+//...do something else
+DDN_DestroyInstance(ddn);
+```
+
 ## DDN_OutputRuntimeSettingsToFile
 
 Output runtime settings to a settings file (JSON file).
@@ -71,7 +91,17 @@ int DDN_OutputRuntimeSettingsToFile(void* normalizer, const char* templateName, 
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
-*You can call [`DDN_GetErrorString`](document-normalizer-general.md#ddn_geterrorstring) to get detailed error message.*
+*You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
+
+**Code Snippet**
+
+```c
+void* ddn = DDN_CreateInstance();
+char* content = NULL;
+DDN_OutputRuntimeSettingsToFile(ddn, "", "YOUR-TARGET-FILE-PATH");
+//...do something else
+DDN_DestroyInstance(ddn);
+```
 
 ## DDN_OutputRuntimeSettingsToString
 
@@ -90,4 +120,16 @@ int DDN_OutputRuntimeSettingsToString(void* normalizer, const char* templateName
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
-*You can call [`DDN_GetErrorString`](document-normalizer-general.md#ddn_geterrorstring) to get detailed error message.*
+*You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
+
+**Code Snippet**
+
+```c
+void* ddn = DDN_CreateInstance();
+char* content = NULL;
+DDN_OutputRuntimeSettingsToString(ddn, "", &content);
+//...do something with the content
+if (content != NULL)
+    DDN_FreeString(&content);
+DDN_DestroyInstance(ddn);
+```

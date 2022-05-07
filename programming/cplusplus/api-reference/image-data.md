@@ -9,7 +9,7 @@ keywords: CImageData, api reference
 
 Stores the image data.  
 
-```c++
+```cpp
 class dynamsoft::core::CImageData
 ```  
 
@@ -60,7 +60,7 @@ dynamsoft::core::CImageData::~CImageData()
 
 Get the image data content in a byte array.
 
-```c++
+```cpp
 const unsigned char* GetBytes()
 ```
 
@@ -68,7 +68,7 @@ const unsigned char* GetBytes()
 
 Get the length of the image data byte array.
 
-```c++
+```cpp
 int GetBytesLength()
 ```
 
@@ -76,7 +76,7 @@ int GetBytesLength()
 
 Get the width of the image in pixels.  
 
-```c++
+```cpp
 int GetWidth()
 ```
 
@@ -84,7 +84,7 @@ int GetWidth()
 
 Get the height of the image in pixels.  
 
-```c++
+```cpp
 int GetHeight()
 ```
 
@@ -92,7 +92,7 @@ int GetHeight()
 
 Get the stride (or scan width) of the image.
 
-```c++
+```cpp
 int GetStride()
 ```
 
@@ -100,6 +100,6 @@ int GetStride()
 
 Get the image pixel format used in the image byte array.
 
-```c++
+```cpp
 ImagePixelFormat GetImagePixelFormat()
 ```

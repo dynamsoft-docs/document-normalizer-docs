@@ -9,7 +9,7 @@ keywords: CPoint, api reference
 
 Stores the point.
 
-```c++
+```cpp
 class dynamsoft::core::CPoint
 ```
 

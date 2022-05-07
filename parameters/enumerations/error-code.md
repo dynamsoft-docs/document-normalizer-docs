@@ -29,14 +29,14 @@ keywords: error code, enumeration
   | `DMERR_JSON_NAME_VALUE_DUPLICATED`     | -10035 | The value of the key "Name" is duplicated. |
   | `DMERR_TEMPLATE_NAME_INVALID`          | -10036 | The template name is invalid. |
   | `DMERR_PARAMETER_VALUE_INVALID`        | -10038 | The parameter value is invalid or out of range. |
-  | `DDN_CONTENT_NOT_FOUND`                | -10056 | No content has been detected. |
-  | `DDN_QUADRILATERAL_INVALID`            | -10057 | The quadrilateral is invalid. |
-  | `DMERR_FILE_SAVE_FAILED`               | -10059 | Failed to save the file. |
-  | `DMERR_STAGE_TYPE_INVALID`             | -10060 | The stage type is invalid. |
+  | `DDNERR_CONTENT_NOT_FOUND`             | -10056 | No content has been detected. |
+  | `DDNERR_QUADRILATERAL_INVALID`         | -10057 | The quadrilateral is invalid. |
+  | `DMERR_FILE_SAVE_FAILED`               | -10058 | Failed to save the file. |
+  | `DMERR_STAGE_TYPE_INVALID`             | -10059 | The stage type is invalid. |
   | `DMERR_NO_LICENSE`                     | -20000 | No license specified. |
   | `DMERR_HANDSHAKE_CODE_INVALID`         | -20001 | The handshake code is invalid. |
   | `DMERR_LICENSE_BUFFER_FAILED`          | -20002 | Failed to read or write license buffer. |
-  | `DMERR_LICENSE_SYNC_FAILED`            | -20003 | Failed to synchronize license info with license tracking server. |
+  | `DMERR_LICENSE_SYNC_FAILED`            | -20003 | Failed to synchronize license info with license server. |
   | `DMERR_DEVICE_NOT_MATCH`               | -20004 | Device does not match with license buffer. |
   | `DMERR_BIND_DEVICE_FAILED`             | -20005 | Failed to bind device. |
   | `DMERR_LICENSE_INTERFACE_CONFLICT`     | -20006 | Interface InitLicenseFromLTS can not be used together with other license initiation interfaces.|

@@ -35,10 +35,10 @@ Detects quadrilateral using the general algorithm.
 
 ```json
 {
-    "QuadrilateralDetectionModes": [
-        {
-            "Mode": "QDM_GENERAL"
-        }
-    ]
+    "QuadrilateralDetectionModes": [
+        {
+            "Mode": "QDM_GENERAL"
+        }
+    ]
 }
 ```

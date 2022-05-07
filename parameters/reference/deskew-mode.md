@@ -38,10 +38,10 @@ Deskew the document by applying perspective correction process. This mode has th
 
 ```json
 {
-    "DeskewMode": {
-        "Mode": "DM_PERSPECTIVE_CORRECTION", 
-        "ContentDirection": 0
-    }
+    "DeskewMode": {
+        "Mode": "DM_PERSPECTIVE_CORRECTION", 
+        "ContentDirection": 0
+    }
 }
 ```
 
