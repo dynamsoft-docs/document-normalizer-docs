@@ -222,7 +222,7 @@ There are two ways to include the SDK into your project - local binary dependenc
 
       public static ImageData mImageData;
       public static DetectedQuadResult[] mQuadResults;
-      private boolean ifNeedToQuadEdit;
+      private boolean startEditing;
 
       @Override
       protected void onCreate(Bundle savedInstanceState) { 
@@ -232,8 +232,8 @@ There are two ways to include the SDK into your project - local binary dependenc
          mNormalizer.setDetectResultListener(new DetectResultListener() {
             @Override
             public void detectResultCallback(int id, ImageData imageData, DetectedQuadResult[] results) {
-                if (results != null && results.length > 0 && ifNeedToQuadEdit) {
-                    ifNeedToQuadEdit = false;
+                if (results != null && results.length > 0 && startEditing) {
+                    startEditing = false;
 
                     mImageData = imageData;
                     mQuadResults = results;
@@ -305,12 +305,12 @@ There are two ways to include the SDK into your project - local binary dependenc
       
       ...
 
-      private boolean ifNeedToQuadEdit;
+      private boolean startEditing;
 
       ...
 
       public void onCaptureBtnClick(View v) {
-         ifNeedToQuadEdit = true;
+         startEditing = true;
       }
    }
    ```
