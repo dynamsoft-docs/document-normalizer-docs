@@ -131,9 +131,9 @@ Create the instances of `CameraEnhancer` and `CameraView`.
    @property(nonatomic, strong) DCECameraView *dceView;
    ...
    - (void)configDCE{
-      _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
-      [self.view addSubview:_dceView];
-      _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
+          _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
+          [self.view addSubview:_dceView];
+          _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
    }
    ```
    2. 
@@ -142,9 +142,9 @@ Create the instances of `CameraEnhancer` and `CameraView`.
    private var dceView: DCECameraView!
    ...
    func configDCE() {
-      dceView = DCECameraView(frame: view.bounds)
-      view.addSubview(dceView)
-      dce = DynamsoftCameraEnhancer(view: dceView)
+          dceView = DCECameraView(frame: view.bounds)
+          view.addSubview(dceView)
+          dce = DynamsoftCameraEnhancer(view: dceView)
    }
    ```
 
@@ -601,14 +601,14 @@ In the section, we will add code to get the user selected quadrilateral and norm
              configResultView()
       }
       func configResultView() {
-         view.backgroundColor = UIColor.black
-         let w = UIScreen.main.bounds.size.width
-         let h = UIScreen.main.bounds.size.height
-         imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: w, height: h))
-         imageView.isUserInteractionEnabled = true
-         imageView.contentMode = .scaleAspectFit
-         imageView.image = StaticClass.instance.resultImage
-         view.addSubview(imageView)
+             view.backgroundColor = UIColor.black
+             let w = UIScreen.main.bounds.size.width
+             let h = UIScreen.main.bounds.size.height
+             imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: w, height: h))
+             imageView.isUserInteractionEnabled = true
+             imageView.contentMode = .scaleAspectFit
+             imageView.image = StaticClass.instance.resultImage
+             view.addSubview(imageView)
       }
    }
    ```
