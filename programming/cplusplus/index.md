@@ -1,5 +1,5 @@
 ---
-title: Dynamsoft Document Normalizer Documentation - C++
+title: Documentation Main Page for C++ Edition
 keywords: c++, cplusplus, documentation
 description: Dynamsoft Document Normalizer - C++ Documentation
 needAutoGenerateSidebar: false
@@ -9,6 +9,10 @@ needAutoGenerateSidebar: false
 
 This is the main page of Dynamsoft Document Normalizer SDK documentation for C++ Language.
 
+## User Guide
+
+- [Getting Started](user-guide/getting-started.md)
+
 ## API Reference
 
 - [Primary Class - CDocumentNormalizer](api-reference/index.md#primary-class)
@@ -16,4 +20,5 @@ This is the main page of Dynamsoft Document Normalizer SDK documentation for C++
 - [Enumerations](api-reference/index.md#enumerations)
 
 ## Release Notes
+
 - [Version 1.x](release-notes/cpp-1.md)

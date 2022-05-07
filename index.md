@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Documentation Homepage
+title: Dynamsoft Document Normalizer Documentation Homepage
 keywords: homepage, documentation
 breadcrumbText: HomePage
 description: Documentation Homepage

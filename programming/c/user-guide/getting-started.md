@@ -1,13 +1,13 @@
 ---
 layout: default-layout
-title: User Guide for C++ Language
+title: User Guide for C Language
 keywords: user guide, hello world
-description: Dynamsoft Document Normalizer - User Guide for C++ Language
+description: Dynamsoft Document Normalizer - User Guide for C Language
 ---
 
-# User Guide for C++ Language
+# User Guide for C Language
 
-In this guide, you will learn step by step on how to build a document normalization application with Dynamsoft Document Normalizer SDK using C++ language.
+In this guide, you will learn step by step on how to build a document normalization application with Dynamsoft Document Normalizer SDK using C language.
 
 ## Requirements
 
@@ -17,7 +17,7 @@ In this guide, you will learn step by step on how to build a document normalizat
 
 - Developing Tool
   - Visual Studio 2008 or above
-  - G++ 5.4+  
+  - GCC 5.4+  
 
 ## Installation
 
@@ -27,30 +27,27 @@ If you haven't downloaded the SDK yet, <a href="https://download2.dynamsoft.com/
 ## Build Your First Application
 
 Let's start by creating a console application which demonstrates how to use the minimum code to detect and normalize document from an image file.  
->You can download the entire source code from [Here](https://github.com/Dynamsoft/document-normalizer-c-cpp-samples/samples/tree/main/samples/C%2B%2B/HelloWorld).
+>You can download the entire source code from [Here](https://github.com/Dynamsoft/document-normalizer-c-cpp-samples/samples/tree/main/samples/C/HelloWorld).
 
 ### Create a New Project
 
 - For Windows
 
-1. Open Visual Studio. Go to File > New > Project, create a new Empty Project and set Project name as `DDNCPPSample`.
+1. Open Visual Studio. Go to File > New > Project, create a new Empty Project and set Project name as `DDNCSample`.
 
-2. Add a new source file named `DDNCPPSample.cpp` into the project.
+2. Add a new source file named `DDNCSample.c` into the project.
 
 - For Linux
 
-1. Create a new source file named `DDNCPPSample.cpp` and place it into the folder `[INSTALLATION FOLDER]/Samples`.
+1. Create a new source file named `DDNCSample.c` and place it into the folder `[INSTALLATION FOLDER]/Samples`.
 
 ### Include the Library
 
-1. Add headers and libs in `DDNCPPSample.cpp`.
+1. Add headers and libs in `DDNCSample.c`.
 
-    ```cpp
-    #include <iostream>
+    ```c
+    #include <stdio.h>
     #include "[INSTALLATION FOLDER]/Include/DynamsoftDocumentNormalizer.h"
-    using namespace std;
-    using namespace dynamsoft::ddn;
-    using namespace dynamsoft::core;
     #if defined(_WIN64) || defined(_WIN32)
         #ifdef _WIN64
             #pragma comment(lib, "[INSTALLATION FOLDER]/Lib/Windows/x64/DynamsoftCorex64.lib")
@@ -66,9 +63,9 @@ Let's start by creating a console application which demonstrates how to use the 
 
 1. Initialize the license key.
 
-    ```cpp
+    ```c
     char szErrorMsg[256];
-    CLicenseManager::InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", szErrorMsg, 256);
+    DC_InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", szErrorMsg, 256);
     ```
 
     > The string "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" here is a free public trial license. Note that network connection is required for this license to work. When it expires, you can
@@ -76,30 +73,30 @@ Let's start by creating a console application which demonstrates how to use the 
 
 2. Create an instance of Dynamsoft Document Normalizer.
 
-    ```cpp
-    CDocumentNormalizer ddn;
+    ```c
+    void *ddn = DDN_CreateInstance();
     ```
 
 ### Detect and Save the Normalized Document
 
 1. Apply normalization for an image file.
 
-    ```cpp
+    ```c
     int errorCode = 0;
-    CNormalizedImageResult* normalizedResult = NULL;
-    errorCode = ddn.Normalize("[INSTALLATION FOLDER]/Images/sample-image.png", "", NULL, &normalizedResult);
+    NormalizedImageResult* normalizedResult = NULL;
+    errorCode = DDN_NormalizeFile(ddn, "[INSTALLATION FOLDER]/Images/sample-image.png", "", NULL, &normalizedResult);
     if(errorCode != DM_OK)
-        cout << DC_GetErrorString(errorCode) << endl;
+        printf("%s\n", DC_GetErrorString(errorCode));
     ```
 
     >For the error handling mechanism, the SDK returns Error Code for each function and provides a function `DC_GetErrorString` to get the readable message. You should add codes for error handling based on your needs. Check out [Error Code]({{site.enumerations}}error-code.html) for full supported error codes.
 
 2. Save the normalized result as an image file.
 
-    ```cpp
+    ```c
     if (normalizedResult != NULL)
     {
-        CDocumentNormalizer::SaveImageDataToFile(normalizedResult->image, "result-image.png");
+        DDN_SaveImageDataToFile(normalizedResult->image, "result-image.png");
     }
     ```
 
@@ -107,9 +104,10 @@ Let's start by creating a console application which demonstrates how to use the 
 
 1. Release the allocated memory for the normalized result and instance.
 
-    ```cpp
+    ```c
     if (normalizedResult != NULL)
-        CDocumentNormalizer::FreeNormalizedImageResult(&normalizedResult);
+        DDN_FreeNormalizedImageResult(&normalizedResult);
+    DDN_DestroyInstance(ddn);
     ```
 
 >Note:  
@@ -121,30 +119,30 @@ Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpackin
 
 1. In Visual Studio, set the solution to build as Release\|x64.
 
-2. Build the project to generate program `DDNCPPSample.exe`.
+2. Build the project to generate program `DDNCSample.exe`.
 
-3. Copy **ALL** `*.dll` files under `[INSTALLATION FOLDER]\Lib\Windows\x64` to the same folder as the `DDNCPPSample.exe`.
+3. Copy **ALL** `*.dll` files under `[INSTALLATION FOLDER]\Lib\Windows\x64` to the same folder as the `DDNCSample.exe`.
 
-4. Run the program `DDNCPPSample.exe`.
+4. Run the program `DDNCSample.exe`.
 
 >The SDK supports both x86 and x64, please set the platform based on your needs.
 
 - For Linux
 
-1. Create a file named `Makefile` with following content and put it in the same directory as the file `DDNCPPSample.cpp`.
+1. Create a file named `Makefile` with following content and put it in the same directory as the file `DDNCSample.c`.
 
     ```makefile
-    CXX=g++
-    CXXFLAGS=-c
+    CC=gcc
+    CCFLAGS=-c
 
     DDN_LIB_PATH=../Lib/Linux
     DDN_INCLUDE_PATH=../Include
 
     LDFLAGS=-lDynamsoftCore -lDynamsoftDocumentNormalizer -L $(DDN_LIB_PATH) -Wl,-rpath=$(DDN_LIB_PATH) -Wl,-rpath=./
 
-    TARGET=DDNCPPSample
-    OBJECT=DDNCPPSample.o
-    SOURCE=DDNCPPSample.cpp
+    TARGET=DDNCSample
+    OBJECT=DDNCSample.o
+    SOURCE=DDNCSample.c
 
     # build rule for target.
     $(TARGET): $(OBJECT)
@@ -166,10 +164,10 @@ Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpackin
     make
     ```
 
-3. Run the program `DDNCPPSample`.
+3. Run the program `DDNCSample`.
 
     ```bash
-    ./DDNCPPSample
+    ./DDNCSample
     ```
 
->You can download the entire source code from [Here](https://github.com/Dynamsoft/document-normalizer-c-cpp-samples/samples/tree/main/samples/C%2B%2B/HelloWorld).
+>You can download the entire source code from [Here](https://github.com/Dynamsoft/document-normalizer-c-cpp-samples/samples/tree/main/samples/C/HelloWorld).
