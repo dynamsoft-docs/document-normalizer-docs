@@ -108,7 +108,8 @@ There are two ways to include the SDK into your project - local binary dependenc
 
    ```java
    import com.dynamsoft.core.LicenseManager;
-
+   import com.dynamsoft.core.LicenseVerificationListener;
+   
    public class MainActivity extends AppCompatActivity {
 
       @Override
@@ -118,7 +119,7 @@ There are two ways to include the SDK into your project - local binary dependenc
 
          LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new LicenseVerificationListener() {
             @Override
-            public void licenseVerificationCallback(boolean isSuccess, Exception error) {
+            public void licenseVerificationCallback(boolean isSuccess, CoreException error) {
                if(!isSuccess){
                   error.printStackTrace();
                }
@@ -397,7 +398,7 @@ There are two ways to include the SDK into your project - local binary dependenc
    import com.dynamsoft.ddn.DocumentNormalizerException;
    import com.dynamsoft.ddn.NormalizedImageResult;
 
-   public class MainActivity extends AppCompatActivity {
+   public class QuadEditActivity extends AppCompatActivity {
 
       ...
 
