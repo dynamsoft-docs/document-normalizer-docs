@@ -9,9 +9,42 @@ keywords: DC_InitLicense, DDN_CreateInstance, DDN_DestroyInstance, api reference
 
 | Method               | Description |
 |----------------------|-------------|
+| [`DC_GetIdleInstancesCount`](#dc_getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
 | [`DC_InitLicense`](#dc_initlicense) | Sets the license key and activates the SDK. |
 | [`DDN_CreateInstance`](#ddn_createinstance) | Creates an instance of Dynamsoft Document Normalizer. |
 | [`DDN_DestroyInstance`](#ddn_destroyinstance) | Destroys the instance of Dynamsoft Document Normalizer. |
+
+## DC_GetIdleInstancesCount
+Gets available instances count when charging by concurrent instances count.
+
+```c
+int DC_GetIdleInstancesCount()
+```   
+
+**Return Value**  
+Returns available instances count. 
+- 0: There is no space for new instance  
+- -1: The available count needs to be updated from server by calling DC_InitLicense.
+- N ( N > 0 ): N more instances can be created.
+
+**Code Snippet**  
+```c
+//...
+int count = DC_GetIdleInstancesCount();
+if(count > 0)
+{
+  //create instance and process further
+}
+if(count < 0)
+{
+  //call DC_InitLicense
+  //create instance and process further
+}
+if(count = 0)
+{
+  //waiting for available instances 
+}
+```
 
 ## DC_InitLicense
 

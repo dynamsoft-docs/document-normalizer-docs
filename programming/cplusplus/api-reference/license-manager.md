@@ -13,7 +13,40 @@ class dynamsoft::core::CLicenseManager
 
 | Method | Description |
 |--------|-------------|
+| [`GetIdleInstancesCount`](#getidleinstancescount) | Gets available instances count when charging by concurrent instances count. |
 | [`InitLicense`](#initlicense) | Sets the license key and activates the SDK.|
+
+## GetIdleInstancesCount
+Gets available instances count when charging by concurrent instances count.
+
+```cpp
+static int dynamsoft::core::CLicenseManager::GetIdleInstancesCount()
+```   
+
+**Return Value**  
+Returns available instances count.    
+- 0: There is no space for new instance  
+- -1: The available count needs to be updated from server by calling InitLicense.
+- N ( N > 0 ): N more instances can be created.
+
+**Code Snippet**  
+```cpp
+//...
+int count = dynamsoft::core::CLicenseManager::GetIdleInstancesCount();
+if(count > 0)
+{
+  //create instance and process further
+}
+if(count < 0)
+{
+  //call InitLicense
+  //create instance and process further
+}
+if(count = 0)
+{
+  //waiting for available instances 
+}
+```
 
 ## InitLicense
 
