@@ -199,12 +199,12 @@ Create the instances of `CameraEnhancer` and `CameraView`.
    class ViewController: UIViewController, DetectResultListener{
       ...
       func configDDN() {
-         StaticClass.instance.ddn = DynamsoftDocumentNormalizer()
-         StaticClass.instance.ddn.setCameraEnhancer(dce)
-         StaticClass.instance.ddn.setDetectResultListener(self)
+             StaticClass.instance.ddn = DynamsoftDocumentNormalizer()
+             StaticClass.instance.ddn.setCameraEnhancer(dce)
+             StaticClass.instance.ddn.setDetectResultListener(self)
       }
       func detectResultCallback(_ frameId: Int, imageData: iImageData, results: [iDetectedQuadResult]) {
-         // We will add code here to deal with the detection result and open another view controller.
+             // We will add code here to deal with the detection result and open another view controller.
       }
    }
    ```
