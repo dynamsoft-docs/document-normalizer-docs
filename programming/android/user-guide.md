@@ -46,13 +46,13 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 1. Download the SDK package from the <a href="https://www.dynamsoft.com/document-normalizer/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, You can find the following **aar** files under the **DynamsoftDocumentNormalizer\Lib** directory:
 
-| File | Description |
-|---------|-------------|
-| `DynamsoftDocumentNormalizer.aar` | The Dynamsoft Document Normalizer SDK, including document normalizer related APIs. |
-| `DynamsoftCore.aar` | The core library of Dynamsoft's capture vision SDKs, including common basic structure and license related APIs. |
-| `DynamsoftIntermediateResult.aar` | The common intermediate result library of Dynamsoft's capture vision SDKs, including all intermediate results produced in the process of decoding a barcode, recognizing a label or normalizing a document. |
-| `DynamsoftImageProcessing.aar` | The image processing library of Dynamsoft's capture vision SDKs, including image processing algorithms and APIs. |
-| `DynamsoftCameraEnhancer.aar` | The Dynamsoft Camera Enhancer SDK, including camera control and frame preprocessing APIs.  |
+   | File | Description |
+   |---------|-------------|
+   | `DynamsoftDocumentNormalizer.aar` | The Dynamsoft Document Normalizer SDK, including document normalizer related APIs. |
+   | `DynamsoftCore.aar` | The core library of Dynamsoft's capture vision SDKs, including common basic structure and license related APIs. |
+   | `DynamsoftIntermediateResult.aar` | The common intermediate result library of Dynamsoft's capture vision SDKs, including all intermediate results produced in the process of decoding a barcode, recognizing a label or normalizing a document. |
+   | `DynamsoftImageProcessing.aar` | The image processing library of Dynamsoft's capture vision SDKs, including image processing algorithms and APIs. |
+   | `DynamsoftCameraEnhancer.aar` | The Dynamsoft Camera Enhancer SDK, including camera control and frame preprocessing APIs.  |
 
 2. Copy the above five **aar** files to the target directory `HelloWorld\app\libs`
 
