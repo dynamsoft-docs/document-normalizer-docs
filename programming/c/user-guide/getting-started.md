@@ -133,7 +133,7 @@ Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpackin
 1. Open a terminal and change to the target directory where `DDNCSample.c` located in. Build the sample:
 
     ```bash
-    gcc -o DDNCPPSample DDNCPPSample.c -lDynamsoftCore -lDynamsoftDocumentNormalizer -L ../Lib/Linux -Wl,-rpath=../Lib/Linux
+    gcc -o DDNCSample DDNCSample.c -lDynamsoftCore -lDynamsoftDocumentNormalizer -L ../Lib/Linux -Wl,-rpath=../Lib/Linux
     ```
 
 2. Run the program `DDNCSample`.
