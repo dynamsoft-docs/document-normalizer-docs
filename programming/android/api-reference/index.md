@@ -80,6 +80,16 @@ class com.dynamsoft.ddn.DocumentNormalizer
 
 ## Enumerations
 
+- [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html)
+- [`EnumColourConversionMode`]({{ site.enumerations }}colour-conversion-mode.html)
+- [`EnumGrayscaleEnhancementMode`]({{ site.enumerations }}grayscale-enhancement-mode.html)
+- [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html)
+- [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html)
+- [`EnumLineExtractionMode`]({{ site.enumerations }}line-extraction-mode.html)
+- [`EnumRegionPredetectionMode`]({{ site.enumerations }}region-predetection-mode.html)
+- [`EnumTextFilterMode`]({{ site.enumerations }}text-filter-mode.html)
+- [`EnumTextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html)
+
 &nbsp;
 
 ## Others

@@ -20,17 +20,7 @@ noTitleIndex: true
 
 ## Installation
 
-You can download the Dynamsoft Document Normalizer (DDN) SDK from the <a href="https://www.dynamsoft.com/document-normalizer/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> if you don't have the SDK installed yet.
 
-After unzipping, the root directory of the DDN installation package is **DynamsoftDocumentNormalizer** (the `[INSTALLATION FOLDER]`). You can find the following **aar** files under the **[INSTALLATION FOLDER]\Lib** directory:
-
-| File | Description |
-|---------|-------------|
-| `DynamsoftDocumentNormalizer.aar` | The Dynamsoft Document Normalizer SDK, including document normalizer related APIs. |
-| `DynamsoftCore.aar` | The core library of Dynamsoft's data capture SDKs, including common basic structure and license related APIs. |
-| `DynamsoftIntermediateResult.aar` | The common intermediate result library of Dynamsoft's data capture SDKs, including all intermediate results produced in the process of decoding a barcode, recognizing a label or normalizing a document. |
-| `DynamsoftImageProcessing.aar` | The image processing library of Dynamsoft's data capture SDKs, including image processing algorithms and APIs. |
-| `DynamsoftCameraEnhancer.aar` | The Dynamsoft Camera Enhancer SDK, including camera control and frame preprocessing APIs.  |
 
 ## Build Your First Application
 
@@ -57,14 +47,19 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 #### Local Binary Dependency
 
-1. Copy the flowing file to the target directory `HelloWorld\app\libs`:
-   - `[INSTALLATION FOLDER]\Lib\DynamsoftCameraEnhancer.aar`
-   - `[INSTALLATION FOLDER]\Lib\DynamsoftDocumentNormalizer.aar`
-   - `[INSTALLATION FOLDER]\Lib\DynamsoftCore.aar`
-   - `[INSTALLATION FOLDER]\Lib\DynamsoftIntermediateResult.aar`
-   - `[INSTALLATION FOLDER]\Lib\DynamsoftImageProcessing.aar`
+1. Download the SDK package
+You can download the Dynamsoft Document Normalizer (DDN) SDK from the <a href="https://www.dynamsoft.com/document-normalizer/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> if you don't have the SDK installed yet.After unzipping, the root directory of the DDN installation package is **DynamsoftDocumentNormalizer** (the **[INSTALLATION FOLDER]**). You can find the following **aar** files under the **[INSTALLATION FOLDER]\Lib** directory:
+| File | Description |
+|---------|-------------|
+| `DynamsoftDocumentNormalizer.aar` | The Dynamsoft Document Normalizer SDK, including document normalizer related APIs. |
+| `DynamsoftCore.aar` | The core library of Dynamsoft's data capture SDKs, including common basic structure and license related APIs. |
+| `DynamsoftIntermediateResult.aar` | The common intermediate result library of Dynamsoft's data capture SDKs, including all intermediate results produced in the process of decoding a barcode, recognizing a label or normalizing a document. |
+| `DynamsoftImageProcessing.aar` | The image processing library of Dynamsoft's data capture SDKs, including image processing algorithms and APIs. |
+| `DynamsoftCameraEnhancer.aar` | The Dynamsoft Camera Enhancer SDK, including camera control and frame preprocessing APIs.  |
 
-2. Open the file `HelloWorld\app\build.gradle` and add reference in the dependencies:
+2. Copy the above five **aar** files to the target directory `HelloWorld\app\libs`
+
+3. Open the file `HelloWorld\app\build.gradle` and add reference in the dependencies:
 
     ```groovy
     dependencies {
@@ -72,7 +67,7 @@ There are two ways to include the SDK into your project - local binary dependenc
     }
     ```
 
-3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
+4. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
 
 #### Remote Binary Dependency
 

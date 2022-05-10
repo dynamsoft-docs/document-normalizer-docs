@@ -13,12 +13,12 @@ needGenerateH3Content: false
 
 | Method               | Description |
 |----------------------|-------------|
-| [`detectQuad(buffer)`](#detectquad(buffer)) | Detect quad from the memory buffer containing image pixels in defined format. |
-| [`detectQuad(file)`](#detectquad(file)) | Detect quad from an image file. |
-| [`detectQuad(bitmap)`](#detectquad(bitmap)) | Detect quad from a buffered image(bitmap). |
-| [`normalize(buffer)`](#normalize(buffer)) | Normalize image from the memory buffer containing image pixels in defined format. |
-| [`normalize(file)`](#normalize(file)) | Normalize an image file. |
-| [`normalize(bitmap)`](#normalize(bitmap)) | Normalize a buffered image(bitmap). |
+| [`detectQuad(buffer)`](#detectquadbuffer) | Detect quad from the memory buffer containing image pixels in defined format. |
+| [`detectQuad(file)`](#detectquadfile) | Detect quad from an image file. |
+| [`detectQuad(bitmap)`](#detectquadbitmap) | Detect quad from a buffered image(bitmap). |
+| [`normalize(buffer)`](#normalizebuffer) | Normalize image from the memory buffer containing image pixels in defined format. |
+| [`normalize(file)`](#normalizefile) | Normalize an image file. |
+| [`normalize(bitmap)`](#normalizebitmap) | Normalize a buffered image(bitmap). |
 
 ---
 
