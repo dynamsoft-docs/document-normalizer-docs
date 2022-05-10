@@ -69,7 +69,7 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
 
 1. Add the frameworks in your **Podfile**.
 
-   ```pod
+   ```sh
    target 'HelloWorld' do
    # Comment the next line if you don't want to use dynamic frameworks
    use_frameworks!
@@ -84,7 +84,7 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
    end
    ```
 
-2. Install the frameworks through pod command to generate **HelloWorld.xcworkspace**
+2. Execute the pod command to install the frameworks and generate workspace(**HelloWorld.xcworkspace**):
 
    ```sh
    pod install
