@@ -71,10 +71,8 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
 
    ```sh
    target 'HelloWorld' do
-   # Comment the next line if you don't want to use dynamic frameworks
-   use_frameworks!
+      use_frameworks!
 
-   # Pods for HelloWorld
    pod 'DynamsoftDocumentNormalizer','1.0.0'
    pod 'DynamsoftCore','2.0.0'
    pod 'DynamsoftImageProcessing','1.0.0'
