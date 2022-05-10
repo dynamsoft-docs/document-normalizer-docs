@@ -217,7 +217,7 @@ You can download the Dynamsoft Document Normalizer (DDN) SDK from the <a href="h
 
       public static ImageData mImageData;
       public static DetectedQuadResult[] mQuadResults;
-      private boolean ifNeedToQuadEdit;
+      private boolean startEditing;
 
       @Override
       protected void onCreate(Bundle savedInstanceState) { 
@@ -227,8 +227,8 @@ You can download the Dynamsoft Document Normalizer (DDN) SDK from the <a href="h
          mNormalizer.setDetectResultListener(new DetectResultListener() {
             @Override
             public void detectResultCallback(int id, ImageData imageData, DetectedQuadResult[] results) {
-                if (results != null && results.length > 0 && ifNeedToQuadEdit) {
-                    ifNeedToQuadEdit = false;
+                if (results != null && results.length > 0 && startEditing) {
+                    startEditing = false;
 
                     mImageData = imageData;
                     mQuadResults = results;
@@ -239,6 +239,7 @@ You can download the Dynamsoft Document Normalizer (DDN) SDK from the <a href="h
             }
         });
       }
+   }
    ```
 
 3. Override the `MainActivity.onResume` and `MainActivity.onPause` functions to start/stop video quad detecting. After detecting starts, the Document Normalizer will automatically invoke the `detectQuad` API to process the video frames from the Camera Enhancer, then send the detected quad results to the detected result callback.
@@ -300,12 +301,12 @@ You can download the Dynamsoft Document Normalizer (DDN) SDK from the <a href="h
       
       ...
 
-      private boolean ifNeedToQuadEdit;
+      private boolean startEditing;
 
       ...
 
       public void onCaptureBtnClick(View v) {
-         ifNeedToQuadEdit = true;
+         startEditing = true;
       }
    }
    ```

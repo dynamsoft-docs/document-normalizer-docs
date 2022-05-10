@@ -94,7 +94,7 @@ int DDN_SaveImageDataToFile(const ImageData* imageData, const char* filePath)
 **Parameters**  
 `[in] imageData` The image data that needs to be saved.
 
-`[in] filePath` The path of the output image with the extension specified image format.
+`[in] filePath` The path of the output image with the extension specifying the image format. It supports BMP and PNG files.
 
 ```c
 NormalizedImageResult* normalizedResult = NULL;

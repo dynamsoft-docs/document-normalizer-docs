@@ -24,7 +24,7 @@ int dynamsoft::ddn::CDocumentNormalizer::DetectQuad(const CImageData* sourceImag
 ```
 
 **Parameters**  
-`[in] sourceFilePath` A string defining the source file path.
+`[in] sourceFilePath` A string defining the source file path. It supports BMP, JPEG, PNG and TIFF files.
 
 `[in] sourceImage` The source image buffer.
 
@@ -64,7 +64,7 @@ int dynamsoft::ddn::CDocumentNormalizer::Normalize( const CImageData* sourceImag
 ```
 
 **Parameters**  
-`[in] sourceFilePath` A string defining the source file path.
+`[in] sourceFilePath` A string defining the source file path. It supports BMP, JPEG, PNG and TIFF files.
 
 `[in] sourceImage` The source image buffer.
 

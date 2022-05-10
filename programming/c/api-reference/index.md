@@ -10,6 +10,7 @@ keywords: CDocumentNormalizer, api reference, C++
 ## Global Functions
 
 - [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring)
+- [`DC_GetIdleInstancesCount`](document-normalizer-init.md#dc_getidleinstancescount)
 - [`DC_GetQuadrilateralArea`](document-normalizer-general.md#dc_getquadrilateralarea)
 - [`DC_InitLicense`](document-normalizer-init.md#dc_initlicense)
 - [`DC_IsPointInQuadrilateral`](document-normalizer-general.md#dc_ispointinquadrilateral)
