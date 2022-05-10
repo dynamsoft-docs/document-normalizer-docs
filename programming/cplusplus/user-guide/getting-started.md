@@ -132,42 +132,13 @@ Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpackin
 
 - For Linux
 
-1. Create a file named `Makefile` with following content and put it in the same directory as the file `DDNCPPSample.cpp`.
-
-    ```make
-    CXX=g++
-    CXXFLAGS=-c
-
-    DDN_LIB_PATH=../Lib/Linux
-    DDN_INCLUDE_PATH=../Include
-
-    LDFLAGS=-lDynamsoftCore -lDynamsoftDocumentNormalizer -L $(DDN_LIB_PATH) -Wl,-rpath=$(DDN_LIB_PATH) -Wl,-rpath=./
-
-    TARGET=DDNCPPSample
-    OBJECT=DDNCPPSample.o
-    SOURCE=DDNCPPSample.cpp
-
-    # build rule for target.
-    $(TARGET): $(OBJECT)
-        $(CC) -o $(TARGET) $(OBJECT) $(LDFLAGS)
-
-    # target to build an object file
-    $(OBJECT): $(SOURCE)
-        $(CC) $(CCFLAGS) -I $(DDN_INCLUDE_PATH) $(SOURCE)
-
-    # the clean target
-    .PHONY : clean
-    clean: 
-        rm -f $(OBJECT) $(TARGET)
-    ```
-
-2. Open a terminal and change to the target directory where `Makefile` located in. Build the sample:
+1. Open a terminal and change to the target directory where `DDNCPPSample.cpp` located in. Build the sample:
 
     ```bash
-    make
+    g++ -o DDNCPPSample DDNCPPSample.cpp -lDynamsoftCore -lDynamsoftDocumentNormalizer -L ../Lib/Linux -Wl,-rpath=../Lib/Linux -std=c++11
     ```
 
-3. Run the program `DDNCPPSample`.
+2. Run the program `DDNCPPSample`.
 
     ```bash
     ./DDNCPPSample
