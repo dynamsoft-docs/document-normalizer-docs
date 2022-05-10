@@ -12,7 +12,8 @@ In this guide, you will learn step by step on how to build a document normalizat
 ## Requirements
 
 - Operating System:
-  - Windows 7, 8, 10, 11, 2003, 2008, 2008 R2, 2012, 2016, 2019, 2022
+  - Windows Workstation 7, 8, 10, 11
+  - Windows Server 2003, 2008, 2008 R2, 2012, 2016, 2019, 2022
   - Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc
 
 - Developing Tool
@@ -131,7 +132,7 @@ Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpackin
 
 1. Create a file named `Makefile` with following content and put it in the same directory as the file `DDNCSample.c`.
 
-    ```makefile
+    ```make
     CC=gcc
     CCFLAGS=-c
 
