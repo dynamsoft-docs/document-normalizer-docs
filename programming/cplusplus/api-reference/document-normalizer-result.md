@@ -91,7 +91,7 @@ static int dynamsoft::ddn::CDocumentNormalizer::SaveImageDataToFile(const CImage
 **Parameters**  
 `[in] imageData` The image data that needs to be saved.
 
-`[in] filePath` The path of the output image file with the extension specifying the image format. It supports PNG files.
+`[in] filePath` The path of the output image file with the extension specifying the image format. It supports BMP and PNG files.
 
 **Code Snippet**
 
