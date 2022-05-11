@@ -119,11 +119,32 @@ Initialize the license first. It is suggested to initialize the license in `AppD
    >
    >1. 
    ```objc
-   [DynamsoftCore initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+   // Add LicenseVerificationListener to the interface
+   @interface AppDelegate ()<LicenseVerificationListener>
+   - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+      // Initialize the license when the app is launched.
+      [DynamsoftLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+      return YES;
+   }
+   // Implement the callback method of LicenseVerificationListener.
+   - (void)LicenseVerificationCallback:(bool)isSuccess error:(NSError *)error {
+      // Add your code to execute when the license server handles callback.
+   }
    ```
    2. 
    ```swift
-   DynamsoftCore.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", self)
+   // Add LicenseVerificationListener to the interface
+   class AppDelegate: UIResponder, UIApplicationDelegate, LicenseVerificationListener {
+      func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+             // Initialize the license when the app is launched.
+             DynamsoftLicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+             return true
+      }
+      // Implement the callback method of LicenseVerificationListener.
+      func LicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+             // Add your code to execute when the license server handles callback.
+      }
+   }
    ```
 
 >Note:  
