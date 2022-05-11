@@ -154,24 +154,23 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
    public class MainActivity extends AppCompatActivity {
       private CameraEnhancer mCameraEnhancer;
-      private DCECameraView mCameraView;
 
       @Override
       protected void onCreate(Bundle savedInstanceState) { 
 
          ...
 
-         mCameraView = findViewById(R.id.camera_view);
+         DCECameraView cameraView = findViewById(R.id.camera_view);
 
          mCameraEnhancer = new CameraEnhancer(MainActivity.this);
-         mCameraEnhancer.setCameraView(mCameraView);
+         mCameraEnhancer.setCameraView(cameraView);
       }
    }
    ```
 
 #### Initialize Document Normalizer
 
-1. Import and initialize the dynamsoft document normalizer, bind to the created Camera Enhancer instance.
+1. Import and initialize the document normalizer, bind to the created Camera Enhancer instance.
 
    ```java
    ...
@@ -196,7 +195,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
             e.printStackTrace();
          }
 
-         mNormalizer.setCameraEnhancer(mCamera);
+         mNormalizer.setCameraEnhancer(mCameraEnhancer);
       }
    }
    ```
@@ -250,25 +249,25 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
       @Override
       protected void onResume() {
-         super.onResume();
+         mNormalizer.startDetecting();
          try {
-            mCamera.open();
+            mCameraEnhancer.open();
          } catch (CameraEnhancerException e) {
             e.printStackTrace();
          }
-         mNormalizer.startDetecting();
+         super.onResume();
       }
 
 
       @Override
       protected void onPause() {
-         super.onPause();
+         mNormalizer.stopDetecting();
          try {
-            mCamera.close();
+            mCameraEnhancer.close();
          } catch (CameraEnhancerException e) {
             e.printStackTrace();
          }
-         mNormalizer.stopDetecting();
+         super.onPause();
       }
    }
    ```
