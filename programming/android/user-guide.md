@@ -38,11 +38,11 @@ In this section, let's see how to create a HelloWorld app for normalizing docume
     >
     > - With **minSdkVersion** set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
 
-### Include the Library
+### Add the SDK
 
-There are two ways to include the SDK into your project - local binary dependency and remote binary dependency.
+There are two ways to add the SDK into your project - **Manually** and **Maven**.
 
-#### Local Binary Dependency
+#### Add the Library Manually
 
 1. Download the SDK package from the <a href="https://www.dynamsoft.com/document-normalizer/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, You can find the following **aar** files under the **DynamsoftDocumentNormalizer\Lib** directory:
 
@@ -66,7 +66,7 @@ There are two ways to include the SDK into your project - local binary dependenc
 
 4. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
 
-#### Remote Binary Dependency
+#### Add the Library via Maven
 
 1. Open the file `HelloWorld\app\build.gradle` and add the remote repository:
 
