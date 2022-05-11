@@ -118,6 +118,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
             }
          });
       }
+   }
    ```
 
    >Note:  
@@ -165,6 +166,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
          mCameraEnhancer = new CameraEnhancer(MainActivity.this);
          mCameraEnhancer.setCameraView(mCameraView);
       }
+   }
    ```
 
 #### Initialize Document Normalizer
