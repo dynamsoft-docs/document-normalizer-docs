@@ -12,7 +12,7 @@ In this guide, you will learn step by step on how to build a document normalizat
 ## Requirements
 
 - Operating System:
-  - Windows Workstation 7, 8, 10, 11
+  - Windows 7, 8, 10, 11
   - Windows Server 2003, 2008, 2008 R2, 2012, 2016, 2019, 2022
   - Linux x64: Ubuntu 14.04.4+ LTS, Debian 8+, etc
 
@@ -22,7 +22,7 @@ In this guide, you will learn step by step on how to build a document normalizat
 
 ## Installation
 
-If you haven't downloaded the SDK yet, <a href="https://download2.dynamsoft.com/ddn/dynamsoft-document-normalizer-c_cpp-1.0.0-beta.zip">download</a> the `C/C++ Package` now and unpack the package into the directory of your choice.
+If you haven't downloaded the SDK yet, <a href="https://download2.dynamsoft.com/ddn/dynamsoft-document-normalizer-c_cpp-1.0.0.zip">download</a> the `C/C++ Package` now and unpack the package into the directory of your choice.
 >For this tutorial, we unpack it to `[INSTALLATION FOLDER]`, change it to your unpacking path for the following content.
 
 ## Build Your First Application
