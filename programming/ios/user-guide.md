@@ -18,20 +18,6 @@ noTitleIndex: true
 - Environment: Xcode 7.1 - 11.5 and above.
 - Recommended: macOS 10.15.4+, Xcode 11.5+, iOS 11+
 
-## Installation
-
-You can download the Dynamsoft Document Normalizer (DDN) SDK from the <a href="https://www.dynamsoft.com/document-normalizer/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> if you don't have the SDK installed yet.
-
-After unzipping, the root directory of the DDN installation package is **DynamsoftDocumentNormalizer** (the `[INSTALLATION FOLDER]`). You can find the following **Frameworks** under the **[INSTALLATION FOLDER]\Frameworks** directory:
-
-| File | Description |
-| ---- | ----------- |
-| `DynamsoftDocumentNormalizer.framework` <br /> `DynamsoftDocumentNormalizer.xcframework` | The Dynamsoft Document Normalizer SDK, including document normalizer related APIs. |
-| `DynamsoftCore.framework` <br /> `DynamsoftCore.xcframework` | The core library of Dynamsoft's data capture SDKs, including common basic structure and license related APIs. |
-| `DynamsoftIntermediateResult.framework` <br /> `DynamsoftIntermediateResult.xcframework` | The common intermediate result library of Dynamsoft's data capture SDKs, including all intermediate results produced in the process of decoding a barcode, recognizing a label or normalizing a document. |
-| `DynamsoftImageProcessing.framework` <br /> `DynamsoftImageProcessing.xcframework` | The image processing library of Dynamsoft's data capture SDKs, including image processing algorithms and APIs. |
-| `DynamsoftCameraEnhancer.framework` <br /> `DynamsoftCameraEnhancer.xcframework` | The Dynamsoft Camera Enhancer SDK, including camera control and frame preprocessing APIs. |
-
 ## Build Your First Application
 
 In this section, let's see how to create a HelloWorld app for normalizing documents from camera video input.
@@ -59,19 +45,48 @@ In this section, let's see how to create a HelloWorld app for normalizing docume
 
 &nbsp;
 
-### Include the Frameworks
+### Add the SDK
 
-You can add your downloaded frameworks into your project through the following steps:
+There are two ways to add the SDK into your project - **Manually** and **CocoaPods**.
 
-1. Drag and drop the following frameworks into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project’s folder.
+#### Add the Frameworks Manually
 
-   - **DynamsoftDocumentNormalizer.framework**
-   - **DynamsoftCore.framework**
-   - **DynamsoftIntermediateResult.framework**
-   - **DynamsoftImageProcessing.framework**
-   - **DynamsoftCameraEnhancer.framework**
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/document-normalizer/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, you can find the following **Frameworks** under the **DynamsoftDocumentNormalizer\Frameworks** directory:
 
-2. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for DynamsoftDocumentNormalizer and DynamsoftCameraEnhancer.
+   | File | Description |
+   | ---- | ----------- |
+   | `DynamsoftDocumentNormalizer.framework` | The Dynamsoft Document Normalizer SDK, including document normalizer related APIs. |
+   | `DynamsoftCore.framework`  | The core library of Dynamsoft's capture vision SDKs, including common basic structure and license related APIs. |
+   | `DynamsoftIntermediateResult.framework` | The common intermediate result library of Dynamsoft's capture vision SDKs, including all intermediate results produced in the process of decoding a barcode, recognizing a label or normalizing a document. |
+   | `DynamsoftImageProcessing.framework` | The image processing library of Dynamsoft's capture vision SDKs, including image processing algorithms and APIs. |
+   | `DynamsoftCameraEnhancer.framework` | The Dynamsoft Camera Enhancer SDK, including camera control and frame preprocessing APIs. |
+
+2. Drag and drop the above five **frameworks** into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project’s folder.
+
+3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for DynamsoftDocumentNormalizer and DynamsoftCameraEnhancer.
+
+#### Add the Frameworks via CocoaPods
+
+1. Add the frameworks in your **Podfile**.
+
+   ```sh
+   target 'HelloWorld' do
+      use_frameworks!
+
+   pod 'DynamsoftDocumentNormalizer','1.0.0'
+   pod 'DynamsoftCore','2.0.0'
+   pod 'DynamsoftImageProcessing','1.0.0'
+   pod 'DynamsoftIntermediateResult','1.0.0'
+   pod 'DynamsoftCameraEnhancer','3.0.0'
+
+   end
+   ```
+
+2. Execute the pod command to install the frameworks and generate workspace(**HelloWorld.xcworkspace**):
+
+   ```sh
+   pod install
+   ```
 
 &nbsp;
 

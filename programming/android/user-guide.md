@@ -18,20 +18,6 @@ noTitleIndex: true
 
 - Environment: Android Studio 3.4+.
 
-## Installation
-
-You can download the Dynamsoft Document Normalizer (DDN) SDK from the <a href="https://www.dynamsoft.com/document-normalizer/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a> if you don't have the SDK installed yet.
-
-After unzipping, the root directory of the DDN installation package is **DynamsoftDocumentNormalizer** (the `[INSTALLATION FOLDER]`). You can find the following **aar** files under the **[INSTALLATION FOLDER]\Lib** directory:
-
-| File | Description |
-|---------|-------------|
-| `DynamsoftDocumentNormalizer.aar` | The Dynamsoft Document Normalizer SDK, including document normalizer related APIs. |
-| `DynamsoftCore.aar` | The core library of Dynamsoft's data capture SDKs, including common basic structure and license related APIs. |
-| `DynamsoftIntermediateResult.aar` | The common intermediate result library of Dynamsoft's data capture SDKs, including all intermediate results produced in the process of decoding a barcode, recognizing a label or normalizing a document. |
-| `DynamsoftImageProcessing.aar` | The image processing library of Dynamsoft's data capture SDKs, including image processing algorithms and APIs. |
-| `DynamsoftCameraEnhancer.aar` | The Dynamsoft Camera Enhancer SDK, including camera control and frame preprocessing APIs.  |
-
 ## Build Your First Application
 
 In this section, let's see how to create a HelloWorld app for normalizing documents from camera video input.
@@ -48,23 +34,29 @@ In this section, let's see how to create a HelloWorld app for normalizing docume
 2. Choose the correct template for your project. In this sample, we use **Empty Activity**.
 
 3. When prompted, choose your app name 'HelloWorld' and set the **Save** location, **Language**, and **Minimum SDK** (we use 21 here).
-    > Note:  
+    > Note:
+    >
     > - With **minSdkVersion** set to 21, your app is compatible with more than 94.1% of devices on the Google Play Store (last update: March 2021).
 
-### Include the Library
+### Add the SDK
 
-There are two ways to include the SDK into your project - local binary dependency and remote binary dependency.
+There are two ways to add the SDK into your project - **Manually** and **Maven**.
 
-#### Local Binary Dependency
+#### Add the Library Manually
 
-1. Copy the flowing file to the target directory `HelloWorld\app\libs`:
-   - `[INSTALLATION FOLDER]\Lib\DynamsoftCameraEnhancer.aar`
-   - `[INSTALLATION FOLDER]\Lib\DynamsoftDocumentNormalizer.aar`
-   - `[INSTALLATION FOLDER]\Lib\DynamsoftCore.aar`
-   - `[INSTALLATION FOLDER]\Lib\DynamsoftIntermediateResult.aar`
-   - `[INSTALLATION FOLDER]\Lib\DynamsoftImageProcessing.aar`
+1. Download the SDK package from the <a href="https://www.dynamsoft.com/document-normalizer/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, You can find the following **aar** files under the **DynamsoftDocumentNormalizer\Lib** directory:
 
-2. Open the file `HelloWorld\app\build.gradle` and add reference in the dependencies:
+   | File | Description |
+   |---------|-------------|
+   | `DynamsoftDocumentNormalizer.aar` | The Dynamsoft Document Normalizer SDK, including document normalizer related APIs. |
+   | `DynamsoftCore.aar` | The core library of Dynamsoft's capture vision SDKs, including common basic structure and license related APIs. |
+   | `DynamsoftIntermediateResult.aar` | The common intermediate result library of Dynamsoft's capture vision SDKs, including all intermediate results produced in the process of decoding a barcode, recognizing a label or normalizing a document. |
+   | `DynamsoftImageProcessing.aar` | The image processing library of Dynamsoft's capture vision SDKs, including image processing algorithms and APIs. |
+   | `DynamsoftCameraEnhancer.aar` | The Dynamsoft Camera Enhancer SDK, including camera control and frame preprocessing APIs.  |
+
+2. Copy the above five **aar** files to the target directory `HelloWorld\app\libs`
+
+3. Open the file `HelloWorld\app\build.gradle` and add reference in the dependencies:
 
     ```groovy
     dependencies {
@@ -72,9 +64,9 @@ There are two ways to include the SDK into your project - local binary dependenc
     }
     ```
 
-3. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
+4. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
 
-#### Remote Binary Dependency
+#### Add the Library via Maven
 
 1. Open the file `HelloWorld\app\build.gradle` and add the remote repository:
 
