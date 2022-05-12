@@ -228,7 +228,7 @@ Create the instances of `CameraEnhancer` and `CameraView`.
    }
    ```
 
-1. Include and initialize the `DynamsoftDocumentNormalizer`, bind to the created `CameraEnhancer` instance.
+2. Include and initialize the `DynamsoftDocumentNormalizer`, bind to the created `CameraEnhancer` instance.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -250,7 +250,7 @@ Create the instances of `CameraEnhancer` and `CameraView`.
    }
    ```
 
-2. Add `DetectResultListener` to your ViewController and register with the `DocumentNormalizer` instance to get detected quad results.
+3. Add `DetectResultListener` to your ViewController and register with the `DocumentNormalizer` instance to get detected quad results.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -287,7 +287,7 @@ Create the instances of `CameraEnhancer` and `CameraView`.
    }
    ```
 
-3. Add the methods to run when the view is loaded.
+4. Add the methods to run when the view is loaded.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
@@ -312,7 +312,7 @@ Create the instances of `CameraEnhancer` and `CameraView`.
    }
    ```
 
-4. Add configurations to start detecting or stop detecting when the view appear or disappear.
+5. Add configurations to start detecting or stop detecting when the view appear or disappear.
 
    <div class="sample-code-prefix"></div>
    >- Objective-C
