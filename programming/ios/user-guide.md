@@ -186,6 +186,48 @@ Create the instances of `CameraEnhancer` and `CameraView`.
 
 #### Initialize Document Normalizer
 
+1. Preparations. Create `DDNDataManager.h` and `DDNDataManager.m` and add the following code in `DDNDataManager.h` and `DDNDataManager.m` (For Swift user, create `DDNDataManager.swift`).
+
+   <div class="sample-code-prefix"></div>
+   >- Objective-C
+   >- Swift
+   >
+   >1. 
+   ```objc
+   // In DDNDataManager.h, add the following code:
+   #import <DynamsoftDocumentNormalizer/DynamsoftDocumentNormalizer.h>
+   NS_ASSUME_NONNULL_BEGIN
+   @interface DDNDataManager : NSObject
+   @property (nonatomic, strong) DynamsoftDocumentNormalizer *ddn;
+   @property (nonatomic, strong) UIImage *resultImage;
+   @property (nonatomic, strong) NSArray<iDetectedQuadResult *> *quadArr;
+   @property (nonatomic, strong) iImageData *imageData;
+   + (DDNDataManager *)instance;
+   ...
+   // In DDNDataManager.m, add the following code:
+   #import "DDNDataManager.h"
+   @implementation DDNDataManager
+   + (DDNDataManager *)instance{
+      static DDNDataManager *instance = nil;
+      static dispatch_once_t onceToken;
+      dispatch_once(&onceToken, ^{
+         instance = [super allocWithZone:NULL];
+      });
+      return instance;
+   }
+   ```
+   2. 
+   ```swift
+   import DynamsoftDocumentNormalizer
+   class DDNDataManager: NSObject {
+      var ddn: DynamsoftDocumentNormalizer!
+      var resultImage: UIImage!
+      var quadArr: [iDetectedQuadResult]!
+      var imageData: iImageData!
+      static let instance = DDNDataManager()
+   }
+   ```
+
 1. Include and initialize the `DynamsoftDocumentNormalizer`, bind to the created `CameraEnhancer` instance.
 
    <div class="sample-code-prefix"></div>
@@ -195,16 +237,16 @@ Create the instances of `CameraEnhancer` and `CameraView`.
    >1. 
    ```objc
    - (void)configDDN{
-      [StaticClass instance].ddn = [DynamsoftDocumentNormalizer new];
+      [DDNDataManager instance].ddn = [DynamsoftDocumentNormalizer new];
       // Bind the DocumentNormalizer and CameraEnhancer instance
-      [[StaticClass instance].ddn setCameraEnhancer:_dce];
+      [[DDNDataManager instance].ddn setCameraEnhancer:_dce];
    }
    ```
    2. 
    ```swift
    func configDDN() {
-      StaticClass.instance.ddn = DynamsoftDocumentNormalizer()
-      StaticClass.instance.ddn.setCameraEnhancer(dce)
+      DDNDataManager.instance.ddn = DynamsoftDocumentNormalizer()
+      DDNDataManager.instance.ddn.setCameraEnhancer(dce)
    }
    ```
 
@@ -220,10 +262,10 @@ Create the instances of `CameraEnhancer` and `CameraView`.
    @interface ViewController ()<DetectResultListener>
    ...
    - (void)configDDN{
-      [StaticClass instance].ddn = [DynamsoftDocumentNormalizer new];
-      [[StaticClass instance].ddn setCameraEnhancer:_dce];
+      [DDNDataManager instance].ddn = [DynamsoftDocumentNormalizer new];
+      [[DDNDataManager instance].ddn setCameraEnhancer:_dce];
       // Set the detect result listener first.
-      [[StaticClass instance].ddn setDetectResultListener:self];
+      [[DDNDataManager instance].ddn setDetectResultListener:self];
    }
    // Add detectResultCallback method in the view controller.
    - (void)detectResultCallback:(NSInteger)frameId imageData:(nonnull iImageData *)imageData results:(nonnull NSArray<iDetectedQuadResult *> *)results {
@@ -235,9 +277,9 @@ Create the instances of `CameraEnhancer` and `CameraView`.
    class ViewController: UIViewController, DetectResultListener{
       ...
       func configDDN() {
-             StaticClass.instance.ddn = DynamsoftDocumentNormalizer()
-             StaticClass.instance.ddn.setCameraEnhancer(dce)
-             StaticClass.instance.ddn.setDetectResultListener(self)
+             DDNDataManager.instance.ddn = DynamsoftDocumentNormalizer()
+             DDNDataManager.instance.ddn.setCameraEnhancer(dce)
+             DDNDataManager.instance.ddn.setDetectResultListener(self)
       }
       func detectResultCallback(_ frameId: Int, imageData: iImageData, results: [iDetectedQuadResult]) {
              // We will add code here to deal with the detection result and open another view controller.
@@ -281,27 +323,27 @@ Create the instances of `CameraEnhancer` and `CameraView`.
    - (void)viewWillAppear:(BOOL)animated
    {
       [super viewWillAppear:animated];
-      [[StaticClass instance].ddn startDetecting];
+      [[DDNDataManager instance].ddn startDetecting];
    }
    - (void)viewWillDisappear:(BOOL)animated
    {
       [super viewWillDisappear:animated];
-      [[StaticClass instance].ddn stopDetecting];
+      [[DDNDataManager instance].ddn stopDetecting];
    }
    ```
    2. 
    ```swift
    override func viewWillAppear(_ animated: Bool) {
       super.viewWillAppear(animated)
-      StaticClass.instance.ddn.startDetecting()
+      DDNDataManager.instance.ddn.startDetecting()
    }
    override func viewWillDisappear(_ animated: Bool) {
       super.viewWillDisappear(animated)
-      StaticClass.instance.ddn.stopDetecting()
+      DDNDataManager.instance.ddn.stopDetecting()
    }
    ```
 
-#### Additional Steps in `ViewController`
+#### Additional Steps in ViewController
 
 When the detected quadrilateral results are satisfied, we can move on to mannually adjust the edge and normalize the document area. In this step, we will add a button on the main view to confirm and go to the quadrilateral editing view.
 
@@ -316,8 +358,8 @@ When the detected quadrilateral results are satisfied, we can move on to mannual
    - (void)detectResultCallback:(NSInteger)frameId imageData:(nonnull iImageData *)imageData results:(nonnull NSArray<iDetectedQuadResult *> *)results {
       if (isview && results) {
              isview = false;
-             [StaticClass instance].quadArr = results;
-             [StaticClass instance].imageData = imageData;
+             [DDNDataManager instance].quadArr = results;
+             [DDNDataManager instance].imageData = imageData;
              dispatch_async(dispatch_get_main_queue(), ^{
                 [self performSegueWithIdentifier:@"pushQuadEditView" sender:nil];
              });
@@ -329,8 +371,8 @@ When the detected quadrilateral results are satisfied, we can move on to mannual
    func detectResultCallback(_ frameId: Int, imageData: iImageData, results: [iDetectedQuadResult]) {
       if startEditing && !results.isEmpty {
              startEditing = false
-             StaticClass.instance.quadArr = results
-             StaticClass.instance.imageData = imageData
+             DDNDataManager.instance.quadArr = results
+             DDNDataManager.instance.imageData = imageData
              DispatchQueue.main.async(execute: { [self] in
                 performSegue(withIdentifier: "pushQuadEditView", sender: nil)
              })
@@ -426,7 +468,7 @@ In this section, we are going to create a view that displays the original image 
       // Initialize the DCEImageEditorView.
       editorView = [[DCEImageEditorView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
       // Set the image that will be normalized.
-      [editorView setOriginalImage:[StaticClass instance].imageData];
+      [editorView setOriginalImage:[DDNDataManager instance].imageData];
       [self.view addSubview:editorView];
    }
    ```
@@ -438,7 +480,7 @@ In this section, we are going to create a view that displays the original image 
       // Initialize the DCEImageEditorView.
       editorView = DCEImageEditorView(frame: CGRect(x: 0, y: 0, width: view.frame.size.width, height: view.frame.size.height))
       // Set the image that will be normalized.
-      editorView.setOriginalImage(StaticClass.instance.imageData)
+      editorView.setOriginalImage(DDNDataManager.instance.imageData)
       view.addSubview(editorView)
    }
    ```
@@ -462,7 +504,7 @@ In this section, we are going to create a view that displays the original image 
       layer = [editorView getDrawingLayer:DDN_LAYER_ID];
       // Create an array of DrawingItems and assign it to the drawingItems property.
       NSMutableArray<DrawingItem *> *array = [NSMutableArray array];
-      for (iDetectedQuadResult *detectedQuadResult in [StaticClass instance].quadArr) {
+      for (iDetectedQuadResult *detectedQuadResult in [DDNDataManager instance].quadArr) {
              iQuadrilateral *quad = detectedQuadResult.location;
              QuadDrawingItem *quadItem = [[QuadDrawingItem alloc] initWithQuad:quad];
              [array addObject:quadItem];
@@ -481,7 +523,7 @@ In this section, we are going to create a view that displays the original image 
       layer = editorView.getDrawingLayer(Int(DDN_LAYER_ID))
       // Create an array of DrawingItems and assign it to the drawingItems property.
       var array: [DrawingItem]? = []
-      for detectedQuadResult in StaticClass.instance.quadArr {
+      for detectedQuadResult in DDNDataManager.instance.quadArr {
              let quad = detectedQuadResult.location
              let quadItem = QuadDrawingItem(quad: quad)
              array?.append(quadItem)
@@ -511,9 +553,9 @@ In the section, we will add code to get the user selected quadrilateral and norm
       }
       NSError *error;
       // Normalize the image based on the selected quad.
-      iNormalizedImageResult *imageData = [[StaticClass instance].ddn normalizeBuffer:[StaticClass instance].imageData quad:item.quad error:&error];
+      iNormalizedImageResult *imageData = [[DDNDataManager instance].ddn normalizeBuffer:[DDNDataManager instance].imageData quad:item.quad error:&error];
       // Get the image data of the normalized image.
-      [StaticClass instance].resultImage = imageData.image.toUIImage;
+      [DDNDataManager instance].resultImage = imageData.image.toUIImage;
       dispatch_async(dispatch_get_main_queue(), ^{
              [self performSegueWithIdentifier:@"pushResultView" sender:nil];
       });
@@ -528,9 +570,9 @@ In the section, we will add code to get the user selected quadrilateral and norm
              item = layer.drawingItems?[0] as? QuadDrawingItem
       }
       // Normalize the image based on the selected quad.
-      let imageData = try? StaticClass.instance.ddn.normalizeBuffer(StaticClass.instance.imageData, quad: item!.quad)
+      let imageData = try? DDNDataManager.instance.ddn.normalizeBuffer(DDNDataManager.instance.imageData, quad: item!.quad)
       // Get the image data of the normalized image.
-      StaticClass.instance.resultImage = imageData?.image.toUIImage()
+      DDNDataManager.instance.resultImage = imageData?.image.toUIImage()
       DispatchQueue.main.async(execute: { [self] in
              performSegue(withIdentifier: "pushResultView", sender: nil)
       })
@@ -624,7 +666,7 @@ In the section, we will add code to get the user selected quadrilateral and norm
       imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, w, h)];
       imageView.userInteractionEnabled = YES;
       imageView.contentMode = UIViewContentModeScaleAspectFit;
-      [imageView setImage:[StaticClass instance].resultImage];
+      [imageView setImage:[DDNDataManager instance].resultImage];
       [self.view addSubview:self->imageView];
    }
    ```
@@ -643,7 +685,7 @@ In the section, we will add code to get the user selected quadrilateral and norm
              imageView = UIImageView(frame: CGRect(x: 0, y: 0, width: w, height: h))
              imageView.isUserInteractionEnabled = true
              imageView.contentMode = .scaleAspectFit
-             imageView.image = StaticClass.instance.resultImage
+             imageView.image = DDNDataManager.instance.resultImage
              view.addSubview(imageView)
       }
    }
