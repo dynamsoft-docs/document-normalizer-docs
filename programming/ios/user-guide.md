@@ -217,7 +217,7 @@ Create the instances of `CameraEnhancer` and `CameraView`.
       static DDNDataManager *instance = nil;
       static dispatch_once_t onceToken;
       dispatch_once(&onceToken, ^{
-         instance = [super allocWithZone:NULL];
+             instance = [super allocWithZone:NULL];
       });
       return instance;
    }
