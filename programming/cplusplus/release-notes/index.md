@@ -6,6 +6,6 @@ keywords: release notes, c++
 needAutoGenerateSidebar: false
 ---
 
-# C++ Edition - Release Notes
+# Release Notes - C++ Edition
 
 - [1.0.0 (xx/xx/2022)](cpp-1.md#100-xxxx2022)

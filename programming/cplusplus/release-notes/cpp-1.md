@@ -12,6 +12,4 @@ needGenerateH3Content: false
 
 ### Highlights
 
-### Changelog
-
-#### NEW
+{%- include release-notes/product-highlight-1.0.0.md -%}
