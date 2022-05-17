@@ -18,6 +18,6 @@ typedef struct tagDMPoint
 }DM_Point;
 ```
 
-## coordinate
+### coordinate
 
 The coordinate defining a point. coordinate\[0\] represents the X coordinate and coordinate\[1\] represents the Y coordinate of the point.
