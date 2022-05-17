@@ -26,6 +26,7 @@ android_release_notes: /document-normalizer/docs/programming/android/release-not
 
 enumerations: /document-normalizer/docs/parameters/enumerations/
 parameters_reference: /document-normalizer/docs/parameters/reference/
+release_notes: /document-normalizer/docs/release-notes/
 
 useVersionTree: true
 
