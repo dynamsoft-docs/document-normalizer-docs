@@ -1,4 +1,5 @@
 ---
+layout: default-layout
 title: Dynamsoft Document Normalizer - Overview
 keywords: overview, documentation
 description: Dynamsoft Document Normalizer - Overview
