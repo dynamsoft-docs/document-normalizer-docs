@@ -1,7 +1,9 @@
 tree_file_list:
     - sidelist-full-tree.html
+    - sidelist-introduction.html
     - sidelist-parameters.html
     - sidelist-programming.html
+    - sidelist-release-notes.html
     - sidelist-programming/programming-android.html
     - sidelist-programming/programming-ios.html
     - sidelist-programming/programming-c.html

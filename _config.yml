@@ -26,6 +26,7 @@ android_release_notes: /document-normalizer/docs/programming/android/release-not
 
 enumerations: /document-normalizer/docs/parameters/enumerations/
 parameters_reference: /document-normalizer/docs/parameters/reference/
+release_notes: /document-normalizer/docs/release-notes/
 
 useVersionTree: true
 
@@ -35,6 +36,8 @@ smile_icon: /document-normalizer/docs/assets/img-icon/icon-smile.png
 sad_icon: /document-normalizer/docs/assets/img-icon/icon-sad.png
 
 baseurl: "/document-normalizer/docs"
+
+download: "/document-normalizer/downloads/1000021-confirmation/"
 
 plugins:
   - jemoji
