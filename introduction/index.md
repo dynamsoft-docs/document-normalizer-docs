@@ -83,7 +83,7 @@ For example, [`BinarizationModes`]({{site.parameters_reference }}binarization-mo
 
 These modes can be configured not only through API but also through a configuration template (as file, string, JSON etc.). Furthermore, the implementation of these modes can be customized according to customer scenarios to seamlessly integrated with customer's project.
 
-## SDK Modules
+## How to use
 
 DDN SDK consists of four modules as shown in the following table. This structure is shared between all platform versions of DDN SDK, which makes it easier to integrate and support multiple operating systems in your apps.
 
@@ -96,7 +96,7 @@ Table 1 – Modules description of the SDK
 | **DynamsoftImageProcessing** | The image processing library of Dynamsoft's capture vision SDKs, including image processing algorithms and APIs. | **The APIs are for internal use only and is not public yet**|
 | **DynamsoftCore**  | The core library of Dynamsoft's capture vision SDKs, including common basic structure and license related APIs. | **LicenseManager**<br/>**ImageData**<br/>**Quadrilateral**<br/>**......**|
 
-### Interact with video streams
+### Interact with mobile camera
 
 In real life, document quad detection and content normalization often occurs in mobile catpure scenarios. In order to simplify the integration cost and provide more convenient functions such as camera control, camera preview and interactive editing etc., we recommend that you use the Dynamsoft Camera Enhancer(DCE) SDK with DDN to complete the document normalizer on the mobile side. The DCE SDK provides three primary classes:
 
