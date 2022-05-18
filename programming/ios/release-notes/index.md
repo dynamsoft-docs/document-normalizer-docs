@@ -9,4 +9,4 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Document Normalizer iOS SDK - Release Notes
 
-- [1.0.0 (xx/xx/2022)](ios-1.md#100-xxxx2022)
+- [1.0.0 (05/19/2022)](ios-1.md#100-05192022)

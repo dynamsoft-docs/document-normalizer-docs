@@ -10,6 +10,8 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - 1.0.0
 
-## 1.0.0 (xx/xx/2022)
+## 1.0.0 (05/19/2022)
 
-### NEW
+### Highlights
+
+{%- include release-notes/product-highlight-1.0.0.md -%}
