@@ -75,7 +75,7 @@ This is the main class of Dynamsoft Document Normalizer(DDN) SDK. It supports qu
 
 ## Enumerations
 
-- [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html)
+- [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=ios)
 
 ## Others
 
