@@ -24,7 +24,7 @@ android: /document-normalizer/docs/programming/android/
 android_api: /document-normalizer/docs/programming/android/api-reference/
 android_release_notes: /document-normalizer/docs/programming/android/release-notes/
 
-enumerations: /document-normalizer/docs/parameters/enumerations/
+enumerations: /document-normalizer/docs/programming/enumerations/
 parameters_reference: /document-normalizer/docs/parameters/reference/
 release_notes: /document-normalizer/docs/release-notes/
 

@@ -69,28 +69,14 @@ class com.dynamsoft.ddn.DocumentNormalizer
 - [`NormalizedImageResult`](normalized-image-result.md)
 - [`DocumentNormalizerException`](document-normalizer-exception.md)
 
-&nbsp;
-
 ## Interfaces
 
 - [`LicenseVerificationListener`](license-verification-listener.md)
 - [`DetectResultListener`](detect-result-listener.md)
 
-&nbsp;
-
 ## Enumerations
 
-- [`EnumBinarizationMode`]({{ site.enumerations }}binarization-mode.html)
-- [`EnumColourConversionMode`]({{ site.enumerations }}colour-conversion-mode.html)
-- [`EnumGrayscaleEnhancementMode`]({{ site.enumerations }}grayscale-enhancement-mode.html)
-- [`EnumGrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html)
-- [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html)
-- [`EnumLineExtractionMode`]({{ site.enumerations }}line-extraction-mode.html)
-- [`EnumRegionPredetectionMode`]({{ site.enumerations }}region-predetection-mode.html)
-- [`EnumTextFilterMode`]({{ site.enumerations }}text-filter-mode.html)
-- [`EnumTextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html)
-
-&nbsp;
+- [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=android)
 
 ## Others
 

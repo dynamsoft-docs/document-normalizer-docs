@@ -41,15 +41,7 @@ keywords: CDocumentNormalizer, api reference, C++
 
 ## Enumerations
 
-- [`BinarizationMode`]({{ site.enumerations }}binarization-mode.html)
-- [`ColourConversionMode`]({{ site.enumerations }}colour-conversion-mode.html)
-- [`GrayscaleEnhancementMode`]({{ site.enumerations }}grayscale-enhancement-mode.html)
-- [`GrayscaleTransformationMode`]({{ site.enumerations }}grayscale-transformation-mode.html)
-- [`ImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html)
-- [`LineExtractionMode`]({{ site.enumerations }}line-extraction-mode.html)
-- [`RegionPredetectionMode`]({{ site.enumerations }}region-predetection-mode.html)
-- [`TextFilterMode`]({{ site.enumerations }}text-filter-mode.html)
-- [`TextureDetectionMode`]({{ site.enumerations }}texture-detection-mode.html)
+- [`ImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=c)
 
 ## Others
 

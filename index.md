@@ -19,5 +19,4 @@ description: Documentation Homepage
 
 - [Parameters]({{ site.parameters }})
   - [Parameter Organization Structure]({{ site.parameters }}parameter-organization-structure.html)
-  - [Reference of Parameters]({{ site.parameters_reference }})
-  - [Reference of Enumerations]({{ site.enumerations }})
+  - [Parameter Reference]({{ site.parameters_reference }})
