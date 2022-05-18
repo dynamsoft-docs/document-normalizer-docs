@@ -76,7 +76,7 @@ class com.dynamsoft.ddn.DocumentNormalizer
 
 ## Enumerations
 
-- [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html)
+- [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=android)
 
 ## Others
 

@@ -103,3 +103,6 @@ Get the image pixel format used in the image byte array.
 ```cpp
 ImagePixelFormat GetImagePixelFormat()
 ```
+
+**See Also**  
+[ImagePixelFormat]({{ site.enumerations }}image-pixel-format.html?src=cpp)

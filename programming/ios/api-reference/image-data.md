@@ -25,7 +25,7 @@ Stores the image data.
 | [`width`](#width) | *NSInteger* |
 | [`height`](#height) | *NSInteger* |
 | [`stride`](#stride) | *NSInteger* |
-| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html) |
+| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=ios) |
 
 &nbsp;
 
