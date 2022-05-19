@@ -120,11 +120,16 @@ The easiest steps to integrate DDN and DCE into your application are as followsï
 6. If you want to make additional manual adjustments to the detected quads, preview the captured image and detected quads in `DCEImageEditorView`, which also provides the user with a magnified view to move points precisely.
 7. Use the selected quad output by `DCEImageEditorView` to normalize the captured image according to your application's needs.
 
+Please refer to the following articles for more details:
+
+- <a href="https://www.dynamsoft.com/document-normalizer/docs/programming/android/user-guide.html" target="_blank">Getting Started with DDN Android SDK</a>
+- <a href="https://www.dynamsoft.com/document-normalizer/docs/programming/ios/user-guide.html" target="_blank">Getting Started with DDN iOS SDK</a>
+
 ## Usage scenarios
 
 ### Retail
 
-In retail, DDN can help detect the price label boundaries or table boundaries in images. Additionally, the extracted images can be used for OCR engine recognition to extract text information.
+In retail, DDN can help detect the price label boundaries or table boundaries in images. Additionally, the extracted images can be used for recognition to extract text information.
 
 ### Identity Documents
 
