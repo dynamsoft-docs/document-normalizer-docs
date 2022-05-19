@@ -9,10 +9,16 @@ needGenerateH3Content: true
 breadcrumbText: iOS CameraEnhancer Class
 ---
 
-# CameraEnhancer Class
+# DynamsoftCameraEnhancer Class
+
+The main class of `DynamsoftCameraEnhancer`. it contains APIs for user to:
+
+- Set the basic properties of the camera like open, close, resolution, etc.
+- Get video frames from the video streaming.
+- Enable advanced features like frame filtering, enhanced focus, etc.
 
 ```objc
-class com.dynamsoft.dce.CameraEnhancer
+@interface DynamsoftCameraEnhancer:NSObject
 ```
 
 ## Initialization
@@ -35,7 +41,7 @@ Initialize the camera enhancer with the `DCECameraView`.
 
 **Return Value**
 
-The instance of DynamsoftCameraEnhancer.
+The instance of `DynamsoftCameraEnhancer`.
 
 **Code Snippet**
 

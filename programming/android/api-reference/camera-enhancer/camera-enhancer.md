@@ -11,6 +11,12 @@ breadcrumbText: Android CameraEnhancer Class
 
 # CameraEnhancer Class
 
+The main class of `CameraEnhancer` library. it contains APIs for user to:
+
+- Set the basic properties of the camera like open, close, resolution, etc.
+- Get video frames from the video streaming.
+- Enable advanced features like frame filtering, enhanced focus, etc.
+
 ```java
 class com.dynamsoft.dce.CameraEnhancer
 ```
