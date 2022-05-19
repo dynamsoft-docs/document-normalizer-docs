@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android DrawingItem Class
+title: Android DrawingItem Class
 description: This is the documentation - Android DrawingItem Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android, DrawingItem
 needAutoGenerateSidebar: true

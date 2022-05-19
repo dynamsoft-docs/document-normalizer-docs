@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS QuadDrawingItem Class
+title: iOS QuadDrawingItem Class
 description: This is the documentation - iOS QuadDrawingItem Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS, QuadDrawingItem
 needAutoGenerateSidebar: true

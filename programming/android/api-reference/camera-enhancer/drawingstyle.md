@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android DrawingStyle Class
+title: Android DrawingStyle Class
 description: This is the documentation - Android DrawingStyle Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android, DrawingStyle
 needAutoGenerateSidebar: true
