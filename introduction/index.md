@@ -127,7 +127,7 @@ The primary class in DDN SDK:
 
 - **DocumentNormalizer**: It supports quad detection and image normalization for still pictures and live video. Common detections include document/table boundary detection. Common normalizations include border crop/deskew/perspective correction/colour mode/brightness and contrast.
 
-### Quick Start for Mobile Scenarios
+### Rough Steps for Using Mobile Editions
 
 In real life, document quad detection and content normalization often occurs in mobile catpure scenarios. In order to simplify the integration cost of camera control, camera preview and interactive editing functions etc., we recommend that you use <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank">Dynamsoft Camera Enhancer(DCE) SDK</a> with DDN to complete the document detection and normalization on the mobile side. The DCE SDK provides three primary classes:
 
