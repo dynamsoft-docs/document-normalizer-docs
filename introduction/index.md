@@ -7,11 +7,11 @@ description: Dynamsoft Document Normalizer - Introduction
 
 # Introduction to Dynamsoft Document Normalizer
 
-Dynamsoft Document Normalizer (DDN) is an SDK designed to detect and extract significant information of document or particular quadrilateral areas. Some common scenarios where a component like DDN can prove handy include price tags in supermarkets, document image in file management, driver licenses, business cards, ID cards, and more.
+When gathering information (text, barcodes, machine readable zones, etc.) from images of typical documents such as price tags, office documents, driver's licenses, and ID cards, the quality or complexity of these images is often a hindrance. To address this, Dynamsoft Document Normalizer (DDN) is an SDK designed to analyze structural information such as document boundaries, table boundaries, etc. on images, and then normalize the ROI image so that subsequent processes can better focus on key information.
 
-DDN powers your software development through the following aspects:
+DDN powers your software development from the following aspects:
 
-- Robust quadrilateral detection for different content such as document/table boundaries.
+- Robust quadrilateral detection for different structures such as document/table boundaries.
 - Various content normalization features such as border crop/deskew/perspective correction/colur mode/contrast/brightness, etc.
 - Scenario-oriented customizablity such as image processing modes
 
@@ -83,7 +83,7 @@ For example, [`BinarizationModes`]({{site.parameters_reference }}binarization-mo
 
 These modes can be configured not only through API but also through a configuration template (as file, string, JSON etc.). Furthermore, the implementation of these modes can be customized according to customer scenarios to seamlessly integrated with customer's project.
 
-## How to use
+## How to Use
 
 ### Overview of DDN SDK Modules
 
@@ -93,28 +93,32 @@ Table 1 – Modules description of the SDK
 
 | Module Name | Description | Primary Classes |
 | ---- | ----------- |-------|
-| **DynamsoftDocumentNormalizer** | The Dynamsoft Document Normalizer SDK, including document normalizer related APIs. | **DocumentNormalizer** |
+| **DynamsoftDocumentNormalizer** | Provide APIs related to quad detection and various content normalization. | **DocumentNormalizer** |
 | **DynamsoftIntermediateResult** | The common intermediate result library of Dynamsoft's capture vision SDKs, including all intermediate results produced in the process of decoding a barcode, recognizing a label or normalizing a document. | **The APIs are for internal use only and is not public yet**|
 | **DynamsoftImageProcessing** | The image processing library of Dynamsoft's capture vision SDKs, including image processing algorithms and APIs. | **The APIs are for internal use only and is not public yet**|
-| **DynamsoftCore**  | The core library of Dynamsoft's capture vision SDKs, including common basic structure and license related APIs. | **LicenseManager**<br/>**ImageData**<br/>**Quadrilateral**<br/>**......**|
+| **DynamsoftCore**  | The core library of Dynamsoft's capture vision SDKs, including common basic structure and license related APIs. | **LicenseManager**<br/>**...**|
+
+The primary class in DDN SDK:
+
+- **DocumentNormalizer**: It supports quad detection and image normalization for still pictures and live video. Common detections include document/table boundary detection. Common normalizations include border crop/deskew/perspective correction/colour mode/brightness and contrast.
 
 ### Quick Start for Mobile Scenarios
 
-In real life, document quad detection and content normalization often occurs in mobile catpure scenarios. In order to simplify the integration cost of camera control, camera preview and interactive editing functions etc., we recommend that you use the Dynamsoft Camera Enhancer(DCE) SDK with DDN to complete the document normalizer on the mobile side. The DCE SDK provides three primary classes:
+In real life, document quad detection and content normalization often occurs in mobile catpure scenarios. In order to simplify the integration cost of camera control, camera preview and interactive editing functions etc., we recommend that you use <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank">Dynamsoft Camera Enhancer(DCE) SDK</a> with DDN to complete the document detection and normalization on the mobile side. The DCE SDK provides three primary classes:
 
 - **CameraEnhancer**: It provides camera control, video buffering, frame filtering and fast mode functions for quick camera integration.
-- **DCECameraView**: It is designed to display the camera preview, overlay, viewfinder, etc.
-- **DCEImageEditorView**: It supports static image preview, graphics(rectangle, quadrilateral, text etc.) display and outputs the coordinates of interactively adjusted vertices of border sides, which can be used by DDN SDK.
+- **DCECameraView**: It is designed to display the camera preview, overlay, scan region, etc.
+- **DCEImageEditorView**: It supports still image preview, graphics(rectangle, quadrilateral, text etc.) display and outputs the coordinates of interactively adjusted vertices of border sides, which can be used by DDN SDK.
 
 The easiest steps to integrate DDN and DCE into your application are as follows：
 
-1. Add the DDN and DCE libraries and their dependencies to your project
-2. Initialize the license via `LicenseManger`
+1. Add the DDN and DCE libraries and their dependencies to your project.
+2. Initialize the license via `LicenseManger`.
 3. Display the camera preview by creating an instance of `DCECameraView` and binding it to a new instance of `CameraEnhancer`.
 4. Create an instance of `DocumentNormalizer` and set the instance of `CameraEnhancer` as the image source.
 5. Register a quad detection result listener to receive detection events. You can obtain the detected quads and the corresponding image in the callback function.
 6. If you want to make additional manual adjustments to the detected quads, preview the captured image and detected quads in `DCEImageEditorView`, which also provides the user with a magnified view to move points precisely.
-7. Use the selected or created quad to normalize the captured image according to your application's needs.
+7. Use the selected quad output by `DCEImageEditorView` to normalize the captured image according to your application's needs.
 
 ## Usage scenarios
 
