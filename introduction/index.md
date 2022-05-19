@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer - Introduction
 
 # Introduction to Dynamsoft Document Normalizer
 
-When gathering information (text, barcodes, machine readable zones, etc.) from images of typical documents such as price tags, office documents, driver's licenses, and ID cards, the quality or complexity of these images is often a hindrance. To address this, Dynamsoft Document Normalizer (DDN) is an SDK designed to analyze structural information such as document boundaries, table boundaries, etc. on images, and then normalize the ROI image so that subsequent processes can better focus on key information.
+When gathering information (text, barcodes, machine readable zones, etc.) from images of typical documents such as price tags, office documents, driver's licenses, and ID cards, the quality or complexity of these images is often a hindrance. To address this, Dynamsoft Document Normalizer (DDN) is an SDK designed to analyze structural information such as document boundaries, table boundaries, etc. on images, and then perform content normalization so that subsequent processes can better focus on key information.
 
 DDN powers your software development from the following aspects:
 
@@ -44,7 +44,7 @@ With DDN, you can extract the four corner coordinates of one or multiple documen
    <p>Figure 3 – Multiple boundaries in one detection</p>
 </div>
 
-Don’t worry if your documents/tables are blurry, damaged, too colorful or peculiar in any way. DDN provides various image processing settings for ful customization. Our default settings are sufficient for most cases. However, additional tweaks can be made for your specific cases to achieve greater speed and accuracy.
+Don’t worry if your documents/tables are blurry, damaged, too colorful or peculiar in any way. DDN provides various image processing settings for full customization. Our default settings are sufficient for most cases. However, additional tweaks can be made for your specific cases to achieve greater speed and accuracy.
 
 ### Various content normalization features
 
@@ -82,6 +82,31 @@ In order to cope with various scenarios, DDN provides a variety of image process
 For example, [`BinarizationModes`]({{site.parameters_reference }}binarization-modes.html) provides several image binarization methods and [`RegionPredetectionModes`]({{site.parameters_reference }}region-predetection-modes.html) provides different pre-detection methods to help locate the ROI.
 
 These modes can be configured not only through API but also through a configuration template (as file, string, JSON etc.). Furthermore, the implementation of these modes can be customized according to customer scenarios to seamlessly integrated with customer's project.
+
+## Usage scenarios
+
+### Retail
+
+In retail, DDN can help detect the price label boundaries or table boundaries in images. Additionally, the extracted images can be used for recognition to extract text information.
+
+### Identity Documents
+
+In many scenarios, identity documents such as id card/passport need to be quickly located and identified. However, the captured images of id card/passport might not be uniformed. You may encounter images taken with different angles, lightings, clearness…etc. With DDN, you can detect the the boundaries of identity document images and normalize the ROI with ease. Therefore, the information extraction of ID document images will become easier.
+
+### Document scanning and archiving
+
+In government or large corporations, we want to keep an electronic version of paper documents. We often do so by taking photos or scanning of the documents. However, the captured document images might not be uniformed. You may encounter images taken with different angles, lightings, clearness…etc. With DDN, you can normalize the document images with ease. DDN also provides various settings so you can customize the outcome of the normalized document image to meet your needs.
+
+## Cross-Platform Programming Languages
+
+DDN is designed to be cross-platform. The core of DDN is written in C/C++ for performance. The library is wrapped for Java, Objective-C and other programming languages so that users can use DDN on iOS, Android, Windows, and Linux. Below is a list of supported OSes and corresponding programming languages:
+
+| OS            | Programming Language |
+|---------------|----------------------|
+|Windows        | C/C++                |
+|Linux          | C/C++                |
+|Android        | Java                 |
+|iOS            | Swift/Objective-C    |
 
 ## How to Use
 
@@ -124,28 +149,3 @@ Please refer to the following articles for more details:
 
 - <a href="https://www.dynamsoft.com/document-normalizer/docs/programming/android/user-guide.html" target="_blank">Getting Started with DDN Android SDK</a>
 - <a href="https://www.dynamsoft.com/document-normalizer/docs/programming/ios/user-guide.html" target="_blank">Getting Started with DDN iOS SDK</a>
-
-## Usage scenarios
-
-### Retail
-
-In retail, DDN can help detect the price label boundaries or table boundaries in images. Additionally, the extracted images can be used for recognition to extract text information.
-
-### Identity Documents
-
-In many scenarios, identity documents such as id card/passport need to be quickly located and identified. However, the captured images of id card/passport might not be uniformed. You may encounter images taken with different angles, lightings, clearness…etc. With DDN, you can detect the the boundaries of identity document images and normalize the ROI with ease. Therefore, the information extraction of ID document images will become easier.
-
-### Document scanning and archiving
-
-In government or large corporations, we want to keep an electronic version of paper documents. We often do so by taking photos or scanning of the documents. However, the captured document images might not be uniformed. You may encounter images taken with different angles, lightings, clearness…etc. With DDN, you can normalize the document images with ease. DDN also provides various settings so you can customize the outcome of the normalized document image to meet your needs.
-
-## Cross-Platform Programming Languages
-
-DDN is designed to be cross-platform. The core of DDN is written in C/C++ for performance. The library is wrapped for Java, Objective-C and other programming languages so that users can use DDN on iOS, Android, Windows, and Linux. Below is a list of supported OSes and corresponding programming languages:
-
-| OS            | Programming Language |
-|---------------|----------------------|
-|Windows        | C/C++                |
-|Linux          | C/C++                |
-|Android        | Java                 |
-|iOS            | Swift/Objective-C    |
