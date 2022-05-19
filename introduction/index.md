@@ -85,6 +85,8 @@ These modes can be configured not only through API but also through a configurat
 
 ## How to use
 
+### DDN SDK Modules Overview
+
 DDN SDK consists of four modules as shown in the following table. This structure is shared between all platform versions of DDN SDK, which makes it easier to integrate and support multiple operating systems in your apps.
 
 Table 1 – Modules description of the SDK
@@ -96,13 +98,13 @@ Table 1 – Modules description of the SDK
 | **DynamsoftImageProcessing** | The image processing library of Dynamsoft's capture vision SDKs, including image processing algorithms and APIs. | **The APIs are for internal use only and is not public yet**|
 | **DynamsoftCore**  | The core library of Dynamsoft's capture vision SDKs, including common basic structure and license related APIs. | **LicenseManager**<br/>**ImageData**<br/>**Quadrilateral**<br/>**......**|
 
-### Interact with mobile camera
+### Quick Start for Mobile Scenarios
 
-In real life, document quad detection and content normalization often occurs in mobile catpure scenarios. In order to simplify the integration cost and provide more convenient functions such as camera control, camera preview and interactive editing etc., we recommend that you use the Dynamsoft Camera Enhancer(DCE) SDK with DDN to complete the document normalizer on the mobile side. The DCE SDK provides three primary classes:
+In real life, document quad detection and content normalization often occurs in mobile catpure scenarios. In order to simplify the integration cost of camera control, camera preview and interactive editing functions etc., we recommend that you use the Dynamsoft Camera Enhancer(DCE) SDK with DDN to complete the document normalizer on the mobile side. The DCE SDK provides three primary classes:
 
-- **CameraEnhancer**
-- **DCECameraView**
-- **DCEImageEditorView**
+- **CameraEnhancer**: It provides camera control, video buffering, frame filtering and fast mode functions for quick camera integration.
+- **DCECameraView**: It is designed to display the camera preview, overlay, viewfinder, etc.
+- **DCEImageEditorView**: It supports static image preview, graphics(rectangle, quadrilateral, text etc.) display and outputs the coordinates of interactively adjusted vertices of border sides, which can be used by DDN SDK.
 
 The easiest steps to integrate DDN and DCE into your application are as follows：
 
