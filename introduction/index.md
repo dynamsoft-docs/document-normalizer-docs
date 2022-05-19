@@ -106,9 +106,9 @@ The primary class in DDN SDK:
 
 In real life, document quad detection and content normalization often occurs in mobile catpure scenarios. In order to simplify the integration cost of camera control, camera preview and interactive editing functions etc., we recommend that you use <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank">Dynamsoft Camera Enhancer(DCE) SDK</a> with DDN to complete the document detection and normalization on the mobile side. The DCE SDK provides three primary classes:
 
-- **CameraEnhancer**: It provides camera control, video buffering, frame filtering and fast mode functions for quick camera integration.
+- **CameraEnhancer**: It provides basic camera control functions as well as advanced features such as video buffering, frame filtering and fast mode for fast camera module integration.
 - **DCECameraView**: It is designed to display the camera preview, overlay, scan region, etc.
-- **DCEImageEditorView**: It supports still image preview, graphics(rectangle, quadrilateral, text etc.) display and outputs the coordinates of interactively adjusted vertices of border sides, which can be used by DDN SDK.
+- **DCEImageEditorView**: It supports previewing still images, displaying graphic items (rectangles, quads, text, etc.) and interactively adjusting the vertices of graphic items.
 
 The easiest steps to integrate DDN and DCE into your application are as follows：
 
