@@ -9,7 +9,7 @@ needGenerateH3Content: true
 breadcrumbText: Android DrawingStyle Class
 ---
 
-# DrawingStyle
+# DrawingStyle Class
 
 The class of DrawingStyle. It stores the detailed styles of the drawing item.
 
