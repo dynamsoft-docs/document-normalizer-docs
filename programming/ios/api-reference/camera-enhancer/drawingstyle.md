@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - iOS DrawingStyle Class
+title: iOS DrawingStyle Class
 description: This is the documentation - iOS DrawingStyle Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS, DrawingStyle
 needAutoGenerateSidebar: true

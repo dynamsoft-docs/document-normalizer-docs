@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Camera Enhancer - Android DCECameraView Class
+title: Android DCECameraView Class
 description: This is the documentation - Android DCECameraView Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android, DCECameraView
 needAutoGenerateSidebar: true
