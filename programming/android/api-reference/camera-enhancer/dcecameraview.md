@@ -9,7 +9,7 @@ needGenerateH3Content: true
 breadcrumbText: Android DCECameraView Class
 ---
 
-# DCECameraView
+# DCECameraView Class
 
 The camera view is the main UI view of the DCE SDK. It is designed to display the video preview, overlay, viewfinder, etc.
 

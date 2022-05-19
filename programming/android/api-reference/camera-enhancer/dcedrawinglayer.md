@@ -9,7 +9,7 @@ needGenerateH3Content: true
 breadcrumbText: Android DCEDrawingLayer Class
 ---
 
-# DCEDrawingLayer
+# DCEDrawingLayer Class
 
 The layers that contains `DrawingItems`. Users can add configurations for the `DrawingItems` via `DCEDrawingLayer`
 

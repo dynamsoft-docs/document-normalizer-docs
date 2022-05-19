@@ -9,7 +9,7 @@ needGenerateH3Content: true
 breadcrumbText: Android QuadDrawingItem Class
 ---
 
-# QuadDrawingItem
+# QuadDrawingItem Class
 
 `QuadDrawingItem` is a subclass of `DrawingItem`. Dynamsoft Camera Enhancer will draw the `QuadDrawingItem` on the UI if it is created and added to the `DCECameraView` or `DCEImageEditorView`.
 

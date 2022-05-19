@@ -9,7 +9,7 @@ needGenerateH3Content: true
 breadcrumbText: Android TextDrawingItem Class
 ---
 
-# TextDrawingItem
+# TextDrawingItem Class
 
 `TextDrawingItem` is a subclass of `DrawingItem`. Dynamsoft Camera Enhancer will draw the `TextDrawingItem` on the UI if it is created and added to the `DCECameraView` or `DCEImageEditorView`.
 
@@ -19,7 +19,7 @@ class TextDrawingItem extends DrawingItem
 
 | Method | Descriptions |
 | ------ | ------------ |
-| [`TextDrawingItem`](#Textdrawingitem) | The constructor of `TextDrawingItem`. Create an instance of `TextDrawingItem`. |
+| [`TextDrawingItem`](#textdrawingitem) | The constructor of `TextDrawingItem`. Create an instance of `TextDrawingItem`. |
 | [`getMediaType`](#getmediatype) | Get the media type of the `TextDrawingItem`. |
 | [`getText`](#gettext) | Get the `Text` of the `TextDrawingItem`. |
 | [`getDrawingStyleId`](#getdrawingstyleid) | Get the drawing style of the current drawing item. |
