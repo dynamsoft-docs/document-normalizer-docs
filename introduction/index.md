@@ -85,7 +85,7 @@ These modes can be configured not only through API but also through a configurat
 
 ## How to use
 
-### DDN SDK Modules Overview
+### Overview of DDN SDK Modules
 
 DDN SDK consists of four modules as shown in the following table. This structure is shared between all platform versions of DDN SDK, which makes it easier to integrate and support multiple operating systems in your apps.
 
