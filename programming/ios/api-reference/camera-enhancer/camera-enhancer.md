@@ -11,11 +11,17 @@ breadcrumbText: iOS CameraEnhancer Class
 
 # DynamsoftCameraEnhancer Class
 
-The main class of `DynamsoftCameraEnhancer`. it contains APIs for user to:
+The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user to:
 
-- Set the basic properties of the camera like open, close, resolution, etc.
-- Get video frames from the video streaming.
-- Enable advanced features like frame filtering, enhanced focus, etc.
+- Implement basic camera control like open, close, change resolution, etc.
+- Get frames from the video streaming.
+- Enable advanced features including:
+  - Frame filtering by sharpness
+  - Frame filtering by sensor
+  - Enhanced focus
+  - Frame cropping
+  - Auto zoom
+  - Smart torch control
 
 ```objc
 @interface DynamsoftCameraEnhancer:NSObject
