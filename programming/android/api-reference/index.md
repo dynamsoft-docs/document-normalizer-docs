@@ -15,6 +15,19 @@ noTitleIndex: true
 
 This is the main class of Dynamsoft Document Normalizer(DDN) SDK. It supports quad detection and image normalization for still pictures and live video.
 
+Common detections include:
+
+- Document boundary detection
+- Table boundary detection
+
+Common normalizations include：
+
+- Border crop
+- Deskew
+- Perspective correction
+- Colour mode
+- Brightness and Contrast
+
 ```java
 class com.dynamsoft.ddn.DocumentNormalizer
 ```
