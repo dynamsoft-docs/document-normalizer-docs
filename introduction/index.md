@@ -15,7 +15,7 @@ DDN powers your software development from the following aspects:
 - Various content normalization features such as border crop/deskew/perspective correction/colur mode/contrast/brightness, etc.
 - Scenario-oriented customizablity such as image processing modes
 
-With DDN, you can efficiently embed the functionality of quadrilateral detection and content normalization in multiple platforms. DDN also provides various image processing features, allowing you to customize DDN and meet your business needs.
+With DDN, you can efficiently embed the functionality of quadrilateral detection and content normalization in your mobile, desktop and server applications. DDN also provides various image processing features, allowing you to customize DDN and meet your business needs.
 
 ## Key Features
 
