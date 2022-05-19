@@ -44,7 +44,7 @@ With DDN, you can extract the four corner coordinates of one or multiple documen
    <p>Figure 3 – Multiple boundaries in one detection</p>
 </div>
 
-Don’t worry if your documents/tables are blurry, damaged, too colorful or peculiar in any way. DDN provides various image processing settings for fully customization. Our default settings are sufficient for most cases. However, additional tweaks can be made for your specific cases to achieve greater speed and accuracy.
+Don’t worry if your documents/tables are blurry, damaged, too colorful or peculiar in any way. DDN provides various image processing settings for ful customization. Our default settings are sufficient for most cases. However, additional tweaks can be made for your specific cases to achieve greater speed and accuracy.
 
 ### Various content normalization features
 
@@ -132,7 +132,7 @@ In many scenarios, identity documents such as id card/passport need to be quickl
 
 ### Document scanning and archiving
 
-In government or large corporations, we want to keep an electronic version of paper documents. We often do so by taking photos or scanning of the documents. However, the captured document images might not be uniformed. You may encounter images taken with different angles, lightings, clearness…etc. With DDN, you can normalize the document images with ease. DDN also provide various settings so you can customize the outcome of the normalized document image to meet your needs.
+In government or large corporations, we want to keep an electronic version of paper documents. We often do so by taking photos or scanning of the documents. However, the captured document images might not be uniformed. You may encounter images taken with different angles, lightings, clearness…etc. With DDN, you can normalize the document images with ease. DDN also provides various settings so you can customize the outcome of the normalized document image to meet your needs.
 
 ## Cross-Platform Programming Languages
 
