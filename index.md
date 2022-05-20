@@ -9,7 +9,7 @@ description: Documentation Homepage
 
 # Documentation HomePage
 
-- [Introduction]({{ site.introduction }}overview/)
+- [Introduction]({{ site.introduction }})
 
 - [Programming]({{ site.programming }})
   - [Android]({{ site.android }})
