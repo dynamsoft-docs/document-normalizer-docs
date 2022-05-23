@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Document Normalizer iOS API Reference - Interface LicenseVerificationListener
-description: This is the interface LicenseVerificationListener page of Dynamsoft Document Normalizer for iOS SDK.
-keywords: LicenseVerificationListener, interface, ios
+title: Dynamsoft Document Normalizer iOS API Reference - Protocol LicenseVerificationListener
+description: This is the Protocol LicenseVerificationListener page of Dynamsoft Document Normalizer for iOS SDK.
+keywords: LicenseVerificationListener, Protocol, ios
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true
@@ -11,7 +11,7 @@ pageStartVer: 1.0
 
 # LicenseVerificationListener
 
-`LicenseVerificationListener` is the interface to handle callback when using [`initLicense`](license-manager.md#initlicense).
+`LicenseVerificationListener` is the protocol to handle callback when using [`initLicense`](license-manager.md#initlicense).
 
 ```objc
 @protocol LicenseVerificationListener
