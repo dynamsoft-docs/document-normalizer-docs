@@ -174,14 +174,7 @@ EnumCameraState getCameraState()
 
 **Return Value**
 
-One of the preset camera state in Enumeration `EnumCameraState`.
-
-| `EnumCameraState` | Value | Description |
-| ----------------- | ----- | ----------- |
-| `CAMERA_STATE_OPENED` | 1 | The selected camera is opened. |
-| `CAMERA_STATE_CLOSED` | 2 | The selected camera is closed. |
-| `CAMERA_STATE_OPENING` | 0 | The selected camera is currently closed but will be opened soon. |
-| `CAMERA_STATE_CLOSING` | 3 | The selected camera is currently closed but will be closed soon. |
+One of the preset camera state in Enumeration [`EnumCameraState`](enum-camera-state.md).
 
 **Code Snippet**
 
@@ -404,15 +397,15 @@ cameraEnhancer.removeListener(listener);
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`](#enablefeature) | Enable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
-| [`disableFeatures`](#disablefeature) | Disable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
+| [`enableFeatures`](#enablefeature) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values. |
+| [`disableFeatures`](#disablefeature) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values. |
 | [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
 
 &nbsp;
 
 ### enableFeatures
 
-Enable camera enhancer features by inputting `EnumEnhancerFeatures` value.
+Enable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) value.
 
 ```java
 void enableFeatures(int enhancerFeatures) throws CameraEnhancerException
@@ -420,17 +413,7 @@ void enableFeatures(int enhancerFeatures) throws CameraEnhancerException
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.  
-
-| `EnumEnhancerFeatures` | Value | Description |
-| ---------------- | ----- | ----------- |
-| `EF_FRAME_FILTER` | 0x01 | The frame sharpness filter feature of DCE. By enabling this feature, the low-quality frame will be recognized and discarded automatically. |
-| `EF_SENSOR_CONTROL` | 0x02 | The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking. |
-| `EF_ENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
-| `EF_FAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
-| `EF_AUTO_ZOOM` | 0x10 | The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area. |
-| `EF_SMART_TORCH` | 0x20 | Add a smart torch on the UI. The torch will be hided when the environment brightness is high and displayed when the brightness is low. |
-| `EF_ALL` | 0x3f | Enable all the above features. |
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).  
 
 **Code Snippet**
 
@@ -447,7 +430,7 @@ The enable action will not be approved if the license is invalid. If your input 
 
 ### disableFeatures
 
-Disable camera enhancer features by inputting `EnumEnhancerFeatures` values.
+Disable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values.
 
 ```java
 void disableFeatures(int enhancerFeatures)
@@ -455,17 +438,7 @@ void disableFeatures(int enhancerFeatures)
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.
-
-| `EnumEnhancerFeatures` | Value | Description |
-| ---------------- | ----- | ----------- |
-| `EF_FRAME_FILTER` | 0x01 | The frame sharpness filter feature of DCE. By enabling this feature, the low-quality frame will be recognized and discarded automatically. |
-| `EF_SENSOR_CONTROL` | 0x02 | The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking. |
-| `EF_ENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
-| `EF_FAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
-| `EF_AUTO_ZOOM` | 0x10 | The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area. |
-| `EF_SMART_TORCH` | 0x20 | Add a smart torch on the UI. The torch will be hided when the environment brightness is high and displayed when the brightness is low. |
-| `EF_ALL` | 0x3f | Enable all the above features. |
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
 
 **Code Snippet**
 
@@ -491,17 +464,7 @@ boolean isFeatureEnabled(int enhancerFeatures)
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.
-
-| `EnumEnhancerFeatures` | Value | Description |
-| ---------------------- | ----- | ----------- |
-| `EF_FRAME_FILTER` | 0x01 | The frame sharpness filter feature of DCE. By enabling this feature, the low-quality frame will be recognized and discarded automatically. |
-| `EF_SENSOR_CONTROL` | 0x02 | The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking. |
-| `EF_ENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
-| `EF_FAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
-| `EF_AUTO_ZOOM` | 0x10 | The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area. |
-| `EF_SMART_TORCH` | 0x20 | Add a smart torch on the UI. The torch will be hided when the environment brightness is high and displayed when the brightness is low. |
-| `EF_ALL` | 0x3f | Enable all the above features. |
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
 
 **Return Value**
 
@@ -620,16 +583,7 @@ void setResolution(EnumResolution resolution) throws CameraEnhancerException
 
 **Parameters**
 
-`resolution`: One of the int value that preset in `EnumResolution`.
-
-| `EnumResolution` | Value | Description |
-| ---------------- | ----- | ----------- |
-| `RESOLUTION_AUTO` | 0 | The resolution will be set automatically. |
-| `RESOLUTION_480P` | 1 | The resolution will be set to 480P. |
-| `RESOLUTION_720P` | 2 | The resolution will be set to 720P. |
-| `RESOLUTION_1080P` | 3 | The resolution will be set to 1080P. |
-| `RESOLUTION_2K` | 4 | The resolution will be set to 2K. |
-| `RESOLUTION_4K` | 5 | The resolution will be set to 4K. |
+`resolution`: One of the int value that preset in [`EnumResolution`](enum-resolution.md).
 
 **Code Snippet**
 

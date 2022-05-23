@@ -141,13 +141,7 @@ EnumFrameQuality getQuality()
 
 **Return Value**
 
-The method returns an enumeration value in `EnumFrameQuality`.
-
-| `EnumFrameQuality` | Value | Description |
-| ---------------- | ----- | ----------- |
-| `FQ_HIGH` | 0 | The DCEFrame quality is high. |
-| `FQ_LOW` | 1 | The DCEFrame quality is low. |
-| `FQ_UNKNOWN` | 2 | The DCEFrame quality is unknown because the frame filter feature is not enabled. |
+The method returns an enumeration value in [`EnumFrameQuality`](enum-frame-quality.md).
 
 **Remarks**
 
@@ -296,13 +290,7 @@ void setQuality(EnumFrameQuality quality)
 
 **Parameters**
 
-`quality`: One of the `EnumFrameQuality` value that means the frame quality..
-
-| `EnumFrameQuality` | Value | Description |
-| ---------------- | ----- | ----------- |
-| `FQ_HIGH` | 0 | The DCEFrame quality is high. |
-| `FQ_LOW` | 1 | The DCEFrame quality is low. |
-| `FQ_UNKNOWN` | 2 | The DCEFrame quality is unknown because the frame filter feature is not enabled. |
+`quality`: One of the [`EnumFrameQuality`](enum-frame-quality.md) value that indicates the frame quality.
 
 &nbsp;
 
