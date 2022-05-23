@@ -441,7 +441,7 @@ When the detected quadrilateral results are satisfied, we can move on to mannual
 
 #### Initialize the Image Editor View
 
-In this section, we are going to create a view that displays the original image and editable quadrilaterals. User can select adjust the edge of the quadrilateral before normalizing the document area.
+In this section, we are going to create a view that displays the image to be processed and detected quadrilaterals from the image. User can select adjust the edge of the quadrilaterals before normalizing the document area.
 
 1. Create a new empty activity named `QuadEditViewController` and import `DynamsoftCameraEnhancer`.
 

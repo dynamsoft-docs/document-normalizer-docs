@@ -11,7 +11,7 @@ breadcrumbText: Android DCEDrawingLayer Class
 
 # DCEDrawingLayer Class
 
-The layers that contains `DrawingItems`. Users can add configurations for the `DrawingItems` via `DCEDrawingLayer`
+A `DCEDrawingLayer` is the layer that contains and displays `DrawingItems`. Users can add configurations for the `DrawingItems` via `DCEDrawingLayer`
 
 ```java
 class com.dynamsoft.dce.DCEDrawingLayer
