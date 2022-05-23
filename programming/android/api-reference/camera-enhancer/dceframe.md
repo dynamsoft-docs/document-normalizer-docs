@@ -113,7 +113,7 @@ int getPixelFormat()
 
 **Return Value**
 
-The method returns an int value that refers to the pixel format of the image. View in [`ImagePixelFormat`]({{site.enumerations}}image-pixel-format.html).
+The method returns an int value that refers to the pixel format of the image. View morein [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=android).
 
 &nbsp;
 
@@ -262,7 +262,7 @@ void setPixelFormat(int pixelFormat)
 
 **Parameters**
 
-`pixelFormat`: The pixelFormat of the image. View more in Dynamsoft Barcode Reader Enumeration [`ImagePixelFormat`]({{site.enumerations}}image-pixel-format.html).
+`pixelFormat`: The pixelFormat of the image. View more in [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=android).
 
 &nbsp;
 

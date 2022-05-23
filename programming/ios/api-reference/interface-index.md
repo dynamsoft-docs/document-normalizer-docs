@@ -9,7 +9,7 @@ noTitleIndex: true
 pageStartVer: 1.0
 ---
 
-# Interfaces
+# Protocol
 
 - [`LicenseVerificationListener`](license-verification-listener.md)
 - [`DetectResultListener`](detect-result-listener.md)

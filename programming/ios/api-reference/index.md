@@ -68,7 +68,7 @@ This is the main class of Dynamsoft Document Normalizer(DDN) SDK. It supports qu
 - [`iDetectedQuadResult`](detected-quad-result.md)
 - [`iNormalizedImageResult`](normalized-image-result.md)
 
-## Interfaces
+## Protocol
 
 - [`LicenseVerificationListener`](license-verification-listener.md)
 - [`DetectResultListener`](detect-result-listener.md)

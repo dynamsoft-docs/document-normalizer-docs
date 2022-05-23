@@ -73,7 +73,7 @@ NSInteger stride
 
 ## pixelFormat
 
-The property stores the pixel format of the image. The property value is one of the Enumeration value of `ImagePixelFormat`. Currently, the image output formats of `DCEFrame` are NV21 or ARGB_8888. View more in Dynamsoft Barcode Reader Enumeration [`ImagePixelFormat`]({{site.enumerations}}image-pixel-format.html)
+The property stores the pixel format of the image. The property value is one of the Enumeration value of `ImagePixelFormat`. Currently, the image output formats of `DCEFrame` are NV21 or ARGB_8888. View more in [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=ios)
 
 ```objectivec
 NSInteger pixelFormat
