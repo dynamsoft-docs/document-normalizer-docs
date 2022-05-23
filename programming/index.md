@@ -8,5 +8,5 @@ description: Dynamsoft Document Normalizer - Programming
 
 - [Android](android)
 - [iOS](ios)
-- [C Language](c/)
+- [C](c/)
 - [C++](cplusplus/)
