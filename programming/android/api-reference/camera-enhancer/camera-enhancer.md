@@ -31,7 +31,7 @@ class com.dynamsoft.dce.CameraEnhancer
 
 | Method | Description |
 | ------ | ----------- |
-| [`CameraEnhancer`](#cameraenhancer) | Initialize the `CameraEnhancer` object. |
+| [`CameraEnhancer`](#cameraenhancer) | Initialize the `CameraEnhancer`. |
 | [`getVersion`](#getversion) | Get the SDK version. |
 
 &nbsp;
