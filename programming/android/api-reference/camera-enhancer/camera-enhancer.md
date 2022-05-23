@@ -61,18 +61,17 @@ CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
 Get the SDK version of Dynamsoft Camera Enhancer.
 
 ```java
-String getVersion()
+static String getVersion()
 ```
 
 **Return Value**
 
-A string value that stands for the camera enhancer SDK version.
+A string value that indicates the version of `CameraEnhancer` SDK.
 
 **Code Snippet**
 
 ```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-String DCEVersion = cameraEnhancer.getVersion();
+String version = CameraEnhancer.getVersion();
 ```
 
 &nbsp;

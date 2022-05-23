@@ -82,7 +82,7 @@ The `Quadrilateral` that indicates the location of the `QuadDrawingItem`.
 **Code Snippet**
 
 ```java
-com.dynamsoft.core.Quadrilateral quad = drawingItem.getRect();
+com.dynamsoft.core.Quadrilateral quad = drawingItem.getQuad();
 ```
 
 {%- include api-reference/drawing-item-android.md -%}

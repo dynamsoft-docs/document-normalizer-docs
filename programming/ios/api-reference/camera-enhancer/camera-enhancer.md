@@ -107,12 +107,12 @@ func dceLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 Get the SDK version of Dynamsoft Camera Enhancer.
 
 ```objc
-- (NSString*)getVersion;
++ (NSString*)getVersion;
 ```
 
 **Return Value**
 
-A string value that stands for the Camera Enhancer SDK version.
+A string value that indicates the version of DynamsoftCameraEnhancer SDK.
 
 **Code Snippet**
 
@@ -122,11 +122,11 @@ A string value that stands for the Camera Enhancer SDK version.
 >
 >1. 
 ```objc
-NSString* version = [_dce getVersion];
+NSString* version = [DynamsoftCameraEnhancer getVersion];
 ```
 2. 
 ```swift
-let version = dce.getVersion()
+let version = DynamsoftCameraEnhancer.getVersion()
 ```
 
 &nbsp;

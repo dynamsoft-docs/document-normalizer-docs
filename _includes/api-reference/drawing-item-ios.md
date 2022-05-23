@@ -14,7 +14,7 @@ The property that identifies the ID of the `DrawingStyle`.
 
 ## state
 
-The property that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`](enum-drawing-item-state.md).
+The property that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.ios_camera_enhancer }}enum-drawing-item-state.html).
 
 ```objc
 @property (assign, nonatomic) EnumDrawingItemState state;
