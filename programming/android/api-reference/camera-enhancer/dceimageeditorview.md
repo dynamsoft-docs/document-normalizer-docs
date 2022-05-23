@@ -13,6 +13,10 @@ breadcrumbText: Android DCEImageEditorView Class
 
 `DCEImageEditorView` is the class that enable users to add UI configurations on a static image.
 
+```java
+class com.dynamsoft.dce.DCEImageEditorView
+```
+
 | Method Name | Description |
 | ----------- | ----------- |
 | [`setOriginalImage`](#setoriginalimage) | Set the background image of the view with an original image. |

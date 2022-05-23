@@ -14,7 +14,7 @@ breadcrumbText: Android DCECameraView Class
 The camera view is the main UI view of the DCE SDK. It is designed to display the video preview, overlay, viewfinder, etc.
 
 ```java
-class com.dynamsoft.dce.DCECameraView extends RelativeLayout
+class com.dynamsoft.dce.DCECameraView
 ```
 
 | Method Name | Description |

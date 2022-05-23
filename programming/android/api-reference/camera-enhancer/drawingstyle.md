@@ -14,7 +14,7 @@ breadcrumbText: Android DrawingStyle Class
 The class of DrawingStyle. It stores the detailed styles of the drawing item.
 
 ```java
-class DrawingStyle 
+class com.dynamsoft.dce.DrawingStyle 
 ```
 
 | Method | Description |

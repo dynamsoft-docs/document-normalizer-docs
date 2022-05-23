@@ -13,6 +13,10 @@ breadcrumbText: iOS DCEImageEditorView Class
 
 `DCEImageEditorView` is the class that enable users to add UI configurations on a static image.
 
+```objc
+@interface DCEImageEditorView : UIView
+```
+
 | Method Name | Description |
 | ----------- | ----------- |
 | [`setOriginalImage`](#setoriginalimage) | Set the background image of the view with an original image. |

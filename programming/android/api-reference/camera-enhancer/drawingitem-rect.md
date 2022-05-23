@@ -14,7 +14,7 @@ breadcrumbText: Android RectDrawingItem Class
 `RectDrawingItem` is a subclass of `DrawingItem`. Dynamsoft Camera Enhancer will draw the `RectDrawingItem` on the UI if it is created and added to the `DCECameraView` or `DCEImageEditorView`.
 
 ```java
-class RectDrawingItem extends DrawingItem
+class com.dynamsoft.dce.RectDrawingItem extends DrawingItem
 ```
 
 | Method | Descriptions |

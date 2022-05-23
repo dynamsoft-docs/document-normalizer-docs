@@ -11,6 +11,12 @@ breadcrumbText: Android DrawingItem Class
 
 # DrawingItem
 
+`DrawingItem` is the class for users to draw graphic items on the UI view.
+
+```java
+class com.dynamsoft.dce.DrawingItem
+```
+
 | Method Name | Description |
 | ----------- | ----------- |
 | [`getDrawingStyleId`](#getdrawingstyleid) | Get the drawing style of the current drawing item. |

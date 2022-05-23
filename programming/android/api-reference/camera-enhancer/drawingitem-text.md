@@ -14,7 +14,7 @@ breadcrumbText: Android TextDrawingItem Class
 `TextDrawingItem` is a subclass of `DrawingItem`. Dynamsoft Camera Enhancer will draw the `TextDrawingItem` on the UI if it is created and added to the `DCECameraView` or `DCEImageEditorView`.
 
 ```java
-class TextDrawingItem extends DrawingItem
+class com.dynamsoft.dce.TextDrawingItem extends DrawingItem
 ```
 
 | Method | Descriptions |
