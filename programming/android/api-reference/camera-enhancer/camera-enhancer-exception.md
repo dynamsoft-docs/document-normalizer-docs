@@ -33,7 +33,7 @@ int getErrorCode()
 
 **Return Value**
 
-The error code. See also [`Error Code List`]({{ site.enumerations }}errorcode.html).
+The error code. See <a href="https://www.dynamsoft.com/camera-enhancer/docs/parameters/enumerations/errorcode.html?ver=latest" target="_blank">Camera Enhancer error code list</a>.
 
 **Code Snippet**
 

@@ -79,7 +79,7 @@ Set product key and activate the SDK. It is recommended to initialize the licens
 **Parameters**
 
 `license`: The product key.  
-`verificationListener`: The listener that handles callback when the license server returns. See also [`DCELicenseVerificationListener`]({{ site.ios-api-auxiliary }}protocol-licenselistener.html).
+`verificationListener`: The listener that handles callback when the license server returns. See also [`DCELicenseVerificationListener`](protocol-licenselistener.md).
 
 **Code Snippet**
 
@@ -252,7 +252,14 @@ Get the state of the currently selected camera.
 
 **Return Value**
 
-One of the preset camera state in Enumeration [`EnumCameraState`]({{site.enumerations}}enum-camera-state.html).
+One of the preset camera state in Enumeration `EnumCameraState` (view the table below).
+
+| Member (Objective-C) | Member (Swift) | Value | Description |
+| -------------------- | -------------- | ----- | ----------- |
+| `EnumCAMERA_STATE_OPENED` | `EnumCAMERA_STATE_OPENED` | 1 | The selected camera is opened. |
+| `EnumCAMERA_STATE_CLOSED` | `EnumCAMERA_STATE_CLOSED` | 2 | The selected camera is closed. |
+| `EnumCAMERA_STATE_OPENING` | `EnumCAMERA_STATE_OPENING` | 0 | The selected camera is currently closed but will be opened soon. |
+| `EnumCAMERA_STATE_CLOSING` | `EnumCAMERA_STATE_CLOSING` | 3 | The selected camera is currently closed but will be closed soon. |
 
 **Code Snippet**
 
@@ -539,15 +546,15 @@ dce.removeListener(self)
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
-| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
+| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
+| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
 | [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
 
 &nbsp;
 
 ### enableFeatures
 
-Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) value.
+Enable camera enhancer features by inputting `EnumEnhancerFeatures` value.
 
 ```objc
 - (void)enableFeatures:(EnumEnhancerFeatures)features  error:(NSError * _Nullable * _Nullable)error;
@@ -555,7 +562,19 @@ Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enu
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).  
+`enhancerFeatures`: The combined value of `EnumEnhancerFeatures` (view the table below).
+
+`EnumEnhancerFeatures`:
+
+| Member (Objective-C) | Member (Swift) | Value | Description |
+| ---------------- | -------------------- | -------------- | ----- | ----------- |
+| `EnumFRAME_FILTER` | `EnumFRAME_FILTER` | 0x01 | The frame sharpness filter feature of DCE. By enabling this feature, the low-quality frame will be recognized and discarded automatically. |
+| `EnumSENSOR_CONTROL` | `EnumSENSOR_CONTROL` | 0x02 | The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking. |
+| `EnumENHANCED_FOCUS` | `EnumENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
+| `EnumFAST_MODE` | `EnumFAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
+| `EnumAUTO_ZOOM` | `EnumAUTO_ZOOM` | 0x10 | The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area. |
+| `EnumSMART_TORCH` | `EnumSMART_TORCH` | 0x20 | Add a smart torch on the UI. The torch will be hided when the environment brightness is high and displayed when the brightness is low. |
+| `EnumALL` | `EnumALL` | 0x3f | Enable all the above features. |
 
 **Code Snippet**
 
@@ -574,24 +593,13 @@ dce.enableFeatures(EnumEnhancerFeature.EnumFRAME_FILTER.rawValue, error: &error)
 
 **Remarks**
 
-The `EnumEnhancerFeatures` members:
-
-|  Members | Value |
-| -------- | ----- |
-| `EnumFRAME_FILTER` | 0x01 |
-| `EnumSENSOR_CONTROL` | 0x02 |
-| `EnumENHANCED_FOCUS` | 0x04 |
-| `EnumFAST_MODE` | 0x08 |
-| `EnumAUTO_ZOOM` | 0x10 |
-| `EnumSMART_TORCH` | 0x20 |
-
 The enable action will not be approved if the license is invalid. If your input values include the features that have been already enabled, these features will keep the enabled status.
 
 &nbsp;
 
 ### disableFeatures
 
-Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values.
+Disable camera enhancer features by inputting `EnumEnhancerFeatures` values.
 
 ```objc
 - (void)disableFeatures:(EnumEnhancerFeatures)features;
@@ -599,7 +607,19 @@ Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.en
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).  
+`enhancerFeatures`: The combined value of `EnumEnhancerFeatures` (view the table below).
+
+`EnumEnhancerFeatures`:
+
+| Member (Objective-C) | Member (Swift) | Value | Description |
+| ---------------- | -------------------- | -------------- | ----- | ----------- |
+| `EnumFRAME_FILTER` | `EnumFRAME_FILTER` | 0x01 | The frame sharpness filter feature of DCE. By enabling this feature, the low-quality frame will be recognized and discarded automatically. |
+| `EnumSENSOR_CONTROL` | `EnumSENSOR_CONTROL` | 0x02 | The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking. |
+| `EnumENHANCED_FOCUS` | `EnumENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
+| `EnumFAST_MODE` | `EnumFAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
+| `EnumAUTO_ZOOM` | `EnumAUTO_ZOOM` | 0x10 | The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area. |
+| `EnumSMART_TORCH` | `EnumSMART_TORCH` | 0x20 | Add a smart torch on the UI. The torch will be hided when the environment brightness is high and displayed when the brightness is low. |
+| `EnumALL` | `EnumALL` | 0x3f | Enable all the above features. |
 
 **Code Snippet**
 
@@ -632,7 +652,19 @@ Check whether the input features are enabled.
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).
+`enhancerFeatures`: The combined value of `EnumEnhancerFeatures` (view the table below).
+
+`EnumEnhancerFeatures`:
+
+| Member (Objective-C) | Member (Swift) | Value | Description |
+| ---------------- | -------------------- | -------------- | ----- | ----------- |
+| `EnumFRAME_FILTER` | `EnumFRAME_FILTER` | 0x01 | The frame sharpness filter feature of DCE. By enabling this feature, the low-quality frame will be recognized and discarded automatically. |
+| `EnumSENSOR_CONTROL` | `EnumSENSOR_CONTROL` | 0x02 | The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking. |
+| `EnumENHANCED_FOCUS` | `EnumENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
+| `EnumFAST_MODE` | `EnumFAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
+| `EnumAUTO_ZOOM` | `EnumAUTO_ZOOM` | 0x10 | The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area. |
+| `EnumSMART_TORCH` | `EnumSMART_TORCH` | 0x20 | Add a smart torch on the UI. The torch will be hided when the environment brightness is high and displayed when the brightness is low. |
+| `EnumALL` | `EnumALL` | 0x3f | Enable all the above features. |
 
 **Return Value**
 
@@ -672,7 +704,7 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`setZoom`](#setzoom) | Set the zoom factor. Once **setZoom** is triggered and approved, the zoom factor of the activated camera will immediately become the input value. |
 | [`setFocus`](#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
-| [`setScanRegion`](#setscanregion) | Set the **scanRegion** with a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value. The frame will be cropped according to the scan region. |
+| [`setScanRegion`](#setscanregion) | Set the **scanRegion** with a [`iRegionDefinition`](region-definition.md) value. The frame will be cropped according to the scan region. |
 | [`getScanRegion`](#getscanregion) | Get the scan region. |
 | [`scanRegionVisible`](#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
 | [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON file from the storage. |
@@ -750,7 +782,15 @@ Input one of the preset resolution value in Enumeration `Resolution`. The camera
 
 **Parameters**
 
-`resolution`: One of the int value that preset in Enumeration [`EnumResolution`]({{site.enumerations}}enum-resolution.html).
+`resolution`: One of the int value that preset in Enumeration `EnumResolution` (view the table below).
+
+| Member (Objective-C) | Member (Swift) | Value | Description |
+| -------------------- | -------------- | ----- | ----------- |
+| `EnumRESOLUTION_AUTO` | `EnumRESOLUTION_AUTO` | 0 | The resolution will be set automatically. |
+| `EnumRESOLUTION_480P` | `EnumRESOLUTION_480P` | 1 | The resolution will be set to 480P. |
+| `EnumRESOLUTION_720P` | `EnumRESOLUTION_720P` | 2 | The resolution will be set to 720P. |
+| `EnumRESOLUTION_1080P` | `EnumRESOLUTION_1080P` | 3 | The resolution will be set to 1080P. |
+| `EnumRESOLUTION_4K` | `EnumRESOLUTION_4K` | 5 | The resolution will be set to 4K. |
 
 **Code Snippet**
 
@@ -868,7 +908,7 @@ Specify the `scanRegion`. The DCEFrames will be cropped according to the `scanRe
 
 **Parameters**
 
-`scanRegion`: Use a [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html).
+`scanRegion`: Use a [`iRegionDefinition`](region-definition.md) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`](region-definition.md).
 
 **Code Snippet**
 
@@ -899,14 +939,14 @@ dce.setScanRegion(scanRegion, error: &error)
 
 **Remarks**
 
-- The region definition defines the region on the **camera view**. For each value of the class [`iRegionDefinition`]({{ site.ios-api-auxiliary }}region-definition.html):
+- The region definition defines the region on the **camera view**. For each value of the class [`iRegionDefinition`](region-definition.md):
   - The `regionTop` is the distance between the **top** of the scan region and the **top** of the video frame.
   - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the video frame.
   - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the video frame.
   - The `regionRight` is the distance between the **right** of the scan region and the **left** of the video frame.
 
 - When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
-- You will still get the original [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from [`FrameOutputCallback`]({{ site.ios-api-auxiliary }}protocol-dceframelistener.html) and cropped [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{ site.ios-api-auxiliary }}dceframe.html) will be configured based on the **scanRegion** when `setScanRegion` is triggered.
+- You will still get the original [`DCEFrame`](dceframe.md) from [`FrameOutputCallback`](protocol-dceframelistener.md) and cropped [`DCEFrame`](dceframe.md) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`](dceframe.md) will be configured based on the **scanRegion** when `setScanRegion` is triggered.
 - When you trigger `setScanRegion`, the [`scanRegionVisible`](#scanregionvisible) will be set to true automatically. If you don't want to display the **scanRegion** on the UI, please set the [`scanRegionVisible`](#scanregionvisible) to false manually.
 
 &nbsp;

@@ -31,8 +31,7 @@ class com.dynamsoft.dce.CameraEnhancer
 
 | Method | Description |
 | ------ | ----------- |
-| [`CameraEnhancer`](#cameraenhancer) | Initialize the `CameraEnhancer` object. |
-| [`initLicense`](#initlicense) | **Deprecated**. Sets product key and activate the SDK. |
+| [`CameraEnhancer`](#cameraenhancer) | Initialize the `CameraEnhancer`. |
 | [`getVersion`](#getversion) | Get the SDK version. |
 
 &nbsp;
@@ -53,36 +52,6 @@ CameraEnhancer(android.content.Context context)
 
 ```java
 CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-```
-
-&nbsp;
-
-### initLicense
-
-> The method is deprecated.
-
-Set product key and activate the SDK.
-
-```java
-static void initLicense(String license, DCELicenseVerificationListener listener)
-```
-
-**Parameters**
-
-`license`: The product key.  
-`listener`: The listener that handles callback when the license server returns.  See also [`DCELicenseVerificationListener`]({{ site.android-api-auxiliary }}interface-licenselistener.html).
-
-**Code Snippet**
-
-```java
-CameraEnhancer.initLicense("Put your license here", new DCELicenseVerificationListener(){
-    @Override
-    public void DCELicenseVerificationCallback(boolean b, Exception e) {
-        if (!b && e != null) {
-            e.printStackTrace();
-        }
-    }
-});
 ```
 
 &nbsp;
@@ -205,7 +174,14 @@ EnumCameraState getCameraState()
 
 **Return Value**
 
-One of the preset camera state in Enumeration [`EnumCameraState`]({{site.enumerations}}enum-camera-state.html).
+One of the preset camera state in Enumeration `EnumCameraState`.
+
+| `EnumCameraState` | Value | Description |
+| ----------------- | ----- | ----------- |
+| `CAMERA_STATE_OPENED` | 1 | The selected camera is opened. |
+| `CAMERA_STATE_CLOSED` | 2 | The selected camera is closed. |
+| `CAMERA_STATE_OPENING` | 0 | The selected camera is currently closed but will be opened soon. |
+| `CAMERA_STATE_CLOSING` | 3 | The selected camera is currently closed but will be closed soon. |
 
 **Code Snippet**
 
@@ -428,15 +404,15 @@ cameraEnhancer.removeListener(listener);
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`](#enablefeature) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
-| [`disableFeatures`](#disablefeature) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values. |
+| [`enableFeatures`](#enablefeature) | Enable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
+| [`disableFeatures`](#disablefeature) | Disable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
 | [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
 
 &nbsp;
 
 ### enableFeatures
 
-Enable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) value.
+Enable camera enhancer features by inputting `EnumEnhancerFeatures` value.
 
 ```java
 void enableFeatures(int enhancerFeatures) throws CameraEnhancerException
@@ -444,28 +420,26 @@ void enableFeatures(int enhancerFeatures) throws CameraEnhancerException
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).  
+`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.  
+
+| `EnumEnhancerFeatures` | Value | Description |
+| ---------------- | ----- | ----------- |
+| `EF_FRAME_FILTER` | 0x01 | The frame sharpness filter feature of DCE. By enabling this feature, the low-quality frame will be recognized and discarded automatically. |
+| `EF_SENSOR_CONTROL` | 0x02 | The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking. |
+| `EF_ENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
+| `EF_FAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
+| `EF_AUTO_ZOOM` | 0x10 | The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area. |
+| `EF_SMART_TORCH` | 0x20 | Add a smart torch on the UI. The torch will be hided when the environment brightness is high and displayed when the brightness is low. |
+| `EF_ALL` | 0x3f | Enable all the above features. |
 
 **Code Snippet**
 
 ```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-
+CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
 cameraEnhancer.enableFeatures(EnumEnhancerFeatures.FRAME_FILTER | EnumEnhancerFeatures.SENSOR_CONTROL);
 ```
 
 **Remarks**
-
-The `EnumEnhancerFeatures` members:
-
-| Members | Value |
-| -------- | ----- |
-| `EF_FRAME_FILTER` | 0x01 |
-| `EF_SENSOR_CONTROL` | 0x02 |
-| `EF_ENHANCED_FOCUS` | 0x04 |
-| `EF_FAST_MODE` | 0x08 |
-| `EF_AUTO_ZOOM` | 0x10 |
-| `EF_SMART_TORCH` | 0x20 |
 
 The enable action will not be approved if the license is invalid. If your input values include the features that have been already enabled, these features will keep the enabled status.
 
@@ -473,7 +447,7 @@ The enable action will not be approved if the license is invalid. If your input 
 
 ### disableFeatures
 
-Disable camera enhancer features by inputting [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html) values.
+Disable camera enhancer features by inputting `EnumEnhancerFeatures` values.
 
 ```java
 void disableFeatures(int enhancerFeatures)
@@ -481,7 +455,17 @@ void disableFeatures(int enhancerFeatures)
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).  
+`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.
+
+| `EnumEnhancerFeatures` | Value | Description |
+| ---------------- | ----- | ----------- |
+| `EF_FRAME_FILTER` | 0x01 | The frame sharpness filter feature of DCE. By enabling this feature, the low-quality frame will be recognized and discarded automatically. |
+| `EF_SENSOR_CONTROL` | 0x02 | The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking. |
+| `EF_ENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
+| `EF_FAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
+| `EF_AUTO_ZOOM` | 0x10 | The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area. |
+| `EF_SMART_TORCH` | 0x20 | Add a smart torch on the UI. The torch will be hided when the environment brightness is high and displayed when the brightness is low. |
+| `EF_ALL` | 0x3f | Enable all the above features. |
 
 **Code Snippet**
 
@@ -507,7 +491,17 @@ boolean isFeatureEnabled(int enhancerFeatures)
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`]({{site.enumerations}}enum-enhancer-features.html).
+`enhancerFeatures`: The combined value of `EnumEnhancerFeatures`.
+
+| `EnumEnhancerFeatures` | Value | Description |
+| ---------------------- | ----- | ----------- |
+| `EF_FRAME_FILTER` | 0x01 | The frame sharpness filter feature of DCE. By enabling this feature, the low-quality frame will be recognized and discarded automatically. |
+| `EF_SENSOR_CONTROL` | 0x02 | The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking. |
+| `EF_ENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
+| `EF_FAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
+| `EF_AUTO_ZOOM` | 0x10 | The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area. |
+| `EF_SMART_TORCH` | 0x20 | Add a smart torch on the UI. The torch will be hided when the environment brightness is high and displayed when the brightness is low. |
+| `EF_ALL` | 0x3f | Enable all the above features. |
 
 **Return Value**
 
@@ -626,7 +620,16 @@ void setResolution(EnumResolution resolution) throws CameraEnhancerException
 
 **Parameters**
 
-`resolution`: One of the int value that preset in Enumeration [`EnumResolution`]({{site.enumerations}}enum-resolution.html).
+`resolution`: One of the int value that preset in `EnumResolution`.
+
+| `EnumResolution` | Value | Description |
+| ---------------- | ----- | ----------- |
+| `RESOLUTION_AUTO` | 0 | The resolution will be set automatically. |
+| `RESOLUTION_480P` | 1 | The resolution will be set to 480P. |
+| `RESOLUTION_720P` | 2 | The resolution will be set to 720P. |
+| `RESOLUTION_1080P` | 3 | The resolution will be set to 1080P. |
+| `RESOLUTION_2K` | 4 | The resolution will be set to 2K. |
+| `RESOLUTION_4K` | 5 | The resolution will be set to 4K. |
 
 **Code Snippet**
 
@@ -715,7 +718,7 @@ void setScanRegion(RegionDefinition scanRegion) throws CameraEnhancerException
 
 **Parameters**
 
-`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html) class.
+`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`](region-definition.md) class.
 
 **Code Snippet**
 
@@ -737,14 +740,14 @@ try {
 
 **Remarks**
 
-- The region definition defines the region on the **camera view**. For each value of the class [`RegionDefinition`]({{site.android-api-auxiliary}}region-definition.html):
+- The region definition defines the region on the **camera view**. For each value of the class [`RegionDefinition`](region-definition.md):
   - The `regionTop` is the distance between the **top** of the scan region and the **top** of the video frame.
   - The `regionBottom` is the distance between the **bottom** of the scan region and the **top** of the video frame.
   - The `regionLeft` is the distance between the **left** of the scan region and the **left** of the video frame.
   - The `regionRight` is the distance between the **right** of the scan region and the **left** of the video frame.
 
 - When you trigger `setScanRegion`, the enhancer feature [`EF_FAST_MODE`](#enablefeatures) will be disabled.
-- You will still get the original [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html) from [`FrameOutputCallback`]({{site.android-api-auxiliary}}interface-dceframelistener.html) and cropped [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`]({{site.android-api-auxiliary}}dceframe.html) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
+- You will still get the original [`DCEFrame`](dceframe.md) from [`FrameOutputCallback`](interface-dceframelistener.md) and cropped [`DCEFrame`](dceframe.md) from [`getFrameFromBuffer`](#getframefrombuffer). The `cropRegion` of [`DCEFrame`](dceframe.md) will be configured based on the `scanRegion` when `setScanRegion` is triggered.
 - When you trigger `setScanRegion`, the **scanRegion** will be displayed on the UI automatically. If you don't want to display the **scanRegion** on the UI, please set the [`scanRegionVisible`](#scanregionvisible) to false manually.
 
 &nbsp;
@@ -868,14 +871,14 @@ cameraEnhancer.updateAdvancedSettingsFromString("{'sensorvalue':3,'graydiffthres
 
 | Method | Description |
 | ------ | ----------- |
-| [`setCameraView`](#setcameraview) | Set the object of [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) |
-| [`getCameraView`](#getcameraview) | Get the object of [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) |
+| [`setCameraView`](#setcameraview) | Bind a instance of `DCECameraView` to the `CameraEnhancer`. |
+| [`getCameraView`](#getcameraview) | Get the object of DCECameraView that is binded to the `CameraEnhancer`. |
 
 &nbsp;
 
 ### setCameraView
 
-Set a [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) object as the main UI view.
+Set a [`DCECameraView`](dcecameraview.md) object as the main UI view.
 
 ```java
 void setCameraView(DCECameraView cameraView)
@@ -883,7 +886,7 @@ void setCameraView(DCECameraView cameraView)
 
 **Parameters**
 
-`cameraView`: The main UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html).
+`cameraView`: The main UI view. See also [`DCECameraView`](dcecameraview.md).
 
 **Code Snippet**
 
@@ -898,7 +901,7 @@ cameraEnhancer.setCameraView(cameraView);
 
 ### getCameraView
 
-Get the [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html) object of the current UI view.
+Get the [`DCECameraView`](dcecameraview.md) object of the current UI view.
 
 ```java
 DCECameraView getCameraView()
@@ -906,12 +909,11 @@ DCECameraView getCameraView()
 
 **Return Value**
 
-The current UI view. See also [`DCECameraView`]({{ site.android-api-auxiliary }}dcecameraview.html).
+The current UI view. See also [`DCECameraView`](dcecameraview.md).
 
 **Code Snippet**
 
 ```java
 CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-
 DCECameraView cameraView =  cameraEnhancer.getCameraView();
 ```

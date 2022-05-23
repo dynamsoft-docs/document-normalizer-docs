@@ -48,4 +48,4 @@ cameraEnhancer.addListener(listener) {
 
 **See also**
 
-- [`class DCEFrame`]({{site.android-api-auxiliary}}dceframe.html)
+- [`class DCEFrame`](dceframe.md)
