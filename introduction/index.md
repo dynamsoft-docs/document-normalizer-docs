@@ -26,21 +26,21 @@ With DDN, you can extract the four corner coordinates of one or multiple documen
 - Document boundary detection
 
 <div align="center">
-   <p><img src="assets/document-boundary-detection.jpg" alt="Document boundary detection" width="50%" /></p>
+   <p><img src="assets/document-boundary-detection.jpg" alt="Document boundary detection" width="25%" /></p>
    <p>Figure 1 – Document boundary detection</p>
 </div>
 
 - Table boundary detection
 
 <div align="center">
-   <p><img src="assets/table-boundary-detection.jpg" alt="Table boundary detection" width="50%" /></p>
+   <p><img src="assets/table-boundary-detection.jpg" alt="Table boundary detection" width="25%" /></p>
    <p>Figure 2 – Table boundary detection</p>
 </div>
 
 - Multiple boundaries in one detection
 
 <div align="center">
-   <p><img src="assets/multiple-boundaries-detection.jpg" alt="Multiple boundaries detection" width="50%" /></p>
+   <p><img src="assets/multiple-boundaries-detection.jpg" alt="Multiple boundaries detection" width="25%" /></p>
    <p>Figure 3 – Multiple boundaries in one detection</p>
 </div>
 
@@ -105,6 +105,11 @@ In real life, document capture is often done through mobile devices. In order to
 
 - **DCEImageEditorView**: It supports previewing still images, displaying graphic items (rectangles, quads, text, etc.) and interactively adjusting the vertices of graphic items.
 
+<div align="center">
+   <p><img src="../assets/dce-ddn-view.gif" alt="DCE CameraView and ImageEditorView" width="25%" /></p>
+   <p>Figure 5 – DCECameraView and DCEImageEditorView</p>
+</div>
+
 If you are interested in the specific steps to integrate DDN with DCE, please refer to the following articles:
 
 - <a href="https://www.dynamsoft.com/document-normalizer/docs/programming/android/user-guide.html" target="_blank">Getting Started with DDN Android SDK</a>
@@ -134,4 +139,3 @@ DDN is designed to be cross-platform. The core of DDN is written in C/C++ for pe
 |Linux          | C/C++                |
 |Android        | Java                 |
 |iOS            | Swift/Objective-C    |
-
