@@ -113,10 +113,9 @@ int getPixelFormat()
 
 **Return Value**
 
-The method returns an int value that refers to the enumeration value of [`ImagePixelFormat`]({{site.barcode-enum}}other-enums.html#imagepixelformat) (view the enumeration members in Dynamsoft Barcode Reader documents).
+The method returns an int value that refers to the pixel format of the image. View in [`ImagePixelFormat`]({{site.enumerations}}image-pixel-format.html).
 
 &nbsp;
-
 
 ## getFrameID
 
@@ -132,7 +131,6 @@ The method returns an int value that stores the `frameID` of the image.
 
 &nbsp;
 
-
 ## getQuality
 
 Get the frame quality of the image. User have to enable the frame filter feature to get the quality (high/low) of the image. Otherwise, the frame quality will be unknown.
@@ -143,7 +141,13 @@ EnumFrameQuality getQuality()
 
 **Return Value**
 
-The method returns an enumeration value in [`EnumFrameQuality`]({{site.enumerations}}enum-frame-quality.html).
+The method returns an enumeration value in `EnumFrameQuality`.
+
+| `EnumFrameQuality` | Value | Description |
+| ---------------- | ----- | ----------- |
+| `FQ_HIGH` | 0 | The DCEFrame quality is high. |
+| `FQ_LOW` | 1 | The DCEFrame quality is low. |
+| `FQ_UNKNOWN` | 2 | The DCEFrame quality is unknown because the frame filter feature is not enabled. |
 
 **Remarks**
 
@@ -264,7 +268,7 @@ void setPixelFormat(int pixelFormat)
 
 **Parameters**
 
-`pixelFormat`: The pixelFormat of the image. View more in Dynamsoft Barcode Reader Enumeration [`ImagePixelFormat`]({{site.barcode-enum}}other-enums.html#imagepixelformat)
+`pixelFormat`: The pixelFormat of the image. View more in Dynamsoft Barcode Reader Enumeration [`ImagePixelFormat`]({{site.enumerations}}image-pixel-format.html).
 
 &nbsp;
 
@@ -292,7 +296,13 @@ void setQuality(EnumFrameQuality quality)
 
 **Parameters**
 
-`quality`: An `Enumeration` value that means the frame quality. Read more in [`EnumFrameQuality`]({{site.enumerations}}enum-frame-quality.html).
+`quality`: One of the `EnumFrameQuality` value that means the frame quality..
+
+| `EnumFrameQuality` | Value | Description |
+| ---------------- | ----- | ----------- |
+| `FQ_HIGH` | 0 | The DCEFrame quality is high. |
+| `FQ_LOW` | 1 | The DCEFrame quality is low. |
+| `FQ_UNKNOWN` | 2 | The DCEFrame quality is unknown because the frame filter feature is not enabled. |
 
 &nbsp;
 
