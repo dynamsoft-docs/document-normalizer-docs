@@ -3,6 +3,7 @@ layout: default-layout
 title: Dynamsoft Document Normalizer - Introduction
 keywords: introduction, documentation
 description: Dynamsoft Document Normalizer - Introduction
+noTitleIndex: false
 ---
 
 # Introduction to Dynamsoft Document Normalizer
