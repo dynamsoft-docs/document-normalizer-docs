@@ -11,7 +11,16 @@ breadcrumbText: Android DrawingStyleManager Class
 
 # DrawingStyleManager
 
-&nbsp;
+`DrawingStyleManager` is the class for users to create and adjust `DrawingStyles`.
+
+```java
+class com.dynamsoft.dce.DrawingStyleManager
+```
+
+| Method | Description |
+| ------ | ----------- |
+| [`getDrawingStyle`](#getdrawingstyle) | Get the `DrawingStyle` instance with the style ID. |
+| [`createDrawingStyle`](#createdrawingstyle) | Create a user-defined `DrawingStyle` and get the style ID. |
 
 ## getDrawingStyle
 

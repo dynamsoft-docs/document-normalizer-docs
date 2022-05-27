@@ -3,17 +3,18 @@ layout: default-layout
 title: Dynamsoft Document Normalizer - Introduction
 keywords: introduction, documentation
 description: Dynamsoft Document Normalizer - Introduction
+noTitleIndex: false
 ---
 
 # Introduction to Dynamsoft Document Normalizer
 
-Dynamsoft Document Normalizer (DDN) is an SDK designed to detect quads such as document/table boundaries, etc. from images, and perform document normalization on the images in the detected quads. Document normalization includes a set of functions such as border cropping/deskew/perspective correction/contrast and brightness adjustment, etc. Additionally, the output normalized image can be used for further processing such as Optical Character Recognition (OCR).
+Dynamsoft Document Normalizer (DDN) is an SDK designed to detect quads such as document/table boundaries, etc. from images, and perform document normalization on the images in the detected quads. Document normalization includes a set of functions such as border cropping/deskewing/perspective correction/contrast and brightness adjustment, etc. Additionally, the output normalized image can be used for further processing such as Optical Character Recognition (OCR).
 
 DDN powers your software development from the following aspects:
 
 - Robust quadrilateral detection for different structures such as document/table boundaries.
-- Various document normalization such as border cropping/deskew/perspective correction/output in multiple colour modes/contrast and brightness adjustment, etc.
-- Scenario-oriented customizablity such as image processing modes
+- Various document normalization such as border cropping/deskewing/perspective correction/output in multiple colour modes/contrast and brightness adjustment, etc.
+- Scenario-oriented customizability such as image processing modes
 
 With DDN, you can efficiently embed the functionality of quadrilateral detection and document normalization in your mobile, desktop and server applications. DDN also provides various image processing features, allowing you to customize DDN and meet your business needs.
 
@@ -75,7 +76,7 @@ Change the colour space of the output normalized image. DDN supports outputting 
 
 Adjust the brightness and contrast of the output normalized image.
 
-### Scenario-oriented customizablity
+### Scenario-oriented customizability
 
 In order to cope with various scenarios, DDN provides a variety of image processing modes at each stage of the algorithm process to maintain great scalability.
 
@@ -87,7 +88,7 @@ These modes can be configured not only through API but also through a configurat
 
 DDN SDK consists of the following four modules:
 
-- **DynamsoftDocumentNormalizer**: Provide APIs related to document quad detection and various document normalization for still pictures and live video. The main class is **DocumentNormalizer**, which detects document/table boundaries and perform document normalization including border cropping/deskew/perspective correction/colour conversion/brightness and contrast adjustment.
+- **DynamsoftDocumentNormalizer**: Provide APIs related to document quad detection and various document normalization for still pictures and live video. The main class is **DocumentNormalizer**, which detects document/table boundaries and perform document normalization including border cropping/deskewing/perspective correction/colour conversion/brightness and contrast adjustment.
 
 - **DynamsoftIntermediateResult**: Designed to process intermediate results in the process of decoding a barcode, recognizing a label or normalizing a document. The APIs are for internal use only and is not public yet.
 
@@ -119,7 +120,7 @@ If you are interested in the specific steps to integrate DDN with DCE, please re
 
 ### Document scanning and archiving
 
-In government or large corporations, we want to keep an electronic version of paper documents. We often do so by taking photos or scanning of the documents. However, the captured document images might not be uniformed. You may encounter images taken with different angles, lightings, clearness…etc. With DDN, you can normalize the document images with ease. DDN also provides various settings so you can customize the outcome of the normalized document image to meet your needs.
+In government or large corporations, we want to keep an electronic version of paper documents. We often do so by taking photos of the documents or scanning the documents. However, the captured document images might not be uniformed. You may encounter images taken with different angles, lightings, clearness…etc. With DDN, you can normalize the document images with ease. DDN also provides various settings so you can customize the outcome of the normalized document image to meet your needs.
 
 ### Identity Documents
 

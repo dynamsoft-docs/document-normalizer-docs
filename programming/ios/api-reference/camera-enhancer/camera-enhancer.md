@@ -107,12 +107,12 @@ func dceLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 Get the SDK version of Dynamsoft Camera Enhancer.
 
 ```objc
-- (NSString*)getVersion;
++ (NSString*)getVersion;
 ```
 
 **Return Value**
 
-A string value that stands for the Camera Enhancer SDK version.
+A string value that indicates the version of DynamsoftCameraEnhancer SDK.
 
 **Code Snippet**
 
@@ -122,11 +122,11 @@ A string value that stands for the Camera Enhancer SDK version.
 >
 >1. 
 ```objc
-NSString* version = [_dce getVersion];
+NSString* version = [DynamsoftCameraEnhancer getVersion];
 ```
 2. 
 ```swift
-let version = dce.getVersion()
+let version = DynamsoftCameraEnhancer.getVersion()
 ```
 
 &nbsp;
@@ -252,14 +252,7 @@ Get the state of the currently selected camera.
 
 **Return Value**
 
-One of the preset camera state in Enumeration `EnumCameraState` (view the table below).
-
-| Member (Objective-C) | Member (Swift) | Value | Description |
-| -------------------- | -------------- | ----- | ----------- |
-| `EnumCAMERA_STATE_OPENED` | `EnumCAMERA_STATE_OPENED` | 1 | The selected camera is opened. |
-| `EnumCAMERA_STATE_CLOSED` | `EnumCAMERA_STATE_CLOSED` | 2 | The selected camera is closed. |
-| `EnumCAMERA_STATE_OPENING` | `EnumCAMERA_STATE_OPENING` | 0 | The selected camera is currently closed but will be opened soon. |
-| `EnumCAMERA_STATE_CLOSING` | `EnumCAMERA_STATE_CLOSING` | 3 | The selected camera is currently closed but will be closed soon. |
+One of the preset camera state in Enumeration [`EnumCameraState`](enum-camera-state.md).
 
 **Code Snippet**
 
@@ -546,15 +539,15 @@ dce.removeListener(self)
 
 | Method | Description |
 | ------ | ----------- |
-| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
-| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting `EnumEnhancerFeatures` values. |
+| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values. |
+| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values. |
 | [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
 
 &nbsp;
 
 ### enableFeatures
 
-Enable camera enhancer features by inputting `EnumEnhancerFeatures` value.
+Enable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) value.
 
 ```objc
 - (void)enableFeatures:(EnumEnhancerFeatures)features  error:(NSError * _Nullable * _Nullable)error;
@@ -562,19 +555,7 @@ Enable camera enhancer features by inputting `EnumEnhancerFeatures` value.
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures` (view the table below).
-
-`EnumEnhancerFeatures`:
-
-| Member (Objective-C) | Member (Swift) | Value | Description |
-| ---------------- | -------------------- | -------------- | ----- | ----------- |
-| `EnumFRAME_FILTER` | `EnumFRAME_FILTER` | 0x01 | The frame sharpness filter feature of DCE. By enabling this feature, the low-quality frame will be recognized and discarded automatically. |
-| `EnumSENSOR_CONTROL` | `EnumSENSOR_CONTROL` | 0x02 | The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking. |
-| `EnumENHANCED_FOCUS` | `EnumENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
-| `EnumFAST_MODE` | `EnumFAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
-| `EnumAUTO_ZOOM` | `EnumAUTO_ZOOM` | 0x10 | The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area. |
-| `EnumSMART_TORCH` | `EnumSMART_TORCH` | 0x20 | Add a smart torch on the UI. The torch will be hided when the environment brightness is high and displayed when the brightness is low. |
-| `EnumALL` | `EnumALL` | 0x3f | Enable all the above features. |
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
 
 **Code Snippet**
 
@@ -599,7 +580,7 @@ The enable action will not be approved if the license is invalid. If your input 
 
 ### disableFeatures
 
-Disable camera enhancer features by inputting `EnumEnhancerFeatures` values.
+Disable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values.
 
 ```objc
 - (void)disableFeatures:(EnumEnhancerFeatures)features;
@@ -607,19 +588,7 @@ Disable camera enhancer features by inputting `EnumEnhancerFeatures` values.
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures` (view the table below).
-
-`EnumEnhancerFeatures`:
-
-| Member (Objective-C) | Member (Swift) | Value | Description |
-| ---------------- | -------------------- | -------------- | ----- | ----------- |
-| `EnumFRAME_FILTER` | `EnumFRAME_FILTER` | 0x01 | The frame sharpness filter feature of DCE. By enabling this feature, the low-quality frame will be recognized and discarded automatically. |
-| `EnumSENSOR_CONTROL` | `EnumSENSOR_CONTROL` | 0x02 | The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking. |
-| `EnumENHANCED_FOCUS` | `EnumENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
-| `EnumFAST_MODE` | `EnumFAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
-| `EnumAUTO_ZOOM` | `EnumAUTO_ZOOM` | 0x10 | The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area. |
-| `EnumSMART_TORCH` | `EnumSMART_TORCH` | 0x20 | Add a smart torch on the UI. The torch will be hided when the environment brightness is high and displayed when the brightness is low. |
-| `EnumALL` | `EnumALL` | 0x3f | Enable all the above features. |
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
 
 **Code Snippet**
 
@@ -652,19 +621,7 @@ Check whether the input features are enabled.
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of `EnumEnhancerFeatures` (view the table below).
-
-`EnumEnhancerFeatures`:
-
-| Member (Objective-C) | Member (Swift) | Value | Description |
-| ---------------- | -------------------- | -------------- | ----- | ----------- |
-| `EnumFRAME_FILTER` | `EnumFRAME_FILTER` | 0x01 | The frame sharpness filter feature of DCE. By enabling this feature, the low-quality frame will be recognized and discarded automatically. |
-| `EnumSENSOR_CONTROL` | `EnumSENSOR_CONTROL` | 0x02 | The sensor filter feature of DCE. By enabling this feature, the frames will be discarded automatically while the device is shaking. |
-| `EnumENHANCED_FOCUS` | `EnumENHANCED_FOCUS` | 0x04 | The enhanced focus feature. DCE will support the camera in triggering auto-focus. |
-| `EnumFAST_MODE` | `EnumFAST_MODE` | 0x08 | The fast mode of DCE. By enabling the fast mode, the frames will be cropped to speed up the following processing. |
-| `EnumAUTO_ZOOM` | `EnumAUTO_ZOOM` | 0x10 | The auto-zoom feature of DCE. By enabling this feature, the camera will automatically zoom in to the interest area. |
-| `EnumSMART_TORCH` | `EnumSMART_TORCH` | 0x20 | Add a smart torch on the UI. The torch will be hided when the environment brightness is high and displayed when the brightness is low. |
-| `EnumALL` | `EnumALL` | 0x3f | Enable all the above features. |
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
 
 **Return Value**
 
@@ -782,15 +739,7 @@ Input one of the preset resolution value in Enumeration `Resolution`. The camera
 
 **Parameters**
 
-`resolution`: One of the int value that preset in Enumeration `EnumResolution` (view the table below).
-
-| Member (Objective-C) | Member (Swift) | Value | Description |
-| -------------------- | -------------- | ----- | ----------- |
-| `EnumRESOLUTION_AUTO` | `EnumRESOLUTION_AUTO` | 0 | The resolution will be set automatically. |
-| `EnumRESOLUTION_480P` | `EnumRESOLUTION_480P` | 1 | The resolution will be set to 480P. |
-| `EnumRESOLUTION_720P` | `EnumRESOLUTION_720P` | 2 | The resolution will be set to 720P. |
-| `EnumRESOLUTION_1080P` | `EnumRESOLUTION_1080P` | 3 | The resolution will be set to 1080P. |
-| `EnumRESOLUTION_4K` | `EnumRESOLUTION_4K` | 5 | The resolution will be set to 4K. |
+`resolution`: One of the int value that preset in Enumeration [`EnumResolution`](enum-resolution.md).
 
 **Code Snippet**
 

@@ -23,7 +23,7 @@ breadcrumbText: iOS QuadDrawingItem Class
 | [`quad`](#quad) | The `Quadrilateral` property that indicates the position of the `QuadDrawingItem`. |
 | [`drawingStyleId`](#drawingstyle) | Get the drawing style of the current `DrawingItem`. |
 | [`state`](#state) | Set the state of the current `DrawingItem`. |
-| [`mediaType`](#mediatype) | Get the media type of the current `DrawingItem`. |
+| [`getMediaType`](#getmediatype) | Get the media type of the current `DrawingItem`. |
 
 &nbsp;
 

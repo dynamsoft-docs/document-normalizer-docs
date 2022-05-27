@@ -5,6 +5,8 @@
 
 ## getDrawingStyleId
 
+Get the ID of the `DrawingStyle` that is applied on this `DrawingItem`.
+
 ```java
 public int getDrawingStyleId();
 ```
@@ -22,6 +24,8 @@ int styleId = drawingItem.getDrawingStyleId();
 &nbsp;
 
 ## setDrawingStyleId
+
+Set a `DrawingStyle` by ID for the `DrawingItem`.
 
 ```java
 public void setDrawingStyleId(int style);
@@ -41,13 +45,15 @@ drawingItem.setDrawingStyleId(0);
 
 ## getState
 
+Get the status of the `DrawingItem`.
+
 ```java
 public EnumDrawingItemState getState();
 ```
 
 **Return Value**
 
-The value that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.enumerations }}enum-drawing-item-state.html).
+The value that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.android_camera_enhancer }}enum-drawing-item-state.html).
 
 **Code Snippet**
 
@@ -59,13 +65,15 @@ EnumDrawingItemState state = drawingItem.getState();
 
 ## setState
 
+Set the status of the `DrawingItem`.
+
 ```java
 public void setState(EnumDrawingItemState state);
 ```
 
 **Parameters**
 
-`state`: The value that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.enumerations }}enum-drawing-item-state.html).
+`state`: The value that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.android_camera_enhancer }}enum-drawing-item-state.html).
 
 **Code Snippet**
 
@@ -74,3 +82,21 @@ drawingItem.setState(EnumDrawingItemState.DIS_SELECTED)
 ```
 
 &nbsp;
+
+## getMediaType
+
+Get the media type of the `DrawingItem`.
+
+```java
+public EnumDrawingItemMediaType getMediaType()
+```
+
+**Return Value**
+
+One of the `EnumDrawingItemMediaType` that indicates the media type of the `DrawingItem`.
+
+**Code Snippet**
+
+```java
+EnumDrawingItemMediaType type = drawingItem.getMediaType();
+```

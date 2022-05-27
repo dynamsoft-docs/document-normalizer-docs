@@ -24,7 +24,7 @@ Welcome to the Dynamsoft Document Normalizer iOS SDK documentation.
 
 - [class DocumentNormalizer](api-reference/document-normalizer-index.md)
 - [Auxiliary classes](api-reference/auxiliary-index.md)
-- [Interfaces](api-reference/interfaces-index.md)
+- [Protocol](api-reference/interface-index.md)
 
 ## Release Notes
 

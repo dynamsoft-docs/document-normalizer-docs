@@ -21,13 +21,13 @@ This is the main class of Dynamsoft Document Normalizer(DDN) SDK. It supports qu
 
 ## Initialize Methods
 
-| Method               | Description |
-|----------------------|-------------|
+| Method | Description |
+| ------ | ----------- |
 | [`init`](document-normalizer-init.md#init) | Initialization of `DynamsoftDocumentNormalizer` object.|
 
 ## Video Detecting Methods
 
-| Method               | Description |
+| Method | Description |
 |----------------------|-------------|
 | [`setCameraEnhancer`](document-normalizer-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Document Normalizer.  |
 | [`startDetecting`](document-normalizer-video.md#startdetecting) | Start the document quad detection thread in the video streaming scenario. |
@@ -36,7 +36,7 @@ This is the main class of Dynamsoft Document Normalizer(DDN) SDK. It supports qu
 
 ## Detect and Normalize Methods
 
-| Method               | Description |
+| Method | Description |
 |----------------------|-------------|
 | [`detectQuadFromBuffer`](document-normalizer-normalizing.md#detectquadfrombuffer) | Detect quad from the memory buffer containing image pixels in defined format. |
 | [`detectQuadFromFile`](document-normalizer-normalizing.md#detectquadfromfile) | Detect quad from an image file. |
@@ -44,7 +44,7 @@ This is the main class of Dynamsoft Document Normalizer(DDN) SDK. It supports qu
 | [`normalizeBuffer`](document-normalizer-normalizing.md#normalizebuffer) | Normalize image from the memory buffer containing image pixels in defined format. |
 | [`normalizeFile`](document-normalizer-normalizing.md#normalizefile) | Normalize an image file. |
 | [`normalizeImage`](document-normalizer-normalizing.md#normalizeimage) | Normalize a buffered image(uiimage). |
-  
+
 ## Runtime Settings Methods
 
 | Method               | Description |
@@ -68,7 +68,7 @@ This is the main class of Dynamsoft Document Normalizer(DDN) SDK. It supports qu
 - [`iDetectedQuadResult`](detected-quad-result.md)
 - [`iNormalizedImageResult`](normalized-image-result.md)
 
-## Interfaces
+## Protocols
 
 - [`LicenseVerificationListener`](license-verification-listener.md)
 - [`DetectResultListener`](detect-result-listener.md)

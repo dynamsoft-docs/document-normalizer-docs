@@ -26,8 +26,8 @@ class com.dynamsoft.dce.DCEDrawingLayer
 | [`getDrawingItems`](#getdrawingitems) | Get all available [`DrawingItems`](drawingitem.md) in the `DrawingLayer`. |
 | [`clearDrawingItems`](#cleardrawingitems) | Clear all available [`DrawingItems`](drawingitem.md) in the `DrawingLayer`. |
 | [`setDrawingStyleId(styleId)`](#setdrawingstyleidstyleid) | Specify a style ID for all available [`DrawingItems`](drawingitem.md). |
-| [`setDrawingStyleId(styleId,state)`](#setdrawingstyleidstate) | Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). |
-| [`setDrawingStyleId(styleId,state,mediaType)`](#setdrawingstyleidstatemediatype) | Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). |
+| [`setDrawingStyleId(styleId,state)`](#setdrawingstyleidstyleidstate) | Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). |
+| [`setDrawingStyleId(styleId,state,mediaType)`](#setdrawingstyleidstyleidstatemediatype) | Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). |
 | [`setVisible`](#setvisible) | Set the visibility of the `DrawingLayer`. |
 | [`isVisible`](#isvisible) | Get the visibility of the `DrawingLayer`. |
 
@@ -210,7 +210,7 @@ drawingLayer.setDrawingStyleId(0, EnumDrawingItemState.DIS_SELECTED);
 Specify a style ID for the targeting [`DrawingItems`](drawingitem.md).
 
 ```java
-public void setDrawingStyleId(int styleId, EnumDrawingItemState state, EnumDrawingItemMediaType[] mediaTypes);
+public void setDrawingStyleId(int styleId, EnumDrawingItemState state, EnumDrawingItemMediaType mediaTypes);
 ```
 
 **Parameters**
@@ -222,7 +222,7 @@ public void setDrawingStyleId(int styleId, EnumDrawingItemState state, EnumDrawi
 **Code Snippet**
 
 ```java
-drawingLayer.setDrawingStyleId(0, EnumDrawingItemState.DIS_SELECTED, new EnumDrawingItemMediaType[]{EnumDrawingItemMediaType.DIMT_RECTANGLE ,EnumDrawingItemMediaType.DIMT_QUADRILATERAL});
+drawingLayer.setDrawingStyleId(0, EnumDrawingItemState.DIS_SELECTED, EnumDrawingItemMediaType.DIMT_RECTANGLE);
 ```
 
 &nbsp;

@@ -14,7 +14,7 @@ breadcrumbText: Android QuadDrawingItem Class
 `QuadDrawingItem` is a subclass of `DrawingItem`. Dynamsoft Camera Enhancer will draw the `QuadDrawingItem` on the UI if it is created and added to the `DCECameraView` or `DCEImageEditorView`.
 
 ```java
-class QuadDrawingItem extends DrawingItem
+class com.dynamsoft.dce.QuadDrawingItem extends DrawingItem
 ```
 
 | Method | Descriptions |
@@ -82,7 +82,7 @@ The `Quadrilateral` that indicates the location of the `QuadDrawingItem`.
 **Code Snippet**
 
 ```java
-com.dynamsoft.core.Quadrilateral quad = drawingItem.getRect();
+com.dynamsoft.core.Quadrilateral quad = drawingItem.getQuad();
 ```
 
 {%- include api-reference/drawing-item-android.md -%}

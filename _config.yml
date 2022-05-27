@@ -19,10 +19,12 @@ cpp_release_notes: /document-normalizer/docs/programming/cplusplus/release-notes
 ios: /document-normalizer/docs/programming/ios/
 ios_api: /document-normalizer/docs/programming/ios/api-reference/
 ios_release_notes: /document-normalizer/docs/programming/ios/release-notes/
+ios_camera_enhancer: /document-normalizer/docs/programming/ios/api-reference/camera-enhancer/
 
 android: /document-normalizer/docs/programming/android/
 android_api: /document-normalizer/docs/programming/android/api-reference/
 android_release_notes: /document-normalizer/docs/programming/android/release-notes/
+android_camera_enhancer: /document-normalizer/docs/programming/android/api-reference/camera-enhancer/
 
 enumerations: /document-normalizer/docs/programming/enumerations/
 parameters_reference: /document-normalizer/docs/parameters/reference/

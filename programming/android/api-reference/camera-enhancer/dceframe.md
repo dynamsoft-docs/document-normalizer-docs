@@ -113,7 +113,7 @@ int getPixelFormat()
 
 **Return Value**
 
-The method returns an int value that refers to the pixel format of the image. View in [`ImagePixelFormat`]({{site.enumerations}}image-pixel-format.html).
+The method returns an int value that refers to the pixel format of the image. View morein [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=android).
 
 &nbsp;
 
@@ -141,13 +141,7 @@ EnumFrameQuality getQuality()
 
 **Return Value**
 
-The method returns an enumeration value in `EnumFrameQuality`.
-
-| `EnumFrameQuality` | Value | Description |
-| ---------------- | ----- | ----------- |
-| `FQ_HIGH` | 0 | The DCEFrame quality is high. |
-| `FQ_LOW` | 1 | The DCEFrame quality is low. |
-| `FQ_UNKNOWN` | 2 | The DCEFrame quality is unknown because the frame filter feature is not enabled. |
+The method returns an enumeration value in [`EnumFrameQuality`](enum-frame-quality.md).
 
 **Remarks**
 
@@ -268,7 +262,7 @@ void setPixelFormat(int pixelFormat)
 
 **Parameters**
 
-`pixelFormat`: The pixelFormat of the image. View more in Dynamsoft Barcode Reader Enumeration [`ImagePixelFormat`]({{site.enumerations}}image-pixel-format.html).
+`pixelFormat`: The pixelFormat of the image. View more in [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=android).
 
 &nbsp;
 
@@ -296,13 +290,7 @@ void setQuality(EnumFrameQuality quality)
 
 **Parameters**
 
-`quality`: One of the `EnumFrameQuality` value that means the frame quality..
-
-| `EnumFrameQuality` | Value | Description |
-| ---------------- | ----- | ----------- |
-| `FQ_HIGH` | 0 | The DCEFrame quality is high. |
-| `FQ_LOW` | 1 | The DCEFrame quality is low. |
-| `FQ_UNKNOWN` | 2 | The DCEFrame quality is unknown because the frame filter feature is not enabled. |
+`quality`: One of the [`EnumFrameQuality`](enum-frame-quality.md) value that indicates the frame quality.
 
 &nbsp;
 
