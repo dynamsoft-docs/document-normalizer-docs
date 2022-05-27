@@ -26,7 +26,8 @@ Gets the location of the detected quad result.
 const CQuadrilateral* GetLocation() 
 ```
 
-**Return Value**  
+**Return Value**
+
 The location of the detected quad result.
 
 ## GetConfidenceAsDocumentBoundary
@@ -37,5 +38,6 @@ Gets the confidence as document boundary of the detected quad result.
 int GetConfidenceAsDocumentBoundary() 
 ```
 
-**Return Value**  
+**Return Value**
+
 The confidence as document boundary of the detected quad result.

@@ -22,7 +22,8 @@ Releases memory allocated for CDetectedQuadResultArray.
 static void dynamsoft::ddn::CDocumentNormalizer::FreeDetectedQuadResultArray(CDetectedQuadResultArray** results)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] results` An array of all detected quad results that needs to be released.
 
 **Code Snippet**
@@ -44,7 +45,8 @@ Releases memory allocated for CNormalizedImageResult.
 static void dynamsoft::ddn::CDocumentNormalizer::FreeNormalizedImageResult(CNormalizedImageResult** result)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] result` The normalized image result that needs to be released.
 
 **Code Snippet**
@@ -66,7 +68,8 @@ Releases memory allocated for a string.
 static void dynamsoft::ddn::CDocumentNormalizer::FreeString(char** content)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] content` The string that needs to be released.
 
 **Code Snippet**
@@ -88,7 +91,8 @@ Save the image data to a file.
 static int dynamsoft::ddn::CDocumentNormalizer::SaveImageDataToFile(const CImageData* imageData, const char* filePath)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] imageData` The image data that needs to be saved.
 
 `[in] filePath` The path of the output image file with the extension specifying the image format. It supports BMP and PNG files.

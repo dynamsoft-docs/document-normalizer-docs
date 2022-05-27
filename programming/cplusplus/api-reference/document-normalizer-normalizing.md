@@ -23,7 +23,8 @@ int dynamsoft::ddn::CDocumentNormalizer::DetectQuad(const CImageData* sourceImag
 
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] sourceFilePath` A string defining the source file path. It supports BMP, JPEG, PNG and TIFF files.
 
 `[in] sourceImage` The source image buffer.
@@ -34,6 +35,7 @@ int dynamsoft::ddn::CDocumentNormalizer::DetectQuad(const CImageData* sourceImag
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
+
 *You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
 
 **Code Snippet**
@@ -63,7 +65,8 @@ int dynamsoft::ddn::CDocumentNormalizer::Normalize( const CImageData* sourceImag
 
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] sourceFilePath` A string defining the source file path. It supports BMP, JPEG, PNG and TIFF files.
 
 `[in] sourceImage` The source image buffer.
@@ -76,6 +79,7 @@ int dynamsoft::ddn::CDocumentNormalizer::Normalize( const CImageData* sourceImag
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
+
 *You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
 
 **Code Snippet**

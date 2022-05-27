@@ -22,14 +22,16 @@ Initializes runtime settings with the settings in a given JSON file.
 int dynamsoft::ddn::CDocumentNormalizer::InitRuntimeSettingsFromFile(const char* pFilePath, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] pFilePath` The path of the settings file.
 
 `[in, out] errorMsgBuffer` <sub>Optional</sub> The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.
 
 `[in] errorMsgBufferLen` <sub>Optional</sub> The length of the allocated buffer.
 
-**Return Value**  
+**Return Value**
+
 Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**
@@ -48,14 +50,16 @@ Initializes runtime settings with the settings in a given JSON string.
 int dynamsoft::ddn::CDocumentNormalizer::InitRuntimeSettingsFromString(const char* content, char errorMsgBuffer[] = NULL, const int errorMsgBufferLen = 0)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] content` A JSON string that represents the content of the settings.
 
 `[in, out] errorMsgBuffer` <sub>Optional</sub> The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.
 
 `[in] errorMsgBufferLen` <sub>Optional</sub> The length of the allocated buffer.
 
-**Return Value**  
+**Return Value**
+
 Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**
@@ -74,13 +78,16 @@ Output runtime settings to a settings file (JSON file).
 int dynamsoft::ddn::CDocumentNormalizer::OutputRuntimeSettingsToFile(const char* templateName, const char* filePath)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] templateName` A unique name for declaring the runtime settings to be output.
 
 `[in] filePath` The path of the output file used for storing current settings.
 
-**Return Value**  
+**Return Value**
+
 Returns error code (returns 0 if the function operates successfully).
+
 *You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
 
 **Code Snippet**
@@ -98,13 +105,16 @@ Output runtime settings to a string.
 int dynamsoft::ddn::CDocumentNormalizer::OutputRuntimeSettingsToString(const char* templateName, char** content)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] templateName` A unique name for declaring the runtime settings to be output.
 
 `[in, out] content` The output string which stores the contents of current settings.  
 
-**Return Value**  
+**Return Value**
+
 Returns error code (returns 0 if the function operates successfully).
+
 *You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
 
 **Code Snippet**

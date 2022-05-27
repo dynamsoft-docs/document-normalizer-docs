@@ -22,7 +22,8 @@ Initializes runtime settings with the settings in a given JSON file.
 int DDN_InitRuntimeSettingsFromFile(void* normalizer, const char* filePath, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] normalizer` Handle of the Dynamsoft Document Normalizer instance.
 
 `[in] pFilePath` The path of the settings file.
@@ -31,7 +32,8 @@ int DDN_InitRuntimeSettingsFromFile(void* normalizer, const char* filePath, char
 
 `[in] errorMsgBufferLen` The length of the allocated buffer.
 
-**Return Value**  
+**Return Value**
+
 Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**
@@ -52,7 +54,8 @@ Initializes runtime settings with the settings in a given JSON string.
 int DDN_InitRuntimeSettingsFromString(void* normalizer, const char* content, char errorMsgBuffer[], const int errorMsgBufferLen)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] normalizer` Handle of the Dynamsoft Document Normalizer instance.
 
 `[in] content` A JSON string that represents the content of the settings.
@@ -61,7 +64,8 @@ int DDN_InitRuntimeSettingsFromString(void* normalizer, const char* content, cha
 
 `[in] errorMsgBufferLen` The length of the allocated buffer.
 
-**Return Value**  
+**Return Value**
+
 Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**
@@ -82,15 +86,18 @@ Output runtime settings to a settings file (JSON file).
 int DDN_OutputRuntimeSettingsToFile(void* normalizer, const char* templateName, const char* filePath)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] normalizer` Handle of the Dynamsoft Document Normalizer instance.
 
 `[in] templateName` A unique name for declaring the runtime settings to be output.
 
 `[in] filePath` The path of the output file used for storing current settings.
 
-**Return Value**  
+**Return Value**
+
 Returns error code (returns 0 if the function operates successfully).
+
 *You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
 
 **Code Snippet**
@@ -111,7 +118,8 @@ Output runtime settings to a string.
 int DDN_OutputRuntimeSettingsToString(void* normalizer, const char* templateName, char** content)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] normalizer` Handle of the Dynamsoft Document Normalizer instance.
 
 `[in] templateName` A unique name for declaring the runtime settings to be output.
@@ -120,6 +128,7 @@ int DDN_OutputRuntimeSettingsToString(void* normalizer, const char* templateName
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
+
 *You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
 
 **Code Snippet**

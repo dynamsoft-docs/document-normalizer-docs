@@ -40,6 +40,7 @@ int GetArea()
 ```
 
 **Return Value**
+
 The area of the quadrilateral.
 
 ## IsPointInQuadrilateral
@@ -51,10 +52,13 @@ bool IsPointInQuadrilateral(const CPoint* point)
 ```
 
 **Parameters**
+
 `[in] point` The point.
 
 **Return Value**
+
 A boolean value representing whether the point is in the quadrilateral.
 
 **See Also**
+
 [`CPoint`](point.md)

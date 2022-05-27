@@ -15,19 +15,23 @@ keywords: DC_InitLicense, DDN_CreateInstance, DDN_DestroyInstance, api reference
 | [`DDN_DestroyInstance`](#ddn_destroyinstance) | Destroys the instance of Dynamsoft Document Normalizer. |
 
 ## DC_GetIdleInstancesCount
+
 Gets available instances count when charging by concurrent instances count.
 
 ```c
 int DC_GetIdleInstancesCount()
-```   
+```
 
-**Return Value**  
-Returns available instances count. 
+**Return Value**
+
+Returns available instances count.
+
 - 0: There is no space for new instance  
 - -1: The available count needs to be updated from server by calling DC_InitLicense.
 - N ( N > 0 ): N more instances can be created.
 
-**Code Snippet**  
+**Code Snippet**
+
 ```c
 //...
 int count = DC_GetIdleInstancesCount();
@@ -54,14 +58,16 @@ Sets the license key and activates the SDK.
 int DC_InitLicense(const char *license, char errorMsgBuffer[], const int errorMsgBufferLen) 
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] pLicense` The license key.
 
 `[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.
 
 `[in] errorMsgBufferLen` The length of the allocated buffer.
 
-**Return Value**  
+**Return Value**
+
 Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**

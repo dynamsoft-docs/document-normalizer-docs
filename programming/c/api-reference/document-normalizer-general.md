@@ -23,12 +23,15 @@ int DC_GetQuadrilateralArea(const Quadrilateral* quad)
 ```
 
 **Parameters**
+
 `[in] quad` The quadrilateral to get area.
 
 **Return Value**
+
 The area of the quadrilateral.
 
 **See Also**
+
 [`Quadrilateral`](quadrilateral.md)
 
 ## DC_IsPointInQuadrilateral
@@ -40,6 +43,7 @@ int DC_IsPointInQuadrilateral(const DM_Point* point, const Quadrilateral* quad)
 ```
 
 **Parameters**
+
 `[in] point` The point.
 
 `[in] quad` The quadrilateral.
@@ -50,6 +54,7 @@ int DC_IsPointInQuadrilateral(const DM_Point* point, const Quadrilateral* quad)
 - 1: the point is in the quadrilateral.
 
 **See Also**
+
 [`DM_Point`](point.md)
 
 [`Quadrilateral`](quadrilateral.md)
@@ -62,10 +67,12 @@ Returns the corresponding error message of the input error code.
 const char* DC_GetErrorString(const int errorCode)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] errorCode` Error code.
 
-**Return Value**  
+**Return Value**
+
 The error message.
 
 **Code Snippet**
@@ -89,7 +96,8 @@ Returns the version info string of the SDK.
 const char* DDN_GetVersion()
 ```
 
-**Return Value**  
+**Return Value**
+
 The version information string.
 
 **Code Snippet**

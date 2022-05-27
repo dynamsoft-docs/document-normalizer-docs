@@ -17,19 +17,23 @@ class dynamsoft::core::CLicenseManager
 | [`InitLicense`](#initlicense) | Sets the license key and activates the SDK.|
 
 ## GetIdleInstancesCount
+
 Gets available instances count when charging by concurrent instances count.
 
 ```cpp
 static int dynamsoft::core::CLicenseManager::GetIdleInstancesCount()
-```   
+```
 
-**Return Value**  
-Returns available instances count.    
+**Return Value**
+
+Returns available instances count.
+
 - 0: There is no space for new instance  
 - -1: The available count needs to be updated from server by calling InitLicense.
 - N ( N > 0 ): N more instances can be created.
 
-**Code Snippet**  
+**Code Snippet**
+
 ```cpp
 //...
 int count = dynamsoft::core::CLicenseManager::GetIdleInstancesCount();
@@ -56,14 +60,16 @@ Sets the license key and activates the SDK.
 static int dynamsoft::core::CLicenseManager::InitLicense(const char *license, char errorMsgBuffer[], const int errorMsgBufferLen) 
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] pLicense` The license key.
 
 `[in, out] errorMsgBuffer` The buffer is allocated by caller and the recommended length is 256. The error message will be copied to the buffer.
 
 `[in] errorMsgBufferLen` The length of the allocated buffer.
 
-**Return Value**  
+**Return Value**
+
 Returns error code (returns 0 if the function operates successfully).
 
 **Code Snippet**

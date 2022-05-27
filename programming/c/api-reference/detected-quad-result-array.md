@@ -28,4 +28,5 @@ The count of detected quad results in the array.
 The detected quad result array.
 
 **See Also**
+
 [DetectedQuadResult](detected-quad-result.md)

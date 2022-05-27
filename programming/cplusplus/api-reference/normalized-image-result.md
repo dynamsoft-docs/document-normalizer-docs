@@ -25,5 +25,6 @@ Gets the image data of the NormalizedImageResult.
 const CImageData* GetImageData() 
 ```
 
-**Return Value**  
+**Return Value**
+
 The image data.

@@ -20,10 +20,12 @@ Returns the corresponding error message of the input error code.
 const char* DC_GetErrorString(const int errorCode)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] errorCode` Error code.
 
-**Return Value**  
+**Return Value**
+
 The error message.
 
 **Code Snippet**
@@ -46,7 +48,8 @@ Returns the version info string of the SDK.
 static const char* dynamsoft::ddn::CDocumentNormalizer::GetVersion()
 ```
 
-**Return Value**  
+**Return Value**
+
 The version information string.
 
 **Code Snippet**

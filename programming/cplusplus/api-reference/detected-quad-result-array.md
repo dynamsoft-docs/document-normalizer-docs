@@ -26,7 +26,8 @@ Gets the count of detected quad results in the array.
 const CQuadrilateral* GetCount() 
 ```
 
-**Return Value**  
+**Return Value**
+
 The count of detected quad results in the array.
 
 ## GetDetectedQuadResult
@@ -37,11 +38,13 @@ Gets a detected quad result by specifying the index in the array.
 int GetDetectedQuadResult(int index, CDetectedQuadResult** result) 
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] index` The index of the detected quad result to get in the array.
 
 `[in] result` The detected quad result got from the array.
 
 **Return Value**  
 Returns error code (returns 0 if the function operates successfully).
+
 *You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*

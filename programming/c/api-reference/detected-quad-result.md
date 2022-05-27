@@ -23,7 +23,8 @@ typedef struct tagDetectedQuadResult
 
 The location of the detected quad result.
 
-**See Also**  
+**See Also**
+
 [Quadrilateral](quadrilateral.md)
 
 ### confidenceAsDocumentBoundary

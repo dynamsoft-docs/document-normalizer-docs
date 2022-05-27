@@ -104,5 +104,6 @@ Get the image pixel format used in the image byte array.
 ImagePixelFormat GetImagePixelFormat()
 ```
 
-**See Also**  
+**See Also**
+
 [ImagePixelFormat]({{ site.enumerations }}image-pixel-format.html?src=cpp)

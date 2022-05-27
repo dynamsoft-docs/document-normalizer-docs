@@ -22,5 +22,6 @@ typedef struct tagNormalizedImageResult
 
 The image data of the NormalizedImageResult.
 
-**See Also**  
+**See Also**
+
 [ImageData](image-data.md)

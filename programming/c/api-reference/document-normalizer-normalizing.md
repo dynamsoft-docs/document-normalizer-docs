@@ -23,6 +23,7 @@ int DDN_DetectQuadFromBuffer(void* normalizer, const ImageData* sourceImage, con
 ```
 
 **Parameters**
+
 `[in] normalizer` Handle of the Dynamsoft Document Normalizer instance.
 
 `[in] sourceImage` The source image buffer.
@@ -32,7 +33,9 @@ int DDN_DetectQuadFromBuffer(void* normalizer, const ImageData* sourceImage, con
 `[out] result` An array of all detected quad results. It is allocated by the SDK and should be freed by calling function [`DDN_FreeDetectedQuadResultArray`](document-normalizer-result.md#ddn_freedetectedquadresultarray).
 
 **Return Value**
+
 Returns error code (returns 0 if the function operates successfully).
+
 *You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
 
 **Code Snippet**
@@ -60,7 +63,8 @@ Detects quad from source image specified by file path.
 int DDN_DetectQuadFromFile(void* normalizer, const char* sourceFilePath, const char* templateName, DetectedQuadResultArray** result)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] normalizer` Handle of the Dynamsoft Document Normalizer instance.
 
 `[in] sourceFilePath` A string defining the source file path. It supports BMP, JPEG, PNG and TIFF files.
@@ -69,8 +73,10 @@ int DDN_DetectQuadFromFile(void* normalizer, const char* sourceFilePath, const c
 
 `[out] result` An array of all detected quad results. It is allocated by the SDK and should be freed by calling function [`DDN_FreeDetectedQuadResultArray`](document-normalizer-result.md#ddn_freedetectedquadresultarray).
 
-**Return Value**  
+**Return Value**
+
 Returns error code (returns 0 if the function operates successfully).
+
 *You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
 
 **Code Snippet**
@@ -97,7 +103,8 @@ Normalizes the source image specified by raw buffer.
 int DDN_NormalizeBuffer(void* normalizer, const ImageData* sourceImage, const char* templateName, const Quadrilateral* quad, NormalizedImageResult** result)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] normalizer` Handle of the Dynamsoft Document Normalizer instance.
 
 `[in] sourceImage` The source image buffer.
@@ -108,8 +115,10 @@ int DDN_NormalizeBuffer(void* normalizer, const ImageData* sourceImage, const ch
 
 `[out] result` The normalized image result. It is allocated by the SDK and should be freed by calling function [`DDN_FreeNormalizedImageResult`](document-normalizer-result.md#ddn_freenormalizedimageresult).
 
-**Return Value**  
+**Return Value**
+
 Returns error code (returns 0 if the function operates successfully).
+
 *You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
 
 **Code Snippet**
@@ -137,7 +146,8 @@ Normalizes the source image specified by file path.
 int DDN_NormalizeFile(void* normalizer, const char* sourceFilePath, const char* templateName, const Quadrilateral* quad, NormalizedImageResult** result)
 ```
 
-**Parameters**  
+**Parameters**
+
 `[in] normalizer` Handle of the Dynamsoft Document Normalizer instance.
 
 `[in] sourceFilePath` A string defining the source file path. It supports BMP, JPEG, PNG and TIFF files.
@@ -148,8 +158,10 @@ int DDN_NormalizeFile(void* normalizer, const char* sourceFilePath, const char* 
 
 `[out] result` The normalized image result. It is allocated by the SDK and should be freed by calling function [`DDN_FreeNormalizedImageResult`](document-normalizer-result.md#ddn_freenormalizedimageresult).
 
-**Return Value**  
+**Return Value**
+
 Returns error code (returns 0 if the function operates successfully).
+
 *You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
 
 **Code Snippet**
