@@ -29,7 +29,7 @@ In this section, let's see how to create a HelloWorld app for normalizing docume
 >   - [Objective-C](https://github.com/Dynamsoft/document-normalizer-mobile-samples/tree/main/ios/Objective-C/HelloWorld).
 >   - [Swift](https://github.com/Dynamsoft/document-normalizer-mobile-samples/tree/main/ios/Swift/HelloWorld).
 
-&nbsp;
+
 
 ### Create a New Project
 
@@ -43,7 +43,7 @@ In this section, let's see how to create a HelloWorld app for normalizing docume
 
 5. Click on the **Create** button to finish.
 
-&nbsp;
+
 
 ### Add the SDK
 
