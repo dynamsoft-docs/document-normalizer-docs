@@ -124,7 +124,7 @@ In government or large corporations, we want to keep an electronic version of pa
 
 ### Identity Documents
 
-In many scenarios, identity documents such as id card/passport need to be quickly located and identified. However, the captured images of id card/passport might not be uniformed. You may encounter images taken with different angles, lightings, clearness…etc. With DDN, you can detect the the boundaries of identity document images and normalize the ROI with ease. Therefore, the information extraction of ID document images will become easier.
+In many scenarios, identity documents such as id card/passport need to be quickly located and identified. However, the captured images of id card/passport might not be uniformed. You may encounter images taken with different angles, lightings, clearness…etc. With DDN, you can detect the boundaries of identity document images and normalize the ROI with ease. Therefore, the information extraction of ID document images will become easier.
 
 ### Retail
 
