@@ -1,0 +1,62 @@
+repository: dynamsoft-docs/document-normalizer-docs
+repositoryUrl: https://github.com/dynamsoft-docs/document-normalizer-docs/blob/main
+docFullPath: https://www.dynamsoft.com/document-normalizer/docs
+firstLevelUrl: /document-normalizer/docs
+docHomePage: /document-normalizer/docs/introduction/
+
+introduction: /document-normalizer/docs/introduction/
+programming: /document-normalizer/docs/programming/
+parameters: /document-normalizer/docs/parameters/
+
+c: /document-normalizer/docs/programming/c/
+c_api: /document-normalizer/docs/programming/c/api-reference/
+c_release_notes: /document-normalizer/docs/programming/c/release-notes/
+
+cpp: /document-normalizer/docs/programming/cplusplus/
+cpp_api: /document-normalizer/docs/programming/cplusplus/api-reference/
+cpp_release_notes: /document-normalizer/docs/programming/cplusplus/release-notes/
+
+ios: /document-normalizer/docs/programming/ios/
+ios_api: /document-normalizer/docs/programming/ios/api-reference/
+ios_release_notes: /document-normalizer/docs/programming/ios/release-notes/
+ios_camera_enhancer: /document-normalizer/docs/programming/ios/api-reference/camera-enhancer/
+
+android: /document-normalizer/docs/programming/android/
+android_api: /document-normalizer/docs/programming/android/api-reference/
+android_release_notes: /document-normalizer/docs/programming/android/release-notes/
+android_camera_enhancer: /document-normalizer/docs/programming/android/api-reference/camera-enhancer/
+
+enumerations: /document-normalizer/docs/programming/enumerations/
+parameters_reference: /document-normalizer/docs/parameters/reference/
+release_notes: /document-normalizer/docs/release-notes/
+
+useVersionTree: true
+
+assets: /document-normalizer/docs/assets/
+edit_icon: /document-normalizer/docs/assets/img-icon/edit-icon.png
+smile_icon: /document-normalizer/docs/assets/img-icon/icon-smile.png
+sad_icon: /document-normalizer/docs/assets/img-icon/icon-sad.png
+
+baseurl: "/document-normalizer/docs"
+
+download: "/document-normalizer/downloads/1000021-confirmation/"
+
+plugins:
+  - jemoji
+  - jekyll-sitemap
+
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "default-layout"
+      noTitleIndex: true
+      needAutoGenerateSidebar: true
+      needGenerateH3Content: true
+  - scope:
+      path: "Hide_Tree_Page.html"
+    values:
+      sitemap: false
+
+url: "https://www.dynamsoft.com" # sitemap root

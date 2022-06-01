@@ -30,20 +30,23 @@ jobs:
         run: |
           cd /home/ubuntu
           [ -d DDNDocPreview ] && rm -rf DDNDocPreview
-          [ ! -d document-normalizer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/document-normalizer-docs.git document-normalizer-docs-preview
-          [ ! -d DDNDocPreview ] && mkdir -p DDNDocPreview
-          cd document-normalizer-docs-preview && git pull && cd .. && cp -rfp ./document-normalizer-docs-preview/* ./DDNDocPreview/
+          [ -d document-normalizer-docs-preview ] && rm -rf document-normalizer-docs-preview
+          mkdir -p DDNDocPreview
+          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/document-normalizer-docs.git document-normalizer-docs-preview
+          cp -rfp ./document-normalizer-docs-preview/* ./DDNDocPreview/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DDNDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DDNDocPreview/_config.yml
           cd DDNDocPreview && bundle exec jekyll build #--incremental
+
           
       - name: Sync files
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
+        uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
           server: ${{ secrets.FTP_TEST_SITE_SERVER }}
           username: ${{ secrets.FTP_TEST_SITE_USER }}
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
           local-dir: /home/ubuntu/DDNDocPreview/_site/
-          server-dir: /www.dynamsoft.com/document-normalizer/
+          server-dir: /www.dynamsoft.com/document-normalizer/docs/
+
