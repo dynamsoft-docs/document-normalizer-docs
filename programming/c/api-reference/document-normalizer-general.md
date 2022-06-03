@@ -14,6 +14,34 @@ keywords: DC_GetErrorString, DDN_GetVersion, CDocumentNormalizer, api reference,
 | [`DC_IsPointInQuadrilateral`](#dc_ispointinquadrilateral) | Returns whether the point is in the quadrilateral. |
 | [`DDN_GetVersion`](#ddn_getversion) | Returns the version info string of the Dynamsoft Document Normalizer SDK. |
 
+## DC_GetErrorString
+
+Returns the corresponding error message of the input error code.
+
+```c
+const char* DC_GetErrorString(const int errorCode)
+```
+
+**Parameters**
+
+`[in] errorCode` Error code.
+
+**Return Value**
+
+The error message.
+
+**Code Snippet**
+
+```c
+int errorCode = 0;
+void* ddn = NULL;
+NormalizedImageResult* normalizedResult = NULL;
+ddn = DDN_CreateInstance();
+errorCode = DDN_NormalizeFile(ddn, "YOUR-SOURCE-FILE-PATH", "", NULL, &normalizedResult);
+if (errorCode != DM_OK)
+    const char* errorString = DC_GetErrorString(errorCode);
+    //...do something with the errorString
+```
 ## DC_GetQuadrilateralArea
 
 Returns the area of the quadrilateral.
@@ -59,34 +87,6 @@ int DC_IsPointInQuadrilateral(const DM_Point* point, const Quadrilateral* quad)
 
 [`Quadrilateral`](quadrilateral.md)
 
-## DC_GetErrorString
-
-Returns the corresponding error message of the input error code.
-
-```c
-const char* DC_GetErrorString(const int errorCode)
-```
-
-**Parameters**
-
-`[in] errorCode` Error code.
-
-**Return Value**
-
-The error message.
-
-**Code Snippet**
-
-```c
-int errorCode = 0;
-void* ddn = NULL;
-NormalizedImageResult* normalizedResult = NULL;
-ddn = DDN_CreateInstance();
-errorCode = DDN_NormalizeFile(ddn, "YOUR-SOURCE-FILE-PATH", "", NULL, &normalizedResult);
-if (errorCode != DM_OK)
-    const char* errorString = DC_GetErrorString(errorCode);
-    //...do something with the errorString
-```
 
 ## DDN_GetVersion
 
