@@ -8,12 +8,12 @@ noTitleIndex: false
 
 # Introduction to Dynamsoft Document Normalizer
 
-Dynamsoft Document Normalizer (DDN) is an SDK designed to detect quads such as document/table boundaries, etc. from images, and perform document normalization on the images in the detected quads. Document normalization includes a set of functions such as border cropping/deskewing/perspective correction/contrast and brightness adjustment, etc. Additionally, the output normalized image can be used for further processing such as Optical Character Recognition (OCR).
+Dynamsoft Document Normalizer (DDN) is an SDK designed to detect quadrilaterals (quads for short) such as document/table boundaries and more from images, then perform document normalization on the images in the detected quads. Document normalization includes a set of functions such as border cropping/deskewing/perspective correction/contrast and brightness adjustment, etc. Additionally, the resulting normalized image can be used for further processing such as Optical Character Recognition (OCR).
 
-DDN powers your software development from the following aspects:
+DDN powers your software development in the following aspects:
 
 - Robust quadrilateral detection for different structures such as document/table boundaries.
-- Various document normalization such as border cropping/deskewing/perspective correction/output in multiple colour modes/contrast and brightness adjustment, etc.
+- Various document normalization features such as border cropping/deskewing/perspective correction/output in multiple colour modes/contrast and brightness adjustment, etc.
 - Scenario-oriented customizability such as image processing modes
 
 With DDN, you can efficiently embed the functionality of quadrilateral detection and document normalization in your mobile, desktop and server applications. DDN also provides various image processing features, allowing you to customize DDN and meet your business needs.
@@ -47,9 +47,9 @@ With DDN, you can extract the four corner coordinates of one or multiple documen
 
 Don’t worry if your documents/tables are blurry, damaged, too colorful or peculiar in any way. DDN provides various image processing settings for full customization. Our default settings are sufficient for most cases. However, additional tweaks can be made for your specific cases to achieve greater speed and accuracy.
 
-### Various document normalization
+### Various document normalization features
 
-Do you want to convert a document photo that is randomly taken, to a document image that looks like a carefully scanned document? With DDN, you can easily extract documents from photos, and normalize them in various ways.
+Do you want to convert a document photo that is randomly taken, to a document image that looks like a carefully scanned document? With DDN, you can easily extract documents from photos and normalize them in various ways.
 
 - Border cropping
 
