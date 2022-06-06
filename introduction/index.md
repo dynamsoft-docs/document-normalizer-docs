@@ -116,19 +116,34 @@ If you are interested in the specific steps to integrate DDN with DCE, please re
 - <a href="https://www.dynamsoft.com/document-normalizer/docs/programming/android/user-guide.html" target="_blank">Getting Started with DDN Android SDK</a>
 - <a href="https://www.dynamsoft.com/document-normalizer/docs/programming/ios/user-guide.html" target="_blank">Getting Started with DDN iOS SDK</a>
 
-## Usage scenarios
+## Usage Scenarios
 
 ### Document scanning and archiving
 
 In government or large corporations, we want to keep an electronic version of paper documents. We often do so by taking photos of the documents or scanning the documents. However, the captured document images might not be uniformed. You may encounter images taken with different angles, lightings, clearness…etc. With DDN, you can normalize the document images with ease. DDN also provides various settings so you can customize the outcome of the normalized document image to meet your needs.
 
+<div align="center">
+   <p><img src="assets/document-scanning-and-archive.jpg" alt="document-scanning-and-archive" width="60%" /></p>
+   <p>Figure 5 – Document scanning and archiving</p>
+</div>
+
 ### Identity Documents
 
 In many scenarios, identity documents such as id card/passport need to be quickly located and identified. However, the captured images of id card/passport might not be uniformed. You may encounter images taken with different angles, lightings, clearness…etc. With DDN, you can detect the boundaries of identity document images and normalize the ROI with ease. Therefore, the information extraction of ID document images will become easier.
 
+<div align="center">
+   <p><img src="assets/identity-documents.jpg" alt="identity-documents" width="60%" /></p>
+   <p>Figure 6 – Identity documents</p>
+</div>
+
 ### Retail
 
 In retail, DDN can help detect the price label boundaries or table boundaries in images. Additionally, the extracted images can be used for recognition to extract text information.
+
+<div align="center">
+   <p><img src="assets/retail.jpg" alt="Original image" width="60%" /></p>
+   <p>Figure 7 – Price label boundaries</p>
+</div>
 
 ## Programming Languages
 
