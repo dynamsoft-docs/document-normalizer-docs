@@ -59,6 +59,13 @@ The ID of the `DrawingLayer`.
 @property (assign, nonatomic) NSInteger id;
 ```
 
+The ID can be one of the following:
+
+- `DDN_LAYER_ID`
+- `DBR_LAYER_ID`
+- `DLR_LAYER_ID`
+- `USER_DEFINED_LAYER_BASE_ID`
+
 &nbsp;
 
 ## drawingItems

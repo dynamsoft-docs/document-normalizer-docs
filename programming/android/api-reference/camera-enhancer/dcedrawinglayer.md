@@ -66,10 +66,10 @@ public int getId();
 
 The id of the `DrawingLayer`. It can be one of the following:
 
-- `DEFAULT_LAYER_ID`
 - `DDN_LAYER_ID`
 - `DBR_LAYER_ID`
 - `DLR_LAYER_ID`
+- `USER_DEFINED_LAYER_BASE_ID`
 
 **Code Snippet**
 
