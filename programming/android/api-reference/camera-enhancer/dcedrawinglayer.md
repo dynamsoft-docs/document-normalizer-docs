@@ -186,7 +186,7 @@ drawingLayer.setDrawingStyleId(0);
 
 ## setDrawingStyleId(styleId,state)
 
-Specify a style ID for the targeting [`DrawingItems`](drawingitem.md).
+Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). The `state`is a filter of the `DrawingItems`. All the eligible `DrawingItems` will be changed to the input style.
 
 ```java
 public void setDrawingStyleId(int styleId, EnumDrawingItemState state);
@@ -195,7 +195,7 @@ public void setDrawingStyleId(int styleId, EnumDrawingItemState state);
 **Parameters**
 
 `id`: The style ID.  
-`state`: The state of the `DrawingLayer`.
+`state`: The state of the `DrawingItem`.
 
 **Code Snippet**
 
@@ -207,7 +207,7 @@ drawingLayer.setDrawingStyleId(0, EnumDrawingItemState.DIS_SELECTED);
 
 ## setDrawingStyleId(styleId,state,mediaType)
 
-Specify a style ID for the targeting [`DrawingItems`](drawingitem.md).
+Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). The `state` and `mediaType` are filters of the `DrawingItems`. All the eligible `DrawingItems` will be changed to the input style.
 
 ```java
 public void setDrawingStyleId(int styleId, EnumDrawingItemState state, EnumDrawingItemMediaType mediaTypes);
@@ -216,8 +216,8 @@ public void setDrawingStyleId(int styleId, EnumDrawingItemState state, EnumDrawi
 **Parameters**
 
 `id`: The style ID.  
-`state`: The state of the `DrawingLayer`.  
-`mediaType`: The media type of the `DrawingLayer`.
+`state`: The state of the `DrawingItem`.  
+`mediaType`: The media type of the `DrawingItem`.
 
 **Code Snippet**
 

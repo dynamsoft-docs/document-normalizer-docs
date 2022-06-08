@@ -155,7 +155,7 @@ drawingLayer.setDrawingStyleId(0)
 
 ## setDrawingStyleId:state:
 
-Specify a style ID for the targeting `DrawingItems`.
+Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). The `state`is a filter of the `DrawingItems`. All the eligible `DrawingItems` will be changed to the input style.
 
 ```objc
 - (void) setDrawingStyleId:(NSInteger)styleId
@@ -165,7 +165,7 @@ Specify a style ID for the targeting `DrawingItems`.
 **Parameters**
 
 `styleId`: The style ID.  
-`state`: The state of the `DrawingLayer`.
+`state`: The state of the `DrawingItem`.
 
 **Code Snippet**
 
@@ -186,7 +186,7 @@ drawingLayer.setDrawingStyleId(0, state:EnumDrawingItemState.selected)
 
 ## setDrawingStyleId:state:mediaType:
 
-Specify a style ID for the targeting `DrawingItems`.
+Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). The `state` and `mediaType` are filters of the `DrawingItems`. All the eligible `DrawingItems` will be changed to the input style.
 
 ```objc
 - (void) setDrawingStyleId:(NSInteger)styleId
@@ -197,8 +197,8 @@ Specify a style ID for the targeting `DrawingItems`.
 **Parameters**
 
 `styleId`: The style ID.  
-`state`: The state of the `DrawingLayer`.  
-`mediaType`: The media type of the `DrawingLayer`.
+`state`: The state of the `DrawingItem`.  
+`mediaType`: The media type of the `DrawingItem`.
 
 **Code Snippet**
 
