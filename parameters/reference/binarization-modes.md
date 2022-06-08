@@ -8,9 +8,9 @@ description: Dynamsoft Document Normalizer Parameter Reference - BinarizationMod
 
 # BinarizationModes
 
-This parameter helps control the process of binarization, i.e., converting grayscale image to binary image. During the binarization, as we know, the threshold is the key criteria. If the pixel value is smaller than the threshold, it is set to 0, otherwise, it is set to a maximum value (255 in the library). By default, the library automatically calculates the adaptive size of the neighbourhood area and then binarizes the grayscale image with the adaptive threshold based on a small neighbourhood area with an adaptive size around it. Assume this field is in your wheelhouse, this parameter may help specify the appropriate settings for getting a better binary image.
+This parameter helps control the binarization process, which converts a grayscale image to a binary image, and potentially result in a better quality binary image. During binarization, the threshold is the key criteria. If the pixel value is smaller than the threshold, it is set to 0. Otherwise, the threshold is set to the maximum value (255 in the library). By default, the library automatically calculates the adaptive size of the neighbourhood area and then binarizes the grayscale image with the adaptive threshold based on a small neighbourhood area with an adaptive size around it.
 
-It consisits of one or more modes, each mode is a way to implement the binarization.
+It consists of one or more modes, each mode is a way to implement the binarization.
 
 ## Candidate Mode List
 
@@ -19,7 +19,7 @@ It consisits of one or more modes, each mode is a way to implement the binarizat
 
 ### BM_LOCAL_BLOCK
 
-Binarizes the image for each pixel based on a threshold which is calculated based on a small region around it. This mode has the following arguments for further customizing.
+Binarizes the image for each pixel based on a threshold which is calculated based on a small region around said pixel. This mode has the following arguments for further customization:
 
 - [`BlockSizeX`](#blocksizex)
 - [`BlockSizeY`](#blocksizey)
@@ -32,7 +32,7 @@ Binarizes the image for each pixel based on a threshold which is calculated base
 
 ### BM_THRESHOLD
 
-Binarizes the image for each pixel based on a unified threshold. If the gray value of the pixel is less than the threshold, it will be black in the binary image, otherwise it will be white. This mode has the following arguments for further customizing.
+Binarizes the image for each pixel based on a unified threshold. If the gray value of the pixel is less than the threshold, it will be black in the binary image, otherwise it will be white. This mode has the following arguments for further customization:
 
 - [`BinarizationThreshold`](#binarizationthreshold)
 - [`MorphOperation`](#morphoperation)

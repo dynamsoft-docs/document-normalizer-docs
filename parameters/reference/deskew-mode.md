@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - DeskewMode
 
 # DeskewMode
 
-`DeskewMode` is a parameter to specify the way used to apply the deskew process on the target normalized image. It consisits one of one following candidate modes, each mode represents an implement.
+`DeskewMode` specifies the method in which the deskew process way used to apply the deskew process on the target normalized image. It consisits one of one following candidate modes, each mode represents an implement.
 
 ## Candidate Mode List
 
@@ -31,7 +31,7 @@ Deskew the document by applying perspective correction process. This mode has th
 
 | Key Name | Key Value | Description |
 | -------- | --------- | ----------- |
-| Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for deskewing.  |
+| Mode | DeskewMode [Enumerations](../../programming/enumerations/deskew-mode.md) | (Required) Specifies a mode for deskewing.  |
 | ContentDirection | A number from value range of ContentDirection | (Optional) Sets the Argument [ContentDirection](#contentdirection). |
 
 **JSON Parameter Example**

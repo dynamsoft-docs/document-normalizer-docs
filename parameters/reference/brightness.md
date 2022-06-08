@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - Brightness
 
 # Brightness
 
-`Brightness` is a parameter to specify the brightness of the normalized image.
+`Brightness` specifies the brightness of the normalized image.
 
 ## Setting Methods
 

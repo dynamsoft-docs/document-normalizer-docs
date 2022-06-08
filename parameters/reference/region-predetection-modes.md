@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - RegionPredetect
 
 # RegionPredetectionModes
 
-`RegionPredetectionModes` is a parameter to control how to find a region of interesting. It consisits of one or more modes, each mode represents a way to find a region.
+`RegionPredetectionModes` controls how to find a region of interest (ROI) within the image or frame. It consists of one or more modes, each mode representing a different way to find a region of interest.
 
 ## Candidate Mode List
 
@@ -20,15 +20,15 @@ description: Dynamsoft Document Normalizer Parameter Reference - RegionPredetect
 
 ### RPM_AUTO
 
-Lets the library choose an algorithm automatically to detect region.
+Lets the library automatically choose an algorithm to detect the region of interest(s).
 
 ### RPM_GENERAL
 
-Takes the whole image as a region.
+Takes the whole image as a region of interest.
 
 ### RPM_GENERAL_RGB_CONTRAST
 
-Detects region using the general algorithm based on RGB colour contrast. This mode has the following arguments for further customizing.
+Detects the ROI using the general algorithm based on RGB colour contrast. This mode has the following arguments for further customization.
 
 - [ImageParameterName](#imageparametername)
 - [MinImageDimension](#minimagedimension)
@@ -38,7 +38,7 @@ Detects region using the general algorithm based on RGB colour contrast. This mo
 
 ### RPM_GENERAL_GRAY_CONTRAST
 
-Detects region using the general algorithm based on gray contrast. This mode has the following arguments for further customizing.
+Detects the ROI using the general algorithm based on gray contrast. This mode has the following arguments for further customization.
 
 - [ImageParameterName](#imageparametername)
 - [MinImageDimension](#minimagedimension)
@@ -48,7 +48,7 @@ Detects region using the general algorithm based on gray contrast. This mode has
 
 ### RPM_GENERAL_HSV_CONTRAST
 
-Detects region using the general algorithm based on HSV colour contrast. This mode has the following arguments for further customizing.
+Detects the ROI using the general algorithm based on HSV colour contrast. This mode has the following arguments for further customization.
 
 - [AspectRatioRange](#aspectratiorange )
 - [FindAccurateBoundary](#findaccurateboundary)

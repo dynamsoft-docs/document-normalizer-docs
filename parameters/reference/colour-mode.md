@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - ColourMode
 
 # ColourMode
 
-`ColourMode` is a parameter to specify the colour mode of the normalized image.
+`ColourMode` specifies the colour mode (pixel type) of the normalized image. By default, the SDK produces normalized binary images, but you can choose to produce grayscale or colour normalized images.
 
 ## Setting Methods
 
