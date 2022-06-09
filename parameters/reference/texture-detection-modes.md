@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - TextureDetectio
 
 # TextureDetectionModes
 
-`TextureDetectionModes` is a parameter to control how to detect texture on an image. It consisits of one or more modes, each mode represents a way to implement the detection.
+`TextureDetectionModes` controls how to detect texture on an image. It currently only supports a single mode for texture detection.
 
 ## Candidate Mode List
 
@@ -15,7 +15,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - TextureDetectio
 
 ### TDM_GENERAL_WIDTH_CONCENTRATION
 
-Detects texture using the general algorithm. This mode has the following arguments for further customizing.
+Detects texture using the general algorithm. This mode has the following arguments for further customization.
 
 - [Sensitivity](#sensitivity)
 

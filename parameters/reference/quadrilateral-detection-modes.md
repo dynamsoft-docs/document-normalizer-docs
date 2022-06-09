@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - QuadrilateralDe
 
 # QuadrilateralDetectionModes
 
-`QuadrilateralDetectionModes` is a parameter to control how to detect quadrilateral on an image. It consisits of one or more modes, each mode represents a way to implement the detection.
+`QuadrilateralDetectionModes` controls the quadrilateral detection process on an image. It currently includes only one mode.
 
 ## Candidate Mode List
 
@@ -15,7 +15,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - QuadrilateralDe
 
 ### QDM_GENERAL
 
-Detects quadrilateral using the general algorithm.
+Detects quadrilateral(s) using the general algorithm.
 
 ## Setting Methods
 

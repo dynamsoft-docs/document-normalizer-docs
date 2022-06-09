@@ -7,9 +7,9 @@ description: Dynamsoft Document Normalizer Parameter Reference - GrayscaleTransf
 
 # GrayscaleTransformationModes
 
-This parameter helps control the colour mode of the grayscale image.
+`GrayscaleTransformationModes` helps control the colour mode of the grayscale image.
 
-It consisits of one or more modes, each mode represents a way to transform the grayscale image.
+It consists of one or more of the following modes, each mode representing a way to transform the grayscale image.
 
 ## Candidate Mode List
 

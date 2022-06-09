@@ -63,7 +63,7 @@ Detects the ROI using the general algorithm based on HSV colour contrast. This m
 
 ### RPM_MANUAL_SPECIFICATION
 
-Defines a region directly by specifying the coordinate. This mode has the following arguments for further customizing.
+Defines the ROI directly by specifying the region coordinates. This mode has the following arguments for further customizing.
 
 - [FirstPoint](#firstpoint)
 - [FourthPoint](#fourthpoint)
