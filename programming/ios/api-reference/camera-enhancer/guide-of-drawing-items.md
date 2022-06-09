@@ -19,7 +19,7 @@ breadcrumbText: iOS Guide
 `DCECameraView` and `DCEImageEditorView` are the main classes for user to configure the UI. `DrawingItems` are the UI elements that user can create, modify and interact on the UI view. All the `DrawingItems` are contained in `DCEDrawingLayers` and finally displayed on the `DCECameraView` or `DCEImageEditorView`.
 
 <div align="center">
-    <p><img src="assets/drawing-items.png" width="70%" alt="drawing-item"></p>
+    <p><img src="../../../../assets/drawing-items.png" width="70%" alt="drawing-item"></p>
     <p>DrawingItems in DCECameraView and DCEImageEditorView</p>
 </div>
 
@@ -97,7 +97,7 @@ List of all available preset styles:
 ```
 
 <div align="center">
-    <p><img src="assets/drawing-styles.png" width="50%" alt="drawing-item"></p>
+    <p><img src="../../../../assets/drawing-styles.png" width="50%" alt="drawing-item"></p>
     <p>Preset DrawingStyles</p>
 </div>
 
