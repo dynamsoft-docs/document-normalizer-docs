@@ -24,6 +24,11 @@ Extracts lines using the general algorithm.
 
 Extracts lines based on margin.
 
+<div align="center">
+   <p><img src="assets/margin.png" width="30%" alt="margin"></p>
+   <p>Extracts Lines Based on Margin</p>
+</div>
+
 ## Setting Methods
 
 ### As JSON Parameter
