@@ -84,9 +84,6 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
    dependencies {
       implementation 'com.dynamsoft:dynamsoftdocumentnormalizer:1.0.0@aar'
       implementation 'com.dynamsoft:dynamsoftcameraenhancer:3.0.0@aar'
-      implementation 'com.dynamsoft:dynamsoftcore:2.0.0@aar'
-      implementation 'com.dynamsoft:dynamsoftintermediateresult:1.0.0@aar'
-      implementation 'com.dynamsoft:dynamsoftimageprocessing:1.0.0@aar'
    }
    ```
 
@@ -109,7 +106,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
          super.onCreate(savedInstanceState);
          setContentView(R.layout.activity_main);
 
-         LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", new LicenseVerificationListener() {
+         LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", MainActivity.this, new LicenseVerificationListener() {
             @Override
             public void licenseVerificationCallback(boolean isSuccess, CoreException error) {
                if(!isSuccess){

@@ -32,7 +32,6 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 | Method | Description |
 | ------ | ----------- |
 | [`initWithView`](#initwithview) | Initialize the camera enhancer with the camera view |
-| [`initLicense`](#initlicense) | **Deprecated**. Set product key and activate the SDK. |
 | [`getVersion`](#getversion) | Get the SDK version. |
 
 &nbsp;
@@ -66,41 +65,6 @@ let dce = DynamsoftCameraEnhancer.init(view: dceCameraView)
 
 &nbsp;
 
-### initLicense
-
-> The method is deprecated.
-
-Set product key and activate the SDK. It is recommended to initialize the license in `AppDelegate.m`.
-
-```objc
-+(void)initLicense:(NSString*)license verificationListener:(id) verificationListener;
-```
-
-**Parameters**
-
-`license`: The product key.  
-`verificationListener`: The listener that handles callback when the license server returns. See also [`DCELicenseVerificationListener`](protocol-licenselistener.md).
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-[DynamsoftCameraEnhancer initLicense:@"Put your license here" verificationDelegate: self];
-- (void)DCELicenseVerificationCallback:(bool)isSuccess error:(NSError *)error{
-}
-```
-2. 
-```swift
-DynamsoftCameraEnhancer.initLicense("Put your license here", verificationDelegate: self)
-func dceLicenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
-}
-```
-
-&nbsp;
 
 ### getVersion
 
@@ -655,7 +619,6 @@ If the features you input are all enabled but don't cover all the enabled featur
 
 | Method | Description |
 | ------ | ----------- |
-| [`setFrameRate`](#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
 | [`getFrameRate`](#getframerate) | Get the current frame rate. |
 | [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`](#getresolution) | Get the current resolution. |
@@ -666,39 +629,6 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`scanRegionVisible`](#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
 | [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON file from the storage. |
 | [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON string. |
-
-### setFrameRate
-
-Set the frame rate to the input value (if the input value is available for the device).
-
-```objc
-- (void)setFrameRate:(NSInteger)frameRate;
-```
-
-**Parameters**
-
-`frameRate`: An int value that refers to the target frame rate.  
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-[_dce setFrameRate:15];
-```
-2. 
-```swift
-dce.setFrameRate(15)
-```
-
-**Remarks**
-
-The available frame rate setting threshold is always intermittent, which means the input value might not match any available frame rate threshold. If the input value is below the lowest available threshold, the frame rate will be set to the lowest available threshold. If the input value is above the lowest available threshold but still does not match any threshold, the frame rate will be set to the highest available threshold below the input value.
-
-&nbsp;
 
 ### getFrameRate
 

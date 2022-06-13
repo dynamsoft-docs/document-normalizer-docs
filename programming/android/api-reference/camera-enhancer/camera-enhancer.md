@@ -41,12 +41,12 @@ class com.dynamsoft.dce.CameraEnhancer
 Initialize the `CameraEnhancer` Object.
 
 ```java
-CameraEnhancer(android.content.Context context)
+CameraEnhancer(android.app.Activity activity)
 ```
 
 **Parameters**
 
-`context`: An instance of global information about an application environment.
+`activity`: The target activity.
 
 **Code Snippet**
 
@@ -488,7 +488,6 @@ If the features you input are all enabled but don't cover all the enabled featur
 
 | Method | Description |
 | ------ | ----------- |
-| [`setFrameRate`](#setframerate) | Set the frame rate to the input value (if the input value is available for the device). |
 | [`getFrameRate`](#getframerate) | Get the current frame rate. |
 | [`getResolutionList`](#getresolutionlist) | Get all available resolutions. |
 | [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
@@ -501,32 +500,6 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`getScanRegionVisible`](#getscanregionvisible) | Get whether the **scanRegion** will be displayed on the UI. |
 | [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
 | [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
-
-### setFrameRate
-
-Camera Enhancer will try to set the frame rate around the input value.
-
-```java
-void setFrameRate(int frameRate) throws CameraEnhancerException
-```
-
-**Parameters**
-
-`frameRate`: An int value that refers to the target frame rate.  
-
-**Code Snippet**
-
-```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-
-cameraEnhancer.setFrameRate(25);
-```
-
-**Remarks**
-
-The available frame rate setting threshold is always intermittent, which means the input value might not match any available frame rate threshold. If the input value is below the lowest available threshold, the frame rate will be set to the lowest available threshold. If the input value is above the lowest available threshold but still does not match any threshold, the frame rate will be set to the highest available threshold below the input value.
-
-&nbsp;
 
 ### getFrameRate
 
