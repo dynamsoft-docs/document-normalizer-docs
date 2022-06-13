@@ -31,7 +31,7 @@ Deskew the document by applying perspective correction process. This mode has th
 
 | Key Name | Key Value | Description |
 | -------- | --------- | ----------- |
-| Mode | DeskewMode [Enumerations](../../programming/enumerations/deskew-mode.md) | (Required) Specifies a mode for deskewing.  |
+| Mode | Any one in Candidate Mode List as string | (Required) Specifies a mode for deskewing.  |
 | ContentDirection | A number from value range of ContentDirection | (Optional) Sets the Argument [ContentDirection](#contentdirection). |
 
 **JSON Parameter Example**

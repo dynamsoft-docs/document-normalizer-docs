@@ -8,7 +8,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - BinarizationMod
 
 # BinarizationModes
 
-This parameter helps control the binarization process, which converts a grayscale image to a binary image, and potentially result in a better quality binary image. During binarization, the threshold is the key criteria. If the pixel value is smaller than the threshold, it is set to 0. Otherwise, the threshold is set to the maximum value (255 in the library). By default, the library automatically calculates the adaptive size of the neighbourhood area and then binarizes the grayscale image with the adaptive threshold based on a small neighbourhood area with an adaptive size around it.
+This parameter helps control the binarization process, which converts a grayscale image to a binary image, and potentially result in a higher quality binary image. During binarization, the threshold is the key criteria. If a pixel's value is smaller than the threshold, it is set to 0. Otherwise, the pixel value is set to the maximum value (255 in the library). By default, the library automatically calculates the adaptive size of the neighbourhood area and then binarizes the grayscale image with the adaptive threshold based on a small neighbourhood area with an adaptive size around it.
 
 It consists of one or more modes, each mode is a way to implement the binarization.
 
