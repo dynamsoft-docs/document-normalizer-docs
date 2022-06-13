@@ -22,7 +22,7 @@ Extracts lines using the general algorithm.
 
 ### LEM_MARGIN_BASED
 
-Extracts lines based on margin.
+Extracts lines based on the margin between the document content and the document border. Once the margin is found, the location of the document border is then calculated.
 
 <div align="center">
    <p><img src="assets/margin.png" width="30%" alt="margin"></p>

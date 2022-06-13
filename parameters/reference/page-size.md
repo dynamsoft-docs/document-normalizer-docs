@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - PageSize
 
 # PageSize
 
-Sets the page size, width by height in pixel, of the normalized image.
+Sets the page size (width by height in pixels) of the normalized image.
 
 ## Setting Methods
 
