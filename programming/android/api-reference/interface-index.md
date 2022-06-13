@@ -2,7 +2,7 @@
 layout: default-layout
 title: Dynamsoft Document Normalizer Android API Reference - Interface
 description: This page shows all interfaces of Dynamsoft Document Normalizer for Android SDK.
-keywords: ErrorCallback, IntermediateResultCallback, TextResultCallback, DBRServerLicenseVerificationListener, interface, api reference, android
+keywords: DetectResultListener, LicenseVerificationListener, interface, api reference, android
 needAutoGenerateSidebar: true
 needGenerateH3Content: false
 noTitleIndex: true

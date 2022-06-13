@@ -74,9 +74,6 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
       use_frameworks!
 
    pod 'DynamsoftDocumentNormalizer','1.0.0'
-   pod 'DynamsoftCore','2.0.0'
-   pod 'DynamsoftImageProcessing','1.0.0'
-   pod 'DynamsoftIntermediateResult','1.0.0'
    pod 'DynamsoftCameraEnhancer','3.0.0'
 
    end
