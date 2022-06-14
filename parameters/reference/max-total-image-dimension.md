@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - MaxTotalImageDi
 
 # MaxTotalImageDimension
 
-`MaxTotalImageDimension` is a parameter to specify the maximum value of total dimension (in million pixel) of source images the library can process concurrently.
+`MaxTotalImageDimension` specifies the maximum value of the total dimension area (in millions of pixels) of the source images the library can process concurrently. For example, if the library is processing 10 images concurrently, and each image has dimensions of 1920x1080. Then the total area of all the images is (1920 * 1080 * 10 = 20,736,000 pixels). So if the MaxTotalImageDimension is set to 20,000,000 then you can process only 9 of those images at a time.
 
 ## Setting Methods
 
