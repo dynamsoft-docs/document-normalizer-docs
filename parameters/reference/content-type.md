@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - ContentType
 
 # ContentType
 
-`ContentType` is a parameter to specify the target content type to be normalized.
+`ContentType` specifies the target content type to be normalized. Currently, DDN supports normalizing documents or table structures.
 
 ## Setting Methods
 

@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - DeskewMode
 
 # DeskewMode
 
-`DeskewMode` is a parameter to specify the way used to apply the deskew process on the target normalized image. It consisits one of one following candidate modes, each mode represents an implement.
+`DeskewMode` specifies the method in which the deskew process way used to apply the deskew process on the target normalized image. It consisits one of one following candidate modes, each mode represents an implement.
 
 ## Candidate Mode List
 

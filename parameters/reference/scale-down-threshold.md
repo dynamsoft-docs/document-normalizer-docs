@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - ScaleDownThresh
 
 # ScaleDownThreshold
 
-`ScaleDownThreshold` is a parameter to specify the threshold for image shrinking. If the shorter edge size is larger than the given value, the library will calculate the required height and width of the image and shrink the image to that size.
+`ScaleDownThreshold` controls the threshold used when shrinking an image. If the shorter edge size is larger than the given value, the library will calculate the required height and width of the image and shrink the image to that size.
 
 ## Setting Methods
 
