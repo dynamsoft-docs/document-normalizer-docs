@@ -9,7 +9,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - LineExtractionM
 
 `LineExtractionModes` specifies the algorithm used to extract lines.
 
-It consists of one or both of the following modes, with each mode representing a different way to transform the grayscale image.
+It consists of one or both of the following modes, with each mode representing a different way to extract lines.
 
 ## Candidate Mode List
 
