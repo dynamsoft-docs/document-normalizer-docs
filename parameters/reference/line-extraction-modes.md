@@ -7,9 +7,9 @@ description: Dynamsoft Document Normalizer Parameter Reference - LineExtractionM
 
 # LineExtractionModes
 
-`LineExtractionModes` is a parameter to specify the algorithm used to extract lines.
+`LineExtractionModes` specifies the algorithm used to extract lines.
 
-It consisits of one or more modes, each mode represents a way to transform the grayscale image.
+It consists of one or both of the following modes, with each mode representing a different way to extract lines.
 
 ## Candidate Mode List
 
@@ -22,7 +22,7 @@ Extracts lines using the general algorithm.
 
 ### LEM_MARGIN_BASED
 
-Extracts lines based on margin.
+Extracts lines based on the margin between the document content and the document border. Once the margin is found, the location of the document border is then calculated.
 
 <div align="center">
    <p><img src="assets/margin.png" width="30%" alt="margin"></p>

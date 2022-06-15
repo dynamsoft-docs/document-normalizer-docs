@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - Timeout
 
 # Timeout
 
-`Timeout` is a parameter to specify the maximum amount of time (in milliseconds) that should be spent processing each image. It does not include the time taken to load/decode an image (Tiff, PNG, etc) from disk into memory.
+`Timeout` determines the maximum amount of time (in milliseconds) that should be spent processing each image or frame. It does not include the time taken to load/decode an image (Tiff, PNG, etc) from disk into memory.
 
 ## Setting Methods
 

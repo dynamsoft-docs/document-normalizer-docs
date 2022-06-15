@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - InteriorAngleRa
 
 # InteriorAngleRangeArray
 
-`InteriorAngleRangeArray` is a parameter to specify the ranges of angles (in degrees) of the extracted corners.
+`InteriorAngleRangeArray` specifies the range of angles (in degrees) of the extracted corners. The corners refer to the corners of the quad or document.
 
 ## Setting Methods
 

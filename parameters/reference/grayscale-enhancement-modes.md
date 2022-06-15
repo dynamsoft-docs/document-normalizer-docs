@@ -7,9 +7,9 @@ description: Dynamsoft Document Normalizer Parameter Reference - GrayscaleEnhanc
 
 # GrayscaleEnhancementModes
 
-This parameter provides some image processing methods to enhance the quality of the grayscale image. By default, the library does no preprocessing method. Assume your image has distorted features that can be solved by common image processing methods, this parameter may help set the processing mode(s) for getting a higher quality grayscale image.  
+This parameter provides some image processing methods to enhance the quality of the grayscale image. By default, the library does no image preprocessing. Assume your image has distorted features that can be solved by common image processing methods, this parameter can help you get a higher quality grayscale image by shifting the order of the preprocessing algorithms used (if at all).  
 
-It consisits of one or more modes, each mode is a way to implement the preprocessing algorithm.
+It consists of one or more of the following modes, each mode representing a different preprocessing algorithm.
 
 ## Candidate Mode List
 
@@ -20,24 +20,24 @@ It consisits of one or more modes, each mode is a way to implement the preproces
 
 ### GEM_GENERAL
 
-Takes the un-preprocessed grayscale image for following operations.
+Takes the un-preprocessed grayscale image for the next stage of operations.
 
 ### GEM_GRAY_EQUALIZE
 
-Preprocesses the grayscale image using the gray equalization algorithm. This mode can be used for images with low contrast on content and background colour. This mode has the following arguments for further customizing.
+Preprocesses the grayscale image using the gray equalization algorithm. This mode can be used for images with low contrast between content and background colour. This mode has the following arguments for further customization.
 
 - [Sensitivity](#sensitivity)
 
 ### GEM_GRAY_SMOOTH
 
-Preprocesses the grayscale image using the gray smoothing algorithm. This mode can be used for for images with noise or texture. This mode has the following arguments for further customizing.
+Preprocesses the grayscale image using the gray smoothing algorithm. This mode can be used for for images with noise or texture. This mode has the following arguments for further customization.
 
 - [SmoothBlockSizeX](#smoothblocksizex)
 - [SmoothBlockSizeY](#smoothblocksizey)
 
 ### GEM_SHARPEN_SMOOTH
 
-Preprocesses the grayscale image using the sharpening and smoothing algorithm. This mode can be used for blur images. This mode has the following arguments for further customizing.
+Preprocesses the grayscale image using the sharpening and smoothing algorithm. This mode can be used for blurry images. This mode has the following arguments for further customizing.
 
 - [SmoothBlockSizeX](#smoothblocksizex)
 - [SmoothBlockSizeY](#smoothblocksizey)

@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - ColourChannelUs
 
 # ColourChannelUsageType
 
-`ColourChannelUsageType` is a parameter to specify how to use the colour channel from the source image buffer.
+`ColourChannelUsageType` specifies how to use the colour channel from the source image buffer.
 
 ## Setting Methods
 

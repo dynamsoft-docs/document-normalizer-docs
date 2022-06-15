@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - Contrast
 
 # Contrast
 
-`Contrast` is a parameter to specify the contrast of the normalized image.
+`Contrast` specifies the contrast of the normalized image.
 
 ## Setting Methods
 

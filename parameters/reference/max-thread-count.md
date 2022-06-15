@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - MaxThreadCount
 
 # MaxThreadCount
 
-`MaxThreadCount` is a parameter to specify the number of threads the image processing algorithm will use.
+`MaxThreadCount` specifies the number of threads the image processing algorithm will use.
 
 ## Setting Methods
 

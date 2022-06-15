@@ -7,7 +7,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - TextFilterModes
 
 # TextFilterModes
 
-`TextFilterModes` is a parameter to control how to filter texts on an image. It consisits of one or more modes, each mode represents a way to implement the filtering.
+`TextFilterModes` is used to control how to filter texts on an image. It currently consists of a single mode.
 
 ## Candidate Mode List
 
@@ -15,7 +15,7 @@ description: Dynamsoft Document Normalizer Parameter Reference - TextFilterModes
 
 ### TFM_GENERAL_CONTOUR
 
-Filters text using the general algorithm based on contour. This mode has the following arguments for further customizing.
+Filters text using the general algorithm based on contour. This mode has the following arguments for further customization.
 
 - [IfEraseTextZone](#iferasetextzone)
 - [MinImageDimension](#minimagedimension)

@@ -11,13 +11,13 @@ This article introduces the organization structure of all parameters.
 
 ## Definitions
 
-Dynamsoft Document Normalizer uses a template to organize parameters. A template is a JSON object which contains following keys:
+Dynamsoft Document Normalizer uses a template to organize parameters. A template is a `JSON` object which contains following keys:
 
 | Key Name | Description |
 | -------- | ----------- |
 | GlobalParameter | A JSON Object which defines a [GlobalParameter Object](#globalparameter-object). |
-| ImageParameterArray | A JSON Object array which defines multiple [ImageParameter Object](#imageparameter-object)s. |
-| NormalizerParameterArray | A JSON Object array which defines multiple [NormalizerParameter Object](#normalizerparameter-object)s. |
+| ImageParameterArray | A JSON Object array which defines multiple [ImageParameter Objects](#imageparameter-object). |
+| NormalizerParameterArray | A JSON Object array which defines multiple [NormalizerParameter Objects](#normalizerparameter-object). |
 
 ### GlobalParameter Object
 
