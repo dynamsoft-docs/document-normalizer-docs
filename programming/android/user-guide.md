@@ -60,9 +60,19 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
     ```groovy
     dependencies {
-        implementation fileTree(dir: 'libs', include: ['*.aar'])
+         implementation fileTree(dir: 'libs', include: ['*.aar'])
+
+         def camerax_version = '1.1.0-rc01'
+         implementation "androidx.camera:camera-core:$camerax_version"
+         implementation "androidx.camera:camera-camera2:$camerax_version"
+         implementation "androidx.camera:camera-lifecycle:$camerax_version"
+         implementation "androidx.camera:camera-view:$camerax_version"
     }
     ```
+
+    > Note:
+    >
+    > DCE 3.x is based on Android CameraX, so you need to add the CameraX dependency manually.
 
 4. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
 
