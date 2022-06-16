@@ -12,11 +12,9 @@ noTitleIndex: true
 
 ## Requirements
 
-- Operating systems:
-  - Supported OS: Android 5 or higher (Android 7 or higher recommended).
-  - Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64.
-
-- Environment: Android Studio 3.4+.
+- Supported OS: <a href="https://developer.android.com/about/versions/lollipop" target="_blank">Android 5.0 (API Level 21)</a> or higher.
+- Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
+- Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
 
 ## Build Your First Application
 
