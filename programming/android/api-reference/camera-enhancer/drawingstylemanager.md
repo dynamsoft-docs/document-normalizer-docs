@@ -41,7 +41,7 @@ An instance of `DrawingStyle`.
 **Code Snippet**
 
 ```java
-DrawingStyle defaultStyle = DrawingStyleManager.getDrawingStyle(DrawingStyleManager.DEFAULT_STYLE_ID_1);
+DrawingStyle defaultStyle = DrawingStyleManager.getDrawingStyle(DrawingStyleManager.STYLE_ORANGE_STROKE);
 ```
 
 **Remarks**
@@ -50,14 +50,14 @@ There are 8 preset drawing styles.
 
 | ID | Style Name |
 | -- | ---------- |
-| 1 | `DEFAULT_STYLE_ID_1` |
-| 2 | `DEFAULT_STYLE_ID_2` |
-| 3 | `DEFAULT_STYLE_ID_3` |
-| 4 | `DEFAULT_STYLE_ID_4` |
-| 5 | `SELECTED_STYLE_ID_1` |
-| 6 | `SELECTED_STYLE_ID_2` |
-| 7 | `SELECTED_STYLE_ID_3` |
-| 8 | `SELECTED_STYLE_ID_4` |
+| 1 | `STYLE_BLUE_STROKE` |
+| 2 | `STYLE_GREEN_STROKE` |
+| 3 | `STYLE_ORANGE_STROKE` |
+| 4 | `STYLE_YELLOW_STROKE` |
+| 5 | `STYLE_BLUE_STROKE_FILL` |
+| 6 | `STYLE_GREEN_STROKE_FILL` |
+| 7 | `STYLE_ORANGE_STROKE_FILL` |
+| 8 | `STYLE_YELLOW_STROKE_FILL` |
 
 &nbsp;
 
