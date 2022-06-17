@@ -48,30 +48,30 @@ To change the style of `DrawingItems` with preset `DrawingStyles`:
 
 ```java
 // You can change the drawing style of all DrawingItems in the layer.
-cameraView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setDrawingStyleId(DrawingStyleManager.DEFAULT_STYLE_ID_3);
+cameraView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setDrawingStyleId(DrawingStyleManager.STYLE_ORANGE_STROKE);
 // You can also change the drawing style of a part of the DrawingItems.
-editorView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setDrawingStyleId(DrawingStyleManager.DEFAULT_STYLE_ID_3, EnumDrawingItemState.DIS_SELECTED, EnumDrawingItemMediaType.DIMT_QUADRILATERAL);
+editorView.getDrawingLayer(DCEDrawingLayer.DBR_LAYER_ID).setDrawingStyleId(DrawingStyleManager.STYLE_ORANGE_STROKE, EnumDrawingItemState.DIS_SELECTED, EnumDrawingItemMediaType.DIMT_QUADRILATERAL);
 ```
 
 List of all available preset styles:
 
 ```java
 // DrawingItems on DDN layer are using this style as default.
-public static int DEFAULT_STYLE_ID_1 = 1;
+public static int STYLE_BLUE_STROKE = 1;
 // DrawingItems on DBR layer are using this style as default.
-public static int DEFAULT_STYLE_ID_2 = 2;
+public static int STYLE_GREEN_STROKE = 2;
 // DrawingItems on DLR layer are using this style as default.
-public static int DEFAULT_STYLE_ID_3 = 3;
+public static int STYLE_ORANGE_STROKE = 3;
 // DrawingItems on user defined layer are using this style as default.
-public static int DEFAULT_STYLE_ID_4 = 4;
+public static int STYLE_YELLOW_STROKE = 4;
 // DrawingItems on DDN layer are using this style as default if they are selected.
-public static int SELECTED_STYLE_ID_1 = 5;
+public static int STYLE_BLUE_STROKE_FILL = 5;
 // DrawingItems on DBR layer are using this style as default if they are selected.
-public static int SELECTED_STYLE_ID_2 = 6;
+public static int STYLE_GREEN_STROKE_FILL = 6;
 // DrawingItems on DLR layer are using this style as default if they are selected.
-public static int SELECTED_STYLE_ID_3 = 7;
+public static int STYLE_ORANGE_STROKE_FILL = 7;
 // DrawingItems on user defined layer are using this style as default if they are selected.
-public static int SELECTED_STYLE_ID_4 = 8;
+public static int STYLE_YELLOW_STROKE_FILL = 8;
 ```
 
 <div align="center">

@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 1.0.0
 
-## 1.0.0 (05/19/2022)
+## 1.0.0 (06/21/2022)
 
 ### Highlights
 

@@ -12,11 +12,9 @@ noTitleIndex: true
 
 ## Requirements
 
-- Operating systems:
-  - macOS 10.11 and above.
-  - iOS 9.0 and above.
-- Environment: Xcode 7.1 - 11.5 and above.
-- Recommended: macOS 10.15.4+, Xcode 11.5+, iOS 11+
+- Supported OS: **iOS 11.0** or higher.
+- Supported ABI: **arm64** and **x86_64**.
+- Development Environment: Xcode 7.1 and above (Xcode 13.0+ recommended).
 
 ## Build Your First Application
 
@@ -51,7 +49,7 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
 
 #### Add the Frameworks Manually
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/document-normalizer/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, you can find the following **Frameworks** under the **DynamsoftDocumentNormalizer\Frameworks** directory:
+1. Download the SDK package from the <a href="https://download2.dynamsoft.com/ddn/dynamsoft-document-normalizer-ios-1.0.0.zip" target="_blank">Dynamsoft website</a>. After unzipping, you can find the following **Frameworks** under the **DynamsoftDocumentNormalizer\Frameworks** directory:
 
    | File | Description |
    | ---- | ----------- |

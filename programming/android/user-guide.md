@@ -12,11 +12,9 @@ noTitleIndex: true
 
 ## Requirements
 
-- Operating systems:
-  - Supported OS: Android 5 or higher (Android 7 or higher recommended).
-  - Supported ABI: armeabi-v7a, arm64-v8a, x86 and x86_64.
-
-- Environment: Android Studio 3.4+.
+- Supported OS: <a href="https://developer.android.com/about/versions/lollipop" target="_blank">Android 5.0 (API Level 21)</a> or higher.
+- Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
+- Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
 
 ## Build Your First Application
 
@@ -44,7 +42,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
 #### Add the Library Manually
 
-1. Download the SDK package from the <a href="https://www.dynamsoft.com/document-normalizer/downloads/?utm_source=docs" target="_blank">Dynamsoft website</a>. After unzipping, You can find the following **aar** files under the **DynamsoftDocumentNormalizer\Lib** directory:
+1. Download the SDK package from the <a href="https://download2.dynamsoft.com/ddn/dynamsoft-document-normalizer-android-1.0.0.zip" target="_blank">Dynamsoft website</a>. After unzipping, You can find the following **aar** files under the **DynamsoftDocumentNormalizer\Lib** directory:
 
    | File | Description |
    |---------|-------------|
@@ -60,9 +58,19 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
     ```groovy
     dependencies {
-        implementation fileTree(dir: 'libs', include: ['*.aar'])
+         implementation fileTree(dir: 'libs', include: ['*.aar'])
+
+         def camerax_version = '1.1.0-rc01'
+         implementation "androidx.camera:camera-core:$camerax_version"
+         implementation "androidx.camera:camera-camera2:$camerax_version"
+         implementation "androidx.camera:camera-lifecycle:$camerax_version"
+         implementation "androidx.camera:camera-view:$camerax_version"
     }
     ```
+
+    > Note:
+    >
+    > DCE 3.x is based on Android CameraX, so you need to add the CameraX dependency manually.
 
 4. Click **Sync Now**. After the synchronization completes, the SDK is added to the project.
 
@@ -82,8 +90,8 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftdocumentnormalizer:1.0.0@aar'
-      implementation 'com.dynamsoft:dynamsoftcameraenhancer:3.0.0@aar'
+      implementation 'com.dynamsoft:dynamsoftdocumentnormalizer:1.0.0'
+      implementation 'com.dynamsoft:dynamsoftcameraenhancer:3.0.0'
    }
    ```
 

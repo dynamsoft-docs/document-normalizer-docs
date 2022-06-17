@@ -48,11 +48,11 @@ An instance of `DrawingStyle`.
 >
 >1. 
 ```objc
-DrawingStyle* style = [DrawingStyleManager getDrawingStyle:DEFAULT_STYLE_ID_1];
+DrawingStyle* style = [DrawingStyleManager getDrawingStyle:STYLE_BLUE_STROKE_FILL];
 ```
 2. 
 ```swift
-let style = DrawingStyleManager.getDrawingStyle(DEFAULT_STYLE_ID_1)
+let style = DrawingStyleManager.getDrawingStyle(STYLE_BLUE_STROKE_FILL)
 ```
 
 **Remarks**
@@ -61,14 +61,14 @@ There are 8 preset drawing styles.
 
 | ID | Style Name |
 | -- | ---------- |
-| 1 | `DEFAULT_STYLE_ID_1` |
-| 2 | `DEFAULT_STYLE_ID_2` |
-| 3 | `DEFAULT_STYLE_ID_3` |
-| 4 | `DEFAULT_STYLE_ID_4` |
-| 5 | `SELECTED_STYLE_ID_1` |
-| 6 | `SELECTED_STYLE_ID_2` |
-| 7 | `SELECTED_STYLE_ID_3` |
-| 8 | `SELECTED_STYLE_ID_4` |
+| 1 | `STYLE_BLUE_STROKE_FILL` |
+| 2 | `STYLE_GREEN_STROKE_FILL` |
+| 3 | `STYLE_ORANGE_STROKE_FILL` |
+| 4 | `STYLE_YELLOW_STROKE_FILL` |
+| 5 | `STYLE_BLUE_STROKE_FILL` |
+| 6 | `STYLE_GREEN_STROKE_FILL` |
+| 7 | `STYLE_ORANGE_STROKE_FILL` |
+| 8 | `STYLE_YELLOW_STROKE_FILL` |
 
 &nbsp;
 

@@ -62,38 +62,38 @@ To change the style of `DrawingItems` with preset `DrawingStyles`:
 ```objc
 DCEDrawingLayer *dbrLayer = [imageEditorView getDrawingLayer:DBR_LAYER_ID];
 // You can change the drawing style of all DrawingItems in the layer.
-[dbrLayer setDrawingStyleId:DrawingStyleManager.DEFAULT_STYLE_ID_3];
+[dbrLayer setDrawingStyleId:DrawingStyleManager.STYLE_ORANGE_STROKE];
 // You can also change the drawing style of a part of the DrawingItems.
-[dbrLayer setDrawingStyleId:DrawingStyleManager.DEFAULT_STYLE_ID_3 state:EnumDrawingItemStateSelected mediaType:EnumDrawingItemMediaTypeRectangle];
+[dbrLayer setDrawingStyleId:DrawingStyleManager.STYLE_ORANGE_STROKE state:EnumDrawingItemStateSelected mediaType:EnumDrawingItemMediaTypeRectangle];
 ```
 2. 
 ```swift
 let dbrLayer = imageEditorView.getDrawingLayer(DBR_LAYER_ID)
 // You can change the drawing style of all DrawingItems in the layer.
-dbrLayer.setDrawingStyleId(DrawingStyleManager.DEFAULT_STYLE_ID_3)
+dbrLayer.setDrawingStyleId(DrawingStyleManager.STYLE_ORANGE_STROKE)
 // You can also change the drawing style of a part of the DrawingItems.
-dbrLayer.setDrawingStyleId(DrawingStyleManager.DEFAULT_STYLE_ID_3, state:EnumDrawingItemStateSelected, mediaType:EnumDrawingItemMediaTypeRectangle)
+dbrLayer.setDrawingStyleId(DrawingStyleManager.STYLE_ORANGE_STROKE, state:EnumDrawingItemStateSelected, mediaType:EnumDrawingItemMediaTypeRectangle)
 ```
 
 List of all available preset styles:
 
 ```objc
 // DrawingItems on DDN layer are using this style as default.
-#define DEFAULT_STYLE_ID_1 = 1;
+#define STYLE_BLUE_STROKE = 1;
 // DrawingItems on DBR layer are using this style as default.
-#define DEFAULT_STYLE_ID_2 = 2;
+#define STYLE_GREEN_STROKE = 2;
 // DrawingItems on DLR layer are using this style as default.
-#define DEFAULT_STYLE_ID_3 = 3;
+#define STYLE_ORANGE_STROKE = 3;
 // DrawingItems on user defined layer are using this style as default.
-#define DEFAULT_STYLE_ID_4 = 4;
+#define STYLE_YELLOW_STROKE = 4;
 // DrawingItems on DDN layer are using this style as default if they are selected.
-#define SELECTED_STYLE_ID_1 = 5;
+#define STYLE_BLUE_STROKE_FILL = 5;
 // DrawingItems on DBR layer are using this style as default if they are selected.
-#define SELECTED_STYLE_ID_2 = 6;
+#define STYLE_GREEN_STROKE_FILL = 6;
 // DrawingItems on DLR layer are using this style as default if they are selected.
-#define SELECTED_STYLE_ID_3 = 7;
+#define STYLE_ORANGE_STROKE_FILL = 7;
 // DrawingItems on user defined layer are using this style as default if they are selected.
-#define SELECTED_STYLE_ID_4 = 8;
+#define STYLE_YELLOW_STROKE_FILL = 8;
 ```
 
 <div align="center">
@@ -143,14 +143,14 @@ To modify the existing DrawingStyles:
 >1. 
 ```objc
 // Get the style by ID.
-DrawingStyle *myStyle = [DrawingStyleManager getDrawingStyle:DEFAULT_STYLE_ID_1];
+DrawingStyle *myStyle = [DrawingStyleManager getDrawingStyle:STYLE_BLUE_STROKE_FILL];
 // Modify the style.
 myStyle.strokeColor = [UIColor colorWithRed:0.5 green:0.5 blue:0.5 alpha:0.5];
 ```
 2. 
 ```swift
 // Get the style by ID.
-let myStyle = DrawingStyleManager.getDrawingStyle(DEFAULT_STYLE_ID_1)
+let myStyle = DrawingStyleManager.getDrawingStyle(STYLE_BLUE_STROKE_FILL)
 // Modify the style.
 myStyle.strokeColor = UIColor.init(red: 0.7, green: 0.7, blue: 0.7, alpha: 0.5)
 ```
