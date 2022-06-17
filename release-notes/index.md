@@ -10,7 +10,7 @@ needGenerateH3Content: false
 
 ## 1.0
 
-> First released: 05-17-2022
+> First released: 06-21-2022
 
 ### Highlights
 
@@ -18,4 +18,4 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 1.0.0 | [C](../programming/c/release-notes/c-1.md#100-05172022) / [C++](../programming/cplusplus/release-notes/cpp-1.md#100-05172022) / [Android](../programming/android/release-notes/android-1.md#100-05192022) / [iOS](../programming/ios/release-notes/ios-1.md#100-05192022) |
+| 1.0.0 | [C](../programming/c/release-notes/c-1.md#100-06212022) / [C++](../programming/cplusplus/release-notes/cpp-1.md#100-06212022) / [Android](../programming/android/release-notes/android-1.md#100-06212022) / [iOS](../programming/ios/release-notes/ios-1.md#100-06212022) |
