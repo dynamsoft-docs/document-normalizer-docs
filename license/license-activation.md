@@ -55,7 +55,6 @@ func licenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 ```
 4. 
 ```c
-void* ddn = NULL;
 int errorCode = 0;
 char szErrorMsg[256];
 errorCode = DC_InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", szErrorMsg, 256);
