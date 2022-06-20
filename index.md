@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: default-layout
 title: Dynamsoft Document Normalizer Documentation Homepage
 keywords: homepage, documentation
 breadcrumbText: HomePage
