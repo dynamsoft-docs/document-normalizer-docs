@@ -1,12 +1,14 @@
 # This is a basic workflow to help you get started with Actions
 
-name: Full-Site-Build
+name: CI
 
 # Controls when the workflow will run
 on:
-  # Triggers the workflow on push events but only for the master branch
+  # Triggers the workflow on push or pull request events for main and preview branch
   push:
-    branches: [ preview ]
+    branches: 
+    - main 
+    - preview 
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -25,16 +27,15 @@ jobs:
       #- uses: actions/checkout@v2
 
       # Runs a set of commands using the runners shell
-      - name: Build the site
+      - name: Run a multi-line script
         run: |
           cd /home/ubuntu
-          [ -d DDNDoc ] && rm -rf DDNDoc
           [ ! -d DDNDoc ] && mkdir -p DDNDoc
           cd document-normalizer-docs && git pull && cd .. && cp -rfp ./document-normalizer-docs/* ./DDNDoc/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DDNDoc/
           cd DDNDoc && bundle exec jekyll build
           python3 /home/ubuntu/ftp.py /home/ubuntu/DDNDoc/_site/ ./www.dynamsoft.com/document-normalizer/docs/ prod
-          
+
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
     # The type of runner that the job will run on
@@ -42,25 +43,18 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      #- uses: actions/checkout@v2
-        
-        
       # Runs a set of commands using the runners shell
       - name: Build the site
         run: |
           cd /home/ubuntu
-          [ -d DDNDocPreview ] && rm -rf DDNDocPreview
-          [ -d document-normalizer-docs-preview ] && rm -rf document-normalizer-docs-preview
-          mkdir -p DDNDocPreview
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/document-normalizer-docs.git document-normalizer-docs-preview
-          cp -rfp ./document-normalizer-docs-preview/* ./DDNDocPreview/
+          [ ! -d DDNDocPreview ] && mkdir -p DDNDocPreview
+          [ ! -d document-normalizer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/document-normalizer-docs.git document-normalizer-docs-preview
+          cd document-normalizer-docs-preview && git pull && cd .. && cp -rfp ./document-normalizer-docs-preview/* ./DDNDocPreview/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DDNDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DDNDocPreview/_config.yml
-          cd DDNDocPreview && bundle exec jekyll build #--incremental
+          cd DDNDocPreview && bundle exec jekyll build --incremental
 
-          
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
@@ -71,3 +65,4 @@ jobs:
           local-dir: /home/ubuntu/DDNDocPreview/_site/
           server-dir: /www.dynamsoft.com/document-normalizer/docs/
 
+          
