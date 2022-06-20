@@ -1,9 +1,9 @@
 ---
 layout: default-layout
 title: License Activation - Dynamsoft Document Normalizer
-keywords: homepage, documentation
-breadcrumbText: HomePage
-description: Documentation Homepage
+keywords: license
+breadcrumbText: License Activation
+description: License Activation Page
 ---
 
 # License Initialization
