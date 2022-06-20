@@ -55,4 +55,3 @@ DynamsoftLicenseManager.initLicense("Put your license here", verificationDelegat
 func licenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
 }
 ```
-```

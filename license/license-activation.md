@@ -1,0 +1,74 @@
+---
+layout: default-layout
+title: License Activation - Dynamsoft Document Normalizer
+keywords: homepage, documentation
+breadcrumbText: HomePage
+description: Documentation Homepage
+---
+
+# License Initialization
+
+## Get a trial key
+
+- A time-limited public trial license is available for every new device for first use of Dynamsoft Label Recognizer. You can find the public trial license on the following parts of this page.
+- If your public trial key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dlr&utm_source=docs" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
+
+## Get a full license
+
+- [Contact us](https://www.dynamsoft.com/company/contact/)  to purchase a full license
+
+## Initialize the license
+
+The following code snippets are using the public trial license to initialize the license. You can replace the public trial license with your own license key.
+
+<div class="sample-code-prefix"></div>
+>- Java-Android
+>- Objective-C
+>- Swift
+>- C
+>- C++
+>
+>1. 
+```java
+LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", MainActivity.this, new LicenseVerificationListener() {
+   @Override
+   public void LicenseVerificationCallback(boolean isSuccess, Exception error) {
+          if(!isSuccess){
+             error.printStackTrace();
+          }
+   }
+});
+```
+2. 
+```objc
+[DynamsoftLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate: self];
+- (void)licenseVerificationCallback:(BOOL)isSuccess error:(NSError *)error{
+   // Add your code to execute when license verification call back is handled.
+}
+```
+3. 
+```swift
+DynamsoftLicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", verificationDelegate: self)
+func licenseVerificationCallback(_ isSuccess: Bool, error: Error?) {
+   // Add your code to execute when license verification call back is handled.
+}
+```
+4. 
+```c
+void* ddn = NULL;
+int errorCode = 0;
+char szErrorMsg[256];
+errorCode = DC_InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", szErrorMsg, 256);
+//...handle the errorCode
+ddn = DDN_CreateInstance();
+//...do something else
+DDN_DestroyInstance(ddn);
+```
+5. 
+```cpp
+int errorCode = 0;
+char szErrorMsg[256];
+errorCode = CLicenseManager::InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", szErrorMsg, 256);
+if (errorCode != DM_OK)
+   cout << szErrorMsg << endl;
+```
