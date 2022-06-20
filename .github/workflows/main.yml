@@ -31,6 +31,7 @@ jobs:
         run: |
           cd /home/ubuntu
           [ ! -d DDNDoc ] && mkdir -p DDNDoc
+          [ ! -d document-normalizer-docs ] && git clone --depth 1 --branch main https://github.com/dynamsoft-docs/document-normalizer-docs.git document-normalizer-docs
           cd document-normalizer-docs && git pull && cd .. && cp -rfp ./document-normalizer-docs/* ./DDNDoc/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DDNDoc/
           cd DDNDoc && bundle exec jekyll build
