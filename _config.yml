@@ -60,3 +60,5 @@ defaults:
       sitemap: false
 
 url: "https://www.dynamsoft.com" # sitemap root
+
+github: [metadata]
