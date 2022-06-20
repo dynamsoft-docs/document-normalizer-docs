@@ -80,3 +80,4 @@ char szErrorMsg[256];
 errorCode = CLicenseManager::InitLicense("YOUR-LICENSE-KEY", szErrorMsg, 256);
 if (errorCode != DM_OK)
     cout << szErrorMsg << endl;
+```
