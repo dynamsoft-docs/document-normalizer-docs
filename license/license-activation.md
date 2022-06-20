@@ -10,8 +10,8 @@ description: License Activation Page
 
 ## Get a trial key
 
-- A time-limited public trial license is available for every new device for first use of Dynamsoft Label Recognizer. You can find the public trial license on the following parts of this page.
-- If your public trial key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=dlr&utm_source=docs" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
+- A time-limited public trial license is available for every new device for first use of Dynamsoft Document Normalizer. You can find the public trial license on the following parts of this page.
+- If your public trial key is expired, please visit <a href="https://www.dynamsoft.com/customer/license/trialLicense?product=ddn&utm_source=docs" target="_blank">Private Trial License Page</a> to get a 30-day trial extension.
 
 ## Get a full license
 
@@ -32,7 +32,7 @@ The following code snippets are using the public trial license to initialize the
 ```java
 LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", MainActivity.this, new LicenseVerificationListener() {
    @Override
-   public void LicenseVerificationCallback(boolean isSuccess, Exception error) {
+   public void licenseVerificationCallback(boolean isSuccess, CoreException error) {
           if(!isSuccess){
              error.printStackTrace();
           }
@@ -59,10 +59,6 @@ void* ddn = NULL;
 int errorCode = 0;
 char szErrorMsg[256];
 errorCode = DC_InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", szErrorMsg, 256);
-//...handle the errorCode
-ddn = DDN_CreateInstance();
-//...do something else
-DDN_DestroyInstance(ddn);
 ```
 5. 
 ```cpp

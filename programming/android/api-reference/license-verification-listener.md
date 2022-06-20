@@ -37,7 +37,7 @@ void licenseVerificationCallback(boolean isSuccess, Exception error);
 ```java
 LicenseVerificationListener licenseListener = new LicenseVerificationListener() {
     @Override
-    public void licenseVerificationCallback(boolean isSuccess, Exception error) {
+    public void licenseVerificationCallback(boolean isSuccess, CoreException error) {
         // Add your code
     }
 };

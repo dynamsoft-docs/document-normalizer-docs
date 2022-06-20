@@ -43,7 +43,7 @@ static void initLicense(String license, android.content.Contex contex, LicenseVe
 ```java
 LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", MainActivity.this, new LicenseVerificationListener() {
    @Override
-   public void LicenseVerificationCallback(boolean isSuccess, Exception error) {
+   public void licenseVerificationCallback(boolean isSuccess, CoreException error) {
       if(!isSuccess){
          error.printStackTrace();
       }
