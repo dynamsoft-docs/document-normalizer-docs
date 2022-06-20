@@ -30,7 +30,10 @@ jobs:
           cd /home/ubuntu
           [ -d DDNDoc ] && rm -rf DDNDoc
           [ ! -d DDNDoc ] && mkdir -p DDNDoc
-          cd document-normalizer-docs && git pull && cd .. && cp -rfp ./document-normalizer-docs/* ./DDNDoc/
+          [ -d document-normalizer-docs ] && rm -rf document-normalizer-docs
+          mkdir -p document-normalizer-docs
+          git clone --depth 1 --branch main https://github.com/dynamsoft-docs/document-normalizer-docs.git document-normalizer-docs
+          cp -rfp ./document-normalizer-docs/* ./DDNDoc/
           cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DDNDoc/
           cd DDNDoc && bundle exec jekyll build
           python3 /home/ubuntu/ftp.py /home/ubuntu/DDNDoc/_site/ ./www.dynamsoft.com/document-normalizer/docs/ prod
