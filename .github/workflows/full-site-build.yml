@@ -5,8 +5,8 @@ name: Full-Site-Build
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push events but only for the master branch
-  push:
-    branches: [ preview ]
+  # push:
+  #   branches: [ preview ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
