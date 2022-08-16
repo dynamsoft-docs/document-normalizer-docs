@@ -66,7 +66,6 @@ let dce = DynamsoftCameraEnhancer.init(view: dceCameraView)
 
 &nbsp;
 
-
 ### getVersion
 
 Get the SDK version of Dynamsoft Camera Enhancer.
@@ -253,7 +252,7 @@ Select camera by `cameraID`. The camera will be selected and further camera cont
 ```
 2. 
 ```swift
-dce.selectCamera("BACK_FACING_CAMERA", error: &error)
+try? dce.selectCamera("BACK_FACING_CAMERA")
 ```
 
 **Remarks**
@@ -675,7 +674,7 @@ The `EnumEnhancerFeatures` members:
 ```
 2. 
 ```swift
-dce.enableFeatures(EnumEnhancerFeature.EnumFRAME_FILTER.rawValue, error: &error)
+try? dce.enableFeatures(EnumEnhancerFeature.EnumFRAME_FILTER.rawValue)
 ```
 
 **Remarks**
@@ -985,7 +984,7 @@ scanRegion.regionBottom = 75
 scanRegion.regionLeft = 25
 scanRegion.regionRight = 75
 scanRegion.regionMeasuredByPercentage = 1
-dce.setScanRegion(scanRegion, error: &error)
+try? dce.setScanRegion(scanRegion)
 ```
 
 **Remarks**
@@ -1065,7 +1064,7 @@ Update the advanced camera controlling and video streaming processing parameters
 ```
 2. 
 ```swift
-dce.updateAdvancedSettings(fromFile: "Put your JSON file path here.", error: &error)
+try? dce.updateAdvancedSettingsFromFile("Put your JSON file path here.")
 ```
 
 **Remarks**
@@ -1098,5 +1097,5 @@ Update the advanced camera controlling and video streaming processing parameters
 ```
 2. 
 ```swift
-dce.updateAdvancedSettings(from: "Put your stringified JSON data here.", error: &error)
+try? dce.updateAdvancedSettingsFromString("Put your stringified JSON data here.")
 ```
