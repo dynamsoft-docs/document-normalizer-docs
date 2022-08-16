@@ -33,7 +33,6 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 | ------ | ----------- |
 | [`initWithView`](#initwithview) | Initialize the camera enhancer with the camera view |
 | [`getVersion`](#getversion) | Get the SDK version. |
-| [`cameraView`](#cameraview) | Bind a `DCECameraView` to the camera enhancer. |
 
 &nbsp;
 
@@ -96,40 +95,11 @@ let version = DynamsoftCameraEnhancer.getVersion()
 
 &nbsp;
 
-### cameraView
-
-Bind a `DCECameraView` to the camera enhancer.
-
-```objc
-@property (strong, nonatomic) DCECameraView cameraView; 
-```
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-_dceView = [[DCECameraView alloc] initWithFrame:self.view.bounds]
-[_dce setCameraView:_dceView];
-```
-2. 
-```swift
-let dceView = DCECameraView.init(frame self.view.bounds)
-dce.cameraView = dceView
-```
-
-&nbsp;
-
 ## Basic Camera Control Methods
 
 | Method | Description |
 | ------ | ----------- |
 | [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
-| [`selectCameraWithPosition`](#selectcamerawithposition) | Select whether to use front-facing camera or back-facing camera. |
-| [`getCameraPosition`](#getcameraposition) | Returns whether the front-facing camera or back-facing camera is selected. |
 | [`selectCamera`](#selectcamera) | Select a camera from the camera list with the camera ID. |
 | [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
 | [`getCameraState`](#getcamerastate) | Get the state of the current selected camera. |
@@ -167,64 +137,6 @@ NSArray<NSString*>* allCameras = [_dce getAllCameras];
 2. 
 ```swift
 let allCameraList = dce.getAllCameras()
-```
-
-&nbsp;
-
-### selectCameraWithPosition
-
-Select the camera position (front-facing or back-facing).
-
-```objc
-- (void)selectCameraWithPosition:(EnumCameraPosition)position error:(NSError * _Nullable * _Nullable)error;
-```
-
-**Parameters**
-
-`cameraPosition`: An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-[_dce selectCameraWithPosition:EnumCameraPositionBack error: &error];
-```
-2. 
-```swift
-try? dce.selectCameraWithPosition(EnumCameraPosition.back)
-```
-
-&nbsp;
-
-### getCameraPosition
-
-Returns whether the front-facing camera or back-facing camera is selected.
-
-```objc
-- (EnumCameraPosition) getCameraPosition;
-```
-
-**Return Value**
-
-An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-EnumCameraPosition cameraPosition = [_dce getCameraPosition];
-```
-2. 
-```swift
-let cameraPosition = dce.getCameraPosition()
 ```
 
 &nbsp;
@@ -493,7 +405,6 @@ dce.turnOffTorch()
 | [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The boolean value determines whether the fetched frame will be removed from the buffer. |
 | [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
 | [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
-| [`takePhoto`](#takephoto) | Take a photo from the camera and save the image in the memory. |
 
 &nbsp;
 
@@ -588,48 +499,6 @@ dce.removeListener(self)
 
 &nbsp;
 
-### takePhoto
-
-Take a photo from the camera and save the image in the memory. The photo will be captured and users can receive the captured photo via [`photoOutputCallback`](../auxiliary-api/protocol-dcephotolistener.md#photooutputcallback).
-
-```objc
-- (void)takePhoto:(nonnull id<DCEPhotoListener>)listener API_AVAILABLE(ios(11.0));
-```
-
-**Parameters**
-
-`listener`: An instance of [`DCEPhotoListener`](protocol-dcephotolistener.md).
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@interface ViewController ()<DCEPhotoListener>
-- (void)configurationDCE(){
-   [_dce takePhoto:self]
-}
-- (void)photoOutputCallback:(NSData *)jpegBytes{
-   // Add your code to execute when photo is captured.
-}
-```
-2. 
-```swift
-class ViewController: UIViewController, DCEPhotoListener {
-   func configurationDCE(){
-          dce.takePhoto()
-   }
-   func photoOutputCallback(_ jpegByte: Data){
-          // Add your code to execute when photo is captured.
-   }
-}
-```
-
-&nbsp;
-
 ## Enhanced Features
 
 | Method | Description |
@@ -643,17 +512,6 @@ class ViewController: UIViewController, DCEPhotoListener {
 ### enableFeatures
 
 Enable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) value.
-
-The `EnumEnhancerFeatures` members:
-
-|  Members | Value |
-| -------- | ----- |
-| `EnumFRAME_FILTER` | 0x01 |
-| `EnumSENSOR_CONTROL` | 0x02 |
-| `EnumENHANCED_FOCUS` | 0x04 |
-| `EnumFAST_MODE` | 0x08 |
-| `EnumAUTO_ZOOM` | 0x10 |
-| `EnumSMART_TORCH` | 0x20 |
 
 ```objc
 - (void)enableFeatures:(EnumEnhancerFeatures)features  error:(NSError * _Nullable * _Nullable)error;
@@ -765,7 +623,6 @@ If the features you input are all enabled but don't cover all the enabled featur
 | [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
 | [`getResolution`](#getresolution) | Get the current resolution. |
 | [`setZoom`](#setzoom) | Set the zoom factor. Once **setZoom** is triggered and approved, the zoom factor of the activated camera will immediately become the input value. |
-| [`getMaxZoomFactor`](#getmaxzoomfactor) | Get the maximum available zoom factor. |
 | [`setFocus`](#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
 | [`setScanRegion`](#setscanregion) | Set the **scanRegion** with a [`iRegionDefinition`](region-definition.md) value. The frame will be cropped according to the scan region. |
 | [`getScanRegion`](#getscanregion) | Get the scan region. |
@@ -885,35 +742,6 @@ Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor o
 2. 
 ```swift
 dce.setZoom(3.0)
-```
-
-&nbsp;
-
-### getMaxZoomFactor
-
-Get the maximum available zoom factor.
-
-```objc
-- (CGFloat)getMaxZoomFactor;
-```
-
-**Return Value**
-
-A **CGFloat** value that indicates the maximum available zoom factor of the device.
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-CGFloat maxZoomFactor = [_dce getMaxZoomFactor];
-```
-2. 
-```swift
-let maxZoomFactor = dce.getMaxZoomFactor()
 ```
 
 &nbsp;

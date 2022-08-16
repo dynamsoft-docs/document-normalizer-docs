@@ -81,9 +81,7 @@ String version = CameraEnhancer.getVersion();
 | Method | Description |
 | ------ | ----------- |
 | [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
-| [`selectCamera(EnumCameraPosition)`](#selectcameraenumcameraposition) | Select whether to use front-facing camera or back-facing camera. |
-| [`getCameraPosition`](#getcameraposition) | Returns whether the front-facing camera or back-facing camera is selected. |
-| [`selectCamera(String)`](#selectcamerastring) | Select a camera from the camera list with the camera ID. |
+| [`selectCamera`](#selectcamera) | Select a camera from the camera list with the camera ID. |
 | [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
 | [`getCameraState`](#getcamerastate) | Get the state of the currently selected camera. |
 | [`open`](#open) | Turn on the current selected camera. |
@@ -116,48 +114,7 @@ String[] cameraIds = cameraEnhancer.getAllCameras();
 
 &nbsp;
 
-### selectCamera(EnumCameraPosition)
-
-Select the camera position (front-facing or back-facing).
-
-```java
-void selectCamera(EnumCameraPosition cameraPosition) throws CameraEnhancerException
-```
-
-**Parameters**
-
-`cameraPosition`: An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
-
-**Code Snippet**
-
-```java
-CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this); 
-cameraEnhancer.selectCamera(EnumCameraPosition.CP_BACK);
-```
-
-&nbsp;
-
-### getCameraPosition
-
-Returns whether the front-facing camera or back-facing camera is selected.
-
-```java
-EnumCameraPosition getCameraPosition()
-```
-
-**Return Value**
-
-An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
-
-**Code Snippet**
-
-```java
-EnumCameraPosition camera = mCameraEnhancer.getCameraPosition();
-```
-
-&nbsp;
-
-### selectCamera(String)
+### selectCamera
 
 Select camera by `cameraID`. The camera will be selected and further camera control settings will be applied to this camera. When the selected camera is changed by selecting another camera via this method, the settings applied to this camera will be inherited by the newly selected camera.
 
@@ -349,7 +306,6 @@ cameraEnhancer.turnOffTorch();
 | [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The boolean value determines whether the fetched frame will be removed from the buffer. |
 | [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
 | [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
-| [`takePhoto`](#takephoto) | Take a photo from the camera and save the image in the memory. |
 
 &nbsp;
 
@@ -432,33 +388,6 @@ DCEFrameListener listener = new DCEFrameListener(){
 cameraEnhancer.addListener(listener);
 // ......
 cameraEnhancer.removeListener(listener);
-```
-
-&nbsp;
-
-### takePhoto
-
-Take a photo from the camera and save the image in the memory. The photo will be captured and users can receive the captured photo via [`photoOutputCallback`](interface-dcephotolistener.md#photooutputcallback).
-
-```java
-void takePhoto(DCEPhotoListener listener)
-```
-
-**Parameters**
-
-`listener`: An instance of [`DCEPhotoListener`](interface-dcephotolistener.md).
-
-**Code Snippet**
-
-```java
-// Create an instance of DCEPhotoListener
-DCEPhotoListener photoListener = new DCEPhotoListener() {
-    @Override
-    public void photoOutputCallback(byte[] bytes) {
-        // Add your code to execute when photo is captured.
-    }
-};
-mCameraEnhancer.takePhoto(photoListener);
 ```
 
 &nbsp;
@@ -869,7 +798,7 @@ cameraEnhancer.updateAdvancedSettingsFromString("{'sensorvalue':3,'graydiffthres
 | Method | Description |
 | ------ | ----------- |
 | [`setCameraView`](#setcameraview) | Bind a instance of `DCECameraView` to the `CameraEnhancer`. |
-| [`getCameraView`](#getcameraview) | Get the object of `DCECameraView` that is binded to the `CameraEnhancer`. |
+| [`getCameraView`](#getcameraview) | Get the object of DCECameraView that is binded to the `CameraEnhancer`. |
 
 &nbsp;
 
