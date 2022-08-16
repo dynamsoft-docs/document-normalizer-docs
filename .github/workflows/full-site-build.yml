@@ -54,17 +54,6 @@ jobs:
           cd /home/ubuntu
           [ -d DDNDocPreview ] && rm -rf DDNDocPreview
           [ -d document-normalizer-docs-preview ] && rm -rf document-normalizer-docs-preview
-          mkdir -p DDNDocPreview
-          git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/document-normalizer-docs.git document-normalizer-docs-preview
-          cp -rfp ./document-normalizer-docs-preview/* ./DDNDocPreview/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DDNDocPreview/
-          sed -i -e "1,3s/blob\/master$/blob\/preview/" \
-          -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DDNDocPreview/_config.yml
-          cd DDNDocPreview && bundle exec jekyll build #--incremental
-          
-          cd /home/ubuntu
-          [ -d DDNDocPreview ] && rm -rf DDNDocPreview
-          [ -d document-normalizer-docs-preview ] && rm -rf document-normalizer-docs-preview
           [ ! -d DDNDocPreview ] && mkdir -p DDNDocPreview
           [ ! -d document-normalizer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/document-normalizer-docs.git document-normalizer-docs-preview
           cd document-normalizer-docs-preview && git pull && cd .. && cp -rfp ./document-normalizer-docs-preview/* ./DDNDocPreview/
@@ -73,7 +62,6 @@ jobs:
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DDNDocPreview/_config.yml
           cd DDNDocPreview && bundle exec jekyll build
 
-          
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0
         with:
