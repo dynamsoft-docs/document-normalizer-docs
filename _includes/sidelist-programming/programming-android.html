@@ -73,12 +73,13 @@
                         <li><a href="{{ site.android_api }}license-verification-listener.html" class="otherLinkColour">LicenseVerificationListener</a></li>
                     </ul>
                 </li>
-                <li><a>Enumerations</a>
+                <!-- <li><a>Enumerations</a>
                     <ul>
                         <li><a href="{{ site.enumerations }}image-pixel-format.html?src=android" class="otherLinkColour">EnumImagePixelFormat</a></li>
                         <li><a href="{{ site.enumerations }}error-code.html?src=android" class="otherLinkColour">EnumDMErrorCode</a></li>
                     </ul>
-                </li>
+                </li> -->
+                {%- include liquid_searchVersionTreeFile.html ver=include.ver curPath=include.curPath targetRelativePath="sidelist-parameters/parameters-enumerations.html" -%}
             </ul>
         </li>
         <li><a href="{{ site.android_release_notes }}" class="otherLinkColour">Release Notes</a>
