@@ -25,6 +25,7 @@ class com.dynamsoft.core.ImageData
 | [`height`](#height) | *int* |
 | [`stride`](#stride) | *int* |
 | [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=android) |
+| [`orientation`](#orientation) | *int* |
 
 &nbsp;
 
@@ -75,3 +76,29 @@ The image pixel format used in the image byte array.
 ```java
 EnumImagePixelFormat format
 ```
+
+### orientation
+
+The counterclockwise rotation angle of the image. It can be 0, 90, 180 or 270.
+
+```java
+int orientation
+```
+
+## Methods
+
+| Method | Description |
+| ------ | ----------- |
+| `toBitmap` | Convert the `ImageData` object to a `Bitmap` object. |
+
+### toBitmap
+
+Convert the `ImageData` object to a `Bitmap` object.
+
+```java
+Bitmap toBitmap() throws CoreException
+```
+
+**Return Value**
+
+A Bitmap object.
