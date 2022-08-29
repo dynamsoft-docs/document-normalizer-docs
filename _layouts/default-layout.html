@@ -78,6 +78,18 @@
     {%- include livehelp.html -%}
 
 
+    <!-- for ddn -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $('#txtSearch').keydown(function(e) {
+                if (e.keyCode == 13) {
+                    window.location.href = '/document-normalizer/docs/search.html?q=' + $('#txtSearch').val();
+                }
+            })
+        })
+    </script>
+
     <!-- Google Code for Remarketing Tag -->
     <script type="text/javascript">
         /* <![CDATA[ */
