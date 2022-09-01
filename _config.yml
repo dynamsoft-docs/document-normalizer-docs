@@ -40,7 +40,7 @@ sad_icon: /document-normalizer/docs/assets/img-icon/icon-sad.png
 
 baseurl: "/document-normalizer/docs"
 
-download: "/document-normalizer/downloads/1000021-confirmation/"
+download: "/document-normalizer/downloads/1000023-confirmation/"
 
 plugins:
   - jemoji
