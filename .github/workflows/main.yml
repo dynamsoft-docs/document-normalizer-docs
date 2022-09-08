@@ -30,10 +30,10 @@ jobs:
       - name: Run a multi-line script
         run: |
           cd /home/ubuntu
+          [ -d DDNDoc ] && rm -rf DDNDoc
           [ ! -d DDNDoc ] && mkdir -p DDNDoc
-          [ ! -d document-normalizer-docs ] && git clone --depth 1 --branch main https://github.com/dynamsoft-docs/document-normalizer-docs.git document-normalizer-docs
           cd document-normalizer-docs && git pull && cd .. && cp -rfp ./document-normalizer-docs/* ./DDNDoc/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DDNDoc/
+          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DDNDoc/
           cd DDNDoc && bundle exec jekyll build
           python3 /home/ubuntu/ftp.py /home/ubuntu/DDNDoc/_site/ ./www.dynamsoft.com/document-normalizer/docs/ prod
 
@@ -45,16 +45,25 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Runs a set of commands using the runners shell
+      - name: clear space
+        run: |
+          cd /home/ubuntu 
+          [ -d DDNDocPreview ] && rm -rf DDNDocPreview
+          [ -d document-normalizer-docs-preview ] && rm -rf document-normalizer-docs-preview
+          [ -d Docs-Template-Repo-preview ] && rm -rf Docs-Template-Repo-preview
+          cd /home/ubuntu
+
       - name: Build the site
         run: |
           cd /home/ubuntu
           [ ! -d DDNDocPreview ] && mkdir -p DDNDocPreview
-          [ ! -d document-normalizer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/Dynamsoft/document-normalizer-docs.git document-normalizer-docs-preview
+          [ ! -d document-normalizer-docs-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/document-normalizer-docs.git document-normalizer-docs-preview          
+          [ ! -d Docs-Template-Repo-preview ] && git clone --depth 1 --branch preview https://github.com/dynamsoft-docs/Docs-Template-Repo.git Docs-Template-Repo-preview
           cd document-normalizer-docs-preview && git pull && cd .. && cp -rfp ./document-normalizer-docs-preview/* ./DDNDocPreview/
-          cd Docs-Template-Repo && git pull && cd .. && cp -rfp ./Docs-Template-Repo/* ./DDNDocPreview/
+          cd Docs-Template-Repo-preview && git pull && cd .. && cp -rfp ./Docs-Template-Repo-preview/* ./DDNDocPreview/
           sed -i -e "1,3s/blob\/master$/blob\/preview/" \
           -e "1,3s/blob\/main$/blob\/preview/" /home/ubuntu/DDNDocPreview/_config.yml
-          cd DDNDocPreview && bundle exec jekyll build --incremental
+          cd DDNDocPreview && bundle exec jekyll build
 
       - name: Sync files
         uses: SamKirkland/FTP-Deploy-Action@4.3.0

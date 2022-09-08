@@ -18,7 +18,7 @@ Stores the image data.
 ```
 
 ## Attributes
-    
+
 | Attribute | Type |
 |---------- | ---- |
 | [`bytes`](#bytes) | *NSData\** |
@@ -26,6 +26,7 @@ Stores the image data.
 | [`height`](#height) | *NSInteger* |
 | [`stride`](#stride) | *NSInteger* |
 | [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=ios) |
+| [`orientation`](#orientation) | *NSInteger* |
 
 &nbsp;
 
@@ -76,3 +77,29 @@ The image pixel format used in the image byte array.
 ```objc
 EnumImagePixelFormat format
 ```
+
+### orientation
+
+The counterclockwise rotation angle of the image. It can be 0, 90, 180 or 270.
+
+```objc
+NSInteger orientation
+```
+
+## Methods
+
+| Method | Description |
+| ------ | ----------- |
+| `toUIImage` | Convert the `ImageData` object to a `UIImage` object. |
+
+### toUIImage
+
+Convert the `ImageData` object to a `UIImage` object.
+
+```objc
+- (UIImage * _Nullable)toUIImage:(NSError *_Nullable *_Nullable)error;
+```
+
+**Return Value**
+
+A `UIImage` object.
