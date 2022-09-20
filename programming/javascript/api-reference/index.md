@@ -123,10 +123,10 @@ The APIs for this class include
 - [`DDNImage`](./interfaces/ddn-image.md)
 - [`DSImage`](./interfaces/dsimage.md)
 
-## Enumerations
+<!-- ## Enumerations
 
 - [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=android)
 
 ## Others
 
-View the [Error Codes]({{ site.enumerations }}error-code.html)
+View the [Error Codes]({{ site.enumerations }}error-code.html) -->
