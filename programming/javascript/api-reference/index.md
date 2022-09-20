@@ -18,21 +18,47 @@ The primary class of the library is `DocumentNormalizer`. The following code sni
 ```js
 let normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
 let quads = await normalizer.detectQuad(imagePath);
-let normalizedImageResult = await normalizer.normalize(imagePath, { quad: quads[0].location });
-let resultImg = await normalizedImageResult.saveToFile("invoice.png");
+let res = await normalizer.normalize(imagePath, { quad: quads[0].location });
+console.log(await res.saveToFile("dynamsoft.png", true)); //true means download
 ```
 
 * Detect and normalize continuous video frames
 
 ```js
-let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-await enhancer.setUIElement(document.getElementById('div-ui-container'));
-let normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
-await normalizer.setImageSource(enhancer, { resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem });
-normalizer.onQuadDetected = async (results, sourceImage) => {
-  console.log(results);
-}
-await normalizer.startScanning(true);
+(async () => {
+    let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+    await enhancer.open();
+    document.getElementById("div-ui-container").appendChild(enhancer.getUIElement());
+    let normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
+    let options = {
+        resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
+    };
+    await normalizer.setImageSource(enhancer, options);
+    normalizer.onQuadDetected = async (quads, sourceImage) => {
+        for (let quad of quads) {
+            console.log("detected quad: ");
+            console.log(quad);
+        }
+    };
+    normalizer.startScanning(true);
+})();
+
+// The button for pausing the video and selecting, editing a quad.
+document.querySelector('.edit-quad').addEventListener('click', () => {
+    if (!enhancer) return;
+    normalizer.confirmQuadForNormalization();
+})
+
+// The button for normalizing with the confirmed quad.
+document.querySelector('.normalize-with-the-quad').addEventListener('click', async () => {
+    if (!enhancer) return;
+    let res = await normalizer.normalizeWithConfirmedQuad();
+    console.log("normalized image result: ");
+    console.log(res);
+    if (res) {
+        document.querySelector('.normalized-result-canvas').appendChild(res.image.toCanvas());
+    }
+})
 ```
 
 The APIs for this class include
