@@ -56,7 +56,8 @@ document.querySelector('.normalize-with-the-quad').addEventListener('click', asy
     console.log("normalized image result: ");
     console.log(res);
     if (res) {
-        document.querySelector('.normalized-result-canvas').appendChild(res.image.toCanvas());
+      // The div for showing the normalized image.
+      document.querySelector('.normalized-result-canvas').appendChild(res.image.toCanvas());
     }
 })
 ```
