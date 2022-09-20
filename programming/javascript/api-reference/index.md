@@ -16,26 +16,26 @@ The primary class of the library is `DocumentNormalizer`. The following code sni
 * Detect and normalize a still image
 
 ```js
-let documentNormalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
-let quads = await documentNormalizer.detectQuad(imagePath);
-let normalizedImageResult = await documentNormalizer.normalize(imagePath, { quad: quads[0].location });
+let normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
+let quads = await normalizer.detectQuad(imagePath);
+let normalizedImageResult = await normalizer.normalize(imagePath, { quad: quads[0].location });
 let resultImg = await normalizedImageResult.saveToFile("invoice.png");
 ```
 
 * Detect and normalize continuous video frames
 
+```js
+let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+await enhancer.setUIElement(document.getElementById('div-ui-container'));
+let normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
+await normalizer.setImageSource(enhancer, { resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem });
+normalizer.onQuadDetected = async (results, sourceImage) => {
+  console.log(results);
+}
+await normalizer.startScanning(true);
+```
 
-
-
-
-Common normalizations include：
-
-- Border crop
-- Deskew
-- Perspective correction
-- Colour mode
-- Brightness and Contrast
-
+The APIs for this class include
 
 ## Initialization Control
 

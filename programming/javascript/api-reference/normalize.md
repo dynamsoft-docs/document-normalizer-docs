@@ -11,21 +11,21 @@ breadcrumbText: Detect and Normalize APIs
 
 # Detect and Normalize
 
-## Detect and Normalize from Still Images
+## Detect and Normalize a Still Images
 
 | API Name | Description |
 |---|---|
 | [detectQuad()](#detectquad) | Detects quadrilaterals from an image. |
 | [normalize()](#normalize) | Normalizes the source image based on the settings in options. |
 
-## Detect and Normalize from Video Frame Images
+## Detect and Normalize Video Frame Images
 
 | API Name | Description |
 |---|---|
 | [setImageSource()](#setimagesource) | Sets an image source for continous scanning. |
 | [onQuadDetected](#onquaddetected) | This event is triggered when a new quadrilateral is detected. |
-| [confirmQuadForNormalization()](#confirmquadfornormalization) | Confirms which quadrilateral will be referred for later normalization. |
-| [normalizeWithConfirmedQuad()](#normalizewithconfirmedquad) | Normalizes the image whith a selected quadrilateral. |
+| [confirmQuadForNormalization()](#confirmquadfornormalization) | Confirms which quadrilateral will be used for later normalization. |
+| [normalizeWithConfirmedQuad()](#normalizewithconfirmedquad) | Normalizes the image whith one confirmed quadrilateral. |
 | [startScanning()](#startscanning) | Opens the camera and starts continuous scanning of incoming images. |
 | [pauseScanning()](#pausescanning) | Pauses continuous scanning but keep the video stream. |
 | [resumeScanning()](#resumescanning) | Resumes continuous scanning. |
@@ -148,7 +148,7 @@ normalizer.onQuadDetected = async (results, sourceImage) => {
 
 ## confirmQuadForNormalization
 
-Confirms which quadrilateral will be referred for later normalization.
+Confirms which quadrilateral will be used for later normalization.
 
 ```js
 confirmQuadForNormalization: () => void;
@@ -162,7 +162,7 @@ normalizer.confirmQuadForNormalization();
 
 ## normalizeWithConfirmedQuad
 
-Normalizes the image whith a selected quadrilateral.
+Normalizes the image whith one confirmed quadrilateral.
 
 ```js
 normalizeWithConfirmedQuad: () => Promise<NormalizedImageResult>;
