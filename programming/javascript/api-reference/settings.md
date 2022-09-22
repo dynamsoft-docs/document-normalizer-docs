@@ -23,8 +23,8 @@ breadcrumbText: Settings APIs
 | API Name | Description |
 |---|---|
 | [getRuntimeSettings()](#getruntimesettings) | Gets runtime settings with a template represented by a JSON object. |
-| [setRuntimeSettings()](#setputruntimesettings) | Sets runtime settings with a JSON object. |
-| [resetRuntimeSettings()](#resetputruntimesettings) | Resets all parameters to default values. |
+| [setRuntimeSettings()](#setruntimesettings) | Sets runtime settings with a JSON object. |
+| [resetRuntimeSettings()](#resetruntimesettings) | Resets all parameters to default values. |
 
 ## getScanSettings
 
