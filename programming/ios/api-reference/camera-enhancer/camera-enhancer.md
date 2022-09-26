@@ -27,7 +27,7 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 @interface DynamsoftCameraEnhancer:NSObject
 ```
 
-## Initialization
+## Initialization Methods Summary
 
 | Method | Description |
 | ------ | ----------- |
@@ -35,7 +35,57 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 | [`getVersion`](#getversion) | Get the SDK version. |
 | [`cameraView`](#cameraview) | Bind a `DCECameraView` to the camera enhancer. |
 
-&nbsp;
+## Basic Camera Control Methods Summary
+
+| Method | Description |
+| ------ | ----------- |
+| [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
+| [`selectCameraWithPosition`](#selectcamerawithposition) | Select whether to use front-facing camera or back-facing camera. |
+| [`getCameraPosition`](#getcameraposition) | Returns whether the front-facing camera or back-facing camera is selected. |
+| [`selectCamera`](#selectcamera) | Select a camera from the camera list with the camera ID. |
+| [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
+| [`getCameraState`](#getcamerastate) | Get the state of the current selected camera. |
+| [`open`](#open) | Turn on the current selected camera. |
+| [`close`](#close) | Turn off the current selected camera. |
+| [`pause`](#pause) | Pause the current selected  camera. |
+| [`resume`](#resume) | Resume the current selected camera. |
+| [`turnOnTorch`](#turnontorch) | Turn on the torch. |
+| [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
+
+## Frame Acquiring Methods Summary
+
+| Method | Description |
+| ------ | ----------- |
+| [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The boolean value determines whether the fetched frame will be removed from the buffer. |
+| [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
+| [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
+| [`takePhoto`](#takephoto) | Take a photo from the camera and save the image in the memory. |
+
+## Enhanced Features Methods Summary
+
+| Method | Description |
+| ------ | ----------- |
+| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values. |
+| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values. |
+| [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
+
+## Advanced Camera Control Methods Summary
+
+| Method | Description |
+| ------ | ----------- |
+| [`getFrameRate`](#getframerate) | Get the current frame rate. |
+| [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
+| [`getResolution`](#getresolution) | Get the current resolution. |
+| [`setZoom`](#setzoom) | Set the zoom factor. Once **setZoom** is triggered and approved, the zoom factor of the activated camera will immediately become the input value. |
+| [`getMaxZoomFactor`](#getmaxzoomfactor) | Get the maximum available zoom factor. |
+| [`setFocus`](#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
+| [`setScanRegion`](#setscanregion) | Set the **scanRegion** with a [`iRegionDefinition`](region-definition.md) value. The frame will be cropped according to the scan region. |
+| [`getScanRegion`](#getscanregion) | Get the scan region. |
+| [`scanRegionVisible`](#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
+| [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON file from the storage. |
+| [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON string. |
+
+## Initialization Methods Details
 
 ### initWithView
 
@@ -120,26 +170,7 @@ let dceView = DCECameraView.init(frame self.view.bounds)
 dce.cameraView = dceView
 ```
 
-&nbsp;
-
-## Basic Camera Control Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
-| [`selectCameraWithPosition`](#selectcamerawithposition) | Select whether to use front-facing camera or back-facing camera. |
-| [`getCameraPosition`](#getcameraposition) | Returns whether the front-facing camera or back-facing camera is selected. |
-| [`selectCamera`](#selectcamera) | Select a camera from the camera list with the camera ID. |
-| [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
-| [`getCameraState`](#getcamerastate) | Get the state of the current selected camera. |
-| [`open`](#open) | Turn on the current selected camera. |
-| [`close`](#close) | Turn off the current selected camera. |
-| [`pause`](#pause) | Pause the current selected  camera. |
-| [`resume`](#resume) | Resume the current selected camera. |
-| [`turnOnTorch`](#turnontorch) | Turn on the torch. |
-| [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
-
-&nbsp;
+## Basic Camera Control Methods Details
 
 ### getAllCameras
 
@@ -483,18 +514,7 @@ Turn off the torch.
 dce.turnOffTorch()
 ```
 
-&nbsp;
-
-## Frame Acquiring Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The boolean value determines whether the fetched frame will be removed from the buffer. |
-| [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
-| [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
-| [`takePhoto`](#takephoto) | Take a photo from the camera and save the image in the memory. |
-
-&nbsp;
+## Frame Acquiring Methods Details
 
 ### getFrameFromBuffer
 
@@ -627,17 +647,7 @@ class ViewController: UIViewController, DCEPhotoListener {
 }
 ```
 
-&nbsp;
-
-## Enhanced Features
-
-| Method | Description |
-| ------ | ----------- |
-| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values. |
-| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values. |
-| [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
-
-&nbsp;
+## Enhanced Features Methods Details
 
 ### enableFeatures
 
@@ -754,23 +764,7 @@ let featureEnabled = dce.isFeatureEnabled(EnumEnhancerFeature.EnumFRAME_FILTER.r
 
 If the features you input are all enabled but don't cover all the enabled features, this method will still return `true`.
 
-&nbsp;
-
-## Advanced Camera Control Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`getFrameRate`](#getframerate) | Get the current frame rate. |
-| [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
-| [`getResolution`](#getresolution) | Get the current resolution. |
-| [`setZoom`](#setzoom) | Set the zoom factor. Once **setZoom** is triggered and approved, the zoom factor of the activated camera will immediately become the input value. |
-| [`getMaxZoomFactor`](#getmaxzoomfactor) | Get the maximum available zoom factor. |
-| [`setFocus`](#setfocus) | Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position. |
-| [`setScanRegion`](#setscanregion) | Set the **scanRegion** with a [`iRegionDefinition`](region-definition.md) value. The frame will be cropped according to the scan region. |
-| [`getScanRegion`](#getscanregion) | Get the scan region. |
-| [`scanRegionVisible`](#scanregionvisible) | Set whether to display the **scanRegion** on the UI. |
-| [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON file from the storage. |
-| [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update the advanced camera controlling and video streaming processing parameters. This method enables you to update settings via a JSON string. |
+## Advanced Camera Control Methods Details
 
 ### getFrameRate
 

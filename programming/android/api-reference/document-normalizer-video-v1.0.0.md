@@ -19,24 +19,24 @@ pageStartVer: 1.0
 
 | Method | Description |
 |--------|-------------|
-| [`setImageSource`](#setimagesource) | Sets an instance of ImageSource to get images.  |
+| [`setCameraEnhancer`](#setcameraenhancer) | Bind a Camera Enhancer instance to the Document Normalizer.  |
 | [`startDetecting`](#startdetecting) | Start the document quad detection thread in the video streaming scenario. |
 | [`stopDetecting`](#stopdetecting) | Stop the document quad detection thread in the video streaming scenario. |
 | [`setDetectResultListener`](#setdetectresultlistener) | Set callback interface to process detection results generated during frame detecting. |
 
 ---
 
-## setImageSource
+## setCameraEnhancer
 
-Sets an instance of ImageSource to get images. `CameraEnhancer` is a specific implementation of ImageSource, which can help the Document Normalizer to acquire video frames continuously for recognition.
+Bind a `Dynamsoft Camera Enhancer` instance to the Document Normalizer. `Dynamsoft Camera Enhancer` is designed for video streaming processing scenarios. It can help the Document Normalizer to acquire video frames continuously for video streaming document normalizer.
 
 ```java
-void setImageSource(ImageSource source)
+void setCameraEnhancer(CameraEnhancer mCameraEnhancer)
 ```
 
 **Parameters**
 
-`[in] source`: An instance of ImageSource. If you are using `Dynamsoft Camera Enhancer`(DCE) to capture camera frames, pass an instance of `CameraEnhancer`.
+`[in] mCameraEnhancer`: An instance of `Dynamsoft Camera Enhancer`.
 
 **Code Snippet**
 
@@ -64,7 +64,7 @@ protected void onCreate(Bundle savedInstanceState) {
     mCameraEnhancer.setCameraView(cameraView);
 
     // Bind the Camera Enhancer instance to the Document Normalizer instance.
-    normalizer.setImageSource(mCameraEnhancer);
+    normalizer.setCameraEnhancer(mCameraEnhancer);
 
     // Result callback configurations
     DetectResultListener mDetectResultListener = new DetectResultListener() {
@@ -113,7 +113,7 @@ void startDetecting()
 
 **Code Snippet**
 
-You can view the complete code snippet in [`setImageSource`](#setimagesource).
+You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhancer).
 
 ## stopDetecting
 
@@ -125,7 +125,7 @@ void stopDetecting()
 
 **Code Snippet**
 
-You can view the complete code snippet in [`setImageSource`](#setimagesource).
+You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhancer).
 
 ## setDetectResultListener
 
@@ -141,4 +141,4 @@ void setDetectResultListener(DetectResultListener detectResultListener)
 
 **Code Snippet**
 
-You can view the complete code snippet in [`setImageSource`](#setimagesource).
+You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhancer).

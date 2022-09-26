@@ -27,7 +27,7 @@ This is the main class of Dynamsoft Document Normalizer(DDN) SDK. It supports qu
 
 | Method               | Description |
 |----------------------|-------------|
-| [`setImageSource`](document-normalizer-video.md#setimagesource) | Sets an instance of ImageSource to get images.  |
+| [`setCameraEnhancer`](document-normalizer-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Document Normalizer.  |
 | [`startDetecting`](document-normalizer-video.md#startdetecting) | Start the document quad detection thread in the video streaming scenario. |
 | [`stopDetecting`](document-normalizer-video.md#stopdetecting) | Stop the document quad detection thread in the video streaming scenario. |
 | [`setDetectResultListener`](document-normalizer-video.md#setdetectresultlistener) | Set callback interface to process detection results generated during frame detecting. |

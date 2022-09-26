@@ -27,14 +27,72 @@ The main class of `CameraEnhancer` library. It contains APIs that enable user to
 class com.dynamsoft.dce.CameraEnhancer
 ```
 
-## Initialization
+## Initialization Methods Summary
 
 | Method | Description |
 | ------ | ----------- |
 | [`CameraEnhancer`](#cameraenhancer) | Initialize the `CameraEnhancer`. |
 | [`getVersion`](#getversion) | Get the SDK version. |
 
-&nbsp;
+## Basic Camera Control Methods Summary
+
+| Method | Description |
+| ------ | ----------- |
+| [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
+| [`selectCamera(EnumCameraPosition)`](#selectcameraenumcameraposition) | Select whether to use front-facing camera or back-facing camera. |
+| [`getCameraPosition`](#getcameraposition) | Returns whether the front-facing camera or back-facing camera is selected. |
+| [`selectCamera(String)`](#selectcamerastring) | Select a camera from the camera list with the camera ID. |
+| [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
+| [`getCameraState`](#getcamerastate) | Get the state of the currently selected camera. |
+| [`open`](#open) | Turn on the current selected camera. |
+| [`close`](#close) | Turn off the current selected camera. |
+| [`pause`](#pause) | Pause the current selected  camera. |
+| [`resume`](#resume) | Resume the current selected camera. |
+| [`turnOnTorch`](#turnontorch) | Turn on the torch. |
+| [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
+
+## Frame Acquiring Methods Summary
+
+| Method | Description |
+| ------ | ----------- |
+| [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The boolean value determines whether the fetched frame will be removed from the buffer. |
+| [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
+| [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
+| [`takePhoto`](#takephoto) | Take a photo from the camera and save the image in the memory. |
+
+## Enhanced Features Methods Summary
+
+| Method | Description |
+| ------ | ----------- |
+| [`enableFeatures`](#enablefeatures) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values. |
+| [`disableFeatures`](#disablefeatures) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values. |
+| [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
+
+## Advanced Camera Control Methods Summary
+
+| Method | Description |
+| ------ | ----------- |
+| [`getFrameRate`](#getframerate) | Get the current frame rate. |
+| [`getResolutionList`](#getresolutionlist) | Get all available resolutions. |
+| [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
+| [`getResolution`](#getresolution) | Get the current resolution. |
+| [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
+| [`setFocus`](#setfocus) | Focus once at the input position. |
+| [`setScanRegion`](#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
+| [`getScanRegion`](#getscanregion) | Get the scan region. |
+| [`setScanRegionVisible`](#setscanregionvisible) | Set whether to display the **scanRegion** on the UI. |
+| [`getScanRegionVisible`](#getscanregionvisible) | Get whether the **scanRegion** will be displayed on the UI. |
+| [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
+| [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
+
+## Camera UI Methods Summary
+
+| Method | Description |
+| ------ | ----------- |
+| [`setCameraView`](#setcameraview) | Bind a instance of `DCECameraView` to the `CameraEnhancer`. |
+| [`getCameraView`](#getcameraview) | Get the object of `DCECameraView` that is binded to the `CameraEnhancer`. |
+
+## Initialization Methods Details
 
 ### CameraEnhancer
 
@@ -74,26 +132,7 @@ A string value that indicates the version of `CameraEnhancer` SDK.
 String version = CameraEnhancer.getVersion();
 ```
 
-&nbsp;
-
-## Basic Camera Control Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`getAllCameras`](#getallcameras) | Get all available cameras. This method returns a list of available camera IDs. |
-| [`selectCamera(EnumCameraPosition)`](#selectcameraenumcameraposition) | Select whether to use front-facing camera or back-facing camera. |
-| [`getCameraPosition`](#getcameraposition) | Returns whether the front-facing camera or back-facing camera is selected. |
-| [`selectCamera(String)`](#selectcamerastring) | Select a camera from the camera list with the camera ID. |
-| [`getSelectedCamera`](#getselectedcamera) | Get the camera ID of the current selected camera. |
-| [`getCameraState`](#getcamerastate) | Get the state of the currently selected camera. |
-| [`open`](#open) | Turn on the current selected camera. |
-| [`close`](#close) | Turn off the current selected camera. |
-| [`pause`](#pause) | Pause the current selected  camera. |
-| [`resume`](#resume) | Resume the current selected camera. |
-| [`turnOnTorch`](#turnontorch) | Turn on the torch. |
-| [`turnOffTorch`](#turnofftorch) | Turn off the torch. |
-
-&nbsp;
+## Basic Camera Control Methods Details
 
 ### getAllCameras
 
@@ -340,18 +379,7 @@ CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
 cameraEnhancer.turnOffTorch();
 ```
 
-&nbsp;
-
-## Frame Acquiring Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The boolean value determines whether the fetched frame will be removed from the buffer. |
-| [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
-| [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
-| [`takePhoto`](#takephoto) | Take a photo from the camera and save the image in the memory. |
-
-&nbsp;
+## Frame Acquiring Methods Details
 
 ### getFrameFromBuffer
 
@@ -461,17 +489,7 @@ DCEPhotoListener photoListener = new DCEPhotoListener() {
 mCameraEnhancer.takePhoto(photoListener);
 ```
 
-&nbsp;
-
-## Enhanced Features
-
-| Method | Description |
-| ------ | ----------- |
-| [`enableFeatures`](#enablefeature) | Enable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values. |
-| [`disableFeatures`](#disablefeature) | Disable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhancer-features.md) values. |
-| [`isFeatureEnabled`](#isfeatureenabled) | Check whether the input features are enabled. |
-
-&nbsp;
+## Enhanced Features Methods Details
 
 ### enableFeatures
 
@@ -553,24 +571,7 @@ boolean isEnabled = cameraEnhancer.isFeatureEnabled(EnumEnhancerFeatures.FRAME_F
 
 If the features you input are all enabled but don't cover all the enabled features, this method will still return `true`.
 
-&nbsp;
-
-## Advanced Camera Control Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`getFrameRate`](#getframerate) | Get the current frame rate. |
-| [`getResolutionList`](#getresolutionlist) | Get all available resolutions. |
-| [`setResolution`](#setresolution) | Set the resolution to the input value (if the input value is available for the device). |
-| [`getResolution`](#getresolution) | Get the current resolution. |
-| [`setZoom`](#setzoom) | Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the actived camera will immediately become the input value. |
-| [`setFocus`](#setfocus) | Focus once at the input position. |
-| [`setScanRegion`](#setscanregion) | Set the scan region with a RegionDefinition value. The frame will be cropped according to the scan region. |
-| [`getScanRegion`](#getscanregion) | Get the scan region. |
-| [`setScanRegionVisible`](#setscanregionvisible) | Set whether to display the **scanRegion** on the UI. |
-| [`getScanRegionVisible`](#getscanregionvisible) | Get whether the **scanRegion** will be displayed on the UI. |
-| [`updateAdvancedSettingsFromFile`](#updateadvancedsettingsfromfile) | Update advanced parameter settings including filter, sensor and focus settings from a JSON file. |
-| [`updateAdvancedSettingsFromString`](#updateadvancedsettingsfromstring) | Update advanced parameter settings including filter, sensor and focus settings from a JSON string. |
+## Advanced Camera Control Methods Details
 
 ### getFrameRate
 
@@ -862,16 +863,7 @@ CameraEnhancer cameraEnhancer = new CameraEnhancer(MainActivity.this);
 cameraEnhancer.updateAdvancedSettingsFromString("{'sensorvalue':3,'graydiffthreshold':30,'conversioncountthreshold':30,'sharpnessthreshold':0.2,'sharpnessthresholdlarge':0.4,'abssharpnessthreshold':200,'absgraythreshold':35,'claritythreshold':0.1}");
 ```
 
-&nbsp;
-
-## Camera UI Methods
-
-| Method | Description |
-| ------ | ----------- |
-| [`setCameraView`](#setcameraview) | Bind a instance of `DCECameraView` to the `CameraEnhancer`. |
-| [`getCameraView`](#getcameraview) | Get the object of `DCECameraView` that is binded to the `CameraEnhancer`. |
-
-&nbsp;
+## Camera UI Methods Details
 
 ### setCameraView
 
