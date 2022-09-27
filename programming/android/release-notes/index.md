@@ -9,4 +9,5 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Document Normalizer Android SDK - Release Notes
 
+- [1.0.0 (09/29/2022)](android-1.md#1010-09292022)
 - [1.0.0 (06/21/2022)](android-1.md#100-06212022)
