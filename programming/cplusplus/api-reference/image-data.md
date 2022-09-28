@@ -111,7 +111,7 @@ ImagePixelFormat GetImagePixelFormat()
 
 [ImagePixelFormat]({{ site.enumerations }}image-pixel-format.html?src=cpp)
 
-### GetOrientation
+## GetOrientation
 
 Get the orientation of the image data. The value is the angle that the image needs to be rotated clockwise so it shows correctly on the display in its natural orientation. It can be 0, 90, 180, or 270.
 
