@@ -16,7 +16,7 @@ noTitleIndex: true
 
 - Added a new method [`setImageSource`](../api-reference/document-normalizer-video.md#setimagesource) in `DynamsoftDocumentNormalizer` class to set up image source.
 - Added a new method [`saveToFile`](../api-reference/normalized-image-result.md#savetofile) in class `iNormalizedImageResult` to support saving the normalized image as a BMP/JPEG/PNG/PDF file.
-- Added a new method [`orientation`](../api-reference/image-data.md#orientation) in class `iImageData`.
+- Added a new property [`orientation`](../api-reference/image-data.md#orientation) in class `iImageData`.
 
 ### Changed
 

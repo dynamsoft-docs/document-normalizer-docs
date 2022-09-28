@@ -79,7 +79,7 @@ EnumImagePixelFormat format
 
 ### orientation
 
-The counterclockwise rotation angle of the image. It can be 0, 90, 180 or 270.
+The orientation of the image buffer contained in this frame data. The value is the angle that the camera image needs to be rotated clockwise so it shows correctly on the display in its natural orientation. It is 0, 90, 180, or 270. A typical value for this is 90 as most camera modules record the frames in landscape right orientation. Rotating a landscape right frame by 90 degrees will show it correctly on the display in portrait orientation (which is the natural device orientation of most phones).
 
 ```java
 int orientation
