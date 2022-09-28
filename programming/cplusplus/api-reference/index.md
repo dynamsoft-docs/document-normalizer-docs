@@ -27,4 +27,4 @@ keywords: CDocumentNormalizer, api reference, C++
 
 ## Others
 
-- [Error Codes]({{ site.enumerations }}error-code.html)
+- [Error Codes]({{ site.enumerations }}error-code.html?src=cpp)

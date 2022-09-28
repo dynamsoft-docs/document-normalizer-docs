@@ -42,7 +42,7 @@ keywords: CDocumentNormalizer, api reference, C++
 - [`DDN_FreeDetectedQuadResultArray`](document-normalizer-result.md#ddn_freedetectedquadresultarray)
 - [`DDN_FreeNormalizedImageResult`](document-normalizer-result.md#ddn_freenormalizedimageresult)
 - [`DDN_FreeString`](document-normalizer-result.md#ddn_freestring)
-- [`NormalizedImageResult_SaveToFile`](document-normalizer-result.md#normalizedimageresult_savetofile)
+- [`DDN_SaveImageDataToFile`](document-normalizer-result.md#ddn_saveimagedatatofile)
 
 ## Structs
 
@@ -59,4 +59,4 @@ keywords: CDocumentNormalizer, api reference, C++
 
 ## Others
 
-- [Error Codes]({{ site.enumerations }}error-code.html?src=c)
+- [Error Codes]({{ site.enumerations }}error-code.html)

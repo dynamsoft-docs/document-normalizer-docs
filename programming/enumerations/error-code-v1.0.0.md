@@ -30,10 +30,9 @@ keywords: error code, enumeration
   | `DMERR_TEMPLATE_NAME_INVALID`          | -10036 | The template name is invalid. |
   | `DMERR_PARAMETER_VALUE_INVALID`        | -10038 | The parameter value is invalid or out of range. |
   | `DDNERR_CONTENT_NOT_FOUND`             | -50001 | No content has been detected. |
-  | `DMERR_QUADRILATERAL_INVALID`          | -10057 | The quadrilateral is invalid. |
+  | `DDNERR_QUADRILATERAL_INVALID`         | -10057 | The quadrilateral is invalid. |
   | `DMERR_FILE_SAVE_FAILED`               | -10058 | Failed to save the file. |
   | `DMERR_STAGE_TYPE_INVALID`             | -10059 | The stage type is invalid. |
-  | `DMERR_IMAGE_ORIENTATION_INVALID`      | -10060 | The image orientation is invalid. |
   | `DMERR_NO_LICENSE`                     | -20000 | No license specified. |
   | `DMERR_HANDSHAKE_CODE_INVALID`         | -20001 | The handshake code is invalid. |
   | `DMERR_LICENSE_BUFFER_FAILED`          | -20002 | Failed to read or write license buffer. |

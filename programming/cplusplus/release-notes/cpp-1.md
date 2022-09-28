@@ -12,14 +12,14 @@ needGenerateH3Content: false
 
 ### New
 
-- Added a new method [`SaveToFile`](../api-reference/document-normalizer-result.md#savetofile) in class `CNormalizedImageResult` to support saving the normalized image as a BMP/JPEG/PNG/PDF file.
-- Added PDF as a supported file format of method [`Normalize`](../api-reference/document-normalizer-normalizing.md#normalize) and [`DetectQuad`](../api-reference/document-normalizer-normalizing.md#detectquad).
-- Added a new method [`GetOrientation`](../api-reference/image-data.md#getorientation) in class `CImageData`.
+- Added a new method [`SaveToFile`]({{ site.cpp_api }}normalized-image-result.html#savetofile) in class `CNormalizedImageResult` to support saving the normalized image as a BMP/JPEG/PNG/PDF file.
+- Added PDF as a supported file format of method [`Normalize`]({{ site.cpp_api }}document-normalizer-normalizing.html#normalize) and [`DetectQuad`]({{ site.cpp_api }}document-normalizer-normalizing.html#detectquad).
+- Added a new method [`GetOrientation`]({{ site.cpp_api }}image-data.html#getorientation) in class `CImageData`.
+- Added error code `DMERR_IMAGE_ORIENTATION_INVALID`.
 
 ### Changed
 
-- Updated [ErrorCode](../../enumerations/error-code.md)
-  - Added `DMERR_IMAGE_ORIENTATION_INVALID` (-10060).
+- Updated [ErrorCode]({{ site.enumerations }}error-code.html?src=cpp)
   - Change the value of `DDNERR_CONTENT_NOT_FOUND` from -10056 to -50001.
   - Renamed `DDNERR_QUADRILATERAL_INVALID` to `DMERR_QUADRILATERAL_INVALID`.
 

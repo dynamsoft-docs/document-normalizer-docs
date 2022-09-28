@@ -12,7 +12,7 @@ keywords: DDN_FreeDetectedQuadResultArray, DDN_FreeNormalizedImageResult, DDN_Fr
 | [`DDN_FreeDetectedQuadResultArray`](#ddn_freedetectedquadresultarray) | Releases memory allocated for DetectedQuadResultArray. |
 | [`DDN_FreeNormalizedImageResult`](#ddn_freenormalizedimageresult) | Releases memory allocated for NormalizedImageResult. |
 | [`DDN_FreeString`](#ddn_freestring) | Releases memory allocated for a string. |
-| [`NormalizedImageResult_SaveToFile`](#normalizedimageresult_savetofile) | Save the normalized image result to a file. |
+| [`DDN_SaveImageDataToFile`](#ddn_saveimagedatatofile) | Save the image data to a file. |
 
 ## DDN_FreeDetectedQuadResultArray
 
@@ -86,27 +86,19 @@ if (content != NULL)
 DDN_DestroyInstance(ddn);
 ```
 
-## NormalizedImageResult_SaveToFile
+## DDN_SaveImageDataToFile
 
-Save the normalized image result to a file.
+Save the image data to a file.
 
 ```c
-int NormalizedImageResult_SaveToFile(const NormalizedImageResult* normalizedImageResult, const char* filePath)
+int DDN_SaveImageDataToFile(const ImageData* imageData, const char* filePath)
 ```
 
 **Parameters**
 
-`[in] normalizedImageResult` The [NormalizedImageResult](normalized-image-result.md) that needs to be saved.
+`[in] imageData` The image data that needs to be saved.
 
-`[in] filePath` The path of the output image with the extension specifying the image format. It supports BMP, PNG, JPEG and PDF file types.
-
-**Return Value**
-
-Returns error code (returns 0 if the function operates successfully).
-
-*You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
-
-**Code Snippet**
+`[in] filePath` The path of the output image with the extension specifying the image format. It supports BMP and PNG files.
 
 ```c
 NormalizedImageResult* normalizedResult = NULL;
@@ -114,7 +106,7 @@ void* ddn = DDN_CreateInstance();
 DDN_NormalizeFile(ddn, "YOUR-SOURCE-FILE-PATH", "", NULL, &normalizedResult);
 if (normalizedResult != NULL)
 {
-    NormalizedImageResult_SaveToFile(normalizedResult, "YOUR-TARGET-FILE-PATH");
+    DDN_SaveImageDataToFile(normalizedResult->image, "YOUR-TARGET-FILE-PATH");
     DDN_FreeNormalizedImageResult(&normalizedResult);
 }
 DDN_DestroyInstance(ddn);

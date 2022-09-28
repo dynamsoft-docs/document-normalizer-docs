@@ -18,6 +18,7 @@ This is the main page of Dynamsoft Document Normalizer SDK documentation for C L
 - [Global Functions](api-reference/index.md#global-functions)
 - [Structs](api-reference/index.md#structs)
 - [Enumerations](api-reference/index.md#enumerations)
+- [Error Codes]({{ site.enumerations }}error-code.html?src=cpp)
 
 ## Release Notes
 
