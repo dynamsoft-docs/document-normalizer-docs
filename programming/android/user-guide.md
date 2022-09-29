@@ -60,7 +60,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
     dependencies {
          implementation fileTree(dir: 'libs', include: ['*.aar'])
 
-         def camerax_version = '1.1.0-rc01'
+         def camerax_version = '1.1.0'
          implementation "androidx.camera:camera-core:$camerax_version"
          implementation "androidx.camera:camera-camera2:$camerax_version"
          implementation "androidx.camera:camera-lifecycle:$camerax_version"
