@@ -18,6 +18,7 @@ This is the main page of Dynamsoft Document Normalizer SDK documentation for C++
 - [Primary Class - CDocumentNormalizer](api-reference/index.md#primary-class)
 - [Auxiliary Classes](api-reference/index.md#auxiliary-classes)
 - [Enumerations](api-reference/index.md#enumerations)
+- [Error Codes]({{ site.enumerations }}error-code.html?src=cpp)
 
 ## Release Notes
 

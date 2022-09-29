@@ -90,8 +90,8 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftdocumentnormalizer:1.0.0'
-      implementation 'com.dynamsoft:dynamsoftcameraenhancer:3.0.0'
+      implementation 'com.dynamsoft:dynamsoftdocumentnormalizer:1.0.10'
+      implementation 'com.dynamsoft:dynamsoftcameraenhancer:3.0.1'
    }
    ```
 
@@ -201,7 +201,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
             e.printStackTrace();
          }
 
-         mNormalizer.setCameraEnhancer(mCameraEnhancer);
+         mNormalizer.setImageSource(mCameraEnhancer);
       }
    }
    ```

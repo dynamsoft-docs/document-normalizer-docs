@@ -19,24 +19,24 @@ pageStartVer: 1.0
 
 | Method | Description |
 |--------|-------------|
-| [`setCameraEnhancer`](#setcameraenhancer) | Bind a Camera Enhancer instance to the Document Normalizer.  |
+| [`setImageSource`](#setimagesource) | Sets an instance of ImageSource to get images.  |
 | [`startDetecting`](#startdetecting) | Start the document quad detection thread in the video streaming scenario. |
 | [`stopDetecting`](#stopdetecting) | Stop the document quad detection thread in the video streaming scenario. |
 | [`setDetectResultListener`](#setdetectresultlistener) | Set callback interface to process detection results generated during frame detecting. |
 
 ---
 
-## setCameraEnhancer
+## setImageSource
 
-Bind a `Dynamsoft Camera Enhancer` instance to the Document Normalizer. `Dynamsoft Camera Enhancer` is designed for video streaming processing scenarios. It can help the Document Normalizer to acquire video frames continuously for video streaming document normalizer.
+Sets an instance of ImageSource to get images. `DynamsoftCameraEnhancer` is a specific implementation of ImageSource, which can help the Document Normalizer to acquire video frames continuously for recognition.
 
 ```objc
-- (void)setCameraEnhancer:(DynamsoftCameraEnhancer* _Nonnull)cameraInstance;
+- (void)setImageSource:(ImageSource* _Nonnull)source;
 ```
 
 **Parameters**
 
-`[in] cameraInstance`: An instance of `Dynamsoft Camera Enhancer`.
+`[in] source`: An instance of ImageSource. If you are using `Dynamsoft Camera Enhancer`(DCE) to capture camera frames, pass an instance of `DynamsoftCameraEnhancer`.
 
 **Code Snippet**
 
@@ -64,7 +64,7 @@ This code snippet displays a complete code on how to add CameraEnhancer to your 
     [self.view addSubview:_dceView];
     _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
     [_dce open];
-    [_ddn setCameraEnhancer:_dce];
+    [_ddn setImageSource:_dce];
     [_ddn setDetectResultListener:self];
     [_ddn startDetecting];
 }
@@ -95,7 +95,7 @@ class ViewController: UIViewController, DetectResultListener{
         self.view.addSubview(dceView)
         dce = DynamsoftCameraEnhancer(view: dceView)
         dce.open()
-        ddn.setCameraEnhancer(dce)
+        ddn.setImageSource(dce)
         ddn.setDetectResultListener(self)
         ddn.startDetecting()
     }
@@ -115,7 +115,7 @@ Start the document quad detection thread in the video streaming scenario. Please
 
 **Code Snippet**
 
-You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhancer).
+You can view the complete code snippet in [`setImageSource`](#setimagesource).
 
 ## stopDetecting
 
@@ -127,7 +127,7 @@ Stop the document quad detection thread in the video streaming scenario.
 
 **Code Snippet**
 
-You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhancer).
+You can view the complete code snippet in [`setImageSource`](#setimagesource).
 
 ## setDetectResultListener
 
@@ -143,4 +143,4 @@ Set the callback interface to process detection results generated during frame d
 
 **Code Snippet**
 
-You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhancer).
+You can view the complete code snippet in [`setImageSource`](#setimagesource).

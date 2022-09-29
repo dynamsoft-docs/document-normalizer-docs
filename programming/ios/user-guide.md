@@ -71,8 +71,8 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
    target 'HelloWorld' do
       use_frameworks!
 
-   pod 'DynamsoftDocumentNormalizer','1.0.0'
-   pod 'DynamsoftCameraEnhancer','3.0.0'
+   pod 'DynamsoftDocumentNormalizer','1.0.10'
+   pod 'DynamsoftCameraEnhancer','3.0.1'
 
    end
    ```
@@ -240,14 +240,14 @@ Create the instances of `CameraEnhancer` and `CameraView`.
    - (void)configDDN{
       [DDNDataManager instance].ddn = [DynamsoftDocumentNormalizer new];
       // Bind the DocumentNormalizer and CameraEnhancer instance
-      [[DDNDataManager instance].ddn setCameraEnhancer:_dce];
+      [[DDNDataManager instance].ddn setImageSource:_dce];
    }
    ```
    2. 
    ```swift
    func configDDN() {
       DDNDataManager.instance.ddn = DynamsoftDocumentNormalizer()
-      DDNDataManager.instance.ddn.setCameraEnhancer(dce)
+      DDNDataManager.instance.ddn.setImageSource(dce)
    }
    ```
 
@@ -264,7 +264,7 @@ Create the instances of `CameraEnhancer` and `CameraView`.
    ...
    - (void)configDDN{
       [DDNDataManager instance].ddn = [DynamsoftDocumentNormalizer new];
-      [[DDNDataManager instance].ddn setCameraEnhancer:_dce];
+      [[DDNDataManager instance].ddn setImageSource:_dce];
       // Set the detect result listener first.
       [[DDNDataManager instance].ddn setDetectResultListener:self];
    }
@@ -279,7 +279,7 @@ Create the instances of `CameraEnhancer` and `CameraView`.
       ...
       func configDDN() {
              DDNDataManager.instance.ddn = DynamsoftDocumentNormalizer()
-             DDNDataManager.instance.ddn.setCameraEnhancer(dce)
+             DDNDataManager.instance.ddn.setImageSource(dce)
              DDNDataManager.instance.ddn.setDetectResultListener(self)
       }
       func detectResultCallback(_ frameId: Int, imageData: iImageData, results: [iDetectedQuadResult]) {

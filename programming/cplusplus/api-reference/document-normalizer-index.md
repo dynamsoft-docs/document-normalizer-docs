@@ -26,4 +26,3 @@ class dynamsoft::ddn::CDocumentNormalizer
 | [`Normalize`](document-normalizer-normalizing.md#normalize) | Normalizes the source image. |
 | [`OutputRuntimeSettingsToFile`](document-normalizer-settings.md#outputruntimesettingstofile) | Output runtime settings to a settings file (JSON file). |
 | [`OutputRuntimeSettingsToString`](document-normalizer-settings.md#outputruntimesettingstostring) | Output runtime settings to a string. |
-| [`SaveImageDataToFile`](document-normalizer-result.md#saveimagedatatofile) | Save the image data to a file. |

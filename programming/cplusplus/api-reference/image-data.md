@@ -15,24 +15,25 @@ class dynamsoft::core::CImageData
 
 | Method               | Description |
 |----------------------|-------------|
-| [`CImageData`](#cimagedata) | Constructor of `DocumentNormalizer` class. |
-| [`CImageData`](#cimagedata-1) | Constructor of `DocumentNormalizer` class. |
-| [`~CImageData`](#cimagedata-2) | Destructor of `DocumentNormalizer` class. |
+| [`CImageData`](#cimagedata) | Constructor of `CImageData` class. |
+| [`CImageData`](#cimagedata-1) | Constructor of `CImageData` class. |
+| [`~CImageData`](#cimagedata-2) | Destructor of `CImageData` class. |
 | [`GetBytes`](#getbytes) | Get the image data content in a byte array. |
 | [`GetBytesLength`](#getbyteslength) | Get the length of the image data byte array. |
 | [`GetWidth`](#getwidth) | Get the width of the image in pixels. |
 | [`GetHeight`](#getheight) | Get the height of the image in pixels. |
 | [`GetStride`](#getstride) | Get the stride (or scan width) of the image. |
 | [`GetImagePixelFormat`](#getimagepixelformat) | Get the image pixel format used in the image byte array. |
+| [`GetOrientation`](#getorientation) | Get the orientation of the image data. |
 
 ## CImageData()
 
-Constructor of a `CDocumentNormalizer` class.
+Constructor of a `CImageData` class.
 
 ```cpp
 dynamsoft::core::CImageData::CImageData()
 
-dynamsoft::core::CImageData::CImageData(int bytesLength, unsigned char* bytes, int width, int height, int stride, ImagePixelFormat format)
+dynamsoft::core::CImageData::CImageData(int bytesLength, unsigned char* bytes, int width, int height, int stride, ImagePixelFormat format, int orientation)
 ```
 
 **Parameters**  
@@ -48,9 +49,11 @@ dynamsoft::core::CImageData::CImageData(int bytesLength, unsigned char* bytes, i
 
 `[in] format` The image pixel format used in the image byte array.
 
+`[in] orientation` The orientation of the image data. The value is the angle that the image needs to be rotated clockwise so it shows correctly on the display in its natural orientation. It can be 0, 90, 180, or 270.
+
 ## ~CImageData()
 
-Destructor of a `CDocumentNormalizer` class.
+Destructor of a `CImageData` class.
 
 ```cpp
 dynamsoft::core::CImageData::~CImageData()
@@ -107,3 +110,11 @@ ImagePixelFormat GetImagePixelFormat()
 **See Also**
 
 [ImagePixelFormat]({{ site.enumerations }}image-pixel-format.html?src=cpp)
+
+## GetOrientation
+
+Get the orientation of the image data. The value is the angle that the image needs to be rotated clockwise so it shows correctly on the display in its natural orientation. It can be 0, 90, 180, or 270.
+
+```cpp
+int GetOrientation()
+```

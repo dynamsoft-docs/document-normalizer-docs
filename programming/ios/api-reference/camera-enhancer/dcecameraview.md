@@ -22,7 +22,7 @@ breadcrumbText: iOS DCECameraView Class
 | [`initWithFrame`](#initwithframe) | Init the `DCECameraView`. |
 | [`cameraWithFrame`](#camerawithframe) | Init the `DCECameraView` with a static method. |
 | [`setTorchButton`](#settorchbutton) | Set the position, size and image of the torch button. |
-| [`torchButtonVisible`](#torchvisible) | The property controls the visibility of the torch Button. |
+| [`torchButtonVisible`](#torchbuttonvisible) | The property controls the visibility of the torch Button. |
 | [`getDrawingLayer`](#getdrawinglayer) | Get the [`DCEDrawingLayer`](dcedrawinglayer.md) instance with the layer ID. |
 | [`createDrawingLayer`](#createdrawinglayer) | Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.md) instance. |
 | [`overlayVisible`](#overlayvisible) | **Deprecated**. The property stores the BOOL value that controls the visibility of the overlays. |

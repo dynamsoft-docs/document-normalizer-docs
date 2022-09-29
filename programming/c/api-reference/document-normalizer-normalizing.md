@@ -67,7 +67,7 @@ int DDN_DetectQuadFromFile(void* normalizer, const char* sourceFilePath, const c
 
 `[in] normalizer` Handle of the Dynamsoft Document Normalizer instance.
 
-`[in] sourceFilePath` A string defining the source file path. It supports BMP, JPEG, PNG and TIFF files.
+`[in] sourceFilePath` A string defining the source file path. It supports BMP, JPEG, PNG, TIFF and PDF files.
 
 `[in] templateName` The template name. A template name is the value of key ImageParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 
@@ -150,7 +150,7 @@ int DDN_NormalizeFile(void* normalizer, const char* sourceFilePath, const char* 
 
 `[in] normalizer` Handle of the Dynamsoft Document Normalizer instance.
 
-`[in] sourceFilePath` A string defining the source file path. It supports BMP, JPEG, PNG and TIFF files.
+`[in] sourceFilePath` A string defining the source file path. It supports BMP, JPEG, PNG, TIFF and PDF files.
 
 `[in] templateName` The template name. A template name is the value of key ImageParameter.Name defined in JSON formatted settings. If no template name is specified, current runtime settings will be used.
 

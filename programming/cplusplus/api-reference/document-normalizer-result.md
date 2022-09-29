@@ -12,7 +12,6 @@ keywords: FreeDetectedQuadResultArray, FreeNormalizedImageResult, FreeString, Sa
 | [`FreeDetectedQuadResultArray`](#freedetectedquadresultarray) | Releases memory allocated for CDetectedQuadResultArray. |
 | [`FreeNormalizedImageResult`](#freenormalizedimageresult) | Releases memory allocated for CNormalizedImageResult. |
 | [`FreeString`](#freestring) | Releases memory allocated for a string. |
-| [`SaveImageDataToFile`](#saveimagedatatofile) | Save the image data to a file. |
 
 ## FreeDetectedQuadResultArray
 
@@ -81,31 +80,4 @@ ddn.OutputRuntimeSettingsToString("", &content);
 //...do something with the content
 if (content != NULL)
     CDocumentNormalizer::FreeString(&content);
-```
-
-## SaveImageDataToFile
-
-Save the image data to a file.
-
-```cpp
-static int dynamsoft::ddn::CDocumentNormalizer::SaveImageDataToFile(const CImageData* imageData, const char* filePath)
-```
-
-**Parameters**
-
-`[in] imageData` The image data that needs to be saved.
-
-`[in] filePath` The path of the output image file with the extension specifying the image format. It supports BMP and PNG files.
-
-**Code Snippet**
-
-```cpp
-CDocumentNormalizer ddn;
-CNormalizedImageResult* normalizedResult = NULL;
-ddn.Normalize("YOUR-SOURCE-FILE-PATH", "", NULL, &normalizedResult);
-if (normalizedResult != NULL)
-{   
-    CDocumentNormalizer::SaveImageDataToFile(normalizedResult->GetImageData(), "YOUR-TARGET-FILE-PATH");
-    CDocumentNormalizer::FreeNormalizedImageResult(&normalizedResult);
-}
 ```
