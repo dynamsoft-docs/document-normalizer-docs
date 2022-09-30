@@ -24,4 +24,10 @@ A network connection is required to verify the trial license in the samples. If 
 
 ### Video Document Normalizing
 
-Most of the Dynamsoft Document Normalizer mobile samples are designed for video document normalizing. Dynamsoft Camera Enhancer (DCE) is applied to the video document normalizing samples to support the acquisition of video input. At the same time, some of the DCE features benefit the document normalizer, which is illustrated in the samples. For more usage about DCE, please view more in <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/?ver=latest" target="_blank">DCE online documents</a>.
+Most of the Dynamsoft Document Normalizer mobile samples are designed for video document normalizing. Dynamsoft Camera Enhancer (DCE) is applied to the video document scanning samples. The following features in the samples are powered by DCE:
+
+- Capture video frame for quadrilateral area detecting.
+- Create a `Camera View` for displaying the video streaming and highlighting the real-time detected quadrilaterals.
+- Create an `Image Editor View` for quadrilateral boundary editing.
+
+View the [API reference](../api-reference/camera-enhancer/index.md) for more details.
