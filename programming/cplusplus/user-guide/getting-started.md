@@ -28,7 +28,7 @@ If you haven't downloaded the SDK yet, <a href="https://download2.dynamsoft.com/
 ## Build Your First Application
 
 Let's start by creating a console application which demonstrates how to use the minimum code to detect and normalize document from an image file.  
->You can [download the entire source code from here](https://github.com/Dynamsoft/document-normalizer-c-cpp-samples/tree/main/Samples/C%2B%2B/HelloWorld).
+>You can <a href="https://github.com/Dynamsoft/document-normalizer-c-cpp-samples/tree/main/Samples/C%2B%2B/HelloWorld" target="_blank">download the entire source code from here</a>.
 
 ### Create a New Project
 
@@ -144,4 +144,4 @@ Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpackin
     ./DDNCPPSample
     ```
 
->You can download the entire source code from [Here](https://github.com/Dynamsoft/document-normalizer-c-cpp-samples/tree/main/Samples/C%2B%2B/HelloWorld).
+>You can <a href="https://github.com/Dynamsoft/document-normalizer-c-cpp-samples/tree/main/Samples/C%2B%2B/HelloWorld" target="_blank">download the entire source code from here</a>.
