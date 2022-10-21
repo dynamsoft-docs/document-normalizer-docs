@@ -18,7 +18,7 @@ Common detections include:
 - Document boundary detection
 - Table boundary detection
 
-Common normalizations include：
+Common normalizations include:
 
 - Border crop
 - Deskew
