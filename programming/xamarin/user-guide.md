@@ -15,6 +15,15 @@ noTitleIndex: false
 - [System Requirements](#system-requirements)
 - [Installation](#installation)
 - [Build Your First Application](#build-your-first-application)
+  - [Set up Development Environment](#set-up-development-environment)
+  - [Initialize the Project](#initialize-the-project)
+  - [Include the Library](#include-the-library)
+  - [Initialize IDocumentNormalizer and ICameraEnhancer](#initialize-idocumentnormalizer-and-icameraenhancer)
+  - [MainPage for Realtime Quadrilateral Detection](#mainpage-for-realtime-quadrilateral-detection)
+  - [QuadEditorPage for Interactive Editing of Quads](#quadeditorpage-for-interactive-editing-of-quads)
+  - [ResultPage for Displaying the Normalized Image](#resultpage-for-displaying-the-normalized-image)
+  - [Add Camera Permission](#add-camera-permission)
+  - [Run the Project](#run-the-project)
 
 ## System Requirements
 
@@ -53,14 +62,14 @@ If you are a beginner with Xamarin, please follow the guide on the <a href="http
 
 ### Initialize the Project
 
-#### Visual Studio
+**Visual Studio**
 
 1. Open the Visual Studio and select **Create a new project**.
 2. Select **Mobile App (Xamarin.Forms)** and click **Next**.
 3. Name the project **SimpleDocumentScanner**. Select a location for the project and click **Create**.
 4. Select **Blank** and click **Create**.
 
-#### Visual Studio for Mac
+**Visual Studio for Mac**
 
 1. Open Visual Studio and select **New**.
 2. Select **Multiplatform > App > Blank App > C#** and click **Next**.
@@ -307,7 +316,7 @@ namespace SimpleDocumentScanner
 
 ### Add Camera Permission
 
-#### Android
+**Android**
 
 Add the following code in **MainActivity.cs** for requesting camera permission on Android devices.
 
@@ -333,13 +342,13 @@ namespace SimpleBarcodeScanner.Droid
 }
 ```
 
-#### iOS
+**iOS**
 
 Add **Privacy - Camera Usage Description** and your message to the **info.plist** of your project.
 
 ### Run the Project
 
-#### Run Android on Windows
+**Run Android on Windows**
 
 Select **SimpleBarcodeScanner.Android** and select your device. Run the project.
 
@@ -348,7 +357,7 @@ Select **SimpleBarcodeScanner.Android** and select your device. Run the project.
     <p>Run Your Project</p>
 </div>
 
-#### Run iOS & Android on macOS
+**Run iOS & Android on macOS**
 
 1. Right click on the **SimpleBarcodeReader.iOS** or **SimpleBarcodeReader.Android** and select **Set As Startup Project**.
 2. In the menu, select and click **Run > Start Debugging**.
