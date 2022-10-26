@@ -17,13 +17,19 @@ Stores the quadrilateral.
 class DDNXamarin.Quadrilateral
 ```
 
-## Attributes
+## Attributes Summary
   
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
-| [`points`](#points) | `Xamarin.Forms.Point[]` | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
+| [`Points`](#points) | `Xamarin.Forms.Point[]` | Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex. |
 
-&nbsp;
+## Methods Summary
+
+| Method | Description |
+|---------- | ----------- |
+| [`GetBoundingRect`](#points) | Get the bounding rectangle of the quadrilateral. |
+
+## Attributes and Methods Details
 
 ### Points
 
@@ -32,12 +38,6 @@ Four vertexes in a clockwise direction of a quadrilateral. Index 0 represents th
 ```csharp
 Xamarin.Forms.Point[] points
 ```
-
-## Methods
-
-| Method | Description |
-|---------- | ----------- |
-| [`getBoundingRect`](#points) | Get the bounding rectangle of the quadrilateral. |
 
 ### getBoundingRect
 

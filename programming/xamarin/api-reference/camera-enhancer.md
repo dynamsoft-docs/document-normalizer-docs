@@ -26,6 +26,8 @@ interface DDNXamarin.ICameraEnhancer
 | [`TurnOnTorch`](#turnontorch) | Turn on the torch. |
 | [`TurnOffTorch`](#turnofftorch) | Turn off the torch. |
 
+&nbsp;
+
 ## ICameraEnhancer Methods Details
 
 ### Open

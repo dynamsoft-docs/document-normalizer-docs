@@ -28,4 +28,4 @@ protected override void OnCreate(Bundle savedInstanceState)
 
 | Method               | Description |
 |----------------------|-------------|
-| `InitLicense` | Read the license key and activate the SDK. Implements [`InitLicense`](license-manager.md#initlicense). |
+| [`InitLicense`](license-manager.md#initlicense) | Read the license key and activate the SDK. |

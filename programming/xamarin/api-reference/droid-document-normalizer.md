@@ -28,17 +28,17 @@ protected override void OnCreate(Bundle savedInstanceState)
 
 | Method | Description |
 |--------|-------------|
-| `SetCameraEnhancer` | Sets an instance of ImageSource to get images. Implements [`IDocumentNormalizer.SetCameraEnhancer`](document-normalizer.md#setcameraenhancer). |
-| `StartDetecting` | Start the document quad detection thread in the video streaming scenario. Implements [`IDocumentNormalizer.StartDetecting`](document-normalizer.md#startdetecting). |
-| `StopDetecting` | Stop the document quad detection thread in the video streaming scenario. Implements [`IDocumentNormalizer.StopDetecting`](document-normalizer.md#stopdetecting). |
-| `AddResultListener` | Set callback interface to process detection results generated during frame detecting. Implements [`AddResultListener`](document-normalizer.md#addresultlistener). |
-| `DetectQuad(ImageData)` | Detect quad from the memory buffer containing image pixels in defined format. Implements [`DetectQuad(ImageData)`](document-normalizer.md#detectquadimagedata). |
-| `DetectQuad(File)` | Detect quad from an image file. Implements [`DetectQuad(File)`](document-normalizer.md#detectquadfile). |
-| `Normalize(ImageData)` | Normalize image from the memory buffer containing image pixels in defined format. Implements [`Normalize(ImageData)`](document-normalizer.md#normalizeimagedata). |
-| `Normalize(File)` | Normalize an image file. Implements [`Normalize(File)`](document-normalizer.md#normalizefile). |
-| `InitRuntimeSettingsFromFile` | Initialize runtime settings with the settings in a given JSON file. Implements [`InitRuntimeSettingsFromFile`](document-normalizer.md#initruntimesettingsfromfile). |
-| `InitRuntimeSettings` | Initialize runtime settings with the settings in a given JSON string. Implements [`InitRuntimeSettings`](document-normalizer.md#initruntimesettings). |
-| `OutputRuntimeSettingsToFile` | Output runtime settings to a settings file (JSON file). Implements [`OutputRuntimeSettingsToFile`](document-normalizer.md#outputruntimesettingstofile). |
-| `OutputRuntimeSettings` | Output runtime settings to a string. Implements [`OutputRuntimeSettings`](document-normalizer.md#outputruntimesettings). |
-| `SaveToFile` | Save a `NormalizedImageResult` to the targeting file path. Implements [`SaveToFile`](document-normalizer.md#savetofile). |
-| `GetVersion` | Get version information of SDK. Implements [`GetVersion`](document-normalizer.md#getversion). |
+| [`SetCameraEnhancer`](document-normalizer.md#setcameraenhancer) | Sets an instance of ImageSource to get images. |
+| [`StartDetecting`](document-normalizer.md#startdetecting) | Start the document quad detection thread in the video streaming scenario. |
+| [`StopDetecting`](document-normalizer.md#stopdetecting) | Stop the document quad detection thread in the video streaming scenario. |
+| [`AddResultListener`](document-normalizer.md#addresultlistener) | Set callback interface to process detection results generated during frame detecting. |
+| [`DetectQuad(ImageData)`](document-normalizer.md#detectquadimagedata) | Detect quad from the memory buffer containing image pixels in defined format. |
+| [`DetectQuad(File)`](document-normalizer.md#detectquadfile) | Detect quad from an image file. |
+| [`Normalize(ImageData)`](document-normalizer.md#normalizeimagedata) | Normalize image from the memory buffer containing image pixels in defined format. |
+| [`Normalize(File)`](document-normalizer.md#normalizefile) | Normalize an image file. |
+| [`InitRuntimeSettingsFromFile`](document-normalizer.md#initruntimesettingsfromfile) | Initialize runtime settings with the settings in a given JSON file. |
+| [`InitRuntimeSettings`](document-normalizer.md#initruntimesettings) | Initialize runtime settings with the settings in a given JSON string. |
+| [`OutputRuntimeSettingsToFile`](document-normalizer.md#outputruntimesettingstofile) | Output runtime settings to a settings file (JSON file). |
+| [`OutputRuntimeSettings`](document-normalizer.md#outputruntimesettings) | Output runtime settings to a string. |
+| [`SaveToFile`](document-normalizer.md#savetofile) | Save a `NormalizedImageResult` to the targeting file path. |
+| [`GetVersion`](document-normalizer.md#getversion) | Get version information of SDK. |

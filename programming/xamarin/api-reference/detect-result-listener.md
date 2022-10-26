@@ -20,6 +20,8 @@ interface DDNXamarin.IDetectResultListener
 | ------ | ----------- |
 | `DetectResultCallback` | The callback method to handle the detection results returned by the library. |
 
+&nbsp;
+
 ## DetectResultCallback
 
 The callback method to handle the detection results returned by the library.

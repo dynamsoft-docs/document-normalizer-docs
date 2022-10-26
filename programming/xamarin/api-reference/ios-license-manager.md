@@ -27,4 +27,4 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 
 | Method               | Description |
 |----------------------|-------------|
-| `InitLicense` | Read the license key and activate the SDK. Implements [`InitLicense`](license-manager.md#initlicense). |
+| [`InitLicense`](license-manager.md#initlicense) | Read the license key and activate the SDK. |

@@ -27,7 +27,7 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 
 | Method | Description |
 |--------|-------------|
-| `Open` | Turn on the current selected camera. Implements [`Open`](camera-enhancer.md#open). |
-| `Close` | Turn off the current selected camera. Implements [`Close`](camera-enhancer.md#close). |
-| `TurnOnTorch` | Turn on the torch. Implements [`TurnOnTorch`](camera-enhancer.md#turnontorch). |
-| `TurnOffTorch` | Turn off the torch. Implements [`TurnOffTorch`](camera-enhancer.md#turnofftorch). |
+| [`Open`](camera-enhancer.md#open) | Turn on the current selected camera. |
+| [`Close`](camera-enhancer.md#close) | Turn off the current selected camera. |
+| [`TurnOnTorch`](camera-enhancer.md#turnontorch) | Turn on the torch. |
+| [`TurnOffTorch`](camera-enhancer.md#turnofftorch) | Turn off the torch. |

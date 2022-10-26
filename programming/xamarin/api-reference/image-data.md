@@ -16,7 +16,7 @@ Stores the image data.
 class DDNXamarin.ImageData
 ```  
 
-## Attributes
+## Attributes Summary
 
 | Attribute | Type | Description |
 |---------- | ---- | ----------- |
@@ -26,6 +26,16 @@ class DDNXamarin.ImageData
 | [`Stride`](#stride) | *int* | The stride of the image. |
 | [`Format`](#format) | *int* | The pixel format of the image. |
 | [`Orientation`](#orientation) | *int* | The orientation of the image. |
+
+## Methods Summary
+
+| Methods | Description |
+| ------- | ----------- |
+| [`ToImageSource`](#toimagesource) | Convert the `ImageData` to `Xamarin.Forms.ImageSource`. |
+
+&nbsp;
+
+## Attributes and Methods Details
 
 ### Bytes
 
@@ -79,12 +89,6 @@ The orientation of the image. The following image illustrates the `orientation` 
 ```csharp
 public int Orientation;
 ```
-
-## Methods
-
-| Methods | Description |
-| ------- | ----------- |
-| [`ToImageSource`](#toimagesource) | Convert the `ImageData` to `Xamarin.Forms.ImageSource`. |
 
 ### ToImageSource
 

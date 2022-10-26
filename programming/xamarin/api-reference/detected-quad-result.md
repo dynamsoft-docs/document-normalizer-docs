@@ -32,6 +32,8 @@ namespace DDNXamarin
 | [`Location`](#location) | *Quadrilateral* | The location of the detected quadrilateral. |
 | [`ConfidenceAsDocumentBoundary`](#confidenceasdocumentboundary) | *int* | How much confidence do we define the quad as a document boundary. |
 
+&nbsp;
+
 ### Location
 
 The location of the detected quadrilateral.

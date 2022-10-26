@@ -39,6 +39,7 @@ noTitleIndex: false
 - Supported ABI: **armeabi-v7a**, **arm64-v8a**, **x86** and **x86_64**.
 - Development Environment: Android Studio 3.4+ (Android Studio 4.2+ recommended).
 - JDK: 1.8+
+- Compile using Android version (Target Framework): Android 12.0(s) or higher.
 
 **iOS**
 

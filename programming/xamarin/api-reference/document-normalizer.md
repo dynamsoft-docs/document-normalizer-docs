@@ -65,6 +65,8 @@ interface DDNXamarin.IDocumentNormalizer
 | [`SaveToFile`](#savetofile) | Save a `NormalizedImageResult` to the targeting file path. |
 | [`GetVersion`](#getversion) | Get version information of SDK.|
 
+&nbsp;
+
 ## Video Detecting Methods Details
 
 ### SetCameraEnhancer
