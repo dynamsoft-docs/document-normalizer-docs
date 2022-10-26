@@ -30,7 +30,7 @@ noTitleIndex: false
 **Xamarin**
 
 - NETStandard.Library 2.0+
-- Xamarin.Forms 5.0.0.2478+
+- Xamarin.Forms 5.0.0.2515+
 - Xamarin.Essentials: 1.3.1+ (1.4.0+ Recommended)
 
 **Android**
@@ -90,6 +90,8 @@ You have to initialize the following two interfaces to scan document pages with 
 In **App.xaml.cs**, add the following code to initialize the `IDocumentNormalizer` and `ICameraEnhancer` objects.
 
 ```csharp
+using DDNXamarin;
+
 namespace SimpleDocumentScanner
 {
     public partial class App : Application, ILicenseVerificationListener
@@ -169,6 +171,8 @@ Add 2 two elements in **MainPage.xaml**:
 Add code in **MainPage.cs** to support detected quad previewing.
 
 ```csharp
+using DDNXamarin;
+
 namespace SimpleDocumentScanner
 {
     public partial class MainPage : ContentPage, IDetectResultListener
@@ -249,6 +253,8 @@ Add 2 two elements in **QuadEditorPage.Xaml**:
 Add code in **QuadEditorPage.xaml.cs** to support the quad editing.
 
 ```csharp
+using DDNXamarin;
+
 namespace SimpleDocumentScanner
 {
     public partial class QuadEditorPage : ContentPage
@@ -288,6 +294,8 @@ namespace SimpleDocumentScanner
 Create a new content page and name it **ResultPage**. **ResultPage** is where we display the image of normalized results.
 
 ```csharp
+using DDNXamarin;
+
 namespace SimpleDocumentScanner
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
