@@ -10,7 +10,7 @@ noTitleIndex: true
 
 # Release Notes for Xamarin SDK
 
-## 1.0.0 (10/27/2022)
+## 1.0.0 (10/28/2022)
 
 ### Highlights
 
