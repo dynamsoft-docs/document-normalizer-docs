@@ -25,41 +25,52 @@ console.log(await res.saveToFile("dynamsoft.png", true)); //true means download
 * Detect and normalize continuous video frames
 
 ```js
-(async () => {
-    let enhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-    await enhancer.open();
-    document.getElementById("div-ui-container").appendChild(enhancer.getUIElement());
-    let normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
-    let options = {
-        resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
-    };
-    await normalizer.setImageSource(enhancer, options);
-    normalizer.onQuadDetected = async (quads, sourceImage) => {
-        for (let quad of quads) {
-            console.log("detected quad: ");
-            console.log(quad);
+(async function() {
+    try {
+        let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+        let normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
+        await normalizer.setImageSource(cameraEnhancer, {resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem});
+
+        await document.getElementById('div-ui-container').append(cameraEnhancer.getUIElement());
+    
+        // Triggered when the video frame is detecting quad
+        normalizer.onQuadDetected = (results, sourceImage) => {
+            console.log(results);
+        };
+
+        // Pause the video and selecting, editing a quad when the button is clicked.
+        document.getElementById('confirmQuadForNormalization').addEventListener("click", () => {
+            normalizer.confirmQuadForNormalization();
+        })
+
+        // Normalize with the confirmed quad when the button is clicked.
+        document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
+            try {
+                const res = await normalizer.normalizeWithConfirmedQuad();
+                if(res) {
+                    const cvs = res.image.toCanvas();
+                    if(document.body.clientWidth < 600) {
+                    cvs.style.width = "80%";
+                    }
+                    document.querySelector("#normalized-result").appendChild(cvs);
+                    console.log(res);
+                }
+            } catch(ex) {
+                alert(ex.message || ex);
+            }
+        })
+        await normalizer.startScanning(true);
+    } catch (ex) {
+        let errMsg;
+        if (ex.message.includes("network connection error")) {
+            errMsg = "Failed to connect to Dynamsoft License Server: network connection error. Check your Internet connection or contact Dynamsoft Support (support@dynamsoft.com) to acquire an offline license.";
+        } else {
+            errMsg = ex.message||ex;
         }
-    };
-    normalizer.startScanning(true);
-})();
-
-// The button for pausing the video and selecting, editing a quad.
-document.querySelector('.edit-quad').addEventListener('click', () => {
-    if (!enhancer) return;
-    normalizer.confirmQuadForNormalization();
-})
-
-// The button for normalizing with the confirmed quad.
-document.querySelector('.normalize-with-the-quad').addEventListener('click', async () => {
-    if (!enhancer) return;
-    let res = await normalizer.normalizeWithConfirmedQuad();
-    console.log("normalized image result: ");
-    console.log(res);
-    if (res) {
-      // The div for showing the normalized image.
-      document.querySelector('.normalized-result-canvas').appendChild(res.image.toCanvas());
+        alert(errMsg);
+        console.error(errMsg);
     }
-})
+})();
 ```
 
 The APIs for this class include

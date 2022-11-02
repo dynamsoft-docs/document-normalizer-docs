@@ -51,54 +51,73 @@ The complete code of normalizing video frames' example is shown below
 <html lang="en">
 
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.1/dist/dce.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.1.0/dist/dce.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.0/dist/ddn.js"></script>
 </head>
 
 <body>
-    <div id="div-ui-container" style="width:100%;height:100%;">
-        <div class="dce-video-container" style="position:relative;width:100%;height:500px;"></div>
-    </div>
-    <button class="edit-quad">select and edit one quad</button> <!-- The button for pausing the video and selecting, editing a quad. -->
-    <button class="normalize-with-the-quad">normalize with the selected quad</button> <!-- The button for normalizing with the confirmed quad. -->
-    <div class="normalized-result-canvas"></div> <!-- The container for holding the normalized image result. -->
-
+    <h1 style="font-size: 1.5em;">Detecting Quads and normalize via Camera</h1>
+    <button id="confirmQuadForNormalization">Editor</button>
+    <button id="normalizeWithConfirmedQuad">End Editor</button>
+    <div id="div-ui-container" style="margin-top: 10px;height: 500px;"></div>
+    <div id="normalized-result"></div>
     <script>
-      // The following line specifies a license good for 24 hours, you can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=guide&product=dlr&package=js to get your own trial license good for 30 days.
-        Dynamsoft.DDN.DocumentNormalizer.license = 'DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9';
+        let normalizer = null;
+        let cameraEnhancer = null;
 
-        // The following code initializes and uses the SDK.
-        (async () => {
-            let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-            await cameraEnhancer.open();
-            document.getElementById("div-ui-container").appendChild(cameraEnhancer.getUIElement());
+        /** LICENSE ALERT - README
+         * To use the library, you need to first specify a license key using the API "license" as shown below.
+        */
+        Dynamsoft.DDN.DocumentNormalizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
+        /**
+         * You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=github&product=ddn&package=js to get your own trial license good for 30 days.
+         * Note that if you downloaded this sample from Dynamsoft while logged in, the above license key may already be your own 30-day trial license.
+         * For more information, see https://www.dynamsoft.com/document-normalizer/programming/javascript/user-guide/?ver=1.0.0&utm_source=github#specify-the-license or contact support@dynamsoft.com.
+         * LICENSE ALERT - THE END
+        */
 
-            let normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
-            let options = {
-                resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
+        (async function() {
+          try {
+            cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+            normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
+            await normalizer.setImageSource(cameraEnhancer, {resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem});
+
+            await document.getElementById('div-ui-container').append(cameraEnhancer.getUIElement());
+            
+            // Triggered when the video frame is detecting quad
+            normalizer.onQuadDetected = (results, sourceImage) => {
+              console.log(results);
             };
-            normalizer.onQuadDetected = async (results, sourceImage) => {
-                for (let result of results) {
-                  console.log("detected quad: ", result);
+            document.getElementById('confirmQuadForNormalization').addEventListener("click", () => {
+              normalizer.confirmQuadForNormalization();
+            })
+            document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
+              try {
+                const res = await normalizer.normalizeWithConfirmedQuad();
+                if(res) {
+                  const cvs = res.image.toCanvas();
+                  if(document.body.clientWidth < 600) {
+                    cvs.style.width = "80%";
+                  }
+                  document.querySelector("#normalized-result").appendChild(cvs);
+                  console.log(res);
                 }
-            };
-            await normalizer.setImageSource(cameraEnhancer, options);
-            normalizer.startScanning(true);
-        })();
-
-        document.querySelector('.edit-quad').addEventListener('click', () => {
-            if (!cameraEnhancer) return;
-            normalizer.confirmQuadForNormalization();
-        })
-
-        document.querySelector('.normalize-with-the-quad').addEventListener('click', async () => {
-            if (!cameraEnhancer) return;
-            let res = await normalizer.normalizeWithConfirmedQuad();
-            console.log("normalized image result: ", res);
-            if (res) {
-                document.querySelector('.normalized-result-canvas').appendChild(res.image.toCanvas());
+              } catch(ex) {
+                alert(ex.message || ex);
+              }
+            })
+            await normalizer.startScanning(true);
+          } catch (ex) {
+            let errMsg;
+            if (ex.message.includes("network connection error")) {
+              errMsg = "Failed to connect to Dynamsoft License Server: network connection error. Check your Internet connection or contact Dynamsoft Support (support@dynamsoft.com) to acquire an offline license.";
+            } else {
+              errMsg = ex.message||ex;
             }
-        })
+            alert(errMsg);
+            console.error(errMsg);
+          }
+        })();
     </script>
 </body>
 
@@ -160,15 +179,13 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 * jsDelivr
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.0/dist/dlr.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.1/dist/dce.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.0/dist/ddn.js"></script>
   ```
 
 * UNPKG  
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-document-normalizer@1.0.0/dist/dlr.js"></script>
-  <script src="https://unpkg.com/dynamsoft-camera-enhancer@3.0.1/dist/dce.js"></script>
+  <script src="https://unpkg.com/dynamsoft-document-normalizer@1.0.0/dist/ddn.js"></script>
   ```
 
 #### Host the SDK yourself
@@ -181,35 +198,30 @@ To download the SDK:
 
   ```cmd
   yarn add dynamsoft-document-normalizer@1.0.0
-  yarn add dynamsoft-camera-enhancer@3.0.1
   ```
 
 * npm
 
   ```cmd
   npm install dynamsoft-document-normalizer@1.0.0
-  npm install dynamsoft-camera-enhancer@3.0.1
   ```
 
 Depending on how you downloaded the SDK and where you put it, you can typically include it like this:
 
   ```html
   <script src="/ddn-js-1.0.0/dist/ddn.js"></script>
-  <script src="/ddn-js-1.0.0/dce/dist/dce.js"></script>
   ```
 
 or
 
   ```html
   <script src="/node_modules/dynamsoft-document-normalizer/dist/ddn.js"></script>
-  <script src="/node_modules/dynamsoft-camera-enhancer/dist/dce.js"></script>
   ```
 
 or
 
   ```ts
   import { DocumentNormalizer } from 'dynamsoft-document-normalizer';
-  import { CameraEnhancer, DrawingItem } from 'dynamsoft-camera-enhancer';
   ```
 
 ### Configure the SDK
@@ -228,7 +240,7 @@ To test the SDK, you can request a 30-day trial license via the [customer portal
 
 #### Specify the location of the "engine" files
 
-If the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.) are not in the same location with the main SDK file (dlr.js), you can use the API `engineResourcePath` to specify the engine path, for example:
+If the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.) are not in the same location with the main SDK file (ddn.js), you can use the API `engineResourcePath` to specify the engine path, for example:
 
 ```javascript
 // The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
@@ -265,7 +277,7 @@ await normalizer.setImageSource(cameraEnhancer, options);
 
 #### Change the camera settings if necessary
 
-In some cases, a different camera might be required instead of the default one. Also, a different resolution might work better. To change the camera or the resolution, we use the `CameraEnhancer` object. Learn more [here](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/camera-control.html?ver=3.0.1&utm_source=guide&product=dlr&package=js).
+In some cases, a different camera might be required instead of the default one. Also, a different resolution might work better. To change the camera or the resolution, we use the `CameraEnhancer` object. Learn more [here](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/camera-control.html?ver=3.0.1&utm_source=guide&product=ddn&package=js).
 
 ```javascript
 // The following lines set which camera and what resolution to use.
@@ -299,7 +311,7 @@ As you can see from the above code snippets, there are two types of configuratio
 
 #### Customize the UI
 
-The built-in UI of the `DocumentNormalizer` object is defined in the file `dist/dlr.ui.html` . There are a 4 ways to customize it:
+The built-in UI of the `DocumentNormalizer` object is defined in the file `dist/ddn.ui.html` . There are a 4 ways to customize it:
 
 1. Modify the file `ddn.ui.html` directly.
 
@@ -408,7 +420,7 @@ You can check out the detailed documentation about the APIs of the SDK at
 
 ## System Requirements
 
-DLR requires the following features to work:
+ddn requires the following features to work:
 
 * Secure context (HTTPS deployment)
 
@@ -435,16 +447,15 @@ The following table is a list of supported browsers based on the above requireme
 
   Browser Name | Version
   :-: | :-:
-  Chrome | v61+<sup>1</sup>
-  Firefox | v52+ (v55+ on Android/iOS<sup>1</sup>)
-  Edge<sup>2</sup> | v16+
-  Safari<sup>3</sup> | v11+
+  Chrome | v85+(v94+ on Android)
+  Firefox | v99+
+  Safari | v15+
 
-  <sup>1</sup> iOS 14.3+ is required for camera video streaming in Chrome and Firefox or Apps using webviews.
+  <!-- <sup>1</sup> iOS 14.3+ is required for camera video streaming in Chrome and Firefox or Apps using webviews.
 
   <sup>2</sup> On Edge, due to strict Same-origin policy, you must host the SDK files on the same domain as your web page.
   
-  <sup>3</sup> Safari v11.x already has the required features, but it has many other issues, so we recommend v12+.
+  <sup>3</sup> Safari v11.x already has the required features, but it has many other issues, so we recommend v12+. -->
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the SDK. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
 
