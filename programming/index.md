@@ -10,3 +10,4 @@ description: Dynamsoft Document Normalizer - Programming
 - [iOS](ios)
 - [C](c/)
 - [C++](cplusplus/)
+- [JavaScript](javascript/)
