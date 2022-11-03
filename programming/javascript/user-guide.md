@@ -308,9 +308,9 @@ scanSettings.intervalTime = 100; // The default is 0.
 await normalizer.updateScanSettings(scanSettings);
 ```
 
-As you can see from the above code snippets, there are one type of configuration:
+As you can see from the above code snippets, there is one type of configuration:
 
-* `get/updateScanSettings`: Configures the behavior of the normalizer which includes `duplicateForgetTime` and `intervalTime`, etc.
+* `get/updateScanSettings`: Configures the behavior of the normalizer which only includes `intervalTime` for now.
 
 #### Customize the UI
 
