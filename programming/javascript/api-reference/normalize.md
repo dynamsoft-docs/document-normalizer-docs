@@ -24,6 +24,7 @@ breadcrumbText: Detect and Normalize APIs
 |---|---|
 | [setImageSource()](#setimagesource) | Sets an image source for continous scanning. |
 | [onQuadDetected](#onquaddetected) | This event is triggered when a new quadrilateral is detected. |
+| [setQuadResultFilter()](#setquadresultfilter) | Sets a function to filter a detected quadrilateral. |
 | [confirmQuadForNormalization()](#confirmquadfornormalization) | Confirms which quadrilateral will be used for later normalization. |
 | [normalizeWithConfirmedQuad()](#normalizewithconfirmedquad) | Normalizes the image whith one confirmed quadrilateral. |
 | [startScanning()](#startscanning) | Opens the camera and starts continuous scanning of incoming images. |
