@@ -29,7 +29,10 @@ console.log(await res.saveToFile("dynamsoft.png", true)); //true means download
     try {
         let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
         let normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
-        await normalizer.setImageSource(cameraEnhancer, {resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem});
+        let options = {
+            resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
+        };
+        await normalizer.setImageSource(cameraEnhancer, options);
 
         await document.getElementById('div-ui-container').append(cameraEnhancer.getUIElement());
     

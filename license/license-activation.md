@@ -68,7 +68,7 @@ errorCode = CLicenseManager::InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMS
 if (errorCode != DM_OK)
    cout << szErrorMsg << endl;
 ```
-6.
+6. 
 ```js
 Dynamsoft.DDN.DocumentNormalizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 ```
