@@ -8,9 +8,9 @@ needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# Release Notes for JavaScript SDK - 1.0.0
+# Release Notes for JavaScript SDK
 
-## 1.0.0 (10/xx/2022)
+## 1.0.0 (11/03/2022)
 
 ### Highlights
 
