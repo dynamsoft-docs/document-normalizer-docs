@@ -71,7 +71,6 @@ The complete code of video frames normalization example is shown below:
         Dynamsoft.DDN.DocumentNormalizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
         /**
          * You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=github&product=ddn&package=js to get your own trial license good for 30 days.
-         * Note that if you downloaded this sample from Dynamsoft while logged in, the above license key may already be your own 30-day trial license.
          * For more information, see https://www.dynamsoft.com/document-normalizer/programming/javascript/user-guide/?ver=1.0.10&utm_source=github#specify-the-license or contact support@dynamsoft.com.
          * LICENSE ALERT - THE END
         */
@@ -157,7 +156,7 @@ The complete code of video frames normalization example is shown below:
 
 Create a text file with the name "Normalize-Video-Frames.html", fill it with the code above and save. After that, open the example page in a browser, allow the page to access your camera and the video will show up on the page. After that, you can point the camera at something with a quadrilateral border to detect it.
 
-> You can also just test it at [https://jsfiddle.net/DynamsoftTeam/tgqskxa8/](https://jsfiddle.net/DynamsoftTeam/tgqskxa8/)
+> You can also just test it at [https://jsfiddle.net/DynamsoftTeam/e3g2o9bd/](https://jsfiddle.net/DynamsoftTeam/e3g2o9bd/)
 
 Remember to open the browser console to check the resulting text.
 
