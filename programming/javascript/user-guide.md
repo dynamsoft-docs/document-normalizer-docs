@@ -80,7 +80,10 @@ The complete code of normalizing video frames' example is shown below
           try {
             cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
             normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
-            await normalizer.setImageSource(cameraEnhancer, {resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem});
+            let options = {
+              resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
+            };
+            await normalizer.setImageSource(cameraEnhancer, options);
 
             await document.getElementById('div-ui-container').append(cameraEnhancer.getUIElement());
             
@@ -88,9 +91,13 @@ The complete code of normalizing video frames' example is shown below
             normalizer.onQuadDetected = (results, sourceImage) => {
               console.log(results);
             };
+
+            // Pause the video and selecting, editing a quad when the button is clicked.
             document.getElementById('confirmQuadForNormalization').addEventListener("click", () => {
               normalizer.confirmQuadForNormalization();
             })
+
+            // Normalize with the confirmed quad when the button is clicked.
             document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
               try {
                 const res = await normalizer.normalizeWithConfirmedQuad();
@@ -106,6 +113,8 @@ The complete code of normalizing video frames' example is shown below
                 alert(ex.message || ex);
               }
             })
+
+            // Start video scanning.
             await normalizer.startScanning(true);
           } catch (ex) {
             let errMsg;
@@ -245,7 +254,6 @@ If the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.) are not in the 
 ```javascript
 // The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
 Dynamsoft.DDN.DocumentNormalizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.0/dist/";
-Dynamsoft.DCE.CameraEnhancer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.0.1/dist/";
 ```
 
 ### Interact with the SDK
@@ -268,7 +276,8 @@ try {
 A `CameraEnhancer` object is required for video processing.
 
 ```javascript
-let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+let cameraEnhancer = null;
+cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
 let options = {
     resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
 };
@@ -297,17 +306,11 @@ let scanSettings = await normalizer.getScanSettings();
 // (setting this value larger is a simple way to save battery power and reduce device heating).
 scanSettings.intervalTime = 100; // The default is 0.
 await normalizer.updateScanSettings(scanSettings);
-
-let runtimeSettings = await normalizer.getRuntimeSettings();
-await normalizer.setRuntimeSettings('lowcontrast');
-await normalizer.resetRuntimeSettings('default');
 ```
 
-As you can see from the above code snippets, there are two types of configurations:
+As you can see from the above code snippets, there are one type of configuration:
 
 * `get/updateScanSettings`: Configures the behavior of the normalizer which includes `duplicateForgetTime` and `intervalTime`, etc.
-
-* `get/set/resetRuntimeSettings`: Configures the normalizer engine with a built-in template or a template represented by a JSON string. This will override the previous RuntimeSettings. 
 
 #### Customize the UI
 
@@ -330,7 +333,6 @@ The built-in UI of the `DocumentNormalizer` object is defined in the file `dist/
   ```
 
   ```javascript
-  await cameraEnhancer.open();
   document.getElementById('camera-container').appendChild(cameraEnhancer.getUIElement());
   document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the close button
   ```
@@ -346,13 +348,13 @@ The built-in UI of the `DocumentNormalizer` object is defined in the file `dist/
     <script>
         (async () => {
             let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-            await cameraEnhancer.setUIElement(document.getElementById('div-ui-container'));
             let normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
             let options = {
-                resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
+              resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
             };
             await normalizer.setImageSource(cameraEnhancer, options);
-            await normalizer.startScanning(true);
+
+            await document.getElementById('div-ui-container').append(cameraEnhancer.getUIElement());
         })();
     </script>
     ```
@@ -389,28 +391,34 @@ The built-in UI of the `DocumentNormalizer` object is defined in the file `dist/
 The last step is to attach event handlers to the events `onQuadDetected` before calling `startScanning(true)` to starts the detection process. And attach click event listener to two buttons, one for selecting a quad, another for normalizing the quad.
 
 ```javascript
-normalizer.onQuadDetected = async (results, sourceImage) => {
-  for (let result of results) {
-      console.log("detected quad: ", result);
-  }
+// Triggered when the video frame is detecting quad
+normalizer.onQuadDetected = (results, sourceImage) => {
+    console.log(results);
 };
-await recognizer.startScanning(true);
 
-// Once this button been clicked, the video will be paused and the quad(s) drawn on the current frame can be selected and edited.
-document.querySelector('.edit-quad').addEventListener('click', () => {
-  if (!enhancer) return;
-  normalizer.confirmQuadForNormalization();
+// Pause the video and selecting, editing a quad when the button is clicked.
+document.getElementById('confirmQuadForNormalization').addEventListener("click", () => {
+    normalizer.confirmQuadForNormalization();
 })
 
-// Once this button been clicked, the selected quad from the current frame will be normalized and shown in the div named after normalized-result-canvas.
-document.querySelector('.normalize-with-the-quad').addEventListener('click', async () => {
-  if (!enhancer) return;
-  let res = await normalizer.normalizeWithConfirmedQuad();
-  console.log("normalized image result: ", res);
-  if (res) {
-      document.querySelector('.normalized-result-canvas').appendChild(res.image.toCanvas());
-  }
+// Normalize with the confirmed quad when the button is clicked.
+document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
+    try {
+        const res = await normalizer.normalizeWithConfirmedQuad();
+        if(res) {
+            const cvs = res.image.toCanvas();
+            if(document.body.clientWidth < 600) {
+            cvs.style.width = "80%";
+            }
+            document.querySelector("#normalized-result").appendChild(cvs);
+            console.log(res);
+        }
+    } catch(ex) {
+        alert(ex.message || ex);
+    }
 })
+// Start video scanning.
+await normalizer.startScanning(true);
 ```
 
 ## API Documentation

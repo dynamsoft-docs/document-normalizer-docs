@@ -59,6 +59,8 @@ console.log(await res.saveToFile("dynamsoft.png", true)); //true means download
                 alert(ex.message || ex);
             }
         })
+
+        // Start video scanning.
         await normalizer.startScanning(true);
     } catch (ex) {
         let errMsg;
