@@ -10,14 +10,14 @@ noTitleIndex: true
 
 # Document Normalizer for Your Website - User Guide
 
-Dynamsoft Document Normalizer JavaScript Edition (DDN-JS) is equipped with industry-leading algorithms for quadrilaterals detecting and normalizing. Using its well-designed API, you can turn your web page into a document normalizer with just a few lines of code.
+Dynamsoft Document Normalizer JavaScript Edition (DDN-JS) is equipped with industry-leading algorithms for quadrilaterals detection and images normalization. Using its well-designed API, you can turn your web page into a document normalizer with just a few lines of code.
 
 <!-- ![version](https://img.shields.io/npm/v/dynamsoft-document-normalizer.svg)
 ![downloads](https://img.shields.io/npm/dm/dynamsoft-document-normalizer.svg)
 ![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/dynamsoft-document-normalizer.svg)
 ![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/dynamsoft-document-normalizer.svg) -->
 
-Once the DDN-JS SDK gets integrated into your web page, your users can access a camera via the browser and normalize documents directly from its video input.
+Once the DDN-JS SDK gets integrated into your web page, your users can access a camera via the browser and normalize images directly from its video input.
 
 In this guide, you will learn step by step on how to integrate this SDK into your website.
 
@@ -35,7 +35,7 @@ In this guide, you will learn step by step on how to integrate this SDK into you
 
 ## Example Usage - Normalize Video Frames
 
-Let's start by testing an example of the SDK which demonstrates how to detect quadrilaterals from a video stream and normalize frame with one of those quadrilaterals. 
+Let's start by testing an example of the SDK which demonstrates how to detect quadrilaterals from a video stream and normalize a frame with one of those quadrilaterals. 
 
 * Basic Requirements
   * Internet connection  
@@ -44,7 +44,7 @@ Let's start by testing an example of the SDK which demonstrates how to detect qu
 
 ### Check the code
 
-The complete code of normalizing video frames' example is shown below
+The complete code of video frame normalization example is shown below:
 
 ```html
 <!DOCTYPE html>
@@ -57,8 +57,8 @@ The complete code of normalizing video frames' example is shown below
 
 <body>
     <h1 style="font-size: 1.5em;">Detecting Quads and normalize via Camera</h1>
-    <button id="confirmQuadForNormalization">Editor</button>
-    <button id="normalizeWithConfirmedQuad">End Editor</button>
+    <button id="confirmQuadForNormalization">Edit quadrilateral</button>
+    <button id="normalizeWithConfirmedQuad">Normalize</button>
     <div id="div-ui-container" style="margin-top: 10px;height: 500px;"></div>
     <div id="normalized-result"></div>
     <script>

@@ -12,6 +12,7 @@ description: Dynamsoft Document Normalizer - DeskewMode Enumeration
 | Language | Declaration |
 | -------- | ----------- |
 | C/C++ | `enum DeskewMode` |
+| JavaScript | `enum EnumDeskewMode` |
 
 ## Members
 
