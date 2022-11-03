@@ -142,7 +142,7 @@ The complete code of video frame normalization example is shown below:
 
 * `DocumentNormalizer.createInstance()`: this method creates a `DocumentNormalizer` object called `normalizer`.
 
-* `CameraEnhancer.createInstance()`: this method creates a `CameraEnhancer` object called `cameraEnhancer`, which is used to control the camera as well as the default user interface. Once `CameraEnhancer` is bound to `normalizer` via `setImageSource()`, it can send video frames from the camera to `normalizer` for detection and normalization in the video feed.
+* `CameraEnhancer.createInstance()`: this method creates a `CameraEnhancer` object called `cameraEnhancer`, which is used to control the camera as well as the default user interface. Once `CameraEnhancer` is bound to `normalizer` via `setImageSource()`, the `normalizer` will get video frames from the camera for detection and normalization.
 
 * `onQuadDetected`: this event is triggered every time the SDK finishes detecting a new quadrilateral. The `quadResults` object contains all the quadrilaterals that the SDK has found on this frame. In this example, we print the quad results to the browser console.
 
