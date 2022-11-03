@@ -281,7 +281,7 @@ let options = {
 await normalizer.setImageSource(cameraEnhancer, options);
 ```
 
-#### Change the camera settings if necessary
+#### Change the camera settings (optional)
 
 In some cases, a different camera might be required instead of the default one. Also, a different resolution might work better. To change the camera or the resolution, we use the `CameraEnhancer` object. Learn more [here](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/camera-control.html?ver=3.0.1&utm_source=guide&product=ddn&package=js).
 
@@ -292,7 +292,7 @@ await cameraEnhancer.selectCamera(allCameras[0]);
 await cameraEnhancer.setResolution(1280, 720);
 ```
 
-#### Set up the detection process
+#### Customize the DocumentNormalizer Settings (optional)
 
 Check out the following code:
 
@@ -305,25 +305,55 @@ scanSettings.intervalTime = 100; // The default is 0.
 await normalizer.updateScanSettings(scanSettings);
 ```
 
-As you can see from the above code snippets, there is one type of configuration:
+* `get/updateScanSettings`: Configures the scanning behavior of the normalizer which only includes `intervalTime` for now.
 
-* `get/updateScanSettings`: Configures the behavior of the normalizer which only includes `intervalTime` for now.
+#### Start the detection and normalization
 
-#### Customize the UI
+The last step is to attach event handlers to the events `onQuadDetected` before calling `startScanning(true)` to starts the detection process. And attach click event listener to two buttons, one for selecting a quad, another for normalizing the quad.
+
+```javascript
+// Triggered when the video frame is detecting quad
+normalizer.onQuadDetected = (results, sourceImage) => {
+    console.log(results);
+};
+
+// Pause the video and selecting, editing a quad when the button is clicked.
+document.getElementById('confirmQuadForNormalization').addEventListener("click", () => {
+    normalizer.confirmQuadForNormalization();
+})
+
+// Normalize with the confirmed quad when the button is clicked.
+document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
+    try {
+        const res = await normalizer.normalizeWithConfirmedQuad();
+        if(res) {
+            const cvs = res.image.toCanvas();
+            document.querySelector("#normalized-result").appendChild(cvs);
+            console.log(res);
+        }
+    } catch(ex) {
+        alert(ex.message || ex);
+    }
+})
+// Start video scanning.
+await normalizer.startScanning(true);
+```
+
+### Customize the UI (optional)
 
 The built-in UI of the `DocumentNormalizer` object is defined in the file `dist/ddn.ui.html` . There are a 4 ways to customize it:
 
-1. Modify the file `ddn.ui.html` directly.
+* Modify the file `ddn.ui.html` directly.
 
   This option is only possible when you host this file on your own web server instead of using a CDN. Note that this file is put in the **dist** directory of the **dynamsoft-camera-enhancer** package.
 
-2. Copy the file `ddn.ui.html` to your application, modify it and pass its URL to the API `setUIElement` to set it as the default UI.
+* Copy the file `ddn.ui.html` to your application, modify it and pass its URL to the API `setUIElement` to set it as the default UI.
 
   ```javascript
   await cameraEnhancer.setUIElement("THE-URL-TO-THE-FILE");
   ```
 
-3. Append the default UI element to your page, customize it before showing it.
+* Append the default UI element to your page, customize it before showing it.
 
   ```html
   <div id="camera-container"></div>
@@ -334,7 +364,7 @@ The built-in UI of the `DocumentNormalizer` object is defined in the file `dist/
   document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the close button
   ```
 
-4. Build the UI element into your own web page and specify it with the API `setUIElement(HTMLElement)`.
+* Build the UI element into your own web page and specify it with the API `setUIElement(HTMLElement)`.
 
   * Embed the video
 
@@ -382,38 +412,6 @@ The built-in UI of the `DocumentNormalizer` object is defined in the file `dist/
     ```
 
     > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the cloest supported resolution. As a result, the selected resolution may not be the actual resolution. In this case, add an option with the class name `dce-opt-gotResolution` (as shown above) and the SDK will then use it to show the **actual resolution**.
-
-#### Starts the detection and normalization
-
-The last step is to attach event handlers to the events `onQuadDetected` before calling `startScanning(true)` to starts the detection process. And attach click event listener to two buttons, one for selecting a quad, another for normalizing the quad.
-
-```javascript
-// Triggered when the video frame is detecting quad
-normalizer.onQuadDetected = (results, sourceImage) => {
-    console.log(results);
-};
-
-// Pause the video and selecting, editing a quad when the button is clicked.
-document.getElementById('confirmQuadForNormalization').addEventListener("click", () => {
-    normalizer.confirmQuadForNormalization();
-})
-
-// Normalize with the confirmed quad when the button is clicked.
-document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
-    try {
-        const res = await normalizer.normalizeWithConfirmedQuad();
-        if(res) {
-            const cvs = res.image.toCanvas();
-            document.querySelector("#normalized-result").appendChild(cvs);
-            console.log(res);
-        }
-    } catch(ex) {
-        alert(ex.message || ex);
-    }
-})
-// Start video scanning.
-await normalizer.startScanning(true);
-```
 
 ## API Documentation
 
