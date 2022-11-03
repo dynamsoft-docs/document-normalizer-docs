@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Document Normalizer JavaScript Interface - ImageSource
 description: This page shows the ImageSource interface of Dynamsoft Document Normalizer for JavaScript.
 keywords: ImageSource, javascript, interface
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: ImageSource
 ---

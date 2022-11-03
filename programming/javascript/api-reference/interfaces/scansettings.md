@@ -3,7 +3,8 @@ layout: default-layout
 title: Dynamsoft Document Normalizer JavaScript Interface - ScanSettings
 description: This page shows the ScanSettings interface of Dynamsoft Document Normalizer for JavaScript.
 keywords: ScanSettings, api reference, javascript, js
-needAutoGenerateSidebar: false
+needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 breadcrumbText: ScanSettings
 ---
