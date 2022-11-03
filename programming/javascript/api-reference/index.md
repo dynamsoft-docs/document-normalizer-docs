@@ -52,9 +52,6 @@ console.log(await res.saveToFile("dynamsoft.png", true)); //true means download
                 const res = await normalizer.normalizeWithConfirmedQuad();
                 if(res) {
                     const cvs = res.image.toCanvas();
-                    if(document.body.clientWidth < 600) {
-                    cvs.style.width = "80%";
-                    }
                     document.querySelector("#normalized-result").appendChild(cvs);
                     console.log(res);
                 }

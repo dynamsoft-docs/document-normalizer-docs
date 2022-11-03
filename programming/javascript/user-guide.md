@@ -8,16 +8,16 @@ needGenerateH4Content: true
 noTitleIndex: true
 ---
 
-# Dynamsoft Document Normalizer for Your Website
+# Document Normalizer for Your Website - User Guide
 
-Common normalizations include：Border crop, Deskew, Perspective correction, Colour mode, Brightness and Contrast.
+Dynamsoft Document Normalizer JavaScript Edition (DDN-JS) is equipped with industry-leading algorithms for quadrilaterals detecting and normalizing. Using its well-designed API, you can turn your web page into a document normalizer with just a few lines of code.
 
 <!-- ![version](https://img.shields.io/npm/v/dynamsoft-document-normalizer.svg)
 ![downloads](https://img.shields.io/npm/dm/dynamsoft-document-normalizer.svg)
 ![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/dynamsoft-document-normalizer.svg)
 ![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/dynamsoft-document-normalizer.svg) -->
 
-Once integrated, your users can open your website in a browser, access their cameras, and detect and normalize the images directly from the video input.
+Once the DDN-JS SDK gets integrated into your web page, your users can access a camera via the browser and normalize documents directly from its video input.
 
 In this guide, you will learn step by step on how to integrate this SDK into your website.
 
@@ -103,9 +103,6 @@ The complete code of normalizing video frames' example is shown below
                 const res = await normalizer.normalizeWithConfirmedQuad();
                 if(res) {
                   const cvs = res.image.toCanvas();
-                  if(document.body.clientWidth < 600) {
-                    cvs.style.width = "80%";
-                  }
                   document.querySelector("#normalized-result").appendChild(cvs);
                   console.log(res);
                 }
@@ -159,7 +156,7 @@ The complete code of normalizing video frames' example is shown below
 
 Create a text file with the name "Normalize-Video-Frames.html", fill it with the code above and save. After that, open the example page in a browser, allow the page to access your camera and the video will show up on the page. After that, you can point the camera at something with a quadrilateral border to detect it.
 
-> You can also just test it at [https://jsfiddle.net/DynamsoftTeam/kc35htxd/](https://jsfiddle.net/DynamsoftTeam/kc35htxd/)
+> You can also just test it at [https://jsfiddle.net/DynamsoftTeam/mxc5379o/](https://jsfiddle.net/DynamsoftTeam/mxc5379o/)
 
 Remember to open the browser console to check the resulting text.
 
@@ -218,7 +215,7 @@ To download the SDK:
 Depending on how you downloaded the SDK and where you put it, you can typically include it like this:
 
   ```html
-  <script src="/ddn-js-1.0.0/dist/ddn.js"></script>
+  <script src="/dynamsoft-document-normalizer-js-1.0.0/dist/ddn.js"></script>
   ```
 
 or
@@ -407,9 +404,6 @@ document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", 
         const res = await normalizer.normalizeWithConfirmedQuad();
         if(res) {
             const cvs = res.image.toCanvas();
-            if(document.body.clientWidth < 600) {
-            cvs.style.width = "80%";
-            }
             document.querySelector("#normalized-result").appendChild(cvs);
             console.log(res);
         }
@@ -428,7 +422,7 @@ You can check out the detailed documentation about the APIs of the SDK at
 
 ## System Requirements
 
-ddn requires the following features to work:
+DDN-JS SDK requires the following features to work:
 
 * Secure context (HTTPS deployment)
 
@@ -457,7 +451,7 @@ The following table is a list of supported browsers based on the above requireme
   :-: | :-:
   Chrome | v85+(v94+ on Android)
   Firefox | v99+
-  Safari | v15+
+  Safari | v15+ on iOS
 
 Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the SDK. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
 
