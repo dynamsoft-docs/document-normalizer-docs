@@ -11,14 +11,16 @@ breadcrumbText: Settings APIs
 
 # Settings
 
-## Scan Settings
+## API Index
+
+### Scan Settings
 
 | API Name | Description |
 |---|---|
 | [getScanSettings()](#getscansettings) | Returns the current [`ScanSettings`](./interfaces/scansettings.md). |
 | [updateScanSettings()](#updatescansettings) | Updates scan settings with the object passed in. |
 
-## Runtime Settings
+### Runtime Settings
 
 | API Name | Description |
 |---|---|

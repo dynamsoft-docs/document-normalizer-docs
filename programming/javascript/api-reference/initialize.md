@@ -13,13 +13,15 @@ breadcrumbText: Initialization APIs
 
 The following methods and properties help with the initialization of the library.
 
-## License Control
+## API Index
+
+### License Control
 
 | API Name | Description |
 |---|---|
 | [license](#license) | Uses an alphanumeric string to specify the license. |
 
-## Create and Destroy Instances
+### Create and Destroy Instances
 
 | API Name | Description |
 |---|---|
@@ -27,7 +29,7 @@ The following methods and properties help with the initialization of the library
 | [dispose()](#dispose) | Dispose the DocumentNormalizer instance. |
 | [disposed](#disposed) | Returns whether the instance has been disposed. |
 
-## Set Up the Environment
+### Set Up the Environment
 
 | API Name | Description |
 |---|---|

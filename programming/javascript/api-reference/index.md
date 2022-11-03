@@ -91,7 +91,7 @@ The APIs for this class include
 | [isWasmLoaded()](initialize.md#iswasmloaded) | Returns whether the engine has been loaded. |
 | [getVersion()](initialize.md#getversion) | Returns the version of the library. |
 
-### Video Detecting Methods
+## Video Detecting Methods
 
 | Method               | Description |
 |----------------------|-------------|
@@ -105,21 +105,21 @@ The APIs for this class include
 | [resumeScanning()](normalize.md#resumescanning) | Resumes continuous scanning. |
 | [stopScanning()](normalize.md#stopscanning) | Stops continuous scanning and closes the video stream. |
 
-### Detect and Normalize Methods
+## Detect and Normalize Methods
 
 | Method               | Description |
 |----------------------|-------------|
 | [detectQuad()](normalize.md#detectquad) | Detects quadrilaterals from an image. |
 | [normalize()](normalize.md#normalize) | Normalizes the source image based on the settings in options. |
 
-### Scan Settings Methods
+## Scan Settings Methods
 
 | Method               | Description |
 |----------------------|-------------|
 | [getScanSettings()](settings.md#getscansettings) | Returns the current [`ScanSettings`](./interfaces/scansettings.md). |
 | [updateScanSettings()](settings.md#updatescansettings) | Updates scan settings with the object passed in. |
 
-### Runtime Settings Methods
+## Runtime Settings Methods
 
 | Method               | Description |
 |----------------------|-------------|

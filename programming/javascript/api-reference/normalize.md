@@ -11,14 +11,16 @@ breadcrumbText: Detect and Normalize APIs
 
 # Detect and Normalize
 
-## Detect and Normalize a Still Images
+## API Index
+
+### Detect and Normalize a Still Images
 
 | API Name | Description |
 |---|---|
 | [detectQuad()](#detectquad) | Detects quadrilaterals from an image. |
 | [normalize()](#normalize) | Normalizes the source image based on the settings in options. |
 
-## Detect and Normalize Video Frame Images
+### Detect and Normalize Video Frame Images
 
 | API Name | Description |
 |---|---|
