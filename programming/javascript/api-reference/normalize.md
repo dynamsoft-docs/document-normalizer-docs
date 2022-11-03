@@ -33,7 +33,7 @@ breadcrumbText: Detect and Normalize APIs
 
 ## detectQuad
 
-Detects quadrilaterals from an image.
+Detects quadrilaterals from source data.
 
 ```js
 detectQuad: (source: Blob | DSImage | DCEFrame | HTMLImageElement | HTMLCanvasElement | string) => Promise<Array<DetectedQuadResult>>;
@@ -74,7 +74,7 @@ normalize: (source: Blob | DSImage | DCEFrame | HTMLImageElement | HTMLCanvasEle
 
 **Parameters**
 
-`source` : specifies the image to normalize. The supported image data type include `Blob` , `DSImage` , `DCEFrame` , `HTMLImageElement`, `HTMLCanvasElement` and a string which means an URL.
+`source` : specifies the image data to normalize. The supported image data type include `Blob` , `DSImage` , `DCEFrame` , `HTMLImageElement`, `HTMLCanvasElement` and a string which means an URL.
 
 `options` : specifies how normalization should be done. If "quad" is passed, it means that the image should be cropped according to the quad, and the resulting image should also be "deskewed" and "perspective corrected". More options to be added for the normalization in the future.
 
@@ -116,7 +116,7 @@ let options = {
     resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
 };
 await normalizer.setImageSource(enhancer, options);
-normalizer.onQuadDetected = async (results, sourceImage) => {
+normalizer.onQuadDetected = async (quadResults, sourceImage) => {
     //...
 }
 await normalizer.startScanning(true);
@@ -127,23 +127,45 @@ await normalizer.startScanning(true);
 This event is triggered when a new quadrilateral is detected.
 
 ```js
-onQuadDetected: (results: Array<DetectedQuadResult>, sourceImage: Blob | DSImage | DCEFrame | HTMLImageElement | HTMLCanvasElement | string) => void;
+onQuadDetected: (quadResults: Array<DetectedQuadResult>, sourceImage: Blob | DSImage | DCEFrame | HTMLImageElement | HTMLCanvasElement | string) => void;
 ```
 
 **Parameters**
 
-`results` : an array of [`DetectedQuadResult`](./interfaces/detected-quad-result.md) that hold the detected quad results.
+`quadResults` : an array of [`DetectedQuadResult`](./interfaces/detected-quad-result.md) that hold the detected quad results.
 
 `sourceImage` : specifies the image to detect. The supported image data type include `Blob` , `DSImage` , `DCEFrame` , `HTMLImageElement`, `HTMLCanvasElement` and a string which means an URL.
 
 **Code snippet**
 
 ```javascript
-normalizer.onQuadDetected = async (results, sourceImage) => {
-    for (let result of results) {
-        let normalizedImageResult = await normalizer.normalize(sourceImage, { quad: result.location });
+normalizer.onQuadDetected = async (quadResults, sourceImage) => {
+    for (let quadResult of quadResults) {
+        let normalizedImageResult = await normalizer.normalize(sourceImage, { quad: quadResult.location });
     }
 }
+```
+
+## setQuadResultFilter
+
+Sets a function to filter a detected quadrilateral.
+
+```js
+setQuadResultFilter: (filter: (quad: DetectedQuadResult) => boolean) => void; 
+```
+
+**Parameters**
+
+`filter` : a function which is used to filter a [`DetectedQuadResult`](./interfaces/detected-quad-result.md) and return a boolean to indicate whether it's wanted.
+
+**Code snippet**
+
+```javascript
+normalizer.setQuadResultFilter( (quadResult) => {
+    if (quadResult.confidenceAsDocumentBoundary > 70) {
+        return true;
+    }
+});
 ```
 
 ## confirmQuadForNormalization
@@ -204,9 +226,9 @@ let options = {
     resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
 };
 await normalizer.setImageSource(enhancer, options);
-normalizer.onQuadDetected = async (results, sourceImage) => {
-    for (let result of results) {
-        let normalizedImageResult = await normalizer.normalize(sourceImage, { quad: result.location });
+normalizer.onQuadDetected = async (quadResults, sourceImage) => {
+    for (let quadResult of quadResults) {
+        let normalizedImageResult = await normalizer.normalize(sourceImage, { quad: quadResult.location });
     }
 }
 normalizer.startScanning(true);

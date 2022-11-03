@@ -52,7 +52,7 @@ The complete code of video frame normalization example is shown below:
 
 <head>
     <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.1.0/dist/dce.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.0/dist/ddn.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.10/dist/ddn.js"></script>
 </head>
 
 <body>
@@ -72,7 +72,7 @@ The complete code of video frame normalization example is shown below:
         /**
          * You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=github&product=ddn&package=js to get your own trial license good for 30 days.
          * Note that if you downloaded this sample from Dynamsoft while logged in, the above license key may already be your own 30-day trial license.
-         * For more information, see https://www.dynamsoft.com/document-normalizer/programming/javascript/user-guide/?ver=1.0.0&utm_source=github#specify-the-license or contact support@dynamsoft.com.
+         * For more information, see https://www.dynamsoft.com/document-normalizer/programming/javascript/user-guide/?ver=1.0.10&utm_source=github#specify-the-license or contact support@dynamsoft.com.
          * LICENSE ALERT - THE END
         */
 
@@ -87,17 +87,17 @@ The complete code of video frame normalization example is shown below:
 
             await document.getElementById('div-ui-container').append(cameraEnhancer.getUIElement());
             
-            // Triggered when the video frame is detecting quad
-            normalizer.onQuadDetected = (results, sourceImage) => {
-              console.log(results);
+            // Triggered when a quadrilateral is detected from the video frame.
+            normalizer.onQuadDetected = (quadResults, sourceImage) => {
+              console.log(quadResults);
             };
 
-            // Pause the video and selecting, editing a quad when the button is clicked.
+            // Pause the video and edit a quadrilateral when the button is clicked.
             document.getElementById('confirmQuadForNormalization').addEventListener("click", () => {
               normalizer.confirmQuadForNormalization();
             })
 
-            // Normalize with the confirmed quad when the button is clicked.
+            // Normalize with the confirmed quadrilateral when the button is clicked.
             document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
               try {
                 const res = await normalizer.normalizeWithConfirmedQuad();
@@ -144,13 +144,13 @@ The complete code of video frame normalization example is shown below:
 
 * `CameraEnhancer.createInstance()`: this method creates a `CameraEnhancer` object called `cameraEnhancer`, which is used to control the camera as well as the default user interface. Once `CameraEnhancer` is bound to `normalizer` via `setImageSource()`, it can send video frames from the camera to `normalizer` for detection and normalization in the video feed.
 
-* `onQuadDetected`: this event is triggered every time the SDK finishes detecting a new quadrilateral. The `results` object contains all the quadrilaterals that the SDK has found on this frame. In this example, we print the results to the browser console.
+* `onQuadDetected`: this event is triggered every time the SDK finishes detecting a new quadrilateral. The `quadResults` object contains all the quadrilaterals that the SDK has found on this frame. In this example, we print the quad results to the browser console.
 
 * `startScanning(true)`: starts continuous video frame scanning. The return value is a `Promise` which resovles when the camera is opened, the video shows up on the page and the scanning begins (which means `cameraEnhancer` has started feeding `normalizer` with frames to process).
 
-* `confirmQuadForNormalization()`: pauses the video stream and enter "editor mode" where the quads in current frame are selectable and editable. Then you can select the quad that contains the content you want and edit it to a desirable shape to be normalized.
+* `confirmQuadForNormalization()`: pauses the video stream and enter "editor mode" where the quadrilaterals in current frame are selectable and editable. Then you can select the quadrilateral that contains the content you want and edit it to a desirable shape to be normalized.
 
-* `normalizeWithConfirmedQuad()`: normalizes the image whith one confirmed quadrilateral. This method requires that the user selects only one quad out of many or there is only one quad. Only return one normalized image.
+* `normalizeWithConfirmedQuad()`: normalizes the image whith one confirmed quadrilateral. This method requires that the user selects only one quadrilateral out of many or there is only one quadrilateral. Only return one normalized image.
 
 ### Test the code
 
@@ -185,13 +185,13 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 * jsDelivr
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.0/dist/ddn.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.10/dist/ddn.js"></script>
   ```
 
 * UNPKG  
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-document-normalizer@1.0.0/dist/ddn.js"></script>
+  <script src="https://unpkg.com/dynamsoft-document-normalizer@1.0.10/dist/ddn.js"></script>
   ```
 
 #### Host the SDK yourself
@@ -203,19 +203,19 @@ To download the SDK:
 * yarn
 
   ```cmd
-  yarn add dynamsoft-document-normalizer@1.0.0
+  yarn add dynamsoft-document-normalizer@1.0.10
   ```
 
 * npm
 
   ```cmd
-  npm install dynamsoft-document-normalizer@1.0.0
+  npm install dynamsoft-document-normalizer@1.0.10
   ```
 
 Depending on how you downloaded the SDK and where you put it, you can typically include it like this:
 
   ```html
-  <script src="/dynamsoft-document-normalizer-js-1.0.0/dist/ddn.js"></script>
+  <script src="/dynamsoft-document-normalizer-js-1.0.10/dist/ddn.js"></script>
   ```
 
 or
@@ -250,7 +250,7 @@ If the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.) are not in the 
 
 ```javascript
 // The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
-Dynamsoft.DDN.DocumentNormalizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.0/dist/";
+Dynamsoft.DDN.DocumentNormalizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.10/dist/";
 ```
 
 ### Interact with the SDK
@@ -309,20 +309,20 @@ await normalizer.updateScanSettings(scanSettings);
 
 #### Start the detection and normalization
 
-The last step is to attach event handlers to the events `onQuadDetected` before calling `startScanning(true)` to starts the detection process. And attach click event listener to two buttons, one for selecting a quad, another for normalizing the quad.
+The last step is to attach event handlers to the events `onQuadDetected` before calling `startScanning(true)` to starts the detection process. Add click events to two buttons, one to pause the video so you can select one quad and adjust it, the other to normalize the frame with the quad to get a normalized image and resume the video.
 
 ```javascript
-// Triggered when the video frame is detecting quad
-normalizer.onQuadDetected = (results, sourceImage) => {
-    console.log(results);
+// Triggered when a quadrilateral is detected from the video frame.
+normalizer.onQuadDetected = (quadResults, sourceImage) => {
+    console.log(quadResults);
 };
 
-// Pause the video and selecting, editing a quad when the button is clicked.
+// Pause the video and selecting, editing a quadrilateral when the button is clicked.
 document.getElementById('confirmQuadForNormalization').addEventListener("click", () => {
     normalizer.confirmQuadForNormalization();
 })
 
-// Normalize with the confirmed quad when the button is clicked.
+// Normalize with the confirmed quadrilateral when the button is clicked.
 document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
     try {
         const res = await normalizer.normalizeWithConfirmedQuad();
@@ -341,7 +341,7 @@ await normalizer.startScanning(true);
 
 ### Customize the UI (optional)
 
-The built-in UI of the `DocumentNormalizer` object is defined in the file `dist/ddn.ui.html` . There are a 4 ways to customize it:
+The built-in UI of the `DocumentNormalizer` object is defined in the file `dist/ddn.ui.html` . There are 4 ways to customize it:
 
 * Modify the file `ddn.ui.html` directly.
 
@@ -447,11 +447,11 @@ The following table is a list of supported browsers based on the above requireme
 
   Browser Name | Version
   :-: | :-:
-  Chrome | v85+(v94+ on Android)
-  Firefox | v99+
+  Chrome | v85+ on desktop, v94+ on Android
+  Firefox | v99+ on desktop and Android
   Safari | v15+ on iOS
 
-Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the SDK. Browser compatibility ultimately depends on whether the browser on that particular operating system supports the features listed above.
+Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the SDK. 
 
 ## Release Notes
 

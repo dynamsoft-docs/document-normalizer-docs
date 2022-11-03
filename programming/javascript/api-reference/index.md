@@ -36,17 +36,17 @@ console.log(await res.saveToFile("dynamsoft.png", true)); //true means download
 
         await document.getElementById('div-ui-container').append(cameraEnhancer.getUIElement());
     
-        // Triggered when the video frame is detecting quad
-        normalizer.onQuadDetected = (results, sourceImage) => {
-            console.log(results);
+        // Triggered when a quadrilateral is detected from the video frame.
+        normalizer.onQuadDetected = (quadResults, sourceImage) => {
+            console.log(quadResults);
         };
 
-        // Pause the video and selecting, editing a quad when the button is clicked.
+        // Pause the video and edit a quadrilateral when the button is clicked.
         document.getElementById('confirmQuadForNormalization').addEventListener("click", () => {
             normalizer.confirmQuadForNormalization();
         })
 
-        // Normalize with the confirmed quad when the button is clicked.
+        // Normalize with the confirmed quadrilateral when the button is clicked.
         document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
             try {
                 const res = await normalizer.normalizeWithConfirmedQuad();
@@ -96,6 +96,7 @@ The APIs for this class include
 |----------------------|-------------|
 | [setImageSource()](normalize.md#setimagesource) | Sets an image source for continous scanning. |
 | [onQuadDetected](normalize.md#onquaddetected) | This event is triggered when a new quadrilateral is detected. |
+| [setQuadResultFilter()](normalize.md#setquadresultfilter) | Sets a function to filter a detected quadrilateral. |
 | [confirmQuadForNormalization()](normalize.md#confirmquadfornormalization) | Confirms which quadrilateral will be referred for later normalization. |
 | [normalizeWithConfirmedQuad()](normalize.md#normalizewithconfirmedquad) | Normalizes the image whith a selected quadrilateral. |
 | [startScanning()](normalize.md#startscanning) | Opens the camera and starts continuous scanning of incoming images. |
