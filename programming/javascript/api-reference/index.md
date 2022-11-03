@@ -49,11 +49,12 @@ console.log(await res.saveToFile("dynamsoft.png", true)); //true means download
         // Normalize with the confirmed quadrilateral when the button is clicked.
         document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
             try {
-                const res = await normalizer.normalizeWithConfirmedQuad();
-                if(res) {
-                    const cvs = res.image.toCanvas();
+                const normalizedImageResult = await normalizer.normalizeWithConfirmedQuad();
+                if(normalizedImageResult) {
+                    // Show the normalized image in a Canvas
+                    const cvs = normalizedImageResult.image.toCanvas();
                     document.querySelector("#normalized-result").appendChild(cvs);
-                    console.log(res);
+                    console.log(normalizedImageResult);
                 }
             } catch(ex) {
                 alert(ex.message || ex);

@@ -10,16 +10,16 @@ noTitleIndex: true
 
 # Document Normalizer for Your Website - User Guide
 
-Dynamsoft Document Normalizer JavaScript Edition (DDN-JS) is equipped with industry-leading algorithms for quadrilaterals detection and images normalization. Using its well-designed API, you can turn your web page into a document normalizer with just a few lines of code.
+Dynamsoft Document Normalizer JavaScript Edition (DDN-JS) is equipped with industry-leading algorithms for quadrilaterals detection and images normalization. Using its well-designed API, you can turn your web page into a document normalizer with several lines of code.
 
-<!-- ![version](https://img.shields.io/npm/v/dynamsoft-document-normalizer.svg)
+![version](https://img.shields.io/npm/v/dynamsoft-document-normalizer.svg)
 ![downloads](https://img.shields.io/npm/dm/dynamsoft-document-normalizer.svg)
 ![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/dynamsoft-document-normalizer.svg)
-![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/dynamsoft-document-normalizer.svg) -->
+![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/dynamsoft-document-normalizer.svg)
 
-Once the DDN-JS SDK gets integrated into your web page, your users can access a camera via the browser and normalize images directly from its video input.
+Once the DDN-JS SDK gets integrated into your web page, your users can access a camera via the browser and normalize images from its video input or normalize images that uploaded from local.
 
-In this guide, you will learn step by step on how to integrate this SDK into your website.
+In this guide, you will learn how to integrate this SDK into your website step by step.
 
 <span style="font-size:20px">Table of Contents</span>
 
@@ -44,7 +44,7 @@ Let's start by testing an example of the SDK which demonstrates how to detect qu
 
 ### Check the code
 
-The complete code of video frame normalization example is shown below:
+The complete code of video frames normalization example is shown below:
 
 ```html
 <!DOCTYPE html>
@@ -56,7 +56,7 @@ The complete code of video frame normalization example is shown below:
 </head>
 
 <body>
-    <h1 style="font-size: 1.5em;">Detecting Quads and normalize via Camera</h1>
+    <h1>Detecting Quads and normalize via Camera</h1>
     <button id="confirmQuadForNormalization">Edit quadrilateral</button>
     <button id="normalizeWithConfirmedQuad">Normalize</button>
     <div id="div-ui-container" style="margin-top: 10px;height: 500px;"></div>
@@ -100,11 +100,12 @@ The complete code of video frame normalization example is shown below:
             // Normalize with the confirmed quadrilateral when the button is clicked.
             document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
               try {
-                const res = await normalizer.normalizeWithConfirmedQuad();
-                if(res) {
-                  const cvs = res.image.toCanvas();
+                const normalizedImageResult = await normalizer.normalizeWithConfirmedQuad();
+                if(normalizedImageResult) {
+                  // Show the normalized image in a Canvas
+                  const cvs = normalizedImageResult.image.toCanvas();
                   document.querySelector("#normalized-result").appendChild(cvs);
-                  console.log(res);
+                  console.log(normalizedImageResult);
                 }
               } catch(ex) {
                 alert(ex.message || ex);
@@ -146,17 +147,17 @@ The complete code of video frame normalization example is shown below:
 
 * `onQuadDetected`: this event is triggered every time the SDK finishes detecting a new quadrilateral. The `quadResults` object contains all the quadrilaterals that the SDK has found on this frame. In this example, we print the quad results to the browser console.
 
-* `startScanning(true)`: starts continuous video frame scanning. The return value is a `Promise` which resovles when the camera is opened, the video shows up on the page and the scanning begins (which means `cameraEnhancer` has started feeding `normalizer` with frames to process).
+* `startScanning(true)`: starts continuous video frame scanning. It returns a `Promise` which resovles when the camera is opened, the video shows up on the page and begins to scan (which means the `normalizer` starts to get frames to detect).
 
-* `confirmQuadForNormalization()`: pauses the video stream and enter "editor mode" where the quadrilaterals in current frame are selectable and editable. Then you can select the quadrilateral that contains the content you want and edit it to a desirable shape to be normalized.
+* `confirmQuadForNormalization()`: pauses the video stream and enter "editor mode" where the quadrilaterals in current frame are selectable and editable. Then you can select one quadrilateral that contains the content you are interested in and edit it to a desirable shape to be normalized.
 
-* `normalizeWithConfirmedQuad()`: normalizes the image whith one confirmed quadrilateral. This method requires that the user selects only one quadrilateral out of many or there is only one quadrilateral. Only return one normalized image.
+* `normalizeWithConfirmedQuad()`: normalizes the image with the confirmed quadrilateral.
 
 ### Test the code
 
 Create a text file with the name "Normalize-Video-Frames.html", fill it with the code above and save. After that, open the example page in a browser, allow the page to access your camera and the video will show up on the page. After that, you can point the camera at something with a quadrilateral border to detect it.
 
-> You can also just test it at [https://jsfiddle.net/DynamsoftTeam/mxc5379o/](https://jsfiddle.net/DynamsoftTeam/mxc5379o/)
+> You can also just test it at [https://jsfiddle.net/DynamsoftTeam/tgqskxa8/](https://jsfiddle.net/DynamsoftTeam/tgqskxa8/)
 
 Remember to open the browser console to check the resulting text.
 
@@ -167,10 +168,6 @@ Remember to open the browser console to check the resulting text.
 * The license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this sample is an online license and requires network connection to work.
 
 If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
-
-<!-- ### Check out the official sample for MRZ reading
-
-You can also try the official sample for MRZ reading ([test in Github](https://dynamsoft.github.io/document-normalizer-javascript-samples/use-case/mrz-read-and-parse/) or [check the code](https://github.com/Dynamsoft/document-normalizer-javascript-samples/tree/main/use-case/mrz-read-and-parse)). This sample also demonstrates how to parse the MRZ text into meaningful fields. -->
 
 ## Building your own page
 
@@ -325,11 +322,12 @@ document.getElementById('confirmQuadForNormalization').addEventListener("click",
 // Normalize with the confirmed quadrilateral when the button is clicked.
 document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
     try {
-        const res = await normalizer.normalizeWithConfirmedQuad();
-        if(res) {
-            const cvs = res.image.toCanvas();
-            document.querySelector("#normalized-result").appendChild(cvs);
-            console.log(res);
+        const normalizedImageResult = await normalizer.normalizeWithConfirmedQuad();
+        if(normalizedImageResult) {
+          // Show the normalized image in a Canvas
+          const cvs = normalizedImageResult.image.toCanvas();
+          document.querySelector("#normalized-result").appendChild(cvs);
+          console.log(normalizedImageResult);
         }
     } catch(ex) {
         alert(ex.message || ex);
