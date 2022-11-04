@@ -10,41 +10,54 @@ noTitleIndex: true
 
 # Document Normalizer for Your Website - User Guide
 
-Dynamsoft Document Normalizer JavaScript Edition (DDN-JS) is equipped with industry-leading algorithms for quadrilaterals detection and images normalization. Using its well-designed API, you can turn your web page into a document normalizer with several lines of code.
+Dynamsoft Document Normalizer JavaScript Edition (DDN-JS) is equipped with industry-leading quadrilateral detection and image normalization algorithms. Using its well-designed API, you can turn your web page into a document normalizer with a few lines of code.
 
 ![version](https://img.shields.io/npm/v/dynamsoft-document-normalizer.svg)
 ![downloads](https://img.shields.io/npm/dm/dynamsoft-document-normalizer.svg)
 ![jsdelivr](https://img.shields.io/jsdelivr/npm/hm/dynamsoft-document-normalizer.svg)
 ![vulnerabilities](https://img.shields.io/snyk/vulnerabilities/npm/dynamsoft-document-normalizer.svg)
 
-Once the DDN-JS SDK gets integrated into your web page, your users can access a camera via the browser and normalize images from its video input or normalize images that uploaded from local.
+Once the DDN-JS SDK is integrated into your web pages, your users can access a connected camera through their browser, point it at the document and detect the document's boundaries in real-time. Once a detection looks promising, users can enter edit mode to fine-tune the boundaries before using them to obtain a normalized image of the document. The normalization process now includes cropping, perspective correction, brightness adjustment, contrast adjustment, and color mode conversion.
 
 In this guide, you will learn how to integrate this SDK into your website step by step.
 
 <span style="font-size:20px">Table of Contents</span>
 
-* [Example Usage - Normalize Video Frames](#example-usage---normalize-video-frames)
-* [Building your own page](#building-your-own-page)
-  * [Include the SDK](#include-the-sdk)
-  * [Configure the SDK](#configure-the-sdk)
-  * [Interact with the SDK](#interact-with-the-sdk)
-* [API Documentation](#api-documentation)
-* [System Requirements](#system-requirements)
-* [Release Notes](#release-notes)
-* [Next Step](#next-steps)
+- [Document Normalizer for Your Website - User Guide](#document-normalizer-for-your-website---user-guide)
+  - [Example Usage](#example-usage)
+    - [Check the code](#check-the-code)
+      - [About the code](#about-the-code)
+    - [Test the code](#test-the-code)
+  - [Building your own page](#building-your-own-page)
+    - [Include the SDK](#include-the-sdk)
+      - [Use a CDN](#use-a-cdn)
+      - [Host the SDK yourself](#host-the-sdk-yourself)
+    - [Configure the SDK](#configure-the-sdk)
+      - [Specify the license](#specify-the-license)
+      - [Specify the location of the "engine" files](#specify-the-location-of-the-engine-files)
+    - [Interact with the SDK](#interact-with-the-sdk)
+      - [Create a `DocumentNormalizer` object](#create-a-documentnormalizer-object)
+      - [Create a `CameraEnhancer` object and bind it to the `DocumentNormalizer` object](#create-a-cameraenhancer-object-and-bind-it-to-the-documentnormalizer-object)
+      - [Change the camera settings (optional)](#change-the-camera-settings-optional)
+      - [Customize the DocumentNormalizer Settings (optional)](#customize-the-documentnormalizer-settings-optional)
+      - [Start the detection and normalization](#start-the-detection-and-normalization)
+    - [Customize the UI (optional)](#customize-the-ui-optional)
+  - [API Documentation](#api-documentation)
+  - [System Requirements](#system-requirements)
+  - [Release Notes](#release-notes)
+  - [Next Steps](#next-steps)
 
-## Example Usage - Normalize Video Frames
+## Example Usage
 
-Let's start by testing an example of the SDK which demonstrates how to detect quadrilaterals from a video stream and normalize a frame with one of those quadrilaterals. 
+Let's start by testing an example of the SDK which demonstrates how to detect quadrilaterals (document boundaries) from a live video stream and use a selected quadrilateral to obtain a normalized image of the document. To run the example, the following are required
 
-* Basic Requirements
-  * Internet connection  
-  * [A supported browser](#system-requirements)
-  * An accessible Camera
+1. Internet connection
+2. [A supported browser](#system-requirements)
+3. An accessible Camera
 
 ### Check the code
 
-The complete code of video frames normalization example is shown below:
+The complete code of the example is shown below:
 
 ```html
 <!DOCTYPE html>
