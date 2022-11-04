@@ -69,9 +69,9 @@ The complete code of the example is shown below:
 </head>
 
 <body>
-    <h1>Detecting Quads and normalize via Camera</h1>
-    <button id="confirmQuadForNormalization">Edit quadrilateral</button>
-    <button id="normalizeWithConfirmedQuad">Normalize</button>
+    <h1>Capture A Document</h1>
+    <button id="confirmQuadForNormalization">Edit Boundaries</button>
+    <button id="normalizeWithConfirmedQuad">Normalize and Capture</button>
     <div id="div-ui-container" style="margin-top: 10px;height: 500px;"></div>
     <div id="normalized-result"></div>
     <script>
@@ -84,7 +84,7 @@ The complete code of the example is shown below:
         Dynamsoft.DDN.DocumentNormalizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
         /**
          * You can visit https://www.dynamsoft.com/customer/license/trialLicense?utm_source=github&product=ddn&package=js to get your own trial license good for 30 days.
-         * For more information, see https://www.dynamsoft.com/document-normalizer/programming/javascript/user-guide/?ver=1.0.10&utm_source=github#specify-the-license or contact support@dynamsoft.com.
+         * For more information, see https://www.dynamsoft.com/document-normalizer/docs/programming/javascript/user-guide.html?ver=1.0.10&utm_source=github#specify-the-license or contact support@dynamsoft.com.
          * LICENSE ALERT - THE END
         */
 
@@ -99,17 +99,17 @@ The complete code of the example is shown below:
 
             await document.getElementById('div-ui-container').append(cameraEnhancer.getUIElement());
             
-            // Triggered when a quadrilateral is detected from the video frame.
+            // Triggered when a quadrilateral is detected from a video frame.
             normalizer.onQuadDetected = (quadResults, sourceImage) => {
               console.log(quadResults);
             };
 
-            // Pause the video and edit a quadrilateral when the button is clicked.
+            // Click the button to pause the video and edit a quadrilateral.
             document.getElementById('confirmQuadForNormalization').addEventListener("click", () => {
               normalizer.confirmQuadForNormalization();
-            })
+            });
 
-            // Normalize with the confirmed quadrilateral when the button is clicked.
+            // Click the button to normalize with the selected/adjusted quadrilateral.
             document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
               try {
                 const normalizedImageResult = await normalizer.normalizeWithConfirmedQuad();
@@ -122,9 +122,9 @@ The complete code of the example is shown below:
               } catch(ex) {
                 alert(ex.message || ex);
               }
-            })
+            });
 
-            // Start video scanning.
+            // Start scanning document boundaries.
             await normalizer.startScanning(true);
           } catch (ex) {
             let errMsg;
@@ -144,7 +144,7 @@ The complete code of the example is shown below:
 ```
 
 <p align="center" style="text-align:center; white-space: normal; ">
-  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/kc35htxd/" title="Run via JSFiddle">
+  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/3ojhuyz6/" title="Run via JSFiddle">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" width="20" height="20" style="width:20px;height:20px;">
   </a>
 </p>
@@ -153,69 +153,71 @@ The complete code of the example is shown below:
 
 #### About the code
 
-* `DocumentNormalizer.createInstance()`: this method creates a `DocumentNormalizer` object called `normalizer`.
+- `DocumentNormalizer.createInstance()`: this method creates a `DocumentNormalizer` object called `normalizer`.
 
-* `CameraEnhancer.createInstance()`: this method creates a `CameraEnhancer` object called `cameraEnhancer`, which is used to control the camera as well as the default user interface. Once `CameraEnhancer` is bound to `normalizer` via `setImageSource()`, the `normalizer` will get video frames from the camera for detection and normalization.
+- `CameraEnhancer.createInstance()`: this method creates a `CameraEnhancer` object called `cameraEnhancer`, which is used to control the camera as well as the default user interface. Once `CameraEnhancer` is bound to `normalizer` via `setImageSource()`, the `normalizer` will get video frames from the camera for detection and normalization.
 
-* `onQuadDetected`: this event is triggered every time the SDK finishes detecting a new quadrilateral. The `quadResults` object contains all the quadrilaterals that the SDK has found on this frame. In this example, we print the quad results to the browser console.
+- `onQuadDetected`: this event is triggered every time the SDK finds at least one quadrilateral after scanning a video frame. The `quadResults` object contains all the found quadrilaterals. In this example, the results are logged in the browser console.
 
-* `startScanning(true)`: starts continuous video frame scanning. It returns a `Promise` which resovles when the camera is opened, the video shows up on the page and begins to scan (which means the `normalizer` starts to get frames to detect).
+- `startScanning(true)`: starts continuous video frame scanning. It returns a `Promise` which resovles when the camera is opened, the video shows up on the page and begins to scan (which means the `normalizer` starts to get frames for detection).
 
-* `confirmQuadForNormalization()`: pauses the video stream and enter "editor mode" where the quadrilaterals in current frame are selectable and editable. Then you can select one quadrilateral that contains the content you are interested in and edit it to a desirable shape to be normalized.
+- `confirmQuadForNormalization()`: pauses the video stream and enter "editor mode" where the quadrilaterals in current frame are selectable and editable. You can select one quadrilateral that surrounds the target document and edit it to be as accurate as possible.
 
-* `normalizeWithConfirmedQuad()`: normalizes the image with the one quadrilateral which is confirmed after `confirmQuadForNormalization()`.
+- `normalizeWithConfirmedQuad()`: normalizes the image with the quadrilateral to obtain an image of the document as "normalizedImageResult".
 
 ### Test the code
 
 Create a text file with the name "Normalize-Video-Frames.html", fill it with the code above and save. After that, open the example page in a browser, allow the page to access your camera and the video will show up on the page. After that, you can point the camera at something with a quadrilateral border to detect it.
 
-> You can also just test it at [https://jsfiddle.net/DynamsoftTeam/e3g2o9bd/](https://jsfiddle.net/DynamsoftTeam/e3g2o9bd/)
+> You can also just test it at [https://jsfiddle.net/DynamsoftTeam/3ojhuyz6/](https://jsfiddle.net/DynamsoftTeam/3ojhuyz6/)
 
-Remember to open the browser console to check the resulting text.
+Please note:
 
-*Note*:
+- Although the page should work properly when opened directly as a file ("file:///"), it's recommended that you deploy it to a web server and access it via HTTPS.
+- On first use, you need to wait a few seconds for the SDK to initialize.
+- The license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this sample is an online license and requires network connection to work.
 
-* Although the page should work properly when opened directly as a file ("file:///"), it's recommended that you deploy it to a web server before accessing it. Also, most browsers require a secure connection (HTTPS) to access the cameras, so deploying the page to a HTTPS website is the best choice.
-* On first use, you need to wait a few seconds for the SDK to initialize and download the necessary model file.
-* The license "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" used in this sample is an online license and requires network connection to work.
-
-If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide).
+If the test doesn't go as expected, you can [contact us](https://www.dynamsoft.com/company/contact/?utm_source=guide&product=ddn&package=js).
 
 ## Building your own page
 
-In this section, we'll break down and show all the steps required to build a web page that normalizes quadrilaterals from video stream.
+In this section, we'll break down and show all the steps required to build a web page for document capturing with DDN-JS.
 
 ### Include the SDK
 
 #### Use a CDN
 
-The simplest way to include the SDK is to use either the [jsDelivr](https://jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN. The "hello world" example above uses **jsDelivr**. Since the recognition is mostly on a video input, we should also include the supporting SDK Dynamsoft Camera Enhancer.
+The simplest way to include the SDK is to use either the [jsDelivr](https://jsdelivr.com/) or [UNPKG](https://unpkg.com/) CDN. The "hello world" example above uses **jsDelivr**. We should also include the SDK Dynamsoft Camera Enhancer which provides camera support.
 
-* jsDelivr
+- jsDeliv
 
   ```html
   <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.10/dist/ddn.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.1.0/dist/dce.js"></script>
   ```
 
-* UNPKG  
+- UNPKG
 
   ```html
   <script src="https://unpkg.com/dynamsoft-document-normalizer@1.0.10/dist/ddn.js"></script>
+  <script src="https://unpkg.com/dynamsoft-camera-enhancer@3.1.0/dist/dce.js"></script>
   ```
 
 #### Host the SDK yourself
 
 Besides using the CDN, you can also download the SDK and host its files on your own website / server before including it in your application.
 
+> Also read [how to do the same for Dynamsoft Camera Enhancer](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/user-guide/index.html?ver=latest#host-the-sdk-yourself).
+
 To download the SDK:
 
-* yarn
+- yarn
 
   ```cmd
   yarn add dynamsoft-document-normalizer@1.0.10
   ```
 
-* npm
+- npm
 
   ```cmd
   npm install dynamsoft-document-normalizer@1.0.10
@@ -255,7 +257,7 @@ To test the SDK, you can request a 30-day trial license via the [customer portal
 
 #### Specify the location of the "engine" files
 
-If the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.) are not in the same location with the main SDK file (ddn.js), you can use the API `engineResourcePath` to specify the engine path, for example:
+If the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.) are NOT in the same location with the main SDK file (ddn.js), you can use the API `engineResourcePath` to specify the engine path, for example:
 
 ```javascript
 // The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
@@ -279,7 +281,7 @@ try {
 
 #### Create a `CameraEnhancer` object and bind it to the `DocumentNormalizer` object
 
-A `CameraEnhancer` object is required for video processing.
+The `CameraEnhancer` object is necessary to access the camera to display the video stream and draw the found quads.
 
 ```javascript
 let cameraEnhancer = null;
@@ -292,7 +294,7 @@ await normalizer.setImageSource(cameraEnhancer, options);
 
 #### Change the camera settings (optional)
 
-In some cases, a different camera might be required instead of the default one. Also, a different resolution might work better. To change the camera or the resolution, we use the `CameraEnhancer` object. Learn more [here](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/camera-control.html?ver=3.0.1&utm_source=guide&product=ddn&package=js).
+In some cases, a different camera might be required instead of the default one. Also, a different resolution might work better. To change the camera or the resolution, we use the `CameraEnhancer` object. Learn more [here](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/camera-control.html?ver=3.1.0&utm_source=guide&product=ddn&package=js).
 
 ```javascript
 // The following lines set which camera and what resolution to use.
@@ -319,7 +321,7 @@ runtimeSettings.ImageParameterArray[0].BinarizationModes[0].ThresholdCompensatio
 runtimeSettings.ImageParameterArray[0].ScaleDownThreshold = 500;
 await normalizer.setRuntimeSettings(runtimeSettings);
 
-// or use a built-in runtime setting template "lowcontrast"
+// or uses a built-in runtime setting template "lowcontrast"
 await normalizer.setRuntimeSettings("lowcontrast");
 
 // Resets the runtime setting to default
@@ -328,39 +330,41 @@ await normalizer.resetRuntimeSettings();
 
 As you can see from the above code snippets, there are two types of configurations:
 
-* `get/updateScanSettings`: Configures the scanning behavior of the normalizer which only includes `intervalTime` for now.
+- `get/updateScanSettings`: Configures the scanning behavior of the normalizer which only includes `intervalTime` for now.
 
-* `get/set/resetRuntimeSettings`: Configures the normalizer engine with a built-in template or a template represented by a JSON object. This will override the previous RuntimeSettings.
+- `get/set/resetRuntimeSettings`: Configures the normalizer engine with a built-in template or a template represented by a JSON object. This will override the previous RuntimeSettings.
 
 #### Start the detection and normalization
 
-The last step is to attach event handlers to the events `onQuadDetected` before calling `startScanning(true)` to starts the detection process. Add click events to two buttons, one to pause the video so you can select one quad and adjust it, the other to normalize the frame with the quad to get a normalized image and resume the video.
+After attaching an event handler to the event `onQuadDetected`. We can call `startScanning(true)` to start the detection process.
+
+For user interaction, we should also add buttons for fucntions that invoke `confirmQuadForNormalization()` and `normalizeWithConfirmedQuad()`.
 
 ```javascript
-// Triggered when a quadrilateral is detected from the video frame.
+// Triggered when a quadrilateral is detected from a video frame.
 normalizer.onQuadDetected = (quadResults, sourceImage) => {
-    console.log(quadResults);
+  console.log(quadResults);
 };
 
-// Pause the video and selecting, editing a quadrilateral when the button is clicked.
+// Click the button to pause the video and edit a quadrilateral.
 document.getElementById('confirmQuadForNormalization').addEventListener("click", () => {
-    normalizer.confirmQuadForNormalization();
-})
+  normalizer.confirmQuadForNormalization();
+});
 
-// Normalize with the confirmed quadrilateral when the button is clicked.
+// Click the button to normalize with the selected/adjusted quadrilateral.
 document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
-    try {
-        const normalizedImageResult = await normalizer.normalizeWithConfirmedQuad();
-        if(normalizedImageResult) {
-          // Show the normalized image in a Canvas
-          const cvs = normalizedImageResult.image.toCanvas();
-          document.querySelector("#normalized-result").appendChild(cvs);
-          console.log(normalizedImageResult);
-        }
-    } catch(ex) {
-        alert(ex.message || ex);
+  try {
+    const normalizedImageResult = await normalizer.normalizeWithConfirmedQuad();
+    if(normalizedImageResult) {
+      // Show the normalized image in a Canvas
+      const cvs = normalizedImageResult.image.toCanvas();
+      document.querySelector("#normalized-result").appendChild(cvs);
+      console.log(normalizedImageResult);
     }
-})
+  } catch(ex) {
+    alert(ex.message || ex);
+  }
+});
 // Start video scanning.
 await normalizer.startScanning(true);
 ```
@@ -369,17 +373,17 @@ await normalizer.startScanning(true);
 
 The built-in UI of the `DocumentNormalizer` object is defined in the file `dist/ddn.ui.html` . There are 4 ways to customize it:
 
-* Modify the file `ddn.ui.html` directly.
+- Modify the file `ddn.ui.html` directly.
 
   This option is only possible when you host this file on your own web server instead of using a CDN. Note that this file is put in the **dist** directory of the **dynamsoft-camera-enhancer** package.
 
-* Copy the file `ddn.ui.html` to your application, modify it and pass its URL to the API `setUIElement` to set it as the default UI.
+- Copy the file `ddn.ui.html` to your application, modify it and pass its URL to the API `setUIElement` to set it as the default UI.
 
   ```javascript
   await cameraEnhancer.setUIElement("THE-URL-TO-THE-FILE");
   ```
 
-* Append the default UI element to your page, customize it before showing it.
+- Append the default UI element to your page, customize it before showing it.
 
   ```html
   <div id="camera-container"></div>
@@ -390,9 +394,9 @@ The built-in UI of the `DocumentNormalizer` object is defined in the file `dist/
   document.getElementsByClassName('dce-btn-close')[0].hidden = true; // Hide the close button
   ```
 
-* Build the UI element into your own web page and specify it with the API `setUIElement(HTMLElement)`.
+- Build the UI element into your own web page and specify it with the API `setUIElement(HTMLElement)`.
 
-  * Embed the video
+  - Embed the video
 
     ```html
     <div id="div-ui-container" style="width:100%;height:100%;">
@@ -412,9 +416,9 @@ The built-in UI of the `DocumentNormalizer` object is defined in the file `dist/
     </script>
     ```
 
-    > The video element will be created and appended to the DIV element with the class `dce-video-container` , make sure the class name is the correct. Also note that the CSS property `position` of the DIV element must be either `relative` , `absolute` , `fixed` , or `sticky` .
+    > The video element will be created and appended to the DIV element with the class `dce-video-container` , make sure the class name is the same. Also note that the CSS property `position` of the DIV element must be either `relative` , `absolute` , `fixed` , or `sticky` .
 
-  * Add the camera list and resolution list
+  - Add the camera list and resolution list
 
     If the class names for these lists match the default ones, `dce-sel-camera` and `dce-sel-resolution` , the SDK will automatically populate the lists and handle the camera/resolution switching.
 
@@ -427,7 +431,7 @@ The built-in UI of the `DocumentNormalizer` object is defined in the file `dist/
     </div>
     ```
 
-    > By default, only 3 hard-coded resolutions (3840 x 2160, 1920 x 1080, 1280 x 720), are populated as options. You can show a customized set of options by hardcoding them.
+    > By default, only 3 hard-coded resolutions (1920 x 1080, 1280 x 720, 640 x 480), are populated as options. You can show a customized set of options by hardcoding them.
 
     ```html
     <select class="dce-sel-resolution">
@@ -437,7 +441,7 @@ The built-in UI of the `DocumentNormalizer` object is defined in the file `dist/
     </select>
     ```
 
-    > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the cloest supported resolution. As a result, the selected resolution may not be the actual resolution. In this case, add an option with the class name `dce-opt-gotResolution` (as shown above) and the SDK will then use it to show the **actual resolution**.
+    > Generally, you need to provide a resolution that the camera supports. However, in case a camera does not support the specified resolution, it usually uses the closest supported resolution. As a result, the selected resolution may not be the actual resolution. In this case, add an option with the class name `dce-opt-gotResolution` (as shown above) and the SDK will then use it to show the **actual resolution**.
 
 ## API Documentation
 
@@ -448,24 +452,24 @@ You can check out the detailed documentation about the APIs of the SDK at
 
 DDN-JS SDK requires the following features to work:
 
-* Secure context (HTTPS deployment)
+- Secure context (HTTPS deployment)
 
   When deploying your application / website for production, make sure to serve it via a secure HTTPS connection. This is required for two reasons
   
-  * Access to the camera video stream is only granted in a security context. Most browsers impose this restriction.
+  - Access to the camera video stream is only granted in a security context. Most browsers impose this restriction.
   > Some browsers like Chrome may grant the access for `http://127.0.0.1` and `http://localhost` or even for pages opened directly from the local disk (`file:///...`). This can be helpful for temporary development and test.
   
-  * Dynamsoft License requires a secure context to work.
+  - Dynamsoft License requires a secure context to work.
 
-* `WebAssembly`, `Blob`, `URL`/`createObjectURL`, `Web Workers`
+- `WebAssembly`, `Blob`, `URL`/`createObjectURL`, `Web Workers`
 
   The above four features are required for the SDK to work.
 
-* `MediaDevices`/`getUserMedia`
+- `MediaDevices`/`getUserMedia`
 
   This API is only required for in-browser video streaming.
 
-* `getSettings`
+- `getSettings`
 
   This API inspects the video input which is a `MediaStreamTrack` object about its constrainable properties.
 
@@ -477,7 +481,7 @@ The following table is a list of supported browsers based on the above requireme
   Firefox | v99+ on desktop and Android
   Safari | v15+ on iOS
 
-Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the SDK. 
+Apart from the browsers, the operating systems may impose some limitations of their own that could restrict the use of the SDK.
 
 ## Release Notes
 
