@@ -12,6 +12,7 @@ description: Dynamsoft Document Normalizer - QuadrilateralDetectionMode Enumerat
 | Language | Declaration |
 | -------- | ----------- |
 | C/C++ | `enum QuadrilateralDetectionMode` |
+| JavaScript | `enum EnumQuadrilateralDetectionMode` |
 
 ## Members
 

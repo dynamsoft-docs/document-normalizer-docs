@@ -14,6 +14,7 @@ description: Dynamsoft Document Normalizer - ImagePixelFormat Enumeration
 | C/C++ | `enum ImagePixelFormat` |
 | Android | `class com.dynamsoft.core.EnumImagePixelFormat` |
 | ObjC / Swift | `enum EnumImagePixelFormat` |
+| JavaScript | `enum EnumImagePixelFormat` |
 
 ## Members
 
