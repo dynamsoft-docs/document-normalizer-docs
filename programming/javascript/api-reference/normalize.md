@@ -201,7 +201,11 @@ A promise resolving to a [`NormalizedImageResult`](./interfaces/normalized-image
 
 ```javascript
 let normalizedImageResult = await normalizer.normalizeWithConfirmedQuad();
-let resultImg = await normalizedImageResult.saveToFile("example.png");
+if(normalizedImageResult) {
+    // Show the normalized image in a Canvas
+    const cvs = normalizedImageResult.image.toCanvas();
+    document.querySelector("#normalized-result").appendChild(cvs);
+}
 ```
 
 ## startScanning

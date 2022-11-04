@@ -18,8 +18,15 @@ The primary class of the library is `DocumentNormalizer`. The following code sni
 ```js
 let normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
 let quads = await normalizer.detectQuad(imagePath);
-let res = await normalizer.normalize(imagePath, { quad: quads[0].location });
-console.log(await res.saveToFile("dynamsoft.png", true)); //true means download
+let normalizedImageResult = await normalizer.normalize(imagePath, { quad: quads[0].location });
+if(normalizedImageResult) {
+    // Show the normalized image in a Canvas
+    const cvs = normalizedImageResult.image.toCanvas();
+    document.querySelector("#normalized-result").appendChild(cvs);
+    console.log(normalizedImageResult);
+}
+// Download the normalized image
+let img = await normalizedImageResult.saveToFile("example.png", true);
 ```
 
 * Detect and normalize continuous video frames
