@@ -27,8 +27,8 @@ breadcrumbText: Detect and Normalize APIs
 | [setImageSource()](#setimagesource) | Sets an image source for continous scanning. |
 | [onQuadDetected](#onquaddetected) | This event is triggered when a new quadrilateral is detected. |
 | [setQuadResultFilter()](#setquadresultfilter) | Sets a function to filter a detected quadrilateral. |
-| [confirmQuadForNormalization()](#confirmquadfornormalization) | Confirms which quadrilateral will be used for later normalization. |
-| [normalizeWithConfirmedQuad()](#normalizewithconfirmedquad) | Normalizes the image whith one confirmed quadrilateral. |
+| [confirmQuadForNormalization()](#confirmquadfornormalization) | Pauses the video stream and enter "editor mode" where the quadrilaterals in current frame are selectable and editable. Then you can select one quadrilateral that contains the content you are interested in and edit it to a desirable shape to be normalized. |
+| [normalizeWithConfirmedQuad()](#normalizewithconfirmedquad) | Normalizes the image with the one quadrilateral which is confirmed after `confirmQuadForNormalization()`. |
 | [startScanning()](#startscanning) | Opens the camera and starts continuous scanning of incoming images. |
 | [pauseScanning()](#pausescanning) | Pauses continuous scanning but keep the video stream. |
 | [resumeScanning()](#resumescanning) | Resumes continuous scanning. |
@@ -89,7 +89,7 @@ A promise resolving to a [`NormalizedImageResult`](./interfaces/normalized-image
 
 ```js
 let quads = await normalizer.detectQuad(blob);
-let normalizedImageResult = await normalizer.normalize(sourceImage, { quad: quads[i].location });
+let normalizedImageResult = await normalizer.normalize(sourceImage, { quad: quads[0].location });
 ```
 
 ## setImageSource
@@ -173,7 +173,7 @@ normalizer.setQuadResultFilter( (quadResult) => {
 
 ## confirmQuadForNormalization
 
-Confirms which quadrilateral will be used for later normalization.
+Pauses the video stream and enter "editor mode" where the quadrilaterals in current frame are selectable and editable. Then you can select one quadrilateral that contains the content you are interested in and edit it to a desirable shape to be normalized.
 
 ```js
 confirmQuadForNormalization: () => void;
@@ -187,7 +187,7 @@ normalizer.confirmQuadForNormalization();
 
 ## normalizeWithConfirmedQuad
 
-Normalizes the image whith one confirmed quadrilateral.
+Normalizes the image with the one quadrilateral which is confirmed in [`confirmQuadForNormalization()`](#confirmquadfornormalization).
 
 ```js
 normalizeWithConfirmedQuad: () => Promise<NormalizedImageResult>;

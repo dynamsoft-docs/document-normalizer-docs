@@ -23,7 +23,6 @@ if(normalizedImageResult) {
     // Show the normalized image in a Canvas
     const cvs = normalizedImageResult.image.toCanvas();
     document.querySelector("#normalized-result").appendChild(cvs);
-    console.log(normalizedImageResult);
 }
 // Download the normalized image
 let img = await normalizedImageResult.saveToFile("example.png", true);

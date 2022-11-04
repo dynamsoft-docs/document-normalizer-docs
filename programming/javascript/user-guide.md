@@ -150,7 +150,7 @@ The complete code of video frames normalization example is shown below:
 
 * `confirmQuadForNormalization()`: pauses the video stream and enter "editor mode" where the quadrilaterals in current frame are selectable and editable. Then you can select one quadrilateral that contains the content you are interested in and edit it to a desirable shape to be normalized.
 
-* `normalizeWithConfirmedQuad()`: normalizes the image with the confirmed quadrilateral.
+* `normalizeWithConfirmedQuad()`: normalizes the image with the one quadrilateral which is confirmed after `confirmQuadForNormalization()`.
 
 ### Test the code
 

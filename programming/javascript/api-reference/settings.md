@@ -25,8 +25,8 @@ breadcrumbText: Settings APIs
 | API Name | Description |
 |---|---|
 | [getRuntimeSettings()](#getruntimesettings) | Gets runtime settings with a template represented by a JSON object. |
-| [setRuntimeSettings()](#setruntimesettings) | Sets runtime settings with a JSON object. |
-| [resetRuntimeSettings()](#resetruntimesettings) | Resets all parameters to default values. |
+| [setRuntimeSettings()](#setruntimesettings) | Sets runtime settings with a JSON object or a built-in template. |
+| [resetRuntimeSettings()](#resetruntimesettings) | Resets all runtime setting parameters to default values. |
 
 ## getScanSettings
 
@@ -88,21 +88,19 @@ A promise resolving to a JSON object that contains the settings for label recogn
 
 ```js
 let settings = await normalizer.getRuntimeSettings();
-settings.maxThreadCount = 4;
-await normalizer.updateRuntimeSettings(settings);
 ```
 
 ## setRuntimeSettings
 
-Sets runtime settings with a given JSON object.
+Sets runtime settings with a JSON object or a built-in template.
 
 ```typescript
-setRuntimeSettings(settings: object): Promise<void>
+setRuntimeSettings(settings: object | string): Promise<void>
 ```
 
 **Parameters**
 
-`settings` : a JSON object that contains the new runtime settings.
+`settings` : a JSON object that contains the new runtime settings or a string which refers to a built-in template.
 
 **Return value**
 
@@ -112,13 +110,17 @@ A promise that resolves when the operation succeeds.
 
 ```js
 let settings = await normalizer.getRuntimeSettings();
-settings.maxThreadCount = 4;
+settings.ImageParameterArray[0].BinarizationModes[0].ThresholdCompensation = 3
+settings.ImageParameterArray[0].ScaleDownThreshold = 500
 await recognizer.setRuntimeSettings(settings);
+
+//or use a built-in template "lowcontrast"
+await recognizer.setRuntimeSettings("lowcontrast");
 ```
 
 ## resetRuntimeSettings
 
-Resets all parameters to default values.
+Resets all runtime setting parameters to default values.
 
 ```typescript
 resetRuntimeSettings(): Promise<void>
