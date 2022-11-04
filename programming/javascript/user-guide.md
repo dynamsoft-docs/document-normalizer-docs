@@ -299,9 +299,25 @@ let scanSettings = await normalizer.getScanSettings();
 // (setting this value larger is a simple way to save battery power and reduce device heating).
 scanSettings.intervalTime = 100; // The default is 0.
 await normalizer.updateScanSettings(scanSettings);
+
+// Sets up the runtime settings
+let runtimeSettings = await normalizer.getRuntimeSettings();
+runtimeSettings.ImageParameterArray[0].BinarizationModes[0].ThresholdCompensation = 3;
+runtimeSettings.ImageParameterArray[0].ScaleDownThreshold = 500;
+await normalizer.setRuntimeSettings(runtimeSettings);
+
+// or use a built-in runtime setting template "lowcontrast"
+await normalizer.setRuntimeSettings("lowcontrast");
+
+// Resets the runtime setting to default
+await normalizer.resetRuntimeSettings();
 ```
 
+As you can see from the above code snippets, there are two types of configurations:
+
 * `get/updateScanSettings`: Configures the scanning behavior of the normalizer which only includes `intervalTime` for now.
+
+* `get/set/resetRuntimeSettings`: Configures the normalizer engine with a built-in template or a template represented by a JSON object. This will override the previous RuntimeSettings.
 
 #### Start the detection and normalization
 
