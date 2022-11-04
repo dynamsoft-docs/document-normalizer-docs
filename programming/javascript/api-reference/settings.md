@@ -100,7 +100,7 @@ setRuntimeSettings(settings: object | string): Promise<void>
 
 **Parameters**
 
-`settings` : a JSON object that contains the new runtime settings or a string which refers to a built-in template.
+`settings` : a JSON object that contains the new runtime settings or a string which refers to a built-in template. As of version 1.0.10, the only built-in template is "lowcontrast", which, as the name suggests, is optimized for detecting document boundaries with colors similar to the surrounding environment.
 
 **Return value**
 
