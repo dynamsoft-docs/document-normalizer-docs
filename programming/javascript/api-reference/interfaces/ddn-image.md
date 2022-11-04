@@ -35,7 +35,7 @@ An [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanv
 **Code snippet**
 
 ```js
-let canvas = await ddnImage.toCanvas();
+let canvas = ddnImage.toCanvas();
 ```
 
 ### toImage
@@ -57,7 +57,7 @@ An [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImage
 **Code snippet**
 
 ```js
-let pngImage = await ddnImage.toImage("image/png");
+let pngImage = ddnImage.toImage("image/png");
 ```
 
 ### toBlob
