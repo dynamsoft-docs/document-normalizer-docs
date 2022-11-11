@@ -14,7 +14,7 @@ noTitleIndex: true
 
 ### Fixed
 
-- Fixed a crash bug when triggering [`getSelectedQuadResult`](../api-reference/image-editor-view.md#getselectedquadresult) on `DCVImageEditorView` without selecting any quad.
+- Fixed a crash bug when triggering [`getSelectedQuadResult`](../api-reference/image-editor-view.md#getselectedquadresult) on `DCVImageEditorView` without selecting any quad.  
 
 ## 1.0.0 (10/28/2022)
 
