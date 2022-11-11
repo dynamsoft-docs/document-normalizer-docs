@@ -10,6 +10,12 @@ noTitleIndex: true
 
 # Release Notes for Xamarin SDK
 
+## 1.0.1 (11/11/2022)
+
+### Fixed
+
+- Fixed a crash bug when triggering [`getSelectedQuadResult`](../api-reference/image-editor-view.md#getselectedquadresult) on `DCVImageEditorView` without selecting any quad.
+
 ## 1.0.0 (10/28/2022)
 
 ### Highlights

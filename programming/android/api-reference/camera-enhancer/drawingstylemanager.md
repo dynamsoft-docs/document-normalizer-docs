@@ -32,7 +32,7 @@ public static DrawingStyle getDrawingStyle(int styleId);
 
 **Parameters**
 
-`styleId`: The ID of the target `DrawingStyle`.
+`styleId` The ID of the target `DrawingStyle`.
 
 **Return Value**
 
@@ -71,12 +71,12 @@ public static int createDrawingStyle(int strokeColor, float strokeWidth, int fil
 
 **Parameters**
 
-`strokeColor`: The stroke colour.
-`strokeWidth`: The width of the stroke (measured by px).
-`fillColor`: The fill colour.
-`textColor`: The text colour.
-`fontSize`: The font size (measured by sp).
-`fontFamily`: The font family.
+`strokeColor` The stroke colour.
+`strokeWidth` The width of the stroke (measured by px).
+`fillColor` The fill colour.
+`textColor` The text colour.
+`fontSize` The font size (measured by sp).
+`fontFamily` The font family.
 
 **Code Snippet**
 

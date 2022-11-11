@@ -206,7 +206,7 @@ void setImageData(byte[] imageData)
 
 **Parameters**
 
-`imageData`: A byte list that storing the image pixel data.
+`imageData` A byte list that storing the image pixel data.
 
 &nbsp;
 
@@ -220,7 +220,7 @@ void setWidth(int width)
 
 **Parameters**
 
-`width`: The pixel value that stands for the width of the image.
+`width` The pixel value that stands for the width of the image.
 
 &nbsp;
 
@@ -234,7 +234,7 @@ void setHeight(int height)
 
 **Parameters**
 
-`height`: The pixel value that stands for the height of the image.
+`height` The pixel value that stands for the height of the image.
 
 &nbsp;
 
@@ -248,7 +248,7 @@ void setStrides(int[] strides)
 
 **Parameters**
 
-`strides`: The number of row bytes in each image plane.
+`strides` The number of row bytes in each image plane.
 
 &nbsp;
 
@@ -262,7 +262,7 @@ void setPixelFormat(int pixelFormat)
 
 **Parameters**
 
-`pixelFormat`: The pixelFormat of the image. View more in [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=android).
+`pixelFormat` The pixelFormat of the image. View more in [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=android).
 
 &nbsp;
 
@@ -276,7 +276,7 @@ void setFrameID(int frameID)
 
 **Parameters**
 
-`frameID`: An int value that stands for the `frameID` of the image.
+`frameID` An int value that stands for the `frameID` of the image.
 
 &nbsp;
 
@@ -290,7 +290,7 @@ void setQuality(EnumFrameQuality quality)
 
 **Parameters**
 
-`quality`: One of the [`EnumFrameQuality`](enum-frame-quality.md) value that indicates the frame quality.
+`quality` One of the [`EnumFrameQuality`](enum-frame-quality.md) value that indicates the frame quality.
 
 &nbsp;
 
@@ -304,7 +304,7 @@ void setIsCropped(boolean isCropped)
 
 **Parameters**
 
-`isCropped`: A boolean value that means whether the image is cropped.
+`isCropped` A boolean value that means whether the image is cropped.
 
 &nbsp;
 
@@ -318,7 +318,7 @@ void setCropRegion(Rect region)
 
 **Parameters**
 
-`cropRegion`: A Rect value that means crop area of the image (if the frame is cropped).
+`cropRegion` A Rect value that means crop area of the image (if the frame is cropped).
 
 &nbsp;
 
@@ -332,7 +332,7 @@ void setOrientation(int orientation)
 
 **Parameters**
 
-`orientation`: Int value that means the rotation angle of the image.
+`orientation` Int value that means the rotation angle of the image.
 
 ## toBitmap
 

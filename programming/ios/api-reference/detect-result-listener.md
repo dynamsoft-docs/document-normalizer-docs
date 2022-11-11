@@ -30,9 +30,9 @@ The callback method to handle the detection results returned by the library.
 
 **Parameters**
 
-`[in] frameId`: The ID of the frame.  
-`[in] imgData`: The image data of frame.  
-`[in] detectResults`: Detected results of the frame.
+`[in] frameId` The ID of the frame.  
+`[in] imgData` The image data of frame.  
+`[in] detectResults` Detected results of the frame.
 
 **Code Snippet**
 

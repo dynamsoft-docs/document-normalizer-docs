@@ -28,6 +28,8 @@ noTitleIndex: true
 | [`Class ImageData`](image-data.md) | The class that stores image data. |
 | [`Class DetectedQuadResult`](detected-quad-result.md) | The class that stores the information of the detected quads. |
 | [`Class NormalizedImageResult`](normalized-image-result.md) | The class that stores the information of normalized results. |
+| [`Class DCVCameraView`](camera-view.md) | A view class that enables users to display video streaming. |
+| [`Class DCVImageEditorView`](image-editor-view.md) | A view class for users to add editable UI elements on a static image. |
 | [`Interface ILicenseManager`](license-manager.md) | The interface that includes license activation methods. |
 | [`Interface ILicenseVerificationListener`](license-verification-listener.md) | The interface that handles callback when license server returns. |
 | [`Interface IDetectResultListener`](detect-result-listener.md) | The interface that handles callback when quad results are detected. |

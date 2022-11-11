@@ -43,7 +43,7 @@ public DCEDrawingLayer(int id);
 
 **Parameters**
 
-`id`: Indicate the ID of the `DrawingLayer`.
+`id` Indicate the ID of the `DrawingLayer`.
 
 **Remarks**
 
@@ -90,7 +90,7 @@ public void addDrawingItems(Arraylist<DrawingItem> items);
 
 **Parameters**
 
-`items`: A list of [`DrawingItems`](drawingitem.md).
+`items` A list of [`DrawingItems`](drawingitem.md).
 
 **Code Snippet**
 
@@ -114,7 +114,7 @@ public void setDrawingItems(Arraylist<DrawingItem> items);
 
 **Parameters**
 
-`items`: A list of [`DrawingItems`](drawingitem.md).
+`items` A list of [`DrawingItems`](drawingitem.md).
 
 **Code Snippet**
 
@@ -174,7 +174,7 @@ public void setDrawingStyleId(int styleId);
 
 **Parameters**
 
-`id`: The style ID.
+`id` The style ID.
 
 **Code Snippet**
 
@@ -194,8 +194,8 @@ public void setDrawingStyleId(int styleId, EnumDrawingItemState state);
 
 **Parameters**
 
-`id`: The style ID.  
-`state`: The state of the `DrawingItem`.
+`id` The style ID.  
+`state` The state of the `DrawingItem`.
 
 **Code Snippet**
 
@@ -215,9 +215,9 @@ public void setDrawingStyleId(int styleId, EnumDrawingItemState state, EnumDrawi
 
 **Parameters**
 
-`id`: The style ID.  
-`state`: The state of the `DrawingItem`.  
-`mediaType`: The media type of the `DrawingItem`.
+`id` The style ID.  
+`state` The state of the `DrawingItem`.  
+`mediaType` The media type of the `DrawingItem`.
 
 **Code Snippet**
 
@@ -237,7 +237,7 @@ public void setVisible(boolean visible);
 
 **Parameters**
 
-`visible`:
+`visible`
 
 - true: The `DrawingLayer` will be visible
 - false: The `DrawingLayer` will be invisible.

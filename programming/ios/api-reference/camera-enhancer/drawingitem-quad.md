@@ -37,7 +37,7 @@ The constructor of `QuadDrawingItem`. Initialize the instance of `QuadDrawingIte
 
 **Parameters**
 
-`quad`: A `Quadrilateral` that includes the position of the `QuadDrawingItem`.
+`quad` A `Quadrilateral` that includes the position of the `QuadDrawingItem`.
 
 **Code Snippet**
 

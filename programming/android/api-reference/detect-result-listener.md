@@ -30,9 +30,9 @@ void detectResultCallback(int frameId, ImageData imageData, DetectedQuadResult[]
 
 **Parameters**
 
-`[in] frameId`: The ID of the frame.  
-`[in] imgData`: The image data of frame.  
-`[in] detectResults`: Detected results of the frame.
+`[in] frameId` The ID of the frame.  
+`[in] imgData` The image data of frame.  
+`[in] detectResults` Detected results of the frame.
 
 **Code Snippet**
 

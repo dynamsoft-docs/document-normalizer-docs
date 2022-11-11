@@ -40,7 +40,7 @@ The constructor of the [`DCEDrawingLayer`](dcedrawinglayer.md) class. Initialize
 
 **Parameters**
 
-`id`: Indicates the id of the layer.
+`id` Indicates the id of the layer.
 
 **Remarks**
 
@@ -86,7 +86,7 @@ Add a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will be
 
 **Parameters**
 
-`items`: A list of `DrawingItems`.
+`items` A list of `DrawingItems`.
 
 **Code Snippet**
 
@@ -134,7 +134,7 @@ Specify a style ID for all available `DrawingItems`.
 
 **Parameters**
 
-`styleId`: The style ID.  
+`styleId` The style ID.  
 
 **Code Snippet**
 
@@ -164,8 +164,8 @@ Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). The `stat
 
 **Parameters**
 
-`styleId`: The style ID.  
-`state`: The state of the `DrawingItem`.
+`styleId` The style ID.  
+`state` The state of the `DrawingItem`.
 
 **Code Snippet**
 
@@ -196,9 +196,9 @@ Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). The `stat
 
 **Parameters**
 
-`styleId`: The style ID.  
-`state`: The state of the `DrawingItem`.  
-`mediaType`: The media type of the `DrawingItem`.
+`styleId` The style ID.  
+`state` The state of the `DrawingItem`.  
+`mediaType` The media type of the `DrawingItem`.
 
 **Code Snippet**
 

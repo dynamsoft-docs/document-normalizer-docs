@@ -33,7 +33,7 @@ public void setDrawingStyleId(int style);
 
 **Parameters**
 
-`style`: An int value that representing the style ID.
+`style` An int value that representing the style ID.
 
 **Code Snippet**
 
@@ -73,7 +73,7 @@ public void setState(EnumDrawingItemState state);
 
 **Parameters**
 
-`state`: The value that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.android_camera_enhancer }}enum-drawing-item-state.html).
+`state` The value that indicates the state of the `DrawingItem`. View all available `DrawingItem` states in [`EnumDrawingItemState`]({{ site.android_camera_enhancer }}enum-drawing-item-state.html).
 
 **Code Snippet**
 

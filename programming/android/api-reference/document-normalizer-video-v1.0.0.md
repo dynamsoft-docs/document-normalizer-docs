@@ -36,7 +36,7 @@ void setCameraEnhancer(CameraEnhancer mCameraEnhancer)
 
 **Parameters**
 
-`[in] mCameraEnhancer`: An instance of `Dynamsoft Camera Enhancer`.
+`[in] mCameraEnhancer` An instance of `Dynamsoft Camera Enhancer`.
 
 **Code Snippet**
 
@@ -137,7 +137,7 @@ void setDetectResultListener(DetectResultListener detectResultListener)
 
 **Parameters**
 
-`[in] detectResultListener`: The Callback interface.
+`[in] detectResultListener` The Callback interface.
 
 **Code Snippet**
 

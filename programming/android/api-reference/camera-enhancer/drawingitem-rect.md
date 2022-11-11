@@ -39,7 +39,7 @@ public RectDrawingItem(android.graphics.Rect rect);
 
 **Parameters**
 
-`rect`: The `Rect` that indicates the location of the `RectDrawingItem`.
+`rect` The `Rect` that indicates the location of the `RectDrawingItem`.
 
 **Code Snippet**
 

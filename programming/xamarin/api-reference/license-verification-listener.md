@@ -29,8 +29,8 @@ void LicenseVerificationCallback(bool isSuccess, string msg);
 
 **Parameters**
 
-`[in] isSuccess`: Whether the license verification was successful.  
-`[in] msg`: The error message from license server.
+`[in] isSuccess` Whether the license verification was successful.  
+`[in] msg` The error message from license server.
 
 **Code Snippet**
 

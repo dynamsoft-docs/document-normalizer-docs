@@ -151,7 +151,7 @@ Select camera by `cameraID`. The camera will be selected and further camera cont
 
 **Parameters**
 
-`cameraID`: A `String` value that listed in the `cameraIDList` returned by `getAllCameras`. The method will have no effects if the input value does not exist in the `cameraIDList`.
+`cameraID` A `String` value that listed in the `cameraIDList` returned by `getAllCameras`. The method will have no effects if the input value does not exist in the `cameraIDList`.
 
 **Code Snippet**
 
@@ -418,7 +418,7 @@ Get the latest frame from the buffer. The boolean value determines whether the f
 
 **Parameters**
 
-`Keep`: If set to `true`, the frame will be kept in the video buffer. Otherwise, it will be removed from the video buffer.
+`Keep` If set to `true`, the frame will be kept in the video buffer. Otherwise, it will be removed from the video buffer.
 
 **Return Value**
 
@@ -451,7 +451,7 @@ Add a listener to the `CameraEnhancer` instance. This method will have no effect
 
 **Parameters**
 
-`listener`: An object of `DCEFrameListener`. Its callback method `frameOutputCallback` will be available for users to make further operations on the captured video frame.
+`listener` An object of `DCEFrameListener`. Its callback method `frameOutputCallback` will be available for users to make further operations on the captured video frame.
 
 **Code Snippet**
 
@@ -480,7 +480,7 @@ Remove a previously added listener from the `CameraEnhancer` instance. This meth
 
 **Parameters**
 
-`listener`: The input listener will be removed from the Camera Enhancer instance.
+`listener` The input listener will be removed from the Camera Enhancer instance.
 
 **Code Snippet**
 
@@ -519,7 +519,7 @@ Enable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enhan
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
+`enhancerFeatures` The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
 
 **Code Snippet**
 
@@ -552,7 +552,7 @@ Disable camera enhancer features by inputting [`EnumEnhancerFeatures`](enum-enha
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
+`enhancerFeatures` The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
 
 **Code Snippet**
 
@@ -585,14 +585,14 @@ Check whether the input features are enabled.
 
 **Parameters**
 
-`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
+`enhancerFeatures` The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
 
 **Return Value**
 
 A BOOL value refers to whether all the features you input are enabled.
 
-- `True`: All the features you input are enabled.  
-- `False`: There is at least one feature is not enabled among your input values.
+- `True` All the features you input are enabled.  
+- `False` There is at least one feature is not enabled among your input values.
 
 **Code Snippet**
 
@@ -669,7 +669,7 @@ Input one of the preset resolution value in Enumeration `Resolution`. The camera
 
 **Parameters**
 
-`resolution`: One of the int value that preset in Enumeration [`EnumResolution`](enum-resolution.md).
+`resolution` One of the int value that preset in Enumeration [`EnumResolution`](enum-resolution.md).
 
 **Code Snippet**
 
@@ -727,7 +727,7 @@ Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor o
 
 **Parameters**
 
-`factor`: The target zoom factor.
+`factor` The target zoom factor.
 
 **Code Snippet**
 
@@ -756,7 +756,7 @@ Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at th
 
 **Parameters**
 
-`focusPosition`: A CGPoint that stores the x and y coordinate of the targeting focus position.
+`focusPosition` A CGPoint that stores the x and y coordinate of the targeting focus position.
 
 **Code Snippet**
 
@@ -787,7 +787,7 @@ Specify the `scanRegion`. The DCEFrames will be cropped according to the `scanRe
 
 **Parameters**
 
-`scanRegion`: Use a [`iRegionDefinition`](region-definition.md) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`](region-definition.md).
+`scanRegion` Use a [`iRegionDefinition`](region-definition.md) value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`iRegionDefinition`](region-definition.md).
 
 **Code Snippet**
 
@@ -879,7 +879,7 @@ Update the advanced camera controlling and video streaming processing parameters
 
 **Parameters**
 
-`filePath`: The file path of the JSON file.
+`filePath` The file path of the JSON file.
 
 **Code Snippet**
 
@@ -912,7 +912,7 @@ Update the advanced camera controlling and video streaming processing parameters
 
 **Parameters**
 
-`jsonString`: A stringified JSON data.
+`jsonString` A stringified JSON data.
 
 **Code Snippet**
 

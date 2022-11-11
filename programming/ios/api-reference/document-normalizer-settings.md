@@ -28,8 +28,8 @@ Initialize runtime settings from a given JSON file.
 
 **Parameters**
 
-`[in] filePath`: The path of the settings file.  
-`[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in] filePath` The path of the settings file.  
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
 
@@ -63,8 +63,8 @@ Initialize runtime settings from a given JSON string.
 
 **Parameters**
 
-`[in] content`: A JSON string that represents the content of the settings.  
-`[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in] content` A JSON string that represents the content of the settings.  
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
 
@@ -98,9 +98,9 @@ Output runtime settings to a settings file (JSON file).
 
 **Parameters**
 
-`[in] filePath`: The output file path which stores runtime settings.  
-`[in] settingsName`: A unique name for declaring runtime settings.
-`[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in] filePath` The output file path which stores runtime settings.  
+`[in] settingsName` A unique name for declaring runtime settings.
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
 
@@ -135,7 +135,7 @@ Output runtime settings to a JSON string.
 **Parameters** 
 
 `[in] settingsName` A unique name for declaring runtime settings.  
-`[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
 

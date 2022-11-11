@@ -36,7 +36,7 @@ void setImageSource(ImageSource source)
 
 **Parameters**
 
-`[in] source`: An instance of ImageSource. If you are using `Dynamsoft Camera Enhancer`(DCE) to capture camera frames, pass an instance of `CameraEnhancer`.
+`[in] source` An instance of ImageSource. If you are using `Dynamsoft Camera Enhancer`(DCE) to capture camera frames, pass an instance of `CameraEnhancer`.
 
 **Code Snippet**
 
@@ -137,7 +137,7 @@ void setDetectResultListener(DetectResultListener detectResultListener)
 
 **Parameters**
 
-`[in] detectResultListener`: The Callback interface.
+`[in] detectResultListener` The Callback interface.
 
 **Code Snippet**
 

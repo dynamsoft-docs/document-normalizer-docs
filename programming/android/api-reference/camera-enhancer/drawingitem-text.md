@@ -39,8 +39,8 @@ public TextDrawingItem(String text, android.graphics.Rect textRect);
 
 **Parameters**
 
-`text`: The text of the `TextDrawingItem`.
-`textRect`: The `Rect` that indicates the location of the `TextDrawingItem`.
+`text` The text of the `TextDrawingItem`.
+`textRect` The `Rect` that indicates the location of the `TextDrawingItem`.
 
 **Code Snippet**
 

@@ -31,8 +31,8 @@ void frameOutputCallback(DCEFrame frame, long timeStamp);
 
 **Parameters**
 
-`frame`: The `DCEFrame` object that contains the image data and further information.  
-`timeStamp`: The `timeStamp` that records when the `frame` is output.
+`frame` The `DCEFrame` object that contains the image data and further information.  
+`timeStamp` The `timeStamp` that records when the `frame` is output.
 
 **Code Snippet**
 

@@ -79,7 +79,7 @@ void SetCameraEnhancer(ICameraEnhancer cameraEnhancer);
 
 **Parameters**
 
-`[in] source`: An instance of ImageSource. If you are using `Dynamsoft Camera Enhancer`(DCE) to capture camera frames, pass an instance of `CameraEnhancer`.
+`[in] source` An instance of ImageSource. If you are using `Dynamsoft Camera Enhancer`(DCE) to capture camera frames, pass an instance of `CameraEnhancer`.
 
 **Code Snippet**
 
@@ -174,7 +174,7 @@ void AddResultListener(IDetectResultListener resultListener);
 
 **Parameters**
 
-`[in] IDetectResultListener`: The Callback interface.
+`[in] IDetectResultListener` The Callback interface.
 
 **Code Snippet**
 
@@ -192,7 +192,7 @@ DetectedQuadResult[] DetectQuad(ImageData imageData);
 
 **Parameters**
 
-`[in] imageData`: The memory buffer containing image pixels in defined format.
+`[in] imageData` The memory buffer containing image pixels in defined format.
 
 **Return Value**
 
@@ -216,7 +216,7 @@ DetectedQuadResult[] DetectQuad(string filePath);
 
 **Parameters**
 
-`[in]filePath`: A string defining the file path. It supports BMP, TIFF, JPG, PNG files.  
+`[in]filePath` A string defining the file path. It supports BMP, TIFF, JPG, PNG files.  
 
 **Return Value**
 
@@ -238,8 +238,8 @@ NormalizedImageResult Normalize(ImageData imageData, Quadrilateral quadrilateral
 
 **Parameters**
 
-`[in] imageData`: The memory buffer containing image pixels in defined format.
-`[in] quadrilateral`: The detected quad for normalizing.
+`[in] imageData` The memory buffer containing image pixels in defined format.
+`[in] quadrilateral` The detected quad for normalizing.
 
 **Return Value**
 
@@ -271,8 +271,8 @@ NormalizedImageResult Normalize(string filePath, Quadrilateral quadrilateral);
 
 **Parameters**
 
-`[in] filePath`: A string defining the file path. It supports BMP, TIFF, JPG, PNG files.  
-`[in] quadrilateral`: The detected quad for normalizing.
+`[in] filePath` A string defining the file path. It supports BMP, TIFF, JPG, PNG files.  
+`[in] quadrilateral` The detected quad for normalizing.
 
 **Return Value**
 
@@ -297,7 +297,7 @@ void IntiRuntimeSettingsFromFile(string filePath);
 
 **Parameters**
 
-`[in] filePath`: The path of the settings file.  
+`[in] filePath` The path of the settings file.  
 
 **Code Snippet**
 
@@ -315,7 +315,7 @@ void InitRuntimeSettings(string content);
 
 **Parameters**
 
-`[in] content`: A JSON string that represents the content of the settings.  
+`[in] content` A JSON string that represents the content of the settings.  
 
 **Code Snippet**
 
@@ -333,8 +333,8 @@ void OutputRuntimeSettingsToFile(string filePath, string settingsName);
 
 **Parameters**
 
-`[in] filePath`: The output file path which stores runtime settings.  
-`[in] settingsName`: A unique name for declaring runtime settings.
+`[in] filePath` The output file path which stores runtime settings.  
+`[in] settingsName` A unique name for declaring runtime settings.
 
 **Code Snippet**
 
@@ -377,7 +377,7 @@ void SaveToFile(NormalizedImageResult result, string filePath);
 **Parameters** 
 
 `[in] result` A `NormalizedImageResult` object, which is the output of `Normalize` methods.  
-`[in] filePath` Specify a file path for the output file.
+`[in] filePath` The path of the output image with the extension specifying the image format. It supports BMP, PNG, JPEG and PDF file types. If the target file exists, the image will be appended to the last page of the PDF file while the BMP, PNG and JPEG file will be replaced.
 
 **Code Snippet**
 

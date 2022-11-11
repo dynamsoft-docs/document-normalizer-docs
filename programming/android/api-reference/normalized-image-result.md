@@ -42,7 +42,7 @@ void saveToFile(String filePath) throws DocumentNormalizerException
 
 **Parameters**
 
-`[in] filePath`: The output file path of the normalized image.  
+`[in] filePath` The path of the output image file with the extension specifying the image format. It supports BMP, PNG, JPEG and PDF file types.
 
 **Remarks**
 

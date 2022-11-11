@@ -32,8 +32,8 @@ Detect quad from the memory buffer containing image pixels in defined format.
 
 **Parameters**
 
-`[in] buffer`: The memory buffer containing image pixels in defined format.
-`[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in] buffer` The memory buffer containing image pixels in defined format.
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
 
@@ -143,8 +143,8 @@ Detect quad from an image file.
 
 **Parameters**
 
-`[in] fileFullPath`: A string defining the file path. It supports BMP, TIFF, JPG, PNG files.  
-`[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in] fileFullPath` A string defining the file path. It supports BMP, TIFF, JPG, PNG files.  
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
 
@@ -178,8 +178,8 @@ Detect quad from a buffered image (UIImage).
 
 **Parameters**
 
-`[in] uiimage`: The ios UIImage to be detected.
-`[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in] uiimage` The ios UIImage to be detected.
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
 
@@ -215,9 +215,9 @@ Normalize image from the memory buffer containing image pixels in defined format
 
 **Parameters**
 
-`[in] buffer`: The memory buffer containing image pixels in defined format.
-`[in] quad`: The detected quad for normalizing.
-`[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in] buffer` The memory buffer containing image pixels in defined format.
+`[in] quad` The detected quad for normalizing.
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
 
@@ -266,9 +266,9 @@ Normalize an image file.
 
 **Parameters**
 
-`[in] fileFullPath`: A string defining the file path. It supports BMP, TIFF, JPG, PNG files.  
-`[in] quad`: The detected quad for normalizing.
-`[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in] fileFullPath` A string defining the file path. It supports BMP, TIFF, JPG, PNG files.  
+`[in] quad` The detected quad for normalizing.
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
 
@@ -308,9 +308,9 @@ Normalize a buffered image (UIImage).
 
 **Parameters**
 
-`[in] uiimage`: The ios UIImage to be normalized.
-`[in] quad`: The detected quad for normalizing.
-`[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in] uiimage` The ios UIImage to be normalized.
+`[in] quad` The detected quad for normalizing.
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
 

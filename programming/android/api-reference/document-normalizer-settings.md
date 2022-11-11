@@ -28,7 +28,7 @@ void initRuntimeSettingsFromFile(String filePath) throws DocumentNormalizerExcep
 
 **Parameters**
 
-`[in] filePath`: The path of the settings file.  
+`[in] filePath` The path of the settings file.  
 
 **Exceptions**
 
@@ -37,8 +37,8 @@ void initRuntimeSettingsFromFile(String filePath) throws DocumentNormalizerExcep
 **Code Snippet**
 
 ```java
-DocumentNormalizer reader = new DocumentNormalizer();
-reader.initRuntimeSettingsFromFile("your template file path");
+DocumentNormalizer normalizer = new DocumentNormalizer();
+normalizer.initRuntimeSettingsFromFile("Your template file path");
 ```
 
 ## initRuntimeSettingsFromString
@@ -51,7 +51,7 @@ void initRuntimeSettingsFromString(String content)throws DocumentNormalizerExcep
 
 **Parameters**
 
-`[in] content`: A JSON string that represents the content of the settings.  
+`[in] content` A JSON string that represents the content of the settings.  
 
 **Exceptions**
 
@@ -60,8 +60,8 @@ void initRuntimeSettingsFromString(String content)throws DocumentNormalizerExcep
 **Code Snippet**
 
 ```java
-DocumentNormalizer reader = new DocumentNormalizer();
-reader.initRuntimeSettingsFromString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\"}}");
+DocumentNormalizer normalizer = new DocumentNormalizer();
+normalizer.initRuntimeSettingsFromString("{\"Version\":\"3.0\", \"ImageParameter\":{\"Name\":\"IP1\"}}");
 ```
 
 ## outputRuntimeSettingsToFile
@@ -74,8 +74,8 @@ void outputRuntimeSettingsToFile(String filePath, String settingsName) throws Do
 
 **Parameters**
 
-`[in] filePath`: The output file path which stores runtime settings.  
-`[in] settingsName`: A unique name for declaring runtime settings.
+`[in] filePath` The output file path which stores runtime settings.  
+`[in] settingsName` A unique name for declaring runtime settings.
 
 **Exceptions**
 
@@ -84,8 +84,8 @@ void outputRuntimeSettingsToFile(String filePath, String settingsName) throws Do
 **Code Snippet**
 
 ```java
-DocumentNormalizer reader = new DocumentNormalizer();
-reader.outputRuntimeSettingsToFile("your saving file path", "");
+DocumentNormalizer normalizer = new DocumentNormalizer();
+normalizer.outputRuntimeSettingsToFile("Your saving file path", "Specify a name for your settings");
 ```
 
 ## outputRuntimeSettings
@@ -107,6 +107,6 @@ The output JSON string which stores the contents of runtime settings.
 **Code Snippet**
 
 ```java
-DocumentNormalizer reader = new DocumentNormalizer();
-String settingStr = reader.outputSettingsToString("");
+DocumentNormalizer normalizer = new DocumentNormalizer();
+String settingStr = normalizer.outputSettingsToString("Specify a name for your settings");
 ```

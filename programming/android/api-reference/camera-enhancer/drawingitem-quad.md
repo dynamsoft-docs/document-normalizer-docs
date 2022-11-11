@@ -37,7 +37,7 @@ public QuadDrawingItem(com.dynamsoft.core.Quadrilateral quad;
 
 **Parameters**
 
-`quad`: The `Quadrilateral` that indicates the location of the `QuadDrawingItem`.
+`quad` The `Quadrilateral` that indicates the location of the `QuadDrawingItem`.
 
 **Code Snippet**
 

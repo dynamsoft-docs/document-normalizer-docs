@@ -44,7 +44,7 @@ DCECameraView(android.content.Context context)
 
 **Parameters**
 
-`context`: An instance of global information about an application environment.
+`context` An instance of global information about an application environment.
 
 &nbsp;
 
@@ -58,11 +58,11 @@ void setTorchButton(Point torchButtonPosition, int width, int height, Drawable t
 
 **Parameters**
 
-`torchButtonPosition`: The coordinate of the top-left corner of the torch button. You can input a null value to apply no changes to the position of the torch button.  
-`width`: The width of the torch button. You can input a null value to apply no changes to the width of the torch button.  
-`height`: The height of the torch button. You can input a null value to apply no changes to the height of the torch button.  
-`torchOnImage`: Display this image when the torch is on. You can input a null value to apply no changes to the image of the torch button when the torch is on.  
-`torchOffImage`: Display this image when the torch is off. You can input a null value to apply no changes to the image of the torch button when the torch is off.
+`torchButtonPosition` The coordinate of the top-left corner of the torch button. You can input a null value to apply no changes to the position of the torch button.  
+`width` The width of the torch button. You can input a null value to apply no changes to the width of the torch button.  
+`height` The height of the torch button. You can input a null value to apply no changes to the height of the torch button.  
+`torchOnImage` Display this image when the torch is on. You can input a null value to apply no changes to the image of the torch button when the torch is on.  
+`torchOffImage` Display this image when the torch is off. You can input a null value to apply no changes to the image of the torch button when the torch is off.
 
 **Code Snippet**
 
@@ -86,7 +86,7 @@ void setTorchButtonVisible(boolean isTorchButtonVisible)
 
 **Parameters**
 
-`isTorchButtonVisible`: When the value is true, the torch button should be displayed. Otherwise, the torch button should be hidden.
+`isTorchButtonVisible` When the value is true, the torch button should be displayed. Otherwise, the torch button should be hidden.
 
 **Code Snippet**
 
@@ -126,11 +126,11 @@ public DCEDrawingLayer getDrawingLayer(int id);
 
 **Parameters**
 
-`id`: The id of the target [`DCEDrawingLayer`](dcedrawinglayer.md).
+`id` The id of the target [`DCEDrawingLayer`](dcedrawinglayer.md).
 
 **Parameters**
 
-`id`: The id of the `DrawingLayer`.
+`id` The id of the `DrawingLayer`.
 
 **Available ID List**
 
@@ -179,7 +179,7 @@ void setOverlayVisible(boolean overlayVisibile)
 
 **Parameters**
 
-`overlayVisibile`: If true, the camera view will draw and display overlays according to the position and colour settings. Otherwise, the overlay will be hidden.
+`overlayVisibile` If true, the camera view will draw and display overlays according to the position and colour settings. Otherwise, the overlay will be hidden.
 
 **Code Snippet**
 
@@ -225,8 +225,8 @@ void setOverlayColour(int strokeARGB, int fillARGB)
 
 **Parameters**
 
-`strokeARGB`: The colour code of the overlays stroke.
-`fillARGB`: The colour code of the overlays stroke.
+`strokeARGB` The colour code of the overlays stroke.
+`fillARGB` The colour code of the overlays stroke.
 
 **Code Snippet**
 
@@ -249,7 +249,7 @@ void setViewfinderVisible(boolean viewfinderVisible)
 
 **Parameters**
 
-`viewfinderVisible`: A boolean value that means whether the viewfinder is visible or not. Users can define the position and size of the viewfinder via method [`setViewfinder`](#setviewfinder). The viewfinder will be created based on the default value if the `setViewfinder` has never been triggered.
+`viewfinderVisible` A boolean value that means whether the viewfinder is visible or not. Users can define the position and size of the viewfinder via method [`setViewfinder`](#setviewfinder). The viewfinder will be created based on the default value if the `setViewfinder` has never been triggered.
 
 **Code Snippet**
 
@@ -295,10 +295,10 @@ void setViewfinder(float left, float top, float right, float bottom) throws Came
 
 **Parameters**
 
-`left`: The distance (by percentage) between the left border of the viewfinder and the left side of the screen. The default value is 0.15.  
-`top`: The distance (by percentage) between the top border of the viewfinder and the top side of the screen. The default value is 0.3.  
-`right`: The distance (by percentage) between the right border of the viewfinder and the left side of the screen. The default value is 0.85.  
-`bottom`: The distance (by percentage) between the bottom border of the viewfinder and the top side of the screen. The default value is 0.7.
+`left` The distance (by percentage) between the left border of the viewfinder and the left side of the screen. The default value is 0.15.  
+`top` The distance (by percentage) between the top border of the viewfinder and the top side of the screen. The default value is 0.3.  
+`right` The distance (by percentage) between the right border of the viewfinder and the left side of the screen. The default value is 0.85.  
+`bottom` The distance (by percentage) between the bottom border of the viewfinder and the top side of the screen. The default value is 0.7.
 
 **Code Snippet**
 

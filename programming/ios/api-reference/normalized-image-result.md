@@ -42,12 +42,11 @@ Save the normalized image to a file.
 
 **Parameters**
 
-`[in] filePath`: The output file path of the normalized image.  
-`[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
+`[in] filePath` The path of the output image file with the extension specifying the image format. It supports BMP, PNG, JPEG and PDF file types.  
+`[in,out] error` Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Remarks**
 
 - This method supports exporting bmp, jpeg, png, pdf formats.
 - For non-pdf formats, if the file path already exists, this method will overwrite the existing file
 - For pdf format, if the file path already exists, this method will append a new page with the image to the existing pdf file.
-
