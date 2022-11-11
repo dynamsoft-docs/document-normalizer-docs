@@ -37,8 +37,7 @@ void frameOutputCallback(DCEFrame frame, long timeStamp);
 **Code Snippet**
 
 ```java
-DCEFrameListener listener = new DCEFrameListener;
-cameraEnhancer.addListener(listener) {
+cameraEnhancer.addListener(new DCEFrameListener() {
     @Override
     public void frameOutputCallback(DCEFrame frame, long timeStamp) {
         // Add your code

@@ -98,7 +98,7 @@ String outputRuntimeSettings(String settingsName) throws DocumentNormalizerExcep
 
 **Parameters** 
 
-`[in] settingsName` A unique name for declaring runtime settings.  
+`[in] settingsName`: A unique name for declaring runtime settings.  
 
 **Return Value**
 

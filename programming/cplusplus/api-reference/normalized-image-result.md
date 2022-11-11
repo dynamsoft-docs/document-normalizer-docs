@@ -40,7 +40,7 @@ int dynamsoft::ddn::CDocumentNormalizer::SaveToFile(const char* filePath)
 
 **Parameters**
 
-`[in] filePath` The path of the output image file with the extension specifying the image format. It supports BMP, PNG, JPEG and PDF file types.
+`[in] filePath` The path of the output image file with the extension specifying the image format. It supports BMP, PNG, JPEG and PDF file types. If the target file exists, the image will be appended to the last page of the PDF file while the BMP, PNG and JPEG file will be replaced.
 
 **Return Value**
 

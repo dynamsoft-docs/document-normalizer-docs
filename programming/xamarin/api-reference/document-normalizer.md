@@ -352,7 +352,7 @@ string OutputRuntimeSettings(string settingsName);
 
 **Parameters** 
 
-`[in] settingsName` A unique name for declaring runtime settings.  
+`[in] settingsName`: A unique name for declaring runtime settings.  
 
 **Return Value**
 
@@ -376,8 +376,8 @@ void SaveToFile(NormalizedImageResult result, string filePath);
 
 **Parameters** 
 
-`[in] result` A `NormalizedImageResult` object, which is the output of `Normalize` methods.  
-`[in] filePath` Specify a file path for the output file.
+`[in] result`: A `NormalizedImageResult` object, which is the output of `Normalize` methods.  
+`[in] filePath`: The path of the output image with the extension specifying the image format. It supports BMP, PNG, JPEG and PDF file types. If the target file exists, the image will be appended to the last page of the PDF file while the BMP, PNG and JPEG file will be replaced.
 
 **Code Snippet**
 

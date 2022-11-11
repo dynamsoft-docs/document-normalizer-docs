@@ -116,7 +116,7 @@ DetectedQuadResult[] detectQuad(String fileFullPath) throws DocumentNormalizerEx
 
 **Parameters**
 
-`[in]fileFullPath`: A string defining the file path. It supports BMP, TIFF, JPG, PNG files.  
+`[in] fileFullPath`: A string defining the file path. It supports BMP, TIFF, JPG, PNG files.  
 
 **Return Value**
 
@@ -147,7 +147,7 @@ DetectedQuadResult[] detectQuad(Bitmap bitmap) throws DocumentNormalizerExceptio
 
 **Parameters**
 
-`[in]bitmap`: The android bitmap to be detected.
+`[in] bitmap`: The android bitmap to be detected.
 
 **Return Value**
 
