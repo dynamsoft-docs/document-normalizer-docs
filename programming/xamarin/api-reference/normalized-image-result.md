@@ -30,5 +30,5 @@ class DDNXamarin.NormalizedImageResult
 The ImageData of the normalized image.
 
 ```csharp
-ImageData Image;
+public ImageData Image;
 ```

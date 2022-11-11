@@ -16,8 +16,6 @@ description: Documentation Homepage
   - [iOS]({{ site.ios }})
   - [C]({{ site.c }})
   - [C++]({{ site.cpp }})
-  - [Xamarin.Forms]({{ site.xamarin }})
-  - [JavaScript]({{ site.javascript }})
 
 - [Parameters]({{ site.parameters }})
   - [Parameter Organization Structure]({{ site.parameters }}parameter-organization-structure.html)

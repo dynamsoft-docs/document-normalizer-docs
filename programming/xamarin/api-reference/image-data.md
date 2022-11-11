@@ -42,7 +42,7 @@ class DDNXamarin.ImageData
 The byte data of the image.
 
 ```csharp
-IList<byte> Bytes;
+public IList<byte> Bytes;
 ```
 
 ### Width
@@ -50,7 +50,7 @@ IList<byte> Bytes;
 The width of the image.
 
 ```csharp
-int Width;
+public int Width;
 ```
 
 ### Height
@@ -58,7 +58,7 @@ int Width;
 The height of the image.
 
 ```csharp
-int Height;
+public int Height;
 ```
 
 ### Stride
@@ -66,7 +66,7 @@ int Height;
 The stride of the image.
 
 ```csharp
-int Stride;
+public int Stride;
 ```
 
 ### Format
@@ -74,7 +74,7 @@ int Stride;
 The pixel format of the image.
 
 ```csharp
-int Format;
+public int Format;
 ```
 
 ### orientation
@@ -87,7 +87,7 @@ The orientation of the image. The following image illustrates the `orientation` 
 </div>
 
 ```csharp
-int Orientation;
+public int Orientation;
 ```
 
 ### ToImageSource
@@ -95,5 +95,5 @@ int Orientation;
 Convert the `ImageData` to `Xamarin.Forms.ImageSource`.
 
 ```csharp
-ImageSource toImageSource();
+public ImageSource toImageSource();
 ```

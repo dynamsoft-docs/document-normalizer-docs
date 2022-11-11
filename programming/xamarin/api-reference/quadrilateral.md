@@ -44,7 +44,7 @@ Xamarin.Forms.Point[] points
 Get the bounding rectangle of the quadrilateral.
 
 ```csharp
-Rect getBoundingRect();
+public Rect getBoundingRect();
 ```
 
 **Return Value**
