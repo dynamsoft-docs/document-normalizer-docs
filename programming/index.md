@@ -11,4 +11,4 @@ description: Dynamsoft Document Normalizer - Programming
 - [C](c/)
 - [C++](cplusplus/)
 - [JavaScript](javascript/)
-- [Xamarin](xamarin/)
+- [Xamarin.Forms](xamarin/)

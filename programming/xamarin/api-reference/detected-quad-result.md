@@ -13,16 +13,7 @@ noTitleIndex: true
 Stores the detected quad result.
 
 ```csharp
-namespace DDNXamarin
-{
-    public class DetectedQuadResult
-    {
-        // The location of the detected quadrilateral.
-        public Quadrilateral Location { get; set; }
-        // How much confidence do we define the quad as a document boundary.
-        public int ConfidenceAsDocumentBoundary { get; set; }
-    }
-}
+class DetectedQuadResult
 ```
 
 ## Attributes
@@ -39,7 +30,7 @@ namespace DDNXamarin
 The location of the detected quadrilateral.
 
 ```csharp
-public Quadrilateral Location
+Quadrilateral Location
 ```
 
 ### ConfidenceAsDocumentBoundary
@@ -47,5 +38,5 @@ public Quadrilateral Location
 How much confidence do we define the quad as a document boundary.
 
 ```csharp
-public int ConfidenceAsDocumentBoundary
+int ConfidenceAsDocumentBoundary
 ```
