@@ -237,7 +237,7 @@ public void setVisible(boolean visible);
 
 **Parameters**
 
-`visible`
+`visible`:
 
 - true: The `DrawingLayer` will be visible
 - false: The `DrawingLayer` will be invisible.
