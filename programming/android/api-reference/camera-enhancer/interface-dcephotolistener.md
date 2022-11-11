@@ -31,7 +31,7 @@ photoOutputCallback(byte[] var1)
 
 **Parameters**
 
-`var1` The byte data of the captured image.
+`var1`: The byte data of the captured image.
 
 **Code Snippet**
 

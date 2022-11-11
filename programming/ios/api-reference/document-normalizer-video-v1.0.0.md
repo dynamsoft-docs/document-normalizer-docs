@@ -36,7 +36,7 @@ Bind a `Dynamsoft Camera Enhancer` instance to the Document Normalizer. `Dynamso
 
 **Parameters**
 
-`[in] cameraInstance` An instance of `Dynamsoft Camera Enhancer`.
+`[in] cameraInstance`: An instance of `Dynamsoft Camera Enhancer`.
 
 **Code Snippet**
 
@@ -139,7 +139,7 @@ Set the callback interface to process detection results generated during frame d
 
 **Parameters**
 
-`[in] detectResultListener` The Callback interface.
+`[in] detectResultListener`: The Callback interface.
 
 **Code Snippet**
 

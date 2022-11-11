@@ -19,7 +19,7 @@ class com.dynamsoft.dce.RectDrawingItem extends DrawingItem
 
 | Method | Descriptions |
 | ------ | ------------ |
-| [`RectDrawingItem`](#Rectdrawingitem) | The constructor of `RectDrawingItem`. Create an instance of `RectDrawingItem`. |
+| [`RectDrawingItem`](#rectdrawingitem) | The constructor of `RectDrawingItem`. Create an instance of `RectDrawingItem`. |
 | [`getMediaType`](#getmediatype) | Get the media type of the `RectDrawingItem`. |
 | [`getRect`](#getrect) | Get the `Rect` of the `RectDrawingItem`. |
 | [`getDrawingStyleId`](#getdrawingstyleid) | Get the drawing style of the current drawing item. |
@@ -39,7 +39,7 @@ public RectDrawingItem(android.graphics.Rect rect);
 
 **Parameters**
 
-`rect` The `Rect` that indicates the location of the `RectDrawingItem`.
+`rect`: The `Rect` that indicates the location of the `RectDrawingItem`.
 
 **Code Snippet**
 

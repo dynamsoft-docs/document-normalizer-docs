@@ -92,9 +92,9 @@ Set the position, size and image for the torch button.
 
 **Parameters**
 
-`frame` The frame of torch button. It includes the width, height and top-left corner coordinate of the torch button. You can input a nil value to apply no changes on the frame of button.  
-`torchOnImage` Display this image when the torch is on. You can input a null value to apply no changes to the image of the torch button when the torch is on.  
-`torchOffImage` Display this image when the torch is off. You can input a null value to apply no changes to the image of the torch button when the torch is off.
+`frame`: The frame of torch button. It includes the width, height and top-left corner coordinate of the torch button. You can input a nil value to apply no changes on the frame of button.  
+`torchOnImage`: Display this image when the torch is on. You can input a null value to apply no changes to the image of the torch button when the torch is on.  
+`torchOffImage`: Display this image when the torch is off. You can input a null value to apply no changes to the image of the torch button when the torch is off.
 
 **Code Snippet**
 
@@ -140,7 +140,7 @@ When the property value is true, the torch button should be displayed. Otherwise
 
 **Parameters**
 
-`id` The id of the drawing layer.
+`id`: The id of the drawing layer.
 
 **Available ID List**
 
@@ -242,8 +242,8 @@ Set the stroke and fill in colour of the overlay(s).
 
 **Parameters**
 
-`stroke` The stroke colour of the overlay.  
-`fill` The fill in colour of the overlay.
+`stroke`: The stroke colour of the overlay.  
+`fill`: The fill in colour of the overlay.
 
 **Code Snippet**
 
@@ -296,10 +296,10 @@ Set the attribute of the viewfinder. Currently only available for position and s
 
 **Parameters**
 
-`left` The distance (by percentage) between the left border of the viewfinder and the left side of the screen. The default value is 0.15.  
-`top` The distance (by percentage) between the top border of the viewfinder and the top side of the screen. The default value is 0.3.  
-`right` The distance (by percentage) between the right border of the viewfinder and the left side of the screen. The default value is 0.85.  
-`bottom` The distance (by percentage) between the bottom border of the viewfinder and the top side of the screen. The default value is 0.7.
+`left`: The distance (by percentage) between the left border of the viewfinder and the left side of the screen. The default value is 0.15.  
+`top`: The distance (by percentage) between the top border of the viewfinder and the top side of the screen. The default value is 0.3.  
+`right`: The distance (by percentage) between the right border of the viewfinder and the left side of the screen. The default value is 0.85.  
+`bottom`: The distance (by percentage) between the bottom border of the viewfinder and the top side of the screen. The default value is 0.7.
 
 **Code Snippet**
 

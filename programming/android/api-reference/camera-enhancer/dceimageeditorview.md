@@ -37,7 +37,7 @@ public void setOriginalImage(ImageData imageData);
 
 **Parameters**
 
-`imageData` The `imageData` of the image.
+`imageData`: The `imageData` of the image.
 
 **Code Snippet**
 
@@ -79,7 +79,7 @@ public DCEDrawingLayer getDrawingLayer(int id);
 
 **Parameters**
 
-`id` The id of the `DrawingLayer`.
+`id`: The id of the `DrawingLayer`.
 
 **Available ID List**
 

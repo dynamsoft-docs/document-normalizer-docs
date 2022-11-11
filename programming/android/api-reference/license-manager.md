@@ -34,9 +34,9 @@ static void initLicense(String license, android.content.Contex contex, LicenseVe
 
 **Parameters**
 
-`[in] license` The license key.
-`[in] contex` The interface to global information about an application environment.
-`[in] listener` The listener that handles callback when the license server returns.
+`[in] license`: The license key.
+`[in] contex`: The interface to global information about an application environment.
+`[in] listener`: The listener that handles callback when the license server returns.
 
 **Code Snippet**
 

@@ -36,7 +36,7 @@ Sets an instance of ImageSource to get images. `DynamsoftCameraEnhancer` is a sp
 
 **Parameters**
 
-`[in] source` An instance of ImageSource. If you are using `Dynamsoft Camera Enhancer`(DCE) to capture camera frames, pass an instance of `DynamsoftCameraEnhancer`.
+`[in] source`: An instance of ImageSource. If you are using `Dynamsoft Camera Enhancer`(DCE) to capture camera frames, pass an instance of `DynamsoftCameraEnhancer`.
 
 **Code Snippet**
 
@@ -139,7 +139,7 @@ Set the callback interface to process detection results generated during frame d
 
 **Parameters**
 
-`[in] detectResultListener` The Callback interface.
+`[in] detectResultListener`: The Callback interface.
 
 **Code Snippet**
 

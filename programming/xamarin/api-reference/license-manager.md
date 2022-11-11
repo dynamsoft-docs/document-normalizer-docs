@@ -34,8 +34,8 @@ void InitLicense(string license, ILicenseVerificationListener licenseListener);
 
 **Parameters**
 
-`[in] license` The license key.
-`[in] licenseListener` The listener that handles callback when the license server returns.
+`[in] license`: The license key.
+`[in] licenseListener`: The listener that handles callback when the license server returns.
 
 **Code Snippet**
 

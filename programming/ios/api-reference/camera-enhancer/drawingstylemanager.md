@@ -34,7 +34,7 @@ Get the `DrawingStyle` instance with the style ID.
 
 **Parameters**
 
-`styleId` The ID of the target `DrawingStyle`.
+`styleId`: The ID of the target `DrawingStyle`.
 
 **Return Value**
 
@@ -87,11 +87,11 @@ Create a user-defined `DrawingStyle` instance.
 
 **Parameters**
 
-`strokeColor` The stroke colour.
-`strokeWidth` The width of the stroke.
-`fillColor` The fill colour.
-`textColor` The text colour.
-`font` The font style of the text.
+`strokeColor`: The stroke colour.
+`strokeWidth`: The width of the stroke.
+`fillColor`: The fill colour.
+`textColor`: The text colour.
+`font`: The font style of the text.
 
 **Code Snippet**
 

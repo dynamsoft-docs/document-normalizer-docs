@@ -104,7 +104,7 @@ CameraEnhancer(android.app.Activity activity)
 
 **Parameters**
 
-`activity` The target activity.
+`activity`: The target activity.
 
 **Code Snippet**
 
@@ -165,7 +165,7 @@ void selectCamera(EnumCameraPosition cameraPosition) throws CameraEnhancerExcept
 
 **Parameters**
 
-`cameraPosition` An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
+`cameraPosition`: An `EnumCameraPosition` value that indicates front-facing or back-facing camera.
 
 **Code Snippet**
 
@@ -206,7 +206,7 @@ void selectCamera(String cameraID) throws CameraEnhancerException
 
 **Parameters**
 
-`cameraID` A `String` value that listed in the `cameraIDList` returned by `getAllCameras`. The method will have no effects if the input value does not exist in the `cameraIDList`.
+`cameraID`: A `String` value that listed in the `cameraIDList` returned by `getAllCameras`. The method will have no effects if the input value does not exist in the `cameraIDList`.
 
 **Code Snippet**
 
@@ -391,7 +391,7 @@ DCEFrame getFrameFromBuffer(boolean isKeep)
 
 **Parameters**
 
-`isKeep` If set to `true`, the frame will be kept in the video buffer. Otherwise, it will be removed from the video buffer.
+`isKeep`: If set to `true`, the frame will be kept in the video buffer. Otherwise, it will be removed from the video buffer.
 
 **Return Value**
 
@@ -416,7 +416,7 @@ void addListener(DCEFrameListener listener)
 
 **Parameters**
 
-`listener` An object of `DCEFrameListener`. Its callback method `frameOutputCallback` will be available for users to make further operations on the captured video frame.
+`listener`: An object of `DCEFrameListener`. Its callback method `frameOutputCallback` will be available for users to make further operations on the captured video frame.
 
 **Code Snippet**
 
@@ -444,7 +444,7 @@ void removeListener(DCEFrameListener listener)
 
 **Parameters**
 
-`listener` The input listener will be removed from the Camera Enhancer instance.
+`listener`: The input listener will be removed from the Camera Enhancer instance.
 
 **Code Snippet**
 
@@ -474,7 +474,7 @@ void takePhoto(DCEPhotoListener listener)
 
 **Parameters**
 
-`listener` An instance of [`DCEPhotoListener`](interface-dcephotolistener.md).
+`listener`: An instance of [`DCEPhotoListener`](interface-dcephotolistener.md).
 
 **Code Snippet**
 
@@ -501,7 +501,7 @@ void enableFeatures(int enhancerFeatures) throws CameraEnhancerException
 
 **Parameters**
 
-`enhancerFeatures` The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).  
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).  
 
 **Code Snippet**
 
@@ -526,7 +526,7 @@ void disableFeatures(int enhancerFeatures)
 
 **Parameters**
 
-`enhancerFeatures` The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
 
 **Code Snippet**
 
@@ -552,12 +552,12 @@ boolean isFeatureEnabled(int enhancerFeatures)
 
 **Parameters**
 
-`enhancerFeatures` The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
+`enhancerFeatures`: The combined value of [`EnumEnhancerFeatures`](enum-enhancer-features.md).
 
 **Return Value**
 
-`True` All the features you input are enabled.  
-`False` There is at least one feature that is not enabled among your input values.
+`True`: All the features you input are enabled.  
+`False`: There is at least one feature that is not enabled among your input values.
 
 **Code Snippet**
 
@@ -627,7 +627,7 @@ void setResolution(EnumResolution resolution) throws CameraEnhancerException
 
 **Parameters**
 
-`resolution` One of the int value that preset in [`EnumResolution`](enum-resolution.md).
+`resolution`: One of the int value that preset in [`EnumResolution`](enum-resolution.md).
 
 **Code Snippet**
 
@@ -671,7 +671,7 @@ void setZoom(float factor) throws CameraEnhancerException
 
 **Parameters**
 
-`factor` The target zoom factor.
+`factor`: The target zoom factor.
 
 **Code Snippet**
 
@@ -693,8 +693,8 @@ void setFocus(float x, float y) throws CameraEnhancerException
 
 **Parameters**
 
-`x` The x-coordinate of the targeting focus position.  
-`y` The y-coordinate of the targeting focus position.
+`x`: The x-coordinate of the targeting focus position.  
+`y`: The y-coordinate of the targeting focus position.
 
 **Code Snippet**
 
@@ -716,7 +716,7 @@ void setScanRegion(RegionDefinition scanRegion) throws CameraEnhancerException
 
 **Parameters**
 
-`scanRegion` Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`](region-definition.md) class.
+`scanRegion`: Use a RegionDefinition value to specify the scan region. The parameter will be optimized to the maximum or minimum available value if the input parameter is out of range. For more information, please view [`RegionDefinition`](region-definition.md) class.
 
 **Code Snippet**
 
@@ -783,7 +783,7 @@ void setScanRegionVisible(boolean scanRegionVisible)
 
 **Parameters**
 
-`scanRegionVisible` When the value is set to true, the **scanRegion** will be displayed on the UI. Otherwise, the **scanRegion** will not be displayed.
+`scanRegionVisible`: When the value is set to true, the **scanRegion** will be displayed on the UI. Otherwise, the **scanRegion** will not be displayed.
 
 **Code Snippet**
 
@@ -827,7 +827,7 @@ void updateAdvancedSettingsFromFile(String filePath) throws CameraEnhancerExcept
 
 **Parameters**
 
-`filePath` The file path of the JSON file.
+`filePath`: The file path of the JSON file.
 
 **Code Snippet**
 
@@ -853,7 +853,7 @@ void updateAdvancedSettingsFromString(String jsonString) throws CameraEnhancerEx
 
 **Parameters**
 
-`jsonString` A stringified JSON data.
+`jsonString`: A stringified JSON data.
 
 **Code Snippet**
 
@@ -875,7 +875,7 @@ void setCameraView(DCECameraView cameraView)
 
 **Parameters**
 
-`cameraView` The main UI view. See also [`DCECameraView`](dcecameraview.md).
+`cameraView`: The main UI view. See also [`DCECameraView`](dcecameraview.md).
 
 **Code Snippet**
 

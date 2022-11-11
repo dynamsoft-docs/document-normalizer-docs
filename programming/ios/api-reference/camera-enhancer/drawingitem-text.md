@@ -38,8 +38,8 @@ The constructor of `TextDrawingItem`. Initialize the instance of `TextDrawingIte
 
 **Parameters**
 
-`text` The text of the `TextDrawingItem`.
-`textRect` The `CGRect` that indicates the location of the `TextDrawingItem`.
+`text`: The text of the `TextDrawingItem`.
+`textRect`: The `CGRect` that indicates the location of the `TextDrawingItem`.
 
 **Code Snippet**
 

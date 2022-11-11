@@ -37,7 +37,7 @@ The constructor of `RectDrawingItem`. Initialize the instance of `RectDrawingIte
 
 **Parameters**
 
-`rect` A `Rect` that indicates the location of the `RectDrawingItem`.
+`rect`: A `Rect` that indicates the location of the `RectDrawingItem`.
 
 **Code Snippet**
 

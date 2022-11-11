@@ -34,8 +34,8 @@ Read the license key and activate the SDK.
 
 **Parameters**
 
-`[in] license` The license key.
-`[in] listener` The listener that handles callback when the license server returns.
+`[in] license`: The license key.
+`[in] listener`: The listener that handles callback when the license server returns.
 
 **Code Snippet**
 

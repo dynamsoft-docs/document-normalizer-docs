@@ -33,7 +33,7 @@ breadcrumbText: iOS DCEImageEditorView Class
 
 **Parameters**
 
-`imageData` The `imageData` of the image.
+`imageData`: The `imageData` of the image.
 
 **Code Snippet**
 
@@ -83,7 +83,7 @@ let imageData = imageEditorView.getOriginalImage()
 
 **Parameters**
 
-`id` The id of the drawing layer.
+`id`: The id of the drawing layer.
 
 **Available ID List**
 
