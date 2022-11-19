@@ -113,16 +113,16 @@ Defines the ROI directly by specifying the region coordinates. This mode has the
 
 ```json
 {
-    "RegionPredetectionModes": [
-        {
-            "Mode": "RPM_GENERAL_RGB_CONTRAST", 
-            "Sensitivity": 5
-        },
-        {
-            "Mode": "RPM_GENERAL_HSV_CONTRAST", 
-            "WidthRange": "[100, 200]"
-        }
-    ]
+    "RegionPredetectionModes": [
+        {
+            "Mode": "RPM_GENERAL_RGB_CONTRAST", 
+            "Sensitivity": 5
+        },
+        {
+            "Mode": "RPM_GENERAL_HSV_CONTRAST", 
+            "WidthRange": "[100, 200]"
+        }
+    ]
 }
 ```
 
@@ -243,7 +243,7 @@ Specifies the name of ImageParameter Object which defines the parameters used fo
 
 **Remarks**
 
-Definition of An [ImageParameter Object](image-parameter/index.md).
+Definition of An [ImageParameter Object](../parameter-organization-structure.md#imageparameter-object).
 
 ### MeasuredByPercentage
 
