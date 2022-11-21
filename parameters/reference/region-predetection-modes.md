@@ -165,7 +165,7 @@ Sets whether to enable finding accurate boundary.
 
 | Value Type | Value Range | Default Value | Valid For |
 | ---------- | ----------- | ------------- | --------- |
-| *int* | [0, 1] | 0 | RPM_MANUAL_SPECIFICATION |
+| *int* | [0, 1] | 0 | `RPM_GENERAL_HSV_CONTRAST` |
 
 **Remarks**
 
