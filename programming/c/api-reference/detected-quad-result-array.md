@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DetectedQuadResultArray Struct
+title: DetectedQuadResultArray Struct - Dynamsoft Document Normalizer SDK C Edition
 description: This page shows DetectedQuadResultArray struct definition of Dynamsoft Document Normalizer SDK C Edition.
 keywords: DetectedQuadResultArray, struct, api reference
 ---

@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: CDocumentNormalizer - General Methods
-description: This page shows General Methods of class CDocumentNormalizer of Dynamsoft Document Normalizer SDK C++ Edition.
-keywords: DDN_FreeDetectedQuadResultArray, DDN_FreeNormalizedImageResult, DDN_FreeString, DDN_SaveImageDataToFile, CDocumentNormalizer, api reference, c++
+title: Result Methods - Dynamsoft Document Normalizer SDK C Edition
+description: This page shows Result Methods of Dynamsoft Document Normalizer SDK C Edition.
+keywords: DDN_FreeDetectedQuadResultArray, DDN_FreeNormalizedImageResult, DDN_FreeString, NormalizedImageResult_SaveToFile, , api reference, c
 ---
 
 # Result Methods

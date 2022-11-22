@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: ImageData Struct
+title: ImageData Struct - Dynamsoft Document Normalizer SDK C Edition
 description: This page shows ImageData struct definition of Dynamsoft Document Normalizer SDK C Edition.
 keywords: ImageData, struct, api reference
 ---

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Detecting and Normalizing Methods
+title: Detecting and Normalizing Methods - Dynamsoft Document Normalizer SDK C Edition
 description: This page shows Detecting and Normalizing Methods of Dynamsoft Document Normalizer SDK C Edition.
 keywords: DDN_DetectQuadFromBuffer, DDN_DetectQuadFromFile, DDN_NormalizeBuffer, DDN_NormalizeFile, api reference, c
 ---

@@ -1,11 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Document Normalizer C++ API Reference - Main Page
-description: This is the main page of Dynamsoft Document Normalizer SDK API Reference for C++ Language.
-keywords: CDocumentNormalizer, api reference, C++
+title: Dynamsoft Document Normalizer C API Reference - Main Page
+description: This is the main page of Dynamsoft Document Normalizer SDK API Reference for C Language.
+keywords: DocumentNormalizer, api reference, C
 ---
 
-# API Reference - C++
+# API Reference - C Edition
 
 ## Global Functions
 

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Initialize and Destroy Functions
+title: Initialize and Destroy Functions - Dynamsoft Document Normalizer SDK C Edition
 description: This page shows Initialize and Destroy Functions of Dynamsoft Document Normalizer SDK C Edition.
 keywords: DC_InitLicense, DDN_CreateInstance, DDN_DestroyInstance, api reference, c
 ---
