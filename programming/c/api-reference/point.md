@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DM_Point Struct
+title: DM_Point Struct - Dynamsoft Document Normalizer SDK C Edition
 description: This page shows DM_Point struct definition of Dynamsoft Document Normalizer SDK C Edition.
 keywords: DM_Point, struct, api reference
 ---

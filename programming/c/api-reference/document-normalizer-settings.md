@@ -1,7 +1,7 @@
 ---
 layout: default-layout
-title: Setting Methods
-description: This page shows Setting Methods of Dynamsoft Document Normalizer SDK C++ Edition.
+title: Setting Methods - Dynamsoft Document Normalizer SDK C Edition
+description: This page shows Setting Methods of Dynamsoft Document Normalizer SDK C Edition.
 keywords: DDN_InitRuntimeSettingsFromFile, DDN_InitRuntimeSettingsFromString, DDN_OutputRuntimeSettingsToFile, DDN_OutputRuntimeSettingsToString, api reference, c
 ---
 

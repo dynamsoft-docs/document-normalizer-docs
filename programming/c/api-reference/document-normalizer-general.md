@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: General Methods
+title: General Methods - Dynamsoft Document Normalizer SDK C Edition
 description: This page shows General Methods of Dynamsoft Document Normalizer SDK C Edition.
 keywords: DC_GetErrorString, DDN_GetVersion, CDocumentNormalizer, api reference, c
 ---

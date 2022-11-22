@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DetectedQuadResult Struct
+title: DetectedQuadResult Struct - Dynamsoft Document Normalizer SDK C Edition
 description: This page shows DetectedQuadResult struct definition of Dynamsoft Document Normalizer SDK C Edition.
 keywords: Location, ConfidenceAsDocumentBoundary, DetectedQuadResult, struct
 ---
