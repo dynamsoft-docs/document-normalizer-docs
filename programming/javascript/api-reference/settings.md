@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: Dynamsoft Label Recognizer JavaScript API - Settings APIs
-description: This page shows the settings APIs of Dynamsoft Label Recognizer JavaScript SDK.
-keywords: label recognizer, api reference, javascript, js, settings
+title: Dynamsoft Document Normalizer JavaScript API - Settings APIs
+description: This page shows the settings APIs of Dynamsoft Document Normalizer JavaScript SDK.
+keywords: document normalizer, api reference, javascript, js, settings
 needAutoGenerateSidebar: true
 needGenerateH3Content: true
 noTitleIndex: true
