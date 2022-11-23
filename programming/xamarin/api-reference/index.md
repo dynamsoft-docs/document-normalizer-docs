@@ -36,8 +36,8 @@ noTitleIndex: true
 
 ### Enumerations
 
-| Class | Description |
-| ----- | ----------- |
+| Enumeration | Description |
+| ----------- | ----------- |
 | [`EnumImagePixelFormat`](enum-image-pixel-format.md) | The enumeration that indicates the image pixel format. |
 
 ## namespace DCVXamarin.Droid
