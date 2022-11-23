@@ -1,6 +1,6 @@
 ---
-layout: default|layout
-title: Dynamsoft Document Normalizer Xamarin.Forms API Reference | Main Page
+layout: default-layout
+title: Dynamsoft Document Normalizer Xamarin.Forms API Reference - Main Page
 description: This is the main page of Dynamsoft Document Normalizer for Xamarin.Forms SDK API Reference.
 keywords: api reference, Xamarin.Forms
 needAutoGenerateSidebar: true
@@ -36,7 +36,9 @@ noTitleIndex: true
 
 ### Enumerations
 
-| [`EnumImagePixelFormat`](enum-image-pixel-format.md)
+| Enumeration | Description |
+| ----------- | ----------- |
+| [`EnumImagePixelFormat`](enum-image-pixel-format.md) | The enumeration that indicates the image pixel format. |
 
 ## namespace DCVXamarin.Droid
 
