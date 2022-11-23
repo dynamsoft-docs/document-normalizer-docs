@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Dynamsoft Document Normalizer Xamarin.Forms API Reference | Main Page
+title: Dynamsoft Document Normalizer Xamarin.Forms API Reference - Main Page
 description: This is the main page of Dynamsoft Document Normalizer for Xamarin.Forms SDK API Reference.
 keywords: api reference, Xamarin.Forms
 needAutoGenerateSidebar: true
