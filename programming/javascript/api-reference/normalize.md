@@ -62,7 +62,7 @@ let quads4 = await normalizer.detectQuad(htmlCanvasElement);
 **See also**
 
 * [Blob](https://developer.mozilla.org/en-US/docs/Web/API/Blob)
-* [DSImage](./interface/dsimage.md)
+* [DSImage](./interfaces/dsimage.md)
 * [DCEFrame](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/interface/dceframe.html?ver=latest)
 * [HTMLImageElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement)
 * [HTMLCanvasElement](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement)
