@@ -25,7 +25,7 @@ breadcrumbText: Settings APIs
 | API Name | Description |
 |---|---|
 | [getRuntimeSettings()](#getruntimesettings) | Gets runtime settings with a template represented by a JSON object. |
-| [setRuntimeSettings()](#setruntimesettings) | Sets runtime settings with a JSON object or a built-in template. |
+| [setRuntimeSettings()](#setruntimesettings) | Sets runtime settings with a JSON object or a built-in template or a template string. |
 | [resetRuntimeSettings()](#resetruntimesettings) | Resets all runtime setting parameters to default values. |
 
 ## getScanSettings
@@ -74,7 +74,7 @@ await normalizer.updateScanSettings(scanSettings);
 
 ## getRuntimeSettings
 
-Gets current runtime settings with a template represented by a JSON object.
+Gets current runtime settings with a template represented by [`a JSON object`](../../../parameters/parameter-organization-structure.md#example).
 
 ```typescript
 getRuntimeSettings(): Promise<object>
@@ -92,7 +92,7 @@ let settings = await normalizer.getRuntimeSettings();
 
 ## setRuntimeSettings
 
-Sets runtime settings with a JSON object or a built-in template.
+Sets runtime settings with a JSON object or a built-in template or a template string.
 
 ```typescript
 setRuntimeSettings(settings: object | string): Promise<void>
@@ -100,7 +100,7 @@ setRuntimeSettings(settings: object | string): Promise<void>
 
 **Parameters**
 
-`settings` : a JSON object that contains the new runtime settings or a string which refers to a built-in template. As of version 1.0.10, the only built-in template is "lowcontrast", which, as the name suggests, is optimized for detecting document boundaries with colors similar to the surrounding environment.
+`settings` : a JSON object that contains the new runtime settings or a string which refers to a built-in template or a template string. As of version 1.0.10, the only built-in template is "lowcontrast", which, as the name suggests, is optimized for detecting document boundaries with colors similar to the surrounding environment.
 
 **Return value**
 
