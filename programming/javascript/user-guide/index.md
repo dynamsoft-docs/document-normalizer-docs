@@ -291,7 +291,7 @@ await normalizer.updateScanSettings(scanSettings);
 // Sets up the runtime settings
 let runtimeSettings = await normalizer.getRuntimeSettings();
 runtimeSettings.ImageParameterArray[0].BinarizationModes[0].ThresholdCompensation = 3;
-runtimeSettings.ImageParameterArray[0].ScaleDownThreshold = 500;
+runtimeSettings.ImageParameterArray[0].ScaleDownThreshold = 512;
 await normalizer.setRuntimeSettings(runtimeSettings);
 
 // or uses a built-in runtime setting template "lowcontrast"

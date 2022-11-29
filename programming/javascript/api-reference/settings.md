@@ -111,7 +111,7 @@ A promise that resolves when the operation succeeds.
 ```js
 let settings = await normalizer.getRuntimeSettings();
 settings.ImageParameterArray[0].BinarizationModes[0].ThresholdCompensation = 3;
-settings.ImageParameterArray[0].ScaleDownThreshold = 500;
+settings.ImageParameterArray[0].ScaleDownThreshold = 512;
 await normalizer.setRuntimeSettings(settings);
 
 //or use a built-in template "lowcontrast"
