@@ -25,7 +25,7 @@ if(normalizedImageResult) {
     document.querySelector("#normalized-result").appendChild(cvs);
 }
 // Download the normalized image
-let img = await normalizedImageResult.saveToFile("example", true);
+let img = await normalizedImageResult.saveToFile("example.png", true);
 ```
 
 * Detect and normalize continuous video frames

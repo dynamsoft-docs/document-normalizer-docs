@@ -38,7 +38,7 @@ saveToFile: (name: string, download?: boolean) => Promise<File>;
 
 **Parameters**
 
-`name` : specifies the name of the `File` object in memory. If a `File` object with the same name exists, replace it. A file extension shall be used in the name to specify the file's format. All image formats are valid.
+`name` : specifies the name of the `File` object in memory. If a `File` object with the same name exists, replace it. `.png` or `.jpg` must be used to specify the file's format in the name.
 
 `download`: specifies whether to download the file once it's created. If set to false or not specified, keep the file in memory.
 
@@ -49,5 +49,5 @@ A promise resolving to the `File` that stores the normalized image data.
 **Code snippet**
 
 ```js
-let resultImg = await normalizedImageResult.saveToFile("example.png");
+let resultImg = await normalizedImageResult.saveToFile("example.png"); //.png or .jpg must be used in the name
 ```
