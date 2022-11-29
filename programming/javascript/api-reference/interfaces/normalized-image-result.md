@@ -44,10 +44,10 @@ saveToFile: (name: string, download?: boolean) => Promise<File>;
 
 **Return value**
 
-A promise resolving to the `File` that stores the normalized image data. Only two file formats are supported now: `PNG` and `JPEG`.
+A promise resolving to the `File` that stores the normalized image data in PNG format.
 
 **Code snippet**
 
 ```js
-let resultImg = await normalizedImageResult.saveToFile("example.png");
+let resultImg = await normalizedImageResult.saveToFile("example");
 ```
