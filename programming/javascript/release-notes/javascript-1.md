@@ -15,3 +15,14 @@ noTitleIndex: true
 ### Highlights
 
 {%- include release-notes/product-highlight-1.0.0.md -%}
+
+## 1.0.11 (12/01/2022)
+
+### Fixed
+
+* Fixed a bug where camera will be detected when an instance of `DocumentNormalizer` is created.
+* Fixed a bug where the normalized image may have black borders when setting `ColourMode` of `NormalizerParameter` to `ICM_BINARY`.
+
+### Changed
+
+* Reduced the size of `core.js`.
