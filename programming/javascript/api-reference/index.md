@@ -32,53 +32,34 @@ let img = await normalizedImageResult.saveToFile("example.png", true);
 
 ```js
 (async function() {
-    try {
-        let cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
-        let normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
-        let options = {
-            resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem
-        };
-        await normalizer.setImageSource(cameraEnhancer, options);
+    cameraEnhancer = await Dynamsoft.DCE.CameraEnhancer.createInstance();
+    normalizer = await Dynamsoft.DDN.DocumentNormalizer.createInstance();
+    await normalizer.setImageSource(cameraEnhancer, { resultsHighlightBaseShapes: Dynamsoft.DCE.DrawingItem });
 
-        await document.getElementById('div-ui-container').append(cameraEnhancer.getUIElement());
+    await document.getElementById('div-ui-container').append(cameraEnhancer.getUIElement());
     
-        // Triggered when a quadrilateral is detected from the video frame.
-        normalizer.onQuadDetected = (quadResults, sourceImage) => {
-            console.log(quadResults);
-        };
+    // Triggered when a quadrilateral is detected from a video frame.
+    normalizer.onQuadDetected = (quadResults, sourceImage) => {
+        console.log(quadResults);
+    };
 
-        // Pause the video and edit a quadrilateral when the button is clicked.
-        document.getElementById('confirmQuadForNormalization').addEventListener("click", () => {
-            normalizer.confirmQuadForNormalization();
-        })
+    // Click the button to pause the video and edit a quadrilateral.
+    document.getElementById('confirmQuadForNormalization').addEventListener("click", () => {
+        normalizer.confirmQuadForNormalization();
+    });
 
-        // Normalize with the confirmed quadrilateral when the button is clicked.
-        document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
-            try {
-                const normalizedImageResult = await normalizer.normalizeWithConfirmedQuad();
-                if(normalizedImageResult) {
-                    // Show the normalized image in a Canvas
-                    const cvs = normalizedImageResult.image.toCanvas();
-                    document.querySelector("#normalized-result").appendChild(cvs);
-                    console.log(normalizedImageResult);
-                }
-            } catch(ex) {
-                alert(ex.message || ex);
-            }
-        })
-
-        // Start video scanning.
-        await normalizer.startScanning(true);
-    } catch (ex) {
-        let errMsg;
-        if (ex.message.includes("network connection error")) {
-            errMsg = "Failed to connect to Dynamsoft License Server: network connection error. Check your Internet connection or contact Dynamsoft Support (support@dynamsoft.com) to acquire an offline license.";
-        } else {
-            errMsg = ex.message||ex;
+    // Click the button to normalize with the selected/adjusted quadrilateral.
+    document.getElementById('normalizeWithConfirmedQuad').addEventListener("click", async () => {
+        const normalizedImageResult = await normalizer.normalizeWithConfirmedQuad();
+        if(normalizedImageResult) {
+        // Show the normalized image in a Canvas
+        const cvs = normalizedImageResult.image.toCanvas();
+        document.querySelector("#normalized-result").appendChild(cvs);
+        console.log(normalizedImageResult);
         }
-        alert(errMsg);
-        console.error(errMsg);
-    }
+    });
+    // Start scanning document boundaries.
+    await normalizer.startScanning(true);
 })();
 ```
 
