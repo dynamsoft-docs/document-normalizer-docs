@@ -11,7 +11,7 @@ breadcrumbText: JavaScript
 
 ## Getting Started
 
-- [User Guide](user-guide.md)
+- [User Guide](user-guide/index.md)
 
 ## API Reference
 
