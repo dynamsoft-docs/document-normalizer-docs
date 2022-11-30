@@ -116,7 +116,7 @@ The complete code of the example is shown below:
 ```
 
 <p align="center" style="text-align:center; white-space: normal; ">
-  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/3ojhuyz6/" title="Run via JSFiddle">
+  <a target="_blank" href="https://jsfiddle.net/DynamsoftTeam/5vgh7rdx/" title="Run via JSFiddle">
     <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/jsfiddle.svg" alt="Run via JSFiddle" width="20" height="20" style="width:20px;height:20px;">
   </a>
 </p>
