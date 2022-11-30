@@ -14,10 +14,10 @@ noTitleIndex: true
 
 ### Fixed
 
-* Fixed a bug where camera will be detected when an instance of `DocumentNormalizer` is created.
+* Fixed a bug where the camera permission will be requested when an instance of `DocumentNormalizer` is created.
 * Fixed a bug where the normalized image may have black borders when setting `ColourMode` of `NormalizerParameter` to `ICM_BINARY`.
 
-### Changed
+### Improved
 
 * Reduced the size of `core.js`.
 
