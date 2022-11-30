@@ -10,12 +10,6 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK
 
-## 1.0.10 (11/04/2022)
-
-### Highlights
-
-{%- include release-notes/product-highlight-1.0.0.md -%}
-
 ## 1.0.11 (11/30/2022)
 
 ### Fixed
@@ -26,3 +20,10 @@ noTitleIndex: true
 ### Changed
 
 * Reduced the size of `core.js`.
+
+## 1.0.10 (11/04/2022)
+
+### Highlights
+
+{%- include release-notes/product-highlight-1.0.0.md -%}
+
