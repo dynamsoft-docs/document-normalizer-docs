@@ -16,7 +16,7 @@ noTitleIndex: true
 
 {%- include release-notes/product-highlight-1.0.0.md -%}
 
-## 1.0.11 (12/01/2022)
+## 1.0.11 (11/30/2022)
 
 ### Fixed
 
