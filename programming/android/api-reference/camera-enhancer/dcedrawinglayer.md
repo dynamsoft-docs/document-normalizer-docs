@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Android DCEDrawingLayer Class
+title: Android DCEDrawingLayer Class - Dynamsoft Document Normalizer Documents
 description: This is the documentation - Android DCEDrawingLayer Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android, DCEDrawingLayer
 needAutoGenerateSidebar: true

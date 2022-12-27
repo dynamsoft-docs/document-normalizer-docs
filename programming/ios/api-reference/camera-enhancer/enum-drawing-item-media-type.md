@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Enumeration - EnumDrawingItemMediaType
+title: iOS EnumDrawingItemMediaType - Dynamsoft Document Normalizer Documents
 description: This is the documentation - Enumeration of Drawing Item Media Type page of DynamsoftCameraEnhancer library.
 keywords:  Camera Enhancer, EnumDrawingItemMediaType
 needAutoGenerateSidebar: true

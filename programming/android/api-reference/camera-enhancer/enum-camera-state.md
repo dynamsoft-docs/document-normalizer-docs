@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Enumeration - EnumCameraState
+title: Android EnumCameraState - Dynamsoft Document Normalizer Documents
 description: This is the documentation - EnumCameraState page of CameraEnhancer library.
 keywords:  Camera Enhancer, EnumCameraState
 needAutoGenerateSidebar: true

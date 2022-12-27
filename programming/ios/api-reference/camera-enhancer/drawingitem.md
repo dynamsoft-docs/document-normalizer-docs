@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: iOS DrawingItem Class
+title: iOS DrawingItem Class - Dynamsoft Document Normalizer Documents
 description: This is the documentation - iOS DrawingItem Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS, DrawingItem
 needAutoGenerateSidebar: true

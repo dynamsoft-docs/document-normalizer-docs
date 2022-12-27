@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: iOS DCEImageEditorView Class
+title: iOS DCEImageEditorView Class - Dynamsoft Document Normalizer Documents
 description: This is the documentation - iOS DCEImageEditorView Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS, DCEImageEditorView
 needAutoGenerateSidebar: true

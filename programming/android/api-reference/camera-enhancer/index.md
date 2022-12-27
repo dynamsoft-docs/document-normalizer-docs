@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DDN - Camera Enhancer Library
+title: Android Camera Enhancer Library - Dynamsoft Document Normalizer Documents
 description: This is the main page of Camera Enhancer API Reference for Android SDK.
 keywords: api reference, Android, camera enhancer
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Android DCEFrame Class
+title: Android DCEFrame Class - Dynamsoft Document Normalizer Documents
 description: This is the documentation - Android DCEFrame Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android, DCEFrame
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: iOS Protocol DCEPhotoListener
+title: iOS Protocol DCEPhotoListener - Dynamsoft Document Normalizer Documents
 description: This is the documentation - iOS Protocol DCEPhotoListener page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, iOS Protocol DCEPhotoListener
 needAutoGenerateSidebar: true

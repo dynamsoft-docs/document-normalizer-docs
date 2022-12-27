@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Enumeration - EnumCameraState
+title: iOS EnumCameraState - Dynamsoft Document Normalizer Documents
 description: This is the documentation - Enumerations Camera State page of DynamsoftCameraEnhancer library.
 keywords:  Camera Enhancer, EnumCameraState
 needAutoGenerateSidebar: true
