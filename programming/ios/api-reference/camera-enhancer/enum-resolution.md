@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Enumeration - EnumResolution
+title: iOS EnumResolution - Dynamsoft Document Normalizer Documents
 description: This is the documentation - EnumResolution page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, EnumResolution
 needAutoGenerateSidebar: true

@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Android RegionDefinition Class
+title: Android RegionDefinition Class - Dynamsoft Document Normalizer Documents
 description: This page shows the RegionDefinition Class of Dynamsoft Camera Enhancer for Android SDK.
 keywords: RegionDefinition, class, api reference, android
 needAutoGenerateSidebar: true

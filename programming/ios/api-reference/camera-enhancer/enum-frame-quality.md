@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Enumeration - EnumFrameQuality
+title: iOS EnumFrameQuality - Dynamsoft Document Normalizer Documents
 description: This is the documentation - EnumFrameQuality page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, EnumFrameQuality
 needAutoGenerateSidebar: true

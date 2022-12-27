@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: DDN - DynamsoftCameraEnhancer Library
+title: iOS DynamsoftCameraEnhancer Library - Dynamsoft Document Normalizer Documents
 description: This is the main page of Camera Enhancer API Reference for iOS SDK.
 keywords: api reference, ios, camera enhancer
 needAutoGenerateSidebar: true

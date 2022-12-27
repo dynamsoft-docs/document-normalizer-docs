@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Android CameraEnhancerException Class
+title: Android CameraEnhancerException Class - Dynamsoft Document Normalizer Documents
 description: This is the documentation - Android CameraEnhancerException Class page of Dynamsoft Camera Enhancer.
 keywords:  Camera Enhancer, Android, CameraEnhancerException
 needAutoGenerateSidebar: true
