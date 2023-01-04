@@ -203,7 +203,14 @@ The detected quads in the raw image buffer. Refer [`DetectedQuadResult`](detecte
 ```csharp
 ImageData imageData = new ImageData();
 // assign value for imageData
-var quadResult = App.ddn.DetectQuad(imageData);
+try 
+{
+    var quadResult = App.ddn.DetectQuad(imageData);
+} 
+catch(Exception ex)
+{
+    Console.WriteLine("Exception caught: ", ex.Message);
+}
 ```
 
 ### DetectQuad(File)
@@ -225,7 +232,14 @@ The detected quads in the image file. Refer [`DetectedQuadResult`](detected-quad
 **Code Snippet**
 
 ```csharp
-var quadResult = App.ddn.DetectQuad("Your file path.");
+try 
+{
+    var quadResult = App.ddn.DetectQuad("Your file path.");
+}
+catch(Exception ex)
+{
+    Console.WriteLine("Exception caught: ", ex.Message);
+}
 ```
 
 ### Normalize(ImageData)
@@ -253,7 +267,14 @@ public void DetectResultCallback(int id, ImageData imageData, DetectedQuadResult
 {
     if (imageData != null && quadResults != null)
     {
-        var result = App.ddn.Normalize(data, quadResult[0].Location);
+        try 
+        {
+            var result = App.ddn.Normalize(data, quadResult[0].Location);
+        } 
+        catch(Exception ex)
+        {
+            Console.WriteLine("Exception caught: ", ex.Message);
+        }
     }
 }
 // ImageData in the callback is always a null value unless EnableReturnImageOnNextCallback is triggered.
@@ -281,8 +302,15 @@ The normalized image result. Refer [`NormalizedImageResult`](normalized-image-re
 **Code Snippet**
 
 ```csharp
-var quadResult = App.ddn.DetectQuad("Your file path.");
-var normalizeResult = App.ddn.Normalize("Your file path.", quadResult[0].Location);
+try 
+{
+    var quadResult = App.ddn.DetectQuad("Your file path.");
+    var normalizeResult = App.ddn.Normalize("Your file path.", quadResult[0].Location);
+} 
+catch(Exception ex)
+{
+    Console.WriteLine("Exception caught: ", ex.Message);
+}
 ```
 
 ## Runtime Settings Methods Details
@@ -302,7 +330,14 @@ void IntiRuntimeSettingsFromFile(string filePath);
 **Code Snippet**
 
 ```csharp
-App.ddn.IntiRuntimeSettingsFromFile("Your file path");
+try 
+{
+    App.ddn.IntiRuntimeSettingsFromFile("Your file path");
+}
+catch(Exception ex)
+{
+    Console.WriteLine("Exception caught: ", ex.Message);
+}
 ```
 
 ### InitRuntimeSettings
@@ -320,7 +355,14 @@ void InitRuntimeSettings(string content);
 **Code Snippet**
 
 ```csharp
-App.ddn.InitRuntimeSettings("Your template JSON string");
+try 
+{
+    App.ddn.InitRuntimeSettings("Your template JSON string");
+}
+catch(Exception ex)
+{
+    Console.WriteLine("Exception caught: ", ex.Message);
+}
 ```
 
 ### OutputRuntimeSettingsToFile
@@ -339,7 +381,14 @@ void OutputRuntimeSettingsToFile(string filePath, string settingsName);
 **Code Snippet**
 
 ```csharp
-App.ddn.OutputRuntimeSettingsToFile("Your file path", "");
+try 
+{
+    App.ddn.OutputRuntimeSettingsToFile("Your file path", "");
+}
+catch(Exception ex)
+{
+    Console.WriteLine("Exception caught: ", ex.Message);
+}
 ```
 
 ### OutputRuntimeSettings
@@ -361,7 +410,14 @@ The output JSON string which stores the contents of runtime settings.
 **Code Snippet**
 
 ```csharp
-String OutputTemplate = App.ddn.OutputRuntimeSettings("Your template name.");
+try 
+{
+    String OutputTemplate = App.ddn.OutputRuntimeSettings("Your template name.");
+}
+catch(Exception ex)
+{
+    Console.WriteLine("Exception caught: ", ex.Message);
+}
 ```
 
 ## General Methods Details
@@ -382,9 +438,16 @@ void SaveToFile(NormalizedImageResult result, string filePath);
 **Code Snippet**
 
 ```csharp
-var quadResult = App.ddn.DetectQuad("Path of original image.");
-var normalizeResult = App.ddn.Normalize("Path of original image.", quadResult[0].Location);
-App.ddn.SaveToFile(normalizeResult, "Path that you want to save the normalized image.");
+try 
+{
+    var quadResult = App.ddn.DetectQuad("Path of original image.");
+    var normalizeResult = App.ddn.Normalize("Path of original image.", quadResult[0].Location);
+    App.ddn.SaveToFile(normalizeResult, "Path that you want to save the normalized image.");
+}
+catch(Exception ex)
+{
+    Console.WriteLine("Exception caught: ", ex.Message);
+}
 ```
 
 ### getVersion
