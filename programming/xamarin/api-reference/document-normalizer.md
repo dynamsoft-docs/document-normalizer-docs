@@ -207,7 +207,7 @@ try
 {
     var quadResult = App.ddn.DetectQuad(imageData);
 } 
-catch(Exception ex)
+catch(DDNException ex)
 {
     Console.WriteLine("Exception caught: ", ex.Message);
 }
@@ -236,7 +236,7 @@ try
 {
     var quadResult = App.ddn.DetectQuad("Your file path.");
 }
-catch(Exception ex)
+catch(DDNException ex)
 {
     Console.WriteLine("Exception caught: ", ex.Message);
 }
@@ -271,7 +271,7 @@ public void DetectResultCallback(int id, ImageData imageData, DetectedQuadResult
         {
             var result = App.ddn.Normalize(data, quadResult[0].Location);
         } 
-        catch(Exception ex)
+        catch(DDNException ex)
         {
             Console.WriteLine("Exception caught: ", ex.Message);
         }
@@ -307,7 +307,7 @@ try
     var quadResult = App.ddn.DetectQuad("Your file path.");
     var normalizeResult = App.ddn.Normalize("Your file path.", quadResult[0].Location);
 } 
-catch(Exception ex)
+catch(DDNException ex)
 {
     Console.WriteLine("Exception caught: ", ex.Message);
 }
@@ -334,7 +334,7 @@ try
 {
     App.ddn.IntiRuntimeSettingsFromFile("Your file path");
 }
-catch(Exception ex)
+catch(DDNException ex)
 {
     Console.WriteLine("Exception caught: ", ex.Message);
 }
@@ -359,7 +359,7 @@ try
 {
     App.ddn.InitRuntimeSettings("Your template JSON string");
 }
-catch(Exception ex)
+catch(DDNException ex)
 {
     Console.WriteLine("Exception caught: ", ex.Message);
 }
@@ -385,7 +385,7 @@ try
 {
     App.ddn.OutputRuntimeSettingsToFile("Your file path", "");
 }
-catch(Exception ex)
+catch(DDNException ex)
 {
     Console.WriteLine("Exception caught: ", ex.Message);
 }
@@ -414,7 +414,7 @@ try
 {
     String OutputTemplate = App.ddn.OutputRuntimeSettings("Your template name.");
 }
-catch(Exception ex)
+catch(DDNException ex)
 {
     Console.WriteLine("Exception caught: ", ex.Message);
 }
@@ -444,7 +444,7 @@ try
     var normalizeResult = App.ddn.Normalize("Path of original image.", quadResult[0].Location);
     App.ddn.SaveToFile(normalizeResult, "Path that you want to save the normalized image.");
 }
-catch(Exception ex)
+catch(DDNException ex)
 {
     Console.WriteLine("Exception caught: ", ex.Message);
 }
