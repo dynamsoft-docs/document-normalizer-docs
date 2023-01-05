@@ -18,5 +18,7 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 1.0.12 | [JavaScript](../programming/javascript/release-notes/javascript-1.md#1012-01052023) |
+| 1.0.11 | [JavaScript](../programming/javascript/release-notes/javascript-1.md#1011-11302022) |
 | 1.0.10 | [C](../programming/c/release-notes/c-1.md#1010-09292022) / [C++](../programming/cplusplus/release-notes/cpp-1.md#1010-09292022) / [Android](../programming/android/release-notes/android-1.md#1010-09292022) / [iOS](../programming/ios/release-notes/ios-1.md#1010-09292022) / [JavaScript](../programming/javascript/release-notes/javascript-1.md#1010-11042022) |
 | 1.0.0 | [C](../programming/c/release-notes/c-1.md#100-06212022) / [C++](../programming/cplusplus/release-notes/cpp-1.md#100-06212022) / [Android](../programming/android/release-notes/android-1.md#100-06212022) / [iOS](../programming/ios/release-notes/ios-1.md#100-06212022) / [Xamarin.Forms](../programming/xamarin/release-notes/xamarin-1.md#100-10282022) |

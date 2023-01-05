@@ -10,6 +10,12 @@ noTitleIndex: true
 
 # Release Notes for JavaScript SDK
 
+## 1.0.12 (01/05/2023)
+
+### Improved
+
+* Added a second parameter `makeACopy` to the method [`detectQuad`](../api-reference/normalize.md#detectquad) which, when set to `true`, means the source data to process will stay valid for later processing. This is only effective when the source data is of the type DCEFrame or DSImage.
+
 ## 1.0.11 (11/30/2022)
 
 ### Fixed

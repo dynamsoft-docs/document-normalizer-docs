@@ -63,8 +63,8 @@ The complete code of the example is shown below:
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.2.0/dist/dce.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.12/dist/ddn.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.1.0/dist/dce.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.11/dist/ddn.js"></script>
 </head>
 <body>
     <h1>Capture A Document</h1>
@@ -164,15 +164,15 @@ The simplest way to include the SDK is to use either the [jsDelivr](https://jsde
 - jsDeliv
 
   ```html
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.12/dist/ddn.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.2.0/dist/dce.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.11/dist/ddn.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/dynamsoft-camera-enhancer@3.1.0/dist/dce.js"></script>
   ```
 
 - UNPKG
 
   ```html
-  <script src="https://unpkg.com/dynamsoft-document-normalizer@1.0.12/dist/ddn.js"></script>
-  <script src="https://unpkg.com/dynamsoft-camera-enhancer@3.2.0/dist/dce.js"></script>
+  <script src="https://unpkg.com/dynamsoft-document-normalizer@1.0.11/dist/ddn.js"></script>
+  <script src="https://unpkg.com/dynamsoft-camera-enhancer@3.1.0/dist/dce.js"></script>
   ```
 
 #### Host the SDK yourself
@@ -186,19 +186,19 @@ To download the SDK:
 - yarn
 
   ```cmd
-  yarn add dynamsoft-document-normalizer@1.0.12
+  yarn add dynamsoft-document-normalizer@1.0.11
   ```
 
 - npm
 
   ```cmd
-  npm install dynamsoft-document-normalizer@1.0.12
+  npm install dynamsoft-document-normalizer@1.0.11
   ```
 
 Depending on how you downloaded the SDK and where you put it, you can typically include it like this:
 
   ```html
-  <script src="/dynamsoft-document-normalizer-js-1.0.12/dist/ddn.js"></script>
+  <script src="/dynamsoft-document-normalizer-js-1.0.11/dist/ddn.js"></script>
   ```
 
 or
@@ -233,7 +233,7 @@ If the engine files (\*.worker.js, \*.wasm.js and \*.wasm, etc.) are NOT in the 
 
 ```javascript
 // The following code uses the jsDelivr CDN, feel free to change it to your own location of these files.
-Dynamsoft.DDN.DocumentNormalizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.12/dist/";
+Dynamsoft.DDN.DocumentNormalizer.engineResourcePath = "https://cdn.jsdelivr.net/npm/dynamsoft-document-normalizer@1.0.11/dist/";
 ```
 
 ### Interact with the SDK
@@ -267,7 +267,7 @@ await normalizer.setImageSource(cameraEnhancer, options);
 
 #### Change the camera settings (optional)
 
-In some cases, a different camera might be required instead of the default one. Also, a different resolution might work better. To change the camera or the resolution, we use the `CameraEnhancer` object. Learn more [here](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/camera-control.html?ver=3.2.0&utm_source=guide&product=ddn&package=js).
+In some cases, a different camera might be required instead of the default one. Also, a different resolution might work better. To change the camera or the resolution, we use the `CameraEnhancer` object. Learn more [here](https://www.dynamsoft.com/camera-enhancer/docs/programming/javascript/api-reference/camera-control.html?ver=3.1.0&utm_source=guide&product=ddn&package=js).
 
 ```javascript
 // The following lines set which camera and what resolution to use.
