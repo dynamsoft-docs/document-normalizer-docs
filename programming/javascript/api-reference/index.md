@@ -116,14 +116,14 @@ The APIs for this class include
 
 ## Interfaces
 
-- [`DetectedQuadResult`](./interfaces/detected-quad-result.md)
-- [`NormalizedImageResult`](./interfaces/normalized-image-result.md)
-- [`ScanSettings`](./interfaces/scansettings.md)
-- [`Quadrilateral`](./interfaces/quadrilateral.md)
-- [`Point`](./interfaces/point.md)
-- [`ImageSource`](./interfaces/imagesource.md)
-- [`DDNImage`](./interfaces/ddn-image.md)
-- [`DSImage`](./interfaces/dsimage.md)
+* [`DetectedQuadResult`](./interfaces/detected-quad-result.md)
+* [`NormalizedImageResult`](./interfaces/normalized-image-result.md)
+* [`ScanSettings`](./interfaces/scansettings.md)
+* [`Quadrilateral`](./interfaces/quadrilateral.md)
+* [`Point`](./interfaces/point.md)
+* [`ImageSource`](./interfaces/imagesource.md)
+* [`DDNImage`](./interfaces/ddn-image.md)
+* [`DSImage`](./interfaces/dsimage.md)
 
 <!-- ## Enumerations
 
