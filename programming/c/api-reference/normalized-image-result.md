@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: NormalizedImageResult Struct
+title: NormalizedImageResult Struct - Dynamsoft Document Normalizer SDK C Edition
 description: This page shows NormalizedImageResult struct definition of Dynamsoft Document Normalizer SDK C Edition.
 keywords: NormalizedImageResult, struct, api reference
 ---

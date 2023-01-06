@@ -12,6 +12,7 @@ description: Dynamsoft Document Normalizer - ImageColourMode Enumeration
 | Language | Declaration |
 | -------- | ----------- |
 | C/C++ | `enum ImageColourMode` |
+| JavaScript | `enum EnumImageColourMode` |
 
 ## Members
 

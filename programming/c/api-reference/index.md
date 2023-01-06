@@ -1,11 +1,11 @@
 ---
 layout: default-layout
-title: Dynamsoft Document Normalizer C++ API Reference - Main Page
-description: This is the main page of Dynamsoft Document Normalizer SDK API Reference for C++ Language.
-keywords: CDocumentNormalizer, api reference, C++
+title: Dynamsoft Document Normalizer C API Reference - Main Page
+description: This is the main page of Dynamsoft Document Normalizer SDK API Reference for C Language.
+keywords: DocumentNormalizer, api reference, C
 ---
 
-# API Reference - C++
+# API Reference - C Edition
 
 ## Global Functions
 
@@ -19,6 +19,8 @@ keywords: CDocumentNormalizer, api reference, C++
 ### General
 
 - [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring)
+- [`DC_GetQuadrilateralArea`](document-normalizer-general.md#dc_getquadrilateralarea)
+- [`DC_IsPointInQuadrilateral`](document-normalizer-general.md#dc_ispointinquadrilateral)
 - [`DDN_GetVersion`](document-normalizer-general.md#ddn_getversion)
 
 ### Runtime Settings
@@ -37,13 +39,10 @@ keywords: CDocumentNormalizer, api reference, C++
 
 ### Results
 
-- [`DDN_SaveImageDataToFile`](document-normalizer-result.md#ddn_saveimagedatatofile)
-- [`DC_GetQuadrilateralArea`](document-normalizer-general.md#dc_getquadrilateralarea)
-- [`DC_IsPointInQuadrilateral`](document-normalizer-general.md#dc_ispointinquadrilateral)
 - [`DDN_FreeDetectedQuadResultArray`](document-normalizer-result.md#ddn_freedetectedquadresultarray)
 - [`DDN_FreeNormalizedImageResult`](document-normalizer-result.md#ddn_freenormalizedimageresult)
 - [`DDN_FreeString`](document-normalizer-result.md#ddn_freestring)
-
+- [`NormalizedImageResult_SaveToFile`](document-normalizer-result.md#normalizedimageresult_savetofile)
 
 ## Structs
 
@@ -60,4 +59,4 @@ keywords: CDocumentNormalizer, api reference, C++
 
 ## Others
 
-- [Error Codes]({{ site.enumerations }}error-code.html)
+- [Error Codes]({{ site.enumerations }}error-code.html?src=c)

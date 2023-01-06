@@ -66,7 +66,7 @@ A NormalizerParameter object contains following keys:
 | Brightness | (Optional) Sets the parameter [Brightness](reference/brightness.md). |
 | Contrast | (Optional) Sets the parameter [Contrast](reference/contrast.md). |
 
-**Example**
+## Example
 
 ```json
 {

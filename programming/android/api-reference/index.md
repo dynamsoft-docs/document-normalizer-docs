@@ -20,7 +20,7 @@ Common detections include:
 - Document boundary detection
 - Table boundary detection
 
-Common normalizations include：
+Common normalizations include:
 
 - Border crop
 - Deskew
@@ -42,7 +42,7 @@ class com.dynamsoft.ddn.DocumentNormalizer
 
   | Method               | Description |
   |----------------------|-------------|
-  | [`setCameraEnhancer`](document-normalizer-video.md#setcameraenhancer) | Bind a Camera Enhancer instance to the Document Normalizer.  |
+  | [`setImageSource`](document-normalizer-video.md#setimagesource) | Sets an instance of ImageSource to get images.  |
   | [`startDetecting`](document-normalizer-video.md#startdetecting) | Start the document quad detection thread in the video streaming scenario. |
   | [`stopDetecting`](document-normalizer-video.md#stopdetecting) | Stop the document quad detection thread in the video streaming scenario.  |
   | [`setDetectResultListener`](document-normalizer-video.md#setdetectresultlistener) | Set callback interface to process detection results generated during frame detecting. |

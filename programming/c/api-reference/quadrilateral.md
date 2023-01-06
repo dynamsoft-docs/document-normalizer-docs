@@ -1,6 +1,6 @@
 ---
 layout: default-layout
-title: Quadrilateral Struct
+title: Quadrilateral Struct - Dynamsoft Document Normalizer SDK C Edition
 description: This page shows Quadrilateral struct definition of Dynamsoft Document Normalizer SDK C Edition.
 keywords: Quadrilateral, struct, api reference
 ---

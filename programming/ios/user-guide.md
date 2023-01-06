@@ -49,7 +49,7 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
 
 #### Add the Frameworks Manually
 
-1. Download the SDK package from the <a href="https://download2.dynamsoft.com/ddn/dynamsoft-document-normalizer-ios-1.0.0.zip" target="_blank">Dynamsoft website</a>. After unzipping, you can find the following **Frameworks** under the **DynamsoftDocumentNormalizer\Frameworks** directory:
+1. Download the SDK package from the <a href="https://download2.dynamsoft.com/ddn/dynamsoft-document-normalizer-ios-1.0.10.zip" target="_blank">Dynamsoft website</a>. After unzipping, you can find the following **Frameworks** under the **DynamsoftDocumentNormalizer\Frameworks** directory:
 
    | File | Description |
    | ---- | ----------- |
@@ -59,7 +59,7 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
    | `DynamsoftImageProcessing.framework` | The image processing library of Dynamsoft's capture vision SDKs, including image processing algorithms and APIs. |
    | `DynamsoftCameraEnhancer.framework` | The Dynamsoft Camera Enhancer SDK, including camera control and frame preprocessing APIs. |
 
-2. Drag and drop the above five **frameworks** into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project’s folder.
+2. Drag and drop the above five **frameworks** into your Xcode project. Make sure to check Copy items if needed and Create groups to copy the framework into your project's folder.
 
 3. Click on the project settings then go to **General –> Frameworks, Libraries, and Embedded Content**. Set the **Embed** field to **Embed & Sign** for DynamsoftDocumentNormalizer and DynamsoftCameraEnhancer.
 
@@ -71,8 +71,8 @@ There are two ways to add the SDK into your project - **Manually** and **CocoaPo
    target 'HelloWorld' do
       use_frameworks!
 
-   pod 'DynamsoftDocumentNormalizer','1.0.0'
-   pod 'DynamsoftCameraEnhancer','3.0.0'
+   pod 'DynamsoftDocumentNormalizer','1.0.10'
+   pod 'DynamsoftCameraEnhancer','3.0.1'
 
    end
    ```
@@ -240,14 +240,14 @@ Create the instances of `CameraEnhancer` and `CameraView`.
    - (void)configDDN{
       [DDNDataManager instance].ddn = [DynamsoftDocumentNormalizer new];
       // Bind the DocumentNormalizer and CameraEnhancer instance
-      [[DDNDataManager instance].ddn setCameraEnhancer:_dce];
+      [[DDNDataManager instance].ddn setImageSource:_dce];
    }
    ```
    2. 
    ```swift
    func configDDN() {
       DDNDataManager.instance.ddn = DynamsoftDocumentNormalizer()
-      DDNDataManager.instance.ddn.setCameraEnhancer(dce)
+      DDNDataManager.instance.ddn.setImageSource(dce)
    }
    ```
 
@@ -264,7 +264,7 @@ Create the instances of `CameraEnhancer` and `CameraView`.
    ...
    - (void)configDDN{
       [DDNDataManager instance].ddn = [DynamsoftDocumentNormalizer new];
-      [[DDNDataManager instance].ddn setCameraEnhancer:_dce];
+      [[DDNDataManager instance].ddn setImageSource:_dce];
       // Set the detect result listener first.
       [[DDNDataManager instance].ddn setDetectResultListener:self];
    }
@@ -279,7 +279,7 @@ Create the instances of `CameraEnhancer` and `CameraView`.
       ...
       func configDDN() {
              DDNDataManager.instance.ddn = DynamsoftDocumentNormalizer()
-             DDNDataManager.instance.ddn.setCameraEnhancer(dce)
+             DDNDataManager.instance.ddn.setImageSource(dce)
              DDNDataManager.instance.ddn.setDetectResultListener(self)
       }
       func detectResultCallback(_ frameId: Int, imageData: iImageData, results: [iDetectedQuadResult]) {

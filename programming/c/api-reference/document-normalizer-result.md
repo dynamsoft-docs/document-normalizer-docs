@@ -1,8 +1,8 @@
 ---
 layout: default-layout
-title: CDocumentNormalizer - General Methods
-description: This page shows General Methods of class CDocumentNormalizer of Dynamsoft Document Normalizer SDK C++ Edition.
-keywords: DDN_FreeDetectedQuadResultArray, DDN_FreeNormalizedImageResult, DDN_FreeString, DDN_SaveImageDataToFile, CDocumentNormalizer, api reference, c++
+title: Result Methods - Dynamsoft Document Normalizer SDK C Edition
+description: This page shows Result Methods of Dynamsoft Document Normalizer SDK C Edition.
+keywords: DDN_FreeDetectedQuadResultArray, DDN_FreeNormalizedImageResult, DDN_FreeString, NormalizedImageResult_SaveToFile, , api reference, c
 ---
 
 # Result Methods
@@ -12,7 +12,7 @@ keywords: DDN_FreeDetectedQuadResultArray, DDN_FreeNormalizedImageResult, DDN_Fr
 | [`DDN_FreeDetectedQuadResultArray`](#ddn_freedetectedquadresultarray) | Releases memory allocated for DetectedQuadResultArray. |
 | [`DDN_FreeNormalizedImageResult`](#ddn_freenormalizedimageresult) | Releases memory allocated for NormalizedImageResult. |
 | [`DDN_FreeString`](#ddn_freestring) | Releases memory allocated for a string. |
-| [`DDN_SaveImageDataToFile`](#ddn_saveimagedatatofile) | Save the image data to a file. |
+| [`NormalizedImageResult_SaveToFile`](#normalizedimageresult_savetofile) | Save the normalized image result to a file. |
 
 ## DDN_FreeDetectedQuadResultArray
 
@@ -86,19 +86,27 @@ if (content != NULL)
 DDN_DestroyInstance(ddn);
 ```
 
-## DDN_SaveImageDataToFile
+## NormalizedImageResult_SaveToFile
 
-Save the image data to a file.
+Save the normalized image result to a file.
 
 ```c
-int DDN_SaveImageDataToFile(const ImageData* imageData, const char* filePath)
+int NormalizedImageResult_SaveToFile(const NormalizedImageResult* normalizedImageResult, const char* filePath)
 ```
 
 **Parameters**
 
-`[in] imageData` The image data that needs to be saved.
+`[in] normalizedImageResult` The [NormalizedImageResult](normalized-image-result.md) that needs to be saved.
 
-`[in] filePath` The path of the output image with the extension specifying the image format. It supports BMP and PNG files.
+`[in] filePath` The path of the output image with the extension specifying the image format. It supports BMP, PNG, JPEG and PDF file types. If the target file exists, the image will be appended to the last page of the PDF file while the BMP, PNG and JPEG file will be replaced.
+
+**Return Value**
+
+Returns error code (returns 0 if the function operates successfully).
+
+*You can call [`DC_GetErrorString`](document-normalizer-general.md#dc_geterrorstring) to get detailed error message.*
+
+**Code Snippet**
 
 ```c
 NormalizedImageResult* normalizedResult = NULL;
@@ -106,7 +114,7 @@ void* ddn = DDN_CreateInstance();
 DDN_NormalizeFile(ddn, "YOUR-SOURCE-FILE-PATH", "", NULL, &normalizedResult);
 if (normalizedResult != NULL)
 {
-    DDN_SaveImageDataToFile(normalizedResult->image, "YOUR-TARGET-FILE-PATH");
+    NormalizedImageResult_SaveToFile(normalizedResult, "YOUR-TARGET-FILE-PATH");
     DDN_FreeNormalizedImageResult(&normalizedResult);
 }
 DDN_DestroyInstance(ddn);

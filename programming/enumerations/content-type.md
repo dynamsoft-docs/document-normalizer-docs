@@ -12,6 +12,7 @@ description: Dynamsoft Document Normalizer - ContentType Enumeration
 | Language | Declaration |
 | -------- | ----------- |
 | C/C++ | `enum ContentType` |
+| JavaScript | `enum EnumContentType` |
 
 ## Members
 

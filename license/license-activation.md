@@ -27,6 +27,7 @@ The following code snippets are using the public trial license to initialize the
 >- Swift
 >- C
 >- C++
+>- JavaScript
 >
 >1. 
 ```java
@@ -66,4 +67,8 @@ char szErrorMsg[256];
 errorCode = CLicenseManager::InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", szErrorMsg, 256);
 if (errorCode != DM_OK)
    cout << szErrorMsg << endl;
+```
+6. 
+```js
+Dynamsoft.DDN.DocumentNormalizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
 ```

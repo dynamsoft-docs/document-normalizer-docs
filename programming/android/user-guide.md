@@ -42,7 +42,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
 #### Add the Library Manually
 
-1. Download the SDK package from the <a href="https://download2.dynamsoft.com/ddn/dynamsoft-document-normalizer-android-1.0.0.zip" target="_blank">Dynamsoft website</a>. After unzipping, You can find the following **aar** files under the **DynamsoftDocumentNormalizer\Libs** directory:
+1. Download the SDK package from the <a href="https://download2.dynamsoft.com/ddn/dynamsoft-document-normalizer-android-1.0.10.zip" target="_blank">Dynamsoft website</a>. After unzipping, You can find the following **aar** files under the **DynamsoftDocumentNormalizer\Libs** directory:
 
    | File | Description |
    |---------|-------------|
@@ -60,7 +60,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
     dependencies {
          implementation fileTree(dir: 'libs', include: ['*.aar'])
 
-         def camerax_version = '1.1.0-rc01'
+         def camerax_version = '1.1.0'
          implementation "androidx.camera:camera-core:$camerax_version"
          implementation "androidx.camera:camera-camera2:$camerax_version"
          implementation "androidx.camera:camera-lifecycle:$camerax_version"
@@ -90,8 +90,8 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
 
    ```groovy
    dependencies {
-      implementation 'com.dynamsoft:dynamsoftdocumentnormalizer:1.0.0'
-      implementation 'com.dynamsoft:dynamsoftcameraenhancer:3.0.0'
+      implementation 'com.dynamsoft:dynamsoftdocumentnormalizer:1.0.10'
+      implementation 'com.dynamsoft:dynamsoftcameraenhancer:3.0.1'
    }
    ```
 
@@ -201,7 +201,7 @@ There are two ways to add the SDK into your project - **Manually** and **Maven**
             e.printStackTrace();
          }
 
-         mNormalizer.setCameraEnhancer(mCameraEnhancer);
+         mNormalizer.setImageSource(mCameraEnhancer);
       }
    }
    ```

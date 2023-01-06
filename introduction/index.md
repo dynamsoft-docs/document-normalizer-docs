@@ -45,7 +45,7 @@ With DDN, you can extract the four corner coordinates of one or multiple documen
    <p>Figure 3 – Multiple boundaries in one detection</p>
 </div>
 
-Don’t worry if your documents/tables are blurry, damaged, too colorful or peculiar in any way. DDN provides various image processing settings for full customization. Our default settings are sufficient for most cases. However, additional tweaks can be made for your specific cases to achieve greater speed and accuracy.
+Don't worry if your documents/tables are blurry, damaged, too colorful or peculiar in any way. DDN provides various image processing settings for full customization. Our default settings are sufficient for most cases. However, additional tweaks can be made for your specific cases to achieve greater speed and accuracy.
 
 ### Various document normalization features
 
@@ -61,7 +61,7 @@ It is usually used to straighten scanned documents. Deskewing is the process of 
 
 - Perspective correction
 
-It is usually used to correct perspective distortion introduced by the camera’s perspective relation to the target.
+It is usually used to correct perspective distortion introduced by the camera's perspective relation to the target.
 
 - Output in multiple colour modes
 
@@ -120,7 +120,7 @@ If you are interested in the specific steps to integrate DDN with DCE, please re
 
 ### Document scanning and archiving
 
-In government or large corporations, paper documents usually need to be digitized and stored in an electronic format. We often do so by taking photos of the documents or scanning the documents. However, the captured document images can potentially not follow the same pattern. You may encounter images taken at different angles, in different lighting levels, bluriness…etc. With DDN, you can normalize or standardize the document images with ease. DDN also provides various settings so you can customize the outcome of the normalized document image to meet your needs.
+In government or large corporations, paper documents usually need to be digitized and stored in an electronic format. We often do so by taking photos of the documents or scanning the documents. However, the captured document images can potentially not follow the same pattern. You may encounter images taken at different angles, in different lighting levels, bluriness, etc. With DDN, you can normalize or standardize the document images with ease. DDN also provides various settings so you can customize the outcome of the normalized document image to meet your needs.
 
 <div align="center">
    <p><img src="assets/document-scanning-and-archive.jpg" alt="document-scanning-and-archive" width="60%" /></p>
@@ -129,7 +129,7 @@ In government or large corporations, paper documents usually need to be digitize
 
 ### Identity Documents
 
-In many scenarios, identity documents such as id card/passport need to be quickly located and identified. However, the captured images of id card/passport might not be uniformed. You may encounter images taken with different angles, lightings, clearness…etc. With DDN, you can detect the boundaries of identity document images and normalize the region of interest (ROI) with ease. Therefore, easing the information extraction process of ID document images.
+In many scenarios, identity documents such as id card/passport need to be quickly located and identified. However, the captured images of id card/passport might not be uniformed. You may encounter images taken with different angles, lightings, clearness, etc. With DDN, you can detect the boundaries of identity document images and normalize the region of interest (ROI) with ease. Therefore, easing the information extraction process of ID document images.
 
 <div align="center">
    <p><img src="assets/identity-documents.jpg" alt="identity-documents" width="60%" /></p>

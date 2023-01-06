@@ -27,6 +27,15 @@ android_api: /document-normalizer/docs/programming/android/api-reference/
 android_release_notes: /document-normalizer/docs/programming/android/release-notes/
 android_camera_enhancer: /document-normalizer/docs/programming/android/api-reference/camera-enhancer/
 
+javascript: /document-normalizer/docs/programming/javascript/
+javascript_api: /document-normalizer/docs/programming/javascript/api-reference/
+javascript_release_notes: /document-normalizer/docs/programming/javascript/release-notes/
+
+xamarin: /document-normalizer/docs/programming/xamarin/
+xamarin_api: /document-normalizer/docs/programming/xamarin/api-reference/
+xamarin_release_notes: /document-normalizer/docs/programming/xamarin/release-notes/
+xamarin_camera_enhancer: /document-normalizer/docs/programming/xamarin/api-reference/camera-enhancer/
+
 enumerations: /document-normalizer/docs/programming/enumerations/
 parameters_reference: /document-normalizer/docs/parameters/reference/
 release_notes: /document-normalizer/docs/release-notes/

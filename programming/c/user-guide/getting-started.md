@@ -22,14 +22,14 @@ In this guide, you will learn step by step on how to build a document normalizat
 
 ## Installation
 
-If you haven't downloaded the SDK yet, <a href="https://download2.dynamsoft.com/ddn/dynamsoft-document-normalizer-c_cpp-1.0.0.zip">download the `C/C++ Package`</a> now and unpack the package into the directory of your choice.
+If you haven't downloaded the SDK yet, <a href="https://download2.dynamsoft.com/ddn/dynamsoft-document-normalizer-c_cpp-1.0.10.zip">download the `C/C++ Package`</a> now and unpack the package into the directory of your choice.
 
 >For this tutorial, we unpack it to `[INSTALLATION FOLDER]`, change it to your unpacking path for the following content.
 
 ## Build Your First Application
 
 Let's start by creating a console application which demonstrates how to use the minimum code to detect and normalize document from an image file.  
->You can [download the entire source code from here](https://github.com/Dynamsoft/document-normalizer-c-cpp-samples/samples/tree/main/samples/C/HelloWorld).
+>You can <a href="https://github.com/Dynamsoft/document-normalizer-c-cpp-samples/tree/main/Samples/C/HelloWorld" target="_blank">download the entire source code from here</a>.
 
 ### Create a New Project
 
@@ -143,4 +143,4 @@ Please change all `[INSTALLATION FOLDER]` in above code snippet to your unpackin
     ./DDNCSample
     ```
 
->You can download the entire source code from [Here](https://github.com/Dynamsoft/document-normalizer-c-cpp-samples/samples/tree/main/samples/C/HelloWorld).
+>You can <a href="https://github.com/Dynamsoft/document-normalizer-c-cpp-samples/tree/main/Samples/C/HelloWorld" target="_blank">download the entire source code from here</a>.
