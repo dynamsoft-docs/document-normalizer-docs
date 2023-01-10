@@ -29,13 +29,13 @@ class com.dynamsoft.core.LicenseManager
 Read the license key and activate the SDK.
 
 ```java
-static void initLicense(String license, android.content.Contex contex, LicenseVerificationListener listener)
+static void initLicense(String license, android.content.Context context, LicenseVerificationListener listener)
 ```
 
 **Parameters**
 
 `[in] license`: The license key.
-`[in] contex`: The interface to global information about an application environment.
+`[in] context`: The interface to global information about an application environment.
 `[in] listener`: The listener that handles callback when the license server returns.
 
 **Code Snippet**
