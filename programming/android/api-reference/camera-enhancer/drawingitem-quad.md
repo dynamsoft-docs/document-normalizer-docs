@@ -32,7 +32,7 @@ class com.dynamsoft.dce.QuadDrawingItem extends DrawingItem
 The constructor of `QuadDrawingItem`. Create an instance of `QuadDrawingItem`.
 
 ```java
-public QuadDrawingItem(com.dynamsoft.core.Quadrilateral quad;
+public QuadDrawingItem(com.dynamsoft.core.Quadrilateral quad);
 ```
 
 **Parameters**
