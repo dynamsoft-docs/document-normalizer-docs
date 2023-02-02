@@ -138,7 +138,7 @@ NSInteger orientation
 
 ## toUIImage
 
-The method converts the image to `UIImage` to make it visible on the UI.
+The method converts the image to `UIImage`.
 
 ```objc
 - (UIImage * _Nullable)toUIImage:(NSError *_Nullable *_Nullable)error;

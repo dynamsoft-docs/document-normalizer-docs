@@ -336,7 +336,7 @@ void setOrientation(int orientation)
 
 ## toBitmap
 
-The method converts the image to `UIImage` to make it visible on the UI.
+The method converts the image to `Bitmap`.
 
 ```java
 Bitmap toBitmap()
