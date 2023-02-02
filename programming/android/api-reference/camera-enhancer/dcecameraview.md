@@ -25,6 +25,7 @@ class com.dynamsoft.dce.DCECameraView
 | [`getTorchButtonVisible`](#gettorchbuttonvisible) | Get the visibility setting of the torch button. When it returns true, a torch button should be displayed on the screen. |
 | [`getDrawingLayer`](#getdrawinglayer) | Get the [`DCEDrawingLayer`](dcedrawinglayer.md) instance with the layer ID. |
 | [`createDrawingLayer`](#createdrawinglayer) | Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.md) instance. |
+| [`getVisibleRegionOfVideo`](#getvisibleregionofvideo) | Get the visible region of the video streaming. |
 | [`setOverlayVisible`](#setoverlayvisible) | **Deprecated**. This method controls whether the camera view to display coloured and translucent overlay. |
 | [`getOverlayVisible`](#getoverlayvisible) | **Deprecated**. Get the visibility (true: visible/ false: invisible) of the overlay. |
 | [`setOverlayColour`](#setoverlaycolour) | **Deprecated**. Set the stroke and fill colour of the overlay. |
@@ -312,3 +313,25 @@ dceCameraView.setViewfinder(0.2, 0.3, 0.8, 0.7);
 The viewfinder is built based on the screen coordinate system. The origin of the coordinate is the left-top point of the mobile device. The `left border` of the viewfinder always means the closest border that parallels to the left side of the mobile device no matter how the mobile device is rotated.
 
 &nbsp;
+
+## getVisibleRegionOfVideo
+
+Get the visible region of the video streaming.
+
+When the shape of your camera view is quite different from the shape of the video streaming, there might exist a large area that is invisible. You can use this method to get the region of this invisible area.
+
+<div align="center">
+    <p><img src="../../assets/visible-region.png" width="30%" alt="visible-region"></p>
+    <p>What's Visible Region</p>
+</div>
+
+**Return Value**
+
+An `iRegionDefinition` object. You can use this object to set the scan region so that the invisible areas will be cropped from the video frames.
+
+**Code Snippet**
+
+```java
+iRegionDefinition visibleRegion = cameraView.getVisibleRegion();
+cameraEnhancer.setScanRegion(visibleRegion);
+```

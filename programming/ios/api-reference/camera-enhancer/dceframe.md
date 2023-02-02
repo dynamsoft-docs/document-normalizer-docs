@@ -19,11 +19,11 @@ The `DCEFrame` is the class that stores pixel data and further information.
 
 | Method & Property Name | Type/Return Value | Description |
 | ---------------------- | ----------------- | ----------- |
-| [`imageData`](#imagedata) | *NSData* * | The property stores the pixel data of the image. |
+| [`bytes`](#imagedata) | *NSData* * | The property stores the pixel data of the image. |
 | [`width`](#width) | *NSInteger* | The property stores the pixel width of the image. |
 | [`height`](#height) | *NSInteger* | The property stores the pixel height of the image. |
 | [`stride`](#stride) | *NSInteger* | The property stores the stride of the image. |
-| [`pixelFormat`](#pixelformat) | *NSInteger* | The property stores the pixel format of the image. |
+| [`format`](#pixelformat) | *NSInteger* | The property stores the pixel format of the image. |
 | [`frameID`](#frameid) | *NSInteger* | The property stores the `frameID` of the frame. |
 | [`quality`](#quality) | [`EnumFrameQuality`](enum-frame-quality.md) | The property stores the quality of the `DCEFrame` image. User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown. |
 | [`isCropped`](#iscropped) | *BOOL* | The property stores a boolean value that recording whether the image is cropped. The frames can be cropped if `fast mode` is enabled. |
@@ -141,7 +141,7 @@ NSInteger orientation
 The method converts the image to `UIImage` to make it visible on the UI.
 
 ```objc
-- (UIImage*)toUIImage;
+- (UIImage * _Nullable)toUIImage:(NSError *_Nullable *_Nullable)error;
 ```
 
 **Return Value**

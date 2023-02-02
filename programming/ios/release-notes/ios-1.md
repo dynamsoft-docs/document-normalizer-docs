@@ -10,6 +10,12 @@ noTitleIndex: true
 
 # Release Notes for iOS SDK - 1.0.0
 
+## 1.0.20 (02/02/2023)
+
+### Fixed
+
+- Fixed a bug that the colours of binarized images might be inverted when using [`LEM_MARGIN_BASED`]({{site.parameters}}reference/line-extraction-modes.html) mode for `LineExtractionModes`.
+
 ## 1.0.10 (09/29/2022)
 
 ### New

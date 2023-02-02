@@ -9,5 +9,6 @@ breadcrumbText: Release Notes
 
 # Dynamsoft Document Normalizer iOS SDK - Release Notes
 
+- [1.0.20 (02/02/2023)](ios-1.md#1020-02022023)
 - [1.0.10 (09/29/2022)](ios-1.md#1010-09292022)
 - [1.0.0 (06/21/2022)](ios-1.md#100-06212022)
