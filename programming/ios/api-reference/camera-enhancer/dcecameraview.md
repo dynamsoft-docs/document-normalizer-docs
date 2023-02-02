@@ -25,6 +25,7 @@ breadcrumbText: iOS DCECameraView Class
 | [`torchButtonVisible`](#torchbuttonvisible) | The property controls the visibility of the torch Button. |
 | [`getDrawingLayer`](#getdrawinglayer) | Get the [`DCEDrawingLayer`](dcedrawinglayer.md) instance with the layer ID. |
 | [`createDrawingLayer`](#createdrawinglayer) | Create a user-defined [`DCEDrawingLayer`](dcedrawinglayer.md) instance. |
+| [`getVisibleRegionOfVideo`](#getvisibleregionofvideo) | Get the region of video that is visible on the camera. It help you to set the scan region when the shape of `DCECameraView` is quite different from the video streaming. |
 | [`overlayVisible`](#overlayvisible) | **Deprecated**. The property stores the BOOL value that controls the visibility of the overlays. |
 | [`setOverlayColour`](#setoverlaycolour) | **Deprecated**. Set the stroke and fill in colour of the overlay(s). |
 | [`viewfinderVisible`](#viewfindervisible) | **Deprecated**. The property stores the BOOL value that controls the visibility of the viewfinder. |
@@ -195,6 +196,44 @@ DCEDrawingLayer *drawingLayer = [_dceView createDrawingLayer:1];
 2. 
 ```swift
 let drawingLayer = try? dceView.createDrawingLayer(1)
+```
+
+&nbsp;
+
+## getVisibleRegionOfVideo
+
+Get the visible region of the video streaming.
+
+When the shape of your camera view is quite different from the shape of the video streaming, there might exist a large area that is invisible. You can use this method to get the region of this invisible area.
+
+<div align="center">
+    <p><img src="../../assets/visible-region.png" width="30%" alt="visible-region"></p>
+    <p>What's Visible Region</p>
+</div>
+
+```objc
+- (iRegionDefinition*) getVisibleRegionOfVideo;
+```
+
+**Return Value**
+
+An object of `iRegionDefinition`. You can use this `iRegionDefinition` object to set the scan region.
+
+**Code Snippet**
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+iRegionDefinition *region = [_dceView getVisibleRegionOfVideo];
+[_dce setScanRegion:region error:nil];
+```
+2. 
+```swift
+let region = dceView.getVisibleRegionOfVideo()
+dce.setScanRegion(region, error: &error)
 ```
 
 &nbsp;

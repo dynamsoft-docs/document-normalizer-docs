@@ -39,7 +39,7 @@ class com.dynamsoft.dce.DCEFrame
 | [`setIsCropped`](#setiscropped) | Set a boolean value that means whether the image is cropped. The frames can be cropped if `fast mode` is enabled. |
 | [`setCropRegion`](#setcropregion) | Set a boolean value that means whether the image is cropped. The frames can be cropped if `fast mode` is enabled. |
 | [`setOrientation`](#setorientation) | Set the orientation of the image. |
-| [`toBitmap`](#tobitmap) | The method converts the image to `UIImage` to make it visible on the UI. |
+| [`toBitmap`](#tobitmap) | The method converts the image to `Bitmap`. |
 
 &nbsp;
 
@@ -336,7 +336,7 @@ void setOrientation(int orientation)
 
 ## toBitmap
 
-The method converts the image to `UIImage` to make it visible on the UI.
+The method converts the image to `Bitmap`.
 
 ```java
 Bitmap toBitmap()

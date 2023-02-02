@@ -28,6 +28,12 @@ Stores the image data.
 | [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=ios) |
 | [`orientation`](#orientation) | *NSInteger* |
 
+## Methods
+
+| Method | Description |
+| ------ | ----------- |
+| [`toUIImage`](#touiimage) | Convert the `ImageData` object to a `UIImage` object. |
+
 &nbsp;
 
 ### bytes
@@ -85,12 +91,6 @@ The orientation of the image buffer contained in this frame data. The value is t
 ```objc
 NSInteger orientation
 ```
-
-## Methods
-
-| Method | Description |
-| ------ | ----------- |
-| `toUIImage` | Convert the `ImageData` object to a `UIImage` object. |
 
 ### toUIImage
 

@@ -26,3 +26,22 @@ class com.dynamsoft.dce.DrawingItem
 | [`getMediaType`](#getmediatype) | Get the media type of the current drawing item. |
 
 {%- include api-reference/drawing-item-android.md -%}
+
+
+## getMediaType
+
+Get the media type of the `DrawingItem`.
+
+```java
+public abstract EnumDrawingItemMediaType getMediaType();
+```
+
+**Return Value**
+
+One of the `EnumDrawingItemMediaType` that indicates the media type of the `DrawingItem`.
+
+**Code Snippet**
+
+```java
+EnumDrawingItemMediaType type = drawingItem.getMediaType();
+```

@@ -82,21 +82,3 @@ drawingItem.setState(EnumDrawingItemState.DIS_SELECTED)
 ```
 
 &nbsp;
-
-## getMediaType
-
-Get the media type of the `DrawingItem`.
-
-```java
-public EnumDrawingItemMediaType getMediaType()
-```
-
-**Return Value**
-
-One of the `EnumDrawingItemMediaType` that indicates the media type of the `DrawingItem`.
-
-**Code Snippet**
-
-```java
-EnumDrawingItemMediaType type = drawingItem.getMediaType();
-```
