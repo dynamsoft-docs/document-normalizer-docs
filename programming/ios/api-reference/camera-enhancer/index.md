@@ -50,5 +50,5 @@ noTitleIndex: true
 
 | Classes | Description |
 | ------- | ----------- |
-| [`dceFrameListener`](protocol-dceframelistener.md) | The protocol to handle callback when previewed frame callback is returned. |
-| [`dceCameraStateListener`](protocol-dcecamerastatelistener.md) | The protocol to handle callback when camera state changes. |
+| [`DCEFrameListener`](protocol-dceframelistener.md) | The protocol to handle callback when previewed frame callback is returned. |
+| [`DCECameraStateListener`](protocol-dcecamerastatelistener.md) | The protocol to handle callback when camera state changes. |
