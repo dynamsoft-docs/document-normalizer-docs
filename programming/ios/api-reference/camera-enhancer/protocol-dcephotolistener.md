@@ -11,7 +11,7 @@ breadcrumbText: iOS Protocol DCEPhotoListener
 
 # DCEPhotoListener
 
-The interface that provide method for capturing photo from the camera.
+The protocol that provide method for capturing photo from the camera.
 
 ```objc
 @protocol DCEPhotoListener <NSObject>

@@ -69,7 +69,6 @@ The main class of `DynamsoftCameraEnhancer`. It contains APIs that enable user t
 | [`getFrameFromBuffer`](#getframefrombuffer) | Get the latest frame from the buffer. The boolean value determines whether the fetched frame will be removed from the buffer. |
 | [`addListener`](#addlistener) | Add a listener to the camera enhancer instance. |
 | [`removeListener`](#removelistener) | Remove a previously added listener from the camera enhancer instance. |
-| [`takePhoto`](#takephoto) | Take a photo from the camera and save the image in the memory. |
 
 ## Enhanced Features Methods Summary
 
@@ -915,46 +914,6 @@ dce.removeListener(self)
 ```
 
 &nbsp;
-
-### takePhoto
-
-Take a photo from the camera and save the image in the memory. The photo will be captured and users can receive the captured photo via [`photoOutputCallback`](../auxiliary-api/protocol-dcephotolistener.md#photooutputcallback).
-
-```objc
-- (void)takePhoto:(nonnull id<DCEPhotoListener>)listener API_AVAILABLE(ios(11.0));
-```
-
-**Parameters**
-
-`listener`: An instance of [`DCEPhotoListener`](protocol-dcephotolistener.md).
-
-**Code Snippet**
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-@interface ViewController ()<DCEPhotoListener>
-- (void)configurationDCE(){
-   [_dce takePhoto:self]
-}
-- (void)photoOutputCallback:(NSData *)jpegBytes{
-   // Add your code to execute when photo is captured.
-}
-```
-2. 
-```swift
-class ViewController: UIViewController, DCEPhotoListener {
-   func configurationDCE(){
-          dce.takePhoto()
-   }
-   func photoOutputCallback(_ jpegByte: Data){
-          // Add your code to execute when photo is captured.
-   }
-}
-```
 
 ## Enhanced Features Methods Details
 

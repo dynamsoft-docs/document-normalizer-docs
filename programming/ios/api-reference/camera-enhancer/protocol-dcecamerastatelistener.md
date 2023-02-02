@@ -11,7 +11,7 @@ breadcrumbText: iOS Protocol DCECameraStateListener
 
 # DCECameraStateListener
 
-The interface to handle callback when camera state changes.
+The protocol to handle callback when camera state changes.
 
 ```objc
 @protocol DCECameraStateListener <NSObject>
