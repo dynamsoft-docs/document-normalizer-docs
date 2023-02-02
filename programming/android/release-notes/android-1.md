@@ -15,6 +15,7 @@ noTitleIndex: true
 ### Fixed
 
 - Fixed a bug that the colours of binarized images might be inverted when using [`LEM_MARGIN_BASED`]({{site.parameters}}reference/line-extraction-modes.html) mode for `LineExtractionModes`.
+- Fixed a bug where the normalized image may have black borders when setting [`ColourMode`]({{site.parameters}}reference/colour-mode.html) of `NormalizerParameter` to `ICM_BINARY`.
 
 ## 1.0.10 (09/29/2022)
 
