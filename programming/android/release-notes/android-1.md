@@ -8,7 +8,7 @@ needGenerateH3Content: false
 noTitleIndex: true
 ---
 
-# Release Notes for Android SDK - 1.0.0
+# Release Notes for Android SDK - v1.x
 
 ## 1.0.20 (02/02/2023)
 
