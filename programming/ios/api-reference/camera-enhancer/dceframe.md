@@ -29,7 +29,7 @@ The `DCEFrame` is the class that stores pixel data and further information.
 | [`isCropped`](#iscropped) | *BOOL* | The property stores a boolean value that recording whether the image is cropped. The frames can be cropped if `fast mode` is enabled. |
 | [`cropRegion`](#cropregion) | *CGRect* | The property stores a CGRect value that means the crop region of the image (if the image is cropped). If the image is not cropped, the value will be null. |
 | [`orientation`](#orientation) | *NSInteger* | The property stores an int value that means the rotation angle of the image. The value is 0, 90, 180 or 270 with depends on the device orientation. |
-| [`toUIImage`](#touiimage) | *UIImage* * | The method converts the image to `UIImage` to make it visible on the UI. |
+| [`toUIImage`](#touiimage) | *UIImage* * | The method converts the image to `UIImage`. |
 
 ## imageData
 

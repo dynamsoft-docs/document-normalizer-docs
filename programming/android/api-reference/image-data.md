@@ -27,6 +27,12 @@ class com.dynamsoft.core.ImageData
 | [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=android) |
 | [`orientation`](#orientation) | *int* |
 
+## Methods
+
+| Method | Description |
+| ------ | ----------- |
+| [`toBitmap`](#tobitmap) | Convert the `ImageData` object to a `Bitmap` object. |
+
 &nbsp;
 
 ### bytes
@@ -84,12 +90,6 @@ The orientation of the image buffer contained in this frame data. The value is t
 ```java
 int orientation
 ```
-
-## Methods
-
-| Method | Description |
-| ------ | ----------- |
-| `toBitmap` | Convert the `ImageData` object to a `Bitmap` object. |
 
 ### toBitmap
 
