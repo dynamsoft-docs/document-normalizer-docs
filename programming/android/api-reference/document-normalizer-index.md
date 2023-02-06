@@ -51,11 +51,11 @@ class com.dynamsoft.ddn.DocumentNormalizer
   | Method               | Description |
   |----------------------|-------------|
   | [`detectQuad(buffer)`](document-normalizer-normalizing.md#detectquadbuffer) | Detect quad from the memory buffer containing image pixels in defined format. |
-  | [`detectQuad(file)`](document-normalizer-normalizing#detectquadfile) | Detect quad from an image file. |
-  | [`detectQuad(bitmap)`](document-normalizer-normalizing#detectquadbitmap) | Detect quad from a bufferd image(bitmap). |
-  | [`normalize(buffer)`](document-normalizer-normalizing#normalizebuffer) | Normalize image from the memory buffer containing image pixels in defined format. |
-  | [`normalize(file)`](document-normalizer-normalizing#normalizefile) | Normalize an image file. |
-  | [`normalize(bitmap)`](document-normalizer-normalizing#normalizebitmap) | Normalize a buffered image(bitmap). |
+  | [`detectQuad(file)`](document-normalizer-normalizing.md#detectquadfile) | Detect quad from an image file. |
+  | [`detectQuad(bitmap)`](document-normalizer-normalizing.md#detectquadbitmap) | Detect quad from a bufferd image(bitmap). |
+  | [`normalize(buffer)`](document-normalizer-normalizing.md#normalizebuffer) | Normalize image from the memory buffer containing image pixels in defined format. |
+  | [`normalize(file)`](document-normalizer-normalizing.md#normalizefile) | Normalize an image file. |
+  | [`normalize(bitmap)`](document-normalizer-normalizing.md#normalizebitmap) | Normalize a buffered image(bitmap). |
   
 ## Runtime Settings Methods
 
