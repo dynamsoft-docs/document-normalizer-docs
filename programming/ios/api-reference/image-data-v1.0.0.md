@@ -25,7 +25,7 @@ Stores the image data.
 | [`width`](#width) | *NSInteger* | The width of the image in pixels. |
 | [`height`](#height) | *NSInteger* | The height of the image in pixels. |
 | [`stride`](#stride) | *NSInteger* | The stride is measured by the byte length of each line in the pixel buffer. |
-| [`format`](#format) | *NSInteger* | The image pixel format used in the image byte array. View [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=android) for all supported image pixel formats. |
+| [`format`](#format) | *NSInteger* | The image pixel format used in the image byte array. View [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=ios) for all supported image pixel formats. |
 
 &nbsp;
 
