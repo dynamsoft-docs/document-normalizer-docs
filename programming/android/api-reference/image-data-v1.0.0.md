@@ -18,14 +18,13 @@ class com.dynamsoft.core.ImageData
 
 ## Attributes
 
-| Attribute | Type |
-|---------- | ---- |
-| [`bytes`](#bytes) | *byte[]* |
-| [`width`](#width) | *int* |
-| [`height`](#height) | *int* |
-| [`stride`](#stride) | *int* |
-| [`format`](#format) | [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=android) |
-| [`orientation`](#orientation) | *int* |
+| Attribute | Type | Description |
+|---------- | ---- | ----------- |
+| [`bytes`](#bytes) | *byte[]* | The array of bytes that stores the pixel buffer of the image. |
+| [`width`](#width) | *int* | The width of the image in pixels. |
+| [`height`](#height) | *int* | The height of the image in pixels. |
+| [`stride`](#stride) | *int* | The stride is measured by the byte length of each line in the pixel buffer. |
+| [`format`](#format) | *int* | The image pixel format used in the image byte array. View [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=android) for all supported image pixel formats. |
 
 &nbsp;
 
@@ -74,15 +73,7 @@ int stride
 The image pixel format used in the image byte array.
 
 ```java
-EnumImagePixelFormat format
-```
-
-### orientation
-
-The counterclockwise rotation angle of the image. It can be 0, 90, 180 or 270.
-
-```java
-int orientation
+int format
 ```
 
 ## Methods
