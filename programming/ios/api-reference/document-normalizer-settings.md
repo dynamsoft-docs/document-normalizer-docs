@@ -22,8 +22,17 @@ noTitleIndex: true
 
 Initialize runtime settings from a given JSON file.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(BOOL)initRuntimeSettingsFromFile:(NSString*)filePath error:(NSError**)error;
+```
+2. 
+```swift
+func initRuntimeSettingsFromFile(_ filePath: String) throws
 ```
 
 **Parameters**
@@ -57,8 +66,17 @@ let isSuccess = try? normalizer.initRuntimeSettingsFromFile("your template file 
 
 Initialize runtime settings from a given JSON string.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(BOOL)initRuntimeSettingsFromString:(NSString*)content error:(NSError**)error;
+```
+2. 
+```swift
+func initRuntimeSettingsFromString(_ JSONString: String) throws
 ```
 
 **Parameters**
@@ -92,14 +110,23 @@ let isSuccess = try? normalizer.initRuntimeSettingsFromString("your json templat
 
 Output runtime settings to a settings file (JSON file).
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(BOOL)outputRuntimeSettingsToFile:(NSString*)filePath, settingsName:(NSString*)settingsName error:(NSError**)error;
+```
+2. 
+```swift
+func outputRuntimeSettingsToFile(_ filePath: String, templateName: String) throws
 ```
 
 **Parameters**
 
 `[in] filePath`: The output file path which stores runtime settings.  
-`[in] settingsName`: A unique name for declaring runtime settings.
+`[in] settingsName`: A unique name for declaring runtime settings.  
 `[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
@@ -128,8 +155,17 @@ let isSuccess = try? normalizer.outputRuntimeSettingsToFile("your template file 
 
 Output runtime settings to a JSON string.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(NSString*)outputRuntimeSettings:(NSString*)settingsName error:(NSError**)error;
+```
+2. 
+```swift
+func outputRuntimeSettings(_ templateName: String) throws -> String
 ```
 
 **Parameters** 

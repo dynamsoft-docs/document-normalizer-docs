@@ -30,8 +30,17 @@ pageStartVer: 1.0
 
 Sets an instance of ImageSource to get images. `DynamsoftCameraEnhancer` is a specific implementation of ImageSource, which can help the Document Normalizer to acquire video frames continuously for recognition.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void)setImageSource:(ImageSource* _Nonnull)source;
+```
+2. 
+```swift
+func setImageSource(_ source: ImageSource?)
 ```
 
 **Parameters**
@@ -109,8 +118,17 @@ class ViewController: UIViewController, DetectResultListener{
 
 Start the document quad detection thread in the video streaming scenario. Please be sure that you have bound a Camera Enhancer to the document normalizer before you trigger `startDetecting`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(void)startDetecting
+```
+2. 
+```swift
+func startDetecting()
 ```
 
 **Code Snippet**
@@ -121,8 +139,17 @@ You can view the complete code snippet in [`setImageSource`](#setimagesource).
 
 Stop the document quad detection thread in the video streaming scenario.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(void)stopDetecting
+```
+2. 
+```swift
+func stopDetecting()
 ```
 
 **Code Snippet**
@@ -133,8 +160,17 @@ You can view the complete code snippet in [`setImageSource`](#setimagesource).
 
 Set the callback interface to process detection results generated during frame detecting.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(void)setDetectResultListener:(id<DetectResultListener>)detectResultListener;
+```
+2. 
+```swift
+func setDetectResultListener(_ listener: DetectResultListener)
 ```
 
 **Parameters**

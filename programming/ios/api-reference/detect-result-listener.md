@@ -24,8 +24,17 @@ noTitleIndex: true
 
 The callback method to handle the detection results returned by the library.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void)detectResultCallback:(NSInteger)frameId frame:(iImageData*)imgData detectedResults:(NSArray<iDetectedQuadResult*>* _Nullable)detectedResults;
+```
+2. 
+```swift
+func detectResultCallback(_ frameId: Int, imageData: iImageData, results: [iDetectedQuadResult])
 ```
 
 **Parameters**
@@ -36,12 +45,19 @@ The callback method to handle the detection results returned by the library.
 
 **Code Snippet**
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-DetectResultListener detectResultListener = new DetectResultListener() {
-    @Override
-    public void detectResultCallback(int frameId, ImageData imageData, QuadDetectionResult[] textResults) {
-        // Add your code
-    }
-};
+- (void)detectResultCallback:(NSInteger)frameId imageData:(nonnull iImageData *)imageData results:(nonnull NSArray<iDetectedQuadResult *> *)results {
+    // Add your code to execute when quad results are detected. 
+}
 ```
-
+2. 
+```swift
+func detectResultCallback(_ frameId: Int, imageData: iImageData, results: [iDetectedQuadResult]) {
+    // Add your code to execute when quad results are detected.
+}
+```

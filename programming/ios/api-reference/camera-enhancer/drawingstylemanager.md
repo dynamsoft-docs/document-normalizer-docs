@@ -13,8 +13,17 @@ breadcrumbText: iOS DrawingStyleManager Class
 
 `DrawingStyleManager` is the class for users to create and adjust `DrawingStyles`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface DrawingStyleManager
+```
+2. 
+```swift
+class DrawingStyleManager : NSObject
 ```
 
 | Method | Description |
@@ -28,8 +37,17 @@ breadcrumbText: iOS DrawingStyleManager Class
 
 Get the `DrawingStyle` instance with the style ID.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 +(DrawingStyle*)getDrawingStyle:(NSInteger)styleId;
+```
+2. 
+```swift
+class func getDrawingStyle(_ styleId: Int) -> DrawingStyle
 ```
 
 **Parameters**
@@ -76,6 +94,11 @@ There are 8 preset drawing styles.
 
 Create a user-defined `DrawingStyle` instance.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 +(NSInteger)createDrawingStyle:(UIColor*)strokeColor
                    strokeWidth:(CGFloat)strokeWidth
@@ -83,6 +106,10 @@ Create a user-defined `DrawingStyle` instance.
                      textColor:(UIColor*) textColor
                           font:(UIFont*) font;
 
+```
+2. 
+```swift
+class func createDrawingStyle(_ strokeColor: UIColor, strokeWidth: CGFloat, fill fillColor: UIColor, textColor: UIColor, font: UIFont) -> Int
 ```
 
 **Parameters**

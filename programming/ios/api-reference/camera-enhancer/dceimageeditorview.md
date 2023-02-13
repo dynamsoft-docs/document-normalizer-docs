@@ -13,8 +13,17 @@ breadcrumbText: iOS DCEImageEditorView Class
 
 `DCEImageEditorView` is the class that enable users to add UI configurations on a static image.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface DCEImageEditorView : UIView
+```
+2. 
+```swift
+class DCEImageEditorView : UIView
 ```
 
 | Method Name | Description |
@@ -27,8 +36,19 @@ breadcrumbText: iOS DCEImageEditorView Class
 
 ## setOriginalImage
 
+Set an original image for the view.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void) setOriginalImage:(ImageData)imageData;
+```
+2. 
+```swift
+func setOriginalImage(_ imageData: iImageData)
 ```
 
 **Parameters**
@@ -52,8 +72,17 @@ imageEditorView.setOriginalImage(imageData)
 
 ## getOriginalImage
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (ImageData*) getOriginalImage;
+```
+2. 
+```swift
+func getOriginalImage() -> iImageData
 ```
 
 **Return Value**
@@ -77,8 +106,17 @@ let imageData = imageEditorView.getOriginalImage()
 
 ## getDrawingLayer
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (DCEDrawingLayer*) getDrawingLayer:(NSInteger)id;
+```
+2. 
+```swift
+func getDrawingLayer(_ layerId: Int) -> DCEDrawingLayer
 ```
 
 **Parameters**
@@ -115,8 +153,17 @@ let drawingLayer = imageEditorView.getDrawingLayer(DBR_LAYER_ID)
 
 ## createDrawingLayer
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (DCEDrawingLayer*) createDrawingLayer;
+```
+2. 
+```swift
+func createDrawingLayer() -> DCEDrawingLayer
 ```
 
 **Return Value**
@@ -140,8 +187,17 @@ let drawingLayer = imageEditorView.createDrawingLayer()
 
 ## getSelectedDrawingItem
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (DrawingItem*) getSelectedDrawingItem;
+```
+2. 
+```swift
+func getSelectedDrawingItem() -> DrawingItem?
 ```
 
 **Return Value**

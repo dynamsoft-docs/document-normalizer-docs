@@ -26,13 +26,22 @@ needGenerateH3Content: false
 
 Detect quad from the memory buffer containing image pixels in defined format.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(NSArray<iDetectedQuadResult*>*) detectQuadFromBuffer:(iImageData*)buffer error:(NSError**)error;
+```
+2. 
+```swift
+func detectQuadFromBuffer(_ data: iImageData) throws -> [iDetectedQuadResult]
 ```
 
 **Parameters**
 
-`[in] buffer`: The memory buffer containing image pixels in defined format.
+`[in] buffer`: The memory buffer containing image pixels in defined format.  
 `[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
@@ -137,8 +146,17 @@ func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBu
 
 Detect quad from an image file.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(NSArray<iDetectedQuadResult*>*) detectQuadFromFile:(NSString*)fileFullPath error:(NSError**) error;
+```
+2. 
+```swift
+func detectQuadFromFile(_ sourceFilePath: String) throws -> [iDetectedQuadResult]
 ```
 
 **Parameters**
@@ -172,13 +190,23 @@ let detectedResults = try? normalizer.detectQuadFromFile("your image file path")
 
 Detect quad from a buffered image (UIImage).
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(NSArray<iDetectedQuadResult*>*) detectQuadFromImage(UIImage*)uiimage error:(NSError**)error;
 ```
+2. 
+```swift
+func detectQuadFromFile(_ image: UIImage) throws -> [iDetectedQuadResult]
+```
+
 
 **Parameters**
 
-`[in] uiimage`: The ios UIImage to be detected.
+`[in] uiimage`: The ios UIImage to be detected.  
 `[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
@@ -209,14 +237,23 @@ let detectedResults = try? normalizer.detectQuadFromImage(uiimage)
 
 Normalize image from the memory buffer containing image pixels in defined format.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(iNormalizedImageResult*) normalizeBuffer:(iImageData*)buffer quad:(iQuadrilateral*)quad error:(NSError**)error;
+```
+2. 
+```swift
+func normalizeBuffer(_ data: iImageData, quad: iQuadrilateral?) throws -> iNormalizedImageResult
 ```
 
 **Parameters**
 
-`[in] buffer`: The memory buffer containing image pixels in defined format.
-`[in] quad`: The detected quad for normalizing.
+`[in] buffer`: The memory buffer containing image pixels in defined format.  
+`[in] quad`: The detected quad for normalizing.  
 `[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
@@ -260,14 +297,23 @@ if(detectedResults.count > 0) {
 
 Normalize an image file.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(iNormalizedImageResult*) normalizeFile:(NSString*)fileFullePath quad:(iQuadrilateral*)quad error:(NSError**)error;
+```
+2. 
+```swift
+func normalizeFile(_ sourceFilePath: String, quad: iQuadrilateral?) throws -> iNormalizedImageResult
 ```
 
 **Parameters**
 
 `[in] fileFullPath`: A string defining the file path. It supports BMP, TIFF, JPG, PNG files.  
-`[in] quad`: The detected quad for normalizing.
+`[in] quad`: The detected quad for normalizing.  
 `[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
@@ -302,14 +348,23 @@ if(detectedResults.count > 0) {
 
 Normalize a buffered image (UIImage).
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(iNormalizedImageResult*) normalizeImage:(UIImage*)uiimage quad:(iQuadrilateral*)quad error:(NSError**)error;
+```
+2. 
+```swift
+func normalizeImage(_ image: UIImage, quad: iQuadrilateral?) throws -> iNormalizedImageResult
 ```
 
 **Parameters**
 
-`[in] uiimage`: The ios UIImage to be normalized.
-`[in] quad`: The detected quad for normalizing.
+`[in] uiimage`: The ios UIImage to be normalized.  
+`[in] quad`: The detected quad for normalizing.  
 `[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**

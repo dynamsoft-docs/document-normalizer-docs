@@ -13,8 +13,17 @@ pageStartVer: 1.0
 
 This is the main class of Dynamsoft Document Normalizer(DDN) SDK. It supports quad detection and image normalization for still pictures and live video.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface DynamsoftDocumentNormalizer
+```
+2. 
+```swift
+class DynamsoftDocumentNormalizer : NSObject
 ```
 
 ## Initialize Methods

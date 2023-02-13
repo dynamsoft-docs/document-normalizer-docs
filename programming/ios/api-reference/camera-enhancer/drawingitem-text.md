@@ -13,8 +13,17 @@ breadcrumbText: iOS TextDrawingItem Class
 
 `TextDrawingItem` is a subclass of `DrawingItem`. Dynamsoft Camera Enhancer will draw the `TextDrawingItem` on the UI if it is created and added to the `DCECameraView` or `DCEImageEditorView`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface TextDrawingItem (DrawingItem)
+```
+2. 
+```swift
+class TextDrawingItem : DrawingItem
 ```
 
 | Method Name | Description |
@@ -32,8 +41,17 @@ breadcrumbText: iOS TextDrawingItem Class
 
 The constructor of `TextDrawingItem`. Initialize the instance of `TextDrawingItem`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (instancetype) initWithText:(NSString*)text textRect(CGRect)textRect;
+```
+2. 
+```swift
+init(text: String, rect: CGRect)
 ```
 
 **Parameters**
@@ -62,18 +80,36 @@ let drawingItem = TextDrawingItem.init(text:"Your-Text", rect:rect)
 
 The property that indicates the text of the `TextDrawingItem`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (assign, nonatomic, readonly) NSString* text;
+```
+2. 
+```swift
+var text: String { get }
 ```
 
 &nbsp;
 
-## textRect
+## rect
 
 The `CGRect` property that indicates the location of the `TextDrawingItem`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@property (assign, nonatomic, readonly) CGRect textRect;
+@property (nonatomic, readonly) CGRect rect;
+```
+2. 
+```swift
+var rect: CGRect { get }
 ```
 
 {%- include api-reference/drawing-item-ios.md -%}

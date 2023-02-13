@@ -13,8 +13,17 @@ breadcrumbText: iOS DCEFrame Class
 
 The `DCEFrame` is the class that stores pixel data and further information.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface DCEFrame : NSObject
+```
+2. 
+```swift
+class DCEFrame : iImageData
 ```
 
 | Method & Property Name | Type/Return Value | Description |
@@ -35,8 +44,17 @@ The `DCEFrame` is the class that stores pixel data and further information.
 
 The property stores the pixel data of the image.
 
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 NSData* imageData
+```
+2. 
+```swift
+var bytes: Data? { get set }
 ```
 
 &nbsp;
@@ -45,8 +63,17 @@ NSData* imageData
 
 The property stores the pixel width of the image.
 
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 NSInteger width
+```
+2. 
+```swift
+var width: Int { get set }
 ```
 
 &nbsp;
@@ -55,8 +82,17 @@ NSInteger width
 
 The property stores the pixel height of the image.
 
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 NSInteger height
+```
+2. 
+```swift
+var height: Int { get set }
 ```
 
 &nbsp;
@@ -65,8 +101,17 @@ NSInteger height
 
 The property stores the stride of the image.
 
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 NSInteger stride
+```
+2. 
+```swift
+var stride: Int { get set }
 ```
 
 &nbsp;
@@ -75,8 +120,17 @@ NSInteger stride
 
 The property stores the pixel format of the image. The property value is one of the Enumeration value of `ImagePixelFormat`. Currently, the image output formats of `DCEFrame` are NV21 or ARGB_8888. View more in [`EnumImagePixelFormat`]({{ site.enumerations }}image-pixel-format.html?src=ios)
 
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 NSInteger pixelFormat
+```
+2. 
+```swift
+var pixelFormat: Int { get set }
 ```
 
 &nbsp;
@@ -85,8 +139,17 @@ NSInteger pixelFormat
 
 The property stores the `frameID` of the frame.
 
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 NSInteger frameID
+```
+2. 
+```swift
+var frameID: Int { get set }
 ```
 
 &nbsp;
@@ -95,8 +158,17 @@ NSInteger frameID
 
 The property indicates the image quality of the `DCEFrame`. View more in [`EnumFrameQuality`](enum-frame-quality.md). User have to enable the frame filter feature to get the quality (high/low) of the `DCEFrame`. Otherwise, the frame quality will be unknown.
 
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 EnumFrameQuality quality
+```
+2. 
+```swift
+var quality: EnumFrameQuality { get set }
 ```
 
 &nbsp;
@@ -105,8 +177,17 @@ EnumFrameQuality quality
 
 The property stores a boolean value that recording whether the image is cropped. The frames can be cropped if `fast mode` is enabled. Property value `true` means the image is cropped and `false` means the image has never been cropped.
 
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 BOOL isCropped
+```
+2. 
+```swift
+var isCropped: Bool { get set }
 ```
 
 &nbsp;
@@ -115,8 +196,17 @@ BOOL isCropped
 
 The property stores a CGRect value that means the crop region of the image (if the image is cropped). If the image is not cropped, the value will be null.
 
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 CGRect cropRegion
+```
+2. 
+```swift
+var cropRegion: CGRect { get set }
 ```
 
 &nbsp;
@@ -125,8 +215,17 @@ CGRect cropRegion
 
 The property stores an int value that means the rotation angle of the image. The value is 0, 90, 180 or 270, which depends on the device orientation.
 
-```objectivec
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
 NSInteger orientation
+```
+2. 
+```swift
+var orientation: Int { get set }
 ```
 
 <div align="center">
@@ -140,8 +239,17 @@ NSInteger orientation
 
 The method converts the image to `UIImage`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (UIImage * _Nullable)toUIImage:(NSError *_Nullable *_Nullable)error;
+```
+2. 
+```swift
+func toUIImage() throws -> UIImage
 ```
 
 **Return Value**
