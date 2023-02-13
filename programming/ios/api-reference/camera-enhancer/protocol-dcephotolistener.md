@@ -64,7 +64,11 @@ class ViewController: UIViewController, DCEPhotoListener {
    func photoOutputCallback(_ jpegByte: Data){
           // Add your code to execute when photo is captured.
           // For example, you can use Dynamsoft Barcode Reader (DBR) to decode the byte image.
-          let barcodeResults = try? dbr.decodeFileInMemory(jpegByte)
+          do{
+             let barcodeResults = try dbr.decodeFileInMemory(jpegByte)
+          }catch{
+             // Add your code to deal with the exceptions.
+          }
    }
 }
 ```

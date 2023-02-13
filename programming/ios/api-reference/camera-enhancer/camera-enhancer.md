@@ -279,7 +279,11 @@ func selectCameraWithPosition(_ position: EnumCameraPosition) throws
 ```
 2. 
 ```swift
-try? dce.selectCameraWithPosition(EnumCameraPosition.back)
+do{
+   try dce.selectCameraWithPosition(EnumCameraPosition.back)
+}catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 &nbsp;
@@ -355,7 +359,11 @@ func selectCamera(_ cameraId: String) throws
 ```
 2. 
 ```swift
-try? dce.selectCamera("BACK_FACING_CAMERA")
+do{
+   try  dce.selectCamera("BACK_FACING_CAMERA")
+}catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 **Remarks**
@@ -669,7 +677,7 @@ Get the current resolution.
 ```
 2. 
 ```swift
-func getResolution() -> Stringß
+func getResolution() -> String
 ```
 
 **Return Value**
@@ -931,7 +939,11 @@ scanRegion.regionBottom = 75
 scanRegion.regionLeft = 25
 scanRegion.regionRight = 75
 scanRegion.regionMeasuredByPercentage = 1
-try? dce.setScanRegion(scanRegion)
+do{
+   try  dce.setScanRegion(scanRegion)
+}catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 **Remarks**
@@ -1224,7 +1236,11 @@ func enableFeatures(_ enumEnhancerFeatures: Int) throws
 ```
 2. 
 ```swift
-try? dce.enableFeatures(EnumEnhancerFeature.EnumFRAME_FILTER.rawValue)
+do{
+   try  dce.enableFeatures(EnumEnhancerFeature.EnumFRAME_FILTER.rawValue)
+}catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 **Remarks**
@@ -1335,7 +1351,6 @@ Update the advanced camera controlling and video streaming processing parameters
 >1. 
 ```objc
 - (BOOL)updateAdvancedSettingsFromFile:(NSString*)filePath error:(NSError * _Nullable * _Nullable)error NS_SWIFT_NAME(updateAdvancedSettingsFromFile(_:));
-
 ```
 2. 
 ```swift
@@ -1358,7 +1373,11 @@ func updateAdvancedSettingsFromFile(_ filePath: String) throws
 ```
 2. 
 ```swift
-try? dce.updateAdvancedSettingsFromFile("Put your JSON file path here.")
+do{
+   try  dce.updateAdvancedSettingsFromFile("Put your JSON file path here.")
+}catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 **Remarks**
@@ -1400,5 +1419,9 @@ func updateAdvancedSettingsFromString(_ JsonString: String) throws
 ```
 2. 
 ```swift
-try? dce.updateAdvancedSettingsFromString("Put your stringified JSON data here.")
+do{
+   try  dce.updateAdvancedSettingsFromString("Put your stringified JSON data here.")
+}catch{
+   // Add your code to deal with the exceptions.
+}
 ```

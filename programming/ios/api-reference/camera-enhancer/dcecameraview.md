@@ -222,7 +222,11 @@ DCEDrawingLayer *drawingLayer = [_dceView getDrawingLayer:DBR_LAYER_ID];
 ```
 2. 
 ```swift
-let drawingLayer = try? dceView.getDrawingLayer(DBR_LAYER_ID)
+do{
+    let drawingLayer = try dceView.getDrawingLayer(DBR_LAYER_ID)
+}catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 &nbsp;
@@ -258,7 +262,11 @@ DCEDrawingLayer *drawingLayer = [_dceView createDrawingLayer:1];
 ```
 2. 
 ```swift
-let drawingLayer = try? dceView.createDrawingLayer(1)
+do{
+   let drawingLayer = try dceView.createDrawingLayer(1)
+}catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 &nbsp;
@@ -270,7 +278,7 @@ Get the visible region of the video streaming.
 When the shape of your camera view is quite different from the shape of the video streaming, there might exist a large area that is invisible. You can use this method to get the region of this invisible area.
 
 <div align="center">
-    <p><img src="../../assets/visible-region.png" width="30%" alt="visible-region"></p>
+    <p><img src="../../../../assets/visible-region.png" width="30%" alt="visible-region"></p>
     <p>What's Visible Region</p>
 </div>
 
