@@ -711,7 +711,7 @@ Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor o
 >
 >1. 
 ```objc
-- (Void)setZoom:(CGFloat)factor
+- (void)setZoom:(CGFloat)factor
 ```
 2. 
 ```swift
@@ -823,7 +823,7 @@ Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at th
 >
 >1. 
 ```objc
-- (Void)setFocus:(CGPoint)point;
+- (void)setFocus:(CGPoint)point;
 ```
 2. 
 ```swift
@@ -863,7 +863,7 @@ Trigger a focus at the targeting point and set the subsequent focus mode after f
 >
 >1. 
 ```objc
-- (Void)setFocus:(CGPoint)focusPoint subsequentFocusMode:(EnumFocusMode)subsequentFocusMode; 
+- (void)setFocus:(CGPoint)focusPoint subsequentFocusMode:(EnumFocusMode)subsequentFocusMode; 
 ```
 2. 
 ```swift

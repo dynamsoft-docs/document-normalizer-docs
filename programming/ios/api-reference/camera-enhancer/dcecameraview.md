@@ -223,7 +223,7 @@ DCEDrawingLayer *drawingLayer = [_dceView getDrawingLayer:DBR_LAYER_ID];
 2. 
 ```swift
 do{
-    let drawingLayer = try dceView.getDrawingLayer(DBR_LAYER_ID)
+   let drawingLayer = try dceView.getDrawingLayer(DBR_LAYER_ID)
 }catch{
    // Add your code to deal with the exceptions.
 }

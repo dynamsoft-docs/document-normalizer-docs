@@ -188,8 +188,8 @@ NSError* error;
 2. 
 ```swift
 do{
-    try imageData.toUIImage()
+   try imageData.toUIImage()
 }catch{
-    //
+   // Add your code to deal with the exceptions.
 }
 ```

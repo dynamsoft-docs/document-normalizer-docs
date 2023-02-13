@@ -60,9 +60,9 @@ BOOL isSuccess = [normalizer initRuntimeSettingsFromFile:@"your template file pa
 ```swift
 let normalizer = DynamsoftDocumentNormalizer()
 do{
-    let isSuccess = try normalizer.initRuntimeSettingsFromFile("your template file path")
+   let isSuccess = try normalizer.initRuntimeSettingsFromFile("your template file path")
 }catch{
-    // Add your code to deal with the exceptions.
+   // Add your code to deal with the exceptions.
 }
 ```
 
@@ -108,9 +108,9 @@ BOOL isSuccess = [normalizer initRuntimeSettingsFromString:@"your json template 
 ```swift
 let normalizer = DynamsoftDocumentNormalizer()
 do{
-    let isSuccess = try normalizer.initRuntimeSettingsFromString("your json template string")
+   let isSuccess = try normalizer.initRuntimeSettingsFromString("your json template string")
 }catch{
-    // Add your code to deal with the exceptions.
+   // Add your code to deal with the exceptions.
 }
 ```
 
@@ -157,9 +157,9 @@ BOOL isSuccess = [normalizer outputRuntimeSettingsToFile:@"your template file pa
 ```swift
 let normalizer = DynamsoftDocumentNormalizer()
 do{
-    let isSuccess = try normalizer.outputRuntimeSettingsToFile("your template file path", settingsName:"your template name")
+   let isSuccess = try normalizer.outputRuntimeSettingsToFile("your template file path", settingsName:"your template name")
 }catch{
-    // Add your code to deal with the exceptions.
+   // Add your code to deal with the exceptions.
 }
 ```
 
@@ -205,8 +205,8 @@ NSString* settingsString = [normalizer outputRuntimeSettings:@"your template nam
 ```swift
 let normalizer = DynamsoftDocumentNormalizer()
 do{
-    let settingsString = try normalizer.outputRuntimeSettings("your template name")
+   let settingsString = try normalizer.outputRuntimeSettings("your template name")
 }catch{
-    // Add your code to deal with the exceptions.
+   // Add your code to deal with the exceptions.
 }
 ```

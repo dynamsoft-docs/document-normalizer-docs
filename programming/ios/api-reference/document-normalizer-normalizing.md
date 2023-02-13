@@ -62,14 +62,14 @@ If you have imported **DynamsoftCameraEnhancer.framework**, you can get video fr
 ```objc
 //Get frames in callback methods.
 - (void)frameOutPutCallback:(DCEFrame *)frame timeStamp:(NSTimeInterval)timeStamp{
-    iImageData* buffer = [[iImageData alloc] init];
-    buffer.bytes = frame.imageData;
-    buffer.width = frame.width;
-    buffer.height = frame.height;
-    buffer.stride = frame.stride;
-    buffer.format = frame.pixelFormat;
-    NSError* error;
-    NSArray<iDetectedQuadResult*>* detectedResults = [normalizer detectQuadFromBuffer:buffer error:&error];
+   iImageData* buffer = [[iImageData alloc] init];
+   buffer.bytes = frame.imageData;
+   buffer.width = frame.width;
+   buffer.height = frame.height;
+   buffer.stride = frame.stride;
+   buffer.format = frame.pixelFormat;
+   NSError* error;
+   NSArray<iDetectedQuadResult*>* detectedResults = [normalizer detectQuadFromBuffer:buffer error:&error];
 }
 ```
 2. 
@@ -103,24 +103,24 @@ If you are acquiring video frames from `captureOutput` callback, you can use the
 ```objc
 - (void)captureOutput:(AVCaptureOutput *)captureOutput didOutputSampleBuffer:(CMSampleBufferRef)sampleBuffer fromConnection:(AVCaptureConnection *)connection;
 {
-  // Extract image data from sampleBuffer.
-  CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
-  CVPixelBufferLockBaseAddress(imageBuffer, kCVPixelBufferLock_ReadOnly);
-  int bufferSize = (int)CVPixelBufferGetDataSize(imageBuffer);
-  int imgWidth = (int)CVPixelBufferGetWidth(imageBuffer);
-  int imgHeight = (int)CVPixelBufferGetHeight(imageBuffer);
-  size_t bpr = CVPixelBufferGetBytesPerRow(imageBuffer);
-  void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
-  CVPixelBufferUnlockBaseAddress(imageBuffer, kCVPixelBufferLock_ReadOnly);
-  NSData * bufferBytes = [NSData dataWithBytes:baseAddress length:bufferSize];
-  startRecognitionDate = [NSDate date];
-  iImageData* buffer = [[iImageData alloc] init];
-  buffer.bytes = bufferBytes;
-  buffer.width = imgWidth;
-  buffer.height = imgHeight;
-  buffer.stride = bpr;
-  buffer.format = EnumImagePixelFormatARGB_8888;
-  NSArray<iDetectedQuadResult*>* detectedResults = [normalizer detectQuadFromBuffer:buffer error:&error];
+   // Extract image data from sampleBuffer.
+   CVImageBufferRef imageBuffer = CMSampleBufferGetImageBuffer(sampleBuffer);
+   CVPixelBufferLockBaseAddress(imageBuffer, kCVPixelBufferLock_ReadOnly);
+   int bufferSize = (int)CVPixelBufferGetDataSize(imageBuffer);
+   int imgWidth = (int)CVPixelBufferGetWidth(imageBuffer);
+   int imgHeight = (int)CVPixelBufferGetHeight(imageBuffer);
+   size_t bpr = CVPixelBufferGetBytesPerRow(imageBuffer);
+   void *baseAddress = CVPixelBufferGetBaseAddress(imageBuffer);
+   CVPixelBufferUnlockBaseAddress(imageBuffer, kCVPixelBufferLock_ReadOnly);
+   NSData * bufferBytes = [NSData dataWithBytes:baseAddress length:bufferSize];
+   startRecognitionDate = [NSDate date];
+   iImageData* buffer = [[iImageData alloc] init];
+   buffer.bytes = bufferBytes;
+   buffer.width = imgWidth;
+   buffer.height = imgHeight;
+   buffer.stride = bpr;
+   buffer.format = EnumImagePixelFormatARGB_8888;
+   NSArray<iDetectedQuadResult*>* detectedResults = [normalizer detectQuadFromBuffer:buffer error:&error];
 }
 ```
 2. 
@@ -295,7 +295,7 @@ iImageData* buffer = GetImageDataFromSomeWhere;
 NSError* error;
 NSArray<iDetectedQuadResult*>* detectedResults= [normalizer detectQuadFromBuffer:buffer error:&error];
 if([detectedResults count] > 0) {
-    iNormalizedImageResult* normalizedImage = [normalizer normalizeBuffer:buffer  quad:detectedResults[0] error:&error];
+   iNormalizedImageResult* normalizedImage = [normalizer normalizeBuffer:buffer  quad:detectedResults[0] error:&error];
 }
 ```
 2. 
@@ -356,7 +356,7 @@ DynamsoftDocumentNormalizer* normalizer = [[DynamsoftDocumentNormalizer alloc] i
 NSError* error;
 NSArray<iDetectedQuadResult*>* detectedResults= [normalizer detectQuadFromFile:@"your image file path" error:&error];
 if([detectedResults count] > 0) {
-    iNormalizedImageResult* normalizedImage = [normalizer normalizeFile:"your image file path" quad:detectedResults[0] error:&error];
+   iNormalizedImageResult* normalizedImage = [normalizer normalizeFile:"your image file path" quad:detectedResults[0] error:&error];
 }
 ```
 2. 
@@ -413,7 +413,7 @@ UIImage* uiimage = GetUIImageFromSomeWhere;
 NSError* error;
 NSArray<iDetectedQuadResult*>* detectedResults= [normalizer detectQuadFromImage:uiimage error:&error];
 if([detectedResults count] > 0) {
-    iNormalizedImageResult* normalizedImage = [normalizer normalizeImage:uiimage  quad:detectedResults[0] error:&error];
+   iNormalizedImageResult* normalizedImage = [normalizer normalizeImage:uiimage  quad:detectedResults[0] error:&error];
 }
 ```
 2. 
@@ -422,15 +422,15 @@ let normalizer = DynamsoftDocumentNormalizer()
 // user code: get UIImage from somewhere
 let uiimage = GetUIImageFromSomeWhere()
 do{
-    let detectedResults = try normalizer.detectQuadFromImage(uiimage)
+   let detectedResults = try normalizer.detectQuadFromImage(uiimage)
 }catch{
-    // Add your code to deal with the exceptions.
+   // Add your code to deal with the exceptions.
 }
 if(detectedResults.count > 0) {
-    do{
-        let normalizedImage = try normalizer.normalizeImage(uiimage, quad:detectedResults[0])
-    }catch{
-        // Add your code to deal with the exceptions.
-    }
+   do{
+          let normalizedImage = try normalizer.normalizeImage(uiimage, quad:detectedResults[0])
+   }catch{
+          // Add your code to deal with the exceptions.
+   }
 }
 ```

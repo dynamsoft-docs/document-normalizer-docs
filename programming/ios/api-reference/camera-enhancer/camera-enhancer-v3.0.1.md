@@ -812,7 +812,7 @@ let frameRate = dce.getFrameRate()
 Input one of the preset resolution value in Enumeration `Resolution`. The camera enhancer will try to set the resolution to the target value or the closest available value below the target value.
 
 ```objc
-- (Void)setResolution:(Resolution)resolution;
+- (void)setResolution:(Resolution)resolution;
 ```
 
 **Parameters**
@@ -870,7 +870,7 @@ let resolution = dce.getResolution()
 Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the activated camera will immediately become the input value.
 
 ```objc
-- (Void)setZoom:(CGFloat)factor
+- (void)setZoom:(CGFloat)factor
 ```
 
 **Parameters**
@@ -928,7 +928,7 @@ let maxZoomFactor = dce.getMaxZoomFactor()
 Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position.
 
 ```objc
-- (Void)setFocus:(CGPoint)focusPosition;
+- (void)setFocus:(CGPoint)focusPosition;
 ```
 
 **Parameters**
