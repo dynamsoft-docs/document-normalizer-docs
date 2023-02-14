@@ -84,7 +84,7 @@ func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval){
    do{
           let detectedResults = try normalizer.detectQuadFromBuffer(buffer)
    }catch{
-          / Add your code to deal with the exceptions.
+          // Add your code to deal with the exceptions.
    }
 }
 ```
@@ -145,7 +145,7 @@ func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBu
    do{
           guard let detectedResults = try normalizer.detectQuadFromBuffer(buffer)
    }catch{
-          / Add your code to deal with the exceptions.
+          // Add your code to deal with the exceptions.
    }
 }
 ```
@@ -215,7 +215,6 @@ Detect quad from a buffered image (UIImage).
 func detectQuadFromFile(_ image: UIImage) throws -> [iDetectedQuadResult]
 ```
 
-
 **Parameters**
 
 `[in] uiimage`: The ios UIImage to be detected.  
@@ -234,14 +233,14 @@ The detected quads in the buffered image (UIImage). Refer [`iDetectedQuadResult`
 >1. 
 ```objc
 DynamsoftDocumentNormalizer* normalizer = [[DynamsoftDocumentNormalizer alloc] init];
-UIImage* uiimage = GetUIImageFromSomeWhere;
+UIImage* uiimage = [UIImage imageWithData:data];
 NSError* error;
 NSArray<iDetectedQuadResult*>* detectedResults = [normalizer detectQuadFromImage:uiimage error:&error];
 ```
 2. 
 ```swift
 let normalizer = DynamsoftDocumentNormalizer()
-let uiimage = GetUIImageFromSomeWhere();
+let uiimage:UIImage = UIImage.init(data:data)
 do{
    let detectedResults = try normalizer.detectQuadFromImage(uiimage)
 }catch{
@@ -268,7 +267,7 @@ func normalizeBuffer(_ data: iImageData, quad: iQuadrilateral?) throws -> iNorma
 
 **Parameters**
 
-`[in] buffer`: The memory buffer containing image pixels in defined format.  
+`[in] buffer`: An object of `iImageData` that contains image pixels in defined format.  
 `[in] quad`: The detected quad for normalizing.  
 `[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
@@ -290,9 +289,8 @@ There are several approaches for you to get a buffered image.
 >1. 
 ```objc
 DynamsoftDocumentNormalizer* normalizer = [[DynamsoftDocumentNormalizer alloc] init];
-// user code: get iImageData from somewhere
-iImageData* buffer = GetImageDataFromSomeWhere;
 NSError* error;
+// View the previous code snippet for how to create iImageData.
 NSArray<iDetectedQuadResult*>* detectedResults= [normalizer detectQuadFromBuffer:buffer error:&error];
 if([detectedResults count] > 0) {
    iNormalizedImageResult* normalizedImage = [normalizer normalizeBuffer:buffer  quad:detectedResults[0] error:&error];
@@ -301,16 +299,15 @@ if([detectedResults count] > 0) {
 2. 
 ```swift
 let normalizer = DynamsoftDocumentNormalizer()
-// user code: get iImageData from somewhere
-let buffer = GetImageDataFromSomeWhere()
 do{
-   let detectedResults = try normalizer.detectQuadFromBuffer(buffer)
+   // View the previous code snippet for how to create iImageData.
+   let detectedResults = try normalizer.detectQuadFromBuffer(imageData)
 }catch{
    // Add your code to deal with the exceptions.
 }
 if(detectedResults.count > 0) {
    do{
-          let normalizedImage = try normalizer.normalizeBuffer(buffer, quad:detectedResults[0])
+          let normalizedImage = try normalizer.normalizeBuffer(imageData, quad:detectedResults[0])
    }catch{
           // Add your code to deal with the exceptions.
    }
@@ -408,8 +405,7 @@ The normalized image result. Refer [`iNormalizedImageResult`](normalized-image-r
 >1. 
 ```objc
 DynamsoftDocumentNormalizer* normalizer = [[DynamsoftDocumentNormalizer alloc] init];
-// user code: get UIImage from somewhere
-UIImage* uiimage = GetUIImageFromSomeWhere;
+UIImage* uiimage = [UIImage imageWithData:data];
 NSError* error;
 NSArray<iDetectedQuadResult*>* detectedResults= [normalizer detectQuadFromImage:uiimage error:&error];
 if([detectedResults count] > 0) {
@@ -419,8 +415,7 @@ if([detectedResults count] > 0) {
 2. 
 ```swift
 let normalizer = DynamsoftDocumentNormalizer()
-// user code: get UIImage from somewhere
-let uiimage = GetUIImageFromSomeWhere()
+let uiimage:UIImage = UIImage.init(data:data)
 do{
    let detectedResults = try normalizer.detectQuadFromImage(uiimage)
 }catch{
