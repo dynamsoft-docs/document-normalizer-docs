@@ -298,19 +298,19 @@ if([detectedResults count] > 0) {
 ```
 2. 
 ```swift
-let normalizer = DynamsoftDocumentNormalizer()
+let normalizer = DynamsoftDocumentNormalizer()
 do{
-   // View the previous code snippet for how to create iImageData.
-   let detectedResults = try normalizer.detectQuadFromBuffer(imageData)
-   if(detectedResults.count > 0) {
+   // View the previous code snippet for how to create iImageData.
+   let detectedResults = try normalizer.detectQuadFromBuffer(imageData)
+   if(detectedResults.count > 0) {
           do{
-             let normalizedImage = try normalizer.normalizeBuffer(imageData, quad:detectedResults[0].location)
+             let normalizedImage = try normalizer.normalizeBuffer(imageData, quad:detectedResults[0].location)
           }catch{
-             // Add your code to deal with the exceptions.
+             // Add your code to deal with the exceptions.
           }
    }
 }catch{
-   // Add your code to deal with the exceptions.
+   // Add your code to deal with the exceptions.
 }
 ```
 
