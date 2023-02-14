@@ -298,19 +298,19 @@ if([detectedResults count] > 0) {
 ```
 2. 
 ```swift
-let normalizer = DynamsoftDocumentNormalizer()
+let normalizer = DynamsoftDocumentNormalizer()
 do{
-   // View the previous code snippet for how to create iImageData.
-   let detectedResults = try normalizer.detectQuadFromBuffer(imageData)
-}catch{
-   // Add your code to deal with the exceptions.
-}
-if(detectedResults.count > 0) {
-   do{
-          let normalizedImage = try normalizer.normalizeBuffer(imageData, quad:detectedResults[0])
-   }catch{
-          // Add your code to deal with the exceptions.
+   // View the previous code snippet for how to create iImageData.
+   let detectedResults = try normalizer.detectQuadFromBuffer(imageData)
+   if(detectedResults.count > 0) {
+          do{
+             let normalizedImage = try normalizer.normalizeBuffer(imageData, quad:detectedResults[0].location)
+          }catch{
+             // Add your code to deal with the exceptions.
+          }
    }
+}catch{
+   // Add your code to deal with the exceptions.
 }
 ```
 
@@ -353,19 +353,19 @@ DynamsoftDocumentNormalizer* normalizer = [[DynamsoftDocumentNormalizer alloc] i
 NSError* error;
 NSArray<iDetectedQuadResult*>* detectedResults= [normalizer detectQuadFromFile:@"your image file path" error:&error];
 if([detectedResults count] > 0) {
-   iNormalizedImageResult* normalizedImage = [normalizer normalizeFile:"your image file path" quad:detectedResults[0] error:&error];
+   iNormalizedImageResult* normalizedImage = [normalizer normalizeFile:"your image file path" quad:detectedResults[0].location error:&error];
 }
 ```
 2. 
 ```swift
 let normalizer = DynamsoftDocumentNormalizer()
 if(detectedResults.count > 0) {
-    do{
-        let detectedResults = try normalizer.detectQuadFromFile("your image file path")
-        let normalizedImage = try normalizer.normalizeFile("your image file path", quad:detectedResults[0])
-    }catch{
-        // Add your code to deal with the exceptions.
-    }
+   do{
+          let detectedResults = try normalizer.detectQuadFromFile("your image file path")
+          let normalizedImage = try normalizer.normalizeFile("your image file path", quad:detectedResults[0].location)
+   }catch{
+          // Add your code to deal with the exceptions.
+   }
 }
 ```
 
@@ -418,14 +418,14 @@ let normalizer = DynamsoftDocumentNormalizer()
 let uiimage:UIImage = UIImage.init(data:data)
 do{
    let detectedResults = try normalizer.detectQuadFromImage(uiimage)
+   if(detectedResults.count > 0) {
+          do{
+             let normalizedImage = try normalizer.normalizeImage(uiimage, quad:detectedResults[0])
+          }catch{
+             // Add your code to deal with the exceptions.
+          }
+   }
 }catch{
    // Add your code to deal with the exceptions.
-}
-if(detectedResults.count > 0) {
-   do{
-          let normalizedImage = try normalizer.normalizeImage(uiimage, quad:detectedResults[0])
-   }catch{
-          // Add your code to deal with the exceptions.
-   }
 }
 ```
