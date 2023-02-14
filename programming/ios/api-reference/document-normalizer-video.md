@@ -119,6 +119,27 @@ func setImageSource(_ source: ImageSource?)
 
 **Code Snippet**
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)configurationDDN{
+   _ddn =  [[DynamsoftDocumentNormalizer alloc] init];
+   _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
+   [_ddn setImageSource:_dce];
+}
+```
+2. 
+```swift
+func configurationDDN(){
+   ddn = DynamsoftDocumentNormalizer()
+   dce = DynamsoftCameraEnhancer(view: dceView)
+   ddn.setImageSource(dce)
+}
+```
+
 ### startDetecting
 
 Start the document quad detection thread in the video streaming scenario. Please be sure that you have bound a Camera Enhancer to the document normalizer before you trigger `startDetecting`.
@@ -138,7 +159,18 @@ func startDetecting()
 
 **Code Snippet**
 
-You can view the complete code snippet in [`setImageSource`](#setimagesource).
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+[_ddn startDetecting];
+```
+2. 
+```swift
+ddn.startDetecting()
+```
 
 ### stopDetecting
 
@@ -159,7 +191,18 @@ func stopDetecting()
 
 **Code Snippet**
 
-You can view the complete code snippet in [`setImageSource`](#setimagesource).
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+[_ddn stopDetecting];
+```
+2. 
+```swift
+ddn.stopDetecting()
+```
 
 ### setDetectResultListener
 
@@ -184,4 +227,28 @@ func setDetectResultListener(_ listener: DetectResultListener)
 
 **Code Snippet**
 
-You can view the complete code snippet in [`setImageSource`](#setimagesource).
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+@interface ViewController ()<DetectResultListener>
+- (void)configurationDDN{
+   [_ddn setDetectResultListener:self];
+}
+- (void)detectResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iDetectQuadResult *> *)results{
+    // Add your code to do when barcode result is returned.
+}
+```
+2. 
+```swift
+class ViewController: UIViewController, DetectResultListener{
+   func configurationDDN(){
+          ddn.setDetectResultListener(self)
+   }
+   func detectResultCallback(_ frameId: Int, imageData: iImageData, results: [iDetectQuadResult]?){
+          // Add your code
+   }
+}
+```

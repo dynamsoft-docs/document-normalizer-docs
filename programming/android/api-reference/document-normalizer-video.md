@@ -108,7 +108,13 @@ void setImageSource(ImageSource source)
 
 **Code Snippet**
 
-This code snippet displays a complete code on how to add CameraEnhancer to your project and start detecting and get detection results from the video streaming.
+```java
+// Create an instance of DynamsoftCameraEnhancer and set it as the image source.
+DCECameraView cameraView = findViewById(R.id.cameraView);
+CameraEnhancer mCameraEnhancer; = new CameraEnhancer(MainActivity.this);
+mCameraEnhancer.setCameraView(cameraView);
+normalizer.setImageSource(mCameraEnhancer);
+```
 
 ### startDetecting
 
@@ -120,7 +126,9 @@ void startDetecting()
 
 **Code Snippet**
 
-You can view the complete code snippet in [`setImageSource`](#setimagesource).
+```java
+normalizer.startDetecting();
+```
 
 ### stopDetecting
 
@@ -132,7 +140,9 @@ void stopDetecting()
 
 **Code Snippet**
 
-You can view the complete code snippet in [`setImageSource`](#setimagesource).
+```java
+normalizer.startDetecting();
+```
 
 ### setDetectResultListener
 
@@ -148,4 +158,14 @@ void setDetectResultListener(DetectResultListener detectResultListener)
 
 **Code Snippet**
 
-You can view the complete code snippet in [`setImageSource`](#setimagesource).
+```java
+// Result callback configurations
+DetectResultListener mDetectResultListener = new DetectResultListener() {
+    // Obtain the detected quad detection results and display.
+    @Override
+    public void detectResultCallback(int id, ImageData imageData, DetectedQuadResult[] detectedResults) {
+        // Add your code to execute when quad detection results are returned.
+    }
+};
+normalizer.setDetectResultListener(mDetectResultListener);
+```
