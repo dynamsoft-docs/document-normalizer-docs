@@ -4,6 +4,7 @@ title: Dynamsoft Document Normalizer Android API Reference - Camera Methods
 description: This page shows Camera methods of Dynamsoft Document Normalizer for Android SDK.
 keywords: Camera methods, DocumentNormalizer, api reference, android
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 pageStartVer: 1.0
 ---
@@ -11,36 +12,9 @@ pageStartVer: 1.0
 
 # Video Detecting Methods
 
-> Note:
->  
-> - You have to include `CameraEnhancer` when using **Video Detecting Methods**.  
-> - `CameraEnhancer` provide APIs that help you quickly deploy a camera module and capture video streaming for document normalizer.  
-> - Through **Video Detecting Methods** you can control whether to start video streaming document detecting and get the detection results.  
+## How to Implement Video Detecting
 
-| Method | Description |
-|--------|-------------|
-| [`setImageSource`](#setimagesource) | Sets an instance of ImageSource to get images.  |
-| [`startDetecting`](#startdetecting) | Start the document quad detection thread in the video streaming scenario. |
-| [`stopDetecting`](#stopdetecting) | Stop the document quad detection thread in the video streaming scenario. |
-| [`setDetectResultListener`](#setdetectresultlistener) | Set callback interface to process detection results generated during frame detecting. |
-
----
-
-## setImageSource
-
-Sets an instance of ImageSource to get images. `CameraEnhancer` is a specific implementation of ImageSource, which can help the Document Normalizer to acquire video frames continuously for recognition.
-
-```java
-void setImageSource(ImageSource source)
-```
-
-**Parameters**
-
-`[in] source`: An instance of ImageSource. If you are using `Dynamsoft Camera Enhancer`(DCE) to capture camera frames, pass an instance of `CameraEnhancer`.
-
-**Code Snippet**
-
-This code snippet displays a complete code on how to add CameraEnhancer to your project and start detecting and get detection results from the video streaming.
+This code snippet displays a complete code on how to configure camera module, start detecting and get detection results from the video streaming.
 
 ```java
 DocumentNormalizer normalizer;
@@ -103,7 +77,40 @@ public void onPause() {
 }
 ```
 
-## startDetecting
+> Note:
+>  
+> - `DynamsoftCameraEnhancer` library is included when implementing **Video Quad Detecting**. It provides APIs that help you quickly deploy a camera module and capture video streaming for document normalizer.
+
+## Methods
+
+Use the following methods to control the start/stop of video streaming document detecting and get the detection results.
+
+| Method | Description |
+|--------|-------------|
+| [`setImageSource`](#setimagesource) | Sets an instance of ImageSource to get images.  |
+| [`startDetecting`](#startdetecting) | Start the document quad detection thread in the video streaming scenario. |
+| [`stopDetecting`](#stopdetecting) | Stop the document quad detection thread in the video streaming scenario. |
+| [`setDetectResultListener`](#setdetectresultlistener) | Set callback interface to process detection results generated during frame detecting. |
+
+---
+
+### setImageSource
+
+Sets an instance of ImageSource to get images. `CameraEnhancer` is a specific implementation of ImageSource, which can help the Document Normalizer to acquire video frames continuously for recognition.
+
+```java
+void setImageSource(ImageSource source)
+```
+
+**Parameters**
+
+`[in] source`: An instance of ImageSource. If you are using `Dynamsoft Camera Enhancer`(DCE) to capture camera frames, pass an instance of `CameraEnhancer`.
+
+**Code Snippet**
+
+This code snippet displays a complete code on how to add CameraEnhancer to your project and start detecting and get detection results from the video streaming.
+
+### startDetecting
 
 Start the document quad detection thread in the video streaming scenario. Please be sure that you have bound a Camera Enhancer to the document normalizer before you trigger `startDetecting`.
 
@@ -115,7 +122,7 @@ void startDetecting()
 
 You can view the complete code snippet in [`setImageSource`](#setimagesource).
 
-## stopDetecting
+### stopDetecting
 
 Stop the document quad detection thread in the video streaming scenario.
 
@@ -127,7 +134,7 @@ void stopDetecting()
 
 You can view the complete code snippet in [`setImageSource`](#setimagesource).
 
-## setDetectResultListener
+### setDetectResultListener
 
 Set the callback interface to process detection results generated during frame detecting.
 
