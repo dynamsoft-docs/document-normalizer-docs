@@ -64,18 +64,18 @@ This code snippet displays a complete code on how to add CameraEnhancer to your 
 @end
 @implementation ViewController
 - (void)viewDidLoad{
-    [super viewDidLoad];
-    [self configurationDDN];
+   [super viewDidLoad];
+   [self configurationDDN];
 }
 - (void)configurationDDN{
-    _ddn =  [[DynamsoftDocumentNormalizer alloc] init];
-    _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
-    [self.view addSubview:_dceView];
-    _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
-    [_dce open];
-    [_ddn setImageSource:_dce];
-    [_ddn setDetectResultListener:self];
-    [_ddn startDetecting];
+   _ddn =  [[DynamsoftDocumentNormalizer alloc] init];
+   _dceView = [DCECameraView cameraWithFrame:self.view.bounds];
+   [self.view addSubview:_dceView];
+   _dce = [[DynamsoftCameraEnhancer alloc] initWithView:_dceView];
+   [_dce open];
+   [_ddn setImageSource:_dce];
+   [_ddn setDetectResultListener:self];
+   [_ddn startDetecting];
 }
 - (void)detectResultCallback:(NSInteger)frameId imageData:(iImageData *)imageData results:(NSArray<iDetectQuadResult *> *)results{
     // Add your code to do when barcode result is returned.
@@ -84,33 +84,33 @@ This code snippet displays a complete code on how to add CameraEnhancer to your 
 2. 
 ```swift
 class ViewController: UIViewController, DetectResultListener{
-    var SafeAreaBottomHeight:CGFloat = UIApplication.shared.statusBarFrame.size.height > 20 ? 34 : 0
-    var mainHeight = UIScreen.main.bounds.height
-    var mainWidth = UIScreen.main.bounds.width
-    var dce:DynamsoftCameraEnhancer! = nil
-    var dceView:DCECameraView! = nil
-    var ddn:DynamsoftDocumentNormalizer! = nil
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configurationDDN()
-    }
-    func configurationDDN(){
-        ddn = DynamsoftDocumentNormalizer()
-        var barHeight = self.navigationController?.navigationBar.frame.height
-        if UIApplication.shared.statusBarFrame.size.height <= 20 {
-            barHeight = 20
-        }
-        dceView = DCECameraView(frame: CGRect(x: 0, y: barHeight!, width: mainWidth, height: mainHeight - SafeAreaBottomHeight - barHeight!))
-        self.view.addSubview(dceView)
-        dce = DynamsoftCameraEnhancer(view: dceView)
-        dce.open()
-        ddn.setImageSource(dce)
-        ddn.setDetectResultListener(self)
-        ddn.startDetecting()
-    }
-    func detectResultCallback(_ frameId: Int, imageData: iImageData, results: [iDetectQuadResult]?){
-        // Add your code
-    }
+   var SafeAreaBottomHeight:CGFloat = UIApplication.shared.statusBarFrame.size.height > 20 ? 34 : 0
+   var mainHeight = UIScreen.main.bounds.height
+   var mainWidth = UIScreen.main.bounds.width
+   var dce:DynamsoftCameraEnhancer! = nil
+   var dceView:DCECameraView! = nil
+   var ddn:DynamsoftDocumentNormalizer! = nil
+   override func viewDidLoad() {
+          super.viewDidLoad()
+          configurationDDN()
+   }
+   func configurationDDN(){
+          ddn = DynamsoftDocumentNormalizer()
+          var barHeight = self.navigationController?.navigationBar.frame.height
+          if UIApplication.shared.statusBarFrame.size.height <= 20 {
+             barHeight = 20
+          }
+          dceView = DCECameraView(frame: CGRect(x: 0, y: barHeight!, width: mainWidth, height: mainHeight - SafeAreaBottomHeight - barHeight!))
+          self.view.addSubview(dceView)
+          dce = DynamsoftCameraEnhancer(view: dceView)
+          dce.open()
+          ddn.setImageSource(dce)
+          ddn.setDetectResultListener(self)
+          ddn.startDetecting()
+   }
+   func detectResultCallback(_ frameId: Int, imageData: iImageData, results: [iDetectQuadResult]?){
+          // Add your code
+   }
 }
 ```
 
