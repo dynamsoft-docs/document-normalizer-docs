@@ -4,6 +4,7 @@ title: Dynamsoft Document Normalizer iOS API Reference - Video Detecting Methods
 description: This page shows Video Detecting methods of Dynamsoft Document Normalizer for iOS SDK.
 keywords: Video Detecting methods, DynamsoftCameraEnhancer, api reference, ios
 needAutoGenerateSidebar: true
+needGenerateH3Content: true
 noTitleIndex: true
 pageStartVer: 1.0
 ---
@@ -11,45 +12,9 @@ pageStartVer: 1.0
 
 # Video Detecting Methods
 
-> Note:
->  
-> - You have to include `DynamsoftCameraEnhancer` when using **Video Detecting Methods**.  
-> - `DynamsoftCameraEnhancer` provide APIs that help you quickly deploy a camera module and capture video streaming for document normalizer.  
-> - Through **Video Detecting Methods** you can control whether to start video streaming document detecting and get the detection results.  
+## How to Implement Video Detecting
 
-| Method | Description |
-|--------|-------------|
-| [`setImageSource`](#setimagesource) | Sets an instance of ImageSource to get images.  |
-| [`startDetecting`](#startdetecting) | Start the document quad detection thread in the video streaming scenario. |
-| [`stopDetecting`](#stopdetecting) | Stop the document quad detection thread in the video streaming scenario. |
-| [`setDetectResultListener`](#setdetectresultlistener) | Set callback interface to process detection results generated during frame detecting. |
-
----
-
-## setImageSource
-
-Sets an instance of ImageSource to get images. `DynamsoftCameraEnhancer` is a specific implementation of ImageSource, which can help the Document Normalizer to acquire video frames continuously for recognition.
-
-<div class="sample-code-prefix"></div>
->- Objective-C
->- Swift
->
->1. 
-```objc
-- (void)setImageSource:(ImageSource* _Nonnull)source;
-```
-2. 
-```swift
-func setImageSource(_ source: ImageSource?)
-```
-
-**Parameters**
-
-`[in] source`: An instance of ImageSource. If you are using `Dynamsoft Camera Enhancer`(DCE) to capture camera frames, pass an instance of `DynamsoftCameraEnhancer`.
-
-**Code Snippet**
-
-This code snippet displays a complete code on how to add CameraEnhancer to your project, start detecting and get detection results from the video streaming.
+This code snippet displays a complete code on how to configure camera module, start detecting and get detection results from the video streaming.
 
 <div class="sample-code-prefix"></div>
 >- Objective-C
@@ -114,7 +79,47 @@ class ViewController: UIViewController, DetectResultListener{
 }
 ```
 
-## startDetecting
+> Note:
+>  
+> - `DynamsoftCameraEnhancer` library is included when implementing **Video Quad Detecting**. It provides APIs that help you quickly deploy a camera module and capture video streaming for document normalizer.
+
+## Methods
+
+Use the following methods to control the start/stop of video streaming document detecting and get the detection results.
+
+| Method | Description |
+|--------|-------------|
+| [`setImageSource`](#setimagesource) | Sets an instance of ImageSource to get images.  |
+| [`startDetecting`](#startdetecting) | Start the document quad detection thread in the video streaming scenario. |
+| [`stopDetecting`](#stopdetecting) | Stop the document quad detection thread in the video streaming scenario. |
+| [`setDetectResultListener`](#setdetectresultlistener) | Set callback interface to process detection results generated during frame detecting. |
+
+---
+
+### setImageSource
+
+Sets an instance of ImageSource to get images. `DynamsoftCameraEnhancer` is a specific implementation of ImageSource, which can help the Document Normalizer to acquire video frames continuously for recognition.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+- (void)setImageSource:(ImageSource* _Nonnull)source;
+```
+2. 
+```swift
+func setImageSource(_ source: ImageSource?)
+```
+
+**Parameters**
+
+`[in] source`: An instance of ImageSource. If you are using `Dynamsoft Camera Enhancer`(DCE) to capture camera frames, pass an instance of `DynamsoftCameraEnhancer`.
+
+**Code Snippet**
+
+### startDetecting
 
 Start the document quad detection thread in the video streaming scenario. Please be sure that you have bound a Camera Enhancer to the document normalizer before you trigger `startDetecting`.
 
@@ -135,7 +140,7 @@ func startDetecting()
 
 You can view the complete code snippet in [`setImageSource`](#setimagesource).
 
-## stopDetecting
+### stopDetecting
 
 Stop the document quad detection thread in the video streaming scenario.
 
@@ -156,7 +161,7 @@ func stopDetecting()
 
 You can view the complete code snippet in [`setImageSource`](#setimagesource).
 
-## setDetectResultListener
+### setDetectResultListener
 
 Set the callback interface to process detection results generated during frame detecting.
 
