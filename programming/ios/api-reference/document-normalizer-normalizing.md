@@ -293,7 +293,7 @@ NSError* error;
 // View the previous code snippet for how to create iImageData.
 NSArray<iDetectedQuadResult*>* detectedResults= [normalizer detectQuadFromBuffer:buffer error:&error];
 if([detectedResults count] > 0) {
-   iNormalizedImageResult* normalizedImage = [normalizer normalizeBuffer:buffer  quad:detectedResults[0] error:&error];
+   iNormalizedImageResult* normalizedImage = [normalizer normalizeBuffer:buffer  quad:detectedResults[0].location error:&error];
 }
 ```
 2. 
@@ -409,7 +409,7 @@ UIImage* uiimage = [UIImage imageWithData:data];
 NSError* error;
 NSArray<iDetectedQuadResult*>* detectedResults= [normalizer detectQuadFromImage:uiimage error:&error];
 if([detectedResults count] > 0) {
-   iNormalizedImageResult* normalizedImage = [normalizer normalizeImage:uiimage  quad:detectedResults[0] error:&error];
+   iNormalizedImageResult* normalizedImage = [normalizer normalizeImage:uiimage  quad:detectedResults[0].location error:&error];
 }
 ```
 2. 
@@ -420,7 +420,7 @@ do{
    let detectedResults = try normalizer.detectQuadFromImage(uiimage)
    if(detectedResults.count > 0) {
           do{
-             let normalizedImage = try normalizer.normalizeImage(uiimage, quad:detectedResults[0])
+             let normalizedImage = try normalizer.normalizeImage(uiimage, quad:detectedResults[0].location)
           }catch{
              // Add your code to deal with the exceptions.
           }
