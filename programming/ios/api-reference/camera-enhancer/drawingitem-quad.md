@@ -13,8 +13,17 @@ breadcrumbText: iOS QuadDrawingItem Class
 
 `QuadDrawingItem` is a subclass of `DrawingItem`. Dynamsoft Camera Enhancer will draw the `QuadDrawingItem` on the UI if it is created and added to the `DCECameraView` or `DCEImageEditorView`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface QuadDrawingItem (DrawingItem)
+```
+2. 
+```swift
+class QuadDrawingItem : DrawingItem
 ```
 
 | Method Name | Description |
@@ -31,8 +40,17 @@ breadcrumbText: iOS QuadDrawingItem Class
 
 The constructor of `QuadDrawingItem`. Initialize the instance of `QuadDrawingItem`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (instancetype) initWithQuad:(Quadrilateral*)quad;
+```
+2. 
+```swift
+init(quad: iQuadrilateral)
 ```
 
 **Parameters**
@@ -60,8 +78,17 @@ let drawingItem = QuadDrawingItem.init(quad:quad)
 
 The `Quadrilateral` property that indicates the position of the `QuadDrawingItem`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (assign, nonatomic, readonly) Quadrilateral* quad; 
+```
+2. 
+```swift
+var quad: iQuadrilateral { get }
 ```
 
 {%- include api-reference/drawing-item-ios.md -%}

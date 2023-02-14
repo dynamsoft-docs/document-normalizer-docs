@@ -13,8 +13,17 @@ breadcrumbText: iOS RectDrawingItem Class
 
 `RectDrawingItem` is a subclass of `DrawingItem`. Dynamsoft Camera Enhancer will draw the `RectDrawingItem` on the UI if it is created and added to the `DCECameraView` or `DCEImageEditorView`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface RectDrawingItem (DrawingItem)
+```
+2. 
+```swift
+class RectDrawingItem : DrawingItem
 ```
 
 | Method Name | Description |
@@ -31,8 +40,17 @@ breadcrumbText: iOS RectDrawingItem Class
 
 The constructor of `RectDrawingItem`. Initialize the instance of `RectDrawingItem`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (instancetype) initWithRect:(CGRect)rect;
+```
+2. 
+```swift
+init(rect: CGRect)
 ```
 
 **Parameters**
@@ -60,8 +78,17 @@ let drawingItem = RectDrawingItem.init(rect:rect)
 
 The property that indicates the `Rect` of the `RectDrawingItem`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (assign, nonatomic, readonly) CGRect rect;
+```
+2. 
+```swift
+var rect: CGRect { get }
 ```
 
 {%- include api-reference/drawing-item-ios.md -%}

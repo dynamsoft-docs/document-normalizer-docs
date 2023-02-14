@@ -13,8 +13,17 @@ breadcrumbText: iOS DCECameraView Class
 
 `DCECameraView` is the class that enables users to add elements on camera view conveniently.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface DCECameraView: UIView<CALayerDelegate>
+```
+2. 
+```swift
+class DCECameraView : UIView, CALayerDelegate
 ```
 
 | Method/Property Name | Description |
@@ -37,8 +46,17 @@ breadcrumbText: iOS DCECameraView Class
 
 Init the DCECameraView.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (instancetype)initWithFrame:(CGRect)frame;
+```
+2. 
+```swift
+init(frame: CGRect)
 ```
 
 **Code Snippet**
@@ -62,8 +80,17 @@ let dceView = DCECameraView.init(frame self.view.bounds)
 
 Statically init the DCECameraView.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 + (instancetype)cameraWithFrame:(CGRect)frame NS_SWIFT_NAME(init(frame:));
+```
+2. 
+```swift
+init(frame: CGRect)
 ```
 
 **Code Snippet**
@@ -87,8 +114,17 @@ let dceView = DCECameraView.init(frame self.view.bounds)
 
 Set the position, size and image for the torch button.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void)setTorchButton:(CGRect)torchButton torchOnImage:(UIImage*)torchOnImage torchOffImage:(UIImage*)torchOffImage;
+```
+2. 
+```swift
+func setTorchButton(frame: CGRect, torchOnImage: UIImage?, torchOffImage: UIImage?)
 ```
 
 **Parameters**
@@ -123,8 +159,17 @@ Method `- (void)setTorchButton:(CGPoint)torchButtonPosition` is deprecated. Plea
 
 `torchButtonVisible` is a property that controls the visibility of the `torchButton`. The torch button icon is preset in the SDK. If the `torchButtonPosition` has never been configured, the `torchButton` will be displayed on the default position. Currently, the icon and the size of the button are not available for setting.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (assign, nonatomic) BOOL torchVisible;
+```
+2. 
+```swift
+var torchButtonVisible: Bool { get set }
 ```
 
 **Parameters**
@@ -135,8 +180,17 @@ When the property value is true, the torch button should be displayed. Otherwise
 
 ## getDrawingLayer
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (DCEDrawingLayer*) getDrawingLayer:(NSInteger)id;
+```
+2. 
+```swift
+func getDrawingLayer(_ layerId: Int) -> DCEDrawingLayer
 ```
 
 **Parameters**
@@ -168,15 +222,28 @@ DCEDrawingLayer *drawingLayer = [_dceView getDrawingLayer:DBR_LAYER_ID];
 ```
 2. 
 ```swift
-let drawingLayer = try? dceView.getDrawingLayer(DBR_LAYER_ID)
+do{
+   let drawingLayer = try dceView.getDrawingLayer(DBR_LAYER_ID)
+}catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 &nbsp;
 
 ## createDrawingLayer
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (DCEDrawingLayer*) createDrawingLayer;
+```
+2. 
+```swift
+func createDrawingLayer() -> DCEDrawingLayer
 ```
 
 **Return Value**
@@ -195,7 +262,11 @@ DCEDrawingLayer *drawingLayer = [_dceView createDrawingLayer:1];
 ```
 2. 
 ```swift
-let drawingLayer = try? dceView.createDrawingLayer(1)
+do{
+   let drawingLayer = try dceView.createDrawingLayer(1)
+}catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 &nbsp;
@@ -207,12 +278,21 @@ Get the visible region of the video streaming.
 When the shape of your camera view is quite different from the shape of the video streaming, there might exist a large area that is invisible. You can use this method to get the region of this invisible area.
 
 <div align="center">
-    <p><img src="../../assets/visible-region.png" width="30%" alt="visible-region"></p>
+    <p><img src="../../../../assets/visible-region.png" width="30%" alt="visible-region"></p>
     <p>What's Visible Region</p>
 </div>
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (iRegionDefinition*) getVisibleRegionOfVideo;
+```
+2. 
+```swift
+func getVisbleRegionOfVideo() -> iRegionDefinition
 ```
 
 **Return Value**
@@ -244,8 +324,17 @@ dce.setScanRegion(region, error: &error)
 
 The property stores the BOOL value that controls the visibility of the overlays.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (assign, nonatomic) BOOL overlayVisible;
+```
+2. 
+```swift
+var overlayVisible: Bool { get set }
 ```
 
 **Remarks**
@@ -275,8 +364,17 @@ dceView.overlayVisible = true
 
 Set the stroke and fill in colour of the overlay(s).
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void)setOverlayColour:(UIColor*)stroke fill:(UIColor*)fill;
+```
+2. 
+```swift
+func setOverlayColour(_ stroke: UIColor, fill: UIColor)
 ```
 
 **Parameters**
@@ -313,8 +411,17 @@ _dceView.setOverlayColour(strokeColour, fill: fillcolour)
 
 The property stores the BOOL value that controls the visibility of the viewfinder.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (assign, nonatomic) BOOL viewfinderVisible;
+```
+2. 
+```swift
+var viewfinderVisible: Bool { get set }
 ```
 
 **Remarks**
@@ -329,8 +436,17 @@ If the property value is `true`, the `cameraView` will try to create and display
 
 Set the attribute of the viewfinder. Currently only available for position and size setting.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-- (void)setViewfinder:(CGFloat)left top:(CGFloat)top right:(CGFloat)right bottom:(CGFloat)bottom;
+- (void)setViewfinder:(CGFloat)left top:(CGFloat)top right:(CGFloat)right bottom:(CGFloat)bottom error:(NSError * _Nullable * _Nullable)error;
+```
+2. 
+```swift
+func setViewFinder(_ left: CGFloat, top: CGFloat, right: CGFloat, bottom: CGFloat, error: NSErrorPointer)
 ```
 
 **Parameters**

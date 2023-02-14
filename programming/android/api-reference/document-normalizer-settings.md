@@ -108,5 +108,5 @@ The output JSON string which stores the contents of runtime settings.
 
 ```java
 DocumentNormalizer reader = new DocumentNormalizer();
-String settingStr = reader.outputSettingsToString("");
+String settingStr = reader.outputRuntimeSettings("");
 ```

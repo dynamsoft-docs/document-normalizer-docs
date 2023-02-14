@@ -25,14 +25,33 @@ Stores the detected quad result.
 
 The location of the detected quad result.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 iQuadrilateral* location;
 ```
+2. 
+```swift
+var location: iQuadrilateral { get set }
+```
+
 
 ## confidenceAsDocumentBoundary
 
 The confidence as document boundary.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSInteger confidenceAsDocumentBoundary;
+```
+2. 
+```swift
+var confidenceAsDocumentBoundary: Int { get set }
 ```

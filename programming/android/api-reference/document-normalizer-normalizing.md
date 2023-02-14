@@ -209,7 +209,7 @@ try {
 
     DetectedQuadResult[] quads = normalizer.detectQuad(buffer);
     if(quads.length > 0) {
-      NormalizedImageResult normalizedImage = normalizer.normalize(buffer, quads[0]);
+      NormalizedImageResult normalizedImage = normalizer.normalize(buffer, quads[0].location);
     }
 } catch (DocumentNormalizerException e) {
     e.printStackTrace();
@@ -247,7 +247,7 @@ try {
 
     DetectedQuadResult[] quads = normalizer.detectQuad(imageFilePath);
     if(quads.length > 0) {
-      NormalizedImageResult normalizedImage = normalizer.normalize(imageFilePath, quads[0]);
+      NormalizedImageResult normalizedImage = normalizer.normalize(imageFilePath, quads[0].location);
     }
 } catch (DocumentNormalizerException e) {
     e.printStackTrace();
@@ -286,7 +286,7 @@ try {
 
     DetectedQuadResult[] quads = normalizer.detectQuad(bitmap);
     if(quads.length > 0) {
-      NormalizedImageResult normalizedImage = normalizer.normalize(bitmap, quads[0]);
+      NormalizedImageResult normalizedImage = normalizer.normalize(bitmap, quads[0].location);
     }
 } catch (DocumentNormalizerException e) {
     e.printStackTrace();

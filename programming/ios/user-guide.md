@@ -571,7 +571,11 @@ In the section, we will add code to get the user selected quadrilateral and norm
              item = layer.drawingItems?[0] as? QuadDrawingItem
       }
       // Normalize the image based on the selected quad.
-      let imageData = try? DDNDataManager.instance.ddn.normalizeBuffer(DDNDataManager.instance.imageData, quad: item!.quad)
+      do{
+             let imageData = try DDNDataManager.instance.ddn.normalizeBuffer(DDNDataManager.instance.imageData, quad: item!.quad)
+      }catch{
+             // Add your code to deal with the exceptions.
+      }
       // Get the image data of the normalized image.
       DDNDataManager.instance.resultImage = imageData?.image.toUIImage()
       DispatchQueue.main.async(execute: { [self] in

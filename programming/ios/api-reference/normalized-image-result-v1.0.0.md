@@ -12,8 +12,17 @@ noTitleIndex: true
 
 Stores the detected quad result.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface iNormalizedImageResult
+```
+2. 
+```swift
+class iNormalizedImageResult : NSObject
 ```
 
 | Attribute | Type | Descriptions |
@@ -24,6 +33,15 @@ Stores the detected quad result.
 
 The location of the detected quad result.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 iImageData* image;
+```
+2. 
+```swift
+var image: iImageData { get set }
 ```

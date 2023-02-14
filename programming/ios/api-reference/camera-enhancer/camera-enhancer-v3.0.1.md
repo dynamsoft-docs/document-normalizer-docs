@@ -225,7 +225,11 @@ Select the camera position (front-facing or back-facing).
 ```
 2. 
 ```swift
-try? dce.selectCameraWithPosition(EnumCameraPosition.back)
+do{
+   try dce.selectCameraWithPosition(EnumCameraPosition.back)
+}catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 &nbsp;
@@ -283,7 +287,11 @@ Select camera by `cameraID`. The camera will be selected and further camera cont
 ```
 2. 
 ```swift
-try? dce.selectCamera("BACK_FACING_CAMERA")
+do{
+   try dce.selectCamera("BACK_FACING_CAMERA")
+catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 **Remarks**
@@ -684,7 +692,11 @@ The `EnumEnhancerFeatures` members:
 ```
 2. 
 ```swift
-try? dce.enableFeatures(EnumEnhancerFeature.EnumFRAME_FILTER.rawValue)
+do{
+   try dce.enableFeatures(EnumEnhancerFeature.EnumFRAME_FILTER.rawValue)
+catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 **Remarks**
@@ -800,7 +812,7 @@ let frameRate = dce.getFrameRate()
 Input one of the preset resolution value in Enumeration `Resolution`. The camera enhancer will try to set the resolution to the target value or the closest available value below the target value.
 
 ```objc
-- (Void)setResolution:(Resolution)resolution;
+- (void)setResolution:(Resolution)resolution;
 ```
 
 **Parameters**
@@ -858,7 +870,7 @@ let resolution = dce.getResolution()
 Set the zoom factor. Once `setZoom` is triggered and approved, the zoom factor of the activated camera will immediately become the input value.
 
 ```objc
-- (Void)setZoom:(CGFloat)factor
+- (void)setZoom:(CGFloat)factor
 ```
 
 **Parameters**
@@ -916,7 +928,7 @@ let maxZoomFactor = dce.getMaxZoomFactor()
 Set the focus position (value range from 0.0f to 1.0f) and trigger a focus at the configured position.
 
 ```objc
-- (Void)setFocus:(CGPoint)focusPosition;
+- (void)setFocus:(CGPoint)focusPosition;
 ```
 
 **Parameters**
@@ -978,7 +990,11 @@ scanRegion.regionBottom = 75
 scanRegion.regionLeft = 25
 scanRegion.regionRight = 75
 scanRegion.regionMeasuredByPercentage = 1
-try? dce.setScanRegion(scanRegion)
+do{
+   try dce.setScanRegion(scanRegion)
+catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 **Remarks**
@@ -1058,7 +1074,11 @@ Update the advanced camera controlling and video streaming processing parameters
 ```
 2. 
 ```swift
-try? dce.updateAdvancedSettingsFromFile("Put your JSON file path here.")
+do{
+   try dce.updateAdvancedSettingsFromFile("Put your JSON file path here.")
+catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 **Remarks**
@@ -1091,5 +1111,9 @@ Update the advanced camera controlling and video streaming processing parameters
 ```
 2. 
 ```swift
-try? dce.updateAdvancedSettingsFromString("Put your stringified JSON data here.")
+do{
+   try dce.updateAdvancedSettingsFromString("Put your stringified JSON data here.")
+catch{
+   // Add your code to deal with the exceptions.
+}
 ```

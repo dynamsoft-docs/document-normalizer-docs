@@ -19,8 +19,17 @@ noTitleIndex: true
 
 Get version information of SDK.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 +(NSString*)getVersion
+```
+2. 
+```swift
+class func getVersion() -> String
 ```
 
 **Return Value**

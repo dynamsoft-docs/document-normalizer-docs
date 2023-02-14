@@ -19,8 +19,17 @@ noTitleIndex: true
 
 Initialization of `DynamsoftDocumentNormalizer` object.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (instancetype _Nonnull)init;
+```
+2. 
+```swift
+init()
 ```
 
 **Code Snippet**

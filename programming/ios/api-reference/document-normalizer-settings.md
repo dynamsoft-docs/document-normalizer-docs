@@ -22,8 +22,17 @@ noTitleIndex: true
 
 Initialize runtime settings from a given JSON file.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(BOOL)initRuntimeSettingsFromFile:(NSString*)filePath error:(NSError**)error;
+```
+2. 
+```swift
+func initRuntimeSettingsFromFile(_ filePath: String) throws
 ```
 
 **Parameters**
@@ -50,15 +59,28 @@ BOOL isSuccess = [normalizer initRuntimeSettingsFromFile:@"your template file pa
 2. 
 ```swift
 let normalizer = DynamsoftDocumentNormalizer()
-let isSuccess = try? normalizer.initRuntimeSettingsFromFile("your template file path")
+do{
+   try normalizer.initRuntimeSettingsFromFile("your template file path")
+}catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 ## initRuntimeSettingsFromString
 
 Initialize runtime settings from a given JSON string.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(BOOL)initRuntimeSettingsFromString:(NSString*)content error:(NSError**)error;
+```
+2. 
+```swift
+func initRuntimeSettingsFromString(_ JSONString: String) throws
 ```
 
 **Parameters**
@@ -85,21 +107,34 @@ BOOL isSuccess = [normalizer initRuntimeSettingsFromString:@"your json template 
 2. 
 ```swift
 let normalizer = DynamsoftDocumentNormalizer()
-let isSuccess = try? normalizer.initRuntimeSettingsFromString("your json template string")
+do{
+   try normalizer.initRuntimeSettingsFromString("your json template string")
+}catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 ## outputRuntimeSettingsToFile
 
 Output runtime settings to a settings file (JSON file).
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(BOOL)outputRuntimeSettingsToFile:(NSString*)filePath, settingsName:(NSString*)settingsName error:(NSError**)error;
+```
+2. 
+```swift
+func outputRuntimeSettingsToFile(_ filePath: String, templateName: String) throws
 ```
 
 **Parameters**
 
 `[in] filePath`: The output file path which stores runtime settings.  
-`[in] settingsName`: A unique name for declaring runtime settings.
+`[in] settingsName`: A unique name for declaring runtime settings.  
 `[in,out] error`: Input a pointer to an error object. If an error occurs, this pointer is set to an actual error object containing the error information. You may specify nil for this parameter if you do not want the error information.
 
 **Return Value**
@@ -121,15 +156,28 @@ BOOL isSuccess = [normalizer outputRuntimeSettingsToFile:@"your template file pa
 2. 
 ```swift
 let normalizer = DynamsoftDocumentNormalizer()
-let isSuccess = try? normalizer.outputRuntimeSettingsToFile("your template file path", settingsName:"your template name")
+do{
+   try normalizer.outputRuntimeSettingsToFile("your template file path", settingsName:"your template name")
+}catch{
+   // Add your code to deal with the exceptions.
+}
 ```
 
 ## outputRuntimeSettings
 
 Output runtime settings to a JSON string.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(NSString*)outputRuntimeSettings:(NSString*)settingsName error:(NSError**)error;
+```
+2. 
+```swift
+func outputRuntimeSettings(_ templateName: String) throws -> String
 ```
 
 **Parameters** 
@@ -156,5 +204,9 @@ NSString* settingsString = [normalizer outputRuntimeSettings:@"your template nam
 2. 
 ```swift
 let normalizer = DynamsoftDocumentNormalizer()
-let settingsString = try? normalizer.outputRuntimeSettings("your template name")
+do{
+   let settingsString = try normalizer.outputRuntimeSettings("your template name")
+}catch{
+   // Add your code to deal with the exceptions.
+}
 ```

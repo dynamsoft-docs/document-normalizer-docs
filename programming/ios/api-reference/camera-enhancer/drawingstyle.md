@@ -13,8 +13,17 @@ breadcrumbText: iOS DrawingStyle Class
 
 The class of `DrawingStyle`. It stores the detailed styles of the drawing item.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@interface DrawingStyle 
+@interface DrawingStyle : NSObject
+```
+2. 
+```swift
+class DrawingStyle : NSObject
 ```
 
 | Method | Description |
@@ -25,8 +34,7 @@ The class of `DrawingStyle`. It stores the detailed styles of the drawing item.
 | [`fillColor`](#fillcolor) | The fill color of the `DrawingStyle`. |
 | [`textColor`](#textcolor) | The text color of the `DrawingStyle`. |
 | [`strokeWidth`](#strokewidth) | The stroke width of the `DrawingStyle`. |
-| [`fontSize`](#fontsize) | The font size of the `DrawingStyle`. |
-| [`fontFamily`](#fontfamily) | The font-Family of the `DrawingStyle`. |
+| [`font`](#font) | The font settings of the `DrawingStyle`. |
 
 &nbsp;
 
@@ -34,6 +42,11 @@ The class of `DrawingStyle`. It stores the detailed styles of the drawing item.
 
 The constructor of the `DrawingStyle`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (instancetype)initWithId:(NSInteger)id
                strokeColor:(UIColor*)strokeColor
@@ -41,6 +54,10 @@ The constructor of the `DrawingStyle`.
                  fillColor:(UIColor*)fillColor
                  textColor:(UIColor*)textColor
                       font:(UIFont*) font;
+```
+2. 
+```swift
+init(id styleId: Int, stroke strokeColor: UIColor, strokeWidth: CGFloat, fill fillColor: UIColor, textColor: UIColor, font: UIFont)
 ```
 
 **Remarks**
@@ -53,8 +70,17 @@ Please use [`DrawingStyleManager.createDrawingStyle`](drawingstylemanager.md#cre
 
 The id of the `DrawingStyle`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (assign, nonatomic, readonly) NSInteger id;
+```
+2. 
+```swift
+var styleId: Int { get }
 ```
 
 &nbsp;
@@ -63,8 +89,17 @@ The id of the `DrawingStyle`.
 
 The stroke color of the `DrawingStyle`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (assign, nonatomic) UIColor strokeColor;
+```
+2. 
+```swift
+var strokeColor: UIColor { get set }
 ```
 
 &nbsp;
@@ -73,8 +108,17 @@ The stroke color of the `DrawingStyle`.
 
 The fill color of the `DrawingStyle`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (assign, nonatomic) UIColor fillColor;
+```
+2. 
+```swift
+var fillColor: UIColor { get set }
 ```
 
 &nbsp;
@@ -83,8 +127,17 @@ The fill color of the `DrawingStyle`.
 
 The text color of the `DrawingStyle`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (assign, nonatomic) UIColor textColor;
+```
+2. 
+```swift
+var textColor: UIColor { get set }
 ```
 
 &nbsp;
@@ -93,26 +146,36 @@ The text color of the `DrawingStyle`.
 
 The stroke width of the `DrawingStyle`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (assign, nonatomic) CGFloat strokeWidth;
+```
+2. 
+```swift
+var strokeWidth: CGFloat { get set }
 ```
 
 &nbsp;
 
 ## fontSize
 
-The font size of the `DrawingStyle`.
+The font settings of the `DrawingStyle`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@property (assign, nonatomic) NSInteger fontSize;
+@property (nonatomic, copy) UIFont *font;
+```
+2. 
+```swift
+var font: UIFont { get set }
 ```
 
 &nbsp;
-
-## fontFamily
-
-The font-Family of the `DrawingStyle`.
-
-```objc
-@property (assign, nonatomic) NSString* fontFamily;
-```

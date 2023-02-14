@@ -13,8 +13,17 @@ noTitleIndex: true
 
 Stores the quadrilateral.  
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface iQuadrilateral : NSObject 
+```
+2. 
+```swift
+class iQuadrilateral : NSObject
 ```
 
 ## Attributes
@@ -29,6 +38,15 @@ Stores the quadrilateral.
 
 Four vertexes (CGPoint) in a clockwise direction of a quadrilateral. Index 0 represents the left-most vertex.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSArray* points
+```
+2. 
+```swift
+var points: [Any] { get set }
 ```

@@ -13,8 +13,17 @@ breadcrumbText: iOS Protocol DCEFrameListener
 
 The protocol to handle callback when previewed frame callback is returned.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @protocol CameraEnhancerListener <NSObject>
+```
+2. 
+```swift
+protocol DCECameraStateListener : NSObjectProtocol
 ```
 
 | Method | Type | Description |
@@ -25,8 +34,17 @@ The protocol to handle callback when previewed frame callback is returned.
 
 Callback when the `DCEFrame` is output.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void)frameOutPutCallback:(DCEFrame*)frame timeStamp:(NSTimeInterval)timeStamp;
+```
+2. 
+```swift
+func frameOutPutCallback(_ frame: DCEFrame, timeStamp: TimeInterval)
 ```
 
 **Parameters**

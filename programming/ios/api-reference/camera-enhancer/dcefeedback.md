@@ -13,8 +13,17 @@ breadcrumbText: iOS DCEFeedback Class
 
 With DCEFeedback APIs, user can trigger feedback on the device to respond for some specific events.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface DCEFeedback : NSObject
+```
+2. 
+```swift
+class DCEFeedback : NSObject
 ```
 
 | Method | Description |
@@ -26,8 +35,17 @@ With DCEFeedback APIs, user can trigger feedback on the device to respond for so
 
 Trigger a vibrate when the method is called.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 + (void)vibrate;
+```
+2. 
+```swift
+class func vibrate()
 ```
 
 **Code Snippet**
@@ -57,8 +75,17 @@ func textResultCallback(_ frameId: Int, imageData: iImageData, results: [iTextRe
 
 Trigger a beep when the method is called.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 + (void)beep;
+```
+2. 
+```swift
+class func beep()
 ```
 
 **Code Snippet**

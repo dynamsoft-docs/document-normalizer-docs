@@ -30,8 +30,17 @@ pageStartVer: 1.0
 
 Bind a `Dynamsoft Camera Enhancer` instance to the Document Normalizer. `Dynamsoft Camera Enhancer` is designed for video streaming processing scenarios. It can help the Document Normalizer to acquire video frames continuously for video streaming document normalizer.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void)setCameraEnhancer:(DynamsoftCameraEnhancer* _Nonnull)cameraInstance;
+```
+2. 
+```swift
+func setCameraEnhancer(_ cameraInstance: DynamsoftCameraEnhancer?)
 ```
 
 **Parameters**
@@ -109,8 +118,17 @@ class ViewController: UIViewController, DetectResultListener{
 
 Start the document quad detection thread in the video streaming scenario. Please be sure that you have bound a Camera Enhancer to the document normalizer before you trigger `startDetecting`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(void)startDetecting
+```
+2. 
+```swift
+func startDetecting()
 ```
 
 **Code Snippet**
@@ -121,8 +139,17 @@ You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhanc
 
 Stop the document quad detection thread in the video streaming scenario.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(void)stopDetecting
+```
+2. 
+```swift
+func stopDetecting()
 ```
 
 **Code Snippet**
@@ -133,8 +160,17 @@ You can view the complete code snippet in [`setCameraEnhancer`](#setcameraenhanc
 
 Set the callback interface to process detection results generated during frame detecting.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(void)setDetectResultListener:(id<DetectResultListener>)detectResultListener;
+```
+2. 
+```swift
+func setDetectResultListener(_ listener: DetectResultListener)
 ```
 
 **Parameters**

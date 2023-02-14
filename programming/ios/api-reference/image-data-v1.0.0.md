@@ -33,8 +33,17 @@ Stores the image data.
 
 The image data content in a byte array.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSData* bytes
+```
+2. 
+```swift
+var bytes: Data? { get set }
 ```
 
 &nbsp;
@@ -43,8 +52,17 @@ NSData* bytes
 
 The width of the image in pixels.  
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSInteger width
+```
+2. 
+```swift
+var width: Int { get set }
 ```
 
 &nbsp;
@@ -53,8 +71,17 @@ NSInteger width
 
 The height of the image in pixels.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSInteger height
+```
+2. 
+```swift
+var height: Int { get set }
 ```
 
 &nbsp;
@@ -63,8 +90,17 @@ NSInteger height
 
 The stride (or scan width) of the image.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 NSInteger stride
+```
+2. 
+```swift
+var stride: Int { get set }
 ```
 
 &nbsp;
@@ -73,8 +109,17 @@ NSInteger stride
 
 The image pixel format used in the image byte array.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 EnumImagePixelFormat format
+```
+2. 
+```swift
+var format: EnumImagePixelFormat { get set }
 ```
 
 ## Methods
@@ -94,3 +139,21 @@ Convert the `ImageData` object to a `UIImage` object.
 **Return Value**
 
 A `UIImage` object.
+
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
+```objc
+NSError* error;
+[imageData toUIImage:error];
+```
+2. 
+```swift
+do{
+   try imageData.toUIImage()
+}catch{
+   //
+}
+```

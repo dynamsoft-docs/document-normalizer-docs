@@ -13,8 +13,17 @@ breadcrumbText: iOS DCEDrawingLayer Class
 
 The layers that contains `DrawingItems`. Users can add configurations for the `DrawingItems` via `DCEDrawingLayer`
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface DCEDrawingLayer
+```
+2. 
+```swift
+class DCEDrawingLayer : NSObject
 ```
 
 | Method Name | Description |
@@ -34,8 +43,17 @@ The layers that contains `DrawingItems`. Users can add configurations for the `D
 
 The constructor of the [`DCEDrawingLayer`](dcedrawinglayer.md) class. Initialize the instance of the [`DCEDrawingLayer`](dcedrawinglayer.md) class.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (instancetype) initWithId:(NSInteger)id;
+```
+2. 
+```swift
+init(id layerId: Int)
 ```
 
 **Parameters**
@@ -55,8 +73,17 @@ Please initialize the DrawingLayers via the following methods:
 
 The ID of the `DrawingLayer`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-@property (assign, nonatomic) NSInteger id;
+@property (assign, nonatomic) NSInteger layerId;
+```
+2. 
+```swift
+var layerId: Int { get }
 ```
 
 The ID can be one of the following:
@@ -72,16 +99,34 @@ The ID can be one of the following:
 
 The property that stores all the `DrawingItems` on the layer. This property determines which `DrawingItems` will be displayed on the layer.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @property (nonatomic, strong, readwrite, nullable) NSArray<DrawingItem *> *drawingItems;
+```
+2. 
+```swift
+var drawingItems: [DrawingItem]? { get set }
 ```
 
 ## addDrawingItems
 
 Add a list of `DrawingItems` to the `DrawingLayer`. These `DrawingItems` will be appended to the property `drawingItems`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void) addDrawingItems:(NSArray<DrawingItem*>*)items; 
+```
+2. 
+```swift
+func addDrawingItems(_ items: [DrawingItem])
 ```
 
 **Parameters**
@@ -128,8 +173,17 @@ layer.drawingItems = array
 
 Specify a style ID for all available `DrawingItems`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void) setDrawingStyleId:(NSInteger)styleId;
+```
+2. 
+```swift
+func setDrawingStyleId(_ styleId: Int)
 ```
 
 **Parameters**
@@ -157,9 +211,18 @@ drawingLayer.setDrawingStyleId(0)
 
 Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). The `state`is a filter of the `DrawingItems`. All the eligible `DrawingItems` will be changed to the input style.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void) setDrawingStyleId:(NSInteger)styleId
                      state:(EnumDrawingItemState)state;
+```
+2. 
+```swift
+func setDrawingStyleId(_ styleId: Int, state: EnumDrawingItemState)
 ```
 
 **Parameters**
@@ -188,10 +251,19 @@ drawingLayer.setDrawingStyleId(0, state:EnumDrawingItemState.selected)
 
 Specify a style ID for the targeting [`DrawingItems`](drawingitem.md). The `state` and `mediaType` are filters of the `DrawingItems`. All the eligible `DrawingItems` will be changed to the input style.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void) setDrawingStyleId:(NSInteger)styleId
                      state:(EnumDrawingItemState)state
                 mediaTypes:(NSArray*)mediaTypes;
+```
+2. 
+```swift
+func setDrawingStyleId(_ styleId: Int, state: EnumDrawingItemState, mediaType: EnumDrawingItemMediaType)
 ```
 
 **Parameters**
@@ -221,9 +293,17 @@ drawingLayer.setDrawingStyleId(0, state:EnumDrawingItemState.selected, mediaType
 
 The property that stores the visibility of the `DrawingLayer`.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
-
 @property (assign, nonatomic) BOOL visible;
+```
+2. 
+```swift
+var visible: Bool { get set }
 ```
 
 **Remarks**

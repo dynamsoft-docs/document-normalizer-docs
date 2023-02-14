@@ -13,8 +13,17 @@ breadcrumbText: iOS Protocol DCECameraStateListener
 
 The protocol to handle callback when camera state changes.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @protocol DCECameraStateListener <NSObject>
+```
+2. 
+```swift
+protocol DCECameraStateListener : NSObjectProtocol
 ```
 
 | Method | Type | Description |
@@ -25,8 +34,17 @@ The protocol to handle callback when camera state changes.
 
 The callback method is triggered when **camera state** changes.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 - (void)stateChangeCallback:(EnumCameraState)cameraState;
+```
+2. 
+```swift
+func stateChangeCallback(_ currentState: EnumCameraState)
 ```
 
 **Parameters**

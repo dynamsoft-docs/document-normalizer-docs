@@ -13,8 +13,17 @@ pageStartVer: 1.0
 
 `LicenseVerificationListener` is the protocol to handle callback when using [`initLicense`](license-manager.md#initlicense).
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @protocol LicenseVerificationListener
+```
+2. 
+```swift
+protocol LicenseVerificationListener : NSObjectProtocol
 ```
 
 | Method | Description |
@@ -23,8 +32,17 @@ pageStartVer: 1.0
 
 ## licenseVerificationCallback
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 -(void)licenseVerificationCallback:(BOOL)isSuccess error:(NSError * _Nullable)error;
+```
+2. 
+```swift
+func licenseVerificationCallback(_ isSuccess: Bool, error: Error?)
 ```
 
 **Parameters**

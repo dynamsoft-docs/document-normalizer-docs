@@ -12,8 +12,17 @@ pageStartVer: 1.0
 
 The LicenseManager class unlocks the Dynamsoft SDK with a purchased full license or a provided trial license to allow you to develop your application.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 @interface DynamsoftLicenseManager
+```
+2. 
+```swift
+class DynamsoftLicenseManager : NSObject
 ```
 
 ## Methods
@@ -28,13 +37,22 @@ The LicenseManager class unlocks the Dynamsoft SDK with a purchased full license
 
 Read the license key and activate the SDK.
 
+<div class="sample-code-prefix"></div>
+>- Objective-C
+>- Swift
+>
+>1. 
 ```objc
 +(void)initLicense:(NSString*)license verificationDelegate:(nonnull id<LicenseVerificationListener>)listener)
+```
+2. 
+```swift
+class func initLicense(_ license: String, verificationDelegate connectionDelegate: Any?)
 ```
 
 **Parameters**
 
-`[in] license`: The license key.
+`[in] license`: The license key.  
 `[in] listener`: The listener that handles callback when the license server returns.
 
 **Code Snippet**
