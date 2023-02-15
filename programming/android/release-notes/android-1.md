@@ -10,6 +10,12 @@ noTitleIndex: true
 
 # Release Notes for Android SDK - v1.x
 
+## 1.0.21 (02/15/2023)
+
+### Fixed
+
+- Fixed a crash bug that might happen when triggering method [`toBitmap`](../api-reference/image-data.md#tobitmap).
+
 ## 1.0.20 (02/02/2023)
 
 ### Fixed

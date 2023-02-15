@@ -10,6 +10,12 @@ noTitleIndex: true
 
 # Release Notes for Xamarin SDK
 
+## 1.0.2 (02/15/2023)
+
+### Fixed
+
+- Fixed a crash bug that might happen when triggering method [`toImageSource`](../api-reference/image-data.md#toimagesource).
+
 ## 1.0.1 (11/11/2022)
 
 ### Fixed
