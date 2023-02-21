@@ -60,7 +60,7 @@ Now you will learn how to create a simple document scanner using Dynamsoft Docum
 
 ### Set up Development Environment
 
-If you are a beginner with Xamarin, please follow the guide on the <a href="https://dotnet.microsoft.com/en-us/learn/xamarin/hello-world-tutorial/install" target="_blank">Xamarin official website</a> to set up the development environment.
+If you are a beginner with Xamarin, please follow the guide on the <a href="https://learn.microsoft.com/en-us/xamarin/get-started/installation/" target="_blank">Xamarin official website</a> to set up the development environment.
 
 ### Initialize the Project
 
