@@ -29,9 +29,9 @@ xamarin_release_notes: /document-normalizer/docs/mobile/programming/xamarin/rele
 
 release_notes: /document-normalizer/docs/core/release-notes/
 
-enumerations: /capture-vision2/docs/core/enums/
-parameters: /capture-vision2/docs/core/parameters/
-parameters_reference: /capture-vision2/docs/core/parameters/reference/
+enumerations: /capture-vision/docs/core/enums/
+parameters: /capture-vision/docs/core/parameters/
+parameters_reference: /capture-vision/docs/core/parameters/reference/
 
 
 useVersionTree: true
