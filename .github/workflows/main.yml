@@ -48,7 +48,7 @@ jobs:
           password: ${{ secrets.FTP_DYNAMSOFT_LOCAL_PASSWORD }}
           port: 21 
           local-dir: /home/ubuntu/DDNDoc/_site/
-          server-dir: /www.dynamsoft.com/document-normalizer/docs/server/
+          server-dir: /www.dynamsoft.com/document-normalizer/docs/core/
 
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
@@ -89,6 +89,6 @@ jobs:
           password: ${{ secrets.FTP_TEST_SITE_PASSWORD }}
           port: 7500 
           local-dir: /home/ubuntu/DDNDocPreview/_site/
-          server-dir: /www.dynamsoft.com/document-normalizer/docs/server/
+          server-dir: /www.dynamsoft.com/document-normalizer/docs/core/
 
           
