@@ -1,57 +1,47 @@
 repository: dynamsoft-docs/document-normalizer-docs
 repositoryUrl: https://github.com/dynamsoft-docs/document-normalizer-docs/blob/main
-docFullPath: https://www.dynamsoft.com/document-normalizer/docs
-firstLevelUrl: /document-normalizer/docs
-docHomePage: /document-normalizer/docs/introduction/
+docFullPath: https://www.dynamsoft.com/document-normalizer/docs/core
+firstLevelUrl: /document-normalizer/docs/core
+docHomePage: /document-normalizer/docs/core/
 
-introduction: /document-normalizer/docs/introduction/
-programming: /document-normalizer/docs/programming/
-parameters: /document-normalizer/docs/parameters/
-license: /document-normalizer/docs/license/
+introduction: /document-normalizer/docs/core/introduction/
+programming: /document-normalizer/docs/server/programming/
+license: /document-normalizer/docs/core/license/
 
-c: /document-normalizer/docs/programming/c/
-c_api: /document-normalizer/docs/programming/c/api-reference/
-c_release_notes: /document-normalizer/docs/programming/c/release-notes/
+c: /document-normalizer/docs/server/programming/c/
+c_api: /document-normalizer/docs/server/programming/c/api-reference/
+c_release_notes: /document-normalizer/docs/server/programming/c/release-notes/
 
-cpp: /document-normalizer/docs/programming/cplusplus/
-cpp_api: /document-normalizer/docs/programming/cplusplus/api-reference/
-cpp_release_notes: /document-normalizer/docs/programming/cplusplus/release-notes/
+cpp: /document-normalizer/docs/server/programming/cplusplus/
+cpp_release_notes: /document-normalizer/docs/server/programming/cplusplus/release-notes/
 
-ios: /document-normalizer/docs/programming/ios/
-ios_api: /document-normalizer/docs/programming/ios/api-reference/
-ios_release_notes: /document-normalizer/docs/programming/ios/release-notes/
-ios_camera_enhancer: /document-normalizer/docs/programming/ios/api-reference/camera-enhancer/
+ios: /document-normalizer/docs/mobile/programming/ios/
+ios_release_notes: /document-normalizer/docs/mobile/programming/ios/release-notes/
 
-android: /document-normalizer/docs/programming/android/
-android_api: /document-normalizer/docs/programming/android/api-reference/
-android_release_notes: /document-normalizer/docs/programming/android/release-notes/
-android_camera_enhancer: /document-normalizer/docs/programming/android/api-reference/camera-enhancer/
+android: /document-normalizer/docs/mobile/programming/android/
+android_release_notes: /document-normalizer/docs/mobile/programming/android/release-notes/
 
-javascript: /document-normalizer/docs/programming/javascript/
-javascript_api: /document-normalizer/docs/programming/javascript/api-reference/
-javascript_release_notes: /document-normalizer/docs/programming/javascript/release-notes/
-javascript_user_guide: /document-normalizer/docs/programming/javascript/user-guide/
+javascript: /document-normalizer/docs/js/programming/javascript/
+javascript_release_notes: /document-normalizer/docs/js/programming/javascript/release-notes/
 
-xamarin: /document-normalizer/docs/programming/xamarin/
-xamarin_api: /document-normalizer/docs/programming/xamarin/api-reference/
-xamarin_release_notes: /document-normalizer/docs/programming/xamarin/release-notes/
-xamarin_camera_enhancer: /document-normalizer/docs/programming/xamarin/api-reference/camera-enhancer/
+xamarin: /document-normalizer/docs/mobile/programming/xamarin/
+xamarin_release_notes: /document-normalizer/docs/mobile/programming/xamarin/release-notes/
 
-enumerations: /capture-vision2/docs/enums/
-parameters_reference: /document-normalizer/docs/parameters/reference/
-release_notes: /document-normalizer/docs/release-notes/
+release_notes: /document-normalizer/docs/core/release-notes/
 
-dcv_cpp_api: /capture-vision2/docs/server/programming/cplusplus/api-reference/
+enumerations: /capture-vision2/docs/core/enums/
+parameters: /capture-vision2/docs/core/parameters/
+parameters_reference: /capture-vision2/docs/core/parameters/reference/
 
 
 useVersionTree: true
 
-assets: /document-normalizer/docs/assets/
-edit_icon: /document-normalizer/docs/assets/img-icon/edit-icon.png
-smile_icon: /document-normalizer/docs/assets/img-icon/icon-smile.png
-sad_icon: /document-normalizer/docs/assets/img-icon/icon-sad.png
+assets: /document-normalizer/docs/core/assets/
+edit_icon: /document-normalizer/docs/core/assets/img-icon/edit-icon.png
+smile_icon: /document-normalizer/docs/core/assets/img-icon/icon-smile.png
+sad_icon: /document-normalizer/docs/core/assets/img-icon/icon-sad.png
 
-baseurl: "/document-normalizer/docs"
+baseurl: "/document-normalizer/docs/core"
 
 download: "/document-normalizer/downloads/1000023-confirmation/"
 

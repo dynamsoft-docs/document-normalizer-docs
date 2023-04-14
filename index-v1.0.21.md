@@ -21,7 +21,11 @@ DEVELOPMENT
   * [iOS]({{ site.oc }})
   * <a href="https://www.dynamsoft.com/capture-vision/docs/programming/xamarin/?ver=latest" target="_blank">Xamarin.Forms</a>
 * Server / Desktop
+  * [Python]({{ site.python }})
+  * [Java]({{ site.java }})
+  * [C\#]({{ site.dotnet }})
   * [C++]({{ site.cpp }})
+  * [C]({{ site.c }})
 
 <hr>
 UNDERSTANDING DDN
