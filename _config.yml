@@ -37,11 +37,11 @@ xamarin_api: /document-normalizer/docs/programming/xamarin/api-reference/
 xamarin_release_notes: /document-normalizer/docs/programming/xamarin/release-notes/
 xamarin_camera_enhancer: /document-normalizer/docs/programming/xamarin/api-reference/camera-enhancer/
 
-enumerations: /capture-vision/docs/enums/
+enumerations: /capture-vision2/docs/enums/
 parameters_reference: /document-normalizer/docs/parameters/reference/
 release_notes: /document-normalizer/docs/release-notes/
 
-dcv_cpp_methods: /capture-vision/docs/server/programming/cplusplus/api-reference/capture-vision-router/
+dcv_cpp_methods: /capture-vision2/docs/server/programming/cplusplus/api-reference/capture-vision-router/
 
 
 useVersionTree: true
