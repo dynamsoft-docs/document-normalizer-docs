@@ -50,6 +50,7 @@ int GetCorner(int index, CCorner* corner)
 **Parameters**
 
 `[in] index` The index of the Corner object.
+
 `[in, out] corner` The Corner object got by the specific index.
 
 **Return Value**

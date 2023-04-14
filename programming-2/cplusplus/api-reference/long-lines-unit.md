@@ -50,6 +50,7 @@ int GetLongLine(int index, CLineSegment* line)
 **Parameters**
 
 `[in] index` The index of the LongLine object.
+
 `[in, out] line` The LongLine object got by the specific index.
 
 **Return Value**

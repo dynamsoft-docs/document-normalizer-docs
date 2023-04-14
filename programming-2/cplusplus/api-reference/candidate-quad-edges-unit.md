@@ -50,6 +50,7 @@ int GetCandidateQuadEdge(int index, CEdge* edge)
 **Parameters**
 
 `[in] index` The index of the CandidateQuadEdge object.
+
 `[in, out] edge` The CandidateQuadEdge object got by the specific index.
 
 **Return Value**
