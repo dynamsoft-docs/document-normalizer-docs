@@ -19,7 +19,7 @@ DEVELOPMENT
 * Mobile
   * [Android]({{ site.android }})
   * [iOS]({{ site.oc }})
-  * <a href="https://www.dynamsoft.com/capture-vision/docs/programming/xamarin/?ver=latest" target="_blank">Xamarin.Forms</a>
+  * [Xamarin.Forms]({{ site.xamarin }})
 * Server / Desktop
   * [Python]({{ site.python }})
   * [Java]({{ site.java }})
