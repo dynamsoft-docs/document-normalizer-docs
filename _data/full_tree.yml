@@ -6,7 +6,7 @@ tree_file_list:
     - sidelist-introduction.html
     - sidelist-license.html
     - sidelist-parameters-organization.html
-    - sidelist-parameters-references.html
+    - sidelist-parameters-reference.html
     - sidelist-release-notes.html
     - sidelist-useful.html
     - sidelist-understanding.html
