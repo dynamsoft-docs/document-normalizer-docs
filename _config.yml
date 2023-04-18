@@ -5,8 +5,6 @@ firstLevelUrl: /document-normalizer/docs/core
 docHomePage: /document-normalizer/docs/core/
 
 introduction: /document-normalizer/docs/core/introduction/
-programming: /document-normalizer/docs/server/programming/
-license: /document-normalizer/docs/core/license/
 
 c: /document-normalizer/docs/server/programming/c/
 c_api: /document-normalizer/docs/server/programming/c/api-reference/
@@ -32,6 +30,7 @@ release_notes: /document-normalizer/docs/core/release-notes/
 enumerations: /capture-vision/docs/core/enums/
 parameters: /capture-vision/docs/core/parameters/
 parameters_reference: /capture-vision/docs/core/parameters/reference/
+license: /capture-vision/docs/core/license/
 
 
 useVersionTree: true
