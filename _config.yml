@@ -57,6 +57,11 @@ defaults:
       noTitleIndex: true
       needAutoGenerateSidebar: true
       needGenerateH3Content: true
+  - scope: 
+      path: "" 
+    values: 
+      docRootName: "Document Normalizer" 
+      docHomePage: "/document-normalizer/docs/core/introduction/"
   - scope:
       path: "Hide_Tree_Page.html"
     values:
