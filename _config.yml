@@ -19,8 +19,8 @@ ios_release_notes: /document-normalizer/docs/mobile/programming/ios/release-note
 android: /document-normalizer/docs/mobile/programming/android/
 android_release_notes: /document-normalizer/docs/mobile/programming/android/release-notes/
 
-javascript: /document-normalizer/docs/web/programming/javascript/
-javascript_release_notes: /document-normalizer/docs/web/programming/javascript/release-notes/
+js: /document-normalizer/docs/web/programming/javascript/
+js_release_notes: /document-normalizer/docs/web/programming/javascript/release-notes/
 
 xamarin: /document-normalizer/docs/mobile/programming/xamarin/
 xamarin_release_notes: /document-normalizer/docs/mobile/programming/xamarin/release-notes/
@@ -33,7 +33,6 @@ parameters_reference: /capture-vision/docs/core/parameters/reference/
 parameters_ddn: /document-normalizer/docs/core/parameters/
 parameters_reference_ddn: /document-normalizer/docs/core/parameters/reference/
 license: /capture-vision/docs/core/license/
-
 
 useVersionTree: true
 

@@ -6,7 +6,6 @@ breadcrumbText: HomePage
 description: Documentation Homepage
 ---
 
-
 # Documentation HomePage
 
 * [Introduction]({{ site.introduction }})
@@ -15,7 +14,7 @@ description: Documentation Homepage
 DEVELOPMENT
 <hr>
 
-* [Web (Client Side)]({{ site.javascript }})
+* [Web (Client Side)]({{ site.js }})
 * Mobile
   * [Android]({{ site.android }})
   * [iOS]({{ site.oc }})
