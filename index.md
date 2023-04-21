@@ -15,7 +15,7 @@ description: Documentation Homepage
 DEVELOPMENT
 <hr>
 
-* [Web (Client Side)]({{ site.js }})
+* [Web (Client Side)]({{ site.javascript }})
 * Mobile
   * [Android]({{ site.android }})
   * [iOS]({{ site.oc }})
