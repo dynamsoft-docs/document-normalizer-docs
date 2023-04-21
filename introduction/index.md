@@ -149,9 +149,8 @@ In retail, DDN can help detect the price label boundaries in images. Additionall
 
 DDN is designed to be cross-platform. The core of DDN is written in C/C++ for performance. The library is wrapped for Java, Objective-C and other programming languages so that users can use DDN on iOS, Android, Windows, and Linux. Below is a list of supported OSes and corresponding programming languages:
 
-| OS            | Programming Language |
-|---------------|----------------------|
-|Windows        | C/C++                |
-|Linux          | C/C++                |
-|Android        | Java                 |
-|iOS            | Swift/Objective-C    |
+| PlatForm       | Programming Language           |
+| -------------- | ------------------------------ |
+| Web            | JavaScript                     |
+| Server/Desktop | C/C++                          |
+| Mobile         | Java/Swift/Objective-C/Xamarin |
