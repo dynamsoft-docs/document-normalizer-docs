@@ -28,7 +28,7 @@ xamarin_release_notes: /document-normalizer/docs/mobile/programming/xamarin/rele
 release_notes: /document-normalizer/docs/core/release-notes/
 
 enumerations: /capture-vision/docs/core/enums/
-parameters: /capture-vision/docs/core/parameters/
+dcv_parameters: /capture-vision/docs/core/parameters/
 parameters_reference: /capture-vision/docs/core/parameters/reference/
 parameters_ddn: /document-normalizer/docs/core/parameters/
 parameters_reference_ddn: /document-normalizer/docs/core/parameters/reference/

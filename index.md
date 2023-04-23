@@ -26,7 +26,7 @@ DEVELOPMENT
 UNDERSTANDING DDN
 <hr>
 
-* [Parameter Organization]({{ site.parameters }}file/index.html)
+* [Parameter Organization]({{ site.parameters_ddn }}parameter-organization-structure.html)
 * [Parameter Reference]({{ site.parameters_reference }})
 
 <hr>

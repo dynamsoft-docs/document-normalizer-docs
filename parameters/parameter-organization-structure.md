@@ -1,169 +1,122 @@
----
+---   
 layout: default-layout
-title: Parameter Organization Structure
-keywords: organization, parameters, documentation
-description: Dynamsoft Document Normalizer - Parameter Organization Structure
+title: Dynamsoft Document Normalizer Parameters under Dynamsoft Capture Vision
+description: Introduce the parameters design of Dynamsoft Capture Vision related to Dynamsoft Document Normalizer.
+keywords: Parameter, Parameter Template, Parameter Template File, Dynamsoft Document Normalizer
+needAutoGenerateSidebar: true
+noTitleIndex: true
+needGenerateH3Content: true
 ---
 
-# Parameter Organization Structure
+# Overview of Dynamsoft Capture Vision parameters Related to Dynamsoft Document Normalizer
 
-This article introduces the organization structure of all parameters.
+Starting in version 2.0, Dynamsoft Document Normalizer is restructured under Dynamsoft Capture Vision Framework.
 
-## Definitions
+Dynamsoft Capture Vision (DCV) is designed for high scalability and flexibility, and its parameter system plays a crucial role in achieving this goal. The parameter system is highly configurable and can drive different behavior logic within the SDK. In this article, we will provide an overview of the parametric architecture design regarding the use of Dynamsoft Document Normalizer in the Dynamsoft Capture Vision framework.
 
-Dynamsoft Document Normalizer uses a template to organize parameters. A template is a `JSON` object which contains following keys:
+## Key Terms
 
-| Key Name | Description |
-| -------- | ----------- |
-| GlobalParameter | A JSON Object which defines a [GlobalParameter Object](#globalparameter-object). |
-| ImageParameterArray | A JSON Object array which defines multiple [ImageParameter Objects](#imageparameter-object). |
-| NormalizerParameterArray | A JSON Object array which defines multiple [NormalizerParameter Objects](#normalizerparameter-object). |
+In order to eliminate ambiguity, we first define several key terms.
 
-### GlobalParameter Object
+1. **Parameter** 
+   A parameter is designed to represent a particular aspect of the behavior of the SDK, and each parameter has its own name. For instance, the `ExpectedBarcodeCount` parameter is used to control the expected count of recognized barcodes. Parameters can be configured with specific values or ranges of values, which can be adjusted as required.
 
-A GlobalParameter object contains following keys:
+2. **Parameter template**
+   A parameter template is a collection of parameters organized in a structured manner, expressed in JSON format. The name of the `CaptureVisionTemplate` object is also called "template name", which is a unique identifier assigned to each parameter template. In the DCV SDK, this name is used to load the relevant configurations and control runtime behavior.
+  
+3. **Parameter template file**
+   A parameter template file is a JSON file that contains one or multiple parameter templates.
 
-| Key Name | Description |
-| -------- | ----------- |
-| Name | (Required) A string value which specifies the name of current GlobalParameter object. |
-| MaxTotalImageDimension | (Optional) Sets the parameter [MaxTotalImageDimension](reference/max-total-image-dimension.md). |
+## Organization of a Parameter Template File
 
-### ImageParameter Object
-
-An ImageParameter object contains following keys:
-
-| Key Name | Description |
-| -------- | ----------- |
-| Name | (Required) A string value which specifies the name of current ImageParameter object. The name value must be unique between all ImageParameter objects. |
-| RegionPredetectionModes | (Optional) Sets the parameter [RegionPredetectionModes](reference/region-predetection-modes.md). |
-| Timeout | (Optional) Sets the parameter [Timeout](reference/timeout.md). |
-| ColourChannelUsageType | (Optional) Sets the parameter [ColourChannelUsageType](reference/colour-channel-usage-type.md). |
-| MaxThreadCount | (Optional) Sets the parameter [MaxThreadCount](reference/max-thread-count.md). |
-| ScaleDownThreshold | (Optional) Sets the parameter [ScaleDownThreshold](reference/scale-down-threshold.md). |
-| ColourConversionModes | (Optional) Sets the parameter [ColourConversionModes](reference/colour-conversion-modes.md). |
-| GrayscaleTransformationModes | (Optional) Sets the parameter [GrayscaleTransformationModes](reference/grayscale-transformation-modes.md). |
-| GrayscaleEnhancementModes | (Optional) Sets the parameter [GrayscaleEnhancementModes](reference/grayscale-enhancement-modes.md). |
-| BinarizationModes | (Optional) Sets the parameter [BinarizationModes](reference/binarization-modes.md). |
-| TextureDetectionModes | (Optional) Sets the parameter [TextureDetectionModes](reference/texture-detection-modes.md). |
-| TextFilterModes | (Optional) Sets the parameter [TextFilterModes](reference/text-filter-modes.md). |
-| LineExtractionModes | (Optional) Sets the parameter [LineExtractionModes](reference/line-extraction-modes.md). |
-| NormalizerParameterName | (Optional) A string value which is the name of a [NormalizerParameter Object](#normalizerparameter-object). |
-| BaseImageParameterName | (Optional) A string value which is the name of an [ImageParameter Object](#imageparameter-object). When a parameter is not explicitly set in current ImageParameter Object, it will inherit the value from base ImageParameter Object. If BaseImageParameterName is also not set, this parameter is set with parameter's default value. |
-
-### NormalizerParameter Object
-
-A NormalizerParameter object contains following keys:
-
-| Key Name | Description |
-| -------- | ----------- |
-| Name | (Required) A string value which specifies the name of current NormalizerParameter object. The name value must be unique between all NormalizerParameter objects. |
-| ContentType | (Optional) Sets the parameter [ContentType](reference/content-type.md). |
-| InteriorAngleRangeArray |  (Optional) Sets the parameter [InteriorAngleRangeArray](reference/interior-angle-range-array.md). |
-| QuadrilateralDetectionModes | (Optional) Sets the parameter [QuadrilateralDetectionModes](reference/quadrilateral-detection-modes.md). |
-| DeskewMode | (Optional) Sets the parameter [DeskewMode](reference/deskew-mode.md). |
-| PageSize | (Optional) Sets the parameter [PageSize](reference/page-size.md). |
-| ColourMode | (Optional) Sets the parameter [ColourMode](reference/colour-mode.md). |
-| Brightness | (Optional) Sets the parameter [Brightness](reference/brightness.md). |
-| Contrast | (Optional) Sets the parameter [Contrast](reference/contrast.md). |
-
-## Example
+As shown in the example below, the organizational structure of a parameter template file consists of several top-level objects such as `CaptureVisionTemplates`, `ImageSourceOptions`,`TargetROIDefOptions` etc.
 
 ```json
 {
-    "GlobalParameter":{
-        "Name":"GP",
-        "MaxTotalImageDimension":0
-    },
-    "ImageParameterArray":[
+    "CaptureVisionTemplates": [
         {
-            "Name":"IP-1",
-            "RegionPredetectionModes":[
-                {
-                    "Mode": "RPM_GENERAL"
-                }
-            ],
-            "Timeout": 10000,
-            "ColourChannelUsageType": "CCUT_AUTO",
-            "MaxThreadCount": 4,
-            "ScaleDownThreshold": 2300,
-            "ColourConversionModes":[
-                {
-                    "Mode": "CICM_GENERAL",
-                    "BlueChannelWeight": -1,
-                    "GreenChannelWeight": -1,
-                    "RedChannelWeight": -1
-                }
-            ],
-            "GrayscaleTransformationModes":[
-                {
-                    "Mode": "GTM_ORIGINAL"
-                }
-            ],
-            "GrayscaleEnhancementModes": [
-                {
-                    "Mode": "GEM_GENERAL" 
-                }
-            ],
-            "BinarizationModes":[
-                {
-                    "Mode": "BM_LOCAL_BLOCK",
-                    "BlockSizeX": 0,
-                    "BlockSizeY": 0,
-                    "EnableFillBinaryVacancy": 0,
-                    "MorphOperation": "Close",
-                    "MorphShape": "Rectangle",
-                    "MorphOperationKernelSizeX": -1,
-                    "MorphOperationKernelSizeY": -1,
-                    "ThresholdCompensation": 10
-                }
-            ],
-            "TextureDetectionModes":[
-                {
-                    "Mode": "TDM_GENERAL_WIDTH_CONCENTRATION",
-                    "Sensitivity": 5
-                }
-            ],
-            "TextFilterModes": [
-                {
-                    "Mode": "TFM_GENERAL_CONTOUR", 
-                    "IfEraseTextZone": 0,
-                    "MinImageDimension": 65536,
-                    "Sensitivity": 0
-                }
-            ],
-            "LineExtractionModes": [
-                {
-                    "Mode": "LEM_GENERAL" 
-                }
-            ],
-            "NormalizerParameterName":"NP-1",
-            "BaseImageParameterName":""  
+            "Name" : "CV_0",
+            "ImageSourceName": "ISA_0",
+            "ImageROIProcessingNameArray": ["TA_0" ],
+            "SemanticProcessingNameArray": ["SP_0"] 
+        }       
+    ],
+    "ImageSourceOptions": [ 
+        {
+            "Name": "ISA_0"
         }
     ],
-    "NormalizerParameterArray":[
+    "TargetROIDefOptions" : [
         {
-            "Name":"NP-1",
-            "ContentType": "CT_DOCUMENT",
-            "InteriorAngleRangeArray": [
-                {
-                    "MinValue": 70,
-                    "MaxValue": 110
-                }
-            ],
-            "QuadrilateralDetectionModes": [
-                {
-                    "Mode": "QDM_GENERAL" 
-                }
-            ],
-            "DeskewMode": {
-                "Mode": "DM_PERSPECTIVE_CORRECTION", 
-                "ContentDirection": 0
-            },
-            "PageSize": [-1, -1],
-            "ColourMode": "ICM_BINARY",
-            "Brightness": 0,
-            "Contrast": 0   
+            "Name" : "TA_0",
+            "TaskSettingNameArray": [ "LR_0", "BR_0", "DN_0" ]
         }
-    ]
+    ],
+    "ImageParameterOptions": [
+        {
+            "Name": "IP_0"
+        }
+    ], 
+    "DocumentNormalizerTaskSettingOptions": [
+        {
+            "Name" : "DN_0"
+        }
+    ],
+    "GlobalParameter":{
+        "MaxTotalImageDimension":0
+    }
 }
 ```
+
+With the exception of GlobalParameter, all top-level objects in the parameter template file are arrays of the corresponding object. For example,`CaptureVisionTemplates` are an array of `CaptureVisionTemplate` objects, and `TargetROIDefOptions` are an array of `TargetROIDef` objects.
+
+Furthermore, to reuse the same parameter definitions, reduce the size of the parameter template file, and simplify the parameter configuration hierarchy, the reference relationship was adopted in the parameter template file design. For example, the value of the `ImageSource` parameter for the first object in `CaptureVisionTemplates` is `ISA_0`, which refers to the first object in `ImageSourceOptions`.
+
+Therefore, a parameter template starts with an object in `CaptureVisionTemplates` and recursively searches for the objects that are directly or indirectly referenced by it, and then combines them to form a specific set of parameters. Then, the parameter template may be applied to DCV through "template name" to control its internal execution logic.
+
+Next, we will focus on introducing some main objects and their relationships in a parameter template.
+
+## Structure of a Parameter Template
+
+The following table list the main objects type and description of a complete parameter template when using only Dynamsoft Document Normalizer:
+
+| Object Type                   | Description                                                                                                                                                                                  |
+| :---------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| CaptureVisionTemplate         | This is the entry object of a parameter template in DCV. The `Name` parameter represents the name of the parameter template, which serves as its unique identifier.                          |
+| ImageSource                   | It defines the input for DCV, responsible for providing images to DCV. It can be defined as different image sources, including but not limited to image directories, scanners, cameras, etc. |
+| TargetROIDef                  | It is used to specify one or more recognition tasks to be performed on some regions of interest (ROIs) within an image.                                                                      |
+| DocumentNormalizerTaskSetting | It is used to configure the document detection or normalization process of an image in DCV.                                                                                                  |
+| ImageParameter           | It provides various image-processing features to adjust and enhance the input image for better recognition results.                                                                          |
+
+For more details, please refer to [introduction of the capture vision template]({{ site.parameter }}file/capture-vision-template.html)
+
+## How to Apply DCV Parameters
+
+Dynamsoft Capture Vision (DCV) provides two methods to apply parameters:
+
+- `SimplifiedCaptureVisionSettings`: It is a structure that contains commonly used DCV parameters. To update DCV parameters using `SimplifiedCaptureVisionSettings`, you can follow these steps:
+
+   1. Call the `GetSimplifiedSettings` API to get the `SimplifiedCaptureVisionSettings` object named `dcv_settings` associated with the Dynamsoft Capture Vision Router instance.
+   2. Modify the attributes of `dcv_settings`.
+   3. Call the `UpdateSettings` API to apply the modified `dcv_settings`.
+
+- `JSON parameter template file/string` - It supports all DCV parameters. The related parameter setting APIs are:
+
+   1. `InitSettings/InitSettingsFromFile` - after calling this interface, each parameter template in the file/string will be converted into a single parameter template object. They will replace the previously associated parameter template objects on the Capture Vision Router instance.
+
+   2. `ResetSettings` - after calling this API, the internal associated parameter template objects are reset to the factory state.
+
+## Special Rules for DCV Parameter Configuration
+
+In this section, we will discuss some special rules for configuring the DCV parameter templates. Understanding these rules will help you efficiently configure a simple and user-friendly parameter template.
+
+### Default Value of Parameters
+
+Generally, the DCV parameter templates have been designed with many common scenarios in mind, so the default values of many parameters do not need to be modified. When configuring a custom template, you only need to configure required parameters and fine-tuning parameters related to business scenarios. Other optional parameters are automatically filled with default values. This simplifies your configuration and makes your templates easier to read.
+
+### Inherited Parameters
+
+Sometimes, we need to configure multiple templates to adapt to different scenarios, but only a few parameter values differ between each template. DCV provides a parameter configuration inheritance mechanism that further reduces the amount of configuration work.
+For example, when configuring `IP_A` and `IP_B` objects in `ImageParameterOptions`, you can define a `BaseImageParameterName` parameter in the `IP_B` object with a value of `IP_A`. Then `IP_B` object will inherit all the parameter definitions of `IP_A`, and if `IP_B` defines a parameter with the same name but a different value, that parameter will adopt the value of `IP_B`.
+
+This allows you to create a new parameter template that inherits most of its configuration from an existing template, reducing the amount of repetitive configuration work needed.
