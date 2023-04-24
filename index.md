@@ -27,7 +27,7 @@ UNDERSTANDING DDN
 <hr>
 
 * [Parameter Organization]({{ site.parameters_ddn }}parameter-organization-structure.html)
-* [Parameter Reference]({{ site.parameters_reference }})
+* [Parameter Reference]({{ site.parameters_reference_ddn }})
 
 <hr>
 USEFUL RESOURCES

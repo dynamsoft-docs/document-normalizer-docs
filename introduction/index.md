@@ -80,7 +80,7 @@ Adjust the brightness and contrast of the output normalized image.
 
 In order to cope with various scenarios, DDN provides a variety of image processing modes at each stage of the algorithm process to maintain great scalability.
 
-For example, [`BinarizationModes`]({{site.parameters_reference }}binarization-modes.html) provides several image binarization methods and [`RegionPredetectionModes`]({{site.parameters_reference }}region-predetection-modes.html) provides different pre-detection methods to help locate the ROI.
+For example, [`BinarizationModes`]({{site.parameters_reference }}image-parameter/binarization-modes.html) provides several image binarization methods and [`RegionPredetectionModes`]({{site.parameters_reference }}image-parameter/region-predetection-modes.html) provides different pre-detection methods to help locate the ROI.
 
 These modes can be configured not only through API but also through a configuration template (as file, string, JSON etc.). Furthermore, the these modes can be customized according to customer scenarios to allow for a more smoother and more seamless performance in the customer's application.
 
