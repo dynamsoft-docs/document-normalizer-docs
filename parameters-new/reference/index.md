@@ -60,7 +60,7 @@ permalink: /parameters/reference/index.html
  | [`TextDetectionMode`]({{ site.parameters_reference }}image-parameter/text-detection-mode.html) | Defines how to detect the text area. |
  | [`TextureDetectionModes`]({{ site.parameters_reference }}image-parameter/texture-detection-modes.html) | Defines how to detect texture on an image. |
 
-## Image Source Options
+## Image Source
 
  | Parameter Name                                                           | Description |
  | ------------------------------------------------------------------------ | ----------- |
