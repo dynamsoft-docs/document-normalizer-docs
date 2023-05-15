@@ -18,12 +18,9 @@ DEVELOPMENT
 * [Web (Client Side)]({{ site.js }})
 * Mobile
   * [Android]({{ site.android }})
-  * [iOS]({{ site.oc }})
+  * [iOS]({{ site.ios }})
   * [Xamarin.Forms]({{ site.xamarin }})
 * Server / Desktop
-  * [Python]({{ site.python }})
-  * [Java]({{ site.java }})
-  * [C\#]({{ site.dotnet }})
   * [C++]({{ site.cpp }})
   * [C]({{ site.c }})
 
