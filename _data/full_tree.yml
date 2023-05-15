@@ -1,12 +1,13 @@
 tree_file_list:
     - sidelist-full-tree.html
     - sidelist-development.html
+    - sidelist-development-v1.0.21.html
     - sidelist-introduction.html
     - sidelist-license.html
     - sidelist-parameters-organization.html
     - sidelist-parameters-reference.html
-    - sidelist-parameters-reference-v1.0.20.html
+    - sidelist-parameters-reference-v1.0.21.html
     - sidelist-release-notes.html
     - sidelist-useful.html
     - sidelist-understanding.html
-    - sidelist-understanding-v1.0.20.html
+    - sidelist-understanding-v1.0.21.html

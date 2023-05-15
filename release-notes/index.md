@@ -8,6 +8,18 @@ needGenerateH3Content: false
 
 # Release Notes
 
+## 2.0
+
+> First released: 04-30-2023
+
+### Highlights
+
+{%- include release-notes/product-highlight-2.0.0.md -%}
+
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 2.0.0   | [C++]({{ site.cpp_release_notes}}cpp-2.md#200-04302023) |
+
 ## 1.0
 
 > First released: 06-21-2022
