@@ -88,7 +88,7 @@ The following table list the main objects type and description of a complete par
 | DocumentNormalizerTaskSetting | It is used to configure the document detection or normalization process of an image in DCV.                                                                                                  |
 | ImageParameter           | It provides various image-processing features to adjust and enhance the input image for better recognition results.                                                                          |
 
-For more details, please refer to [introduction of the capture vision template]({{ site.parameter }}file/capture-vision-template.html)
+For more details, please refer to [introduction of the capture vision template]({{ site.dcv_parameters }}file/capture-vision-template.html)
 
 ## How to Apply DCV Parameters
 
