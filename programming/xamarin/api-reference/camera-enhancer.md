@@ -11,7 +11,7 @@ breadcrumbText: Xamarin.Forms Interface ICameraEnhancer
 
 # Interface ICameraEnhancer
 
-Interface `ICameraEnhaancer` includes the camera control APIs. It supports document scanning from the video streaming.
+Interface `ICameraEnhancer` includes the camera control APIs. It supports document scanning from the video streaming.
 
 ```csharp
 interface DDNXamarin.ICameraEnhancer
