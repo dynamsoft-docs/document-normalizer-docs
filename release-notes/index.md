@@ -18,7 +18,7 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 2.0.0   | [C++]({{ site.cpp_release_notes}}cpp-2.html#200-04302023) |
+| 2.0.0   | <a target="_blank" href="{{ site.cpp_release_notes}}cpp-2.html#200-04302023" class="otherLinkColour refreshLink">C++</a> |
 
 ## 1.0
 
@@ -28,11 +28,11 @@ needGenerateH3Content: false
 
 {%- include release-notes/product-highlight-1.0.0.md -%}
 
-| Versions | Available Editions                                                                                                                                                                                                                                                                                                        |
-| -------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| 1.0.21   | [Android]({{ site.android_release_notes }}android-1.html#1021-02152023)                                                                                                                                                                                                                                                     |
-| 1.0.20   | [C]({{ site.c_release_notes}}c-1.html#1020-02022023) / [C++]({{ site.cpp_release_notes}}cpp-1.html#1020-02022023) / [Android]({{ site.android_release_notes }}android-1.html#1020-02022023) / [iOS]({{ site.ios_release_notes }}ios-1.html#1020-02022023)                                                                          |
-| 1.0.12   | [JavaScript]({{ site.js }}javascript-1.html#1012-01052023)                                                                                                                                                                                                                                                          |
-| 1.0.11   | [JavaScript]({{ site.js }}javascript-1.html#1011-11302022)                                                                                                                                                                                                                                                          |
-| 1.0.10   | [C]({{ site.c_release_notes}}c-1.html#1010-09292022) / [C++]({{ site.cpp_release_notes}}cpp-1.html#1010-09292022) / [Android]({{ site.android_release_notes }}android-1.html#1010-09292022) / [iOS]({{ site.ios_release_notes }}ios-1.html#1010-09292022) / [JavaScript]({{ site.js }}javascript-1.html#1010-11042022)       |
-| 1.0.0    | [C]({{ site.c_release_notes}}c-1.html#100-06212022) / [C++]({{ site.cpp_release_notes}}cpp-1.html#100-06212022) / [Android]({{ site.android_release_notes }}android-1.html#100-06212022) / [iOS]({{ site.ios_release_notes }}ios-1.html#100-06212022) / [Xamarin.Forms]({{ site.xamarin_release_notes }}xamarin-1.html#100-10282022) |
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 1.0.21   | <a target="_blank" href="{{ site.android_release_notes }}android-1.html#1021-02152023" class="otherLinkColour refreshLink">Android</a> |
+| 1.0.20   | <a target="_blank" href="{{ site.c_release_notes}}c-1.html#1020-02022023" class="otherLinkColour refreshLink">C</a> / <a target="_blank" href="{{ site.cpp_release_notes}}cpp-1.html#1020-02022023" class="otherLinkColour refreshLink">C++</a> / <a target="_blank" href="{{ site.android_release_notes }}android-1.html#1020-02022023" class="otherLinkColour refreshLink">Android</a> / <a target="_blank" href="{{ site.ios_release_notes }}ios-1.html#1020-02022023" class="otherLinkColour refreshLink">iOS</a> |
+| 1.0.12   | <a target="_blank" href="{{ site.js }}javascript-1.html#1012-01052023" class="otherLinkColour refreshLink">JavaScript</a> |
+| 1.0.11   | <a target="_blank" href="{{ site.js }}javascript-1.html#1011-11302022" class="otherLinkColour refreshLink">JavaScript</a> |
+| 1.0.10   | <a target="_blank" href="{{ site.c_release_notes}}c-1.html#1010-09292022" class="otherLinkColour refreshLink">C</a> / <a target="_blank" href="{{ site.cpp_release_notes}}cpp-1.html#1010-09292022" class="otherLinkColour refreshLink">C++</a> / <a target="_blank" href="{{ site.android_release_notes }}android-1.html#1010-09292022" class="otherLinkColour refreshLink">Android</a> / <a target="_blank" href="{{ site.ios_release_notes }}ios-1.html#1010-09292022" class="otherLinkColour refreshLink">iOS</a> / <a target="_blank" href="{{ site.js }}javascript-1.html#1010-11042022" class="otherLinkColour refreshLink">JavaScript</a> |
+| 1.0.0    | <a target="_blank" href="{{ site.c_release_notes}}c-1.html#100-06212022" class="otherLinkColour refreshLink">C</a> / <a target="_blank" href="{{ site.cpp_release_notes}}cpp-1.html#100-06212022" class="otherLinkColour refreshLink">C++</a> / <a target="_blank" href="{{ site.android_release_notes }}android-1.html#100-06212022" class="otherLinkColour refreshLink">Android</a> / <a target="_blank" href="{{ site.ios_release_notes }}ios-1.html#100-06212022" class="otherLinkColour refreshLink">iOS</a> / <a target="_blank" href="{{ site.xamarin_release_notes }}xamarin-1.html#100-10282022" class="otherLinkColour refreshLink">Xamarin.Forms</a> |
