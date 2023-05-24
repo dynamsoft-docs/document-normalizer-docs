@@ -10,6 +10,13 @@ noTitleIndex: true
 
 # Release Notes for Xamarin SDK
 
+## 1.0.3 (05/24/2023)
+
+### Fixed
+
+- Fixed a `DetectedQuadResult` display bug. The edge of a quadrilateral might be wrongly linked when the `ImageEditorView`
+is reopened.
+
 ## 1.0.2 (02/15/2023)
 
 ### Fixed
