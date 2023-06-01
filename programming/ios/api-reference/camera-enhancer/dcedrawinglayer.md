@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: iOS DCEDrawingLayer Class - Dynamsoft Document Normalizer Documents
-description: This is the documentation - iOS DCEDrawingLayer Class page of Dynamsoft Camera Enhancer.
+description: Documentation page of iOS DCEDrawingLayer Class of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, iOS, DCEDrawingLayer
 needAutoGenerateSidebar: true
 noTitleIndex: true

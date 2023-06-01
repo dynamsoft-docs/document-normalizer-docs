@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: iOS EnumEnhancerFeatures - Dynamsoft Document Normalizer Documents
-description: This is the documentation - EnumEnhancerFeatures page of DynamsoftCameraEnhancer library.
+description: Documentation page of iOS EnumEnhancerFeatures of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, EnumEnhancerFeatures
 needAutoGenerateSidebar: true
 breadcrumbText: EnumEnhancerFeatures

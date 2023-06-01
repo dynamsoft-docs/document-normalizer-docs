@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android EnumFrameQuality - Dynamsoft Document Normalizer Documents
-description: This is the documentation - EnumFrameQuality page of CameraEnhancer library.
+description: Documentation page of Android EnumFrameQuality of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, EnumFrameQuality
 needAutoGenerateSidebar: true
 breadcrumbText: EnumFrameQuality

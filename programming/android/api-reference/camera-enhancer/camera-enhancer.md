@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android CameraEnhancer Class - Dynamsoft Document Normalizer Documents
-description: This is the documentation - Android API references - CameraEnhancer Class page of Dynamsoft Camera Enhancer.
+description: This is the documentation - Android API references - CameraEnhancer Class page of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, Android API references, CameraEnhancer Class
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android DrawingStyleManager Class - Dynamsoft Document Normalizer Documents
-description: This is the documentation - Android DrawingStyleManager Class page of Dynamsoft Camera Enhancer.
+description: Documentation page of Android DrawingStyleManager Class of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, Android, DrawingStyleManager
 needAutoGenerateSidebar: true
 noTitleIndex: true

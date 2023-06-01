@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: iOS RectDrawingItem Class - Dynamsoft Document Normalizer Documents
-description: This is the documentation - iOS RectDrawingItem Class page of Dynamsoft Camera Enhancer.
+description: Documentation page of iOS RectDrawingItem Class of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, iOS, RectDrawingItem
 needAutoGenerateSidebar: true
 noTitleIndex: true

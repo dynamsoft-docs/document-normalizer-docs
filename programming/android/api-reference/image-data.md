@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Core Java Class - ImageData
-description: This page shows the ImageData Class of Dynamsoft Core for Java Language.
+description: Documentation page of ImageData Class of Dynamsoft Core for Dynamsoft Document Normalizer.
 keywords: ImageData, java
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android QuadDrawingItem Class - Dynamsoft Document Normalizer Documents
-description: This is the documentation - Android QuadDrawingItem Class page of Dynamsoft Camera Enhancer.
+description: Documentation page of Android QuadDrawingItem Class of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, Android, QuadDrawingItem
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android EnumResolution - Dynamsoft Document Normalizer Documents
-description: This is the documentation - EnumResolution page of CameraEnhancer library.
+description: Documentation page of Android EnumResolution of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, EnumResolution
 needAutoGenerateSidebar: true
 breadcrumbText: EnumResolution

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android EnumDrawingItemState - Dynamsoft Document Normalizer Documents
-description: This is the documentation - EnumDrawingItemState page of CameraEnhancer library.
+description: Documentation page of Android EnumDrawingItemState of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, EnumDrawingItemState
 needAutoGenerateSidebar: true
 breadcrumbText: EnumDrawingItemState

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Dynamsoft Core Objective-C & Swift Class - iImageData
-description: This page shows the iImageData class of Dynamsoft Core for iOS SDK.
+description: Documentation page of iImageData class of Dynamsoft Document Normalizer for iOS SDK.
 keywords: iImageData, objective-c, oc, swift
 needAutoGenerateSidebar: true
 needGenerateH3Content: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android RectDrawingItem Class - Dynamsoft Document Normalizer Documents
-description: This is the documentation - Android RectDrawingItem Class page of Dynamsoft Camera Enhancer.
+description: Documentation page of Android RectDrawingItem Class of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, Android, RectDrawingItem
 needAutoGenerateSidebar: true
 noTitleIndex: true
