@@ -46,4 +46,4 @@ cameraEnhancer.setCameraStateListener(new DCECameraStateListener() {
 
 **See also**
 
-- [`setCameraStateListener`](../primary-api/camera-enhancer.md#setcamerastatelistener)
+- [`setCameraStateListener`](camera-enhancer.md#setcamerastatelistener)
