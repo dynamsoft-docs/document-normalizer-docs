@@ -14,7 +14,7 @@ noTitleIndex: true
 
 ### Fixed
 
-- Fixed a bug that document boundary might not be detected when scanning from the video streaming.
+- Fixed a bug where document boundary might not be detected when scanning from the video streaming.
 
 ## 1.0.3 (05/24/2023)
 
@@ -27,7 +27,7 @@ is reopened.
 
 ### Fixed
 
-- Fixed a crash bug that might happen when triggering method [`toImageSource`](../api-reference/image-data.md#toimagesource).
+- Fixed a crash bug where might happen when triggering method [`toImageSource`](../api-reference/image-data.md#toimagesource).
 
 ## 1.0.1 (11/11/2022)
 
