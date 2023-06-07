@@ -10,6 +10,12 @@ noTitleIndex: true
 
 # Release Notes for Xamarin SDK
 
+## 1.0.4 (06/07/2023)
+
+### Fixed
+
+- Fixed a bug that document boundary might not be detected when scanning from the video streaming.
+
 ## 1.0.3 (05/24/2023)
 
 ### Fixed

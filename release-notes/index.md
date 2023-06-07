@@ -18,6 +18,8 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
+| 1.0.30 | [C](../programming/c/release-notes/c-1.md#1030-06072023) / [C++](../programming/cplusplus/release-notes/cpp-1.md#1030-06072023) / [Android](../programming/android/release-notes/android-1.md#1030-06072023) / [iOS](../programming/ios/release-notes/ios-1.md#1030-06072023) |
+| 1.0.12 | [JavaScript](../programming/javascript/release-notes/javascript-1.md#1012-01052023) |
 | 1.0.21 | [Android](../programming/android/release-notes/android-1.md#1021-02152023) |
 | 1.0.20 | [C](../programming/c/release-notes/c-1.md#1020-02022023) / [C++](../programming/cplusplus/release-notes/cpp-1.md#1020-02022023) / [Android](../programming/android/release-notes/android-1.md#1020-02022023) / [iOS](../programming/ios/release-notes/ios-1.md#1020-02022023) |
 | 1.0.12 | [JavaScript](../programming/javascript/release-notes/javascript-1.md#1012-01052023) |
