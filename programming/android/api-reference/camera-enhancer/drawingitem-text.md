@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android TextDrawingItem Class - Dynamsoft Document Normalizer Documents
-description: This is the documentation - Android TextDrawingItem Class page of Dynamsoft Camera Enhancer.
+description: Documentation page of Android TextDrawingItem Class of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, Android, TextDrawingItem
 needAutoGenerateSidebar: true
 noTitleIndex: true

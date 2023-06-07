@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android EnumEnhancerFeatures - Dynamsoft Document Normalizer Documents
-description: This is the documentation - EnumEnhancerFeatures page of CameraEnhancer library.
+description: Documentation page of Android EnumEnhancerFeatures of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, EnumEnhancerFeatures
 needAutoGenerateSidebar: true
 breadcrumbText: EnumEnhancerFeatures

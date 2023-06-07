@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: Android DCEImageEditorView Class - Dynamsoft Document Normalizer Documents
-description: This is the documentation - Android DCEImageEditorView Class page of Dynamsoft Camera Enhancer.
+description: Documentation page of Android DCEImageEditorView Class of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, Android, DCEImageEditorView
 needAutoGenerateSidebar: true
 noTitleIndex: true

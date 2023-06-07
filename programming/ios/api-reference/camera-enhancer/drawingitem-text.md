@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: iOS TextDrawingItem Class - Dynamsoft Document Normalizer Documents
-description: This is the documentation - iOS TextDrawingItem Class page of Dynamsoft Camera Enhancer.
+description: Documentation page of iOS TextDrawingItem Class of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, iOS, TextDrawingItem
 needAutoGenerateSidebar: true
 noTitleIndex: true

@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: iOS DrawingStyleManager Class - Dynamsoft Document Normalizer Documents
-description: This is the documentation - iOS DrawingStyleManager Class page of Dynamsoft Camera Enhancer.
+description: Documentation page of iOS DrawingStyleManager Class of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, iOS, DrawingStyleManager
 needAutoGenerateSidebar: true
 noTitleIndex: true

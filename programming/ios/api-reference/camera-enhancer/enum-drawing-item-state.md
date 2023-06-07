@@ -1,7 +1,7 @@
 ---
 layout: default-layout
 title: iOS EnumDrawingItemState - Dynamsoft Document Normalizer Documents
-description: This is the documentation - EnumDrawingItemState page of DynamsoftCameraEnhancer library.
+description: Documentation page of iOS EnumDrawingItemState of Dynamsoft Document Normalizer.
 keywords:  Camera Enhancer, EnumDrawingItemState
 needAutoGenerateSidebar: true
 breadcrumbText: EnumDrawingItemState
