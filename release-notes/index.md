@@ -10,7 +10,7 @@ needGenerateH3Content: false
 
 ## 2.0
 
-> First released: 04-30-2023
+> First released: 07-04-2023
 
 ### Highlights
 
@@ -18,7 +18,7 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 2.0.0   | <a target="_blank" href="{{ site.cpp_release_notes}}cpp-2.html#200-04302023" class="otherLinkColour refreshLink">C++</a> |
+| 2.0.0   | <a target="_blank" href="{{ site.cpp_release_notes}}cpp-2.html#200-07042023" class="otherLinkColour refreshLink">C++</a> |
 
 ## 1.0
 
