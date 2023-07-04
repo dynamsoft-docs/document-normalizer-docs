@@ -1,15 +1,13 @@
 tree_file_list:
     - sidelist-full-tree.html
+    - sidelist-development.html
+    - sidelist-development-v1.0.21.html
     - sidelist-introduction.html
-    - sidelist-parameters.html
-    - sidelist-programming.html
-    - sidelist-useful.html
-    - sidelist-release-notes.html
     - sidelist-license.html
-    - sidelist-programming/programming-android.html
-    - sidelist-programming/programming-ios.html
-    - sidelist-programming/programming-c.html
-    - sidelist-programming/programming-cpp.html
-    - sidelist-programming/programming-xamarin.html
-    - sidelist-programming/programming-javascript.html
-    - sidelist-parameters/parameters-reference.html
+    - sidelist-parameters-organization.html
+    - sidelist-parameters-reference.html
+    - sidelist-parameters-reference-v1.0.21.html
+    - sidelist-release-notes.html
+    - sidelist-useful.html
+    - sidelist-understanding.html
+    - sidelist-understanding-v1.0.21.html

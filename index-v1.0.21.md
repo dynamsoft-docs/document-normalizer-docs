@@ -6,6 +6,7 @@ breadcrumbText: HomePage
 description: Documentation Homepage
 ---
 
+
 # Documentation HomePage
 
 * [Introduction]({{ site.introduction }})
@@ -21,6 +22,7 @@ DEVELOPMENT
   * [Xamarin.Forms]({{ site.xamarin }})
 * Server / Desktop
   * [C++]({{ site.cpp }})
+  * [C]({{ site.c }})
 
 <hr>
 UNDERSTANDING DDN
