@@ -213,12 +213,12 @@
                 var arr = link.split("?")
                 if(arr[1].indexOf("#") > 0) {
                     var subArr = arr[1].split("#")
-                    link = link +"?product=dbr&repoType="+ repoType +"&" + arr[1]
+                    link = link +"?product=ddn&repoType="+ repoType +"&" + arr[1]
                 } else {
-                    link = link + "&product=dbr&repoType=" + repoType
+                    link = link + "&product=ddn&repoType=" + repoType
                 }
             } else {
-                link = link + "?product=dbr&repoType=" + repoType
+                link = link + "?product=ddn&repoType=" + repoType
             }
         }
         window.location.href = link
