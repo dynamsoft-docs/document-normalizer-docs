@@ -15,7 +15,7 @@ permalink: /parameters/reference/index.html
  | [`ImageROIProcessingNameArray`]({{ site.parameters_reference }}capture-vision-template/image-roi-processing-name-array.html) | Defines the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects. |
  | [`ImageSourceName`]({{ site.parameters_reference }}capture-vision-template/image-source-name.html) | Indicates the input source name, used to refer to the `ImageSource` object. |
  | [`MaxParallelTasks`]({{ site.parameters_reference }}capture-vision-template/max-parallel-tasks.html) | Defines the maximum number of parallel tasks for the DCV runtime. |
- | [`OutputRawImage`]({{ site.parameters_reference }}capture-vision-template/output-raw-Image.html) | Indicates whether DCV finally outputs the original input image. |
+ | [`OutputOriginalImage`]({{ site.parameters_reference }}capture-vision-template/output-original-Image.html) | Indicates whether DCV finally outputs the original input image. |
  | [`SemanticProcessingNameArray`]({{ site.parameters_reference }}capture-vision-template/semantic-processing-name-array.html) | Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. |
  | [`Timeout`]({{ site.parameters_reference }}capture-vision-template/timeout.html) | Defines the maximum amount of time (in milliseconds) that should be spent processing each image or frame. |
 
