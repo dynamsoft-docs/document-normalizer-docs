@@ -50,6 +50,11 @@ jobs:
           local-dir: /home/ubuntu/DDNDoc/_site/
           server-dir: /www.dynamsoft.com/document-normalizer/docs/core/
 
+      - name: Trigger Webhook 
+        run: | 
+          curl -X POST -H "${{ secrets.WEBHOOK_USER }}" -H "${{ secrets.WEBHOOK_TOKEN }}" -H "Content-Type: application/json" -d "[\"/document-normalizer/docs/core/*\"]" ${{ secrets.WEBHOOK_URL }}
+
+
   Build-Preview:
     if: ${{ github.ref == 'refs/heads/preview' }}
     # The type of runner that the job will run on
