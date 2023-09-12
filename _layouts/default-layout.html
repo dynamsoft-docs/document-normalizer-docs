@@ -7,25 +7,14 @@
     {%- assign noTitleIndex = "noTitleIndex" -%}
 {%- endif -%}
 <body>
-    <div class="headWrapper">
-        {%- include page_header.html -%}
-    </div>
+    {% assign url = 'https://www.dynamsoft.com/shared/head/' %}
+    {% remote_include {{ url }} %}
+
     {%- include ddnNav.html -%}
     <div class="sideBarIcon"><i class="fa fa-list" style="margin-right: 5px;"></i> Table of contents</div>
     <div class="container" id="categoryMenuTree">
         <div class="row">
-            <div class="sideBar col-xs-12 col-lg-3 hide-xs hide-sm hide-md">
-                <div id="sideBarCnt">
-                    <div class="docSearchPart" style="margin-top: 30px;">
-                        <input id="txtSearch" class="search" type="text">
-                    </div>
-                    <div class="mainPage">
-                        <ul id="fullTreeMenuListContainer" name="listLevel1">
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="docContainer col-xs-12 col-lg-9">
+            <main class="docContainer col-xs-12 col-lg-9">
                 <div id="docHead" class = "head row hide-xs hide-sm hide-md">
                     {%- include main-page-head.html -%}
                 </div>
@@ -56,7 +45,18 @@
                         <div class="lds-ring"><div></div><div></div><div></div><div></div></div>
                     </div>
                 </div>
-            </div>
+            </main>
+            <aside class="sideBar col-xs-12 col-lg-3 hide-xs hide-sm hide-md">
+                <div id="sideBarCnt">
+                    <div class="docSearchPart" style="margin-top: 30px;">
+                        <input id="txtSearch" class="search" type="text">
+                    </div>
+                    <div class="mainPage">
+                        <ul id="fullTreeMenuListContainer" name="listLevel1">
+                        </ul>
+                    </div>
+                </div>
+            </aside>
         </div>
     </div>
     <div class="history list">
@@ -73,17 +73,12 @@
 
     <iframe id="sideBarIframe" src="{{ site.firstLevelUrl }}/Hide_Tree_Page.html" allow="" height="0" frameborder="0"></iframe>
 
-    <script type="text/javascript">anchors.add();</script>
-
-
     <script type="text/javascript">
+        anchors.add();
         UrlReplace();
-    </script>
-    
-    <script type="text/javascript">
         FullTreeMenuList('{{ page.needAutoGenerateSidebar }}', '{{ page.needGenerateH3Content }}', '{{ page.pageStartVer }}', '{{ site.useVersionTree }}');
     </script>
-
+    
     {%- include livehelp.html -%}
 
 
