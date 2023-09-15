@@ -48,6 +48,11 @@ download: "/document-normalizer/downloads/"
 plugins:
   - jemoji
   - jekyll-sitemap
+  - jekyll-webp
+  - jekyll-relative-links
+  - jekyll-redirect-from
+  - jekyll-readme-index
+  - jekyll-seo-tag
 
 
 defaults:
