@@ -1,16 +1,16 @@
 <style>
-  #cp-header .action-buttons { display: none; }
-  #mdHeader { border-bottom: 0!important; }
-  #sideBarCnt.sidebar-fixed { position: fixed; top: 88px; max-height: unset; }
-  .rightSideMenu.rsm-fixed { position: fixed; top: 100px; }
-  #docHead { top: 186px; }
-  .productMenu .downloadBtn:hover { color: #ffffff!important; }
-  @media (max-width: 1679px){
-    #docHead {
-      top: 145px;
+    #cp-header .action-buttons { display: none; }
+    #mdHeader { border-bottom: 0!important; }
+    #sideBarCnt.sidebar-fixed { position: fixed; top: 88px; max-height: unset; }
+    .rightSideMenu.rsm-fixed { position: fixed; top: 100px; }
+    #docHead { top: 151px; }
+    .productMenu .downloadBtn:hover { color: #ffffff!important; }
+    @media (max-width: 1679px){
+      #docHead {
+        top: 145px;
+      }
     }
-  }
-</style>
+  </style>
 
 <div id="DocumentNormalizer" class="main">
     <div id="DocumentNormalizerMenu" class="productMenu">
@@ -53,15 +53,21 @@
                     <div class="col-xs-12">
                         <ul class="menuList">
                             <!---->
-                            <li class="title"><a class="orangeLink" href="{{site.docHomePage}}">Dynamsoft Document Normalizer</a></li>
+                            <!-- <li class="title"><a class="orangeLink" href="{{site.docHomePage}}">Dynamsoft Document Normalizer</a></li> -->
                             <!-- <li class="item overview">
                                 <a class="textUpperCase" href="{{site.overview}}">Overview</a>
                             </li>
                             <li class="item overview">
                                 <a class="textUpperCase" href="{{site.frontPageFolder}}">Release Notes</a>
                             </li> -->
-                            <li class="item overview">
+                            <li class="item">
                                 <a class="textUpperCase" href="{{site.docHomePage}}">Documentation</a>
+                            </li>
+                            <li class="item">
+                                <a class="textUpperCase" href="https://www.dynamsoft.com/document-normalizer/ask-for-quote/">Get Pricing</a>
+                            </li>
+                            <li class="item">
+                                <a class="textUpperCase" href="{{site.download}}">Free Trial</a>
                             </li>
                         </ul>
                     </div>
