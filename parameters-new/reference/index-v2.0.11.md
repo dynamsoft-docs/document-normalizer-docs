@@ -3,7 +3,7 @@ title: Dynamsoft Document Normalizer Parameter Reference - Main Page
 description: Dynamsoft Document Normalizer Parameter Reference - Main Page
 keywords: parameter reference, parameters
 needAutoGenerateSidebar: false
-permalink: /parameters/reference/index.html
+permalink: /parameters/reference/index-v2.0.11.html
 ---
 
 # Parameter Reference
