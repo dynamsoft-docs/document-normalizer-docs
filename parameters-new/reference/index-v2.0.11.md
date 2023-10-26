@@ -3,7 +3,7 @@ title: Dynamsoft Document Normalizer Parameter Reference - Main Page
 description: Dynamsoft Document Normalizer Parameter Reference - Main Page
 keywords: parameter reference, parameters
 needAutoGenerateSidebar: false
-permalink: /parameters/reference/index-v2.0.0.html
+permalink: /parameters/reference/index-v2.0.11.html
 ---
 
 # Parameter Reference
@@ -15,7 +15,7 @@ permalink: /parameters/reference/index-v2.0.0.html
  | [`ImageROIProcessingNameArray`]({{ site.parameters_reference }}capture-vision-template/image-roi-processing-name-array.html) | Defines the collection of image ROI processing object names, used to refer to the `TargetROIDef` objects. |
  | [`ImageSourceName`]({{ site.parameters_reference }}capture-vision-template/image-source-name.html) | Indicates the input source name, used to refer to the `ImageSource` object. |
  | [`MaxParallelTasks`]({{ site.parameters_reference }}capture-vision-template/max-parallel-tasks.html) | Defines the maximum number of parallel tasks for the DCV runtime. |
- | [`OutputRawImage`]({{ site.parameters_reference }}capture-vision-template/output-raw-Image.html) | Indicates whether DCV finally outputs the raw input image. |
+ | [`OutputOriginalImage`]({{ site.parameters_reference }}capture-vision-template/output-original-Image.html) | Indicates whether DCV finally outputs the original input image. |
  | [`SemanticProcessingNameArray`]({{ site.parameters_reference }}capture-vision-template/semantic-processing-name-array.html) | Represents the collection of semantic-processing object names, used to refer to the `SematicProcessing` objects. |
  | [`Timeout`]({{ site.parameters_reference }}capture-vision-template/timeout.html) | Defines the maximum amount of time (in milliseconds) that should be spent processing each image or frame. |
 
@@ -37,7 +37,7 @@ permalink: /parameters/reference/index-v2.0.0.html
  | [`ColourMode`]({{ site.parameters_reference }}document-normalizer-task-settings/colour-mode.html) | Defines the output colour mode of the normalized image. |
  | [`ContentType`]({{ site.parameters_reference }}document-normalizer-task-settings/content-type.html) | Defines which contents are the targeting objects. |
  | [`Contrast`]({{ site.parameters_reference }}document-normalizer-task-settings/contrast.html) | Defines the contrast of the normalized image. |
- | [`CornerAngleRangeArray`]({{ site.parameters_reference }}document-normalizer-task-settings/corner-angle-range.html) | Defines the range of angles (in degrees) of the extracted corners. |
+ | [`CornerAngleRange`]({{ site.parameters_reference }}document-normalizer-task-settings/corner-angle-range.html) | Defines the range of angles (in degrees) of the extracted corners. |
  | [`DeskewMode`]({{ site.parameters_reference }}document-normalizer-task-settings/deskew-mode.html) | Defines the method in which the deskew process way used to apply the deskew process on the target normalized image. |
  | [`LineExtractionModes`]({{ site.parameters_reference }}document-normalizer-task-settings/line-extraction-modes.html) | Defines the algorithm used to extract lines. |
  | [`PageSize`]({{ site.parameters_reference }}document-normalizer-task-settings/page-size.html) | Defines the page size (width by height in pixels) of the normalized image. |
