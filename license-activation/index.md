@@ -32,7 +32,7 @@ The following code snippets are using the public trial license to initialize the
 >
 >1. 
 ```javascript
-Dynamsoft.DDN.DocumentNormalizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
+Dynamsoft.License.LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9");
 ```     
 2. 
 ```java
