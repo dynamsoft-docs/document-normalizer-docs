@@ -8,6 +8,19 @@ needGenerateH3Content: false
 
 # Release Notes
 
+## 2.2
+
+> First released: 01-16-2024
+
+### Highlights
+
+{%- include release-notes/product-highlight-2.2.0.md -%}
+
+
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 2.2.0    | <a target="_blank" href="{{ site.cpp_release_notes}}cpp-2.html#220-01162024" class="otherLinkColour refreshLink">C++</a> |
+
 ## 2.0
 
 > First released: 07-04-2023
@@ -18,10 +31,10 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 2.0.20   | <a target="_blank" href="{{ site.cpp_release_notes}}cpp-2.html#2020-10262023" class="otherLinkColour refreshLink">C++</a> / <a target="_blank" href="{{ site.android_release_notes}}android-2.html#2020-12122023" class="otherLinkColour refreshLink">Android</a> / <a target="_blank" href="{{ site.ios_release_notes}}ios-2.html#2020-12122023" class="otherLinkColour refreshLink">iOS</a> |
+| 2.0.20   | <a target="_blank" href="{{ site.cpp_release_notes}}cpp-2.html#2020-10262023" class="otherLinkColour refreshLink">C++</a> / <a target="_blank" href="{{ site.android_release_notes}}android-2.html#2020-12122023" class="otherLinkColour refreshLink">Android</a> / <a target="_blank" href="{{ site.ios_release_notes}}ios-2.html#2020-12122023" class="otherLinkColour refreshLink">iOS</a> / <a target="_blank" href="{{ site.js_release_notes}}javascript-2.html#2020-01112024" class="otherLinkColour refreshLink">JavaScript</a> |
 | 2.0.11   | <a target="_blank" href="{{ site.js_release_notes}}javascript-2.html#2011-08242023" class="otherLinkColour refreshLink">JavaScript</a> |
 | 2.0.10   | <a target="_blank" href="{{ site.cpp_release_notes}}cpp-2.html#2010-08082023" class="otherLinkColour refreshLink">C++</a> / <a target="_blank" href="{{ site.android_release_notes}}android-2.html#2010-08102023" class="otherLinkColour refreshLink">Android</a> / <a target="_blank" href="{{ site.ios_release_notes}}ios-2.html#2010-08102023" class="otherLinkColour refreshLink">iOS</a>|
-| 2.0.0   | <a target="_blank" href="{{ site.cpp_release_notes}}cpp-2.html#200-07042023" class="otherLinkColour refreshLink">C++</a> |
+| 2.0.0    | <a target="_blank" href="{{ site.cpp_release_notes}}cpp-2.html#200-07042023" class="otherLinkColour refreshLink">C++</a> |
 
 ## 1.0
 
