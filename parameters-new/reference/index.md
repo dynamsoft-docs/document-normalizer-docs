@@ -58,7 +58,6 @@ permalink: /parameters/reference/index.html
  | [`Name`]({{ site.parameters_reference }}shared-parameter/name.html) | Represents the name of the top-level objects in Dynamsoft Capture Vision Parameter Template, which serves as its unique identifier. |
  | [`BaseImageParameterName`]({{ site.parameters_reference }}image-parameter/base-image-parameter-name.html) | Represents the name of another `ImageParameter` object to inherit from. |
  | [`BinarizationModes`]({{ site.parameters_reference }}image-parameter/binarization-modes.html) | Defines the process of binarization |
- | [`ColourChannelUsageType`]({{ site.parameters_reference }}image-parameter/colour-channel-usage-type.html) | Defines how to use the colour channel from the source image buffer. |
  | [`ColourConversionModes`]({{ site.parameters_reference }}image-parameter/colour-conversion-modes.html) | Defines how to convert a colour image to a grayscale image. |
  | [`GrayscaleEnhancementModes`]({{ site.parameters_reference }}image-parameter/grayscale-enhancement-modes.html) | Defines the image processing methods to enhance the quality of the grayscale image. |
  | [`GrayscaleTransformationModes`]({{ site.parameters_reference }}image-parameter/grayscale-transformation-modes.html) | Defines whether or not to invert the color of the grayscale image. |
