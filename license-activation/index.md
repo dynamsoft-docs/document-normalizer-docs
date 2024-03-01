@@ -32,11 +32,11 @@ The following code snippets are using the public trial license to initialize the
 >
 >1. 
 ```javascript
-Dynamsoft.DDN.DocumentNormalizer.license = "DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9";
+Dynamsoft.License.LicenseManager.initLicense("YOUR-LICENSE-KEY");
 ```     
 2. 
 ```java
-LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", MainActivity.this, new LicenseVerificationListener() {
+LicenseManager.initLicense("YOUR-LICENSE-KEY", MainActivity.this, new LicenseVerificationListener() {
     @Override
     public void onLicenseVerified(boolean b, Exception e) {
         if(!b && e != null){
@@ -47,7 +47,7 @@ LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", MainActiv
 ```
 3. 
 ```objc
-[DSLicenseManager initLicense:@"DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9" verificationDelegate:self];
+[DSLicenseManager initLicense:@"YOUR-LICENSE-KEY" verificationDelegate:self];
 - (void)onLicenseVerified:(bool)isSuccess error:(NSError *)error{
     if(!isSuccess && error != nil){
         NSString* msg = error.userInfo[NSUnderlyingErrorKey];
@@ -57,7 +57,7 @@ LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9", MainActiv
 ```
 4. 
 ```swift
-LicenseManager.initLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwMSJ9",verificationDelegate:self)
+LicenseManager.initLicense("YOUR-LICENSE-KEY",verificationDelegate:self)
 func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
     if(!isSuccess && error != nil){
         let err = error as NSError?
@@ -69,10 +69,10 @@ func onLicenseVerified(_ isSuccess: Bool, error: Error?) {
 5. 
 ```c
 char errorMessage[256];
-DC_InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9", errorMessage, 256);
+DC_InitLicense("YOUR-LICENSE-KEY", errorMessage, 256);
 ```
 6. 
 ```cpp
 char errorMessage[256];
-CLicenseManager::InitLicense("DLS2eyJvcmdhbml6YXRpb25JRCI6IjIwMDAwNSJ9", errorMessage, 256);
+CLicenseManager::InitLicense("YOUR-LICENSE-KEY", errorMessage, 256);
 ```
