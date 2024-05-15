@@ -19,7 +19,7 @@ needGenerateH3Content: false
 
 | Versions | Available Editions |
 | -------- | ------------------ |
-| 2.2.11    | [iOS]({{ site.ios_release_notes}}ios-2.html#2211-04172024){:target="_blank"} |
+| 2.2.11    | [Android]({{ site.android_release_notes}}android-2.html#2211-05152024){:target="_blank"} / [iOS]({{ site.ios_release_notes}}ios-2.html#2211-04172024){:target="_blank"} |
 | 2.2.10.1    | [iOS]({{ site.ios_release_notes}}ios-2.html#22101-03112024){:target="_blank"} |
 | 2.2.10    | <a target="_blank" href="{{ site.cpp_release_notes}}cpp-2.html#2210-03012024" class="otherLinkColour refreshLink">C++</a> / [Android]({{ site.android_release_notes}}android-2.html#2210-03072024){:target="_blank"} / [iOS]({{ site.ios_release_notes}}ios-2.html#2210-03072024){:target="_blank"} / <a target="_blank" href="{{ site.js_release_notes}}javascript-2.html#2210-04092024" class="otherLinkColour refreshLink">JavaScript</a> |
 | 2.2.0    | <a target="_blank" href="{{ site.cpp_release_notes}}cpp-2.html#220-01162024" class="otherLinkColour refreshLink">C++</a> |
