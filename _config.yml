@@ -13,6 +13,8 @@ c_release_notes: /document-normalizer/docs/server/programming/c/release-notes/
 cpp: /document-normalizer/docs/server/programming/cplusplus/
 cpp_release_notes: /document-normalizer/docs/server/programming/cplusplus/release-notes/
 
+dotnet: /document-normalizer/docs/server/programming/dotnet/
+
 ios: /document-normalizer/docs/mobile/programming/ios/
 ios_release_notes: /document-normalizer/docs/mobile/programming/ios/release-notes/
 
