@@ -21,7 +21,6 @@ DEVELOPMENT
   * [Xamarin.Forms]({{ site.xamarin }})
 * Server / Desktop
   * [C++]({{ site.cpp }})
-  * [.NET]({{ site.dotnet }})
 
 <hr>
 UNDERSTANDING DDN
