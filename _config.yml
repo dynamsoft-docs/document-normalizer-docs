@@ -14,6 +14,7 @@ cpp: /document-normalizer/docs/server/programming/cplusplus/
 cpp_release_notes: /document-normalizer/docs/server/programming/cplusplus/release-notes/
 
 dotnet: /document-normalizer/docs/server/programming/dotnet/
+dotnet_release_notes: /document-normalizer/docs/server/programming/dotnet/release-notes/
 
 ios: /document-normalizer/docs/mobile/programming/ios/
 ios_release_notes: /document-normalizer/docs/mobile/programming/ios/release-notes/
