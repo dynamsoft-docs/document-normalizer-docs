@@ -8,6 +8,19 @@ needGenerateH3Content: false
 
 # Release Notes
 
+## 2.4
+
+> First released: 07-23-2024
+
+### Highlights
+
+{%- include release-notes/product-highlight-2.4.0.md -%}
+
+
+| Versions | Available Editions |
+| -------- | ------------------ |
+| 2.4.10   | <a target="_blank" href="{{ site.cpp_release_notes}}cpp-2.html#2410-07232024" class="otherLinkColour refreshLink">C++</a> |
+
 ## 2.2
 
 > First released: 01-16-2024

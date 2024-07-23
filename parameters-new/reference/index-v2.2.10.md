@@ -3,7 +3,7 @@ title: Dynamsoft Document Normalizer Parameter Reference - Main Page
 description: Dynamsoft Document Normalizer Parameter Reference - Main Page
 keywords: parameter reference, parameters
 needAutoGenerateSidebar: false
-permalink: /parameters/reference/index.html
+permalink: /parameters/reference/index-v2.2.10.html
 ---
 
 # Parameter Reference
@@ -43,7 +43,6 @@ permalink: /parameters/reference/index.html
  | [`Contrast`]({{ site.parameters_reference }}document-normalizer-task-settings/contrast.html) | Defines the contrast of the normalized image. |
  | [`CornerAngleRange`]({{ site.parameters_reference }}document-normalizer-task-settings/corner-angle-range.html) | Defines the range of angles (in degrees) of the extracted corners. |
  | [`DeskewMode`]({{ site.parameters_reference }}document-normalizer-task-settings/deskew-mode.html) | Defines the method in which the deskew process way used to apply the deskew process on the target normalized image. |
- | [`ExpectedDocumentsCount`]({{ site.parameters_reference }}document-normalizer-task-settings/expected-documents-count.html) | Defines the the number of documents expected to be detected. |
  | [`LineExtractionModes`]({{ site.parameters_reference }}document-normalizer-task-settings/line-extraction-modes.html) | Defines the algorithm used to extract lines. |
  | [`PageSize`]({{ site.parameters_reference }}document-normalizer-task-settings/page-size.html) | Defines the page size (width by height in pixels) of the normalized image. |
  | [`QuadrilateralDetectionModes`]({{ site.parameters_reference }}document-normalizer-task-settings/quadrilateral-detection-modes.html) | Defines the quadrilateral detection process on an image. |

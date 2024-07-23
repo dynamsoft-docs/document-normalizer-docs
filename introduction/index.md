@@ -24,26 +24,13 @@ With DDN, you can efficiently embed the functionality of quadrilateral detection
 
 With DDN, you can extract the four corner coordinates of one or multiple documents/tables.
 
-- Document boundary detection
-
-<div align="center">
-   <p><img src="assets/document-boundary-detection.jpg" alt="Document boundary detection" width="25%" /></p>
-   <p>Figure 1 – Document boundary detection</p>
-</div>
-
-- Table boundary detection
-
-<div align="center">
-   <p><img src="assets/table-boundary-detection.jpg" alt="Table boundary detection" width="25%" /></p>
-   <p>Figure 2 – Table boundary detection</p>
-</div>
-
-- Multiple boundaries in one detection
-
-<div align="center">
-   <p><img src="assets/multiple-boundaries-detection.jpg" alt="Multiple boundaries detection" width="25%" /></p>
-   <p>Figure 3 – Multiple boundaries in one detection</p>
-</div>
+<table>
+  <tr>
+    <td><img src="assets/document-boundary-detection.jpg" alt="Document boundary detection" style="width:100%" /><br>Figure 1 – Document boundary detection</td>
+    <td><img src="assets/table-boundary-detection.jpg" alt="Inner table boundary detection" style="width:100%" /><br>Figure 2 – Inner table boundary detection</td>
+    <td><img src="assets/multiple-boundaries-detection.jpg" alt="Multiple boundaries detection" style="width:100%" /><br>Figure 3 – Multiple boundaries detection</td>
+  </tr>
+</table>
 
 Don't worry if your documents/tables are blurry, damaged, too colorful or peculiar in any way. DDN provides various image processing settings for full customization. Our default settings are sufficient for most cases. However, additional tweaks can be made for your specific cases to achieve greater speed and accuracy.
 
@@ -88,7 +75,7 @@ These modes can be configured not only through API but also through a configurat
 
 ### Document scanning and archiving
 
-In government or large corporations, paper documents usually need to be digitized and stored in an electronic format. We often do so by taking photos of the documents or scanning the documents. However, the captured document images can potentially not follow the same pattern. You may encounter images taken at different angles, in different lighting levels, bluriness, etc. With DDN, you can normalize or standardize the document images with ease. DDN also provides various settings so you can customize the outcome of the normalized document image to meet your needs.
+In government or large corporations, paper documents usually need to be digitized and stored in an electronic format. We often do so by taking photos of the documents or scanning the documents. However, the captured document images can potentially not follow the same pattern. You may encounter images taken at different angles, in different lighting levels, blurriness, etc. With DDN, you can normalize or standardize the document images with ease. DDN also provides various settings so you can customize the outcome of the normalized document image to meet your needs.
 
 <div align="center">
    <p><img src="assets/document-scanning-and-archive.jpg" alt="document-scanning-and-archive" width="60%" /></p>
