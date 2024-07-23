@@ -14,10 +14,10 @@
                     "version": "2.4.10"
                 },{
                     "path": "/parameters/reference/image-parameter",
-                    "version": "2.4.10"
+                    "version": "2.2.40"
                 },{
                     "path": "/parameters/reference/image-source-options",
-                    "version": "3.4.10"
+                    "version": "3.2.40"
                 },{
                     "path": "/parameters/reference/global-parameter",
                     "version": "2.4.10"
