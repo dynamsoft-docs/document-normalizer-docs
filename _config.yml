@@ -37,7 +37,8 @@ parameters_ddn: /document-normalizer/docs/core/parameters/
 parameters_reference_ddn: /document-normalizer/docs/core/parameters/reference/
 license: /document-normalizer/docs/core/license-activation/
 
-useVersionTree: true
+useVersionTree: false
+isDCV: true
 
 assets: /document-normalizer/docs/core/assets/
 edit_icon: /document-normalizer/docs/core/assets/img-icon/edit-icon.png
