@@ -67,7 +67,7 @@ Adjust the brightness and contrast of the output normalized image.
 
 In order to cope with various scenarios, DDN provides a variety of image processing modes at each stage of the algorithm process to maintain great scalability.
 
-For example, [`BinarizationModes`]({{site.parameters_reference }}image-parameter/binarization-modes.html) provides several image binarization methods and [`RegionPredetectionModes`]({{site.parameters_reference }}image-parameter/region-predetection-modes.html) provides different pre-detection methods to help locate the ROI.
+For example, `BinarizationModes` provides several image binarization methods and `RegionPredetectionModes` provides different pre-detection methods to help locate the ROI.
 
 These modes can be configured not only through API but also through a configuration template (as file, string, JSON etc.). Furthermore, the these modes can be customized according to customer scenarios to allow for a more smoother and more seamless performance in the customer's application.
 
@@ -102,7 +102,7 @@ In retail, DDN can help detect the price label boundaries in images. Additionall
 
 ## Mobile Document Capture with DCE
 
-In real life, document capture is often done through mobile devices. In order to simplify the integration cost of camera control, camera preview, interactive editing functions, and more, we recommend that you use <a href="https://www.dynamsoft.com/camera-enhancer/docs/introduction/" target="_blank">Dynamsoft Camera Enhancer(DCE) SDK</a> cooperates with DDN to complete mobile document capture. The DCE SDK provides three primary classes:
+In real life, document capture is often done through mobile devices. In order to simplify the integration cost of camera control, camera preview, interactive editing functions, and more, we recommend that you use `Dynamsoft Camera Enhancer(DCE)` cooperates with DDN to complete mobile document capture. The DCE SDK provides three primary classes:
 
 - **CameraEnhancer**: It provides basic camera control functions as well as advanced features such as video buffering, frame filtering and fast mode for fast camera module integration.
 
@@ -115,17 +115,3 @@ In real life, document capture is often done through mobile devices. In order to
    <p>Figure 5 – DCECameraView and DCEImageEditorView</p>
 </div>
 
-If you are interested in the specific steps to integrate DDN with DCE, please refer to the following articles:
-
-- <a href="https://www.dynamsoft.com/document-normalizer/docs/mobile/programming/android/user-guide.html" target="_blank">Getting Started with DDN Android SDK</a>
-- <a href="https://www.dynamsoft.com/document-normalizer/docs/mobile/programming/ios/user-guide.html" target="_blank">Getting Started with DDN iOS SDK</a>
-
-## Programming Languages
-
-DDN is designed to be cross-platform. The core of DDN is written in C/C++ for performance. The library is wrapped for Java, Objective-C and other programming languages so that users can use DDN on iOS, Android, Windows, and Linux. Below is a list of supported OSes and corresponding programming languages:
-
-| PlatForm       | Programming Language           |
-| -------------- | ------------------------------ |
-| Web            | JavaScript                     |
-| Server/Desktop | C/C++                          |
-| Mobile         | Java/Swift/Objective-C/Xamarin |
