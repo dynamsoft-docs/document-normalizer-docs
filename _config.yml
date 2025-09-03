@@ -1,53 +1,25 @@
 repository: dynamsoft-docs/document-normalizer-docs
-repositoryUrl: https://github.com/dynamsoft-docs/document-normalizer-docs/blob/main
-docFullPath: https://www.dynamsoft.com/document-normalizer/docs/core
-firstLevelUrl: /document-normalizer/docs/core
-docHomePage: /document-normalizer/docs/core/
+repositoryUrl: https://github.com/dynamsoft-docs/document-normalizer-docs/blob/v2
+docFullPath: https://www.dynamsoft.com/document-normalizer/docs/v2/core
+firstLevelUrl: /document-normalizer/docs/v2/core
+docHomePage: /document-normalizer/docs/v2/core/
+needSearchIndex: true
+searchNeedFilter: true
 
-introduction: /document-normalizer/docs/core/introduction/
+introduction: /document-normalizer/docs/v2/core/introduction/
 
-c: /document-normalizer/docs/server/programming/c/
-c_api: /document-normalizer/docs/server/programming/c/api-reference/
-c_release_notes: /document-normalizer/docs/server/programming/c/release-notes/
-
-cpp: /document-normalizer/docs/server/programming/cplusplus/
-cpp_release_notes: /document-normalizer/docs/server/programming/cplusplus/release-notes/
-
-dotnet: /document-normalizer/docs/server/programming/dotnet/
-dotnet_release_notes: /document-normalizer/docs/server/programming/dotnet/release-notes/
-
-ios: /document-normalizer/docs/mobile/programming/ios/
-ios_release_notes: /document-normalizer/docs/mobile/programming/ios/release-notes/
-
-android: /document-normalizer/docs/mobile/programming/android/
-android_release_notes: /document-normalizer/docs/mobile/programming/android/release-notes/
-
-js: /document-normalizer/docs/web/programming/javascript/
-js_release_notes: /document-normalizer/docs/web/programming/javascript/release-notes/
-
-xamarin: /document-normalizer/docs/mobile/programming/xamarin/
-xamarin_release_notes: /document-normalizer/docs/mobile/programming/xamarin/release-notes/
-
-release_notes: /document-normalizer/docs/core/release-notes/
-
-enumerations: /capture-vision/docs/core/enums/
-dcv_parameters: /capture-vision/docs/core/parameters/
-parameters_reference: /capture-vision/docs/core/parameters/reference/
-parameters_ddn: /document-normalizer/docs/core/parameters/
-parameters_reference_ddn: /document-normalizer/docs/core/parameters/reference/
-license: /document-normalizer/docs/core/license-activation/
 
 useVersionTree: false
 isDCV: true
+useJSVersionV3: true
 
-assets: /document-normalizer/docs/core/assets/
-edit_icon: /document-normalizer/docs/core/assets/img-icon/edit-icon.png
-smile_icon: /document-normalizer/docs/core/assets/img-icon/icon-smile.png
-sad_icon: /document-normalizer/docs/core/assets/img-icon/icon-sad.png
+assets: /document-normalizer/docs/v2/core/assets/
+edit_icon: /document-normalizer/docs/v2/core/assets/img-icon/edit-icon.png
+smile_icon: /document-normalizer/docs/v2/core/assets/img-icon/icon-smile.png
+sad_icon: /document-normalizer/docs/v2/core/assets/img-icon/icon-sad.png
 
-baseurl: "/document-normalizer/docs/core"
+baseurl: "/document-normalizer/docs/v2/core"
 
-download: "/document-normalizer/downloads/"
 
 plugins:
   - jemoji
@@ -71,7 +43,7 @@ defaults:
       path: "" 
     values: 
       docRootName: "Document Normalizer" 
-      docHomePage: "/document-normalizer/docs/core/introduction/"
+      docHomePage: "/document-normalizer/docs/v2/core/introduction/"
   - scope:
       path: "Hide_Tree_Page.html"
     values:
