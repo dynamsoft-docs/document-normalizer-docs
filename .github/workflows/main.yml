@@ -37,6 +37,6 @@ jobs:
     uses: dynamsoft-docs/Docs-Template-Repo/.github/workflows/called-workflow-build-sync-production.yml@DCV-v2
     with:
       doc-repo: document-normalizer-docs
-      doc-url: document-normalizer/docs/v2/core
+      doc-url: document-normalizer/docs-v2/core
       doc-branch: v2
     secrets: inherit
